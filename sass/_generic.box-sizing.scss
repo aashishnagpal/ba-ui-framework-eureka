@@ -1,0 +1,11 @@
+/* ==========================================================================
+   Generic box-sizing stlyes
+   ========================================================================== */
+
+html {
+  @include vendor(box-sizing, border-box);
+}
+
+*, *:before, *:after {
+  @include vendor(box-sizing, border-box);
+}

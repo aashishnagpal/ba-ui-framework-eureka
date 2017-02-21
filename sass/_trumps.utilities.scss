@@ -1,0 +1,13 @@
+/* ==========================================================================
+   Highest specificity utility classes here.
+   ========================================================================== */
+
+.success{
+	background-color: $bg-color-button-success!important;
+	color: darken( $bg-color-button-success, 50% )!important;
+}
+
+.error{
+	background-color: $bg-color-button-error!important;
+	color: darken( $bg-color-button-error, 50% )!important;
+}
