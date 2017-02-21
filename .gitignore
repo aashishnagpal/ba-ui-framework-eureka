@@ -1,0 +1,11 @@
+# No settings folder from the Webstorm IDE
+
+.idea
+
+# No settings folder from the Sublime Text editor
+
+*.sublime-workspace
+
+#No cache files from working with SASS
+
+.sass-cache*
