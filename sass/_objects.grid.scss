@@ -1,0 +1,18 @@
+/* ==========================================================================
+   Grid Scaffolding classes
+   ========================================================================== */
+
+%grid-div {
+  height: 25px;
+  background-color: #ccc;
+  border: 1px solid #aaa;
+  float: left;
+}
+
+@for $i from 1 through $grid-max-col {
+  $eq: 100% / $i;
+  .col-#{$i}-of-#{$grid-max-col} {
+    @extend %grid-div;
+    width: $eq;
+  }
+}

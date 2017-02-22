@@ -1,12 +1,5 @@
 /* ==========================================================================
-   Unclassed element styles here
+   Grid variables
    ========================================================================== */
 
-a {
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
+$grid-max-col: 12;

@@ -1,0 +1,13 @@
+/* ==========================================================================
+   Highest specificity button classes here.
+   ========================================================================== */
+
+.u-button-success {
+  background-color: $bg-color-button-success !important;
+  color: darken($bg-color-button-success, 50%) !important;
+}
+
+.u-button-error {
+  background-color: $bg-color-button-error !important;
+  color: darken($bg-color-button-error, 50%) !important;
+}
