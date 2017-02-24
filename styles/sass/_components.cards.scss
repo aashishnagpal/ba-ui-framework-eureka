@@ -1,6 +1,35 @@
 .c-card {
-	border: 1px solid $generic-black-color;
+	border: 0.1em solid $generic-black-color;
 	border-radius: 5px;
 	display: flex;
 	flex-direction :column;
+	overflow:hidden;
+	max-width: 30em;
+
+	&__head{
+		position : relative;
+	}
+
+	&__category{
+		color: $generic-white-color;
+		font-weight: bold;
+		font-size: 1.2em;
+		left: 0.5em;
+		position:absolute;
+		text-transform: uppercase;
+		top: 0.5em;
+	}
+
+	&__img{
+		width: 100%;
+	}
+
+	&__body{
+		padding: 1.5em;
+	}
+
+	&__text{
+		margin: 1em 0;
+	}
+
 }

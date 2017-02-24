@@ -36,3 +36,17 @@
 	align-self: center;
 }
 
+/* ==========================================================================
+   Utility classes for separator component
+   ========================================================================== */
+
+/**
+	 * Adjust colors for the separators
+	 *
+	 * Using the color variables defined
+	 *
+	 */
+
+.u-separator--primary{
+	border-color: $primary-color;
+}
