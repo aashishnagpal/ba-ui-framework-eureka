@@ -27,7 +27,7 @@ carousel component styles
   bottom: 4%;
   z-index: 10;
   width: 100%;
-  &-item {
+  &-item { // bullet nav li
     display: inline;
     margin: 0 0.5em;
     width: 1em;
@@ -37,7 +37,7 @@ carousel component styles
     opacity: 0.5;
     cursor: pointer;
     transition: all 0.25s ease;
-    &--active {
+    &--is-active { // bullet nav li active class
 			opacity: 1;
     }
   }
@@ -60,7 +60,7 @@ carousel component styles
   left: 0;
   z-index: -1;
   opacity: 0;
-  &--selected {
+  &--is-selected { // carousel slide selected
     position: static;
     z-index: 1;
     opacity: 1;
@@ -78,7 +78,7 @@ carousel component styles
   &:hover {
   	opacity: 1;
   }
-  &--right {
+  &--right { // right arrow nav 
     right: 0;
   }
 }
