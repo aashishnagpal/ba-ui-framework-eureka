@@ -1,6 +1,7 @@
 /**
  * Import various partials. ordering is important here.
  */
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700|Source+Sans+Pro");
 /**
  * Framework wide variables for color
  */
@@ -422,7 +423,7 @@ html, body {
 
 body {
   font-size: 16px;
-  font-family: "Lato", "Helvetica", "sans-serif"; }
+  font-family: "Source Sans Pro", "Helvetica", sans-serif; }
 
 a {
   border-bottom: 2px solid transparent;
@@ -437,6 +438,28 @@ a:hover {
 ul {
   list-style: none;
   display: flex; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", "Helvetica", sans-serif; }
+
+h1 {
+  font-size: 4.25em; }
+
+h2 {
+  font-size: 2.625em; }
+
+h3 {
+  font-size: 1.625em; }
+
+h4,
+h5,
+h6 {
+  font-size: 1em; }
 
 /* ==========================================================================
    Responsive grid using Flexbox
@@ -492,10 +515,32 @@ ul {
     /* Make grid items full at medium screen width */
     flex: 0 0 100%; } }
 .c-card {
-  border: 1px solid #212121;
+  border: 0.1em solid #212121;
   border-radius: 5px;
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  overflow: hidden;
+  max-width: 30em; }
+  .c-card__head {
+    position: relative; }
+  .c-card__category {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2em;
+    left: 0.5em;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0.5em; }
+  .c-card__img {
+    width: 100%; }
+  .c-card__body {
+    padding: 1.5em; }
+  .c-card__text {
+    margin: 1em 0; }
+
+.c-separator {
+  border-bottom: 0.2em solid;
+  margin: 1em 0; }
 
 /* ==========================================================================
    Utility classes for grid
@@ -529,5 +574,17 @@ ul {
 
 .u-grid__cell--center {
   align-self: center; }
+
+/* ==========================================================================
+   Utility classes for separator component
+   ========================================================================== */
+/**
+	 * Adjust colors for the separators
+	 *
+	 * Using the color variables defined
+	 *
+	 */
+.u-separator--primary {
+  border-color: #51d0ef; }
 
 /*# sourceMappingURL=eureka.css.map */
