@@ -1,0 +1,84 @@
+.generic-wrapper {
+  width: 50em;
+  // border: solid 1px red;
+}
+
+/* ====================================================
+carousel component styles
+ =======================================================*/
+
+.c-carousel {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+
+.c-carousel__bullet-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  bottom: 4%;
+  z-index: 10;
+  width: 100%;
+  &-item {
+    display: inline;
+    margin: 0 0.5em;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: $generic-white-color;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    &--active {
+			opacity: 1;
+    }
+  }
+}
+
+.c-carousel__slides-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.c-carousel__image {
+  width: 100%;
+  height: auto;
+}
+
+.c-carousel__slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  &--selected {
+    position: static;
+    z-index: 1;
+    opacity: 1;
+  }
+}
+
+.c-carousel__arrow-nav {
+  position: absolute;
+  z-index: 10;
+  color: $generic-white-color;
+  text-decoration: none;
+  border: none;
+  opacity: 0.5;
+  transition: all 0.25s ease;
+  &:hover {
+  	opacity: 1;
+  }
+  &--right {
+    right: 0;
+  }
+}
