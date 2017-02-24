@@ -13,3 +13,5 @@
 
 # Ignore compiled css and map files
 # styles/css/*
+*.css
+*.css.map
