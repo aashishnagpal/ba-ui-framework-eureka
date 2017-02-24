@@ -8,12 +8,8 @@
 # Ignore cache files from SASS Parser
 .sass-cache*
 
-<<<<<<< 94c599166ea0fa9f81e70092a1352cae843c1f35
-=======
-
->>>>>>> Update gitignore
 # Ignore the .gitignore
-# .gitignore
+.gitignore
 
 # Ignore compiled css and map files
 
@@ -24,6 +20,4 @@ styles/css/*.*
 # and would cause many many conflicts
 
 css/eureka.css.map
-
-
 
