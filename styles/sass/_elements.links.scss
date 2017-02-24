@@ -1,0 +1,11 @@
+a {
+  border-bottom: 2px solid transparent;
+  color: $primary-color;
+  font-size: 1em;
+  padding: 1em;
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom-color: $primary-color;
+}

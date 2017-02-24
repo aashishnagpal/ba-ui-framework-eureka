@@ -1,21 +1,12 @@
-/* =========================================================================
-   Import various partials. ordering is important here.
-   ========================================================================= */
-/* ==========================================================================
-   Framework wide variables for color
-   ========================================================================== */
-/* Buttons */
-/* ==========================================================================
-  Mixins
-   ========================================================================== */
-/* ==========================================================================
-   Generic box-sizing stlyes
-   ========================================================================== */
-/* line 5, ../sass/_generic.box-sizing.scss */
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
+/**
+ * Import various partials. ordering is important here.
+ */
+/**
+ * Framework wide variables for color
+ */
+/**
+ * Mixins
+ */
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -506,6 +497,48 @@ template {
 /* line 459, ../sass/_generic.normalize.scss */
 [hidden] {
   display: none;
+}
+
+/**
+ * Generic box-sizing style
+ */
+/* line 5, ../sass/_generic.box-sizing.scss */
+html, body {
+  box-sizing: border-box;
+}
+
+/* line 9, ../sass/_generic.box-sizing.scss */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* line 1, ../sass/_generic.global.scss */
+body {
+  font-size: 16px;
+  font-family: "Lato", "Helvetica", "sans-serif";
+}
+
+/* line 1, ../sass/_elements.links.scss */
+a {
+  border-bottom: 2px solid transparent;
+  color: #51d0ef;
+  font-size: 1em;
+  padding: 1em;
+  text-decoration: none;
+}
+
+/* line 9, ../sass/_elements.links.scss */
+a:hover {
+  border-bottom-color: #51d0ef;
+}
+
+/* line 1, ../sass/_elements.lists.scss */
+ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 /*# sourceMappingURL=eureka.css.map */

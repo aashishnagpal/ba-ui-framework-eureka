@@ -1,19 +1,22 @@
-/* =========================================================================
-   Import various partials. ordering is important here.
-   ========================================================================= */
+/**
+ * Import various partials. ordering is important here.
+ */
 
+@import "settings.global";
 @import "settings.colors";
 //@import "settings.grid";
 
 @import "tools.mixins";
 
-@import "generic.box-sizing";
 @import "generic.normalize";
+@import "generic.box-sizing";
+@import "generic.global";
+
+@import "elements.links";
+@import "elements.lists";
 
 //@import "objects.wrappers";
 //@import "objects.grid";
-
-//@import "elements.links";
 
 //@import "components.buttons";
 
