@@ -1,0 +1,67 @@
+/* ==========================================================================
+   Responsive grid using Flexbox
+   ========================================================================== */
+
+/**
+ * Grid container
+ *
+ * Must only contain `.o-grid-cell` children.
+ *
+ */
+
+
+.o-grid {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+
+	/**
+	 * Grid cells
+	 *
+	 * No explicit width by default. Automatically fills width from using flex.
+	 *
+	 */
+
+	&__cell{
+		flex: 1;
+	}
+
+}
+
+/* GRID MODIFIERS */
+
+/**
+	 * Grid gutters
+	 *
+	 * We add a negative margin on the top and left sides of the grid row. This ensures that the first grid cell is
+	 * aligned properly.
+	 */
+.o-grid--gutters {
+	margin: -1em 0 0 -1em;
+}
+
+/**
+	 * Cell gutters
+	 *
+	 * We add padding to the top and left of the cells to create the gutters.
+	 *
+	 */
+
+.o-grid--gutters > .o-grid__cell {
+	padding: 1em 0 0 1em;
+}
+
+/**
+	 * RESPONSIVE GRID
+	 *
+	 * Using media queries, we style the grid for smaller screens
+	 *
+	 */
+
+/* Medium Screens */
+@media (max-width: 48em) {
+	.o-medium-grid--full > .o-grid__cell {  /* Make grid items full at medium screen width */
+		flex: 0 0 100%;
+	}
+}

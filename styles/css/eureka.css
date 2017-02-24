@@ -1,12 +1,29 @@
+
 /**
  * Import various partials. ordering is important here.
  */
+
+/* =========================================================================
+   Import various partials. ordering is important here.
+   ========================================================================= */
+
 /**
  * Framework wide variables for color
  */
 /**
  * Mixins
  */
+
+/**
+ * Generic box-sizing style
+ */
+html, body {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -437,5 +454,91 @@ a:hover {
 ul {
   list-style: none;
   display: flex; }
+/* ==========================================================================
+   Responsive grid using Flexbox
+   ========================================================================== */
+/**
+ * Grid container
+ *
+ * Must only contain `.o-grid-cell` children.
+ *
+ */
+.o-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  /**
+   * Grid cells
+   *
+   * No explicit width by default. Automatically fills width from using flex.
+   *
+   */ }
+  .o-grid__cell {
+    flex: 1; }
+
+/* GRID MODIFIERS */
+/**
+	 * Grid gutters
+	 *
+	 * We add a negative margin on the top and left sides of the grid row. This ensures that the first grid cell is
+	 * aligned properly.
+	 */
+.o-grid--gutters {
+  margin: -1em 0 0 -1em; }
+
+/**
+	 * Cell gutters
+	 *
+	 * We add padding to the top and left of the cells to create the gutters.
+	 *
+	 */
+.o-grid--gutters > .o-grid__cell {
+  padding: 1em 0 0 1em; }
+
+/**
+	 * RESPONSIVE GRID
+	 *
+	 * Using media queries, we style the grid for smaller screens
+	 *
+	 */
+/* Medium Screens */
+@media (max-width: 48em) {
+  .o-medium-grid--full > .o-grid__cell {
+    /* Make grid items full at medium screen width */
+    flex: 0 0 100%; } }
+/* ==========================================================================
+   Utility classes for grid
+   ========================================================================== */
+/**
+	 * Align cells in grid
+	 *
+	 * Using the various align properties of Flexbox, we position all the cells within the grid.
+	 *
+	 */
+.u-grid--top {
+  align-items: flex-start; }
+
+.u-grid--bottom {
+  align-items: flex-end; }
+
+.u-grid--center {
+  align-items: center; }
+
+/**
+	 * Align cells in grid
+	 *
+	 * Using the various align-self properties of Flexbox, we position individual cells within the grid.
+	 *
+	 */
+.u-grid__cell--top {
+  align-self: flex-start; }
+
+.u-grid__cell--bottom {
+  align-self: flex-end; }
+
+.u-grid__cell--center {
+  align-self: center; }
+
 
 /*# sourceMappingURL=eureka.css.map */

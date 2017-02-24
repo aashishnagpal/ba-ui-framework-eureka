@@ -1,0 +1,38 @@
+/* ==========================================================================
+   Utility classes for grid
+   ========================================================================== */
+
+/**
+	 * Align cells in grid
+	 *
+	 * Using the various align properties of Flexbox, we position all the cells within the grid.
+	 *
+	 */
+
+.u-grid--top {
+	align-items: flex-start;
+}
+.u-grid--bottom {
+	align-items: flex-end;
+}
+.u-grid--center {
+	align-items: center;
+}
+
+/**
+	 * Align cells in grid
+	 *
+	 * Using the various align-self properties of Flexbox, we position individual cells within the grid.
+	 *
+	 */
+
+.u-grid__cell--top {
+	align-self: flex-start;
+}
+.u-grid__cell--bottom {
+	align-self: flex-end;
+}
+.u-grid__cell--center {
+	align-self: center;
+}
+
