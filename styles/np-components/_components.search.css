@@ -547,4 +547,28 @@ h6 {
 .u-grid__cell--center {
   align-self: center; }
 
-/*# sourceMappingURL=eureka.css.map */
+body {
+  background-color: #a4a4a4; }
+
+.search-form {
+  height: 3.625rem;
+  border: 4px solid #fff;
+  margin: auto; }
+
+.search-input {
+  padding: 8px 15px;
+  background: rgba(50, 50, 50, 0.2); }
+
+.button {
+  position: relative;
+  padding: 6px 15px;
+  left: -8px;
+  border: 2px solid #207cca;
+  background-color: #207cca;
+  color: #fafafa; }
+
+.button:hover {
+  background-color: #fafafa;
+  color: #207cca; }
+
+/*# sourceMappingURL=_components.search.css.map */
