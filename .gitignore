@@ -7,3 +7,9 @@
 
 # Ignore cache files from SASS Parser
 .sass-cache*
+
+# Ignore the .gitignore
+.gitignore
+
+# Ignore compiled css and map files
+# styles/css/*
