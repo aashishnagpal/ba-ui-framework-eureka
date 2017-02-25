@@ -11,7 +11,7 @@
 <body>
   <h1>Carousel component 1</h1>
   <div class="generic-wrapper" style="width: 50%; max-width: 800px">
-  <div class="c-carousel">
+  <div class="c-carousel c-carousel--fader-type">
   <!-- bullet navigation -->
     <ol class="c-carousel__bullet-nav">
       <li class="c-carousel__bullet-nav-item c-carousel__bullet-nav-item--is-active" data-slide-index="0"></li>
@@ -31,6 +31,46 @@
       <!-- carousel slide -->
       <div class="c-carousel__slide">
         <img class="c-carousel__image" src="https://unsplash.it/800/400?image=1041" alt="">
+      </div>
+    </div>
+    <!-- carousel arrow navigation -->
+    <a href="" class="c-carousel__arrow-nav c-carousel__arrow-nav--left" data-slide-nav="prev">
+    	<i class="fa fa-chevron-circle-left fa-2x"></i>
+    </a>
+    <a href="" class="c-carousel__arrow-nav c-carousel__arrow-nav--right" data-slide-nav="next">
+    	<i class="fa fa-chevron-circle-right fa-2x"></i>
+    </a>
+  </div>
+  </div>
+
+  <!-- another carousel -->
+    <h1>Carousel component 2</h1>
+  <div class="generic-wrapper" style="width: 50%; max-width: 800px">
+  <div class="c-carousel c-carousel--slider-type">
+  <!-- bullet navigation -->
+    <ol class="c-carousel__bullet-nav">
+      <li class="c-carousel__bullet-nav-item c-carousel__bullet-nav-item--is-active" data-slide-index="0"></li>
+      <li class="c-carousel__bullet-nav-item" data-slide-index="1"></li>
+      <li class="c-carousel__bullet-nav-item" data-slide-index="2"></li>
+      <li class="c-carousel__bullet-nav-item" data-slide-index="3"></li>
+    </ol>
+    <!-- carousel slide container -->
+    <div class="c-carousel__slides-container">
+      <!-- carousel slide -->
+      <div class="c-carousel__slide c-carousel__slide--is-selected">
+        <img class="c-carousel__image" src="http://satyr.io/800x400/1" alt="">
+      </div>
+      <!-- carousel slide -->
+      <div class="c-carousel__slide">
+        <img class="c-carousel__image" src="http://satyr.io/800x400/2" alt="">
+      </div>
+      <!-- carousel slide -->
+      <div class="c-carousel__slide">
+        <img class="c-carousel__image" src="http://satyr.io/800x400/3" alt="">
+      </div>
+      <!-- carousel slide -->
+      <div class="c-carousel__slide">
+        <img class="c-carousel__image" src="http://satyr.io/800x400/4" alt="">
       </div>
     </div>
     <!-- carousel arrow navigation -->
