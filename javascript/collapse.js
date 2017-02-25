@@ -11,20 +11,20 @@
     return function(e) {
       e.preventDefault();
       var currentComponent = collapseComponents[i];
-      var content = currentComponent.querySelector('.c-collapse__content');
-      var isVisible = content.classList.contains('c-collapse__content--is-visible');
+      var contentContainer = currentComponent.querySelector('.c-collapse__content-container');
+      var isVisible = contentContainer.classList.contains('c-collapse__content--is-visible');
       console.log('is visible: ', isVisible);
-      var contentHeight = content.scrollHeight;
+      var contentHeight = contentContainer.scrollHeight;
       console.log('content height: ', contentHeight);
       console.log('collapse component clicked!');
       if (e.target.classList.contains('c-collapse__toggle')) {
         console.log('toggle clicked!');
         if (!isVisible) {
-          content.classList.toggle('c-collapse__content--is-visible');
-          content.style.height = contentHeight + 'px';
+          contentContainer.classList.toggle('c-collapse__content--is-visible');
+          contentContainer.style.height = contentHeight + 'px';
         } else {
-          content.classList.toggle('c-collapse__content--is-visible');
-          content.style.height = 0 + 'px';
+          contentContainer.classList.toggle('c-collapse__content--is-visible');
+          contentContainer.style.height = 0 + 'px';
         }
       }
     };
