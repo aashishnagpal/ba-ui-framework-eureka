@@ -1,28 +1,29 @@
 //import main Eureka file
 @import "../sass/eureka.scss";
 body {
-    background-color: $secondary-dark-color;
-}
-
-.search-form {
-    height: 3.625rem;
-    border: 4px solid $generic-white-color;
-    margin: auto;
+    background: $secondary-color;
 }
 
 .search-input {
-    padding: 8px 15px;
-    background: rgba(50, 50, 50, 0.2);
+    background: transparentize($primary-dark-color, .31);
+    border: 0.4375rem solid $generic-white-color;
+    border-right: none;
+    height: 2.25rem;
+    text-align: right;
+    width: 23.44rem;
+    padding-right: 0.75rem
 }
 
 //replace.  Not using BEM because this will be replaced.
 .button {
     position: relative;
-    padding: 6px 15px;
-    left: -8px;
-    border: 2px solid #207cca;
+    right: 0.18rem;
     background-color: #207cca;
+    border: 0.4375rem solid $generic-white-color;
+    border-left: none;
     color: #fafafa;
+    height: 2.25rem;
+    width: 5.563rem;
 }
 
 .button:hover {
