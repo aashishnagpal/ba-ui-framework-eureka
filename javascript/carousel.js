@@ -15,7 +15,6 @@
       var activeCarousel = carousels[i];
       console.dir(activeCarousel);
       var isSlider = activeCarousel.classList.contains('c-carousel--slider-type');
-      console.log('is a slider: ', isSlider);
       // array of slides in current carousel
       var slideArray = Array.prototype.slice.call(activeCarousel.querySelectorAll('.c-carousel__slide'));
       // length of slide array
@@ -46,7 +45,6 @@
             // slide.classList.remove('--slide-*');
             slide.className = 'c-carousel__slide';
           }
-          console.dir(slide);
         });
         // remove active class from all bullet nav items
         bulletNav.forEach(function(bullet) {
@@ -55,16 +53,14 @@
         // add selected class to selected slide
         slideArray[targetedSlide].classList.add('c-carousel__slide--is-selected');
         if (isSlider) {
-          console.log('target slide: ', targetedSlide);
-          console.log('current slide: ', currentSlide);
           if (targetedSlide > currentSlide || currentSlide === slideArray.length - 1) {
-          slideArray[targetedSlide].classList.add('--slide-next');
+            slideArray[targetedSlide].classList.add('--slide-next');
             slideArray[currentSlide].classList.add('--slide-out-left');
-              slideArray[currentSlide].classList.remove('--slide-out-*');
-          } else if (targetedSlide < currentSlide){
+            slideArray[currentSlide].classList.remove('--slide-out-*');
+          } else if (targetedSlide < currentSlide) {
             slideArray[targetedSlide].classList.add('--slide-prev');
             slideArray[currentSlide].classList.add('--slide-out-right');
-              slideArray[currentSlide].classList.remove('--slide-out-*');
+            slideArray[currentSlide].classList.remove('--slide-out-*');
           }
         }
         // add active class to correct bullet nav item
@@ -100,7 +96,7 @@
           if (isSlider) {
             slideArray[nextIndex].classList.add('--slide-next');
             slideArray[currentSlide].classList.add('--slide-out-left');
-              // slideArray[currentSlide].classList.remove('--slide-out-left');
+            // slideArray[currentSlide].classList.remove('--slide-out-left');
           }
           bulletNav[nextIndex].classList.add('c-carousel__bullet-nav-item--is-active');
         } else {
@@ -108,7 +104,7 @@
           if (isSlider) {
             slideArray[prevIndex].classList.add('--slide-prev');
             slideArray[currentSlide].classList.add('--slide-out-right');
-              // slideArray[currentSlide].classList.remove('--slide-out-right');
+            // slideArray[currentSlide].classList.remove('--slide-out-right');
           }
           bulletNav[prevIndex].classList.add('c-carousel__bullet-nav-item--is-active');
         }
