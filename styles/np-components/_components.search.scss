@@ -4,26 +4,34 @@ body {
     background: $secondary-color;
 }
 
-.search-input {
-    background: transparentize($primary-dark-color, .31);
+.search-form {
+    height: 2.25rem + 0.4375rem;
     border: 0.4375rem solid $generic-white-color;
-    border-right: none;
-    height: 2.25rem;
+    display: inline-block;
+    margin: auto;
+}
+
+.search-input {
+    position: relative;
+    height: 100%;
+    background: transparentize($primary-dark-color, .31);
+    border: none;
+    padding-right: 0.75rem;
     text-align: right;
     width: 23.44rem;
-    padding-right: 0.75rem
 }
 
 //replace.  Not using BEM because this will be replaced.
 .button {
+    border: transparent;
+    border-radius: 6px;
     position: relative;
-    right: 0.18rem;
+    right: 0.50rem;
     background-color: #207cca;
-    border: 0.4375rem solid $generic-white-color;
-    border-left: none;
     color: #fafafa;
-    height: 2.25rem;
+    height: 100%;
     width: 5.563rem;
+    box-shadow: -5px 0 3px -4px $generic-black-color;
 }
 
 .button:hover {
