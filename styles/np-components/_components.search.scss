@@ -4,34 +4,57 @@ body {
     background: $secondary-color;
 }
 
+//changes size of search bar with single variable
+//defaults to "Normal" size
+$search-size-multiplier: 1.5;
+
 .search-form {
-    height: 2.25rem + 0.4375rem;
-    border: 0.4375rem solid $generic-white-color;
-    display: inline-block;
+    border: ($search-size-multiplier * 0.4375rem) solid $generic-white-color;
+    border-radius: 5px;
+    display: flex;
+    height: ($search-size-multiplier * (2.25rem + 0.4375rem));
+    justify-content: flex-start;
     margin: auto;
+    width: ($search-size-multiplier * 23.44rem);
 }
 
 .search-input {
-    position: relative;
-    height: 100%;
-    background: transparentize($primary-dark-color, .31);
+    background: transparentize($primary-color, .31);
     border: none;
-    padding-right: 0.75rem;
+    padding-right: ($search-size-multiplier * 0.75rem);
     text-align: right;
-    width: 23.44rem;
+    flex-basis: 77%;
+    font-family: "Roboto Light";
+    font-size: ($search-size-multiplier * 1.3rem);
+    &::-webkit-input-placeholder {
+        /* WebKit, Blink, Edge */
+        color: $generic-white-color;
+    }
+    &:-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        color: $generic-white-color;
+        opacity: 1;
+    }
+    &::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        color: $generic-white-color;
+        opacity: 1;
+    }
+    &:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: $generic-white-color;
+    }
 }
 
 //replace.  Not using BEM because this will be replaced.
 .button {
-    border: transparent;
+    background-color: $primary-dark-color;
     border-radius: 6px;
-    position: relative;
-    right: 0.50rem;
-    background-color: #207cca;
-    color: #fafafa;
-    height: 100%;
-    width: 5.563rem;
+    border: transparent;
     box-shadow: -5px 0 3px -4px $generic-black-color;
+    color: #fafafa;
+    flex-basis: 25%;
+    margin-left: -3px;
 }
 
 .button:hover {
