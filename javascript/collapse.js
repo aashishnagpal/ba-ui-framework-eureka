@@ -2,7 +2,7 @@
   var collapseComponents = document.querySelectorAll('.c-collapse');
   var numOfCollapseComponents = collapseComponents.length;
   var i;
-
+  // add event listeners
   for (i = 0; i < numOfCollapseComponents; i++) {
     collapseComponents[i].addEventListener('click', _toggleCollapse(i));
   }
@@ -10,19 +10,21 @@
   function _toggleCollapse(i) {
     return function(e) {
       e.preventDefault();
+      // grab targeted collapse component
       var currentComponent = collapseComponents[i];
+      // grab the content container
       var contentContainer = currentComponent.querySelector('.c-collapse__content-container');
+      // check to see if the content is currently visible
       var isVisible = contentContainer.classList.contains('c-collapse__content--is-visible');
-      console.log('is visible: ', isVisible);
+      // get the height of the components content
       var contentHeight = contentContainer.scrollHeight;
-      console.log('content height: ', contentHeight);
-      console.log('collapse component clicked!');
       if (e.target.classList.contains('c-collapse__toggle')) {
-        console.log('toggle clicked!');
         if (!isVisible) {
+          // toggle visible class and set height
           contentContainer.classList.toggle('c-collapse__content--is-visible');
           contentContainer.style.height = contentHeight + 'px';
         } else {
+          // toggle visible class and set height
           contentContainer.classList.toggle('c-collapse__content--is-visible');
           contentContainer.style.height = 0 + 'px';
         }
@@ -30,8 +32,4 @@
     };
   }
 
-
-
-
 })();
-
