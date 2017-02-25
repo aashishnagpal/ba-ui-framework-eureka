@@ -1,0 +1,59 @@
+.test{
+  max-width: 300px;
+}
+
+.accordion{
+  display: flex;
+  flex-direction: column;
+
+  &__item{
+    display:flex;
+    flex-direction:column;
+
+  }
+
+  &__state{
+    display:none;
+
+    &:checked ~ .accordion__content{
+      max-height: 99em;
+      border: 1px solid $body-bg-color;
+      margin-bottom: 1px;
+      transform: scaleY(1);
+
+    }
+
+    &:checked ~ .accordion__title{
+      margin-bottom: 0;
+    }
+
+    &:checked ~ .accordion__title > .accordion__icon{
+      transform: rotate(180deg);
+    }
+
+  }
+
+  &__title{
+    display: block;
+    color: $generic-gray-color;
+    margin-bottom: 1px;
+    padding: 0.5em;
+    text-transform: uppercase;
+    &:hover{
+      cursor: pointer;
+    }
+
+  }
+
+  &__icon{
+    transition: 0.26s ease;
+  }
+
+  &__content{
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.26s ease;
+    overflow: hidden;
+    max-height: 0;
+  }
+}
