@@ -8,15 +8,14 @@
 
   &--horizontal {
     display: flex;
-    flex-direction: row;
     width: 100vw;
   }
 
   &--vertical {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
-    align-items: flex-start;
     height: 100vh;
+    min-width: 20vw;
   }
 
   &--dark {
@@ -37,28 +36,42 @@
   }
 
   &__item {
-    padding: 1.5em;
+    padding: 0.1em;
     position: relative;
     flex: 1;
     text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &:hover {
       color: $primary-light-color;
       border-color: transparent;
     }
 
-    &::before {
+    &::before, &::after {
       background: $primary-light-color;
       content: '';
-      left: 0;
-      height: 2px;
       position: absolute;
-      bottom: 0.5em;
       transform: scaleX(0);
+    }
+
+    &::before {
+      left: 0;
+      bottom: 1px;
+      height: 0.3em;
       width: 100%;
     }
 
-    &:hover::before {
+    &::after {
+      right: 1px;
+      top: 0;
+      height: 100%;
+      width: 0.3em;
+    }
+
+    &:hover::before, &:hover::after {
       transform: scaleX(1);
       transition: transform 0.3s linear;
     }
@@ -66,11 +79,15 @@
     &--active {
       color: $primary-color;
 
-      &::before {
+      &::before, &::after {
         background: $primary-color;
         transform: scaleX(1);
       }
     }
   }
 
+  &__link {
+    padding: 1.5em;
+    display: inline-block;
+  }
 }
