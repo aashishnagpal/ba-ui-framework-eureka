@@ -5,9 +5,9 @@ body {
 }
 
 //changes size of search bar with single variable
-//defaults to "Normal" size
+//defaults to "Normal" size 1.5
 $search-size-multiplier: 1.5;
-
+//form wrapper for search bar
 .search-form {
     border: ($search-size-multiplier * 0.4375rem) solid $generic-white-color;
     border-radius: 5px;
@@ -18,6 +18,7 @@ $search-size-multiplier: 1.5;
     width: ($search-size-multiplier * 23.44rem);
 }
 
+//search bar input
 .search-input {
     background: transparentize($primary-color, .31);
     border: none;
@@ -46,7 +47,8 @@ $search-size-multiplier: 1.5;
     }
 }
 
-//replace.  Not using BEM because this will be replaced.
+//button for user interactivity
+//will incorporate style-guide button when ready
 .button {
     background-color: $primary-dark-color;
     border-radius: 6px;
@@ -55,11 +57,7 @@ $search-size-multiplier: 1.5;
     color: #fafafa;
     flex-basis: 25%;
     margin-left: -3px;
+    &:hover {
+        background-color: $secondary-dark-color;
+    }
 }
-
-.button:hover {
-    background-color: #fafafa;
-    color: #207cca;
-}
-
-//END Replace
