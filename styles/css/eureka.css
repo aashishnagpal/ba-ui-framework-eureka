@@ -687,6 +687,54 @@ h6 {
   color: #fff;
 }
 
+.progressbar-ex {
+  padding: 2em;
+}
+
+.c-progress-toggle {
+  padding-top: 2em;
+}
+
+.c-progress-toggler {
+  background-color: #a4a4a4;
+  border: #a4a4a4;
+  color: #fff;
+}
+
+.c-progress {
+  background-color: #d7d7d7;
+  border-radius: .5em;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  height: 1.5em;
+  overflow: hidden;
+}
+.c-progressbar__meter, .c-progressbar__meter--stack {
+  height: 2em;
+}
+.c-progressbar__meter {
+  background-color: #51d0ef;
+  width: 50%;
+}
+.c-progressbar__meter--stack {
+  float: left;
+}
+.c-progressbar__meter--stack:nth-of-type(1) {
+  background-color: #51d0ef;
+  width: 30%;
+}
+.c-progressbar__meter--stack:nth-of-type(2) {
+  background-color: #a1deec;
+  width: 40%;
+}
+.c-progressbar__meter--stack:nth-of-type(3) {
+  background-color: #42aec8;
+  width: 10%;
+}
+.c-progressbar__meter[aria-valuenow="45"] {
+  background: linear-gradient(45deg, blue, red);
+  width: 45%;
+}
+
 /* ==========================================================================
    Utility classes for grid
    ========================================================================== */
