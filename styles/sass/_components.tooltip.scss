@@ -1,0 +1,63 @@
+/* Tooltip container */
+
+.tooltip-this-element {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    /*For visibility- delete when done*/
+    top: 75px;
+    left: 75px;
+}
+
+
+/* Tooltip text */
+
+.tooltip-text {
+    
+    /*background properties*/
+    /*fallback color for browsers w/o gradients*/
+    background-color: $primary-light-color;
+    background: linear-gradient(transparentize($primary-light-color, .74) 10%, $generic-white-color 10%, $generic-white-color 72%, $secondary-light-color 72%, $secondary-light-color 82%,$primary-light-color 82%,$primary-light-color 100%);
+    
+    border: 0.1875rem solid darken($generic-gray-color, 5%);
+    border-radius: 3px;
+    color: $generic-black-color;
+    //consider switch to Roboto Light if implemented
+    font-family: $roboto-font-family;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+    visibility: hidden;
+    width: auto;
+    
+    /* Position the tooltip text */
+    bottom: 125%;
+    left: 30%;
+    position: absolute;
+    z-index: 1;
+    
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 1s;
+    
+    /*Tooltip Arrow*/
+    &::after {
+        border: 6px solid;
+        border-color: $primary-light-color transparent transparent transparent;
+        content: "";
+        left: 25%;
+        position: absolute;
+        top: 100%;
+    }
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+
+//I could put this under .tooltip with &
+//But I thought sperating this function
+//Out made it easier to read
+.tooltip-this-element:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
