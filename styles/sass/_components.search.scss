@@ -58,7 +58,7 @@ $search-size-multiplier: 1;
     box-shadow: -5px 0 3px -4px $generic-black-color;
     color: #fafafa;
     flex-basis: 18%;
-    margin-left: -3px;
+    margin-left: (-0.1875rem * $search-size-multiplier);
     &:hover {
         background-color: $secondary-dark-color;
     }
@@ -66,7 +66,8 @@ $search-size-multiplier: 1;
 
 .search-icon {
     position: absolute;
-    width: ($search-size-multiplier * 1.35rem);
+    font-size: ($search-size-multiplier * 1.35rem);
     right: ($search-size-multiplier * 1.5rem);
     top: ($search-size-multiplier * .2rem);
+    color: #A7D9E1;
 }
