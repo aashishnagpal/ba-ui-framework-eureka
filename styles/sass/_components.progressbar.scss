@@ -45,3 +45,16 @@
     width: 45%;
   }
 }
+
+.progress-animate {
+  animation: progressbar 2s linear infinite;
+}
+
+@keyframes progressbar {
+  0% {
+    // transform: scale(0);
+  }
+  100% {
+    // transform: scale(2);
+}
+}
