@@ -160,9 +160,11 @@
   }
   99% {
     z-index: 5;
+    opacity: 1
   }
   100% {
     z-index: -10;
+    opacity: 0;
     transform: translateX(100%);
   }
 }

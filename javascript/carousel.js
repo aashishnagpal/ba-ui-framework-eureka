@@ -36,15 +36,17 @@
       // if bullet nav is clicked
       if (target.dataset.slideIndex !== undefined) {
         // get the slide index from the data-slide-index attribute
-        var targetedSlide = target.dataset.slideIndex;
+        var targetedSlide = +(target.dataset.slideIndex);
         // remove selected class from all slides
         slideArray.forEach(function(slide) {
           if (slide.classList.contains('c-carousel__slide--is-selected')) {
             slide.classList.remove('c-carousel__slide--is-selected');
           }
           if (isSlider) {
-            slide.classList.remove('--slide-*');
+            // slide.classList.remove('--slide-*');
+            slide.className = 'c-carousel__slide';
           }
+          console.dir(slide);
         });
         // remove active class from all bullet nav items
         bulletNav.forEach(function(bullet) {
@@ -53,11 +55,17 @@
         // add selected class to selected slide
         slideArray[targetedSlide].classList.add('c-carousel__slide--is-selected');
         if (isSlider) {
+          console.log('target slide: ', targetedSlide);
+          console.log('current slide: ', currentSlide);
+          if (targetedSlide > currentSlide || currentSlide === slideArray.length - 1) {
           slideArray[targetedSlide].classList.add('--slide-next');
-          slideArray[currentSlide].classList.add('--slide-out-left');
-          var t = window.setTimeout(function() {
-            slideArray[currentSlide].classList.remove('--slide-out-*');
-          }, 100);
+            slideArray[currentSlide].classList.add('--slide-out-left');
+              slideArray[currentSlide].classList.remove('--slide-out-*');
+          } else if (targetedSlide < currentSlide){
+            slideArray[targetedSlide].classList.add('--slide-prev');
+            slideArray[currentSlide].classList.add('--slide-out-right');
+              slideArray[currentSlide].classList.remove('--slide-out-*');
+          }
         }
         // add active class to correct bullet nav item
         bulletNav[targetedSlide].classList.add('c-carousel__bullet-nav-item--is-active');
@@ -78,7 +86,8 @@
         slideArray.forEach(function(slide) {
           slide.classList.remove('c-carousel__slide--is-selected');
           if (isSlider) {
-            slide.classList.remove('--slide-*');
+            // slide.classList.remove('--slide-*');
+            slide.className = 'c-carousel__slide';
           }
         });
         // remove active class from all bullet nav items
@@ -91,9 +100,7 @@
           if (isSlider) {
             slideArray[nextIndex].classList.add('--slide-next');
             slideArray[currentSlide].classList.add('--slide-out-left');
-            var k = window.setTimeout(function() {
-              slideArray[currentSlide].classList.remove('--slide-out-*');
-            }, 100);
+              // slideArray[currentSlide].classList.remove('--slide-out-left');
           }
           bulletNav[nextIndex].classList.add('c-carousel__bullet-nav-item--is-active');
         } else {
@@ -101,9 +108,7 @@
           if (isSlider) {
             slideArray[prevIndex].classList.add('--slide-prev');
             slideArray[currentSlide].classList.add('--slide-out-right');
-            var l = window.setTimeout(function() {
-              slideArray[currentSlide].classList.remove('--slide-out-*');
-            }, 100);
+              // slideArray[currentSlide].classList.remove('--slide-out-right');
           }
           bulletNav[prevIndex].classList.add('c-carousel__bullet-nav-item--is-active');
         }
