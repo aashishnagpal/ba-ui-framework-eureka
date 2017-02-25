@@ -1,0 +1,11 @@
+.nav--horizontal {
+  & .nav__item::after {
+    display: none;
+  }
+}
+
+.nav--vertical {
+  & .nav__item::before {
+    display: none;
+  }
+}

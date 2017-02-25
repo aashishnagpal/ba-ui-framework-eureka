@@ -1,0 +1,93 @@
+/**
+ * Navigation Styles
+ */
+
+.nav {
+  padding: 0;
+  margin: 0;
+
+  &--horizontal {
+    display: flex;
+    width: 100vw;
+  }
+
+  &--vertical {
+    display: inline-flex;
+    flex-direction: column;
+    height: 100vh;
+    min-width: 20vw;
+  }
+
+  &--dark {
+    background: $generic-black-color;
+    color: $generic-white-color;
+  }
+
+  &--light {
+    background: $generic-gray-color;
+    color: $generic-black-color;
+  }
+
+  &--sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+  }
+
+  &__item {
+    padding: 0.1em;
+    position: relative;
+    flex: 1;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      color: $primary-light-color;
+      border-color: transparent;
+    }
+
+    &::before, &::after {
+      background: $primary-light-color;
+      content: '';
+      position: absolute;
+      transform: scaleX(0);
+    }
+
+    &::before {
+      left: 0;
+      bottom: 1px;
+      height: 0.3em;
+      width: 100%;
+    }
+
+    &::after {
+      right: 1px;
+      top: 0;
+      height: 100%;
+      width: 0.3em;
+    }
+
+    &:hover::before, &:hover::after {
+      transform: scaleX(1);
+      transition: transform 0.3s linear;
+    }
+
+    &--active {
+      color: $primary-color;
+
+      &::before, &::after {
+        background: $primary-color;
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  &__link {
+    padding: 1.5em;
+    display: inline-block;
+  }
+}
