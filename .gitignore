@@ -21,4 +21,8 @@
 #Ignore compiled css and map files
 styles/css/*
 styles/*.css.map
+<<<<<<< fe1a1047827e5ffa9296d78e16e6ab4c7c0ed1e6
 >>>>>>> Update gitignore file
+=======
+*/*.css*
+>>>>>>> Update gitignore
