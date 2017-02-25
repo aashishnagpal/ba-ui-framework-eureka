@@ -7,6 +7,8 @@
 </head>
 <body>
   <div class="badge-component">
+    <!-- Different types of badges -->
+    <!-- Basic -->
     <div class="badge-component--basic">
       <h4>Basic</h4>
       <div class="badge-component__item">
@@ -27,8 +29,9 @@
       </div>
     </div>
 
+    <!-- Round badge contains only numbers -->
     <div class="badge-component--round ">
-      <h4>Rounded Number-only</h4>
+      <h4>Round</h4>
       <div class="badge-component__item">
         <a href="#?">Inbox <span class="c-badge c-badge--round c-badge--round--primary">1</span></a>
         <span class="badge-component__category">Primary</span>
@@ -39,8 +42,9 @@
       </div>
     </div>
 
+    <!-- Square badges -->
     <div class="badge-component--text">
-      <h4>Squared</h4>
+      <h4>Square</h4>
       <div class="badge-component__item">
         <a href="#?">Inbox <span class="c-badge c-badge--square c-badge--square--primary">4 new</span></a>
         <span class="badge-component__category">Primary</span>
@@ -59,13 +63,33 @@
         <span class="c-badge c-badge--square c-badge--square--secondary">default</span>
       </div>
     </div>
+  </div>
 
-    <!--<label>-->
-      <!--<input type="radio" name="read-unread" value="read"> Mark all as read-->
-    <!--</label>-->
-    <!--<label>-->
-      <!--<input type="radio" name="read-unread" value="unread"> Mark all as unread-->
-    <!--</label>-->
+  <!-- Demo -->
+  <h4>Demo</h4>
+  <div class="demo-badge">
+    <div class="demo-badge__title">
+      <p>TO DO</p>
+      <span class="c-badge c-badge--round c-badge--round--primary c-badge-demo"></span>
+    </div>
+
+    <ul class="demo-badge__list">
+      <li>
+        <i class="fa fa-times" aria-hidden="true"></i>
+        <input type="checkbox" name="task1" id="task1">
+        <label for="task1">Task 1</label>
+      </li>
+      <li>
+        <i class="fa fa-times" aria-hidden="true"></i>
+        <input type="checkbox" name="task1" id="task2">
+        <label for="task2">Task 2</label>
+      </li>
+      <li>
+        <i class="fa fa-times" aria-hidden="true"></i>
+        <input type="checkbox" name="task1" id="task3">
+        <label for="task3">Task 3</label>
+      </li>
+    </ul>
   </div>
 
   <script src="../javascript/badges.js"></script>

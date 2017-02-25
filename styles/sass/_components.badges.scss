@@ -5,7 +5,9 @@
 /* Basic badge styles
    ========================================================================== */
 
-//TODO: transition mixin needed
+@mixin transition($prop) {
+  transition: $prop 0.2s;
+}
 
 .c-badge {
   font-size: 0.9em;
@@ -13,29 +15,29 @@
 }
 
 .c-badge--primary {
+  @include transition(color);
   color: $primary-dark-color;
-
   //&:hover {
   //  color: $primary-color;
   //}
 }
 
 .c-badge--secondary {
+  @include transition(color);
   color: $secondary-dark-color;
-
   //&:hover {
   //  color: $secondary-color;
   //}
 }
 
 .c-badge--round {
+  @include transition(background-color);
   padding: 0.26em 0.6em;
   border-radius: 1em;
   color: $generic-white-color;
 
   &--primary {
     background-color: $primary-dark-color;
-
     //&:hover {
     //  background-color: $primary-color;
     //}
@@ -43,7 +45,6 @@
 
   &--secondary {
     background-color: $secondary-dark-color;
-
     //&:hover {
     //  background-color: $secondary-color;
     //}
@@ -51,6 +52,7 @@
 }
 
 .c-badge--square {
+  @include transition(background-color);
   line-height: 1.5em;
   vertical-align: middle;
   padding-left: 0.5em;
@@ -60,7 +62,6 @@
 
   &--primary {
     background-color: $primary-dark-color;
-
     //&:hover {
     //  background-color: $primary-color;
     //}
@@ -68,7 +69,6 @@
 
   &--secondary {
     background-color: $secondary-dark-color;
-
     //&:hover {
     //  background-color: $secondary-color;
     //}
@@ -76,7 +76,7 @@
 }
 
 // when the innerHTML of c-badge* is an empty string
-[class^='c-badge']:empty {
+.c-badge:empty {
   display: none;
 }
 
@@ -104,16 +104,13 @@
     .c-badge--primary {
       color: $primary-color;
     }
-
     .c-badge--secondary {
       color: $secondary-color;
     }
-
     .c-badge--round--primary,
     .c-badge--square--primary {
       background-color: $primary-color;
     }
-
     .c-badge--round--secondary,
     .c-badge--square--secondary {
       background-color: $secondary-color;
@@ -138,5 +135,52 @@
 }
 
 
+/* Demo styles
+   ========================================================================== */
 
+.demo-badge {
+  width: 20em;
+  border: 1px solid $secondary-light-color;
+  //margin-top: 1.5em;
 
+  &__title {
+    border-bottom: 2px solid $secondary-color;
+    padding: 0.2em 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      //margin: 0;
+      font-size: 1.2em;
+    }
+  }
+}
+
+.demo-badge__list {
+  //border: 1px solid red;
+
+  padding: 0;
+  flex-flow: column;
+
+  li {
+    margin: 0.5em 2em;
+    //color: $secondary-dark-color;
+
+    //border: 1px solid green;
+
+    .fa {
+      float: right;
+      color: $secondary-dark-color;
+      cursor: pointer;
+    }
+    label {
+      @include transition(color);
+      margin-left: 0.5em;
+    }
+    input:checked + label {
+      color: $secondary-dark-color;
+      text-decoration: line-through;
+    }
+  }
+}
