@@ -53,7 +53,13 @@
 
 /* General utility styles */
 
-.text-center{
+.u-text-center{  //center any text in a container
 	text-align:center!important;
 }
+
+
+.u-bg-primary{ //make container background the primary website color
+	background-color: $primary-color;
+}
+
 
