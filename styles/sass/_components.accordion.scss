@@ -1,5 +1,5 @@
 .test{
-  max-width: 300px;
+  max-width: 500px;
 }
 
 .accordion{
@@ -9,22 +9,28 @@
   &__item{
     display:flex;
     flex-direction:column;
-
   }
 
   &__state{
     display:none;
 
     &:checked ~ .accordion__content{
-      max-height: 99em;
-      border: 1px solid $body-bg-color;
+      opacity: 1;
       margin-bottom: 1px;
+      max-height: 99em;
+      padding: 0.5em;
       transform: scaleY(1);
-
+      border-top: 0.2em solid $primary-color;
     }
 
-    &:checked ~ .accordion__title{
+    &:checked ~ .accordion__title--dark{
       margin-bottom: 0;
+      color: $generic-white-color;
+    }
+
+    &:checked ~ .accordion__title--light{
+      margin-bottom: 0;
+      color: $body-bg-color;
     }
 
     &:checked ~ .accordion__title > .accordion__icon{
@@ -35,10 +41,19 @@
 
   &__title{
     display: block;
-    color: $generic-gray-color;
     margin-bottom: 1px;
     padding: 0.5em;
     text-transform: uppercase;
+    &--dark{
+      background-color: $body-bg-color;
+      color: $generic-gray-color;
+    }
+    &--dark ~ .accordion__content{
+      border: 1px solid $body-bg-color;
+    }
+    &--light{
+      color: $body-bg-color;
+    }
     &:hover{
       cursor: pointer;
     }
@@ -46,14 +61,22 @@
   }
 
   &__icon{
+    padding: 0 0.5em;
+    text-align:center;
     transition: 0.26s ease;
+    line-height: 1em;
   }
 
   &__content{
+    max-height: 0;
+    overflow: hidden;
     transform: scaleY(0);
     transform-origin: top;
-    transition: transform 0.26s ease;
-    overflow: hidden;
-    max-height: 0;
+    transition: transform 0.26s ease, opacity 0.5s ease;
+    opacity: 0;
+    &--dark{
+      background-color: $body-bg-color;
+      color: $generic-gray-color;
+    }
   }
 }
