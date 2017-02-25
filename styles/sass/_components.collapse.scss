@@ -1,0 +1,24 @@
+/*=========================================
+	collapse component styles
+	========================================*/
+
+.c-collapse {
+  width: 100%;
+}
+
+.c-collapse__toggle {
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: $generic-black-color;
+}
+
+.c-collapse__content {
+  overflow: hidden;
+  transition: all 0.35s ease;
+  height: 0;
+}
+
+.c-collapse__controls-container {
+	
+}
