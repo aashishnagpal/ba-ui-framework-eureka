@@ -11,7 +11,7 @@
 <body>
   <h2>Carousel component w/ fade transitions</h2>
   <div class="generic-wrapper" style="width: 50%; max-width: 800px">
-    <div class="c-carousel c-carousel--fader-type">
+    <div class="c-carousel c-carousel--fader-type" data-bullet-nav>
       <!-- bullet navigation -->
       <ol class="c-carousel__bullet-nav">
         <li class="c-carousel__bullet-nav-item c-carousel__bullet-nav-item--is-active" data-slide-index="0"></li>
@@ -45,7 +45,7 @@
   <!-- another carousel -->
   <h2>Carousel component w/ slide transitions</h2>
   <div class="generic-wrapper" style="width: 50%; max-width: 800px">
-    <div class="c-carousel c-carousel--slider-type">
+    <div class="c-carousel c-carousel--slider-type" data-bullet-nav>
       <!-- bullet navigation -->
       <ol class="c-carousel__bullet-nav">
         <li class="c-carousel__bullet-nav-item c-carousel__bullet-nav-item--is-active" data-slide-index="0"></li>
@@ -81,10 +81,11 @@
       </a>
     </div>
   </div>
+
   <!-- another carousel -->
   <h2>Carousel component w/ multi image slides</h2>
   <div class="generic-wrapper" style="width: 50%; max-width: 800px">
-    <div class="c-carousel c-carousel--slider-type">
+    <div class="c-carousel c-carousel--slider-type" data-bullet-nav>
       <!-- bullet navigation -->
       <ol class="c-carousel__bullet-nav">
         <li class="c-carousel__bullet-nav-item c-carousel__bullet-nav-item--is-active" data-slide-index="0"></li>
@@ -128,6 +129,55 @@
       <a href="" class="c-carousel__arrow-nav c-carousel__arrow-nav--right" data-slide-nav="next">
         <i class="fa fa-chevron-circle-right fa-2x"></i>
       </a>
+    </div>
+  </div>
+
+    <!-- another carousel -->
+  <h2>Carousel component w/ thumbnail nav</h2>
+  <div class="generic-wrapper" style="width: 50%; max-width: 800px">
+    <div class="c-carousel c-carousel--slider-type" data-thumbnail-nav
+      <!-- carousel slide container -->
+      <div class="c-carousel__slides-container">
+        <!-- carousel slide -->
+        <div class="c-carousel__slide c-carousel__slide--is-selected">
+          <img class="c-carousel__image" src="http://satyr.io/800x400/1" alt="">
+        </div>
+        <!-- carousel slide -->
+        <div class="c-carousel__slide">
+          <img class="c-carousel__image" src="http://satyr.io/800x400/2" alt="">
+        </div>
+        <!-- carousel slide -->
+        <div class="c-carousel__slide">
+          <img class="c-carousel__image" src="http://satyr.io/800x400/3" alt="">
+        </div>
+        <!-- carousel slide -->
+        <div class="c-carousel__slide">
+          <img class="c-carousel__image" src="http://satyr.io/800x400/4" alt="">
+        </div>
+      </div>
+      <!-- carousel arrow navigation -->
+      <a href="" class="c-carousel__arrow-nav c-carousel__arrow-nav--left" data-slide-nav="prev">
+        <i class="fa fa-chevron-circle-left fa-2x"></i>
+      </a>
+      <a href="" class="c-carousel__arrow-nav c-carousel__arrow-nav--right" data-slide-nav="next">
+        <i class="fa fa-chevron-circle-right fa-2x"></i>
+      </a>
+            <!-- thumb navigation -->
+      <ol class="c-carousel__thumb-nav">
+        <li class="c-carousel__thumb-nav-item c-carousel__thumb-nav-item--is-active" data-slide-index="0">
+          <img class="c-carousel__thumb-image" src="http://satyr.io/65x65/1" alt="">
+        </li>
+        <li class="c-carousel__thumb-nav-item" data-slide-index="1">
+          <img class="c-carousel__thumb-image" src="http://satyr.io/65x65/2" alt="">
+        </li>
+        <li class="c-carousel__thumb-nav-item" data-slide-index="2">
+          <img class="c-carousel__thumb-image" src="http://satyr.io/65x65/3" alt="">
+        </li>
+        <li class="c-carousel__thumb-nav-item" data-slide-index="3">
+          <img class="c-carousel__thumb-image" src="http://satyr.io/65x65/4" alt="">
+        </li>
+
+      </ol>
     </div>
   </div>
   <script src="../javascript/carousel.js"></script>

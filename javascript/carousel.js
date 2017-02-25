@@ -13,8 +13,12 @@
       e.preventDefault();
       // the current carousel
       var activeCarousel = carousels[i];
-      console.dir(activeCarousel);
+      // check to see if is a slider type
       var isSlider = activeCarousel.classList.contains('c-carousel--slider-type');
+      // set boolean based off of data-thumbnail-nav attr
+      var isThumbNav = activeCarousel.dataset.thumbnailNav !== undefined ? true : false;
+      // set boolean based off of data-bullet-nav attribute
+      var isBulletNav = activeCarousel.dataset.bulletNav !== undefined ? true : false;
       // array of slides in current carousel
       var slideArray = Array.prototype.slice.call(activeCarousel.querySelectorAll('.c-carousel__slide'));
       // length of slide array
@@ -22,13 +26,19 @@
       // index number of the currently displayed slide
       var currentSlide = slideArray.indexOf(activeCarousel.querySelector('.c-carousel__slide--is-selected'));
       // array of bullet nav list items
-      var bulletNav = Array.prototype.slice.call(activeCarousel.querySelectorAll('.c-carousel__bullet-nav-item'));
-
+      var bulletNavArray = Array.prototype.slice.call(activeCarousel.querySelectorAll('.c-carousel__bullet-nav-item'));
+      // array of thumbnail nav items
+      var thumbNavArray = Array.prototype.slice.call(activeCarousel.querySelectorAll('.c-carousel__thumb-nav-item'));
       // target element of click event
       var target = e.target;
 
       if (target.nodeName === 'I') {
         // set target to parent of icon element when prev/next nav clicked
+        target = target.parentNode;
+      }
+
+      if (target.classList.contains('c-carousel__thumb-image')) {
+        // set target to parent node of thumbnail image when thumbnail is clicked
         target = target.parentNode;
       }
 
@@ -42,14 +52,26 @@
             slide.classList.remove('c-carousel__slide--is-selected');
           }
           if (isSlider) {
-            // slide.classList.remove('--slide-*');
+            // reset slide class name
             slide.className = 'c-carousel__slide';
           }
         });
-        // remove active class from all bullet nav items
-        bulletNav.forEach(function(bullet) {
-          bullet.classList.remove('c-carousel__bullet-nav-item--is-active');
-        });
+        if (isBulletNav) {
+          // remove active class from all bullet nav items
+          bulletNavArray.forEach(function(bullet) {
+            bullet.classList.remove('c-carousel__bullet-nav-item--is-active');
+          });
+          // add active class to correct bullet nav item
+          bulletNavArray[targetedSlide].classList.add('c-carousel__bullet-nav-item--is-active');
+        }
+        if (isThumbNav) {
+          // remove active class from all bullet nav items
+          thumbNavArray.forEach(function(thumb) {
+            thumb.classList.remove('c-carousel__thumb-nav-item--is-active');
+          });
+          // add active class to correct bullet nav item
+          thumbNavArray[targetedSlide].classList.add('c-carousel__thumb-nav-item--is-active');
+        }
         // add selected class to selected slide
         slideArray[targetedSlide].classList.add('c-carousel__slide--is-selected');
         if (isSlider) {
@@ -63,8 +85,6 @@
             slideArray[currentSlide].classList.remove('--slide-out-*');
           }
         }
-        // add active class to correct bullet nav item
-        bulletNav[targetedSlide].classList.add('c-carousel__bullet-nav-item--is-active');
 
         // if arrow nav is clicked
       } else if (target.dataset.slideNav !== undefined) {
@@ -82,31 +102,48 @@
         slideArray.forEach(function(slide) {
           slide.classList.remove('c-carousel__slide--is-selected');
           if (isSlider) {
-            // slide.classList.remove('--slide-*');
+            // reset slide class name
             slide.className = 'c-carousel__slide';
           }
         });
-        // remove active class from all bullet nav items
-        bulletNav.forEach(function(bullet) {
-          bullet.classList.remove('c-carousel__bullet-nav-item--is-active');
-        });
+        if (isBulletNav) {
+          // remove active class from all bullet nav items
+          bulletNavArray.forEach(function(bullet) {
+            bullet.classList.remove('c-carousel__bullet-nav-item--is-active');
+          });
+        }
+        if (isThumbNav) {
+          // remove active class from all bullet nav items
+          thumbNavArray.forEach(function(thumb) {
+            thumb.classList.remove('c-carousel__thumb-nav-item--is-active');
+          });
+        }
+
         // add selected class to slide and active class to bullet nav depending on navDirection
         if (navDirection === 'next') {
           slideArray[nextIndex].classList.add('c-carousel__slide--is-selected');
           if (isSlider) {
             slideArray[nextIndex].classList.add('--slide-next');
             slideArray[currentSlide].classList.add('--slide-out-left');
-            // slideArray[currentSlide].classList.remove('--slide-out-left');
           }
-          bulletNav[nextIndex].classList.add('c-carousel__bullet-nav-item--is-active');
+          if (isBulletNav) {
+            bulletNavArray[nextIndex].classList.add('c-carousel__bullet-nav-item--is-active');
+          }
+          if (isThumbNav) {
+            thumbNavArray[nextIndex].classList.add('c-carousel__thumb-nav-item--is-active');
+          }
         } else {
           slideArray[prevIndex].classList.add('c-carousel__slide--is-selected');
           if (isSlider) {
             slideArray[prevIndex].classList.add('--slide-prev');
             slideArray[currentSlide].classList.add('--slide-out-right');
-            // slideArray[currentSlide].classList.remove('--slide-out-right');
           }
-          bulletNav[prevIndex].classList.add('c-carousel__bullet-nav-item--is-active');
+          if (isBulletNav) {
+            bulletNavArray[prevIndex].classList.add('c-carousel__bullet-nav-item--is-active');
+          }
+          if (isThumbNav) {
+            thumbNavArray[prevIndex].classList.add('c-carousel__thumb-nav-item--is-active');
+          }
         }
       }
 
