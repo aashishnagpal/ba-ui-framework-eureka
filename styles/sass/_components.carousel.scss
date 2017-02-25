@@ -1,11 +1,6 @@
-.generic-wrapper {
-  width: 50em;
-  // border: solid 1px red;
-}
-
 /* ====================================================
-carousel component styles
- =======================================================*/
+	carousel component styles
+ 	=====================================================*/
 
 .c-carousel {
   position: relative;
@@ -27,7 +22,8 @@ carousel component styles
   bottom: 4%;
   z-index: 10;
   width: 100%;
-  &-item { // bullet nav li
+  &-item {
+    // bullet nav li
     display: inline;
     margin: 0 0.5em;
     width: 1em;
@@ -36,9 +32,16 @@ carousel component styles
     background-color: $generic-white-color;
     opacity: 0.5;
     cursor: pointer;
-    transition: all 0.25s ease;
-    &--is-active { // bullet nav li active class
-			opacity: 1;
+    transition: all 0.5s ease;
+    &:hover {
+      opacity: 0.8;
+    }
+    &--is-active {
+      // bullet nav li active class
+      opacity: 1;
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 }
@@ -52,6 +55,7 @@ carousel component styles
 .c-carousel__image {
   width: 100%;
   height: auto;
+  margin: 0;
 }
 
 .c-carousel__slide {
@@ -60,7 +64,9 @@ carousel component styles
   left: 0;
   z-index: -1;
   opacity: 0;
-  &--is-selected { // carousel slide selected
+  transition: opacity 0.5s ease;
+  &--is-selected {
+    // carousel slide selected
     position: static;
     z-index: 1;
     opacity: 1;
@@ -74,11 +80,17 @@ carousel component styles
   text-decoration: none;
   border: none;
   opacity: 0.5;
+  padding: 0;
   transition: all 0.25s ease;
   &:hover {
-  	opacity: 1;
+    opacity: 1;
   }
-  &--right { // right arrow nav 
+  &--right {
+    // right arrow nav 
     right: 0;
+    margin-right: 1em;
+  }
+  &--left {
+    margin-left: 1em;
   }
 }
