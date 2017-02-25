@@ -1,0 +1,58 @@
+/* Button
+   ==========================================================================
+*/
+
+.c-btn {
+  background: transparent;
+  border: 0.1em;
+  border-radius: 0.2em;
+  border-style: solid;
+  cursor: pointer;
+  font-family: inherit;
+  line-height: 2.4em;
+  margin: 0 0.5em;
+  padding: 0 1em;
+  width: 7em;
+    &--primary {
+      border-color: $primary-color;
+      color: $primary-color;
+        &:hover {
+          background-color: $primary-color;
+        }
+        &:active {
+          background-color: $primary-dark-color;
+        }
+    }
+    &--secondary {
+      border-color: $secondary-color;
+      color: $secondary-color;
+        &:hover {
+          background-color: $secondary-color;
+        }
+        &:active {
+          background-color: $secondary-dark-color;
+        }
+    }
+    &--primary, &--secondary {
+      background-color: $generic-white-color;
+      &:hover, &:active {
+        color: $generic-white-color;
+      }
+    }
+    &__btn-icon {
+      font-size: 13px;
+      margin: 0 0.5em 0 -0.5em;
+    }
+    &--wide {
+      width: 8em;
+    }
+    &:focus {
+      outline-color: $primary-light-color;
+      outline-width: 0.1em;
+    }
+    &[disabled="true"] {
+      background-color: $secondary-dark-color;
+      border: $secondary-dark-color;
+      color: $generic-white-color;
+    }
+}

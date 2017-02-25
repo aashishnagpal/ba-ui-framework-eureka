@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Rochell Langam">
+    <title>Button Component</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../styles/css/eureka.css">
+  </head>
+  <body>
+    <h3>Button</h3>
+
+    <button class="c-btn--primary c-btn" type="button" name="button">Primary</button>
+    <button class="c-btn--secondary c-btn" type="button" name="button">Secondary</button>
+
+    <!-- 3 Examples -->
+    <!-- Normal example -->
+    <button class="c-btn--primary c-btn" type="button" name="button">
+      <span class="c-btn__btn-icon">
+        <i class="fa fa-paper-plane" aria-hidden="true"></i>
+      </span>
+      Send
+    </button>
+    <!-- Example with c-btn--wide -->
+    <button class="c-btn--primary c-btn--wide c-btn" type="button" name="button">
+      <span class="c-btn__btn-icon">
+        <i class="fa fa-paper-plane" aria-hidden="true"></i>
+      </span>
+      Add User
+    </button>
+
+    <!-- Example with disabled attribute -->
+    <button class="c-btn--primary c-btn--wide c-btn" type="button" name="button" disabled="true">
+      <span class="c-btn__btn-icon">
+        <i class="fa fa-paper-plane" aria-hidden="true"></i>
+      </span>
+      Settings
+    </button>
+
+    <div class="c-btn__states">
+      <span>Normal</span>
+      <span>Hover</span>
+      <span>Active</span>
+      <span>Normal</span>
+      <span>Hover</span>
+      <span>Disabled</span>
+    </div>
+  </body>
+</html>
