@@ -456,6 +456,54 @@ template {
  * Add the correct display in IE 10-.
  */
 
+<<<<<<< 10108932cee3c568ef21b0c84f7bc013758586e4:styles/sass/_generic.normalize.scss
 [hidden] {
   display: none;
 }
+=======
+.u-grid--center {
+  align-items: center; }
+
+/**
+	 * Align cells in grid
+	 *
+	 * Using the various align-self properties of Flexbox, we position individual cells within the grid.
+	 *
+	 */
+.u-grid__cell--top {
+  align-self: flex-start; }
+
+.u-grid__cell--bottom {
+  align-self: flex-end; }
+
+.u-grid__cell--center {
+  align-self: center; }
+
+body {
+  background: #bdbdbd; }
+
+.search-input {
+  background: rgba(66, 174, 200, 0.69);
+  border: 0.4375rem solid #fff;
+  border-right: none;
+  height: 2.25rem;
+  text-align: right;
+  width: 23.44rem;
+  padding-right: 0.75rem; }
+
+.button {
+  position: relative;
+  right: 0.18rem;
+  background-color: #207cca;
+  border: 0.4375rem solid #fff;
+  border-left: none;
+  color: #fafafa;
+  height: 2.25rem;
+  width: 5.563rem; }
+
+.button:hover {
+  background-color: #fafafa;
+  color: #207cca; }
+
+/*# sourceMappingURL=_components.search.css.map */
+>>>>>>> prepare for rebase:styles/np-components/_components.search.css
