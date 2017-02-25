@@ -1,15 +1,16 @@
-# Ignore settings folders from the Webstorm IDE
+#Ignore settings folders from the Webstorm IDE
 .idea
 *.iml
 
-# Ignore settings folder from the Sublime Text editor
+#Ignore settings folder from the Sublime Text editor
 *.sublime-workspace
 
-# Ignore cache files from SASS Parser
+#Ignore cache files from SASS Parser
 .sass-cache*
 
-# Ignore the .gitignore
+#Ignore the .gitignore
 .gitignore
 
-# Ignore compiled css and map files
-# styles/css/*
+#Ignore compiled css and map files
+styles/css/*
+styles/*.css.map
