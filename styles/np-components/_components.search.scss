@@ -5,8 +5,9 @@ body {
 }
 
 //changes size of search bar with single variable
-//defaults to "Normal" size 1.5
-$search-size-multiplier: 1.5;
+//defaults to "Small" size 1
+$search-size-multiplier: 1;
+
 //form wrapper for search bar
 .search-form {
     border: ($search-size-multiplier * 0.4375rem) solid $generic-white-color;
@@ -16,6 +17,7 @@ $search-size-multiplier: 1.5;
     justify-content: flex-start;
     margin: auto;
     width: ($search-size-multiplier * 23.44rem);
+    position: relative;
 }
 
 //search bar input
@@ -24,7 +26,7 @@ $search-size-multiplier: 1.5;
     border: none;
     padding-right: ($search-size-multiplier * 0.75rem);
     text-align: right;
-    flex-basis: 77%;
+    flex-basis: 85%;
     font-family: "Roboto Light";
     font-size: ($search-size-multiplier * 1.3rem);
     &::-webkit-input-placeholder {
@@ -55,9 +57,16 @@ $search-size-multiplier: 1.5;
     border: transparent;
     box-shadow: -5px 0 3px -4px $generic-black-color;
     color: #fafafa;
-    flex-basis: 25%;
+    flex-basis: 18%;
     margin-left: -3px;
     &:hover {
         background-color: $secondary-dark-color;
     }
+}
+
+.search-icon {
+    position: absolute;
+    width: ($search-size-multiplier * 1.35rem);
+    right: ($search-size-multiplier * 1.5rem);
+    top: ($search-size-multiplier * .2rem);
 }
