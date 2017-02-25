@@ -100,6 +100,17 @@
     }
 }
 
+.c-carousel__slide--multi-image-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  // border: solid 1px red;
+}
+
+.c-carousel__slide--multi-image-container__image-wrapper {
+
+}
+
 .c-carousel__arrow-nav {
   position: absolute;
   z-index: 10;
