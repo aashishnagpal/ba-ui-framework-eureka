@@ -12,6 +12,4 @@
 .gitignore
 
 # Ignore compiled css and map files
-# styles/css/*
-styles/*.css
-styles/*.css.map
+styles/css/*.*
