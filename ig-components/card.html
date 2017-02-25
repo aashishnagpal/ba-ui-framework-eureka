@@ -2,6 +2,7 @@
   <head>
     <title>Card Component</title>
     <link href="../styles/css/eureka.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   </head>
   <body>
     <div class="c-card">
@@ -10,7 +11,7 @@
         <span class="c-card__category">Travel</span>
       </div>
       <div class="c-card__body">
-        <h3 class="c-card-article__title">Europe on $50 a Day</h3>
+        <h3 class="c-card__title">Europe on $50 a Day</h3>
         <div class="c-separator u-separator--primary"></div>
         <div class="c-card__text">
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, repudiandae velit! Ad aperiam, blanditiis delectus repudiandae velit?
@@ -18,5 +19,25 @@
         <button class="button button--primary">Read More...</button>
       </div>
     </div>
+
+    <div class="c-card">
+      <div class="c-card__head">
+        <img class="c-card__img" src="http://placehold.it/350x150">
+        <img class="c-card__profile-pic" src="http://placehold.it/100x100">
+      </div>
+      <div class="c-card__body">
+        <h3 class="c-card__profile-name text-center">Jenny Jones</h3>
+        <div class="c-card__text text-center">
+          Senior Frontend Developer
+        </div>
+        <div class="c-separator u-separator--primary"></div>
+        <div class="c-card__social-profiles text-center">
+          <a class="c-card__social-icon" href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+          <a class="c-card__social-icon" href="#"><i class="fa fa-github-alt" aria-hidden="true"></i></a>
+          <a class="c-card__social-icon" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+
   </body>
 </html>
