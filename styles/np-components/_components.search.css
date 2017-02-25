@@ -548,24 +548,26 @@ h6 {
   align-self: center; }
 
 body {
-  background-color: #a4a4a4; }
-
-.search-form {
-  height: 3.625rem;
-  border: 4px solid #fff;
-  margin: auto; }
+  background: #bdbdbd; }
 
 .search-input {
-  padding: 8px 15px;
-  background: rgba(50, 50, 50, 0.2); }
+  background: rgba(66, 174, 200, 0.69);
+  border: 0.4375rem solid #fff;
+  border-right: none;
+  height: 2.25rem;
+  text-align: right;
+  width: 23.44rem;
+  padding-right: 0.75rem; }
 
 .button {
   position: relative;
-  padding: 6px 15px;
-  left: -8px;
-  border: 2px solid #207cca;
+  right: 0.18rem;
   background-color: #207cca;
-  color: #fafafa; }
+  border: 0.4375rem solid #fff;
+  border-left: none;
+  color: #fafafa;
+  height: 2.25rem;
+  width: 5.563rem; }
 
 .button:hover {
   background-color: #fafafa;
