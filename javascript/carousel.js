@@ -13,6 +13,9 @@
       e.preventDefault();
       // the current carousel
       var activeCarousel = carousels[i];
+      console.dir(activeCarousel);
+      var isSlider = activeCarousel.classList.contains('c-carousel--slider-type');
+      console.log('is a slider: ', isSlider);
       // array of slides in current carousel
       var slideArray = Array.prototype.slice.call(activeCarousel.querySelectorAll('.c-carousel__slide'));
       // length of slide array
@@ -36,7 +39,12 @@
         var targetedSlide = target.dataset.slideIndex;
         // remove selected class from all slides
         slideArray.forEach(function(slide) {
-          slide.classList.remove('c-carousel__slide--is-selected');
+          if (slide.classList.contains('c-carousel__slide--is-selected')) {
+            slide.classList.remove('c-carousel__slide--is-selected');
+          }
+          if (isSlider) {
+            slide.classList.remove('--slide-*');
+          }
         });
         // remove active class from all bullet nav items
         bulletNav.forEach(function(bullet) {
@@ -44,6 +52,13 @@
         });
         // add selected class to selected slide
         slideArray[targetedSlide].classList.add('c-carousel__slide--is-selected');
+        if (isSlider) {
+          slideArray[targetedSlide].classList.add('--slide-next');
+          slideArray[currentSlide].classList.add('--slide-out-left');
+          var t = window.setTimeout(function() {
+            slideArray[currentSlide].classList.remove('--slide-out-*');
+          }, 100);
+        }
         // add active class to correct bullet nav item
         bulletNav[targetedSlide].classList.add('c-carousel__bullet-nav-item--is-active');
 
@@ -61,6 +76,9 @@
         // remove selected class from all slides
         slideArray.forEach(function(slide) {
           slide.classList.remove('c-carousel__slide--is-selected');
+          if (isSlider) {
+            slide.classList.remove('--slide-*');
+          }
         });
         // remove active class from all bullet nav items
         bulletNav.forEach(function(bullet) {
@@ -69,9 +87,23 @@
         // add selected class to slide and active class to bullet nav depending on navDirection
         if (navDirection === 'next') {
           slideArray[nextIndex].classList.add('c-carousel__slide--is-selected');
+          if (isSlider) {
+            slideArray[nextIndex].classList.add('--slide-next');
+            slideArray[currentSlide].classList.add('--slide-out-left');
+            var k = window.setTimeout(function() {
+              slideArray[currentSlide].classList.remove('--slide-out-*');
+            }, 100);
+          }
           bulletNav[nextIndex].classList.add('c-carousel__bullet-nav-item--is-active');
         } else {
           slideArray[prevIndex].classList.add('c-carousel__slide--is-selected');
+          if (isSlider) {
+            slideArray[prevIndex].classList.add('--slide-prev');
+            slideArray[currentSlide].classList.add('--slide-out-right');
+            var l = window.setTimeout(function() {
+              slideArray[currentSlide].classList.remove('--slide-out-*');
+            }, 100);
+          }
           bulletNav[prevIndex].classList.add('c-carousel__bullet-nav-item--is-active');
         }
       }

@@ -63,12 +63,11 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  // z-index: -1;
   @at-root .c-carousel--slider-type & {
-    transform: translateY(100%);
     transition: transform 0.5s ease-in-out;
-    opacity: 1;
-    z-index: -1;
+    transform: translateX(0);
+    z-index: -10;
   }
   @at-root .c-carousel--fader-type & {
     transition: all 0.5s ease;
@@ -77,16 +76,28 @@
   @at-root .c-carousel--fader-type &--is-selected {
     // carousel slide selected
     position: static;
-    z-index: 1;
+    z-index: 10;
     opacity: 1;
   }
   @at-root .c-carousel--slider-type &--is-selected {
     // carousel slide selected
     position: static;
-    z-index: 1;
+    z-index: 10;
     opacity: 1;
     transform: translateY(0);
+    &.--slide-next {
+      animation: slideFromRight 1s ease;
+    }
+    &.--slide-prev {
+      animation: slideFromLeft 1s ease;
+    }
   }
+    &.--slide-out-left {
+      animation: slideToLeft 1s ease;
+    }
+    &.--slide-out-right {
+      animation: slideToRight 1s ease;
+    }
 }
 
 .c-carousel__arrow-nav {
@@ -110,3 +121,51 @@
     margin-left: 1em;
   }
 }
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideToLeft {
+  0% {
+    transform: translateX(0);
+    z-index: 5;
+  }
+  99% {
+    z-index: 5;
+  }
+  100% {
+    z-index: -10;
+    transform: translateX(-100%);
+  }
+}
+@keyframes slideToRight {
+  0% {
+    transform: translateX(0);
+    z-index: 5;
+  }
+  99% {
+    z-index: 5;
+  }
+  100% {
+    z-index: -10;
+    transform: translateX(100%);
+  }
+}
+
+
+
