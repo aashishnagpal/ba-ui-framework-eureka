@@ -29,6 +29,10 @@
     background-color: $body-bg-color;
     color: $generic-white-color;
   }
+  &--light {
+    background-color: $generic-gray-color;
+    color: $body-bg-color;
+  }
 }
 
 .c-collapse__controls-container {
@@ -44,7 +48,6 @@
 
 .c-collapse__content {
   padding: 2em;
-  &--dark {}
 }
 
 .u-example-code {
