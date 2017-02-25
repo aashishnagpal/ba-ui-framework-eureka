@@ -578,6 +578,11 @@ h6 {
 /* Button
    ==========================================================================
 */
+.c-btn-home {
+  margin-top: 1em;
+  display: inline-flex;
+}
+
 .c-btn {
   background: transparent;
   border: 0.1em;
@@ -588,33 +593,82 @@ h6 {
   line-height: 2.4em;
   margin: 0 0.5em;
   padding: 0 1em;
+  position: relative;
   width: 7em;
 }
-.c-btn--primary {
+.c-btn-i {
+  background-color: #51d0ef;
+  border-color: #51d0ef;
+  color: #fff;
+  border-radius: 0;
+  margin: 0;
+}
+.c-btn-i:hover {
+  background-color: #42aec8;
+  border-color: #42aec8;
+}
+.c-btn-i:active {
+  background-color: #36a1ba;
+  border-color: #42aec8;
+}
+.c-btn-i:focus {
+  outline: 0.15em solid #a1deec !important;
+}
+.c-btn-i--diff {
+  background-color: #bdbdbd;
+  border-color: #bdbdbd;
+}
+.c-btn-i--diff:hover {
+  background-color: #a4a4a4;
+  border-color: #a4a4a4;
+}
+.c-btn-i--diff:active {
+  background-color: #979797;
+  border-color: #a4a4a4;
+}
+.c-btn-i--diff:focus {
+  outline: 0.15em solid #bdbdbd !important;
+}
+.c-btn-i--rd-l {
+  border-top-left-radius: 2em;
+  border-bottom-left-radius: 2em;
+}
+.c-btn-i--rd-r {
+  border-top-right-radius: 2em;
+  border-bottom-right-radius: 2em;
+}
+.c-btn-gp {
+  padding-left: 0;
+  margin: 0 0.5em;
+}
+.c-btn--primary, .c-btn--primary--rounded {
   border-color: #51d0ef;
   color: #51d0ef;
 }
-.c-btn--primary:hover {
+.c-btn--primary:hover, .c-btn--primary--rounded:hover {
   background-color: #51d0ef;
 }
-.c-btn--primary:active {
+.c-btn--primary:active, .c-btn--primary--rounded:active {
   background-color: #42aec8;
 }
-.c-btn--secondary {
+.c-btn--secondary, .c-btn--secondary--rounded {
   border-color: #bdbdbd;
   color: #bdbdbd;
 }
-.c-btn--secondary:hover {
+.c-btn--secondary:hover, .c-btn--secondary--rounded:hover {
   background-color: #bdbdbd;
 }
-.c-btn--secondary:active {
+.c-btn--secondary:active, .c-btn--secondary--rounded:active {
   background-color: #a4a4a4;
 }
-.c-btn--primary, .c-btn--secondary {
+.c-btn--primary, .c-btn--secondary, .c-btn--primary--rounded, .c-btn--secondary--rounded {
   background-color: #fff;
 }
-.c-btn--primary:hover, .c-btn--primary:active, .c-btn--secondary:hover, .c-btn--secondary:active {
+.c-btn--primary:hover, .c-btn--primary:active, .c-btn--secondary:hover, .c-btn--secondary:active, .c-btn--primary--rounded:hover, .c-btn--primary--rounded:active, .c-btn--secondary--rounded:hover, .c-btn--secondary--rounded:active {
   color: #fff;
+}
+.c-btn--primary--rounded, .c-btn--secondary--rounded {
+  border-radius: 2em;
 }
 .c-btn__btn-icon {
   font-size: 13px;

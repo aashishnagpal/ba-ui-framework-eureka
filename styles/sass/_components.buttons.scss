@@ -1,6 +1,10 @@
 /* Button
    ==========================================================================
 */
+.c-btn-home {
+  margin-top: 1em;
+  display: inline-flex;
+}
 
 .c-btn {
   background: transparent;
@@ -12,8 +16,54 @@
   line-height: 2.4em;
   margin: 0 0.5em;
   padding: 0 1em;
+  position: relative;
   width: 7em;
-    &--primary {
+    &-i {
+      background-color: $primary-color;
+      border-color: $primary-color;
+      color: $generic-white-color;
+      border-radius: 0;
+      margin: 0;
+      &:hover {
+        background-color: $primary-dark-color;
+        border-color: $primary-dark-color;
+      }
+      &:active {
+        background-color: darken($primary-dark-color, 5%);
+        border-color: $primary-dark-color;
+      }
+      &:focus {
+        outline: .15em solid $primary-light-color !important;
+      }
+      &--diff {
+        background-color: $secondary-color;
+        border-color: $secondary-color;
+        &:hover {
+          background-color: $secondary-dark-color;
+          border-color: $secondary-dark-color;
+        }
+        &:active {
+          background-color: darken($secondary-dark-color, 5%);
+          border-color: $secondary-dark-color;
+        }
+        &:focus {
+          outline: .15em solid $secondary-color !important;
+        }
+      }
+      &--rd-l {
+        border-top-left-radius: 2em;
+        border-bottom-left-radius: 2em;
+      }
+      &--rd-r {
+        border-top-right-radius: 2em;
+        border-bottom-right-radius: 2em;
+      }
+    }
+    &-gp {
+      padding-left: 0;
+      margin: 0 0.5em;
+    }
+    &--primary, &--primary--rounded {
       border-color: $primary-color;
       color: $primary-color;
         &:hover {
@@ -23,7 +73,7 @@
           background-color: $primary-dark-color;
         }
     }
-    &--secondary {
+    &--secondary, &--secondary--rounded {
       border-color: $secondary-color;
       color: $secondary-color;
         &:hover {
@@ -33,11 +83,14 @@
           background-color: $secondary-dark-color;
         }
     }
-    &--primary, &--secondary {
+    &--primary, &--secondary, &--primary--rounded, &--secondary--rounded {
       background-color: $generic-white-color;
       &:hover, &:active {
         color: $generic-white-color;
       }
+    }
+    &--primary--rounded, &--secondary--rounded {
+      border-radius: 2em;
     }
     &__btn-icon {
       font-size: 13px;
