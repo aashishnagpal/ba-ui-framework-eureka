@@ -10,6 +10,14 @@
 		position : relative;
 	}
 
+    &__head-icon{
+      color: $generic-white-color;
+      font-size: 3em;
+      float: right;
+      padding: 0.3em;
+    }
+
+
 	&__category{
 		color: $generic-white-color;
 		font-weight: bold;
