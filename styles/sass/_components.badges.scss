@@ -1,0 +1,142 @@
+/* ==========================================================================
+   Badge component styles
+   ========================================================================== */
+
+/* Basic badge styles
+   ========================================================================== */
+
+//TODO: transition mixin needed
+
+.c-badge {
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.c-badge--primary {
+  color: $primary-dark-color;
+
+  //&:hover {
+  //  color: $primary-color;
+  //}
+}
+
+.c-badge--secondary {
+  color: $secondary-dark-color;
+
+  //&:hover {
+  //  color: $secondary-color;
+  //}
+}
+
+.c-badge--round {
+  padding: 0.26em 0.6em;
+  border-radius: 1em;
+  color: $generic-white-color;
+
+  &--primary {
+    background-color: $primary-dark-color;
+
+    //&:hover {
+    //  background-color: $primary-color;
+    //}
+  }
+
+  &--secondary {
+    background-color: $secondary-dark-color;
+
+    //&:hover {
+    //  background-color: $secondary-color;
+    //}
+  }
+}
+
+.c-badge--square {
+  line-height: 1.5em;
+  vertical-align: middle;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  border-radius: 5%;
+  color: $generic-white-color;
+
+  &--primary {
+    background-color: $primary-dark-color;
+
+    //&:hover {
+    //  background-color: $primary-color;
+    //}
+  }
+
+  &--secondary {
+    background-color: $secondary-dark-color;
+
+    //&:hover {
+    //  background-color: $secondary-color;
+    //}
+  }
+}
+
+// when the innerHTML of c-badge* is an empty string
+[class^='c-badge']:empty {
+  display: none;
+}
+
+
+
+/* Display components styles
+   ========================================================================== */
+
+//To override default link style
+.badge-component--* {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.badge-component a {
+  border: 1px solid $secondary-dark-color;
+  color: $generic-black-color;
+  width: 12em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &:hover {
+    .c-badge--primary {
+      color: $primary-color;
+    }
+
+    .c-badge--secondary {
+      color: $secondary-color;
+    }
+
+    .c-badge--round--primary,
+    .c-badge--square--primary {
+      background-color: $primary-color;
+    }
+
+    .c-badge--round--secondary,
+    .c-badge--square--secondary {
+      background-color: $secondary-color;
+    }
+  }
+}
+
+.badge-component__item {
+  display: inline-flex;
+  flex-flow: column;
+  align-items: center;
+  margin-left: 3em;
+}
+
+.badge-component__category {
+  display: block;
+  text-align: center;
+  font-size: 0.8em;
+  color: $secondary-dark-color;
+  margin-top: 0.625em;
+  margin-bottom: 1em;
+}
+
+
+
+
