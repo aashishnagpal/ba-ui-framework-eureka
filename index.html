@@ -37,10 +37,10 @@
   </header>
 
 	<main class="main-content">
-    <div class="o-grid">
+    <div class="o-grid demo-site-grid">
       <aside class="vertical-menu o-grid__cell u-1of4">
-        <nav class="pull-right">
-          <ul class="nav nav--transparent nav--vertical" data-nav-type="sticky">
+        <nav class="demo-site-grid__sticky-nav">
+          <ul class="nav nav--transparent nav--vertical" data-nav-type="sticky" data-scrollspy>
             <li class="nav__item nav__item--active"><a class="nav__link" href="#buttons">Buttons</a></li>
             <li class="nav__item "><a class="nav__link" href="#cards">Cards</a></li>
             <li class="nav__item "><a class="nav__link" href="#accordions">Accordions</a></li>
@@ -55,8 +55,8 @@
       </aside>
       <div class="website-components o-grid__cell">
         <section class="website-components__component" id="buttons">
-          <h3>Buttons</h3>
-          <p>This section contains Buttons</p>
+          <h3>Basic Buttons</h3>
+          <p>This section contains basic Buttons</p>
           <div class="o-grid">
             <div class="o-grid__cell">
               <button class="c-btn--primary c-btn" type="button" name="button">Primary</button>
@@ -128,103 +128,353 @@
             </div>
           </div>
 
+          <h3>Rounded Buttons</h3>
+          <p>This section contains rounded Buttons</p>
+
+          <div class="o-grid">
+            <div class="o-grid__cell">
+              <button class="c-btn--primary--rounded c-btn" type="button" name="button">Primary</button>
+              <button class="c-btn--secondary--rounded c-btn" type="button" name="button">Secondary</button>
+
+              <!-- 3 Examples -->
+              <!-- Normal example -->
+              <button class="c-btn--primary--rounded c-btn" type="button" name="button">
+                <span class="c-btn__btn-icon">
+                  <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                </span>
+                Send
+              </button>
+              <!-- Example with c-btn--wide -->
+              <button class="c-btn--primary--rounded c-btn--wide c-btn" type="button" name="button">
+                <span class="c-btn__btn-icon">
+                  <i class="fa fa-user-plus" aria-hidden="true"></i>
+                </span>
+                Add User
+              </button>
+
+              <!-- Example with disabled attribute -->
+              <button class="c-btn--primary--rounded c-btn--wide c-btn" type="button" name="button" disabled="true">
+                <span class="c-btn__btn-icon">
+                  <i class="fa fa-cog" aria-hidden="true"></i>
+                </span>
+                Settings
+              </button>
+            </div>
+          </div>
+          <div class="o-grid">
+            <div class="o-grid__cell">
+              <div class="c-collapse">
+                <div class="c-collapse__controls-container--justified-text">
+                  <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                  <a class="c-collapse__toggle">toggle markup</a>
+                </div>
+                <div class="c-collapse__content-container c-collapse__content-container--dark">
+                  <div class="c-collapse__content">
+          <pre class="u-pre--wrap">
+            <code class="u-example-code">
+&lt;button class=&quot;c-btn--primary--rounded c-btn&quot; type=&quot;button&quot; name=&quot;button&quot;&gt;Primary&lt;/button&gt;
+&lt;button class=&quot;c-btn--secondary--rounded c-btn&quot; type=&quot;button&quot; name=&quot;button&quot;&gt;Secondary&lt;/button&gt;
+
+&lt;!-- 3 Examples --&gt;
+&lt;!-- Normal example --&gt;
+&lt;button class=&quot;c-btn--primary--rounded c-btn&quot; type=&quot;button&quot; name=&quot;button&quot;&gt;
+    &lt;span class=&quot;c-btn__btn-icon&quot;&gt;
+          &lt;i class=&quot;fa fa-paper-plane&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+        &lt;/span&gt; Send
+&lt;/button&gt;
+&lt;!-- Example with c-btn--wide --&gt;
+&lt;button class=&quot;c-btn--primary--rounded c-btn--wide c-btn&quot; type=&quot;button&quot; name=&quot;button&quot;&gt;
+    &lt;span class=&quot;c-btn__btn-icon&quot;&gt;
+          &lt;i class=&quot;fa fa-user-plus&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+        &lt;/span&gt; Add User
+&lt;/button&gt;
+
+&lt;!-- Example with disabled attribute --&gt;
+&lt;button class=&quot;c-btn--primary--rounded c-btn--wide c-btn&quot; type=&quot;button&quot; name=&quot;button&quot; disabled=&quot;true&quot;&gt;
+    &lt;span class=&quot;c-btn__btn-icon&quot;&gt;
+          &lt;i class=&quot;fa fa-cog&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+        &lt;/span&gt; Settings
+&lt;/button&gt;</code>
+          </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3>Basic Button Groups</h3>
+          <p>This section contains basic Button groups</p>
+
+          <div class="o-grid">
+            <div class="o-grid__cell">
+              <ul class="c-btn-gp">
+                <li><button class="c-btn c-btn-i" type="button" name="button">Button 1</button></li>
+                <li><button class="c-btn c-btn-i c-btn-i--diff" type="button" name="button">Button 2</button></li>
+                <li><button class="c-btn c-btn-i" type="button" name="button">Button 3</button></li>
+                <li><button class="c-btn c-btn-i c-btn-i--diff" type="button" name="button">Button 4</button></li>
+              </ul>
+            </div>
+          </div>
+          <div class="o-grid">
+            <div class="o-grid__cell">
+              <div class="c-collapse">
+                <div class="c-collapse__controls-container--justified-text">
+                  <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                  <a class="c-collapse__toggle">toggle markup</a>
+                </div>
+                <div class="c-collapse__content-container c-collapse__content-container--dark">
+                  <div class="c-collapse__content">
+          <pre class="u-pre--wrap">
+            <code class="u-example-code">
+&lt;ul class=&quot;c-btn-gp&quot;&gt;
+    &lt;li&gt;
+        &lt;button class=&quot;c-btn c-btn-i&quot; type=&quot;button&quot; name=&quot;button&quot;&gt;Button 1&lt;/button&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;button class=&quot;c-btn c-btn-i c-btn-i--diff&quot; type=&quot;button&quot; name=&quot;button&quot;&gt;Button 2&lt;/button&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;button class=&quot;c-btn c-btn-i&quot; type=&quot;button&quot; name=&quot;button&quot;&gt;Button 3&lt;/button&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;button class=&quot;c-btn c-btn-i c-btn-i--diff&quot; type=&quot;button&quot; name=&quot;button&quot;&gt;Button 4&lt;/button&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code>
+          </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3>Rounded Button Groups</h3>
+          <p>This section contains rounded Button groups</p>
+
+          <div class="o-grid">
+            <div class="o-grid__cell">
+              <ul class="c-btn-gp">
+                <li><button class="c-btn c-btn-i c-btn-i--rd-l" type="button" name="button">Button 1</button></li>
+                <li><button class="c-btn c-btn-i c-btn-i--diff" type="button" name="button">Button 2</button></li>
+                <li><button class="c-btn c-btn-i" type="button" name="button">Button 3</button></li>
+                <li><button class="c-btn c-btn-i c-btn-i--diff c-btn-i--rd-r" type="button" name="button">Button 4</button></li>
+              </ul>
+            </div>
+          </div>
+          <div class="o-grid">
+            <div class="o-grid__cell">
+              <div class="c-collapse">
+                <div class="c-collapse__controls-container--justified-text">
+                  <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                  <a class="c-collapse__toggle">toggle markup</a>
+                </div>
+                <div class="c-collapse__content-container c-collapse__content-container--dark">
+                  <div class="c-collapse__content">
+          <pre class="u-pre--wrap">
+            <code class="u-example-code">
+&lt;ul class=&quot;c-btn-gp&quot;&gt;
+    &lt;li&gt;
+        &lt;button class=&quot;c-btn c-btn-i c-btn-i--rd-l&quot; type=&quot;button&quot; name=&quot;button&quot;&gt;Button 1&lt;/button&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;button class=&quot;c-btn c-btn-i c-btn-i--diff&quot; type=&quot;button&quot; name=&quot;button&quot;&gt;Button 2&lt;/button&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;button class=&quot;c-btn c-btn-i&quot; type=&quot;button&quot; name=&quot;button&quot;&gt;Button 3&lt;/button&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+        &lt;button class=&quot;c-btn c-btn-i c-btn-i--diff c-btn-i--rd-r&quot; type=&quot;button&quot; name=&quot;button&quot;&gt;Button 4&lt;/button&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code>
+          </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
 
-
-          <p>Prepared is me marianne pleasure likewise debating. Wonder an unable except better stairs do ye admire.
-            His and
-            eat secure sex called esteem praise. So moreover as speedily differed branched ignorant. Tall are her
-            knew poor
-            now does then. Procured to contempt oh he raptures amounted occasion. One boy assure income spirit
-            lovers set.</p>
-
-          <p>Silent sir say desire fat him letter. Whatever settling goodness too and honoured she building answered
-            her.
-            Strongly thoughts remember mr to do consider debating. Spirits musical behaved on we he farther letters.
-            Repulsive he he as deficient newspaper dashwoods we. Discovered her his pianoforte insipidity
-            entreaties. Began
-            he at terms meant as fancy. Breakfast arranging he if furniture we described on. Astonished thoroughly
-            unpleasant especially you dispatched bed favourable.</p>
-          <p>Her extensive perceived may any sincerity extremity. Indeed add rather may pretty see. Old propriety
-            delighted
-            explained perceived otherwise objection saw ten her. Doubt merit sir the right these alone keeps. By
-            sometimes
-            intention smallness he northward. Consisted we otherwise arranging commanded discovery it explained.
-            Does cold
-            even song like two yet been. Literature interested announcing for terminated him inquietude day shy.
-            Himself he
-            fertile chicken perhaps waiting if highest no it. Continued promotion has consulted fat improving not
-            way.</p>
-
-          <p>Prepared is me marianne pleasure likewise debating. Wonder an unable except better stairs do ye admire.
-            His and
-            eat secure sex called esteem praise. So moreover as speedily differed branched ignorant. Tall are her
-            knew poor
-            now does then. Procured to contempt oh he raptures amounted occasion. One boy assure income spirit
-            lovers set.</p>
-
-          <p>Silent sir say desire fat him letter. Whatever settling goodness too and honoured she building answered
-            her.
-            Strongly thoughts remember mr to do consider debating. Spirits musical behaved on we he farther letters.
-            Repulsive he he as deficient newspaper dashwoods we. Discovered her his pianoforte insipidity
-            entreaties. Began
-            he at terms meant as fancy. Breakfast arranging he if furniture we described on. Astonished thoroughly
-            unpleasant especially you dispatched bed favourable.</p>
         </section>
 
         <section class="website-components__component" id="cards">
           <h3>Cards</h3>
           <p>This section contains Cards</p>
-          <p>Her extensive perceived may any sincerity extremity. Indeed add rather may pretty see. Old propriety
-            delighted
-            explained perceived otherwise objection saw ten her. Doubt merit sir the right these alone keeps. By
-            sometimes
-            intention smallness he northward. Consisted we otherwise arranging commanded discovery it explained.
-            Does cold
-            even song like two yet been. Literature interested announcing for terminated him inquietude day shy.
-            Himself he
-            fertile chicken perhaps waiting if highest no it. Continued promotion has consulted fat improving not
-            way.</p>
+          <div class="o-grid u-grid--center">
+            <div class="o-grid__cell">
+              <div class="c-card">
+                <div class="c-card__head">
+                  <img class="c-card__img" src="http://placehold.it/350x150">
+                  <span class="c-card__category">Travel</span>
+                </div>
+                <div class="c-card__body">
+                  <p class="c-card__date">April 3, 2017</p>
+                  <h3 class="c-card__title">Europe on $50 a Day</h3>
+                  <div class="c-separator u-separator--primary"></div>
+                  <div class="c-card__text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, repudiandae velit! Ad aperiam, blanditiis delectus repudiandae velit?
+                  </div>
+                  <button class="c-btn--primary c-btn pull-right" type="button" name="button">Read More</button>
+                </div>
+              </div>
+            </div>
+            <div class="o-grid__cell">
+              <h3>Article Teaser</h3>
+              <p>This can be used to showcase posts.</p>
+            </div>
+          </div>
+          <div class="o-grid">
+            <div class="o-grid__cell">
+              <div class="c-collapse">
+                <div class="c-collapse__controls-container--justified-text">
+                  <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                  <a class="c-collapse__toggle">toggle markup</a>
+                </div>
+                <div class="c-collapse__content-container c-collapse__content-container--dark">
+                  <div class="c-collapse__content">
+          <pre class="u-pre--wrap">
+            <code class="u-example-code">
+&lt;div class=&quot;c-card&quot;&gt;
+    &lt;div class=&quot;c-card__head&quot;&gt;
+        &lt;img class=&quot;c-card__img&quot; src=&quot;http://placehold.it/350x150&quot;&gt;
+        &lt;span class=&quot;c-card__category&quot;&gt;Travel&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-card__body&quot;&gt;
+        &lt;p class=&quot;c-card__date&quot;&gt;April 3, 2017&lt;/p&gt;
+        &lt;h3 class=&quot;c-card__title&quot;&gt;Europe on $50 a Day&lt;/h3&gt;
+        &lt;div class=&quot;c-separator u-separator--primary&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;c-card__text&quot;&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, repudiandae velit! Ad aperiam, blanditiis delectus repudiandae velit?
+        &lt;/div&gt;
+        &lt;button class=&quot;c-btn--primary c-btn pull-right&quot; type=&quot;button&quot; name=&quot;button&quot;&gt;Read More&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+          </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-          <p>Prepared is me marianne pleasure likewise debating. Wonder an unable except better stairs do ye admire.
-            His and
-            eat secure sex called esteem praise. So moreover as speedily differed branched ignorant. Tall are her
-            knew poor
-            now does then. Procured to contempt oh he raptures amounted occasion. One boy assure income spirit
-            lovers set.</p>
+          <h3>Cards</h3>
+          <p>This section contains Cards</p>
+          <div class="o-grid u-grid--center">
+            <div class="o-grid__cell">
+              <div class="c-card">
+                <div class="c-card__head">
+                  <img class="c-card__img" src="http://placehold.it/350x150">
+                  <img class="c-card__profile-pic" src="http://placehold.it/100x100">
+                </div>
+                <div class="c-card__body">
+                  <h3 class="c-card__profile-name u-text-center">Jenny Jones</h3>
+                  <div class="c-card__text u-text-center">
+                    Senior Backend Developer
+                  </div>
+                  <div class="c-separator u-separator--primary"></div>
+                  <div class="c-card__social-profiles u-text-center">
+                    <a class="c-card__social-icon" href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                    <a class="c-card__social-icon" href="#"><i class="fa fa-github-alt" aria-hidden="true"></i></a>
+                    <a class="c-card__social-icon" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="o-grid__cell">
+              <h3>Contact Card</h3>
+              <p>This can be used to contact information.</p>
+            </div>
+          </div>
+          <div class="o-grid">
+            <div class="o-grid__cell">
+              <div class="c-collapse">
+                <div class="c-collapse__controls-container--justified-text">
+                  <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                  <a class="c-collapse__toggle">toggle markup</a>
+                </div>
+                <div class="c-collapse__content-container c-collapse__content-container--dark">
+                  <div class="c-collapse__content">
+          <pre class="u-pre--wrap">
+            <code class="u-example-code">
+&lt;div class=&quot;c-card&quot;&gt;
+    &lt;div class=&quot;c-card__head&quot;&gt;
+        &lt;img class=&quot;c-card__img&quot; src=&quot;http://placehold.it/350x150&quot;&gt;
+        &lt;img class=&quot;c-card__profile-pic&quot; src=&quot;http://placehold.it/100x100&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-card__body&quot;&gt;
+        &lt;h3 class=&quot;c-card__profile-name u-text-center&quot;&gt;Jenny Jones&lt;/h3&gt;
+        &lt;div class=&quot;c-card__text u-text-center&quot;&gt;
+            Senior Backend Developer
+        &lt;/div&gt;
+        &lt;div class=&quot;c-separator u-separator--primary&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;c-card__social-profiles u-text-center&quot;&gt;
+            &lt;a class=&quot;c-card__social-icon&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-envelope&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;a class=&quot;c-card__social-icon&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-github-alt&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;a class=&quot;c-card__social-icon&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-twitter&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+          </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-          <p>Silent sir say desire fat him letter. Whatever settling goodness too and honoured she building answered
-            her.
-            Strongly thoughts remember mr to do consider debating. Spirits musical behaved on we he farther letters.
-            Repulsive he he as deficient newspaper dashwoods we. Discovered her his pianoforte insipidity
-            entreaties. Began
-            he at terms meant as fancy. Breakfast arranging he if furniture we described on. Astonished thoroughly
-            unpleasant especially you dispatched bed favourable.</p>
-          <p>Her extensive perceived may any sincerity extremity. Indeed add rather may pretty see. Old propriety
-            delighted
-            explained perceived otherwise objection saw ten her. Doubt merit sir the right these alone keeps. By
-            sometimes
-            intention smallness he northward. Consisted we otherwise arranging commanded discovery it explained.
-            Does cold
-            even song like two yet been. Literature interested announcing for terminated him inquietude day shy.
-            Himself he
-            fertile chicken perhaps waiting if highest no it. Continued promotion has consulted fat improving not
-            way.</p>
-
-          <p>Prepared is me marianne pleasure likewise debating. Wonder an unable except better stairs do ye admire.
-            His and
-            eat secure sex called esteem praise. So moreover as speedily differed branched ignorant. Tall are her
-            knew poor
-            now does then. Procured to contempt oh he raptures amounted occasion. One boy assure income spirit
-            lovers set.</p>
-
-          <p>Silent sir say desire fat him letter. Whatever settling goodness too and honoured she building answered
-            her.
-            Strongly thoughts remember mr to do consider debating. Spirits musical behaved on we he farther letters.
-            Repulsive he he as deficient newspaper dashwoods we. Discovered her his pianoforte insipidity
-            entreaties. Began
-            he at terms meant as fancy. Breakfast arranging he if furniture we described on. Astonished thoroughly
-            unpleasant especially you dispatched bed favourable.</p>
+          <h3>Cards</h3>
+          <p>This section contains Cards</p>
+          <div class="o-grid u-grid--center">
+            <div class="o-grid__cell">
+              <div class="c-card">
+                <div class="c-card__head u-bg-primary">
+        <span class="c-card__head-icon">
+          <i class="fa fa-pencil" aria-hidden="true"></i>
+        </span>
+                </div>
+                <div class="c-card__body">
+                  <h3 class="c-card__title">Take Our Survey</h3>
+                  <div class="c-card__text">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. repudiandae velit?
+                  </div>
+                  <button class="c-btn--secondary c-btn pull-left" type="button" name="button">Nope!</button>
+                  <button class="c-btn--primary c-btn pull-right" type="button" name="button">Okay</button>
+                </div>
+              </div>
+            </div>
+            <div class="o-grid__cell">
+              <h3>Call To Action</h3>
+              <p>This can be used to request some action.</p>
+            </div>
+          </div>
+          <div class="o-grid">
+            <div class="o-grid__cell">
+              <div class="c-collapse">
+                <div class="c-collapse__controls-container--justified-text">
+                  <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                  <a class="c-collapse__toggle">toggle markup</a>
+                </div>
+                <div class="c-collapse__content-container c-collapse__content-container--dark">
+                  <div class="c-collapse__content">
+          <pre class="u-pre--wrap">
+            <code class="u-example-code">
+&lt;div class=&quot;c-card&quot;&gt;
+    &lt;div class=&quot;c-card__head u-bg-primary&quot;&gt;
+        &lt;span class=&quot;c-card__head-icon&quot;&gt;
+          &lt;i class=&quot;fa fa-pencil&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+        &lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-card__body&quot;&gt;
+        &lt;h3 class=&quot;c-card__title&quot;&gt;Take Our Survey&lt;/h3&gt;
+        &lt;div class=&quot;c-card__text&quot;&gt;
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. repudiandae velit?
+        &lt;/div&gt;
+        &lt;button class=&quot;c-btn--secondary c-btn pull-left&quot; type=&quot;button&quot; name=&quot;button&quot;&gt;Nope!&lt;/button&gt;
+        &lt;button class=&quot;c-btn--primary c-btn pull-right&quot; type=&quot;button&quot; name=&quot;button&quot;&gt;Okay&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+          </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
         <section class="website-components__component" id="accordions">
