@@ -385,17 +385,6 @@ menu {
   display: block; }
 
 /*
-=======
-/*
- * Add the correct display in IE 9-.
- * 1. Add the correct display in Edge, IE, and Firefox.
- */
-details,
-menu {
-  display: block; }
-
-/*
->>>>>>> ig-branch
  * Add the correct display in all browsers.
  */
 summary {
@@ -1414,7 +1403,9 @@ h6 {
 
 .accordion {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  padding: 0;
+  margin: 0; }
   .accordion__item {
     display: flex;
     flex-direction: column; }
@@ -1691,7 +1682,6 @@ h6 {
 
 a {
   border-bottom: none; }
-
 
 /* ==========================================================================
    Utility classes for grid
