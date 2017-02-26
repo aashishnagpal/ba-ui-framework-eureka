@@ -1,37 +1,32 @@
-// body {
-//     background: $secondary-color;
-// }
-
 //changes size of search bar with single variable
 //defaults to "normal" size 1.5
-$search-size-multiplier: 1.5;
+$search-second-size-multiplier: .7;
 
 //form wrapper for search bar
-.search-form {
-    border: ($search-size-multiplier * 0.4375rem) solid $generic-white-color;
+.search-form-second {
     border-radius: 5px;
+    border: ($search-second-size-multiplier * 0.1rem) solid transparentize($secondary-light-color, .8);
     display: flex;
-    height: ($search-size-multiplier * (2.25rem + 0.4375rem));
+    height: ($search-second-size-multiplier * 4rem);
     justify-content: flex-start;
     margin: auto;
-    width: ($search-size-multiplier * 23.44rem);
     position: relative;
+    width: ($search-second-size-multiplier * 30rem);
 }
 
 //search bar input
-.search-input {
-    background: transparentize($primary-color, .31);
+.search-input-second {
+    background: $body-bg-color;
     border: none;
-    padding-right: ($search-size-multiplier * 0.75rem);
-    text-align: right;
+    padding-left: ($search-second-size-multiplier * .8rem);
+    text-align: left;
     flex-basis: 85%;
-    font-family: $roboto-light-font-family;
+    font-family: $roboto-font-family;
     //Better consistency for browsers that don't support light tag
-    font-weight: 300;
-    font-size: ($search-size-multiplier * 1.3rem);
+    font-size: ($search-second-size-multiplier * 1.7rem);
     &::-webkit-input-placeholder {
         /* WebKit, Blink, Edge */
-        color: $generic-white-color;
+        color: transparentize($secondary-light-color, .65);
     }
     &:-moz-placeholder {
         /* Mozilla Firefox 4 to 18 */
@@ -51,23 +46,25 @@ $search-size-multiplier: 1.5;
 
 //button for user interactivity
 //will incorporate style-guide button when ready
-.button {
-    background-color: $primary-dark-color;
-    border-radius: 6px;
+.search-button-second {
+    background-color: lighten($body-bg-color, 12.5%);
     border: transparent;
     box-shadow: -5px 0 3px -4px $generic-black-color;
     color: #fafafa;
-    flex-basis: 18%;
-    margin-left: (-0.1875rem * $search-size-multiplier);
+    flex-basis: 16%;
+    margin-left: (-0.1875rem * $search-second-size-multiplier);
     &:hover {
-        background-color: $secondary-dark-color;
+        background-color: $body-bg-color;
+    }
+    &:click {
+        border: 2px solid $generic-gray-color;
     }
 }
 
-.search-icon {
+.search-icon-second {
     position: absolute;
-    font-size: ($search-size-multiplier * 1.35rem);
-    right: ($search-size-multiplier * 1.5rem);
-    top: ($search-size-multiplier * .2rem);
-    color: #A7D9E1;
+    font-size: ($search-second-size-multiplier * 2.5rem);
+    right: 4%;
+    top: 14.5%;
+    color: transparentize($secondary-light-color, .63);
 }
