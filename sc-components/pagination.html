@@ -1,25 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Pagination component</title>
-	  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta charset="UTF-8">
+  <title>Pagination component</title>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../styles/css/eureka.css">
 </head>
+
 <body>
-	<h2>Pagination</h2>
-	<ol class="c-pagination--default">
-		<li><i class="fa fa-chevron-left"></i></li>
-		<li>1</li>
-		<li>...</li>
-		<li>14</li>
-		<li>15</li>
-		<li>16</li>
-		<li>...</li>
-		<li>32</li>
-		<li><i class="fa fa-chevron-right"></i></li>
-	</ol>
-	
-	
+  <div class="generic-wrapper" style="width: 30em">
+    <h2>Pagination</h2>
+    <!-- simple pagination style -->
+    <h3>Simple</h3>
+    <ol class="c-pagination">
+      <li class="c-pagination__nav--prev"><a href="#"><i class="fa fa-chevron-left"></i></a></li>
+      <li class="c-pagination__item"><a href="#">1</a></li>
+      <li class="c-pagination__item"><a href="#"><i class="fa fa-ellipsis-h"></i></a></li>
+      <li class="c-pagination__item"><a href="#">14</a></li>
+      <li class="c-pagination__item--current"><a href="#">15</a></li>
+      <li class="c-pagination__item"><a href="#">16</a></li>
+      <li class="c-pagination__item"><a href="#"><i class="fa fa-ellipsis-h"></i></a></li>
+      <li class="c-pagination__item"><a href="#">32</a></li>
+      <li class="c-pagination__nav--next"><a href="#"><i class="fa fa-chevron-right"></i></a></li>
+    </ol>
+    <!-- round pagination style -->
+    <h3>Round</h3>
+    <ol class="c-pagination--round">
+      <li class="c-pagination__nav--prev"><a href="#"><i class="fa fa-chevron-left"></i></a></li>
+      <li class="c-pagination__item"><a href="#">1</a></li>
+      <li class="c-pagination__item"><a href="#"><i class="fa fa-ellipsis-h"></i></a></li>
+      <li class="c-pagination__item"><a href="#">14</a></li>
+      <li class="c-pagination__item--current"><a href="#">15</a></li>
+      <li class="c-pagination__item"><a href="#">16</a></li>
+      <li class="c-pagination__item"><a href="#"><i class="fa fa-ellipsis-h"></i></a></li>
+      <li class="c-pagination__item"><a href="#">32</a></li>
+      <li class="c-pagination__nav--next"><a href="#"><i class="fa fa-chevron-right"></i></a></li>
+    </ol>
+    <!-- square pagination style -->
+    <h3>Square</h3>
+    <ol class="c-pagination--square">
+      <li class="c-pagination__nav--prev"><a href="#"><i class="fa fa-chevron-left"></i></a></li>
+      <li class="c-pagination__item"><a href="#">1</a></li>
+      <li class="c-pagination__item"><a href="#"><i class="fa fa-ellipsis-h"></i></a></li>
+      <li class="c-pagination__item"><a href="#">14</a></li>
+      <li class="c-pagination__item--current"><a href="#">15</a></li>
+      <li class="c-pagination__item"><a href="#">16</a></li>
+      <li class="c-pagination__item"><a href="#"><i class="fa fa-ellipsis-h"></i></a></li>
+      <li class="c-pagination__item"><a href="#">32</a></li>
+      <li class="c-pagination__nav--next"><a href="#"><i class="fa fa-chevron-right"></i></a></li>
+    </ol>
+  </div>
 </body>
+
 </html>

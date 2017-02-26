@@ -1,0 +1,103 @@
+/*===========================================
+	pagination component styles
+	==========================================*/
+
+.c-pagination {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 1em;
+  color: $secondary-dark-color;
+  &--round {
+    @extend .c-pagination;
+  }
+  &--square {
+    @extend .c-pagination;
+  }
+}
+
+%--round-item-and-nav {
+  width: 2.2em;
+  height: 2.2em;
+  border: solid 1px $primary-color;
+  border-radius: 50%;
+  color: $primary-color;
+  &:hover {
+    background-color: $primary-color;
+    color: $generic-white-color;
+  }
+}
+
+%--square-item-and-nav {
+  @extend %--round-item-and-nav;
+  border-radius: 0;
+}
+
+.c-pagination__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  &:hover {
+    color: $primary-dark-color;
+  }
+  & i {
+    font-size: 0.8em;
+  }
+  & a {
+    border: none;
+  }
+  @at-root .c-pagination--round & {
+    @extend %--round-item-and-nav;
+  }
+  @at-root .c-pagination--square & {
+    @extend %--square-item-and-nav;
+  }
+}
+
+.c-pagination__item--current {
+  @extend .c-pagination__item;
+  color: $primary-color;
+  @at-root .c-pagination--round & {
+    background-color: $primary-color;
+    color: $generic-white-color;
+  }
+  @at-root .c-pagination--square & {
+    background-color: $primary-color;
+    color: $generic-white-color;
+  }
+}
+
+.c-pagination__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $primary-color;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  &:hover {
+    color: $primary-dark-color;
+  }
+  & a {
+    border: none;
+  }
+  &--prev {
+    @extend .c-pagination__nav;
+		& i {
+			margin-left: -0.2em;
+		}
+  }
+  &--next {
+    @extend .c-pagination__nav;
+    & i {
+			margin-left: 0.2em;
+		}
+  }
+  @at-root .c-pagination--round & {
+    @extend %--round-item-and-nav;
+  }
+}
