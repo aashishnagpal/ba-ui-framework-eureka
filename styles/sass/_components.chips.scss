@@ -5,61 +5,93 @@
 /* Basic chip styles
    ========================================================================== */
 
-.c-chip {
+// Filled chips
+%c-chip {
   outline: none;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   height: 2em;
-  line-height: 2em;
   padding-left: 1em;
   padding-right: 1em;
-  background-color: lighten($secondary-light-color, 5%);
   border-radius: 1em;
-
   font-size: 0.9em;
   color: darken($secondary-dark-color, 30%);
+}
 
-  &__media {
-    display: inline-block;
-    float: left;
-    height: 2em;
-    line-height: 2em;
-    width: 2em;
-    border-radius: 50%;
-    background-color: $primary-dark-color;
-    margin: 0 0.5em 0 -1em;
-    padding: 0;
-    text-align: center;
-    overflow: hidden;
+%c-chip__media {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+  padding: 0;
+  font-size: 1em;
+  overflow: hidden;
+  margin: 0 0.5em 0 -1em;
+}
 
-    &--initial {
-      font-size: 1em;
-      color: $generic-white-color;
-    }
+.c-chip__icon {
+  font-size: 0.9em;
+  font-weight: bold;
+}
 
-    > .c-chip__icon {
-      font-size: 0.9em;
-      color: $generic-white-color;
-      font-weight: bold;
-    }
+.c-chip__img {
+  height:100%;
+  width: 100%;
+}
 
-    > .c-chip__img {
-      height:100%;
-      width: 100%;
-    }
-  }
+.c-chip__delete {
+  float: right;
+  margin-left: 0.5em;
+  color: darken($secondary-dark-color, 20%);
+  cursor: pointer;
+  transition: color 0.2s;
 
-  &__delete {
-    float: right;
-    margin-left: 0.5em;
-    color: darken($secondary-dark-color, 20%);
-    cursor: pointer;
-    transition: color 0.2s;
-
-    &:hover {
-      color: darken($secondary-dark-color, 35%);
-    }
+  &:hover {
+    color: darken($secondary-dark-color, 35%);
   }
 }
+
+// Filled chips
+.c-chip--filled {
+  @extend %c-chip;
+  background-color: lighten($secondary-light-color, 5%);
+}
+
+.c-chip__media--f {
+  @extend %c-chip__media;
+  background-color: $primary-dark-color;
+  color: $generic-white-color;
+
+  &--img {
+    margin-left: -1.1em;
+  }
+}
+
+
+
+
+// Outlined chips
+.c-chip--outlined {
+  @extend %c-chip;
+  border: 2px solid lighten($secondary-light-color, 5%);
+
+}
+
+.c-chip__media--o {
+  @extend %c-chip__media;
+  border: 2px solid $primary-dark-color;
+  color: $primary-dark-color;
+  margin-left: -1.1em;
+
+  > .c-chip__icon {
+    color: inherit;
+  }
+}
+
 
 /* Display components styles
    ========================================================================== */
@@ -71,9 +103,9 @@
     margin-bottom: 0.8em;
   }
 
-  .c-chip {
-    margin-right: 0.8em;
-    margin-top: 0.5em;
+  .c-chip--filled,
+  .c-chip--outlined {
+    margin: 0.5em 0.8em 0 0;
   }
 }
 
@@ -83,62 +115,6 @@
 
 
 
-/* Demo styles
-   ========================================================================== */
-
-.demo-chip__label {
-  display: block;
-  width: 40%;
-  min-width: 20em;
-  position: relative;
-  left: 1em;
-  //border: 1px solid red;
-
-  .c-chip {
-    position: relative;
-    //left: 0;
-    top: 0;
-    //transform: translateY(-50%);
-
-  }
-
-  .demo-chip__input {
-    position: absolute;
-    top: 0;
-    left: 0;
-    //left: 1em;
-    //width: 40%;
-    //min-width: 20em;
-    //height: 100%;
-    width: 100%;
-    font-size: 0.9em;
-    color: $secondary-dark-color;
-    padding: 0.8em 0;
-    outline: none;
-    border: none;
-    border-bottom: 1px solid $secondary-color;
-    background-color: transparent;
-    transition: border-bottom-color 0.2s, box-shadow 0.2s;
-
-    //padding-left: ;
-
-    //&::after {
-    //  content: '';
-    //  position: absolute;
-    //  top: 0;
-    //  height: 100%;
-    //  width: 100%;
-    //  //border-bottom: 2px solid blue;
-    //  transition: border-bottom-color 0.5s;
-    //
-    //}
-
-    &:focus {
-      border-bottom-color: $primary-color;
-      box-shadow: 0 1px 0 0 $primary-color;
-    }
-  }
-}
 
 
 
