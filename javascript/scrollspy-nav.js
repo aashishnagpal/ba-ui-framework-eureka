@@ -3,7 +3,7 @@
  */
 (function () {
   'use strict';
-  var nav = document.querySelector('.nav');
+  var nav = document.querySelector('.nav[data-scrollspy]');
   var links = nav.querySelectorAll('a[href]:not([href="#"]');
   var targets = [];
 
