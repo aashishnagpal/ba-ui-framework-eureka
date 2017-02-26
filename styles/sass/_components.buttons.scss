@@ -2,8 +2,7 @@
    ==========================================================================
 */
 .c-btn-home {
-  margin-top: 1em;
-  display: inline-flex;
+  margin-top: 2em;
 }
 
 .c-btn {
@@ -12,12 +11,12 @@
   border-radius: 0.2em;
   border-style: solid;
   cursor: pointer;
+  display: inline-block;
   font-family: inherit;
   line-height: 2.4em;
   margin: 0 0.5em;
-  padding: 0 1em;
+  padding: 0.1em 1.2em;
   position: relative;
-  width: 7em;
     &-i {
       background-color: $primary-color;
       border-color: $primary-color;
@@ -33,7 +32,8 @@
         border-color: $primary-dark-color;
       }
       &:focus {
-        outline: .15em solid $primary-light-color !important;
+        border: 0.3em solid $primary-light-color !important;
+        outline: 0;
       }
       &--diff {
         background-color: $secondary-color;
@@ -45,9 +45,6 @@
         &:active {
           background-color: darken($secondary-dark-color, 5%);
           border-color: $secondary-dark-color;
-        }
-        &:focus {
-          outline: .15em solid $secondary-color !important;
         }
       }
       &--rd-l {
@@ -61,7 +58,7 @@
     }
     &-gp {
       padding-left: 0;
-      margin: 0 0.5em;
+      margin: 1em 0.5em;
     }
     &--primary, &--primary--rounded {
       border-color: $primary-color;
@@ -94,14 +91,13 @@
     }
     &__btn-icon {
       font-size: 13px;
-      margin: 0 0.5em 0 -0.5em;
     }
     &--wide {
       width: 8em;
     }
     &:focus {
-      outline-color: $primary-light-color;
-      outline-width: 0.1em;
+      border: 0.3em solid $primary-light-color;
+      outline: 0;
     }
     &[disabled="true"] {
       background-color: $secondary-dark-color;
