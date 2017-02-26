@@ -376,6 +376,7 @@ textarea {
 
 /* Interactive
    ========================================================================== */
+<<<<<<< HEAD
 /*
  * Add the correct display in IE 9-.
  * 1. Add the correct display in Edge, IE, and Firefox.
@@ -387,6 +388,9 @@ menu {
 /*
 =======
 /*
+=======
+/*
+>>>>>>> gh-pages
  * Add the correct display in IE 9-.
  * 1. Add the correct display in Edge, IE, and Firefox.
  */
@@ -395,7 +399,10 @@ menu {
   display: block; }
 
 /*
+<<<<<<< HEAD
 >>>>>>> Continue working on website.
+=======
+>>>>>>> gh-pages
  * Add the correct display in all browsers.
  */
 summary {
@@ -574,9 +581,13 @@ h6 {
     background-color: #e74c3c; }
 
 .c-alert--remove {
+<<<<<<< HEAD
 
   animation: c-alert--fade-out 0.5s cubic-bezier(0.54, -0.21, 0.37, 0.92); }
 
+=======
+  animation: c-alert--fade-out 0.5s ease; }
+>>>>>>> gh-pages
 
 @keyframes c-alert--fade-out {
   0% {
@@ -766,11 +777,15 @@ h6 {
   transition: height 0.5s ease-in-out;
   height: 0;
   border-radius: 0 0 3px 3px;
+<<<<<<< HEAD
 
   overflow: auto;
   margin-top: 1em;
   margin-bottom: 2em; }
 
+=======
+  overflow: auto; }
+>>>>>>> gh-pages
   .c-collapse__content-container--dark {
     background-color: #30353b;
     color: #fff; }
@@ -911,8 +926,11 @@ h6 {
   flex-wrap: wrap;
   justify-content: space-around; }
 
+<<<<<<< HEAD
 <<<<<<< 299660ddc8d19d9775bf0e054165db4421f1b8aa
 =======
+=======
+>>>>>>> gh-pages
 .badge-component a {
   border: 1px solid #a4a4a4;
   color: #212121;
@@ -931,12 +949,16 @@ h6 {
   .badge-component a:hover .c-badge--square--secondary {
     background-color: #bdbdbd; }
 
+<<<<<<< HEAD
 >>>>>>> Continue working on website.
+=======
+>>>>>>> gh-pages
 .badge-component__item {
   display: inline-flex;
   flex-flow: column;
   align-items: center;
   margin-left: 3em; }
+<<<<<<< HEAD
 <<<<<<< 299660ddc8d19d9775bf0e054165db4421f1b8aa
   .badge-component__item a {
     border-radius: 3px;
@@ -958,6 +980,8 @@ h6 {
       background-color: #bdbdbd; }
 =======
 >>>>>>> Continue working on website.
+=======
+>>>>>>> gh-pages
 
 .badge-component__category {
   display: block;
@@ -986,11 +1010,15 @@ h6 {
   flex-flow: column; }
   .demo-badge__list li {
     margin: 0.5em 2em; }
+<<<<<<< HEAD
 <<<<<<< 299660ddc8d19d9775bf0e054165db4421f1b8aa
     .demo-badge__list li .close {
 =======
     .demo-badge__list li .fa {
 >>>>>>> Continue working on website.
+=======
+    .demo-badge__list li .fa {
+>>>>>>> gh-pages
       float: right;
       color: #a4a4a4;
       cursor: pointer; }
@@ -1006,6 +1034,7 @@ h6 {
    ========================================================================== */
 /* Basic chip styles
    ========================================================================== */
+<<<<<<< HEAD
 <<<<<<< 299660ddc8d19d9775bf0e054165db4421f1b8aa
 .c-chip--filled, .c-chip--outlined {
   outline: none;
@@ -1068,6 +1097,8 @@ h6 {
   .c-chip__media--o > .c-chip__icon {
     color: inherit; }
 =======
+=======
+>>>>>>> gh-pages
 .c-chip {
   outline: none;
   display: inline-block;
@@ -1109,7 +1140,10 @@ h6 {
     transition: color 0.2s; }
     .c-chip__delete:hover {
       color: #4b4b4b; }
+<<<<<<< HEAD
 >>>>>>> Continue working on website.
+=======
+>>>>>>> gh-pages
 
 /* Display components styles
    ========================================================================== */
@@ -1117,6 +1151,7 @@ h6 {
   margin: 2em; }
   [class^='chip-component--'] h4 {
     margin-bottom: 0.8em; }
+<<<<<<< HEAD
 <<<<<<< 299660ddc8d19d9775bf0e054165db4421f1b8aa
   [class^='chip-component--'] .c-chip--filled,
   [class^='chip-component--'] .c-chip--outlined {
@@ -1126,12 +1161,20 @@ h6 {
     margin-right: 0.8em;
     margin-top: 0.5em; }
 >>>>>>> Continue working on website.
+=======
+  [class^='chip-component--'] .c-chip {
+    margin-right: 0.8em;
+    margin-top: 0.5em; }
+>>>>>>> gh-pages
 
 .chip-component--deletable {
   min-height: 6.25em; }
 
+<<<<<<< HEAD
 <<<<<<< 299660ddc8d19d9775bf0e054165db4421f1b8aa
 =======
+=======
+>>>>>>> gh-pages
 /* Demo styles
    ========================================================================== */
 .demo-chip__label {
@@ -1160,7 +1203,10 @@ h6 {
       border-bottom-color: #51d0ef;
       box-shadow: 0 1px 0 0 #51d0ef; }
 
+<<<<<<< HEAD
 >>>>>>> Continue working on website.
+=======
+>>>>>>> gh-pages
 /* ==========================================================================
    Modal component styles
    ========================================================================== */
@@ -1496,11 +1542,16 @@ h6 {
     right: 0;
     transform: translateY(50%);
     width: 7em; }
+<<<<<<< HEAD
 <<<<<<< 299660ddc8d19d9775bf0e054165db4421f1b8aa
 =======
   .c-card__date {
     margin-top: 0; }
 >>>>>>> Continue working on website.
+=======
+  .c-card__date {
+    margin-top: 0; }
+>>>>>>> gh-pages
   .c-card__profile-name {
     margin-top: 2em;
     color: #51d0ef; }
@@ -1510,6 +1561,7 @@ h6 {
     .c-card__social-icon:hover {
       border: none; }
   .c-card__body {
+<<<<<<< HEAD
 <<<<<<< 299660ddc8d19d9775bf0e054165db4421f1b8aa
     padding: 1.5em; }
   .c-card__text {
@@ -1519,6 +1571,11 @@ h6 {
   .c-card__text {
     margin-bottom: 1em; }
 >>>>>>> Continue working on website.
+=======
+    padding: 0.7em 1.5em 1.5em 1.5em; }
+  .c-card__text {
+    margin-bottom: 1em; }
+>>>>>>> gh-pages
 
 .c-separator {
   border-bottom: 0.2em solid;
@@ -1529,7 +1586,13 @@ h6 {
 
 .accordion {
   display: flex;
+<<<<<<< HEAD
   flex-direction: column; }
+=======
+  flex-direction: column;
+  padding: 0;
+  margin: 0; }
+>>>>>>> gh-pages
   .accordion__item {
     display: flex;
     flex-direction: column; }
@@ -1614,6 +1677,7 @@ h6 {
   background-color: gray; }
 
 .search-form {
+<<<<<<< HEAD
 <<<<<<< 299660ddc8d19d9775bf0e054165db4421f1b8aa
   border: 0.65625rem solid #fff;
   border-radius: 5px;
@@ -1623,6 +1687,8 @@ h6 {
   margin: auto;
   width: 35.16rem;
 =======
+=======
+>>>>>>> gh-pages
   border: 0.4375rem solid #fff;
   border-radius: 5px;
   display: flex;
@@ -1630,12 +1696,16 @@ h6 {
   justify-content: flex-start;
   margin: auto;
   width: 23.44rem;
+<<<<<<< HEAD
 >>>>>>> Continue working on website.
+=======
+>>>>>>> gh-pages
   position: relative; }
 
 .search-input {
   background: rgba(81, 208, 239, 0.69);
   border: none;
+<<<<<<< HEAD
 <<<<<<< 299660ddc8d19d9775bf0e054165db4421f1b8aa
   padding-right: 1.125rem;
   text-align: right;
@@ -1644,12 +1714,17 @@ h6 {
   font-weight: 300;
   font-size: 1.95rem; }
 =======
+=======
+>>>>>>> gh-pages
   padding-right: 0.75rem;
   text-align: right;
   flex-basis: 85%;
   font-family: "Roboto Light";
   font-size: 1.3rem; }
+<<<<<<< HEAD
 >>>>>>> Continue working on website.
+=======
+>>>>>>> gh-pages
   .search-input::-webkit-input-placeholder {
     /* WebKit, Blink, Edge */
     color: #fff; }
@@ -1672,16 +1747,21 @@ h6 {
   box-shadow: -5px 0 3px -4px #212121;
   color: #fafafa;
   flex-basis: 18%;
+<<<<<<< HEAD
 <<<<<<< 299660ddc8d19d9775bf0e054165db4421f1b8aa
   margin-left: -0.28125rem; }
 =======
   margin-left: -0.1875rem; }
 >>>>>>> Continue working on website.
+=======
+  margin-left: -0.1875rem; }
+>>>>>>> gh-pages
   .button:hover {
     background-color: #a4a4a4; }
 
 .search-icon {
   position: absolute;
+<<<<<<< HEAD
 <<<<<<< 299660ddc8d19d9775bf0e054165db4421f1b8aa
   font-size: 2.025rem;
   right: 2.25rem;
@@ -1741,12 +1821,17 @@ h6 {
   color: rgba(215, 215, 215, 0.37); }
 
 =======
+=======
+>>>>>>> gh-pages
   font-size: 1.35rem;
   right: 1.5rem;
   top: 0.2rem;
   color: #A7D9E1; }
 
+<<<<<<< HEAD
 >>>>>>> Continue working on website.
+=======
+>>>>>>> gh-pages
 /* Tooltip container */
 .tooltip-this-element {
   position: relative;
@@ -1765,12 +1850,16 @@ h6 {
   border: 0.1875rem solid #e6e6e6;
   border-radius: 3px;
   color: #212121;
+<<<<<<< HEAD
 <<<<<<< 299660ddc8d19d9775bf0e054165db4421f1b8aa
   font-family: "Roboto Light", "Helvetica Light", "Roboto", "Helvetica", sans-serif;
   font-weight: 300;
 =======
   font-family: "Roboto", "Helvetica", sans-serif;
 >>>>>>> Continue working on website.
+=======
+  font-family: "Roboto", "Helvetica", sans-serif;
+>>>>>>> gh-pages
   padding-bottom: 15px;
   padding-left: 15px;
   padding-right: 15px;
@@ -1799,6 +1888,7 @@ h6 {
   visibility: visible;
   opacity: 1; }
 
+<<<<<<< HEAD
 <<<<<<< 299660ddc8d19d9775bf0e054165db4421f1b8aa
 .tabs {
   padding: 0.2em 0.5em;
@@ -1852,6 +1942,8 @@ h6 {
 
 =======
 >>>>>>> Continue working on website.
+=======
+>>>>>>> gh-pages
 .c-thumbnail {
   border: 0.5em solid #f3f3f3;
   border-radius: 1em;
@@ -1863,6 +1955,7 @@ h6 {
   .c-thumbnail-detail {
     width: 15.625em; }
 
+<<<<<<< HEAD
 <<<<<<< 299660ddc8d19d9775bf0e054165db4421f1b8aa
 .login-container {
   background: linear-gradient(#bdbdbd, #bdbdbd 21%, #42aec8 21%, #42aec8 77%, #bdbdbd 77%, #bdbdbd);
@@ -1956,6 +2049,8 @@ h6 {
     .persona:hover .persona__designation, .persona:hover .persona__button {
       opacity: 1; }
 =======
+=======
+>>>>>>> gh-pages
 .eureka-footer {
   background-color: #30353b;
   padding: 2em; }
@@ -2040,7 +2135,10 @@ h6 {
 
 a {
   border-bottom: none; }
+<<<<<<< HEAD
 >>>>>>> Continue working on website.
+=======
+>>>>>>> gh-pages
 
 /* ==========================================================================
    Utility classes for grid
