@@ -9,10 +9,11 @@
 .sass-cache*
 
 # Ignore the .gitignore
-.gitignore
+# .gitignore
 
 # Ignore compiled css and map files
 styles/*.css
 *.css
 styles/*.css.map
 *.css.map
+
