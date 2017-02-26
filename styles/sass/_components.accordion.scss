@@ -5,6 +5,8 @@
 .accordion{
   display: flex;
   flex-direction: column;
+  padding: 0;
+  margin: 0;
 
   &__item{
     display:flex;
@@ -16,7 +18,6 @@
 
     &:checked ~ .accordion__content{
       opacity: 1;
-      margin-bottom: 1px;
       max-height: 99em;
       padding: 0.5em;
       transform: scaleY(1);
@@ -33,16 +34,17 @@
       color: $body-bg-color;
     }
 
-    &:checked ~ .accordion__title > .accordion__icon{
+    &:checked ~ .accordion__title > .accordion__icon,
+    &:checked ~ .accordion__title > span > .accordion__icon {
       transform: rotate(180deg);
     }
 
   }
 
   &__title{
-    display: block;
-    margin-bottom: 1px;
-    padding: 0.5em;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75em;
     text-transform: uppercase;
     &--dark{
       background-color: $body-bg-color;
@@ -61,9 +63,9 @@
   }
 
   &__icon{
-    padding: 0 0.5em;
+    // padding: 0 0.5em;
     text-align:center;
-    transition: 0.26s ease;
+    transition: 0.5s ease-in-out;
     line-height: 1em;
   }
 
@@ -72,11 +74,24 @@
     overflow: hidden;
     transform: scaleY(0);
     transform-origin: top;
-    transition: transform 0.26s ease, opacity 0.5s ease;
+    transition: transform 0.5s ease, opacity 0.25s ease;
     opacity: 0;
     &--dark{
       background-color: $body-bg-color;
       color: $generic-gray-color;
     }
+  }
+}
+
+.icon-circle {
+  border-radius: 50%;
+  border: solid 1px $primary-color;
+  width: 1.5em;
+  height: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & i {
+    color: $primary-color;
   }
 }
