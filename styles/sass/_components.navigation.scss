@@ -8,14 +8,12 @@
 
   &--horizontal {
     display: flex;
-    width: 100vw;
   }
 
   &--vertical {
     display: inline-flex;
     flex-direction: column;
-    height: 100vh;
-    min-width: 20vw;
+    height: auto;
   }
 
   &--dark {
@@ -28,6 +26,11 @@
     color: $generic-black-color;
   }
 
+  &--transparent {
+    background: transparent;
+    color: $menu-text-color;
+  }
+
   &--sticky {
     position: fixed;
     top: 0;
@@ -38,9 +41,7 @@
   &__item {
     padding: 0.1em;
     position: relative;
-    flex: 1;
     text-align: center;
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -54,7 +55,7 @@
       background: $primary-light-color;
       content: '';
       position: absolute;
-      transform: scaleX(0);
+      transition: transform 0.3s linear;
     }
 
     &::before {
@@ -62,6 +63,7 @@
       bottom: 1px;
       height: 0.3em;
       width: 100%;
+      transform: scaleX(0);
     }
 
     &::after {
@@ -69,11 +71,16 @@
       top: 0;
       height: 100%;
       width: 0.3em;
+      transform: scaleY(0);
     }
 
-    &:hover::before, &:hover::after {
+    &:hover::before {
       transform: scaleX(1);
-      transition: transform 0.3s linear;
+
+    }
+
+    &:hover::after {
+      transform: scaleY(1);
     }
 
     &--active {
@@ -81,13 +88,9 @@
 
       &::before, &::after {
         background: $primary-color;
-        transform: scaleX(1);
+        transform: scale(1, 1);
       }
     }
   }
 
-  &__link {
-    padding: 1.5em;
-    display: inline-block;
-  }
 }
