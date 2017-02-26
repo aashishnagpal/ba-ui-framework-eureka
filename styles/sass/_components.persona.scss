@@ -6,7 +6,7 @@
   padding: 2.5em;
   border-radius: 0.5em;
   background: transparent;
-  border: 0.5em solid transparent;
+  border: 0.3em solid transparent;
   transform: scale(0.9) translate(0, 0);
   transition: all 0.5s linear;
 
@@ -44,7 +44,7 @@
   &:hover {
     background: $generic-white-color;
     box-shadow: 1px 1px 2px $generic-black-color;
-    border: 0.5em solid $primary-dark-color;
+    border-color: $primary-dark-color;
     transform: scale(1) translate(0, -40%);
     & .persona__image {
       transform: scale(1.5);
