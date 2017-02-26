@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Eureka CSS UI Framework</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../styles/css/eureka.css">
+</head>
+<body>
+  <div class="badge-component">
+    <!-- Different types of badges -->
+    <!-- Basic -->
+    <div class="badge-component--basic">
+      <h4>Basic</h4>
+      <div class="badge-component__item">
+        <a href="#?">Inbox <span class="c-badge c-badge--primary">5</span></a>
+        <span class="badge-component__category">Primary</span>
+      </div>
+      <div class="badge-component__item">
+        <a href="#?">Inbox <span class="c-badge c-badge--secondary">5</span></a>
+        <span class="badge-component__category">Secondary</span>
+      </div>
+      <div class="badge-component__item">
+        <a href="#?">Updates <span class="c-badge c-badge--primary">new</span></a>
+        <span class="badge-component__category">Primary</span>
+      </div>
+      <div class="badge-component__item">
+        <a href="#?">Updates <span class="c-badge c-badge--secondary">new</span></a>
+        <span class="badge-component__category">Secondary</span>
+      </div>
+    </div>
+
+    <!-- Round badge contains only numbers -->
+    <div class="badge-component--round ">
+      <h4>Round</h4>
+      <div class="badge-component__item">
+        <a href="#?">Inbox <span class="c-badge c-badge--round c-badge--round--primary">1</span></a>
+        <span class="badge-component__category">Primary</span>
+      </div>
+      <div class="badge-component__item">
+        <a href="#?">Inbox <span class="c-badge c-badge--round c-badge--round--secondary">72</span></a>
+        <span class="badge-component__category">Secondary</span>
+      </div>
+    </div>
+
+    <!-- Square badges -->
+    <div class="badge-component--text">
+      <h4>Square</h4>
+      <div class="badge-component__item">
+        <a href="#?">Inbox <span class="c-badge c-badge--square c-badge--square--primary">4 new</span></a>
+        <span class="badge-component__category">Primary</span>
+      </div>
+      <div class="badge-component__item">
+        <a href="#?">Inbox <span class="c-badge c-badge--square c-badge--square--secondary">4 new</span></a>
+        <span class="badge-component__category">Secondary</span>
+      </div>
+      <div class="badge-component__item">
+        <span class="c-badge c-badge--square c-badge--square--primary">free</span>
+      </div>
+      <div class="badge-component__item">
+        <span class="c-badge c-badge--square c-badge--square--primary">info</span>
+      </div>
+      <div class="badge-component__item">
+        <span class="c-badge c-badge--square c-badge--square--secondary">default</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Demo -->
+  <h4>Demo</h4>
+  <div class="demo-badge">
+    <div class="demo-badge__title">
+      <p>TO DO</p>
+      <span class="c-badge c-badge--round c-badge--round--primary c-badge-demo"></span>
+    </div>
+
+    <ul class="demo-badge__list">
+      <li>
+        <i class="fa fa-times" aria-hidden="true"></i>
+        <input type="checkbox" name="task1" id="task1">
+        <label for="task1">Task 1</label>
+      </li>
+      <li>
+        <i class="fa fa-times" aria-hidden="true"></i>
+        <input type="checkbox" name="task1" id="task2">
+        <label for="task2">Task 2</label>
+      </li>
+      <li>
+        <i class="fa fa-times" aria-hidden="true"></i>
+        <input type="checkbox" name="task1" id="task3">
+        <label for="task3">Task 3</label>
+      </li>
+    </ul>
+  </div>
+
+  <script src="../javascript/badges.js"></script>
+</body>
+</html>
