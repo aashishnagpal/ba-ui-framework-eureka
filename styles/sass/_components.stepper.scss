@@ -1,0 +1,43 @@
+.stepper{
+  display: flex;
+  flex-direction: column;
+  &__step{
+    padding-bottom: 1em;
+    &--active{
+
+    }
+    &--active .stepper__number{
+      background-color: $primary-color;
+    }
+    &--complete{
+      background-color: green;
+    }
+  }
+  &__number{
+    display:inline-block;
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    color: $generic-white-color;
+    background-color: $generic-gray-color;
+    text-align: center;
+    line-height: 2em;
+    vertical-align: middle;
+  }
+  &__title{
+    font-weight: bold;
+    margin-left: 1em;
+  }
+  &__content{
+    margin-left: 1em;
+    margin-top: 1em;
+    padding-left: 2em;
+    border-left: 1px solid $generic-gray-color;
+  }
+}
+
+.test-content{
+  width: 400px;
+  height: 200px;
+  background-color: gray;
+}
