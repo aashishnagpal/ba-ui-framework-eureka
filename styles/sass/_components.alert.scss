@@ -1,0 +1,64 @@
+/*=================================================
+	alert component styles
+	================================================*/
+$alert-success: #2ecc71;
+$alert-caution: #f1c40f;
+$alert-warning: #e74c3c;
+$alert-default: $secondary-color;
+$alert-primary: $primary-light-color;
+
+
+.c-alert {
+	width: 100%;
+	background-color: $alert-default;
+	padding: 0.5em 1em;
+	position: relative;
+	border-radius: 3px;
+	&__close-alert {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 1.75em;
+		height: 1.75em;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: all 0.25s ease;
+		cursor: pointer;
+		color: $body-bg-color;
+		&:hover {
+			color: darken($body-bg-color, 25);
+		}
+	}
+	&--primary {
+		@extend .c-alert;
+		background-color: $alert-primary;
+	}
+	&--success {
+		@extend .c-alert;
+		background-color: $alert-success;
+	}
+	&--caution {
+		@extend .c-alert;
+		background-color: $alert-caution;
+	}
+	&--warning {
+		@extend .c-alert;
+		background-color: $alert-warning;
+	}
+}
+
+.c-alert--remove {
+	animation: c-alert--fade-out 0.5s ease;
+}
+
+@keyframes c-alert--fade-out {
+	0% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(100%);
+		opacity: 0;
+	}
+}

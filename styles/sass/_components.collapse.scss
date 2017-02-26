@@ -1,0 +1,61 @@
+/*=========================================
+  collapse component styles
+  ========================================*/
+
+.c-collapse {
+  width: 100%;
+}
+
+.c-collapse__toggle {
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: $generic-black-color;
+  font-weight: bold;
+  font-size: 1.15em;
+  transition: all 0.2s ease;
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.c-collapse__content-container {
+  overflow: hidden;
+  transition: height 0.5s ease-in-out;
+  height: 0;
+  border-radius: 0 0 3px 3px;
+  overflow: auto;
+  &--dark {
+    background-color: $body-bg-color;
+    color: $generic-white-color;
+  }
+  &--light {
+    background-color: $generic-gray-color;
+    color: $body-bg-color;
+  }
+}
+
+.c-collapse__controls-container {
+  border-bottom: solid 1px $secondary-dark-color;
+  padding: 1em;
+  &--justified-text {
+    @extend .c-collapse__controls-container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.c-collapse__content {
+  padding: 2em;
+}
+
+.u-example-code {
+  line-height: 2;
+}
+
+.u-pre--wrap {
+  margin: 0;
+  padding: 0;
+  white-space: pre-wrap;
+}
