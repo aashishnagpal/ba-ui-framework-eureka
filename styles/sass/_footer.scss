@@ -1,0 +1,31 @@
+.eureka-footer{
+  background-color: $body-bg-color;
+  padding: 2em;
+  &__text{
+    text-align:center;
+    color: $generic-gray-color;
+    font-weight:bold;
+  }
+}
+
+.authors{
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+
+  &__author{
+    padding: 2em 1em;
+    text-align: center;
+
+  }
+  &__image{
+    width: 5em;
+    height: 5em;
+    border-radius: 50%;
+  }
+  &__author-name{
+    color: $generic-gray-color;
+  }
+
+}
