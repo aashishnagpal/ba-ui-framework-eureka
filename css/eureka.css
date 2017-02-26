@@ -385,6 +385,17 @@ menu {
   display: block; }
 
 /*
+=======
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+details,
+menu {
+  display: block; }
+
+/*
+>>>>>>> Continue working on website.
  * Add the correct display in all browsers.
  */
 summary {
@@ -507,6 +518,18 @@ h6 {
 .o-grid--gutters > .o-grid__cell {
   padding: 1em 0 0 1em; }
 
+.u-1of4 {
+  width: 25%;
+  flex: none; }
+
+.u-1of3 {
+  width: 33.33333%;
+  flex: none; }
+
+.u-1of2 {
+  width: 50%;
+  flex: none; }
+
 /**
 	 * RESPONSIVE GRID
 	 *
@@ -551,7 +574,9 @@ h6 {
     background-color: #e74c3c; }
 
 .c-alert--remove {
+
   animation: c-alert--fade-out 0.5s cubic-bezier(0.54, -0.21, 0.37, 0.92); }
+
 
 @keyframes c-alert--fade-out {
   0% {
@@ -741,9 +766,11 @@ h6 {
   transition: height 0.5s ease-in-out;
   height: 0;
   border-radius: 0 0 3px 3px;
+
   overflow: auto;
   margin-top: 1em;
   margin-bottom: 2em; }
+
   .c-collapse__content-container--dark {
     background-color: #30353b;
     color: #fff; }
@@ -884,11 +911,33 @@ h6 {
   flex-wrap: wrap;
   justify-content: space-around; }
 
+<<<<<<< 299660ddc8d19d9775bf0e054165db4421f1b8aa
+=======
+.badge-component a {
+  border: 1px solid #a4a4a4;
+  color: #212121;
+  width: 12em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .badge-component a:hover .c-badge--primary {
+    color: #51d0ef; }
+  .badge-component a:hover .c-badge--secondary {
+    color: #bdbdbd; }
+  .badge-component a:hover .c-badge--round--primary,
+  .badge-component a:hover .c-badge--square--primary {
+    background-color: #51d0ef; }
+  .badge-component a:hover .c-badge--round--secondary,
+  .badge-component a:hover .c-badge--square--secondary {
+    background-color: #bdbdbd; }
+
+>>>>>>> Continue working on website.
 .badge-component__item {
   display: inline-flex;
   flex-flow: column;
   align-items: center;
   margin-left: 3em; }
+<<<<<<< 299660ddc8d19d9775bf0e054165db4421f1b8aa
   .badge-component__item a {
     border-radius: 3px;
     border: 1px solid #a4a4a4;
@@ -907,6 +956,8 @@ h6 {
     .badge-component__item a:hover .c-badge--round--secondary,
     .badge-component__item a:hover .c-badge--square--secondary {
       background-color: #bdbdbd; }
+=======
+>>>>>>> Continue working on website.
 
 .badge-component__category {
   display: block;
@@ -935,7 +986,11 @@ h6 {
   flex-flow: column; }
   .demo-badge__list li {
     margin: 0.5em 2em; }
+<<<<<<< 299660ddc8d19d9775bf0e054165db4421f1b8aa
     .demo-badge__list li .close {
+=======
+    .demo-badge__list li .fa {
+>>>>>>> Continue working on website.
       float: right;
       color: #a4a4a4;
       cursor: pointer; }
@@ -951,6 +1006,7 @@ h6 {
    ========================================================================== */
 /* Basic chip styles
    ========================================================================== */
+<<<<<<< 299660ddc8d19d9775bf0e054165db4421f1b8aa
 .c-chip--filled, .c-chip--outlined {
   outline: none;
   display: inline-flex;
@@ -1011,6 +1067,49 @@ h6 {
   margin-left: -1.1em; }
   .c-chip__media--o > .c-chip__icon {
     color: inherit; }
+=======
+.c-chip {
+  outline: none;
+  display: inline-block;
+  height: 2em;
+  line-height: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
+  background-color: #e4e4e4;
+  border-radius: 1em;
+  font-size: 0.9em;
+  color: #585858; }
+  .c-chip__media {
+    display: inline-block;
+    float: left;
+    height: 2em;
+    line-height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    background-color: #42aec8;
+    margin: 0 0.5em 0 -1em;
+    padding: 0;
+    text-align: center;
+    overflow: hidden; }
+    .c-chip__media--initial {
+      font-size: 1em;
+      color: #fff; }
+    .c-chip__media > .c-chip__icon {
+      font-size: 0.9em;
+      color: #fff;
+      font-weight: bold; }
+    .c-chip__media > .c-chip__img {
+      height: 100%;
+      width: 100%; }
+  .c-chip__delete {
+    float: right;
+    margin-left: 0.5em;
+    color: #717171;
+    cursor: pointer;
+    transition: color 0.2s; }
+    .c-chip__delete:hover {
+      color: #4b4b4b; }
+>>>>>>> Continue working on website.
 
 /* Display components styles
    ========================================================================== */
@@ -1018,13 +1117,50 @@ h6 {
   margin: 2em; }
   [class^='chip-component--'] h4 {
     margin-bottom: 0.8em; }
+<<<<<<< 299660ddc8d19d9775bf0e054165db4421f1b8aa
   [class^='chip-component--'] .c-chip--filled,
   [class^='chip-component--'] .c-chip--outlined {
     margin: 0.5em 0.8em 0 0; }
+=======
+  [class^='chip-component--'] .c-chip {
+    margin-right: 0.8em;
+    margin-top: 0.5em; }
+>>>>>>> Continue working on website.
 
 .chip-component--deletable {
   min-height: 6.25em; }
 
+<<<<<<< 299660ddc8d19d9775bf0e054165db4421f1b8aa
+=======
+/* Demo styles
+   ========================================================================== */
+.demo-chip__label {
+  display: block;
+  width: 40%;
+  min-width: 20em;
+  position: relative;
+  left: 1em; }
+  .demo-chip__label .c-chip {
+    position: relative;
+    top: 0; }
+  .demo-chip__label .demo-chip__input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 0.9em;
+    color: #a4a4a4;
+    padding: 0.8em 0;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #bdbdbd;
+    background-color: transparent;
+    transition: border-bottom-color 0.2s, box-shadow 0.2s; }
+    .demo-chip__label .demo-chip__input:focus {
+      border-bottom-color: #51d0ef;
+      box-shadow: 0 1px 0 0 #51d0ef; }
+
+>>>>>>> Continue working on website.
 /* ==========================================================================
    Modal component styles
    ========================================================================== */
@@ -1360,6 +1496,11 @@ h6 {
     right: 0;
     transform: translateY(50%);
     width: 7em; }
+<<<<<<< 299660ddc8d19d9775bf0e054165db4421f1b8aa
+=======
+  .c-card__date {
+    margin-top: 0; }
+>>>>>>> Continue working on website.
   .c-card__profile-name {
     margin-top: 2em;
     color: #51d0ef; }
@@ -1369,9 +1510,15 @@ h6 {
     .c-card__social-icon:hover {
       border: none; }
   .c-card__body {
+<<<<<<< 299660ddc8d19d9775bf0e054165db4421f1b8aa
     padding: 1.5em; }
   .c-card__text {
     margin: 1em 0; }
+=======
+    padding: 0.7em 1.5em 1.5em 1.5em; }
+  .c-card__text {
+    margin-bottom: 1em; }
+>>>>>>> Continue working on website.
 
 .c-separator {
   border-bottom: 0.2em solid;
@@ -1467,6 +1614,7 @@ h6 {
   background-color: gray; }
 
 .search-form {
+<<<<<<< 299660ddc8d19d9775bf0e054165db4421f1b8aa
   border: 0.65625rem solid #fff;
   border-radius: 5px;
   display: flex;
@@ -1474,17 +1622,34 @@ h6 {
   justify-content: flex-start;
   margin: auto;
   width: 35.16rem;
+=======
+  border: 0.4375rem solid #fff;
+  border-radius: 5px;
+  display: flex;
+  height: 2.6875rem;
+  justify-content: flex-start;
+  margin: auto;
+  width: 23.44rem;
+>>>>>>> Continue working on website.
   position: relative; }
 
 .search-input {
   background: rgba(81, 208, 239, 0.69);
   border: none;
+<<<<<<< 299660ddc8d19d9775bf0e054165db4421f1b8aa
   padding-right: 1.125rem;
   text-align: right;
   flex-basis: 85%;
   font-family: "Roboto Light", "Helvetica Light", "Roboto", "Helvetica", sans-serif;
   font-weight: 300;
   font-size: 1.95rem; }
+=======
+  padding-right: 0.75rem;
+  text-align: right;
+  flex-basis: 85%;
+  font-family: "Roboto Light";
+  font-size: 1.3rem; }
+>>>>>>> Continue working on website.
   .search-input::-webkit-input-placeholder {
     /* WebKit, Blink, Edge */
     color: #fff; }
@@ -1507,12 +1672,17 @@ h6 {
   box-shadow: -5px 0 3px -4px #212121;
   color: #fafafa;
   flex-basis: 18%;
+<<<<<<< 299660ddc8d19d9775bf0e054165db4421f1b8aa
   margin-left: -0.28125rem; }
+=======
+  margin-left: -0.1875rem; }
+>>>>>>> Continue working on website.
   .button:hover {
     background-color: #a4a4a4; }
 
 .search-icon {
   position: absolute;
+<<<<<<< 299660ddc8d19d9775bf0e054165db4421f1b8aa
   font-size: 2.025rem;
   right: 2.25rem;
   top: 0.3rem;
@@ -1570,6 +1740,13 @@ h6 {
   top: 14.5%;
   color: rgba(215, 215, 215, 0.37); }
 
+=======
+  font-size: 1.35rem;
+  right: 1.5rem;
+  top: 0.2rem;
+  color: #A7D9E1; }
+
+>>>>>>> Continue working on website.
 /* Tooltip container */
 .tooltip-this-element {
   position: relative;
@@ -1588,8 +1765,12 @@ h6 {
   border: 0.1875rem solid #e6e6e6;
   border-radius: 3px;
   color: #212121;
+<<<<<<< 299660ddc8d19d9775bf0e054165db4421f1b8aa
   font-family: "Roboto Light", "Helvetica Light", "Roboto", "Helvetica", sans-serif;
   font-weight: 300;
+=======
+  font-family: "Roboto", "Helvetica", sans-serif;
+>>>>>>> Continue working on website.
   padding-bottom: 15px;
   padding-left: 15px;
   padding-right: 15px;
@@ -1618,6 +1799,7 @@ h6 {
   visibility: visible;
   opacity: 1; }
 
+<<<<<<< 299660ddc8d19d9775bf0e054165db4421f1b8aa
 .tabs {
   padding: 0.2em 0.5em;
   width: 100%;
@@ -1668,6 +1850,8 @@ h6 {
     .tabs__pane--active {
       display: block; }
 
+=======
+>>>>>>> Continue working on website.
 .c-thumbnail {
   border: 0.5em solid #f3f3f3;
   border-radius: 1em;
@@ -1679,6 +1863,7 @@ h6 {
   .c-thumbnail-detail {
     width: 15.625em; }
 
+<<<<<<< 299660ddc8d19d9775bf0e054165db4421f1b8aa
 .login-container {
   background: linear-gradient(#bdbdbd, #bdbdbd 21%, #42aec8 21%, #42aec8 77%, #bdbdbd 77%, #bdbdbd);
   background-color: #a4a4a4;
@@ -1770,6 +1955,92 @@ h6 {
       transform: scale(1.5); }
     .persona:hover .persona__designation, .persona:hover .persona__button {
       opacity: 1; }
+=======
+.eureka-footer {
+  background-color: #30353b;
+  padding: 2em; }
+  .eureka-footer__text {
+    text-align: center;
+    color: #f3f3f3;
+    font-weight: bold; }
+
+.authors {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0; }
+  .authors__author {
+    padding: 2em 1em;
+    text-align: center; }
+  .authors__image {
+    width: 5em;
+    height: 5em;
+    border-radius: 50%; }
+  .authors__author-name {
+    color: #f3f3f3; }
+
+.eureka-header {
+  background-color: #22262a;
+  padding: 1em 1em 0 1em;
+  color: #71869c; }
+  .eureka-header__logo {
+    display: flex;
+    align-items: center; }
+  .eureka-header__logo-image {
+    max-height: 4em;
+    max-width: 4em; }
+  .eureka-header__logo-text {
+    padding-left: 0.6em; }
+    .eureka-header__logo-text--top {
+      font-size: 2em;
+      margin: 0; }
+    .eureka-header__logo-text--bottom {
+      margin: 0; }
+
+.main-content {
+  background-color: #30353b; }
+
+.vertical-menu {
+  position: relative; }
+
+.website-components {
+  background-color: #f3f3f3;
+  padding: 2em; }
+  .website-components__component {
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 2em;
+    margin-bottom: 1em; }
+
+.demo-site-grid {
+  padding-right: 4vw; }
+
+.vertical-menu {
+  display: flex;
+  justify-content: flex-end;
+  width: 18vw; }
+
+.nav--sticky {
+  display: flex;
+  justify-content: flex-end;
+  width: 18vw; }
+
+.vertical-menu .nav__item {
+  justify-content: flex-end;
+  margin-right: -4px; }
+  .vertical-menu .nav__item:hover {
+    border: none; }
+  .vertical-menu .nav__item .nav__link {
+    padding: 1.15em 3em 1.15em 0; }
+    .vertical-menu .nav__item .nav__link:hover {
+      border: none; }
+
+.nav__item:hover:after {
+  transform: scaleY(0); }
+
+a {
+  border-bottom: none; }
+>>>>>>> Continue working on website.
 
 /* ==========================================================================
    Utility classes for grid
