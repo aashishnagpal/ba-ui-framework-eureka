@@ -6,16 +6,13 @@
 }
 
 .c-btn {
-  // align-items: center;
   background: transparent;
   border: 0.1em;
   border-radius: 0.2em;
   border-style: solid;
   cursor: pointer;
   display: inline-block;
-  // display: flex;
   font-family: inherit;
-  // justify-content: center;
   line-height: 2.4em;
   margin: 0 0.5em;
   padding: 0.1em 1.2em;
@@ -35,7 +32,8 @@
         border-color: $primary-dark-color;
       }
       &:focus {
-        outline: .15em solid $primary-light-color !important;
+        border: 0.3em solid $primary-light-color !important;
+        outline: 0;
       }
       &--diff {
         background-color: $secondary-color;
@@ -47,9 +45,6 @@
         &:active {
           background-color: darken($secondary-dark-color, 5%);
           border-color: $secondary-dark-color;
-        }
-        &:focus {
-          outline: .15em solid $secondary-color !important;
         }
       }
       &--rd-l {
@@ -96,14 +91,13 @@
     }
     &__btn-icon {
       font-size: 13px;
-      // margin: 0 0.5em 0 -0.5em;
     }
     &--wide {
       width: 8em;
     }
     &:focus {
-      outline-color: $primary-light-color;
-      outline-width: 0.1em;
+      border: 0.3em solid $primary-light-color;
+      outline: 0;
     }
     &[disabled="true"] {
       background-color: $secondary-dark-color;
