@@ -8,13 +8,12 @@
 
   &--horizontal {
     display: flex;
-    width: 100vw;
   }
 
   &--vertical {
     display: inline-flex;
     flex-direction: column;
-    height: 100vh;
+    height: auto;
     min-width: 20vw;
   }
 
@@ -28,6 +27,11 @@
     color: $generic-black-color;
   }
 
+  &--transparent {
+    background: transparent;
+    color: $menu-text-color;
+  }
+
   &--sticky {
     position: fixed;
     top: 0;
@@ -38,7 +42,6 @@
   &__item {
     padding: 0.1em;
     position: relative;
-    flex: 1;
     text-align: center;
     width: 100%;
     display: flex;
@@ -54,6 +57,7 @@
       background: $primary-light-color;
       content: '';
       position: absolute;
+      transition: transform 0.3s linear;
     }
 
     &::before {
@@ -74,12 +78,11 @@
 
     &:hover::before {
       transform: scaleX(1);
-      transition: transform 0.3s linear;
+
     }
 
     &:hover::after {
       transform: scaleY(1);
-      transition: transform 0.3s linear;
     }
 
     &--active {
@@ -93,7 +96,7 @@
   }
 
   &__link {
-    padding: 1.5em;
+    //padding: 1em;
     display: inline-block;
   }
 }
