@@ -1,0 +1,71 @@
+body {
+    background: $secondary-color;
+}
+
+//changes size of search bar with single variable
+//defaults to "Small" size 1
+$search-size-multiplier: 1;
+
+//form wrapper for search bar
+.search-form {
+    border: ($search-size-multiplier * 0.4375rem) solid $generic-white-color;
+    border-radius: 5px;
+    display: flex;
+    height: ($search-size-multiplier * (2.25rem + 0.4375rem));
+    justify-content: flex-start;
+    margin: auto;
+    width: ($search-size-multiplier * 23.44rem);
+    position: relative;
+}
+
+//search bar input
+.search-input {
+    background: transparentize($primary-color, .31);
+    border: none;
+    padding-right: ($search-size-multiplier * 0.75rem);
+    text-align: right;
+    flex-basis: 85%;
+    font-family: "Roboto Light";
+    font-size: ($search-size-multiplier * 1.3rem);
+    &::-webkit-input-placeholder {
+        /* WebKit, Blink, Edge */
+        color: $generic-white-color;
+    }
+    &:-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        color: $generic-white-color;
+        opacity: 1;
+    }
+    &::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        color: $generic-white-color;
+        opacity: 1;
+    }
+    &:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: $generic-white-color;
+    }
+}
+
+//button for user interactivity
+//will incorporate style-guide button when ready
+.button {
+    background-color: $primary-dark-color;
+    border-radius: 6px;
+    border: transparent;
+    box-shadow: -5px 0 3px -4px $generic-black-color;
+    color: #fafafa;
+    flex-basis: 18%;
+    margin-left: (-0.1875rem * $search-size-multiplier);
+    &:hover {
+        background-color: $secondary-dark-color;
+    }
+}
+
+.search-icon {
+    position: absolute;
+    font-size: ($search-size-multiplier * 1.35rem);
+    right: ($search-size-multiplier * 1.5rem);
+    top: ($search-size-multiplier * .2rem);
+    color: #A7D9E1;
+}
