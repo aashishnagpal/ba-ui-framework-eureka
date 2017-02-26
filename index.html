@@ -44,9 +44,9 @@
             <li class="nav__item nav__item--active"><a class="nav__link" href="#buttons">Buttons</a></li>
             <li class="nav__item "><a class="nav__link" href="#cards">Cards</a></li>
             <li class="nav__item "><a class="nav__link" href="#accordions">Accordions</a></li>
-            <li class="nav__item "><a class="nav__link" href="#tabs">Tabs</a></li>
-            <li class="nav__item "><a class="nav__link" href="#forms">Forms</a></li>
-            <li class="nav__item "><a class="nav__link" href="#pagination">Pagination</a></li>
+            <li class="nav__item "><a class="nav__link" href="#chips">Chips</a></li>
+            <li class="nav__item "><a class="nav__link" href="#badges">Badges</a></li>
+            <li class="nav__item "><a class="nav__link" href="#breadcrumbs">Breadcrumbs</a></li>
             <li class="nav__item "><a class="nav__link" href="#carousel">Carousel</a></li>
             <li class="nav__item "><a class="nav__link" href="#navigation">Navigation</a></li>
             <li class="nav__item "><a class="nav__link" href="#scrollspy">Scrollspy</a></li>
@@ -630,7 +630,11 @@
         &lt;input type=&quot;radio&quot; class=&quot;accordion__state&quot; name=&quot;accordion-state-one&quot; id=&quot;accordion-six&quot;&gt;
         &lt;label class=&quot;accordion__title accordion__title--light&quot; for=&quot;accordion-six&quot;&gt;
             Section Three
-            &lt;i class=&quot;fa fa-angle-down accordion__icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i</code>
+            &lt;i class=&quot;fa fa-angle-down accordion__icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+        &lt;/label&gt;
+        &lt;div class=&quot;accordion__content&quot;&gt;This is the content for accordion two This is the content for accordion one This is the content for accordion one This is the content for accordion two This is the content for accordion one This is the content for accordion one&lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code>
           </pre>
                   </div>
                 </div>
@@ -648,7 +652,7 @@
                   <input type="radio" class="accordion__state" name="accordion-state-two" id="accordion-seven">
                   <label class="accordion__title accordion__title--light" for="accordion-seven">
                     Section One
-          <span class="circle u-bg-primary pull-right">
+          <span class="icon-circle">
             <i class="fa fa-angle-down accordion__icon" aria-hidden="true"></i>
           </span>
                   </label>
@@ -658,7 +662,7 @@
                   <input type="radio" class="accordion__state" name="accordion-state-two" id="accordion-eight">
                   <label class="accordion__title accordion__title--light" for="accordion-eight">
                     Section Two
-          <span class="circle u-bg-primary pull-right">
+          <span class="icon-circle">
             <i class="fa fa-angle-down accordion__icon" aria-hidden="true"></i>
           </span>
                   </label>
@@ -668,7 +672,7 @@
                   <input type="radio" class="accordion__state" name="accordion-state-two" id="accordion-nine">
                   <label class="accordion__title accordion__title--light" for="accordion-nine">
                     Section Three
-          <span class="icon-circle u-bg-primary pull-right">
+          <span class="icon-circle">
             <i class="fa fa-angle-down accordion__icon" aria-hidden="true"></i>
           </span>
                   </label>
@@ -698,7 +702,7 @@
         &lt;input type=&quot;radio&quot; class=&quot;accordion__state&quot; name=&quot;accordion-state-two&quot; id=&quot;accordion-seven&quot;&gt;
         &lt;label class=&quot;accordion__title accordion__title--light&quot; for=&quot;accordion-seven&quot;&gt;
             Section One
-            &lt;span class=&quot;circle u-bg-primary pull-right&quot;&gt;
+            &lt;span class=&quot;icon-circle&quot;&gt;
             &lt;i class=&quot;fa fa-angle-down accordion__icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
           &lt;/span&gt;
         &lt;/label&gt;
@@ -708,7 +712,7 @@
         &lt;input type=&quot;radio&quot; class=&quot;accordion__state&quot; name=&quot;accordion-state-two&quot; id=&quot;accordion-eight&quot;&gt;
         &lt;label class=&quot;accordion__title accordion__title--light&quot; for=&quot;accordion-eight&quot;&gt;
             Section Two
-            &lt;span class=&quot;circle u-bg-primary pull-right&quot;&gt;
+            &lt;span class=&quot;icon-circle&quot;&gt;
             &lt;i class=&quot;fa fa-angle-down accordion__icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
           &lt;/span&gt;
         &lt;/label&gt;
@@ -718,7 +722,7 @@
         &lt;input type=&quot;radio&quot; class=&quot;accordion__state&quot; name=&quot;accordion-state-two&quot; id=&quot;accordion-nine&quot;&gt;
         &lt;label class=&quot;accordion__title accordion__title--light&quot; for=&quot;accordion-nine&quot;&gt;
             Section Three
-            &lt;span class=&quot;icon-circle u-bg-primary pull-right&quot;&gt;
+            &lt;span class=&quot;icon-circle&quot;&gt;
             &lt;i class=&quot;fa fa-angle-down accordion__icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
           &lt;/span&gt;
         &lt;/label&gt;
@@ -734,7 +738,7 @@
 
         </section>
 
-        <section class="website-components__component" id="tabs">
+        <section class="website-components__component" id="chips">
           <h3>Basic Chip</h3>
           <p>This section contains a basic chip.</p>
 
@@ -899,6 +903,405 @@
         &lt;span class=&quot;c-chip__delete&quot;&gt;&lt;i class=&quot;fa fa-times&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code>
+          </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <section class="website-components__component" id="badges">
+          <h3>Basic Badges</h3>
+          <p>This section contains basic Badges</p>
+
+          <div class="o-grid o-grid--gutters u-grid--center">
+            <div class="o-grid__cell">
+              <div class="badge-component--basic">
+                <div class="badge-component__item">
+                  <a href="#?">Inbox <span class="c-badge c-badge--primary">5</span></a>
+                  <span class="badge-component__category">Primary</span>
+                </div>
+                <div class="badge-component__item">
+                  <a href="#?">Inbox <span class="c-badge c-badge--secondary">5</span></a>
+                  <span class="badge-component__category">Secondary</span>
+                </div>
+                <div class="badge-component__item">
+                  <a href="#?">Updates <span class="c-badge c-badge--primary">new</span></a>
+                  <span class="badge-component__category">Primary</span>
+                </div>
+                <div class="badge-component__item">
+                  <a href="#?">Updates <span class="c-badge c-badge--secondary">new</span></a>
+                  <span class="badge-component__category">Secondary</span>
+                </div>
+              </div>
+            </div>
+            <div class="o-grid__cell">
+
+            </div>
+          </div>
+
+          <div class="o-grid">
+            <div class="o-grid__cell">
+              <div class="c-collapse">
+                <div class="c-collapse__controls-container--justified-text">
+                  <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                  <a class="c-collapse__toggle">toggle markup</a>
+                </div>
+                <div class="c-collapse__content-container c-collapse__content-container--dark">
+                  <div class="c-collapse__content">
+          <pre class="u-pre--wrap">
+            <code class="u-example-code">
+&lt;div class=&quot;badge-component--basic&quot;&gt;
+    &lt;div class=&quot;badge-component__item&quot;&gt;
+        &lt;a href=&quot;#?&quot;&gt;Inbox &lt;span class=&quot;c-badge c-badge--primary&quot;&gt;5&lt;/span&gt;&lt;/a&gt;
+        &lt;span class=&quot;badge-component__category&quot;&gt;Primary&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;badge-component__item&quot;&gt;
+        &lt;a href=&quot;#?&quot;&gt;Inbox &lt;span class=&quot;c-badge c-badge--secondary&quot;&gt;5&lt;/span&gt;&lt;/a&gt;
+        &lt;span class=&quot;badge-component__category&quot;&gt;Secondary&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;badge-component__item&quot;&gt;
+        &lt;a href=&quot;#?&quot;&gt;Updates &lt;span class=&quot;c-badge c-badge--primary&quot;&gt;new&lt;/span&gt;&lt;/a&gt;
+        &lt;span class=&quot;badge-component__category&quot;&gt;Primary&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;badge-component__item&quot;&gt;
+        &lt;a href=&quot;#?&quot;&gt;Updates &lt;span class=&quot;c-badge c-badge--secondary&quot;&gt;new&lt;/span&gt;&lt;/a&gt;
+        &lt;span class=&quot;badge-component__category&quot;&gt;Secondary&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+          </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3>Rounded Badges</h3>
+          <p>This section contains Badges</p>
+
+          <div class="o-grid o-grid--gutters u-grid--center">
+            <div class="o-grid__cell">
+              <div class="badge-component--round ">
+                <div class="badge-component__item">
+                  <a href="#?">Inbox <span class="c-badge c-badge--round c-badge--round--primary">1</span></a>
+                  <span class="badge-component__category">Primary</span>
+                </div>
+                <div class="badge-component__item">
+                  <a href="#?">Inbox <span class="c-badge c-badge--round c-badge--round--secondary">72</span></a>
+                  <span class="badge-component__category">Secondary</span>
+                </div>
+              </div>
+            </div>
+            <div class="o-grid__cell">
+
+            </div>
+          </div>
+
+          <div class="o-grid">
+            <div class="o-grid__cell">
+              <div class="c-collapse">
+                <div class="c-collapse__controls-container--justified-text">
+                  <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                  <a class="c-collapse__toggle">toggle markup</a>
+                </div>
+                <div class="c-collapse__content-container c-collapse__content-container--dark">
+                  <div class="c-collapse__content">
+          <pre class="u-pre--wrap">
+            <code class="u-example-code">
+&lt;&lt;div class=&quot;badge-component--round &quot;&gt;
+    &lt;div class=&quot;badge-component__item&quot;&gt;
+        &lt;a href=&quot;#?&quot;&gt;Inbox &lt;span class=&quot;c-badge c-badge--round c-badge--round--primary&quot;&gt;1&lt;/span&gt;&lt;/a&gt;
+        &lt;span class=&quot;badge-component__category&quot;&gt;Primary&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;badge-component__item&quot;&gt;
+        &lt;a href=&quot;#?&quot;&gt;Inbox &lt;span class=&quot;c-badge c-badge--round c-badge--round--secondary&quot;&gt;72&lt;/span&gt;&lt;/a&gt;
+        &lt;span class=&quot;badge-component__category&quot;&gt;Secondary&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+          </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3>Square Badges</h3>
+          <p>This section contains square badges</p>
+
+          <div class="o-grid o-grid--gutters u-grid--center">
+            <div class="o-grid__cell">
+              <div class="badge-component--text">
+                <div class="badge-component__item">
+                  <a href="#?">Inbox <span class="c-badge c-badge--square c-badge--square--primary">4 new</span></a>
+                  <span class="badge-component__category">Primary</span>
+                </div>
+                <div class="badge-component__item">
+                  <a href="#?">Inbox <span class="c-badge c-badge--square c-badge--square--secondary">4 new</span></a>
+                  <span class="badge-component__category">Secondary</span>
+                </div>
+                <div class="badge-component__item">
+                  <span class="c-badge c-badge--square c-badge--square--primary">free</span>
+                </div>
+                <div class="badge-component__item">
+                  <span class="c-badge c-badge--square c-badge--square--primary">info</span>
+                </div>
+                <div class="badge-component__item">
+                  <span class="c-badge c-badge--square c-badge--square--secondary">default</span>
+                </div>
+              </div>
+            </div>
+            <div class="o-grid__cell">
+
+            </div>
+          </div>
+
+          <div class="o-grid">
+            <div class="o-grid__cell">
+              <div class="c-collapse">
+                <div class="c-collapse__controls-container--justified-text">
+                  <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                  <a class="c-collapse__toggle">toggle markup</a>
+                </div>
+                <div class="c-collapse__content-container c-collapse__content-container--dark">
+                  <div class="c-collapse__content">
+          <pre class="u-pre--wrap">
+            <code class="u-example-code">
+&lt;&lt;div class=&quot;badge-component--text&quot;&gt;
+    &lt;div class=&quot;badge-component__item&quot;&gt;
+        &lt;a href=&quot;#?&quot;&gt;Inbox &lt;span class=&quot;c-badge c-badge--square c-badge--square--primary&quot;&gt;4 new&lt;/span&gt;&lt;/a&gt;
+        &lt;span class=&quot;badge-component__category&quot;&gt;Primary&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;badge-component__item&quot;&gt;
+        &lt;a href=&quot;#?&quot;&gt;Inbox &lt;span class=&quot;c-badge c-badge--square c-badge--square--secondary&quot;&gt;4 new&lt;/span&gt;&lt;/a&gt;
+        &lt;span class=&quot;badge-component__category&quot;&gt;Secondary&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;badge-component__item&quot;&gt;
+        &lt;span class=&quot;c-badge c-badge--square c-badge--square--primary&quot;&gt;free&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;badge-component__item&quot;&gt;
+        &lt;span class=&quot;c-badge c-badge--square c-badge--square--primary&quot;&gt;info&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;badge-component__item&quot;&gt;
+        &lt;span class=&quot;c-badge c-badge--square c-badge--square--secondary&quot;&gt;default&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+          </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3>Badges Example</h3>
+          <p>Example of badges in use</p>
+
+          <div class="o-grid o-grid--gutters u-grid--center">
+            <div class="o-grid__cell">
+              <div class="demo-badge">
+                <div class="demo-badge__title">
+                  <p>TO DO</p>
+                  <span class="c-badge c-badge--round c-badge--round--primary c-badge-demo"></span>
+                </div>
+
+                <ul class="demo-badge__list">
+                  <li>
+                    <i class="fa fa-times close" aria-hidden="true"></i>
+                    <input type="checkbox" name="task1" id="task1">
+                    <label for="task1">Task 1</label>
+                  </li>
+                  <li>
+                    <i class="fa fa-times close" aria-hidden="true"></i>
+                    <input type="checkbox" name="task1" id="task2">
+                    <label for="task2">Task 2</label>
+                  </li>
+                  <li>
+                    <i class="fa fa-times close" aria-hidden="true"></i>
+                    <input type="checkbox" name="task1" id="task3">
+                    <label for="task3">Task 3</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="o-grid__cell">
+
+            </div>
+          </div>
+
+          <div class="o-grid">
+            <div class="o-grid__cell">
+              <div class="c-collapse">
+                <div class="c-collapse__controls-container--justified-text">
+                  <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                  <a class="c-collapse__toggle">toggle markup</a>
+                </div>
+                <div class="c-collapse__content-container c-collapse__content-container--dark">
+                  <div class="c-collapse__content">
+          <pre class="u-pre--wrap">
+            <code class="u-example-code">
+&lt;&lt;div class=&quot;demo-badge&quot;&gt;
+    &lt;div class=&quot;demo-badge__title&quot;&gt;
+        &lt;p&gt;TO DO&lt;/p&gt;
+        &lt;span class=&quot;c-badge c-badge--round c-badge--round--primary c-badge-demo&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;ul class=&quot;demo-badge__list&quot;&gt;
+        &lt;li&gt;
+            &lt;i class=&quot;fa fa-times close&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+            &lt;input type=&quot;checkbox&quot; name=&quot;task1&quot; id=&quot;task1&quot;&gt;
+            &lt;label for=&quot;task1&quot;&gt;Task 1&lt;/label&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;i class=&quot;fa fa-times close&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+            &lt;input type=&quot;checkbox&quot; name=&quot;task1&quot; id=&quot;task2&quot;&gt;
+            &lt;label for=&quot;task2&quot;&gt;Task 2&lt;/label&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;i class=&quot;fa fa-times close&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+            &lt;input type=&quot;checkbox&quot; name=&quot;task1&quot; id=&quot;task3&quot;&gt;
+            &lt;label for=&quot;task3&quot;&gt;Task 3&lt;/label&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;</code>
+          </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+        <section class="website-components__component" id="breadcrumbs">
+          <h3>Basic Breadcrumbs</h3>
+          <p>This section contains basic Breadcrumbs</p>
+
+          <div class="o-grid o-grid--gutters u-grid--center">
+            <div class="o-grid__cell">
+              <ul class="c-breadcrumb" role="menubar" aria-label="breadcrumb">
+                <li class="c-breadcrumb__li" role="menuitem"><a href="#" class="c-breadcrumb__a">Home</a></li>
+                <li class="c-breadcrumb__li" role="menuitem"><a href="#" class="c-breadcrumb__a">aliceblue</a></li>
+                <li class="c-breadcrumb__li" role="menuitem"><a href="#" class="c-breadcrumb__a">burlywood</a></li>
+                <li class="c-breadcrumb__li" role="menuitem" class="active"><a href="#" class="c-breadcrumb__a">chartreuse</a></li>
+              </ul>
+            </div>
+            <div class="o-grid__cell">
+
+            </div>
+          </div>
+
+          <div class="o-grid">
+            <div class="o-grid__cell">
+              <div class="c-collapse">
+                <div class="c-collapse__controls-container--justified-text">
+                  <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                  <a class="c-collapse__toggle">toggle markup</a>
+                </div>
+                <div class="c-collapse__content-container c-collapse__content-container--dark">
+                  <div class="c-collapse__content">
+          <pre class="u-pre--wrap">
+            <code class="u-example-code">
+&lt;&lt;ul class=&quot;c-breadcrumb&quot; role=&quot;menubar&quot; aria-label=&quot;breadcrumb&quot;&gt;
+    &lt;li class=&quot;c-breadcrumb__li&quot; role=&quot;menuitem&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-breadcrumb__a&quot;&gt;Home&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-breadcrumb__li&quot; role=&quot;menuitem&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-breadcrumb__a&quot;&gt;aliceblue&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-breadcrumb__li&quot; role=&quot;menuitem&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-breadcrumb__a&quot;&gt;burlywood&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-breadcrumb__li&quot; role=&quot;menuitem&quot; class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-breadcrumb__a&quot;&gt;chartreuse&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code>
+          </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3>Ribbon Breadcrumbs</h3>
+          <p>This section contains Ribbon Breadcrumbs</p>
+
+          <div class="o-grid o-grid--gutters u-grid--center">
+            <div class="o-grid__cell">
+              <ul class="c-breadcrumb" role="menubar" aria-label="breadcrumb">
+                <li class="c-breadcrumb__li--rbn" role="menuitem"><a href="#" class="c-breadcrumb__a--rbn">Home</a></li>
+                <li class="c-breadcrumb__li--rbn" role="menuitem"><a href="#" class="c-breadcrumb__a--rbn">aliceblue</a></li>
+                <li class="c-breadcrumb__li--rbn" role="menuitem"><a href="#" class="c-breadcrumb__a--rbn">burlywood</a></li>
+                <li class="c-breadcrumb__li--rbn" role="menuitem" class="active"><a href="#" class="c-breadcrumb__a--rbn">chartreuse</a></li>
+              </ul>
+            </div>
+            <div class="o-grid__cell">
+
+            </div>
+          </div>
+
+          <div class="o-grid">
+            <div class="o-grid__cell">
+              <div class="c-collapse">
+                <div class="c-collapse__controls-container--justified-text">
+                  <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                  <a class="c-collapse__toggle">toggle markup</a>
+                </div>
+                <div class="c-collapse__content-container c-collapse__content-container--dark">
+                  <div class="c-collapse__content">
+          <pre class="u-pre--wrap">
+            <code class="u-example-code">
+&lt;ul class=&quot;c-breadcrumb&quot; role=&quot;menubar&quot; aria-label=&quot;breadcrumb&quot;&gt;
+    &lt;li class=&quot;c-breadcrumb__li--rbn&quot; role=&quot;menuitem&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-breadcrumb__a--rbn&quot;&gt;Home&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-breadcrumb__li--rbn&quot; role=&quot;menuitem&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-breadcrumb__a--rbn&quot;&gt;aliceblue&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-breadcrumb__li--rbn&quot; role=&quot;menuitem&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-breadcrumb__a--rbn&quot;&gt;burlywood&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-breadcrumb__li--rbn&quot; role=&quot;menuitem&quot; class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-breadcrumb__a--rbn&quot;&gt;chartreuse&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code>
+          </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3>Duo Color Breadcrumbs</h3>
+          <p>This section contains Duo Color Breadcrumbs</p>
+
+          <div class="o-grid o-grid--gutters u-grid--center">
+            <div class="o-grid__cell">
+              <ul class="c-breadcrumb" role="menubar" aria-label="breadcrumb">
+                <li class="c-breadcrumb__li--rbn" role="menuitem"><a href="#" class="c-breadcrumb__a--rbn c-breadcrumb--var-col">Home</a></li>
+                <li class="c-breadcrumb__li--rbn" role="menuitem"><a href="#" class="c-breadcrumb__a--rbn">aliceblue</a></li>
+                <li class="c-breadcrumb__li--rbn" role="menuitem"><a href="#" class="c-breadcrumb__a--rbn c-breadcrumb--var-col">burlywood</a></li>
+                <li class="c-breadcrumb__li--rbn" role="menuitem" class="active"><a href="#" class="c-breadcrumb__a--rbn">chartreuse</a></li>
+              </ul>
+            </div>
+            <div class="o-grid__cell">
+
+            </div>
+          </div>
+
+          <div class="o-grid">
+            <div class="o-grid__cell">
+              <div class="c-collapse">
+                <div class="c-collapse__controls-container--justified-text">
+                  <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                  <a class="c-collapse__toggle">toggle markup</a>
+                </div>
+                <div class="c-collapse__content-container c-collapse__content-container--dark">
+                  <div class="c-collapse__content">
+          <pre class="u-pre--wrap">
+            <code class="u-example-code">
+&lt;ul class=&quot;c-breadcrumb&quot; role=&quot;menubar&quot; aria-label=&quot;breadcrumb&quot;&gt;
+    &lt;li class=&quot;c-breadcrumb__li--rbn&quot; role=&quot;menuitem&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-breadcrumb__a--rbn c-breadcrumb--var-col&quot;&gt;Home&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-breadcrumb__li--rbn&quot; role=&quot;menuitem&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-breadcrumb__a--rbn&quot;&gt;aliceblue&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-breadcrumb__li--rbn&quot; role=&quot;menuitem&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-breadcrumb__a--rbn c-breadcrumb--var-col&quot;&gt;burlywood&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;c-breadcrumb__li--rbn&quot; role=&quot;menuitem&quot; class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;c-breadcrumb__a--rbn&quot;&gt;chartreuse&lt;/a&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code>
           </pre>
                   </div>
                 </div>
@@ -1242,7 +1645,7 @@
       </li>
     </ul>
   </footer>
-
+  <script src="javascript/badges.js"></script>
   <script src="javascript/chips.js"></script>
   <script src="javascript/collapse.js"></script>
   <script src="javascript/sticky-nav.js"></script>
