@@ -1,0 +1,23 @@
+/* ==========================================================================
+   Modal component styles
+   ========================================================================== */
+
+/* Modal buttons that trigger modals
+   ========================================================================== */
+
+//All btn styles are temporary. Will apply .c-button styles later
+.c-btn {
+  border: 1px solid;
+  padding: 0.625em 1em;
+  font-size: 0.9em;
+  border-radius: 3px;
+}
+
+.c-btn--primary {
+  color: $primary-color;
+  border-color: $primary-color;
+}
+
+
+/* Modal styles
+   ========================================================================== */
