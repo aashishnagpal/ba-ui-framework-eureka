@@ -5,6 +5,13 @@
 /* Modal styles
    ========================================================================== */
 
+@mixin position-top {
+  top: 15%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;;
+}
+
 %modal-overlay {
   position: fixed;
   top: 0;
@@ -20,13 +27,16 @@
   @extend %modal-overlay;
 
   background-color: $generic-gray-color;
-  opacity: 0.6;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0s, opacity 0.3s;
 }
 
 .c-modal-overlay--full {
   @extend %modal-overlay;
   background-color: $primary-light-color;
-  opacity: 1;
+  opacity: 0;
+
 }
 
 %c-modal-basic {
@@ -35,10 +45,11 @@
   font-size: 1em;
   border-radius: 3px;
   position: absolute;
-  //opacity: 0;
-  //transform: scale(0.1);
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0) rotate(360deg);
+
   transition: all .5s;
-  //pointer-events: none;
   //overflow: auto;
   min-width: 18em;
   width: 50%;
@@ -69,8 +80,8 @@
   }
 
   &__body {
-    margin-top: 2em;
-    padding: 0 3em;
+    margin: 0;
+    padding: 2em 3em;
     color: lighten($generic-black-color, 20%);
     line-height: 1.5em;
 
@@ -82,11 +93,8 @@
   }
 
   &__footer {
-    //position: fixed;
-    //bottom: 0;
     width: 100%;
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
+    padding: 1em 1.5em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,30 +117,68 @@
 
 }
 
+// Basic specific styles
 .c-modal--basic {
   @extend %c-modal-basic;
-  top: 15%;
-  left: 50%;
-  transform: translateX(-50%);
+  @include position-top;
 
   &__header {
     background-color: $primary-dark-color;
   }
 }
 
-
-
+// Full-screen specific styles
 .c-modal--full {
   @extend %c-modal-basic;
   font-size: 1.2em;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 20%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+
+  //transform: ;
 
   .c-modal__header {
     background-color: $primary-light-color;
   }
 }
+
+// Fixed specific styles
+.c-modal--fixed {
+  @extend %c-modal-basic;
+  @include position-top;
+
+  .c-modal__body {
+    background-color: darken($generic-gray-color, 3%);
+    height: 18em;
+    overflow-y: auto;
+  }
+}
+
+.c-modal--dialog {
+  @extend %c-modal-basic;
+  @include position-top;
+
+  .c-modal__body {
+    background-color: darken($generic-gray-color, 3%);
+    border-radius: 3px 3px 0 0;
+  }
+
+  .c-modal__footer {
+    justify-content: flex-end;
+
+    .c-modal__close:last-of-type {
+      margin-left: 1.5em;
+      background-color: $primary-dark-color;
+
+      &:hover {
+        background-color: darken($primary-dark-color, 10%);
+      }
+    }
+  }
+}
+
+
 
 //.c-modal__content {
 //  width: 100%;
@@ -153,25 +199,25 @@
 //  margin-bottom: 50px;
 //}
 
+.modal-component input:checked + [class^='c-modal-overlay']{
+  visibility: visible;
+  opacity: 0.6;
+}
+
 .c-modal:target {
   opacity: 1;
   pointer-events: all;
+  transform: scale(1) rotate(0deg);
 }
+
 
 
 
 /* Modal buttons that trigger modals
    ========================================================================== */
 
-.modal-component {
-  //width: 100%;
-  //height: 100%;
-  //top: 0;
-  //left: 0;
-  //bottom: 0;
-  //right: 0;
-  //position: relative;
-  //border: 1px solid red;
+.modal-component input {
+  display: none;
 }
 
 
@@ -183,13 +229,3 @@
   //margin-bottom: 1.5em;
 }
 
-// Override default styles of a, and mimic button component
-a.c-btn--primary {
-  text-align: center;
-  line-height: 2.4em;
-  padding: 0 1em;
-  border: 0.1em solid $primary-color;
-  &:active {
-    border-color: $primary-dark-color;
-  }
-}
