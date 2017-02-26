@@ -4,13 +4,19 @@
 (function () {
   'use strict';
   var scrollspy = document.querySelector('.scrollspy[data-spyOn]');
+  var progressBar = scrollspy.querySelector('.c-progressbar__meter');
+  var label = progressBar.querySelector('.c-progress__label');
+
   var contentId = scrollspy.getAttribute('data-spyOn');
   var content = document.getElementById(contentId);
 
+  var clientHeight = window.innerHeight;
   var initialOffset = scrollspy.offsetTop;
 
+  progressBar.style.width = '0%';
+
   var scrollspyProgress = function () {
-    var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+    var scrollPosition = (document.documentElement.scrollTop || document.body.scrollTop);
 
     if (initialOffset > scrollPosition) {
       scrollspy.classList.remove('scrollspy--sticky');
@@ -19,10 +25,17 @@
       scrollspy.classList.add('scrollspy--sticky');
     }
 
-    var clientHeight = window.innerHeight;
     var scrollableHeight = content.offsetHeight - clientHeight;
-    var translate = (((scrollableHeight - scrollPosition) * 101) / scrollableHeight);
-    document.querySelector('.scrollspy--progress').style.transform = 'translateX(-' + translate + "%)";
+    var percentageCompleted = (((scrollPosition - initialOffset) * 100) / scrollableHeight).toFixed(0);
+
+    if (percentageCompleted < 0)
+      percentageCompleted = 0;
+    else if (percentageCompleted > 100)
+      percentageCompleted = 100;
+
+    progressBar.style.width = percentageCompleted + '%';
+    progressBar.setAttribute('aria-valuenow', percentageCompleted);
+    label.innerHTML = percentageCompleted + '%';
   };
 
   window.addEventListener('load', function () {
