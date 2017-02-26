@@ -23,7 +23,9 @@
     border-radius: 3px;
     color: $generic-black-color;
     //consider switch to Roboto Light if implemented
-    font-family: $roboto-font-family;
+    font-family: $roboto-light-font-family;
+    //font-weight provides better consitency among browsers
+    font-weight: 300;
     padding-bottom: 15px;
     padding-left: 15px;
     padding-right: 15px;
