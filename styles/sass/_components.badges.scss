@@ -17,17 +17,11 @@
 .c-badge--primary {
   @include transition(color);
   color: $primary-dark-color;
-  //&:hover {
-  //  color: $primary-color;
-  //}
 }
 
 .c-badge--secondary {
   @include transition(color);
   color: $secondary-dark-color;
-  //&:hover {
-  //  color: $secondary-color;
-  //}
 }
 
 .c-badge--round {
@@ -38,16 +32,10 @@
 
   &--primary {
     background-color: $primary-dark-color;
-    //&:hover {
-    //  background-color: $primary-color;
-    //}
   }
 
   &--secondary {
     background-color: $secondary-dark-color;
-    //&:hover {
-    //  background-color: $secondary-color;
-    //}
   }
 }
 
@@ -69,9 +57,6 @@
 
   &--secondary {
     background-color: $secondary-dark-color;
-    //&:hover {
-    //  background-color: $secondary-color;
-    //}
   }
 }
 
@@ -163,7 +148,7 @@
   li {
     margin: 0.5em 2em;
 
-    .fa {
+    .close {
       float: right;
       color: $secondary-dark-color;
       cursor: pointer;
