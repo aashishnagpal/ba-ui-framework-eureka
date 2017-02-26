@@ -3,8 +3,8 @@
 // }
 
 //changes size of search bar with single variable
-//defaults to "Small" size 1
-$search-size-multiplier: 1;
+//defaults to "normal" size 1.5
+$search-size-multiplier: 1.5;
 
 //form wrapper for search bar
 .search-form {
@@ -25,7 +25,9 @@ $search-size-multiplier: 1;
     padding-right: ($search-size-multiplier * 0.75rem);
     text-align: right;
     flex-basis: 85%;
-    font-family: "Roboto Light";
+    font-family: $roboto-light-font-family;
+    //Better consistency for browsers that don't support light tag
+    font-weight: 300;
     font-size: ($search-size-multiplier * 1.3rem);
     &::-webkit-input-placeholder {
         /* WebKit, Blink, Edge */
