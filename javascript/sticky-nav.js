@@ -5,7 +5,7 @@
   'use strict';
   var nav = document.querySelector('.nav[data-nav-type="sticky"]');
   if (nav !== null) {
-    var initialOffset = nav.offsetTop;
+    var initialOffset = nav.getBoundingClientRect().top;
     var stickyNav = function () {
       var scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
       if (initialOffset > scrollPosition) {
