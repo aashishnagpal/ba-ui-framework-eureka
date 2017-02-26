@@ -10,61 +10,72 @@
   display: inline-block;
   height: 2em;
   line-height: 2em;
-  padding-left: 0.8em;
-  padding-right: 0.8em;
+  padding-left: 1em;
+  padding-right: 1em;
   background-color: lighten($secondary-light-color, 5%);
   border-radius: 1em;
 
+  font-size: 0.9em;
+  color: darken($secondary-dark-color, 30%);
 
   &__media {
+    display: inline-block;
     float: left;
     height: 2em;
+    line-height: 2em;
     width: 2em;
     border-radius: 50%;
     background-color: $primary-dark-color;
-    margin: 0 0.6em 0 -0.8em;
+    margin: 0 0.5em 0 -1em;
     padding: 0;
     text-align: center;
     overflow: hidden;
 
-    > span {
-      font-size: 1.2em;
+    &--initial {
+      font-size: 1em;
       color: $generic-white-color;
     }
 
-    > i {
+    > .c-chip__icon {
       font-size: 0.9em;
       color: $generic-white-color;
       font-weight: bold;
     }
 
-    > img {
+    > .c-chip__img {
       height:100%;
       width: 100%;
     }
   }
 
-  &__label {
-    font-size: 0.9em;
-    color: darken($secondary-dark-color, 30%);
-  }
-
   &__delete {
     float: right;
-    margin-left: 0.6em;
+    margin-left: 0.5em;
     color: darken($secondary-dark-color, 20%);
     cursor: pointer;
     transition: color 0.2s;
 
     &:hover {
       color: darken($secondary-dark-color, 35%);
-      //color: $primary-dark-color;
     }
   }
 }
 
 /* Display components styles
    ========================================================================== */
+
+[class^='chip-component--'] {
+  margin: 2em;
+
+  h4 {
+    margin-bottom: 0.8em;
+  }
+
+  .c-chip {
+    margin-right: 0.8em;
+    margin-top: 0.5em;
+  }
+}
 
 .chip-component--deletable {
   min-height: 6.25em;
