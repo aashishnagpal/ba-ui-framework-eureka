@@ -1,6 +1,5 @@
 (function() {
   var alertComponents = document.querySelectorAll('[class^="c-alert--"], .c-alert');
-  console.log('alert components: ', alertComponents);
   var numOfAlertComponents = alertComponents.length;
   var i;
 
@@ -32,13 +31,4 @@
     };
   }
 
-
-
-
-
-
-
-
-
 })();
-
