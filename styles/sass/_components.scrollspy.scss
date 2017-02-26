@@ -1,26 +1,11 @@
 .scrollspy {
-  background: $secondary-dark-color;
-  height: 0.5em;
   position: relative;
-  //top:0;
-  //left:0;
   width: 100%;
 
   &--sticky {
     position: fixed;
     top: 0;
     left: 0;
-  }
-
-  &--progress {
-    background: $primary-color;
-    content: '';
-    left: 0;
-    height: 0.5em;
-    position: absolute;
-    top: 0;
-    transform: translateX(-99%);
-    width: 100%;
   }
 }
 

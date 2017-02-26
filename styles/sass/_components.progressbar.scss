@@ -54,9 +54,8 @@
       width: 10%;
     }
   }
-  &bar__meter[aria-valuenow="45"] {
+  &bar__meter {
     background-image: linear-gradient(45deg, $primary-color 0%, $primary-light-color 50%, transparent 100%);
-    width: 45%;
   }
 }
 
