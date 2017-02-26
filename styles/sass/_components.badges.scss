@@ -141,7 +141,6 @@
 .demo-badge {
   width: 20em;
   border: 1px solid $secondary-light-color;
-  //margin-top: 1.5em;
 
   &__title {
     border-bottom: 2px solid $secondary-color;
@@ -151,23 +150,17 @@
     align-items: center;
 
     p {
-      //margin: 0;
       font-size: 1.2em;
     }
   }
 }
 
 .demo-badge__list {
-  //border: 1px solid red;
-
   padding: 0;
   flex-flow: column;
 
   li {
     margin: 0.5em 2em;
-    //color: $secondary-dark-color;
-
-    //border: 1px solid green;
 
     .fa {
       float: right;
