@@ -5,21 +5,16 @@
 @import "settings.global";
 @import "settings.colors";
 //@import "settings.grid";
-
 @import "tools.mixins";
-
 @import "generic.normalize";
 @import "generic.reset";
 @import "generic.box-sizing";
 @import "generic.global";
-
 @import "elements.links";
 @import "elements.lists";
 @import "elements.headers";
-
 //@import "objects.wrappers";
 @import "objects.grid";
-
 @import "components.alert";
 @import "components.carousel";
 @import "components.collapse";
@@ -42,8 +37,8 @@
 @import "components.tabs";
 // @import "components.login";
 @import "components.thumbnail";
+@import "components.login";
 //@import "trumps.buttons";
 //@import "trumps.links";
-
 @import "trumps.utilities";
 @import "trumps.navigation";
