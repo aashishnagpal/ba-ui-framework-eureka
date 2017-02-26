@@ -8,6 +8,7 @@
 #Ignore cache files from SASS Parser
 .sass-cache*
 
+<<<<<<< HEAD
 <<<<<<< c91263cd3938c5347803d7f6759b314ff5b8c44e
 # Ignore the .gitignore
 # .gitignore
@@ -26,3 +27,12 @@ styles/*.css.map
 =======
 */*.css*
 >>>>>>> Update gitignore
+=======
+#Ignore the .gitignore
+.gitignore
+
+#Ignore compiled css and map files
+styles/css/*
+styles/*.css.map
+*/*.css*
+>>>>>>> 7f555afe0dc3fd1597fbd55580d3123c6d033579
