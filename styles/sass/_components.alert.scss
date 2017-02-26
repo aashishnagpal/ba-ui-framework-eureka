@@ -49,7 +49,7 @@ $alert-primary: $primary-light-color;
 }
 
 .c-alert--remove {
-	animation: c-alert--fade-out 0.5s ease;
+	animation: c-alert--fade-out 0.5s cubic-bezier(0.54,-0.21, 0.37, 0.92);
 }
 
 @keyframes c-alert--fade-out {
