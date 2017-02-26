@@ -385,6 +385,17 @@ menu {
   display: block; }
 
 /*
+=======
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+details,
+menu {
+  display: block; }
+
+/*
+>>>>>>> ig-branch
  * Add the correct display in all browsers.
  */
 summary {
@@ -1651,6 +1662,36 @@ h6 {
     background-color: #fff;
     padding: 2em;
     margin-bottom: 1em; }
+
+.demo-site-grid {
+  padding-right: 4vw; }
+
+.vertical-menu {
+  display: flex;
+  justify-content: flex-end;
+  width: 18vw; }
+
+.nav--sticky {
+  display: flex;
+  justify-content: flex-end;
+  width: 18vw; }
+
+.vertical-menu .nav__item {
+  justify-content: flex-end;
+  margin-right: -4px; }
+  .vertical-menu .nav__item:hover {
+    border: none; }
+  .vertical-menu .nav__item .nav__link {
+    padding: 1.15em 3em 1.15em 0; }
+    .vertical-menu .nav__item .nav__link:hover {
+      border: none; }
+
+.nav__item:hover:after {
+  transform: scaleY(0); }
+
+a {
+  border-bottom: none; }
+
 
 /* ==========================================================================
    Utility classes for grid

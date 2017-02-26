@@ -1,0 +1,34 @@
+.demo-site-grid {
+  padding-right: 4vw;
+}
+.vertical-menu {
+  display: flex;
+  justify-content: flex-end;
+  width: 18vw;
+}
+.nav--sticky {
+  display: flex;
+  justify-content: flex-end;
+  width: 18vw;
+}
+.nav__item {
+  @at-root .vertical-menu & {
+    justify-content: flex-end;
+    margin-right: -4px;
+    &:hover {
+      border: none;
+    }
+    & .nav__link {
+      padding: 1.15em 3em 1.15em 0;
+      &:hover {
+        border: none;
+      }
+    }
+  }
+}
+.nav__item:hover:after {
+  transform: scaleY(0);
+}
+a {
+  border-bottom: none;
+}
