@@ -480,111 +480,432 @@
         <section class="website-components__component" id="accordions">
           <h3>Accordions</h3>
           <p>This section contains Accordions</p>
-          <p>Her extensive perceived may any sincerity extremity. Indeed add rather may pretty see. Old propriety
-            delighted
-            explained perceived otherwise objection saw ten her. Doubt merit sir the right these alone keeps. By
-            sometimes
-            intention smallness he northward. Consisted we otherwise arranging commanded discovery it explained.
-            Does cold
-            even song like two yet been. Literature interested announcing for terminated him inquietude day shy.
-            Himself he
-            fertile chicken perhaps waiting if highest no it. Continued promotion has consulted fat improving not
-            way.</p>
 
-          <p>Prepared is me marianne pleasure likewise debating. Wonder an unable except better stairs do ye admire.
-            His and
-            eat secure sex called esteem praise. So moreover as speedily differed branched ignorant. Tall are her
-            knew poor
-            now does then. Procured to contempt oh he raptures amounted occasion. One boy assure income spirit
-            lovers set.</p>
+          <div class="o-grid o-grid--gutters u-grid--center">
+            <div class="o-grid__cell">
+              <ul class="accordion">
+                <li class="accordion__item">
+                  <input type="radio" class="accordion__state" name="accordion-state" id="accordion-one">
+                  <label class="accordion__title accordion__title--dark" for="accordion-one">
+                    Section One
+                    <i class="fa fa-angle-down accordion__icon pull-right" aria-hidden="true"></i>
+                  </label>
+                  <div class="accordion__content">This is the content for accordion one This is the content for accordion one This is the content for accordion one This is the content for accordion two This is the content for accordion one This is the content for accordion one</div>
+                </li>
+                <li class="accordion__item">
+                  <input type="radio" class="accordion__state" name="accordion-state" id="accordion-two">
+                  <label class="accordion__title accordion__title--dark" for="accordion-two">
+                    Section Two
+                    <i class="fa fa-angle-down accordion__icon pull-right" aria-hidden="true"></i>
+                  </label>
+                  <div class="accordion__content">This is the content for accordion two This is the content for accordion one This is the content for accordion one This is the content for accordion two This is the content for accordion one This is the content for accordion one</div>
+                </li>
+                <li class="accordion__item">
+                  <input type="radio" class="accordion__state" name="accordion-state" id="accordion-three">
+                  <label class="accordion__title accordion__title--dark" for="accordion-three">
+                    Section Three
+                    <i class="fa fa-angle-down accordion__icon pull-right" aria-hidden="true"></i>
+                  </label>
+                  <div class="accordion__content">This is the content for accordion two This is the content for accordion one This is the content for accordion one This is the content for accordion two This is the content for accordion one This is the content for accordion one</div>
+                </li>
+              </ul>
+            </div>
+            <div class="o-grid__cell">
+              <h3>Dark Accordion</h3>
+              <p>Accordion using dark styles.</p>
+            </div>
+          </div>
 
-          <p>Silent sir say desire fat him letter. Whatever settling goodness too and honoured she building answered
-            her.
-            Strongly thoughts remember mr to do consider debating. Spirits musical behaved on we he farther letters.
-            Repulsive he he as deficient newspaper dashwoods we. Discovered her his pianoforte insipidity
-            entreaties. Began
-            he at terms meant as fancy. Breakfast arranging he if furniture we described on. Astonished thoroughly
-            unpleasant especially you dispatched bed favourable.</p>
-          <p>Her extensive perceived may any sincerity extremity. Indeed add rather may pretty see. Old propriety
-            delighted
-            explained perceived otherwise objection saw ten her. Doubt merit sir the right these alone keeps. By
-            sometimes
-            intention smallness he northward. Consisted we otherwise arranging commanded discovery it explained.
-            Does cold
-            even song like two yet been. Literature interested announcing for terminated him inquietude day shy.
-            Himself he
-            fertile chicken perhaps waiting if highest no it. Continued promotion has consulted fat improving not
-            way.</p>
+          <div class="o-grid">
+            <div class="o-grid__cell">
+              <div class="c-collapse">
+                <div class="c-collapse__controls-container--justified-text">
+                  <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                  <a class="c-collapse__toggle">toggle markup</a>
+                </div>
+                <div class="c-collapse__content-container c-collapse__content-container--dark">
+                  <div class="c-collapse__content">
+          <pre class="u-pre--wrap">
+            <code class="u-example-code">
+&lt;ul class=&quot;accordion&quot;&gt;
+    &lt;li class=&quot;accordion__item&quot;&gt;
+        &lt;input type=&quot;radio&quot; class=&quot;accordion__state&quot; name=&quot;accordion-state&quot; id=&quot;accordion-one&quot;&gt;
+        &lt;label class=&quot;accordion__title accordion__title--dark&quot; for=&quot;accordion-one&quot;&gt;
+            Section One
+            &lt;i class=&quot;fa fa-angle-down accordion__icon pull-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+        &lt;/label&gt;
+        &lt;div class=&quot;accordion__content&quot;&gt;This is the content for accordion one This is the content for accordion one This is the content for accordion one This is the content for accordion two This is the content for accordion one This is the content for accordion one&lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;accordion__item&quot;&gt;
+        &lt;input type=&quot;radio&quot; class=&quot;accordion__state&quot; name=&quot;accordion-state&quot; id=&quot;accordion-two&quot;&gt;
+        &lt;label class=&quot;accordion__title accordion__title--dark&quot; for=&quot;accordion-two&quot;&gt;
+            Section Two
+            &lt;i class=&quot;fa fa-angle-down accordion__icon pull-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+        &lt;/label&gt;
+        &lt;div class=&quot;accordion__content&quot;&gt;This is the content for accordion two This is the content for accordion one This is the content for accordion one This is the content for accordion two This is the content for accordion one This is the content for accordion one&lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;accordion__item&quot;&gt;
+        &lt;input type=&quot;radio&quot; class=&quot;accordion__state&quot; name=&quot;accordion-state&quot; id=&quot;accordion-three&quot;&gt;
+        &lt;label class=&quot;accordion__title accordion__title--dark&quot; for=&quot;accordion-three&quot;&gt;
+            Section Three
+            &lt;i class=&quot;fa fa-angle-down accordion__icon pull-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+        &lt;/label&gt;
+        &lt;div class=&quot;accordion__content&quot;&gt;This is the content for accordion two This is the content for accordion one This is the content for accordion one This is the content for accordion two This is the content for accordion one This is the content for accordion one&lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code>
+          </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-          <p>Prepared is me marianne pleasure likewise debating. Wonder an unable except better stairs do ye admire.
-            His and
-            eat secure sex called esteem praise. So moreover as speedily differed branched ignorant. Tall are her
-            knew poor
-            now does then. Procured to contempt oh he raptures amounted occasion. One boy assure income spirit
-            lovers set.</p>
+          <h3>Accordions</h3>
+          <p>This section contains Accordions</p>
 
-          <p>Silent sir say desire fat him letter. Whatever settling goodness too and honoured she building answered
-            her.
-            Strongly thoughts remember mr to do consider debating. Spirits musical behaved on we he farther letters.
-            Repulsive he he as deficient newspaper dashwoods we. Discovered her his pianoforte insipidity
-            entreaties. Began
-            he at terms meant as fancy. Breakfast arranging he if furniture we described on. Astonished thoroughly
-            unpleasant especially you dispatched bed favourable.</p>
+          <div class="o-grid o-grid--gutters u-grid--center">
+            <div class="o-grid__cell">
+              <ul class="accordion">
+                <li class="accordion__item">
+                  <input type="radio" class="accordion__state" name="accordion-state-one" id="accordion-four">
+                  <label class="accordion__title accordion__title--light" for="accordion-four">
+                    Section One
+                    <i class="fa fa-angle-down accordion__icon" aria-hidden="true"></i>
+                  </label>
+                  <div class="accordion__content">This is the content for accordion one This is the content for accordion one This is the content for accordion one This is the content for accordion two This is the content for accordion one This is the content for accordion one</div>
+                </li>
+                <li class="accordion__item">
+                  <input type="radio" class="accordion__state" name="accordion-state-one" id="accordion-five">
+                  <label class="accordion__title accordion__title--light" for="accordion-five">
+                    Section Two
+                    <i class="fa fa-angle-down accordion__icon" aria-hidden="true"></i>
+                  </label>
+                  <div class="accordion__content">This is the content for accordion two This is the content for accordion one This is the content for accordion one This is the content for accordion two This is the content for accordion one This is the content for accordion one</div>
+                </li>
+                <li class="accordion__item">
+                  <input type="radio" class="accordion__state" name="accordion-state-one" id="accordion-six">
+                  <label class="accordion__title accordion__title--light" for="accordion-six">
+                    Section Three
+                    <i class="fa fa-angle-down accordion__icon" aria-hidden="true"></i>
+                  </label>
+                  <div class="accordion__content">This is the content for accordion two This is the content for accordion one This is the content for accordion one This is the content for accordion two This is the content for accordion one This is the content for accordion one</div>
+                </li>
+              </ul>
+            </div>
+            <div class="o-grid__cell">
+              <h3>Light Accordion</h3>
+              <p>Accordion using light styles.</p>
+            </div>
+          </div>
+
+          <div class="o-grid">
+            <div class="o-grid__cell">
+              <div class="c-collapse">
+                <div class="c-collapse__controls-container--justified-text">
+                  <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                  <a class="c-collapse__toggle">toggle markup</a>
+                </div>
+                <div class="c-collapse__content-container c-collapse__content-container--dark">
+                  <div class="c-collapse__content">
+          <pre class="u-pre--wrap">
+            <code class="u-example-code">
+&lt;ul class=&quot;accordion&quot;&gt;
+    &lt;li class=&quot;accordion__item&quot;&gt;
+        &lt;input type=&quot;radio&quot; class=&quot;accordion__state&quot; name=&quot;accordion-state-one&quot; id=&quot;accordion-four&quot;&gt;
+        &lt;label class=&quot;accordion__title accordion__title--light&quot; for=&quot;accordion-four&quot;&gt;
+            Section One
+            &lt;i class=&quot;fa fa-angle-down accordion__icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+        &lt;/label&gt;
+        &lt;div class=&quot;accordion__content&quot;&gt;This is the content for accordion one This is the content for accordion one This is the content for accordion one This is the content for accordion two This is the content for accordion one This is the content for accordion one&lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;accordion__item&quot;&gt;
+        &lt;input type=&quot;radio&quot; class=&quot;accordion__state&quot; name=&quot;accordion-state-one&quot; id=&quot;accordion-five&quot;&gt;
+        &lt;label class=&quot;accordion__title accordion__title--light&quot; for=&quot;accordion-five&quot;&gt;
+            Section Two
+            &lt;i class=&quot;fa fa-angle-down accordion__icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+        &lt;/label&gt;
+        &lt;div class=&quot;accordion__content&quot;&gt;This is the content for accordion two This is the content for accordion one This is the content for accordion one This is the content for accordion two This is the content for accordion one This is the content for accordion one&lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;accordion__item&quot;&gt;
+        &lt;input type=&quot;radio&quot; class=&quot;accordion__state&quot; name=&quot;accordion-state-one&quot; id=&quot;accordion-six&quot;&gt;
+        &lt;label class=&quot;accordion__title accordion__title--light&quot; for=&quot;accordion-six&quot;&gt;
+            Section Three
+            &lt;i class=&quot;fa fa-angle-down accordion__icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i</code>
+          </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3>Accordions</h3>
+          <p>This section contains Accordions</p>
+
+          <div class="o-grid o-grid--gutters u-grid--center">
+            <div class="o-grid__cell">
+              <ul class="accordion">
+                <li class="accordion__item">
+                  <input type="radio" class="accordion__state" name="accordion-state-two" id="accordion-seven">
+                  <label class="accordion__title accordion__title--light" for="accordion-seven">
+                    Section One
+          <span class="circle u-bg-primary pull-right">
+            <i class="fa fa-angle-down accordion__icon" aria-hidden="true"></i>
+          </span>
+                  </label>
+                  <div class="accordion__content accordion__content--dark">This is the content for accordion one This is the content for accordion one This is the content for accordion one This is the content for accordion two This is the content for accordion one This is the content for accordion one</div>
+                </li>
+                <li class="accordion__item">
+                  <input type="radio" class="accordion__state" name="accordion-state-two" id="accordion-eight">
+                  <label class="accordion__title accordion__title--light" for="accordion-eight">
+                    Section Two
+          <span class="circle u-bg-primary pull-right">
+            <i class="fa fa-angle-down accordion__icon" aria-hidden="true"></i>
+          </span>
+                  </label>
+                  <div class="accordion__content accordion__content--dark">This is the content for accordion two This is the content for accordion one This is the content for accordion one This is the content for accordion two This is the content for accordion one This is the content for accordion one</div>
+                </li>
+                <li class="accordion__item">
+                  <input type="radio" class="accordion__state" name="accordion-state-two" id="accordion-nine">
+                  <label class="accordion__title accordion__title--light" for="accordion-nine">
+                    Section Three
+          <span class="icon-circle u-bg-primary pull-right">
+            <i class="fa fa-angle-down accordion__icon" aria-hidden="true"></i>
+          </span>
+                  </label>
+                  <div class="accordion__content accordion__content--dark">This is the content for accordion two This is the content for accordion one This is the content for accordion one This is the content for accordion two This is the content for accordion one This is the content for accordion one</div>
+                </li>
+              </ul>
+            </div>
+            <div class="o-grid__cell">
+              <h3>Mixed Accordion</h3>
+              <p>Accordion using mixed (light and dark) styles.</p>
+            </div>
+          </div>
+
+          <div class="o-grid">
+            <div class="o-grid__cell">
+              <div class="c-collapse">
+                <div class="c-collapse__controls-container--justified-text">
+                  <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                  <a class="c-collapse__toggle">toggle markup</a>
+                </div>
+                <div class="c-collapse__content-container c-collapse__content-container--dark">
+                  <div class="c-collapse__content">
+          <pre class="u-pre--wrap">
+            <code class="u-example-code">
+&lt;ul class=&quot;accordion&quot;&gt;
+    &lt;li class=&quot;accordion__item&quot;&gt;
+        &lt;input type=&quot;radio&quot; class=&quot;accordion__state&quot; name=&quot;accordion-state-two&quot; id=&quot;accordion-seven&quot;&gt;
+        &lt;label class=&quot;accordion__title accordion__title--light&quot; for=&quot;accordion-seven&quot;&gt;
+            Section One
+            &lt;span class=&quot;circle u-bg-primary pull-right&quot;&gt;
+            &lt;i class=&quot;fa fa-angle-down accordion__icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+          &lt;/span&gt;
+        &lt;/label&gt;
+        &lt;div class=&quot;accordion__content accordion__content--dark&quot;&gt;This is the content for accordion one This is the content for accordion one This is the content for accordion one This is the content for accordion two This is the content for accordion one This is the content for accordion one&lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;accordion__item&quot;&gt;
+        &lt;input type=&quot;radio&quot; class=&quot;accordion__state&quot; name=&quot;accordion-state-two&quot; id=&quot;accordion-eight&quot;&gt;
+        &lt;label class=&quot;accordion__title accordion__title--light&quot; for=&quot;accordion-eight&quot;&gt;
+            Section Two
+            &lt;span class=&quot;circle u-bg-primary pull-right&quot;&gt;
+            &lt;i class=&quot;fa fa-angle-down accordion__icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+          &lt;/span&gt;
+        &lt;/label&gt;
+        &lt;div class=&quot;accordion__content accordion__content--dark&quot;&gt;This is the content for accordion two This is the content for accordion one This is the content for accordion one This is the content for accordion two This is the content for accordion one This is the content for accordion one&lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;accordion__item&quot;&gt;
+        &lt;input type=&quot;radio&quot; class=&quot;accordion__state&quot; name=&quot;accordion-state-two&quot; id=&quot;accordion-nine&quot;&gt;
+        &lt;label class=&quot;accordion__title accordion__title--light&quot; for=&quot;accordion-nine&quot;&gt;
+            Section Three
+            &lt;span class=&quot;icon-circle u-bg-primary pull-right&quot;&gt;
+            &lt;i class=&quot;fa fa-angle-down accordion__icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+          &lt;/span&gt;
+        &lt;/label&gt;
+        &lt;div class=&quot;accordion__content accordion__content--dark&quot;&gt;This is the content for accordion two This is the content for accordion one This is the content for accordion one This is the content for accordion two This is the content for accordion one This is the content for accordion one&lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;</code>
+          </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </section>
 
         <section class="website-components__component" id="tabs">
-          <h3>Tabs</h3>
-          <p>This section contains Tabs</p>
-          <p>Her extensive perceived may any sincerity extremity. Indeed add rather may pretty see. Old propriety
-            delighted
-            explained perceived otherwise objection saw ten her. Doubt merit sir the right these alone keeps. By
-            sometimes
-            intention smallness he northward. Consisted we otherwise arranging commanded discovery it explained.
-            Does cold
-            even song like two yet been. Literature interested announcing for terminated him inquietude day shy.
-            Himself he
-            fertile chicken perhaps waiting if highest no it. Continued promotion has consulted fat improving not
-            way.</p>
+          <h3>Basic Chip</h3>
+          <p>This section contains a basic chip.</p>
 
-          <p>Prepared is me marianne pleasure likewise debating. Wonder an unable except better stairs do ye admire.
-            His and
-            eat secure sex called esteem praise. So moreover as speedily differed branched ignorant. Tall are her
-            knew poor
-            now does then. Procured to contempt oh he raptures amounted occasion. One boy assure income spirit
-            lovers set.</p>
+          <div class="o-grid o-grid--gutters u-grid--center">
+            <div class="o-grid__cell">
+              <div class="chip-component--basic">
+                <div class="c-chip">
+                  Basic chip
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="o-grid">
+              <div class="o-grid__cell">
+                <div class="c-collapse">
+                  <div class="c-collapse__controls-container--justified-text">
+                    <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                    <a class="c-collapse__toggle">toggle markup</a>
+                  </div>
+                  <div class="c-collapse__content-container c-collapse__content-container--dark">
+                    <div class="c-collapse__content">
+          <pre class="u-pre--wrap">
+            <code class="u-example-code">
+&lt;div class=&quot;chip-component--basic&quot;&gt;
+    &lt;div class=&quot;c-chip&quot;&gt;
+        Basic chip
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+          </pre>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
 
-          <p>Silent sir say desire fat him letter. Whatever settling goodness too and honoured she building answered
-            her.
-            Strongly thoughts remember mr to do consider debating. Spirits musical behaved on we he farther letters.
-            Repulsive he he as deficient newspaper dashwoods we. Discovered her his pianoforte insipidity
-            entreaties. Began
-            he at terms meant as fancy. Breakfast arranging he if furniture we described on. Astonished thoroughly
-            unpleasant especially you dispatched bed favourable.</p>
-          <p>Her extensive perceived may any sincerity extremity. Indeed add rather may pretty see. Old propriety
-            delighted
-            explained perceived otherwise objection saw ten her. Doubt merit sir the right these alone keeps. By
-            sometimes
-            intention smallness he northward. Consisted we otherwise arranging commanded discovery it explained.
-            Does cold
-            even song like two yet been. Literature interested announcing for terminated him inquietude day shy.
-            Himself he
-            fertile chicken perhaps waiting if highest no it. Continued promotion has consulted fat improving not
-            way.</p>
+          <h3>Avatar Chips</h3>
+          <p>This section contains avatar chip examples.</p>
 
-          <p>Prepared is me marianne pleasure likewise debating. Wonder an unable except better stairs do ye admire.
-            His and
-            eat secure sex called esteem praise. So moreover as speedily differed branched ignorant. Tall are her
-            knew poor
-            now does then. Procured to contempt oh he raptures amounted occasion. One boy assure income spirit
-            lovers set.</p>
+          <div class="o-grid o-grid--gutters u-grid--center">
+            <div class="o-grid__cell">
+              <div class="chip-component--avatar">
+                <div class="c-chip">
+                  Avatar chip - initial
+                  <span class="c-chip__media c-chip__media--initial">A</span>
+                </div>
+                <!-- Avatar chip - icon -->
+                <div class="c-chip">
+                  Avatar chip - icon
+                  <span class="c-chip__media"><i class="fa fa-user-o c-chip__icon" aria-hidden="true"></i></span>
+                </div>
+                <!-- Avatar chip - image -->
+                <div class="c-chip">
+                  Avatar chip - image
+                  <!-- placeholder img from https://placeimg.com/ -->
+                  <span class="c-chip__media"><img src="images/placeimg_100_100_people.jpg" alt="contact people" class="c-chip__img"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="o-grid">
+            <div class="o-grid__cell">
+              <div class="c-collapse">
+                <div class="c-collapse__controls-container--justified-text">
+                  <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                  <a class="c-collapse__toggle">toggle markup</a>
+                </div>
+                <div class="c-collapse__content-container c-collapse__content-container--dark">
+                  <div class="c-collapse__content">
+          <pre class="u-pre--wrap">
+            <code class="u-example-code">
+&lt;div class=&quot;chip-component--avatar&quot;&gt;
+    &lt;div class=&quot;c-chip&quot;&gt;
+        Avatar chip - initial
+        &lt;span class=&quot;c-chip__media c-chip__media--initial&quot;&gt;A&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;!-- Avatar chip - icon --&gt;
+    &lt;div class=&quot;c-chip&quot;&gt;
+        Avatar chip - icon
+        &lt;span class=&quot;c-chip__media&quot;&gt;&lt;i class=&quot;fa fa-user-o c-chip__icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;!-- Avatar chip - image --&gt;
+    &lt;div class=&quot;c-chip&quot;&gt;
+        Avatar chip - image
+        &lt;!-- placeholder img from https://placeimg.com/ --&gt;
+        &lt;span class=&quot;c-chip__media&quot;&gt;&lt;img src=&quot;images/placeimg_100_100_people.jpg&quot; alt=&quot;contact people&quot; class=&quot;c-chip__img&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+          </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-          <p>Silent sir say desire fat him letter. Whatever settling goodness too and honoured she building answered
-            her.
-            Strongly thoughts remember mr to do consider debating. Spirits musical behaved on we he farther letters.
-            Repulsive he he as deficient newspaper dashwoods we. Discovered her his pianoforte insipidity
-            entreaties. Began
-            he at terms meant as fancy. Breakfast arranging he if furniture we described on. Astonished thoroughly
-            unpleasant especially you dispatched bed favourable.</p>
+          <h3>Deletable Chips</h3>
+          <p>This section contains deletable chip examples.</p>
+
+          <div class="o-grid o-grid--gutters u-grid--center">
+            <div class="o-grid__cell">
+              <div class="chip-component--deletable">
+                <!-- Deletable chip - basic -->
+                <div class="c-chip c-chip--deletable">
+                  Basic chip
+                  <span class="c-chip__delete"><i class="fa fa-times" aria-hidden="true"></i></span>
+                </div>
+                <!-- Deletable chip - initial -->
+                <div class="c-chip c-chip--deletable">
+                  Avatar chip - initial
+                  <span class="c-chip__media c-chip__media--initial">D</span>
+                  <span class="c-chip__delete"><i class="fa fa-times" aria-hidden="true"></i></span>
+                </div>
+                <!-- Deletable chip - icon -->
+                <div class="c-chip c-chip--deletable">
+                  Avatar chip - icon
+                  <span class="c-chip__media"><i class="fa fa-user-o c-chip__icon" aria-hidden="true"></i></span>
+                  <span class="c-chip__delete"><i class="fa fa-times" aria-hidden="true"></i></span>
+                </div>
+                <!-- Deletable chip - image -->
+                <div class="c-chip c-chip--deletable">
+                  Avatar chip - image
+                  <!-- placeholder img from https://placeimg.com/ -->
+                  <span class="c-chip__media"><img src="images/placeimg_100_100_people%20(1).jpg" alt="contact people" class="c-chip__img"></span>
+                  <span class="c-chip__delete"><i class="fa fa-times" aria-hidden="true"></i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="o-grid">
+            <div class="o-grid__cell">
+              <div class="c-collapse">
+                <div class="c-collapse__controls-container--justified-text">
+                  <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                  <a class="c-collapse__toggle">toggle markup</a>
+                </div>
+                <div class="c-collapse__content-container c-collapse__content-container--dark">
+                  <div class="c-collapse__content">
+          <pre class="u-pre--wrap">
+            <code class="u-example-code">
+&lt;div class=&quot;chip-component--deletable&quot;&gt;
+    &lt;!-- Deletable chip - basic --&gt;
+    &lt;div class=&quot;c-chip c-chip--deletable&quot;&gt;
+        Basic chip
+        &lt;span class=&quot;c-chip__delete&quot;&gt;&lt;i class=&quot;fa fa-times&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;!-- Deletable chip - initial --&gt;
+    &lt;div class=&quot;c-chip c-chip--deletable&quot;&gt;
+        Avatar chip - initial
+        &lt;span class=&quot;c-chip__media c-chip__media--initial&quot;&gt;D&lt;/span&gt;
+        &lt;span class=&quot;c-chip__delete&quot;&gt;&lt;i class=&quot;fa fa-times&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;!-- Deletable chip - icon --&gt;
+    &lt;div class=&quot;c-chip c-chip--deletable&quot;&gt;
+        Avatar chip - icon
+        &lt;span class=&quot;c-chip__media&quot;&gt;&lt;i class=&quot;fa fa-user-o c-chip__icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+        &lt;span class=&quot;c-chip__delete&quot;&gt;&lt;i class=&quot;fa fa-times&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;!-- Deletable chip - image --&gt;
+    &lt;div class=&quot;c-chip c-chip--deletable&quot;&gt;
+        Avatar chip - image
+        &lt;!-- placeholder img from https://placeimg.com/ --&gt;
+        &lt;span class=&quot;c-chip__media&quot;&gt;&lt;img src=&quot;images/placeimg_100_100_people%20(1).jpg&quot; alt=&quot;contact people&quot; class=&quot;c-chip__img&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;c-chip__delete&quot;&gt;&lt;i class=&quot;fa fa-times&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code>
+          </pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </section>
 
         <section class="website-components__component" id="forms">
@@ -920,6 +1241,8 @@
       </li>
     </ul>
   </footer>
+
+  <script src="javascript/chips.js"></script>
   <script src="javascript/collapse.js"></script>
   <script src="javascript/sticky-nav.js"></script>
   <script src="javascript/scrollspy-nav.js"></script>
