@@ -1,0 +1,68 @@
+.c-card {
+	border: 0.1em solid $generic-black-color;
+	border-radius: 5px;
+	display: flex;
+	flex-direction :column;
+	overflow:hidden;
+	max-width: 20em;
+
+	&__head{
+		position : relative;
+	}
+
+    &__head-icon{
+      color: $generic-white-color;
+      font-size: 3em;
+      float: right;
+      padding: 0.3em;
+    }
+
+
+	&__category{
+		color: $generic-white-color;
+		font-weight: bold;
+		font-size: 1.2em;
+		left: 0.5em;
+		position:absolute;
+		text-transform: uppercase;
+		top: 0.5em;
+	}
+
+	&__img{
+		width: 100%;
+	}
+
+    &__profile-pic{
+      bottom: 0;
+      border-radius: 50%;
+      height: 7em;
+      left: 0;
+      margin-left: auto;
+      margin-right: auto;
+      position:absolute;
+      right: 0;
+      transform: translateY(50%);
+      width: 7em;
+    }
+
+    &__profile-name{
+      margin-top: 2em;
+      color: $primary-color;
+    }
+
+    &__social-icon{
+      color: $secondary-dark-color;
+      font-size: 1.2em;
+      &:hover{
+        border: none;
+      }
+    }
+
+	&__body{
+		padding: 1.5em;
+	}
+
+	&__text{
+		margin: 1em 0;
+	}
+}
