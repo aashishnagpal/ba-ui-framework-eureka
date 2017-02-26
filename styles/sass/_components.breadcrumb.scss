@@ -55,15 +55,6 @@
   &__a:hover {
     border-bottom: 0;
   }
-  &--act-col {
-    background-color: darken($primary-dark-color,10%);
-  }
-  &__li--rbn a[class~="c-breadcrumb--act-col"]:before {
-    border-color: darken($primary-dark-color,10%) darken($primary-dark-color,10%) darken($primary-dark-color,10%) transparent;
-  }
-  &__li--rbn a[class~="c-breadcrumb--act-col"]:after {
-    border-left: 1em solid darken($primary-dark-color,10%);
-  }
   &--var-col {
     background-color: darken($primary-dark-color,40%);
   }
@@ -72,5 +63,14 @@
   }
   &__li--rbn a[class~="c-breadcrumb--var-col"]:after {
     border-left: 1em solid darken($primary-dark-color,40%);
+  }
+  &--act-col, &__a--rbn:active, &--var-col:active {
+    background-color: darken($primary-dark-color,10%);
+  }
+  &__li--rbn a[class~="c-breadcrumb--act-col"]:before, &__li--rbn:not(:first-child) > a:active::before, &__li--rbn a[class~="c-breadcrumb--var-col"]:active::before {
+    border-color: darken($primary-dark-color,10%) darken($primary-dark-color,10%) darken($primary-dark-color,10%) transparent;
+  }
+  &__li--rbn a[class~="c-breadcrumb--act-col"]:after, &__li--rbn:not(:last-child) > a:active::after, &__li--rbn a[class~="c-breadcrumb--var-col"]:active::after {
+    border-left: 1em solid darken($primary-dark-color,10%);
   }
 }
