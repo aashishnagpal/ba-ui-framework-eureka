@@ -1,0 +1,76 @@
+.c-breadcrumb {
+  // background-color: blue;
+  height: 2em;
+  &__li + &__li:before {
+    color: $secondary-light-color;
+    content: "/\00a0";
+  }
+  &__li--rbn {
+    color: $generic-white-color;
+    margin: 0 .6em;
+    position: relative;
+  }
+  &__a--rbn {
+    background-color: $primary-color;
+    border: 0;
+    display: block;
+    height: 1em;
+    line-height: 0em;
+    &:hover {
+      background-color: $primary-light-color;
+    }
+  }
+  &__li--rbn:first-child a {
+    border-top-left-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+  }
+  &__li--rbn:last-child a {
+    border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+  }
+  &__li--rbn:not(:first-child) a:before {
+    content: "";
+    border-style: solid;
+    border-color: $primary-color $primary-color $primary-color transparent;
+    border-width: 1em 0 1em 1em;
+    left: -1em;
+    position: absolute;
+    top: 0;
+  }
+  &__li--rbn:not(:first-child) > a:hover::before {
+    border-color: $primary-light-color $primary-light-color $primary-light-color transparent;
+  }
+  &__li--rbn:not(:last-child) a:after {
+    content: "";
+    border-top: 1em solid transparent;
+    border-bottom: 1em solid transparent;
+    border-left: 1em solid $primary-color;
+    position: absolute;
+    right: -1em;
+    top: 0;
+  }
+  &__li--rbn:not(:last-child) > a:hover::after {
+    border-left: 1em solid $primary-light-color;
+  }
+  &__a:hover {
+    border-bottom: 0;
+  }
+  &--act-col {
+    background-color: darken($primary-dark-color,10%);
+  }
+  &__li--rbn a[class~="c-breadcrumb--act-col"]:before {
+    border-color: darken($primary-dark-color,10%) darken($primary-dark-color,10%) darken($primary-dark-color,10%) transparent;
+  }
+  &__li--rbn a[class~="c-breadcrumb--act-col"]:after {
+    border-left: 1em solid darken($primary-dark-color,10%);
+  }
+  &--var-col {
+    background-color: darken($primary-dark-color,40%);
+  }
+  &__li--rbn a[class~="c-breadcrumb--var-col"]:before {
+    border-color: darken($primary-dark-color,40%) darken($primary-dark-color,40%) darken($primary-dark-color,40%) transparent;
+  }
+  &__li--rbn a[class~="c-breadcrumb--var-col"]:after {
+    border-left: 1em solid darken($primary-dark-color,40%);
+  }
+}
