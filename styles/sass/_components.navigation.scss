@@ -54,7 +54,6 @@
       background: $primary-light-color;
       content: '';
       position: absolute;
-      transform: scaleX(0);
     }
 
     &::before {
@@ -62,6 +61,7 @@
       bottom: 1px;
       height: 0.3em;
       width: 100%;
+      transform: scaleX(0);
     }
 
     &::after {
@@ -69,10 +69,16 @@
       top: 0;
       height: 100%;
       width: 0.3em;
+      transform: scaleY(0);
     }
 
-    &:hover::before, &:hover::after {
+    &:hover::before {
       transform: scaleX(1);
+      transition: transform 0.3s linear;
+    }
+
+    &:hover::after {
+      transform: scaleY(1);
       transition: transform 0.3s linear;
     }
 
@@ -81,7 +87,7 @@
 
       &::before, &::after {
         background: $primary-color;
-        transform: scaleX(1);
+        transform: scale(1, 1);
       }
     }
   }
