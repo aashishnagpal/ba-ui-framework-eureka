@@ -3,10 +3,10 @@
 .tooltip-this-element {
     position: relative;
     display: inline-block;
-    border-bottom: 1px dotted black;
-    /*For visibility- delete when done*/
-    top: 75px;
-    left: 75px;
+    border-bottom: 0.0625rem dotted black;
+    //For development visibility- comment out when done//
+    //top: 4.688rem;
+    //left: 4.688rem;
 }
 
 
@@ -26,9 +26,11 @@
     font-family: $roboto-light-font-family;
     //font-weight provides better consitency among browsers
     font-weight: 300;
-    padding-bottom: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
+    /*padding-bottom: 0.9375rem;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;*/
+    padding: 0.9375rem;
+    padding-top: .5rem;
     text-align: center;
     visibility: hidden;
     width: auto;
@@ -45,7 +47,7 @@
     
     /*Tooltip Arrow*/
     &::after {
-        border: 6px solid;
+        border: 0.375rem solid;
         border-color: $primary-light-color transparent transparent transparent;
         content: "";
         left: 25%;
