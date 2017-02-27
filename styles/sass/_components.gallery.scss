@@ -1,5 +1,23 @@
-.c-gallery {
-  &--clickable {
-    cursor: pointer;
+.c-gallery--clickable {
+  height: 15.625em;
+  width: 15.625em;
+  cursor: pointer;
+}
+
+@each $nth, $img in (1, "http://res.cloudinary.com/azureowl/image/upload/v1488151619/placeholder1_mzeqic.png"),
+                    (2, "http://res.cloudinary.com/azureowl/image/upload/v1488151623/placeholder2_gl44o6.png"),
+                    (3, "https://unsplash.it/760"),
+                    (4, "https://unsplash.it/853"),
+                    (5, "https://unsplash.it/570") {
+  .c-gallery--clickable:nth-of-type(#{$nth}) {
+    background-image: url(#{$img});
+    @include background-img;
   }
+}
+
+.c-gallery-viewer {
+  @include background-img;
+  height: 50em;
+  margin: 0 auto;
+  width: 50em;
 }
