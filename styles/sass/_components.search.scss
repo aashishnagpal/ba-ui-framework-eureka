@@ -1,11 +1,9 @@
 // body {
 //     background: $secondary-color;
 // }
-
 //changes size of search bar with single variable
 //defaults to "normal" size 1.5
 $search-size-multiplier: 1.5;
-
 //form wrapper for search bar
 .search-form {
     border: ($search-size-multiplier * 0.4375rem) solid $generic-white-color;
@@ -20,15 +18,16 @@ $search-size-multiplier: 1.5;
 
 //search bar input
 .search-input {
+    //Better consistency for browsers that don't support light tag
     background: transparentize($primary-color, .31);
     border: none;
-    padding-right: ($search-size-multiplier * 0.75rem);
-    text-align: right;
+    color: $generic-white-color;
     flex-basis: 85%;
     font-family: $roboto-light-font-family;
-    //Better consistency for browsers that don't support light tag
-    font-weight: 300;
     font-size: ($search-size-multiplier * 1.3rem);
+    font-weight: 300;
+    padding-right: ($search-size-multiplier * 0.75rem);
+    text-align: right;
     &::-webkit-input-placeholder {
         /* WebKit, Blink, Edge */
         color: $generic-white-color;
@@ -47,11 +46,14 @@ $search-size-multiplier: 1.5;
         /* Internet Explorer 10-11 */
         color: $generic-white-color;
     }
+    &:focus {
+        border: 1px solid $menu-text-color;
+    }
 }
 
 //button for user interactivity
 //will incorporate style-guide button when ready
-.button {
+.search-button {
     background-color: $primary-dark-color;
     border-radius: 6px;
     border: transparent;
@@ -59,8 +61,12 @@ $search-size-multiplier: 1.5;
     color: #fafafa;
     flex-basis: 18%;
     margin-left: (-0.1875rem * $search-size-multiplier);
+    cursor: pointer;
     &:hover {
         background-color: $secondary-dark-color;
+    }
+    &:active {
+        border: 1px solid $generic-white-color;
     }
 }
 
@@ -70,4 +76,5 @@ $search-size-multiplier: 1.5;
     right: ($search-size-multiplier * 1.5rem);
     top: ($search-size-multiplier * .2rem);
     color: #A7D9E1;
+    pointer-events: none;
 }
