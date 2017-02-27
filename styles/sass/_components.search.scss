@@ -1,6 +1,6 @@
-// body {
-//     background: $secondary-color;
-// }
+ body {
+     background: $secondary-color;
+ }
 //changes size of search bar with single variable
 //defaults to "normal" size 1.5
 $search-size-multiplier: 1.5;
@@ -47,7 +47,8 @@ $search-size-multiplier: 1.5;
         color: $generic-white-color;
     }
     &:focus {
-        border: 1px solid $menu-text-color;
+        transition: background-color .5s ease-in;
+        background-color: $secondary-color;
     }
 }
 
@@ -66,7 +67,7 @@ $search-size-multiplier: 1.5;
         background-color: $secondary-dark-color;
     }
     &:active {
-        border: 1px solid $generic-white-color;
+        border: 2px solid transparentize($generic-white-color, .3);
     }
 }
 
