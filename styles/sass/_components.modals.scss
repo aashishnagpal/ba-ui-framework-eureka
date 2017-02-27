@@ -12,33 +12,30 @@
   margin: 0 auto;;
 }
 
-%modal-overlay {
+// Overlay
+.c-modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 9999;
-
-  visibility: hidden;
-}
-
-.c-modal-overlay {
-  @extend %modal-overlay;
-
-  background-color: $generic-gray-color;
   opacity: 0;
   visibility: hidden;
   transition: visibility 0s, opacity 0.3s;
 }
 
-.c-modal-overlay--full {
-  @extend %modal-overlay;
-  background-color: $primary-light-color;
-  opacity: 0;
-
+.c-modal-overlay--gray {
+  background-color: $generic-gray-color;
+  opacity: 0.6;
 }
 
+.c-modal-overlay--full {
+  background-color: $primary-light-color;
+  opacity: 1;
+}
+
+// Modal basic styles
 %c-modal-basic {
   z-index: 10000;
   background-color: $primary-light-color;
@@ -48,17 +45,11 @@
   opacity: 0;
   pointer-events: none;
   transform: scale(0) rotate(360deg);
-
-  transition: all .5s;
-  //overflow: auto;
+  transition: all 0.4s;
   min-width: 18em;
   width: 50%;
   max-width: 25em;
   min-height: 20em;
-  //max-height: 80%;
-  //padding: 2em;
-
-  //display: none;
 }
 
 .c-modal {
@@ -66,8 +57,6 @@
 
   &__content {
     width: 100%;
-
-    //border: 1px solid red;
   }
 
   &__header {
@@ -84,12 +73,6 @@
     padding: 2em 3em;
     color: lighten($generic-black-color, 20%);
     line-height: 1.5em;
-
-    //border: 1px solid red;
-
-    &:last-of-type {
-      //margin-bottom: 1.5em;
-    }
   }
 
   &__footer {
@@ -178,38 +161,16 @@
   }
 }
 
-
-
-//.c-modal__content {
-//  width: 100%;
-//  height: 100%;
-//  overflow: auto;
-//}
-//.c-modal__header {
-//  margin-bottom: 0;
-//  padding: 0 30px;
-//}
-//
-//.c-modal__body {
-//  padding: 0 30px;
-//  color: rgba(0,0,0,0.7);
-//}
-//
-//.c-modal__body:last-of-type {
-//  margin-bottom: 50px;
-//}
-
 .modal-component input:checked + [class^='c-modal-overlay']{
   visibility: visible;
   opacity: 0.6;
 }
 
-.c-modal:target {
+.c-modal--active {
   opacity: 1;
   pointer-events: all;
   transform: scale(1) rotate(0deg);
 }
-
 
 
 
@@ -226,6 +187,5 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
-  //margin-bottom: 1.5em;
 }
 
