@@ -10,22 +10,67 @@
   <div class="modal-component">
     <h3>Modals</h3>
 
-    <p>Basic</p>
     <!-- modal triggers -->
-    <a href="#modal1" class="c-btn c-btn--primary">modal</a>
+    <div class="modal-triggers">
+      <a href="#modal1" class="c-btn--primary c-btn c-modal-trigger">Basic Modal</a>
+      <a href="#modal2" class="c-btn--primary c-btn c-modal-trigger--f">Full-screen Modal</a>
+      <a href="#modal3" class="c-btn--primary c-btn c-modal-trigger">Fixed Header and Footer Modal</a>
+      <a href="#modal4" class="c-btn--primary c-btn c-modal-trigger">Dialog Modal</a>
+    </div>
 
-    <!-- modals -->
+
+    <!-- overlay -->
     <div class="c-modal-overlay"></div>
 
-    <div id="modal1" class="c-modal">
+    <!-- modal - basic -->
+    <div id="modal1" class="c-modal c-modal--basic">
       <div class="c-modal__content">
-        <h2 class="c-modal__header">Modal</h2>
-        <p class="modal-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <a href="#!" class="c-btn btn-close">
+        <h3 class="c-modal__header">Basic Modal</h3>
+        <p class="c-modal__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend dolor diam, nec viverra ipsum semper nec. Curabitur accumsan neque eget leo auctor egestas. Proin posuere sem ut mauris commodo, ac maximus urna commodo. Quisque eget risus eget urna efficitur elementum dignissim at tellus. Ut feugiat bibendum porta.</p>
+      </div>
+      <div class="c-modal__footer">
+        <a href="#!" class="c-modal__close">close</a>
+      </div>
+    </div>
 
-        </a>
+    <!-- modal - full screen -->
+    <div id="modal2" class="c-modal c-modal--full">
+      <div class="c-modal__content">
+        <h3 class="c-modal__header">Full-screen Modal</h3>
+        <p class="c-modal__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend dolor diam, nec viverra ipsum semper nec. Curabitur accumsan neque eget leo auctor egestas. Proin posuere sem ut mauris commodo, ac maximus urna commodo. Quisque eget risus eget urna efficitur elementum dignissim at tellus. Ut feugiat bibendum porta.</p>
+      </div>
+      <div class="c-modal__footer">
+        <a href="#!" class="c-modal__close">close</a>
+      </div>
+    </div>
+
+    <!-- modal - fixed header and footer -->
+    <div id="modal3" class="c-modal c-modal--fixed">
+      <div class="c-modal__content">
+        <h3 class="c-modal__header">Fixed Modal</h3>
+        <p class="c-modal__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend dolor diam, nec viverra ipsum semper nec. Curabitur accumsan neque eget leo auctor egestas. Proin posuere sem ut mauris commodo, ac maximus urna commodo. Quisque eget risus eget urna efficitur elementum dignissim at tellus. Ut feugiat bibendum porta. Curabitur tristique quam eu est porttitor, id tincidunt arcu molestie. Morbi volutpat est orci, eget iaculis est rhoncus id. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend dolor diam, nec viverra ipsum semper nec. Curabitur accumsan neque eget leo auctor egestas. Proin posuere sem ut mauris commodo, ac maximus urna commodo. Quisque eget risus eget urna efficitur elementum dignissim at tellus. Ut feugiat bibendum porta. Curabitur tristique quam eu est porttitor, id tincidunt arcu molestie. Morbi volutpat est orci, eget iaculis est rhoncus id.</p>
+        <div class="c-modal__footer">
+          <a href="#!" class="c-modal__close">close</a>
+        </div>
       </div>
     </div>
   </div>
+
+    <!-- modal - dialog -->
+    <div id="modal4" class="c-modal c-modal--dialog">
+      <div class="c-modal__content">
+        <p class="c-modal__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend dolor diam, nec viverra ipsum semper nec. Curabitur accumsan neque eget leo auctor egestas. Proin posuere sem ut mauris commodo, ac maximus urna commodo. Quisque eget risus eget urna efficitur elementum dignissim at tellus. Ut feugiat bibendum porta.</p>
+      </div>
+      <div class="c-modal__footer">
+        <a href="#!" class="c-modal__cancel c-modal__close">cancel</a>
+        <a href="#!" class="c-modal__ok c-modal__close">okay</a>
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <script src="../javascript/modals.js"></script>
 </body>
 </html>

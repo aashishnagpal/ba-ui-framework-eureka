@@ -25,6 +25,7 @@
   height: 0;
   border-radius: 0 0 3px 3px;
   overflow: auto;
+  margin-bottom: 2em;
   &--dark {
     background-color: $body-bg-color;
     color: $generic-white-color;

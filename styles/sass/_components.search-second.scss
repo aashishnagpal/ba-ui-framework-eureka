@@ -1,0 +1,70 @@
+//changes size of search bar with single variable
+//defaults to "normal" size 1.5
+$search-second-size-multiplier: .7;
+
+//form wrapper for search bar
+.search-form-second {
+    border-radius: 5px;
+    border: ($search-second-size-multiplier * 0.1rem) solid transparentize($secondary-light-color, .8);
+    display: flex;
+    height: ($search-second-size-multiplier * 4rem);
+    justify-content: flex-start;
+    margin: auto;
+    position: relative;
+    width: ($search-second-size-multiplier * 30rem);
+}
+
+//search bar input
+.search-input-second {
+    background: $body-bg-color;
+    border: none;
+    padding-left: ($search-second-size-multiplier * .8rem);
+    text-align: left;
+    flex-basis: 85%;
+    font-family: $roboto-font-family;
+    //Better consistency for browsers that don't support light tag
+    font-size: ($search-second-size-multiplier * 1.7rem);
+    &::-webkit-input-placeholder {
+        /* WebKit, Blink, Edge */
+        color: transparentize($secondary-light-color, .65);
+    }
+    &:-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        color: $generic-white-color;
+        opacity: 1;
+    }
+    &::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        color: $generic-white-color;
+        opacity: 1;
+    }
+    &:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: $generic-white-color;
+    }
+}
+
+//button for user interactivity
+//will incorporate style-guide button when ready
+.search-button-second {
+    background-color: lighten($body-bg-color, 12.5%);
+    border: transparent;
+    box-shadow: -5px 0 3px -4px $generic-black-color;
+    color: #fafafa;
+    flex-basis: 16%;
+    margin-left: (-0.1875rem * $search-second-size-multiplier);
+    &:hover {
+        background-color: $body-bg-color;
+    }
+    &:click {
+        border: 2px solid $generic-gray-color;
+    }
+}
+
+.search-icon-second {
+    position: absolute;
+    font-size: ($search-second-size-multiplier * 2.5rem);
+    right: 4%;
+    top: 14.5%;
+    color: transparentize($secondary-light-color, .63);
+}

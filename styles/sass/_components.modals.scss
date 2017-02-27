@@ -2,22 +2,190 @@
    Modal component styles
    ========================================================================== */
 
+/* Modal styles
+   ========================================================================== */
+
+@mixin position-top {
+  top: 15%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;;
+}
+
+// Overlay
+.c-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0s, opacity 0.3s;
+}
+
+.c-modal-overlay--gray {
+  background-color: $generic-gray-color;
+  opacity: 0.6;
+}
+
+.c-modal-overlay--full {
+  background-color: $primary-light-color;
+  opacity: 1;
+}
+
+// Modal basic styles
+%c-modal-basic {
+  z-index: 10000;
+  background-color: $primary-light-color;
+  font-size: 1em;
+  border-radius: 3px;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0) rotate(360deg);
+  transition: all 0.4s;
+  min-width: 18em;
+  width: 50%;
+  max-width: 25em;
+  min-height: 20em;
+}
+
+.c-modal {
+  @extend %c-modal-basic;
+
+  &__content {
+    width: 100%;
+  }
+
+  &__header {
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+    text-align: center;
+    background-color: $primary-dark-color;
+    color: $generic-white-color;
+    border-radius: 3px 3px 0 0;
+  }
+
+  &__body {
+    margin: 0;
+    padding: 2em 3em;
+    color: lighten($generic-black-color, 20%);
+    line-height: 1.5em;
+  }
+
+  &__footer {
+    width: 100%;
+    padding: 1em 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__close {
+    font-size: 1.1em;
+    border: none;
+    border-radius: 3px;
+    padding: 0.5em 1em;
+    background-color: lighten($primary-dark-color, 10%);
+    color: $generic-gray-color;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: $primary-dark-color;
+    }
+  }
+
+}
+
+// Basic specific styles
+.c-modal--basic {
+  @extend %c-modal-basic;
+  @include position-top;
+
+  &__header {
+    background-color: $primary-dark-color;
+  }
+}
+
+// Full-screen specific styles
+.c-modal--full {
+  @extend %c-modal-basic;
+  font-size: 1.2em;
+  top: 20%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+
+  //transform: ;
+
+  .c-modal__header {
+    background-color: $primary-light-color;
+  }
+}
+
+// Fixed specific styles
+.c-modal--fixed {
+  @extend %c-modal-basic;
+  @include position-top;
+
+  .c-modal__body {
+    background-color: darken($generic-gray-color, 3%);
+    height: 18em;
+    overflow-y: auto;
+  }
+}
+
+.c-modal--dialog {
+  @extend %c-modal-basic;
+  @include position-top;
+
+  .c-modal__body {
+    background-color: darken($generic-gray-color, 3%);
+    border-radius: 3px 3px 0 0;
+  }
+
+  .c-modal__footer {
+    justify-content: flex-end;
+
+    .c-modal__close:last-of-type {
+      margin-left: 1.5em;
+      background-color: $primary-dark-color;
+
+      &:hover {
+        background-color: darken($primary-dark-color, 10%);
+      }
+    }
+  }
+}
+
+.modal-component input:checked + [class^='c-modal-overlay']{
+  visibility: visible;
+  opacity: 0.6;
+}
+
+.c-modal--active {
+  opacity: 1;
+  pointer-events: all;
+  transform: scale(1) rotate(0deg);
+}
+
+
+
 /* Modal buttons that trigger modals
    ========================================================================== */
 
-//All btn styles are temporary. Will apply .c-button styles later
-.c-btn {
-  border: 1px solid;
-  padding: 0.625em 1em;
-  font-size: 0.9em;
-  border-radius: 3px;
-}
-
-.c-btn--primary {
-  color: $primary-color;
-  border-color: $primary-color;
+.modal-component input {
+  display: none;
 }
 
 
-/* Modal styles
-   ========================================================================== */
+.modal-triggers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+

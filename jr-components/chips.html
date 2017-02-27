@@ -12,69 +12,113 @@
     <!-- Basic -->
     <div class="chip-component--basic">
       <h4>Basic Chip</h4>
-      <div class="c-chip">
+      <div class="c-chip--filled">
+        Basic chip
+      </div>
+
+      <div class="c-chip--outlined">
         Basic chip
       </div>
     </div>
 
     <!-- Avatar chips -->
     <div class="chip-component--avatar">
-      <h4>Avatar Chips</h4>
+      <h4>Avatar Chips - Initial</h4>
       <!-- Avatar chip - initial -->
-      <div class="c-chip">
+      <div class="c-chip--filled">
+        <span class="c-chip__media--f">A</span>
         Avatar chip - initial
-        <span class="c-chip__media c-chip__media--initial">A</span>
       </div>
+      <div class="c-chip--outlined">
+        <span class="c-chip__media--o">A</span>
+        Avatar chip - initial
+      </div>
+    </div>
+
+    <div class="chip-component--avatar">
+      <h4>Avatar Chips - Icon</h4>
       <!-- Avatar chip - icon -->
-      <div class="c-chip">
+      <div class="c-chip--filled">
+        <span class="c-chip__media--f"><i class="fa fa-user-o c-chip__icon" aria-hidden="true"></i></span>
         Avatar chip - icon
-        <span class="c-chip__media"><i class="fa fa-user-o c-chip__icon" aria-hidden="true"></i></span>
       </div>
+      <div class="c-chip--outlined">
+        <span class="c-chip__media--o"><i class="fa fa-user-o c-chip__icon" aria-hidden="true"></i></span>
+        Avatar chip - icon
+      </div>
+    </div>
+
+    <div class="chip-component--avatar">
+      <h4>Avatar Chips - Image</h4>
       <!-- Avatar chip - image -->
-      <div class="c-chip">
-        Avatar chip - image
+      <div class="c-chip--filled">
         <!-- placeholder img from https://placeimg.com/ -->
-        <span class="c-chip__media"><img src="../images/placeimg_100_100_people.jpg" alt="contact people" class="c-chip__img"></span>
+        <span class="c-chip__media--f"><img src="../images/placeimg_100_100_people.jpg" alt="contact people" class="c-chip__img"></span>
+        Avatar chip - image
+      </div>
+
+      <div class="c-chip--outlined">
+        <!-- placeholder img from https://placeimg.com/ -->
+        <span class="c-chip__media--f c-chip__media--f--img"><img src="../images/placeimg_100_100_people.jpg" alt="contact people" class="c-chip__img"></span>
+        Avatar chip - image
       </div>
     </div>
 
     <!-- Deletable chips -->
     <div class="chip-component--deletable">
       <h4>Deletable Chips</h4>
-      <!-- Deletable chip - basic -->
-      <div class="c-chip c-chip--deletable">
-        Basic chip
-        <span class="c-chip__delete"><i class="fa fa-times" aria-hidden="true"></i></span>
-      </div>
-      <!-- Deletable chip - initial -->
-      <div class="c-chip c-chip--deletable">
-        Avatar chip - initial
-        <span class="c-chip__media c-chip__media--initial">D</span>
-        <span class="c-chip__delete"><i class="fa fa-times" aria-hidden="true"></i></span>
-      </div>
-      <!-- Deletable chip - icon -->
-      <div class="c-chip c-chip--deletable">
-        Avatar chip - icon
-        <span class="c-chip__media"><i class="fa fa-user-o c-chip__icon" aria-hidden="true"></i></span>
-        <span class="c-chip__delete"><i class="fa fa-times" aria-hidden="true"></i></span>
-      </div>
-      <!-- Deletable chip - image -->
-      <div class="c-chip c-chip--deletable">
-        Avatar chip - image
-        <!-- placeholder img from https://placeimg.com/ -->
-        <span class="c-chip__media"><img src="../images/placeimg_100_100_people%20(1).jpg" alt="contact people" class="c-chip__img"></span>
-        <span class="c-chip__delete"><i class="fa fa-times" aria-hidden="true"></i></span>
+      <div>
+        <!-- Deletable chip - basic -->
+        <div class="c-chip--filled c-chip--deletable">
+          Basic chip
+          <span class="c-chip__delete"><i class="fa fa-times" aria-hidden="true"></i></span>
+        </div>
+        <div class="c-chip--outlined c-chip--deletable">
+          Basic chip
+          <span class="c-chip__delete"><i class="fa fa-times" aria-hidden="true"></i></span>
+        </div>
+
+        <!-- Deletable chip - initial -->
+        <div class="c-chip--filled c-chip--deletable">
+          <span class="c-chip__media--f">D</span>
+          Avatar chip - initial
+          <span class="c-chip__delete"><i class="fa fa-times" aria-hidden="true"></i></span>
+        </div>
+        <div class="c-chip--outlined c-chip--deletable">
+          <span class="c-chip__media--o">D</span>
+          Avatar chip - initial
+          <span class="c-chip__delete"><i class="fa fa-times" aria-hidden="true"></i></span>
+        </div>
+
+        <!-- Deletable chip - icon -->
+        <div class="c-chip--filled c-chip--deletable">
+          <span class="c-chip__media--f"><i class="fa fa-user-o c-chip__icon" aria-hidden="true"></i></span>
+          Avatar chip - icon
+          <span class="c-chip__delete"><i class="fa fa-times" aria-hidden="true"></i></span>
+        </div>
+        <div class="c-chip--outlined c-chip--deletable">
+          <span class="c-chip__media--o"><i class="fa fa-user-o c-chip__icon" aria-hidden="true"></i></span>
+          Avatar chip - icon
+          <span class="c-chip__delete"><i class="fa fa-times" aria-hidden="true"></i></span>
+        </div>
+
+        <!-- Deletable chip - image -->
+        <div class="c-chip--filled c-chip--deletable">
+          <!-- placeholder img from https://placeimg.com/ -->
+          <span class="c-chip__media--f"><img src="../images/placeimg_100_100_people%20(1).jpg" alt="contact people" class="c-chip__img"></span>
+          Avatar chip - image
+          <span class="c-chip__delete"><i class="fa fa-times" aria-hidden="true"></i></span>
+        </div>
+        <div class="c-chip--outlined c-chip--deletable">
+          <!-- placeholder img from https://placeimg.com/ -->
+          <span class="c-chip__media--f c-chip__media--f--img"><img src="../images/placeimg_100_100_people%20(1).jpg" alt="contact people" class="c-chip__img"></span>
+          Avatar chip - image
+          <span class="c-chip__delete"><i class="fa fa-times" aria-hidden="true"></i></span>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!--<div class="demo-chip">-->
-    <!--<h4>Demo</h4>-->
-    <!--<p>To add a chip, enter text below and press enter. To delete, click <i class="fa fa-times" aria-hidden="true"></i>.</p>-->
-    <!--<label class="demo-chip__label">-->
-      <!--<input type="text" class="demo-chip__input" value="">-->
-    <!--</label>-->
-  <!--</div>-->
+  </div>
 
 
   <script src="../javascript/chips.js"></script>
