@@ -12,6 +12,8 @@
       e.preventDefault();
       // grab targeted collapse component
       var currentComponent = collapseComponents[i];
+      // get fixed height if specified
+      var fixedHeight = currentComponent.dataset.fixedHeight;
       // grab the content container
       var contentContainer = currentComponent.querySelector('.c-collapse__content-container');
       // check to see if the content is currently visible
@@ -22,7 +24,11 @@
         if (!isVisible) {
           // toggle visible class and set height
           contentContainer.classList.toggle('c-collapse__content--is-visible');
-          contentContainer.style.height = contentHeight + 'px';
+          if (fixedHeight !== undefined) {
+            contentContainer.style.height = fixedHeight + 'px';
+          } else {
+            contentContainer.style.height = contentHeight + 'px';
+          }
         } else {
           // toggle visible class and set height
           contentContainer.classList.toggle('c-collapse__content--is-visible');
@@ -33,3 +39,4 @@
   }
 
 })();
+

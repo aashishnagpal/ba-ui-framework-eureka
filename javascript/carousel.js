@@ -91,13 +91,10 @@
 
         // get the navigation direction from data-slide-nav attribute
         var navDirection = target.dataset.slideNav;
-        console.log('navDirection: ', navDirection);
         // set the next slide index
         var nextIndex = (currentSlide < slideArrayLength - 1) ? currentSlide + 1 : 0;
-
         // set the previous slide index
         var prevIndex = (currentSlide > 0) ? currentSlide - 1 : slideArrayLength - 1;
-
         // remove selected class from all slides
         slideArray.forEach(function(slide) {
           slide.classList.remove('c-carousel__slide--is-selected');
