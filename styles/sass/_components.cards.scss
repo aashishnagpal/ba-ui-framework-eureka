@@ -45,6 +45,10 @@
       width: 7em;
     }
 
+    &__date{
+      margin-top: 0;
+    }
+
     &__profile-name{
       margin-top: 2em;
       color: $primary-color;
@@ -59,10 +63,10 @@
     }
 
 	&__body{
-		padding: 1.5em;
+		padding: 0.7em 1.5em 1.5em 1.5em;
 	}
 
 	&__text{
-		margin: 1em 0;
+		margin-bottom: 1em;
 	}
 }

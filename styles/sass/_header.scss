@@ -1,0 +1,32 @@
+.eureka-header{
+  background-color: $header-bg-color;
+  padding: 1em 1em 0 1em;
+  color: $menu-text-color;
+
+  &__logo{
+    display: flex;
+    align-items: center;
+
+  }
+
+  &__logo-image{
+    max-height: 4em;
+    max-width: 4em;
+  }
+
+  &__logo-text{
+    padding-left: 0.6em;
+
+    &--top{
+      font-size: 2em;
+      margin: 0;
+    }
+    &--bottom{
+      margin: 0;
+    }
+  }
+
+  &__menu{
+
+  }
+}

@@ -1,21 +1,17 @@
 .test{
   max-width: 500px;
 }
-
 .accordion{
   display: flex;
   flex-direction: column;
   padding: 0;
   margin: 0;
-
   &__item{
     display:flex;
     flex-direction:column;
   }
-
   &__state{
     display:none;
-
     &:checked ~ .accordion__content{
       opacity: 1;
       max-height: 99em;
@@ -23,24 +19,19 @@
       transform: scaleY(1);
       border-top: 0.2em solid $primary-color;
     }
-
     &:checked ~ .accordion__title--dark{
       margin-bottom: 0;
       color: $generic-white-color;
     }
-
     &:checked ~ .accordion__title--light{
       margin-bottom: 0;
       color: $body-bg-color;
     }
-
     &:checked ~ .accordion__title > .accordion__icon,
     &:checked ~ .accordion__title > span > .accordion__icon {
       transform: rotate(180deg);
     }
-
   }
-
   &__title{
     display: flex;
     justify-content: space-between;
@@ -59,16 +50,13 @@
     &:hover{
       cursor: pointer;
     }
-
   }
-
   &__icon{
     // padding: 0 0.5em;
     text-align:center;
     transition: 0.5s ease-in-out;
     line-height: 1em;
   }
-
   &__content{
     max-height: 0;
     overflow: hidden;
@@ -82,7 +70,6 @@
     }
   }
 }
-
 .icon-circle {
   border-radius: 50%;
   border: solid 1px $primary-color;

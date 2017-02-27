@@ -1,0 +1,22 @@
+.main-content{
+  background-color: $body-bg-color;
+}
+
+.vertical-menu{
+  position: relative;
+}
+
+.website-components{
+  background-color: $generic-gray-color;
+  padding: 2em;
+
+  &__component{
+    border-radius: 5px;
+    background-color: $generic-white-color;
+    padding: 2em;
+    margin-bottom: 1em;
+  }
+
+}
+
+
