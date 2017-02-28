@@ -1,6 +1,7 @@
 //body {
     //background: $secondary-color;
 //}
+
 //**********MULTIPLIERS**********
 //Allows changing size of search bar with single edit
 //Keeps aspect ratio
@@ -49,23 +50,9 @@ $search-second-size-multiplier: .7;
     font-weight: 300;
     padding-right: 2.5%;
     text-align: right;
-    &::-webkit-input-placeholder {
-        /* WebKit, Blink, Edge */
-        color: $generic-white-color;
-    }
-    &:-moz-placeholder {
-        /* Mozilla Firefox 4 to 18 */
+    @include placeholder {
         color: $generic-white-color;
         opacity: 1;
-    }
-    &::-moz-placeholder {
-        /* Mozilla Firefox 19+ */
-        color: $generic-white-color;
-        opacity: 1;
-    }
-    &:-ms-input-placeholder {
-        /* Internet Explorer 10-11 */
-        color: $generic-white-color;
     }
     &:focus {
         transition: background-color .5s ease-in;
@@ -82,28 +69,9 @@ $search-second-size-multiplier: .7;
     flex-basis: 85%;
     font-size: ($search-second-size-multiplier * 1.7rem);
     text-align: right;
-    &::-webkit-input-placeholder {
-        /* WebKit, Blink, Edge */
+    @include placeholder {
         color: transparentize($secondary-light-color, .65);
-    }
-    &:-moz-placeholder {
-        /* Mozilla Firefox 4 to 18 */
-        color: $generic-white-color;
         opacity: 1;
-    }
-    &::-moz-placeholder {
-        /* Mozilla Firefox 19+ */
-        color: $generic-white-color;
-        opacity: 1;
-    }
-    &:-ms-input-placeholder {
-        /* Internet Explorer 10-11 */
-        color: $generic-white-color;
-    }
-    &:focus {
-        color: $body-bg-color;
-        transition: background-color .65s ease-in;
-        background-color: transparentize($primary-color, .31);
     }
 }
 
