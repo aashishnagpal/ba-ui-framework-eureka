@@ -1,19 +1,41 @@
 body {
     background: $secondary-color;
 }
+//**********MULTIPLIERS**********
+//Allows changing size of search bar with single edit
+//Keeps aspect ratio
 
-//changes size of search bar with single variable
-//defaults to "normal" size 1.5
 $search-size-multiplier: 1.5;
+$search-second-size-multiplier: .7;
+
+
+//**********FORM ELEMENTS**********
+//wraps search bar and provides form tag
+
 //form wrapper for search bar
 .search-form {
-    border-radius: 5px;
+    border-radius: 0.3125rem;
     border: ($search-size-multiplier * 0.4375rem) solid $generic-white-color;
     display: flex;
     height: ($search-size-multiplier * (2.25rem + 0.4375rem));
     justify-content: flex-start;
     width: ($search-size-multiplier * 23.44rem);
 }
+
+//form wrapper for second search bar
+.search-form-second {
+    @extend .search-form;
+    border-bottom-right-radius: 0.5125rem;
+    border-top-right-radius: 0.5125rem;
+    border: ($search-second-size-multiplier * 0.1rem) solid transparentize($secondary-light-color, .8);
+    height: ($search-second-size-multiplier * 4rem);
+    width: ($search-second-size-multiplier * 30rem);
+}
+
+
+//**********SEARCH BAR INPUT**********
+//input, ex: <input class="search-input" type="text" placeholder="Search" required>
+//Left side of total component 
 
 //search bar input
 .search-input {
@@ -51,12 +73,50 @@ $search-size-multiplier: 1.5;
     }
 }
 
+//second search bar input
+.search-input-second {
+    @extend .search-input;
+    background: $body-bg-color;
+    border-top-right-radius: 0.2rem;
+    border-bottom-right-radius: 0.2rem;
+    flex-basis: 85%;
+    font-size: ($search-second-size-multiplier * 1.7rem);
+    text-align: right;
+    &::-webkit-input-placeholder {
+        /* WebKit, Blink, Edge */
+        color: transparentize($secondary-light-color, .65);
+    }
+    &:-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        color: $generic-white-color;
+        opacity: 1;
+    }
+    &::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        color: $generic-white-color;
+        opacity: 1;
+    }
+    &:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: $generic-white-color;
+    }
+    &:focus {
+        color: $body-bg-color;
+        transition: background-color .65s ease-in;
+        background-color: transparentize($primary-color, .31);
+    }
+}
+
+
+//**********SEARCH BUTTONS**********
+//Right side of component where the user clicks to start search
+
+//user clickable button
 .search-button {
     background-color: $primary-dark-color;
     border-radius: 0.375rem;
     border: transparent;
     box-shadow: -0.3125rem 0 0.1875rem -0.25rem $generic-black-color;
-    color: #fafafa;
     flex-basis: 18%;
     margin-left: (-0.1875rem * $search-size-multiplier);
     cursor: pointer;
@@ -68,8 +128,29 @@ $search-size-multiplier: 1.5;
     }
 }
 
+//second user clickable button
+.search-button-second {
+    @extend .search-button;
+    background-color: lighten($body-bg-color, 12.5%);
+    border-radius: 0;
+    flex-basis: 16%;
+    margin-left: (-0.1875rem * $search-second-size-multiplier);
+    &:hover {
+        background-color: $body-bg-color;
+    }
+}
+
+//font awesome magnify glass icon
 .search-icon {
     font-size: ($search-size-multiplier * 1.35rem);
     color: #A7D9E1;
     pointer-events: none;
 }
+
+//second font awesome magnify glass icon
+.search-icon-second {
+    color: transparentize($secondary-light-color, .63);
+    font-size: ($search-second-size-multiplier * 2.5rem);
+    pointer-events: none;
+}
+
