@@ -1,32 +1,31 @@
-//body {
-//     background: $secondary-color;
-// }
+body {
+    background: $secondary-color;
+}
+
 //changes size of search bar with single variable
 //defaults to "normal" size 1.5
 $search-size-multiplier: 1.5;
 //form wrapper for search bar
 .search-form {
-    border: ($search-size-multiplier * 0.4375rem) solid $generic-white-color;
     border-radius: 5px;
+    border: ($search-size-multiplier * 0.4375rem) solid $generic-white-color;
     display: flex;
     height: ($search-size-multiplier * (2.25rem + 0.4375rem));
     justify-content: flex-start;
-    margin: auto;
     width: ($search-size-multiplier * 23.44rem);
-    position: relative;
 }
 
 //search bar input
 .search-input {
-    //Better consistency for browsers that don't support light tag
     background: transparentize($primary-color, .31);
     border: none;
     color: $generic-white-color;
     flex-basis: 85%;
     font-family: $roboto-light-font-family;
     font-size: ($search-size-multiplier * 1.3rem);
+    //Better font consistency for browsers that don't support light tag
     font-weight: 300;
-    padding-right: ($search-size-multiplier * 0.75rem);
+    padding-right: 2.5%;
     text-align: right;
     &::-webkit-input-placeholder {
         /* WebKit, Blink, Edge */
@@ -52,13 +51,11 @@ $search-size-multiplier: 1.5;
     }
 }
 
-//button for user interactivity
-//will incorporate style-guide button when ready
 .search-button {
     background-color: $primary-dark-color;
-    border-radius: 6px;
+    border-radius: 0.375rem;
     border: transparent;
-    box-shadow: -5px 0 3px -4px $generic-black-color;
+    box-shadow: -0.3125rem 0 0.1875rem -0.25rem $generic-black-color;
     color: #fafafa;
     flex-basis: 18%;
     margin-left: (-0.1875rem * $search-size-multiplier);
@@ -67,15 +64,12 @@ $search-size-multiplier: 1.5;
         background-color: $secondary-dark-color;
     }
     &:active {
-        border: 2px solid transparentize($generic-white-color, .3);
+        border: 0.125rem solid transparentize($generic-white-color, .3);
     }
 }
 
 .search-icon {
-    position: absolute;
     font-size: ($search-size-multiplier * 1.35rem);
-    right: ($search-size-multiplier * 1.5rem);
-    top: ($search-size-multiplier * .2rem);
     color: #A7D9E1;
     pointer-events: none;
 }
