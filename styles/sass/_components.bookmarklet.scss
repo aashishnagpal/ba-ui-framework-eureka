@@ -1,15 +1,44 @@
 .c-bookmarklet {
-	padding: 2em;
-	background-color: red;
+	padding: 1em;
+	background-color: $generic-gray-color;
+	color: $generic-black-color;
+	border: solid 1px $secondary-dark-color;
+	border-radius: 0.2em 0 0 0.2em;
 	position: fixed;
 	top: 10em;
 	right: 0;
+	width: 15em;
 	transition: all 0.5s ease;
 	transform: translateX(100%);
+	& h1 {
+		font-size: 1.25em;
+	}
 	&--is-visible {
 		transform: translateX(80%);
 		&:hover {
-			transform: translateX(0);
+			transform: translateX(5%);
 		}
+	}
+}
+
+.c-bookmarklet__highlight-text {
+	background-color: yellow;
+}
+
+.c-bookmaklet__bookmark-list {
+	margin: 0;
+	padding: 0;
+	list-style-position: inside;
+}
+
+.c-bookmarklet__bookmark-list-item {
+	border: solid 1px white;
+	padding: 1em 0;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	& a {
+		padding: 0;
+		color: $primary-color;
 	}
 }
