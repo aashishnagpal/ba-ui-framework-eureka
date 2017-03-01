@@ -1,0 +1,15 @@
+.c-bookmarklet {
+	padding: 2em;
+	background-color: red;
+	position: fixed;
+	top: 10em;
+	right: 0;
+	transition: all 0.5s ease;
+	transform: translateX(100%);
+	&--is-visible {
+		transform: translateX(80%);
+		&:hover {
+			transform: translateX(0);
+		}
+	}
+}

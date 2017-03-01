@@ -2,6 +2,8 @@
   window.addEventListener('keydown', _keysDown, false);
   window.addEventListener('keyup', _keysUp, false);
 
+
+  var bookmarkList = document.querySelector('.c-bookmarklet');
   var keysPressed = [];
   var bookmarkId = 0;
 
@@ -25,16 +27,22 @@
   }
 
   function _bookmarkSelection() {
-    console.log('Shortcut initiated!');
-    var selection = window.getSelection();
+    // console.log('Shortcut initiated!');
+    var selection;
     var bookmarkNode;
-    console.log(selection);
+
+    selection = window.getSelection();
+    // console.log(selection);
+
     if (selection.anchorNode) {
+
       bookmarkNode = selection.anchorNode.parentNode;
+
       if (bookmarkNode.dataset.bookmark === undefined) {
         bookmarkNode.setAttribute('data-bookmark', bookmarkId);
         bookmarkNode.style.color = 'red';
         bookmarkId += 1;
+        bookmarkList.classList.add('c-bookmarklet--is-visible');
       } else {
         console.log('already bookmarked!');
       }
@@ -42,8 +50,12 @@
   }
 
   function _clearBookmark() {
-    var selection = window.getSelection();
-    var bookmarkNode = selection.anchorNode.parentNode;
+    var selection;
+    var bookmarkNode;
+
+    selection = window.getSelection();
+    bookmarkNode = selection.anchorNode.parentNode;
+
     if (bookmarkNode && bookmarkNode.dataset.bookmark) {
       bookmarkNode.removeAttribute('data-bookmark');
       bookmarkNode.style.color = 'green';
