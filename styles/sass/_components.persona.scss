@@ -1,15 +1,22 @@
+.persona-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
 .persona {
   color: $secondary-dark-color;
   margin: 0;
   text-align: center;
-  width: 15em;
-  padding: 2.5em;
+  flex: 0 0 13em;
+  padding: 2em 1em;
   border-radius: 0.5em;
   background: transparent;
   border: 0.3em solid transparent;
   transform: scale(0.9) translate(0, 0);
   transition: all 0.5s linear;
-
 
   &__image {
     width: 5em;
@@ -22,23 +29,36 @@
   &__name {
     margin-top: 1.5em;
     margin-bottom: 0;
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
 
-  &__designation {
+  &__title {
     color: $secondary-color;
     opacity: 0;
     transition: opacity 0.5s linear;
   }
 
-  &__button {
+  &__links {
+    color: $primary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  &__link {
     font-size: 1em;
     opacity: 0;
     transition: opacity 0.5s linear;
-    &__icon {
-      font-size: 1em;
-      margin: 0;
-    }
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__icon {
+    font-size: 1.2em;
+    margin: 0;
+    padding: 1px;
   }
 
   &:hover {
@@ -46,11 +66,12 @@
     box-shadow: 1px 1px 2px $generic-black-color;
     border-color: $primary-dark-color;
     transform: scale(1) translate(0, -40%);
+
     & .persona__image {
       transform: scale(1.5);
     }
 
-    & .persona__designation, & .persona__button {
+    & .persona__title, & .persona__link {
       opacity: 1;
     }
   }

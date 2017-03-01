@@ -4,7 +4,6 @@
     <title>Eureka CSS UI Framework</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/css/eureka.css">
-    <link rel="stylesheet" href="css/eureka.css">
 </head>
 <body>
 <header id="site-header" class="eureka-header">
@@ -41,7 +40,7 @@
         <aside class="vertical-menu o-grid__cell u-1of4">
             <nav class="demo-site-grid__sticky-nav">
                 <ul class="nav nav--transparent nav--vertical-left" data-nav-type="sticky" data-content-id="showcase"
-                     data-scrollspy>
+                    data-header-id="site-header" data-footer-id="site-footer" data-scrollspy>
                     <li class="nav__item nav__item--active"><a class="nav__link" href="#buttons">Buttons</a></li>
                     <li class="nav__item "><a class="nav__link" href="#cards">Cards</a></li>
                     <li class="nav__item "><a class="nav__link" href="#accordions">Accordions</a></li>
@@ -907,60 +906,65 @@
                 <h3>Deletable Chips</h3>
                 <p>This section contains deletable chip examples.</p>
 
-                <!--<div class="o-grid o-grid&#45;&#45;gutters u-grid&#45;&#45;center">-->
-                <!--<div class="o-grid__cell">-->
-                <!--<div class="chip-component&#45;&#45;deletable">-->
-                <!--<h4>Deletable Chips</h4>-->
-                <!--&lt;!&ndash; Deletable chip - basic &ndash;&gt;-->
-                <!--<div class="c-chip&#45;&#45;filled c-chip&#45;&#45;deletable">-->
-                <!--Basic chip-->
-                <!--<span class="c-chip__delete"><i class="fa fa-times" aria-hidden="true"></i></span>-->
-                <!--</div>-->
-                <!--<div class="c-chip&#45;&#45;outlined c-chip&#45;&#45;deletable">-->
-                <!--Basic chip-->
-                <!--<span class="c-chip__delete"><i class="fa fa-times" aria-hidden="true"></i></span>-->
-                <!--</div>-->
+                <div class="o-grid o-grid--gutters u-grid--center">
+                    <div class="o-grid__cell">
+                        <div class="chip-component--deletable">
+                            <h4>Deletable Chips</h4>
+                            <!-- Deletable chip - basic -->
+                            <div class="c-chip--filled c-chip--deletable">
+                                Basic chip
+                                <span class="c-chip__delete"><i class="fa fa-times" aria-hidden="true"></i></span>
+                            </div>
+                            <div class="c-chip--outlined c-chip--deletable">
+                                Basic chip
+                                <span class="c-chip__delete"><i class="fa fa-times" aria-hidden="true"></i></span>
+                            </div>
 
-                <!--&lt;!&ndash; Deletable chip - initial &ndash;&gt;-->
-                <!--<div class="c-chip&#45;&#45;filled c-chip&#45;&#45;deletable">-->
-                <!--<span class="c-chip__media&#45;&#45;f">D</span>-->
-                <!--Avatar chip - initial-->
-                <!--<span class="c-chip__delete"><i class="fa fa-times" aria-hidden="true"></i></span>-->
-                <!--</div>-->
-                <!--<div class="c-chip&#45;&#45;outlined c-chip&#45;&#45;deletable">-->
-                <!--<span class="c-chip__media&#45;&#45;o">D</span>-->
-                <!--Avatar chip - initial-->
-                <!--<span class="c-chip__delete"><i class="fa fa-times" aria-hidden="true"></i></span>-->
-                <!--</div>-->
+                            <!-- Deletable chip - initial -->
+                            <div class="c-chip--filled c-chip--deletable">
+                                <span class="c-chip__media--f">D</span>
+                                Avatar chip - initial
+                                <span class="c-chip__delete"><i class="fa fa-times" aria-hidden="true"></i></span>
+                            </div>
+                            <div class="c-chip--outlined c-chip--deletable">
+                                <span class="c-chip__media--o">D</span>
+                                Avatar chip - initial
+                                <span class="c-chip__delete"><i class="fa fa-times" aria-hidden="true"></i></span>
+                            </div>
 
-                <!--&lt;!&ndash; Deletable chip - icon &ndash;&gt;-->
-                <!--<div class="c-chip&#45;&#45;filled c-chip&#45;&#45;deletable">-->
-                <!--<span class="c-chip__media&#45;&#45;f"><i class="fa fa-user-o c-chip__icon" aria-hidden="true"></i></span>-->
-                <!--Avatar chip - icon-->
-                <!--<span class="c-chip__delete"><i class="fa fa-times" aria-hidden="true"></i></span>-->
-                <!--</div>-->
-                <!--<div class="c-chip&#45;&#45;outlined c-chip&#45;&#45;deletable">-->
-                <!--<span class="c-chip__media&#45;&#45;o"><i class="fa fa-user-o c-chip__icon" aria-hidden="true"></i></span>-->
-                <!--Avatar chip - icon-->
-                <!--<span class="c-chip__delete"><i class="fa fa-times" aria-hidden="true"></i></span>-->
-                <!--</div>-->
+                            <!-- Deletable chip - icon -->
+                            <div class="c-chip--filled c-chip--deletable">
+                                <span class="c-chip__media--f"><i class="fa fa-user-o c-chip__icon"
+                                                                  aria-hidden="true"></i></span>
+                                Avatar chip - icon
+                                <span class="c-chip__delete"><i class="fa fa-times" aria-hidden="true"></i></span>
+                            </div>
+                            <div class="c-chip--outlined c-chip--deletable">
+                                <span class="c-chip__media--o"><i class="fa fa-user-o c-chip__icon"
+                                                                  aria-hidden="true"></i></span>
+                                Avatar chip - icon
+                                <span class="c-chip__delete"><i class="fa fa-times" aria-hidden="true"></i></span>
+                            </div>
 
-                <!--&lt;!&ndash; Deletable chip - image &ndash;&gt;-->
-                <!--<div class="c-chip&#45;&#45;filled c-chip&#45;&#45;deletable">-->
-                <!--&lt;!&ndash; placeholder img from https://placeimg.com/ &ndash;&gt;-->
-                <!--<span class="c-chip__media&#45;&#45;f"><img src="images/placeimg_100_100_people%20(1).jpg" alt="contact people" class="c-chip__img"></span>-->
-                <!--Avatar chip - image-->
-                <!--<span class="c-chip__delete"><i class="fa fa-times" aria-hidden="true"></i></span>-->
-                <!--</div>-->
-                <!--<div class="c-chip&#45;&#45;outlined c-chip&#45;&#45;deletable">-->
-                <!--&lt;!&ndash; placeholder img from https://placeimg.com/ &ndash;&gt;-->
-                <!--<span class="c-chip__media&#45;&#45;f c-chip__media&#45;&#45;f&#45;&#45;img"><img src="images/placeimg_100_100_people%20(1).jpg" alt="contact people" class="c-chip__img"></span>-->
-                <!--Avatar chip - image-->
-                <!--<span class="c-chip__delete"><i class="fa fa-times" aria-hidden="true"></i></span>-->
-                <!--</div>-->
-                <!--</div>-->
-                <!--</div>-->
-                <!--</div>-->
+                            <!-- Deletable chip - image -->
+                            <div class="c-chip--filled c-chip--deletable">
+                                <!-- placeholder img from https://placeimg.com/ -->
+                                <span class="c-chip__media--f"><img src="images/placeimg_100_100_people%20(1).jpg"
+                                                                    alt="contact people" class="c-chip__img"></span>
+                                Avatar chip - image
+                                <span class="c-chip__delete"><i class="fa fa-times" aria-hidden="true"></i></span>
+                            </div>
+                            <div class="c-chip--outlined c-chip--deletable">
+                                <!-- placeholder img from https://placeimg.com/ -->
+                                <span class="c-chip__media--f c-chip__media--f--img"><img
+                                        src="images/placeimg_100_100_people%20(1).jpg" alt="contact people"
+                                        class="c-chip__img"></span>
+                                Avatar chip - image
+                                <span class="c-chip__delete"><i class="fa fa-times" aria-hidden="true"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="o-grid">
                     <div class="o-grid__cell">
                         <div class="c-collapse">
@@ -2143,81 +2147,90 @@
                 <div class="o-grid o-grid--gutters u-grid--center">
                     <div class="o-grid__cell">
                         <div class="generic-wrapper" style="width: 50%; max-width: 800px">
-                            <div class="c-carousel c-carousel--slider-type" data-thumbnail-nav
-                            <!-- carousel slide container -->
-                            <div class="c-carousel__slides-container">
-                                <!-- carousel slide -->
-                                <div class="c-carousel__slide c-carousel__slide--is-selected">
-                                    <img class="c-carousel__image" src="https://unsplash.it/800/400?image=1037" alt="">
+                            <div class="c-carousel c-carousel--slider-type" data-thumbnail-nav>
+                                <!-- carousel slide container -->
+                                <div class="c-carousel__slides-container">
+                                    <!-- carousel slide -->
+                                    <div class="c-carousel__slide c-carousel__slide--is-selected">
+                                        <img class="c-carousel__image" src="https://unsplash.it/800/400?image=1037"
+                                             alt="">
+                                    </div>
+                                    <!-- carousel slide -->
+                                    <div class="c-carousel__slide">
+                                        <img class="c-carousel__image" src="https://unsplash.it/800/400?image=1041"
+                                             alt="">
+                                    </div>
+                                    <!-- carousel slide -->
+                                    <div class="c-carousel__slide">
+                                        <img class="c-carousel__image" src="https://unsplash.it/800/400?image=1051"
+                                             alt="">
+                                    </div>
+                                    <!-- carousel slide -->
+                                    <div class="c-carousel__slide">
+                                        <img class="c-carousel__image" src="https://unsplash.it/800/400?image=1039"
+                                             alt="">
+                                    </div>
+                                    <!-- carousel slide -->
+                                    <div class="c-carousel__slide">
+                                        <img class="c-carousel__image" src="https://unsplash.it/800/400?image=984"
+                                             alt="">
+                                    </div>
+                                    <!-- carousel slide -->
+                                    <div class="c-carousel__slide">
+                                        <img class="c-carousel__image" src="https://unsplash.it/800/400?image=985"
+                                             alt="">
+                                    </div>
+                                    <!-- carousel slide -->
+                                    <div class="c-carousel__slide">
+                                        <img class="c-carousel__image" src="https://unsplash.it/800/400?image=1005"
+                                             alt="">
+                                    </div>
+                                    <!-- carousel arrow navigation -->
+                                    <a href="" class="c-carousel__arrow-nav c-carousel__arrow-nav--left"
+                                       data-slide-nav="prev">
+                                        <i class="fa fa-chevron-circle-left fa-2x"></i>
+                                    </a>
+                                    <a href="" class="c-carousel__arrow-nav c-carousel__arrow-nav--right"
+                                       data-slide-nav="next">
+                                        <i class="fa fa-chevron-circle-right fa-2x"></i>
+                                    </a>
                                 </div>
-                                <!-- carousel slide -->
-                                <div class="c-carousel__slide">
-                                    <img class="c-carousel__image" src="https://unsplash.it/800/400?image=1041" alt="">
-                                </div>
-                                <!-- carousel slide -->
-                                <div class="c-carousel__slide">
-                                    <img class="c-carousel__image" src="https://unsplash.it/800/400?image=1051" alt="">
-                                </div>
-                                <!-- carousel slide -->
-                                <div class="c-carousel__slide">
-                                    <img class="c-carousel__image" src="https://unsplash.it/800/400?image=1039" alt="">
-                                </div>
-                                <!-- carousel slide -->
-                                <div class="c-carousel__slide">
-                                    <img class="c-carousel__image" src="https://unsplash.it/800/400?image=984" alt="">
-                                </div>
-                                <!-- carousel slide -->
-                                <div class="c-carousel__slide">
-                                    <img class="c-carousel__image" src="https://unsplash.it/800/400?image=985" alt="">
-                                </div>
-                                <!-- carousel slide -->
-                                <div class="c-carousel__slide">
-                                    <img class="c-carousel__image" src="https://unsplash.it/800/400?image=1005" alt="">
-                                </div>
-                                <!-- carousel arrow navigation -->
-                                <a href="" class="c-carousel__arrow-nav c-carousel__arrow-nav--left"
-                                   data-slide-nav="prev">
-                                    <i class="fa fa-chevron-circle-left fa-2x"></i>
-                                </a>
-                                <a href="" class="c-carousel__arrow-nav c-carousel__arrow-nav--right"
-                                   data-slide-nav="next">
-                                    <i class="fa fa-chevron-circle-right fa-2x"></i>
-                                </a>
+                                <!-- thumb navigation -->
+                                <ol class="c-carousel__thumb-nav">
+                                    <li class="c-carousel__thumb-nav-item c-carousel__thumb-nav-item--is-active"
+                                        data-slide-index="0">
+                                        <img class="c-carousel__thumb-image" src="https://unsplash.it/65/65?image=1037"
+                                             alt="">
+                                    </li>
+                                    <li class="c-carousel__thumb-nav-item" data-slide-index="1">
+                                        <img class="c-carousel__thumb-image" src="https://unsplash.it/65/65?image=1041"
+                                             alt="">
+                                    </li>
+                                    <li class="c-carousel__thumb-nav-item" data-slide-index="2">
+                                        <img class="c-carousel__thumb-image" src="https://unsplash.it/65/65?image=1051"
+                                             alt="">
+                                    </li>
+                                    <li class="c-carousel__thumb-nav-item" data-slide-index="3">
+                                        <img class="c-carousel__thumb-image" src="https://unsplash.it/65/65?image=1039"
+                                             alt="">
+                                    </li>
+                                    <li class="c-carousel__thumb-nav-item" data-slide-index="4">
+                                        <img class="c-carousel__thumb-image" src="https://unsplash.it/65/65?image=984"
+                                             alt="">
+                                    </li>
+                                    <li class="c-carousel__thumb-nav-item" data-slide-index="5">
+                                        <img class="c-carousel__thumb-image" src="https://unsplash.it/65/65?image=985"
+                                             alt="">
+                                    </li>
+                                    <li class="c-carousel__thumb-nav-item" data-slide-index="6">
+                                        <img class="c-carousel__thumb-image" src="https://unsplash.it/65/65?image=1005"
+                                             alt="">
+                                    </li>
+                                </ol>
                             </div>
-                            <!-- thumb navigation -->
-                            <ol class="c-carousel__thumb-nav">
-                                <li class="c-carousel__thumb-nav-item c-carousel__thumb-nav-item--is-active"
-                                    data-slide-index="0">
-                                    <img class="c-carousel__thumb-image" src="https://unsplash.it/65/65?image=1037"
-                                         alt="">
-                                </li>
-                                <li class="c-carousel__thumb-nav-item" data-slide-index="1">
-                                    <img class="c-carousel__thumb-image" src="https://unsplash.it/65/65?image=1041"
-                                         alt="">
-                                </li>
-                                <li class="c-carousel__thumb-nav-item" data-slide-index="2">
-                                    <img class="c-carousel__thumb-image" src="https://unsplash.it/65/65?image=1051"
-                                         alt="">
-                                </li>
-                                <li class="c-carousel__thumb-nav-item" data-slide-index="3">
-                                    <img class="c-carousel__thumb-image" src="https://unsplash.it/65/65?image=1039"
-                                         alt="">
-                                </li>
-                                <li class="c-carousel__thumb-nav-item" data-slide-index="4">
-                                    <img class="c-carousel__thumb-image" src="https://unsplash.it/65/65?image=984"
-                                         alt="">
-                                </li>
-                                <li class="c-carousel__thumb-nav-item" data-slide-index="5">
-                                    <img class="c-carousel__thumb-image" src="https://unsplash.it/65/65?image=985"
-                                         alt="">
-                                </li>
-                                <li class="c-carousel__thumb-nav-item" data-slide-index="6">
-                                    <img class="c-carousel__thumb-image" src="https://unsplash.it/65/65?image=1005"
-                                         alt="">
-                                </li>
-                            </ol>
                         </div>
                     </div>
+
                 </div>
 
                 <div class="o-grid">
@@ -2325,13 +2338,16 @@
                                         <div class="c-carousel__slide--multi-image-container">
                                             <div class="c-carousel__slide--multi-image-container__image-wrapper"><img
                                                     class="c-carousel__image"
-                                                    src="https://unsplash.it/300/450?image=1016" alt=""></div>
+                                                    src="https://unsplash.it/300/450?image=1016"
+                                                    alt=""></div>
                                             <div class="c-carousel__slide--multi-image-container__image-wrapper"><img
                                                     class="c-carousel__image"
-                                                    src="https://unsplash.it/300/450?image=1011" alt=""></div>
+                                                    src="https://unsplash.it/300/450?image=1011"
+                                                    alt=""></div>
                                             <div class="c-carousel__slide--multi-image-container__image-wrapper"><img
                                                     class="c-carousel__image"
-                                                    src="https://unsplash.it/300/450?image=1005" alt="">
+                                                    src="https://unsplash.it/300/450?image=1005"
+                                                    alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -2350,13 +2366,16 @@
                                         <div class="c-carousel__slide--multi-image-container">
                                             <div class="c-carousel__slide--multi-image-container__image-wrapper"><img
                                                     class="c-carousel__image"
-                                                    src="https://unsplash.it/300/450?image=985" alt=""></div>
+                                                    src="https://unsplash.it/300/450?image=985"
+                                                    alt=""></div>
                                             <div class="c-carousel__slide--multi-image-container__image-wrapper"><img
                                                     class="c-carousel__image"
-                                                    src="https://unsplash.it/300/450?image=984" alt=""></div>
+                                                    src="https://unsplash.it/300/450?image=984"
+                                                    alt=""></div>
                                             <div class="c-carousel__slide--multi-image-container__image-wrapper"><img
                                                     class="c-carousel__image"
-                                                    src="https://unsplash.it/300/450?image=973" alt="">
+                                                    src="https://unsplash.it/300/450?image=973"
+                                                    alt="">
                                             </div>
                                         </div>
                                     </div>
@@ -2480,12 +2499,12 @@
                         <div class="c-collapse__content">
                   <pre class="u-pre&#45;&#45;wrap">
                     <code class="u-example-code">
-          &lt;div class=&quot;c-alert&quot;&gt;
+        &lt;div class=&quot;c-alert&quot;&gt;
             &lt;p&gt;This is a basic alert. You can get rid of it by clicking on the close icon.&lt;/p&gt;
             &lt;span class=&quot;c-alert__close-alert&quot;&gt;
                 &lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;
             &lt;/span&gt;
-          &lt;/div&gt;</code>
+        &lt;/div&gt;</code>
                   </pre>
                         </div>
                       </div>
@@ -2688,6 +2707,100 @@
 
             </section>
 
+            <section class="website-components__component" id="persona">
+                <h3>Persona</h3>
+                <p>Create a persona with hover effects</p>
+
+                <div class="o-grid o-grid--gutters u-grid--center">
+                    <div class="o-grid__cell">
+                        <div class="persona-container">
+                            <div class="persona">
+                                <img class="persona__image" src="images/guy-1.jpg">
+                                <p class="persona__name">Virgil Hammond</p>
+                                <p class="persona__title">Front End Developer</p>
+                                <div class="persona__links">
+                                    <button type="button" class="c-btn c-btn--primary persona__link">
+            <span class="c-btn__btn-icon persona__icon">
+                <i class="fa fa-globe" aria-hidden="true"></i>
+            </span>Portfolio
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="persona">
+                                <img class="persona__image" src="images/girl-1.png">
+                                <p class="persona__name">Sonya Mcmakin</p>
+                                <p class="persona__title">Full Stack Developer</p>
+                                <ul class="persona__links">
+                                    <li class="persona__link">
+                                        <a class="persona__icon" href="#"><i class="fa fa-globe" aria-hidden="true"></i></a>
+                                    </li>
+                                    <li class="persona__link">
+                                        <a class="persona__icon" href="#"><i class="fa fa-github-square"
+                                                                             aria-hidden="true"></i></a>
+                                    </li>
+                                    <li class="persona__link">
+                                        <a class="persona__icon" href="#"><i class="fa fa-linkedin-square"
+                                                                             aria-hidden="true"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="o-grid">
+                    <div class="o-grid__cell">
+                        <div class="c-collapse">
+                            <div class="c-collapse__controls-container--justified-text">
+                                <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                                <a class="c-collapse__toggle">toggle markup</a>
+                            </div>
+                            <div class="c-collapse__content-container c-collapse__content-container--dark">
+                                <div class="c-collapse__content">
+          <pre class="u-pre--wrap">
+            <code class="u-example-code">
+&lt;div class=&quot;persona-container&quot;&gt;
+    &lt;div class=&quot;persona&quot;&gt;
+        &lt;img class=&quot;persona__image&quot; src=&quot;http://placehold.it/100x100&quot;&gt;
+        &lt;p class=&quot;persona__name&quot;&gt;Virgil Hammond&lt;/p&gt;
+        &lt;p class=&quot;persona__title&quot;&gt;Front End Developer&lt;/p&gt;
+        &lt;div class=&quot;persona__links&quot;&gt;
+            &lt;button type=&quot;button&quot; class=&quot;c-btn c-btn--primary persona__link&quot;&gt;
+            &lt;span class=&quot;c-btn__btn-icon persona__icon&quot;&gt;
+                &lt;i class=&quot;fa fa-globe&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+            &lt;/span&gt;Portfolio
+            &lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;persona&quot;&gt;
+        &lt;img class=&quot;persona__image&quot; src=&quot;http://placehold.it/100x100&quot;&gt;
+        &lt;p class=&quot;persona__name&quot;&gt;Sonya Mcmakin&lt;/p&gt;
+        &lt;p class=&quot;persona__title&quot;&gt;Full Stack Developer&lt;/p&gt;
+        &lt;ul class=&quot;persona__links&quot;&gt;
+            &lt;li class=&quot;persona__link&quot;&gt;
+                &lt;a class=&quot;persona__icon&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-globe&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;persona__link&quot;&gt;
+                &lt;a class=&quot;persona__icon&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-github-square&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li class=&quot;persona__link&quot;&gt;
+                &lt;a class=&quot;persona__icon&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-linkedin-square&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+            </code>
+          </pre>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </section>
+
         </div>
 
     </div>
@@ -2696,34 +2809,105 @@
 
 <footer id="site-footer" class="eureka-footer">
     <p class="eureka-footer__text">Site Developed By:</p>
-    <ul class="authors">
-        <li class="authors__author">
-            <img class="authors__image" src="http://placehold.it/300x300">
-            <p class="authors__author-name">Sam Chittenden</p>
+    <ul class="persona-container">
+        <li class="persona">
+            <img class="persona__image" src="images/sbc.png">
+            <p class="persona__name">Sam Chittenden</p>
+            <p class="persona__title">Front End Developer</p>
+            <ul class="persona__links">
+                <li class="persona__link">
+                    <a class="persona__icon" href="#"><i class="fa fa-globe" aria-hidden="true"></i></a>
+                </li>
+                <li class="persona__link">
+                    <a class="persona__icon" href="#"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+                </li>
+                <li class="persona__link">
+                    <a class="persona__icon" href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                </li>
+            </ul>
         </li>
-        <li class="authors__author">
-            <img class="authors__image" src="http://placehold.it/300x300">
-            <p class="authors__author-name">Jing Ran</p>
+        <li class="persona">
+            <img class="persona__image" src="images/jingran.png">
+            <p class="persona__name">Jing Ran</p>
+            <p class="persona__title">Front End Developer</p>
+            <ul class="persona__links">
+                <li class="persona__link">
+                    <a class="persona__icon" href="#"><i class="fa fa-globe" aria-hidden="true"></i></a>
+                </li>
+                <li class="persona__link">
+                    <a class="persona__icon" href="#"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+                </li>
+                <li class="persona__link">
+                    <a class="persona__icon" href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                </li>
+            </ul>
         </li>
-        <li class="authors__author">
-            <img class="authors__image" src="http://placehold.it/300x300">
-            <p class="authors__author-name">Aashish Nagpal</p>
+        <li class="persona">
+            <img class="persona__image" src="images/aashish.jpg">
+            <p class="persona__name">Aashish Nagpal</p>
+            <p class="persona__title">Front End Developer</p>
+            <ul class="persona__links">
+                <li class="persona__link">
+                    <a class="persona__icon" href="#"><i class="fa fa-globe" aria-hidden="true"></i></a>
+                </li>
+                <li class="persona__link">
+                    <a class="persona__icon" href="#"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+                </li>
+                <li class="persona__link">
+                    <a class="persona__icon" href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                </li>
+            </ul>
         </li>
-        <li class="authors__author">
-            <img class="authors__image" src="http://placehold.it/300x300">
-            <p class="authors__author-name">Imanuel Gittens</p>
+        <li class="persona">
+            <img class="persona__image" src="images/imanuel.jpg">
+            <p class="persona__name">Imanuel Gittens</p>
+            <p class="persona__title">Front End Developer</p>
+            <ul class="persona__links">
+                <li class="persona__link">
+                    <a class="persona__icon" href="#"><i class="fa fa-globe" aria-hidden="true"></i></a>
+                </li>
+                <li class="persona__link">
+                    <a class="persona__icon" href="#"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+                </li>
+                <li class="persona__link">
+                    <a class="persona__icon" href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                </li>
+            </ul>
         </li>
-        <li class="authors__author">
-            <img class="authors__image" src="http://placehold.it/300x300">
-            <p class="authors__author-name">Nathan Plummer</p>
+        <li class="persona">
+            <img class="persona__image" src="images/nathan.png">
+            <p class="persona__name">Nathan Plummer</p>
+            <p class="persona__title">Front End Developer</p>
+            <ul class="persona__links">
+                <li class="persona__link">
+                    <a class="persona__icon" href="#"><i class="fa fa-globe" aria-hidden="true"></i></a>
+                </li>
+                <li class="persona__link">
+                    <a class="persona__icon" href="#"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+                </li>
+                <li class="persona__link">
+                    <a class="persona__icon" href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                </li>
+            </ul>
         </li>
-        <li class="authors__author">
-            <img class="authors__image" src="http://placehold.it/300x300">
-            <p class="authors__author-name">Rochel</p>
+        <li class="persona">
+            <img class="persona__image" src="images/roro.png">
+            <p class="persona__name">Rochell Langam</p>
+            <p class="persona__title">Front End Developer</p>
+            <ul class="persona__links">
+                <li class="persona__link">
+                    <a class="persona__icon" href="#"><i class="fa fa-globe" aria-hidden="true"></i></a>
+                </li>
+                <li class="persona__link">
+                    <a class="persona__icon" href="#"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+                </li>
+                <li class="persona__link">
+                    <a class="persona__icon" href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+                </li>
+            </ul>
         </li>
     </ul>
 </footer>
-<script src="javascript/alert.js"></script>
 <script src="javascript/carousel.js"></script>
 <script src="javascript/badges.js"></script>
 <script src="javascript/chips.js"></script>
