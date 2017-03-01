@@ -143,20 +143,30 @@
 
 
   function _buildClearBookmarkListItemListeners() {
-    var listItems = document.querySelectorAll('.c-bookmarklet__close-icon');
-    console.log(listItems);
-    var numOfListItems = listItems.length;
+    var closeIcons = document.querySelectorAll('.c-bookmarklet__close-icon');
+    console.log(closeIcons);
+    var numOfListItems = closeIcons.length;
     var i;
     // add event listeners
     for (i = 0; i < numOfListItems; i++) {
-      listItems[i].addEventListener('click', _removeListItem);
+      closeIcons[i].addEventListener('click', _removeListItem);
     }
 
   }
 
   function _removeListItem(e) {
     e.preventDefault();
-    // closing animation
+
+    // ======================================================
+    // TO DO:
+    // remove span from bookmarked text
+    // remove data-bookmark attribute from parentNode of text
+    //
+    // could call another function here to do this on close icon click
+    //
+    // ======================================================
+
+    // closing animation on list item
     e.target.parentNode.classList.add('c-bookmarklet--remove');
     // after animation runs remove alert from DOM
     e.target.parentNode.addEventListener('animationend', function() {
