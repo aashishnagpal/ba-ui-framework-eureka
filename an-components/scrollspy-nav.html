@@ -7,9 +7,8 @@
 </head>
 <body>
 <h1>Eureka!</h1>
-<small>It is expected to have enough data on the page for this scrollspy to work properly</small>
 <nav>
-    <ul class="nav nav--dark nav--horizontal" data-nav-type="sticky" data-scrollspy>
+    <ul class="nav nav--dark nav--horizontal" data-nav-type="sticky" data-content-id="content" data-scrollspy>
         <li class="nav__item nav__item--active"><a class="nav__link" href="#buttons">Buttons</a></li>
         <li class="nav__item "><a class="nav__link" href="#cards">Cards</a></li>
         <li class="nav__item "><a class="nav__link" href="#accordions">Accordions</a></li>
@@ -21,6 +20,7 @@
         <li class="nav__item "><a class="nav__link" href="#scrollspy">Scrollspy</a></li>
     </ul>
 </nav>
+<div id="content">
 <section id="buttons">
     <h3>Buttons</h3>
     <p>This section contains Buttons</p>
@@ -350,7 +350,7 @@
         he at terms meant as fancy. Breakfast arranging he if furniture we described on. Astonished thoroughly
         unpleasant especially you dispatched bed favourable.</p>
 </section>
-
+</div>
 
 <script src="../javascript/sticky-nav.js"></script>
 <script src="../javascript/scrollspy-nav.js"></script>

@@ -5,15 +5,18 @@
 .nav {
   padding: 0;
   margin: 0;
+  width: 100%;
 
   &--horizontal {
     display: flex;
   }
 
   &--vertical {
-    display: inline-flex;
-    flex-direction: column;
-    height: auto;
+    &-left, &-right {
+      display: inline-flex;
+      flex-direction: column;
+      height: auto;
+    }
   }
 
   &--dark {
@@ -44,15 +47,13 @@
     text-align: center;
     display: flex;
     align-items: center;
-    justify-content: center;
 
     &:hover {
       color: $primary-light-color;
-      border-color: transparent;
     }
 
     &::before, &::after {
-      background: $primary-light-color;
+      background: $primary-color;
       content: '';
       position: absolute;
       transition: transform 0.3s linear;
@@ -60,34 +61,29 @@
 
     &::before {
       left: 0;
-      bottom: 1px;
+      bottom: -0.1em;
       height: 0.3em;
       width: 100%;
       transform: scaleX(0);
     }
 
     &::after {
-      right: 1px;
+      right: -0.15em;
       top: 0;
       height: 100%;
       width: 0.3em;
       transform: scaleY(0);
     }
 
-    &:hover::before {
-      transform: scaleX(1);
-
-    }
-
-    &:hover::after {
-      transform: scaleY(1);
-    }
-
     &--active {
       color: $primary-color;
 
+      &:hover {
+        color: $primary-color;
+      }
+
       &::before, &::after {
-        background: $primary-color;
+        //background: $primary-color;
         transform: scale(1, 1);
       }
     }
