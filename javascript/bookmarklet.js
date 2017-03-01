@@ -69,7 +69,7 @@
           // surround selected text with hightlighting span
           selectedText.surroundContents(highlightNode);
           // add unique id to highlighted span
-          highlightNode.setAttribute('id', 'bookmarklet_'+bookmarkId);
+          highlightNode.setAttribute('id', 'bookmarklet_' + bookmarkId);
 
           // create li node for widget ol
           listNode = document.createElement('li');
@@ -82,7 +82,7 @@
           // create anchor tag for widget li
           bookmarkAnchorLink = document.createElement('a');
           // set anchor link to bookmarklet ID
-          bookmarkAnchorLink.setAttribute('href', '#'+'bookmarklet_'+bookmarkId);
+          bookmarkAnchorLink.setAttribute('href', '#' + 'bookmarklet_' + bookmarkId);
           // copy over the highlighted text
           bookmarkAnchorLink.innerHTML = highlightNode.innerHTML;
           // append anchor element and text to widget li
@@ -114,7 +114,18 @@
         console.log('already bookmarked!');
       }
     }
+
+    // create remove list item listeners
+    _buildClearBookmarkListItemListeners();
   }
+
+  // ======================================
+  // TO DO
+  // -need code to remove bookmarks from nodes
+  // -need code to remove all bookmarks from nodes
+  //
+  // =======================================
+
 
   function _clearBookmark() {
     var selection;
@@ -129,5 +140,31 @@
       console.log('bookmark removed!');
     }
   }
+
+
+  function _buildClearBookmarkListItemListeners() {
+    var listItems = document.querySelectorAll('.c-bookmarklet__close-icon');
+    console.log(listItems);
+    var numOfListItems = listItems.length;
+    var i;
+    // add event listeners
+    for (i = 0; i < numOfListItems; i++) {
+      listItems[i].addEventListener('click', _removeListItem);
+    }
+
+  }
+
+  function _removeListItem(e) {
+    e.preventDefault();
+    // closing animation
+    e.target.parentNode.classList.add('c-bookmarklet--remove');
+    // after animation runs remove alert from DOM
+    e.target.parentNode.addEventListener('animationend', function() {
+      e.target.parentNode.remove();
+    });
+  }
+
+
+
 
 })();
