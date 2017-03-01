@@ -1,0 +1,80 @@
+<html>
+<head>
+  <title>Demo Component</title>
+  <link href="../styles/css/eureka.css" rel="stylesheet" type="text/css">
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />-->
+</head>
+<body>
+<style>
+
+  /* body{
+     width: 100vw;
+     height: 100vh;
+   }*/
+
+  .app-demo{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .app-demo > div{
+    padding: 30px;
+  }
+
+  .block1{
+    background-color: pink;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .block2{
+    background-color: yellow;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+  }
+
+  .block3{
+    background-color: green;
+    position: absolute;
+    top: 80%;
+    left: 20%;
+  }
+
+  .block4{
+    background-color: blue;
+    position: absolute;
+    top: 30%;
+    left: 90%;
+  }
+
+</style>
+
+    <div class="app-demo">
+      <div class="c-demo block1" c-demo-order="demo1">
+        <span class="c-demo__message-order"></span>
+        <span class="c-demo__message">This is the first message</span>
+      </div>
+      <div class="c-demo block2" c-demo-order="demo2">
+        <span class="c-demo__message">This is the third message</span>
+      </div>
+      <div class="c-demo block3" c-demo-order="demo3">
+        <span class="c-demo__message">This is the second message</span>
+      </div>
+      <div class="c-demo block4" c-demo-order="demo4">
+        <span class="c-demo__message">This is the fourth message</span>
+      </div>
+
+    </div>
+
+
+<script src="../javascript/demo.js"></script>
+
+
+
+</script>
+
+</body>
+</html>
