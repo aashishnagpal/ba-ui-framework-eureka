@@ -5,6 +5,7 @@
 
   var bookmarkListComponent = document.querySelector('.c-bookmarklet');
   var bookmarkList = bookmarkListComponent.querySelector('.c-bookmaklet__bookmark-list');
+  var highlightColor = bookmarkListComponent.dataset.highlightColor;
   var keysPressed = [];
   var bookmarkId = 0;
 
@@ -36,6 +37,7 @@
     var highlightNode;
     var bookmarkAnchorLink;
     var listNode;
+    var closeIcon;
 
     selection = window.getSelection();
     // console.log(selection);
@@ -43,6 +45,10 @@
     // create span node for text hightlighting
     highlightNode = document.createElement('span');
     highlightNode.className = 'c-bookmarklet__highlight-text';
+    // sets text highlight color if specified in data-highlight-color attribute - defaults to yellow;
+    if (highlightColor) {
+      highlightNode.style = 'background-color: ' + highlightColor;
+    }
     console.log(highlightNode);
 
     if (selection.anchorNode) {
@@ -68,6 +74,11 @@
           // create li node for widget ol
           listNode = document.createElement('li');
           listNode.className = 'c-bookmarklet__bookmark-list-item';
+
+          // create close icon
+          closeIcon = document.createElement('i');
+          closeIcon.className = 'fa fa-times c-bookmarklet__close-icon';
+
           // create anchor tag for widget li
           bookmarkAnchorLink = document.createElement('a');
           // set anchor link to bookmarklet ID
@@ -76,6 +87,8 @@
           bookmarkAnchorLink.innerHTML = highlightNode.innerHTML;
           // append anchor element and text to widget li
           listNode.appendChild(bookmarkAnchorLink);
+          // append close icon to listNode
+          listNode.appendChild(closeIcon);
           // append li to widget ol
           bookmarkList.appendChild(listNode);
 

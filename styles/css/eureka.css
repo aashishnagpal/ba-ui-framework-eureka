@@ -1258,6 +1258,10 @@ h6 {
     color: #fff; }
 
 .c-bookmarklet {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
   padding: 1em;
   background-color: #f3f3f3;
   color: #212121;
@@ -1266,15 +1270,20 @@ h6 {
   position: fixed;
   top: 10em;
   right: 0;
-  width: 15em;
+  width: 20em;
   transition: all 0.5s ease;
   transform: translateX(100%); }
   .c-bookmarklet h1 {
-    font-size: 1.25em; }
+    font-size: 1.25em;
+    margin-bottom: 0.5em; }
+    .c-bookmarklet h1 i {
+      margin-right: 0.25em; }
   .c-bookmarklet--is-visible {
     transform: translateX(80%); }
     .c-bookmarklet--is-visible:hover {
       transform: translateX(5%); }
+  .c-bookmarklet .c-btn {
+    margin: 0; }
 
 .c-bookmarklet__highlight-text {
   background-color: yellow; }
@@ -1285,14 +1294,30 @@ h6 {
   list-style-position: inside; }
 
 .c-bookmarklet__bookmark-list-item {
-  border: solid 1px white;
-  padding: 1em 0;
+  padding: 0.5em 2em 0.5em 1em;
+  margin-bottom: 0.5em;
   overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis; }
+  text-overflow: ellipsis;
+  border: solid 1px #ebebeb;
+  background-color: #fff;
+  position: relative;
+  border-radius: 0.2em;
+  width: 17em; }
   .c-bookmarklet__bookmark-list-item a {
     padding: 0;
     color: #51d0ef; }
+
+.c-bookmarklet__close-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.1em 0.2em 0 0;
+  color: #a4a4a4;
+  transition: all 0.25s ease;
+  cursor: pointer; }
+  .c-bookmarklet__close-icon:hover {
+    color: #e74c3c; }
 
 .progressbar-ex {
   padding: 2em; }
