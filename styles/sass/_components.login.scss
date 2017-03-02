@@ -61,7 +61,8 @@
 }
 
 .login-keep-checkbox {
-    margin-left: .2vw;
+    margin-left: 3%;
+    background-color: transparentize($secondary-light-color, .10);
 }
 
 .login-forgot-password {
