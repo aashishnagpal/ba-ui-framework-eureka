@@ -13,33 +13,33 @@
     height: 100vh;
   }
 
-  .app-demo > div{
+  /*.app-demo > div{
     padding: 30px;
-  }
+  }*/
 
   .block1{
-    background-color: pink;
+
     position: absolute;
     top: 0;
     left: 0;
   }
 
   .block2{
-    background-color: yellow;
+
     position: absolute;
     top: 50%;
     left: 70%;
   }
 
   .block3{
-    background-color: green;
+
     position: absolute;
     top: 80%;
     left: 20%;
   }
 
   .block4{
-    background-color: blue;
+
     position: absolute;
     top: 30%;
     left: 90%;
@@ -48,17 +48,45 @@
 </style>
 
     <div class="app-demo">
-      <div class="c-tooltip-help block1">
-        <span class="c-tooltip-help__message">This is the first message</span>
+      <div class="c-tooltip-help block1" help-order="help1">
+        <span class="c-tooltip-help__message is-hidden">
+          This is the first message
+          <ul class="c-tooltip-help__controls">
+            <li><button class="c-tooltip-help__controls-prev">Prev</button></li>
+            <li><button>Close</button></li>
+            <li><button class="c-tooltip-help__controls-next">Next</button></li>
+          </ul>
+        </span>
       </div>
-      <div class="c-tooltip-help block2">
-        <span class="c-tooltip-help__message">This is the third message</span>
+      <div class="c-tooltip-help block3" help-order="help3">
+        <span class="c-tooltip-help__message is-hidden">
+          This is the third message
+            <ul class="c-tooltip-help__controls">
+              <li><button class="c-tooltip-help__controls-prev">Prev</button></li>
+              <li><button>Close</button></li>
+              <li><button class="c-tooltip-help__controls-next">Next</button></li>
+            </ul>
+        </span>
       </div>
-      <div class="c-tooltip-help block3">
-        <span class="c-tooltip-help__message">This is the second message</span>
+      <div class="c-tooltip-help block2" help-order="help2">
+        <span class="c-tooltip-help__message is-hidden">
+          This is the second message
+          <ul class="c-tooltip-help__controls">
+            <li><button class="c-tooltip-help__controls-prev">Prev</button></li>
+            <li><button>Close</button></li>
+            <li><button class="c-tooltip-help__controls-next">Next</button></li>
+          </ul>
+        </span>
       </div>
-      <div class="c-tooltip-help block4">
-        <span class="c-tooltip-help__message">This is the fourth message</span>
+      <div class="c-tooltip-help block4" help-order="help4">
+        <span class="c-tooltip-help__message is-hidden">
+          This is the fourth message This is the fourth message
+          <ul class="c-tooltip-help__controls">
+            <li><button class="c-tooltip-help__controls-prev">Prev</button></li>
+            <li><button>Close</button></li>
+            <li><button class="c-tooltip-help__controls-next">Next</button></li>
+          </ul>
+        </span>
       </div>
 
     </div>

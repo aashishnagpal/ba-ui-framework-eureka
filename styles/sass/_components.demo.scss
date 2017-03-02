@@ -7,11 +7,11 @@
     white-space: nowrap;
     margin-top: 0.5em;
     width: auto;
-    padding: 0.5em;
+    /*padding: 0.5em;*/
     border: 1px solid $generic-gray-color;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 3px;
-    opacity: 0;
+   opacity: 1;
     transition: opacity 0.5s;
   }
 
@@ -25,9 +25,18 @@
   }
 
   &__message-icon:hover ~ .c-tooltip-help__message{
-    opacity: 1;
+    /*opacity: 1;*/
     /*left: 0;
     top: 12em;*/
   }
 
+}
+
+
+.is-visible{
+	opacity: 1;
+}
+
+.is-hidden{
+	opacity: 0!important;
 }
