@@ -6,6 +6,12 @@
     <link rel="stylesheet" href="styles/css/eureka.css">
 </head>
 <body>
+<!-- append the loader div to DOM before loading the script -->
+<div id="loader" class="loader loader-overlay">
+    <div class="loader__load-box"></div>
+</div>
+<script src="javascript/loader.js"></script> <!-- since this script has to work before everything else loads -->
+
 <header id="site-header" class="eureka-header">
     <div class="o-grid o-grid--gutters">
         <div class="o-grid__cell">
@@ -2914,5 +2920,6 @@
 <script src="javascript/collapse.js"></script>
 <script src="javascript/sticky-nav.js"></script>
 <script src="javascript/scrollspy-nav.js"></script>
+
 </body>
 </html>
