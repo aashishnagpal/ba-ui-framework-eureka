@@ -165,6 +165,14 @@
     // could call another function here to do this on close icon click
     //
     // ======================================================
+    var listItemId = e.target.previousSibling.getAttribute('href').slice(1);
+    var bookmarkedSpan = document.getElementById(listItemId);
+    var spanContent = document.createTextNode(bookmarkedSpan.innerHTML);
+    var spanParent = bookmarkedSpan.parentNode;
+
+    spanParent.removeAttribute('data-bookmark');
+    spanParent.replaceChild(spanContent, bookmarkedSpan);
+
 
     // closing animation on list item
     e.target.parentNode.classList.add('c-bookmarklet--remove');
