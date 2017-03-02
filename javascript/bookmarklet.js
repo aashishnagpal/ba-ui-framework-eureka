@@ -48,13 +48,6 @@
 
     if (selection.anchorNode) {
 
-      bookmarkNode = selection.anchorNode.parentNode;
-
-      if (bookmarkNode.dataset.bookmark === undefined) {
-
-        // add data-bookmark atttribute to selected node and set bookmark ID
-        bookmarkNode.setAttribute('data-bookmark', bookmarkId);
-
         // get the range of selected text and surround it with the hightlighting span
         selectedText = selection.getRangeAt(0);
 
@@ -94,6 +87,9 @@
 
           // increment bookmarkId var
           bookmarkId += 1;
+        
+        // show the bookmarklet component
+        bookmarkListComponent.classList.add('c-bookmarklet--is-visible');
 
         } else {
           if (selectedText.startContainer !== selectedText.endContainer) {
@@ -107,11 +103,6 @@
         // convert selection to string
         selectionString = selection.toString();
 
-        // show the bookmarklet component
-        bookmarkListComponent.classList.add('c-bookmarklet--is-visible');
-      } else {
-        console.log('already bookmarked!');
-      }
     }
     // create remove list item listeners
     _buildClearBookmarkListItemListeners();
@@ -150,7 +141,7 @@
     var spanContent = document.createTextNode(bookmarkedSpan.innerHTML);
     var spanParent = bookmarkedSpan.parentNode;
 
-    spanParent.removeAttribute('data-bookmark');
+    // spanParent.removeAttribute('data-bookmark');
     spanParent.replaceChild(spanContent, bookmarkedSpan);
     spanParent.normalize();
 
