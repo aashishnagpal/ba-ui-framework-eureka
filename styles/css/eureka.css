@@ -1229,7 +1229,7 @@ h4, h5, h6 {
   right: 0;
   width: 20em;
   transition: all 0.75s ease;
-  transform: translateX(calc(100% + 2.75em)); }
+  transform: translateX(calc(100% + 3em)); }
 .c-bookmarklet h1 {
   font-size: 1.25em;
   margin-bottom: 0.5em; }
@@ -1239,10 +1239,12 @@ h4, h5, h6 {
   transform: translateX(calc(87% + 2.75em)); }
 .c-bookmarklet--is-visible:hover {
   transform: translateX(5%); }
-.c-bookmarklet .c-btn {
+.c-bookmarklet .c-bookmarklet__clear-all {
   margin: 0;
   width: 17em;
   text-align: center; }
+.c-bookmarklet .c-bookmarklet__clear-all:hover {
+  background-color: #e74c3c; }
 
 .c-bookmarklet__teaser {
   background-color: #f3f3f3;

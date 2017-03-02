@@ -6,6 +6,7 @@
   var bookmarkListComponent = document.querySelector('.c-bookmarklet');
   var bookmarkList = bookmarkListComponent.querySelector('.c-bookmaklet__bookmark-list');
   var highlightColor = bookmarkListComponent.dataset.highlightColor;
+  var clearAllBtn = bookmarkListComponent.querySelector('.c-bookmarklet__clear-all');
   var keysPressed = [];
   var bookmarkId = 0;
 
@@ -15,11 +16,6 @@
     // keyboard shortcut Shift(16) + Control(17) + M(77)
     if (keysPressed[16] && keysPressed[17] && keysPressed[77]) {
       _bookmarkSelection();
-    }
-
-    // keyboard shortcut Shift(16) + Control(17) + X(88)
-    if (keysPressed[16] && keysPressed[17] && keysPressed[88]) {
-      _clearBookmark();
     }
 
   }
@@ -40,34 +36,33 @@
     var closeIcon;
 
     selection = window.getSelection();
-    // console.log(selection);
 
     // create span node for text hightlighting
     highlightNode = document.createElement('span');
     highlightNode.className = 'c-bookmarklet__highlight-text';
+
     // sets text highlight color if specified in data-highlight-color attribute - defaults to yellow;
     if (highlightColor) {
       highlightNode.style = 'background-color: ' + highlightColor;
     }
-    console.log(highlightNode);
 
     if (selection.anchorNode) {
 
       bookmarkNode = selection.anchorNode.parentNode;
 
       if (bookmarkNode.dataset.bookmark === undefined) {
+
         // add data-bookmark atttribute to selected node and set bookmark ID
         bookmarkNode.setAttribute('data-bookmark', bookmarkId);
-        // bookmarkNode.style.color = 'red';
-        // bookmarkId += 1;
 
         // get the range of selected text and surround it with the hightlighting span
         selectedText = selection.getRangeAt(0);
-        console.log(selectedText);
 
         if (selectedText.startContainer === selectedText.endContainer && selectedText.startOffset !== selectedText.endOffset) {
+
           // surround selected text with hightlighting span
           selectedText.surroundContents(highlightNode);
+
           // add unique id to highlighted span
           highlightNode.setAttribute('id', 'bookmarklet_' + bookmarkId);
 
@@ -81,21 +76,25 @@
 
           // create anchor tag for widget li
           bookmarkAnchorLink = document.createElement('a');
+
           // set anchor link to bookmarklet ID
           bookmarkAnchorLink.setAttribute('href', '#' + 'bookmarklet_' + bookmarkId);
+
           // copy over the highlighted text
           bookmarkAnchorLink.innerHTML = highlightNode.innerHTML;
+
           // append anchor element and text to widget li
           listNode.appendChild(bookmarkAnchorLink);
+
           // append close icon to listNode
           listNode.appendChild(closeIcon);
+
           // append li to widget ol
           bookmarkList.appendChild(listNode);
 
-
+          // increment bookmarkId var
           bookmarkId += 1;
 
-          console.log(selectedText.toString());
         } else {
           if (selectedText.startContainer !== selectedText.endContainer) {
             console.log("Don't cross the streams (nodes have been split)");
@@ -114,75 +113,71 @@
         console.log('already bookmarked!');
       }
     }
-
     // create remove list item listeners
     _buildClearBookmarkListItemListeners();
-  }
 
-  // ======================================
-  // TO DO
-  // -need code to remove bookmarks from nodes
-  // -need code to remove all bookmarks from nodes
-  //
-  // =======================================
-
-
-  function _clearBookmark() {
-    var selection;
-    var bookmarkNode;
-
-    selection = window.getSelection();
-    bookmarkNode = selection.anchorNode.parentNode;
-
-    if (bookmarkNode && bookmarkNode.dataset.bookmark) {
-      bookmarkNode.removeAttribute('data-bookmark');
-      bookmarkNode.style.color = 'green';
-      console.log('bookmark removed!');
-    }
-  }
-
+  } // end of _bookmarkSelection
 
   function _buildClearBookmarkListItemListeners() {
     var closeIcons = document.querySelectorAll('.c-bookmarklet__close-icon');
-    console.log(closeIcons);
     var numOfListItems = closeIcons.length;
     var i;
-    // add event listeners
+
+    // add event listeners to close icons
     for (i = 0; i < numOfListItems; i++) {
       closeIcons[i].addEventListener('click', _removeListItem);
     }
 
-  }
+    // add event listener to clear all button
+    clearAllBtn.addEventListener('click', _clearAllBookmarks);
+
+  } // end of _buildClearBookmarkListItemListeners
 
   function _removeListItem(e) {
+
     e.preventDefault();
 
-    // ======================================================
-    // TO DO:
-    // remove span from bookmarked text
-    // remove data-bookmark attribute from parentNode of text
-    //
-    // could call another function here to do this on close icon click
-    //
-    // ======================================================
-    var listItemId = e.target.previousSibling.getAttribute('href').slice(1);
+    var listItem = e.target;
+
+    _clearListItemAndNormalizeNode(listItem);
+
+  } // end of _removeListItem function
+
+  function _clearListItemAndNormalizeNode(listItem) {
+
+    var listItemId = listItem.previousSibling.getAttribute('href').slice(1);
     var bookmarkedSpan = document.getElementById(listItemId);
     var spanContent = document.createTextNode(bookmarkedSpan.innerHTML);
     var spanParent = bookmarkedSpan.parentNode;
 
     spanParent.removeAttribute('data-bookmark');
     spanParent.replaceChild(spanContent, bookmarkedSpan);
-
+    spanParent.normalize();
 
     // closing animation on list item
-    e.target.parentNode.classList.add('c-bookmarklet--remove');
+    listItem.parentNode.classList.add('c-bookmarklet--remove');
+
     // after animation runs remove alert from DOM
-    e.target.parentNode.addEventListener('animationend', function() {
-      e.target.parentNode.remove();
+    listItem.parentNode.addEventListener('animationend', function() {
+
+      listItem.parentNode.remove();
+      bookmarkList.normalize();
+
+      // hide bookmark list if no list items are present
+      if (bookmarkList.children.length === 0) {
+        bookmarkListComponent.classList.remove('c-bookmarklet--is-visible');
+      }
+
     });
-  }
+  } // end of _clearListItemAndNormalizeNode
 
-
+  function _clearAllBookmarks() {
+    var closeIcons = Array.prototype.slice.call(document.querySelectorAll('.c-bookmarklet__close-icon'));
+    console.log('all closeIcons at time of clear all: ', closeIcons);
+    closeIcons.forEach(function(listItem){
+      _clearListItemAndNormalizeNode(listItem);
+    });
+  } // end of _clearAllBookmarks
 
 
 })();
