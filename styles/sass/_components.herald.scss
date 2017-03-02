@@ -62,6 +62,7 @@ h3 {
     z-index: 2;
   }
   &__chip {
+    cursor: pointer;
     left: 0em;
     margin-left: 0; // I had to add this to override Jing's margin-left
     top: -.5em;
@@ -81,27 +82,28 @@ h3 {
   }
 }
 
-.herald__chip:hover + .herald__scroll {
+
+.herald__scroll.herald-announce {
   animation: expand 1.2s ease-in-out forwards;
 }
 
-.herald__chip:hover + .herald__scroll > .herald__indicator {
+.herald__scroll.herald-announce > .herald__indicator {
   animation: indicate 1.2s ease-in-out forwards;
 }
 
-.herald__chip:hover + .herald__scroll > .herald__furled-scroll {
+.herald__scroll.herald-announce > .herald__furled-scroll {
   animation: unfurl 1s .8s ease-in-out forwards;
 }
 
-.herald__chip:hover + .herald__scroll > .herald__furled-scroll > .herald__message {
+.herald__scroll.herald-announce > .herald__furled-scroll > .herald__message {
   animation: dropMessage 1s 2s ease-in-out forwards;
 }
 
-.herald__chip:hover + .herald__scroll > .herald__scroll-img {
+.herald__scroll.herald-announce > .herald__scroll-img {
   animation: dropImg 1s 3s ease-in-out forwards;
 }
 
-.herald__chip:hover + .herald__scroll > .herald__scroll-img > .herald__ribbon {
+.herald__scroll.herald-announce > .herald__scroll-img > .herald__ribbon {
   animation: dropRibbon 1.5s 3.5s cubic-bezier(0, 0, .8, 1.0) forwards;
 }
 
