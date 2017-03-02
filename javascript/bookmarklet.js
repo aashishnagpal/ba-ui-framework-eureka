@@ -31,9 +31,11 @@
     var selectionString;
     var selectedText;
     var highlightNode;
+    var highlightNodeQueryString;
     var bookmarkAnchorLink;
     var listNode;
     var closeIcon;
+    var googleSearchBtn;
 
     selection = window.getSelection();
 
@@ -67,6 +69,16 @@
           closeIcon = document.createElement('i');
           closeIcon.className = 'fa fa-times c-bookmarklet__close-icon';
 
+          highlightNodeQueryString = encodeURIComponent(highlightNode.innerHTML);
+          highlightNodeQueryString = highlightNodeQueryString.replace(/%20/g, '+');
+
+          // create google search button
+          googleSearchBtn = document.createElement('a');
+          googleSearchBtn.classList.add('c-bookmarklet__google-button');
+          googleSearchBtn.setAttribute('target', '_blank');
+          googleSearchBtn.setAttribute('href', 'http://www.google.com/search?q=' + highlightNodeQueryString);
+          googleSearchBtn.innerHTML = 'Google this bookmark <i class="fa fa-external-link" aria-hidden="true"></i>';
+
           // create anchor tag for widget li
           bookmarkAnchorLink = document.createElement('a');
 
@@ -81,6 +93,9 @@
 
           // append close icon to listNode
           listNode.appendChild(closeIcon);
+
+          // append google search link
+          listNode.appendChild(googleSearchBtn);
 
           // append li to widget ol
           bookmarkList.appendChild(listNode);
@@ -164,7 +179,7 @@
 
   function _clearAllBookmarks() {
     var closeIcons = Array.prototype.slice.call(document.querySelectorAll('.c-bookmarklet__close-icon'));
-    console.log('all closeIcons at time of clear all: ', closeIcons);
+
     closeIcons.forEach(function(listItem){
       _clearListItemAndNormalizeNode(listItem);
     });
