@@ -23,9 +23,17 @@
     }
 
     var block4 = document.querySelector('.block4');
-    var block4Tooltip = block4.querySelector('.c-tooltip-help__message-icon');
+    /*var block4Tooltip = block4.querySelector('.c-tooltip-help__message-icon');*/
     var block4Message = block4.querySelector('.c-tooltip-help__message');
-    var leftOffSet = block4Message.offsetLeft;
+    var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
+    var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
+    var d = window.scrollY;
+
+    var rect = block4Message.getBoundingClientRect();
+
+    console.log(rect);
+
+    /*var leftOffSet = block4Message.offsetLeft;
     var screenwidth = block4Message.clientWidth;
     var scrollX;
     block4Tooltip.addEventListener('mouseover', function(){
@@ -34,12 +42,12 @@
             console.log('wider than screen');
         }
         console.log(leftOffSet);
-    });
+    });*/
 
 
 
-    console.log(width);
-    console.log(height);
+  /*  console.log(width);
+    console.log(height);*/
 
 
 })();
