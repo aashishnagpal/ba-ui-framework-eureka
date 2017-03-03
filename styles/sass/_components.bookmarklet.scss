@@ -1,4 +1,6 @@
 $close-icon-hover-color: #e74c3c;
+$warning-color: #e74c3c;
+$caution-color: #f7ca18;
 .c-bookmarklet {
   display: flex;
   justify-content: flex-start;
@@ -121,6 +123,67 @@ $close-icon-hover-color: #e74c3c;
   animation: c-bookmarklet--fade-out 0.5s cubic-bezier(0.54, -0.21, 0.37, 0.92);
 }
 
+.c-bookmarklet__alert {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1.5em 1em 0.5em 1em;
+  border-radius: 0.2em;
+  position: fixed;
+  top: 25%;
+  left: 50%;
+  z-index: 50;
+  text-align: center;
+  cursor: pointer;
+  transform: translate(-50%, 0);
+  animation: c-bookmarklet__alert--pop-in 0.4s forwards ease-in-out;
+  color: $generic-white-color;
+  &--warning {
+    @extend .c-bookmarklet__alert;
+    background-color: $warning-color;
+    & i {
+      color: lighten($warning-color, 15);
+    }
+  }
+  &--caution {
+    @extend .c-bookmarklet__alert;
+    background-color: $caution-color;
+    & i {
+      color: darken($caution-color, 15);
+    }
+  }
+  &--is-dismissed {
+    animation: c-bookmarklet__alert--pop-out 0.4s forwards ease-in-out;
+  }
+  & p {
+    margin-top: 0.5em;
+    font-size: 1.1em
+  }
+}
+
+.c-bookmarklet__alert-background {
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  animation: c-bookmarket--fade-in-bg 0.4s forwards ease;
+  &--caution {
+    @extend .c-bookmarklet__alert-background;
+    background-color: transparentize($generic-black-color, 0.25);
+  }
+  &--warning {
+    @extend .c-bookmarklet__alert-background;
+    background-color: transparentize($generic-black-color, 0.25);
+  }
+  &--is-dismissed {
+    animation: c-bookmarket--fade-out-bg 0.4s forwards ease;
+  }
+}
+
 @keyframes c-bookmarklet--fade-out {
   0% {
     transform: translateX(0);
@@ -129,5 +192,45 @@ $close-icon-hover-color: #e74c3c;
   100% {
     transform: translateX(100%);
     opacity: 0;
+  }
+}
+
+@keyframes c-bookmarklet__alert--pop-in {
+  0% {
+    top: 30%;
+    opacity: 0;
+  }
+  100% {
+    top: 25%;
+    opacity: 1;
+  }
+}
+
+@keyframes c-bookmarklet__alert--pop-out {
+  0% {
+    top: 25%;
+    opacity: 1;
+  }
+  100% {
+    top: 20%;
+    opacity: 0;
+  }
+}
+
+@keyframes c-bookmarket--fade-in-bg {
+  0% {
+    opacity: 0
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes c-bookmarket--fade-out-bg {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0
   }
 }
