@@ -3,7 +3,7 @@
     /* Get all demo items from page */
     var demoItems = document.querySelectorAll('.c-tooltip-help');
     var demoItemsArray = [];
-    /* Setup indexes for tracking */
+
     var prevIndex = -1;
     var nextIndex = -1;
 
@@ -29,10 +29,12 @@
     });
 
 
+
     var i;
     var numDemos = demoItems.length;
 
     /* Get dimensions of screen  */
+
     var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
     var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
@@ -89,7 +91,9 @@
         })();
     }
 
+
     /*Function used to find and ancestor node with a particular class */
+
     function findAncestor (el, cls) {
         while ((el = el.parentElement) && !el.classList.contains(cls));
         return el;
@@ -118,5 +122,4 @@
 
         }
     }
-
 })();
