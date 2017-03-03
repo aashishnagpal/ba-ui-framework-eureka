@@ -37,7 +37,7 @@
     var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
     for(i=0; i < numDemos; i++){
-        demoItems[i].innerHTML = '<span class="c-tooltip-help__message-icon"><i class="fa fa-question-circle-o" aria-hidden="true"></i></span>' + demoItems[i].innerHTML;
+        demoItems[i].innerHTML = '<span class="c-tooltip-help__message-icon"><i class="fa fa-question-circle-o" title="Click for tip." aria-hidden="true"></i></span>' + demoItems[i].innerHTML;
 
         /* Ensure that help message shows within the bounds of the screen */
 
