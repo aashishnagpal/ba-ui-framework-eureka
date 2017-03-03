@@ -16,11 +16,11 @@ h3:last-of-type {
 }
 
 .c-form-checkbox {
-  margin-bottom: .1em;
+  margin-bottom: .2em;
 }
 
 [type="checkbox"] + label:before {
-  border: .0625em solid $secondary-dark-color;
+  border: .0625em solid $secondary-color;
   border-radius: .1em;
   content: "";
   display: inline-block;
@@ -31,9 +31,13 @@ h3:last-of-type {
   width: 1em;
 }
 
+[type="checkbox"]:focus + label:before {
+  box-shadow: 0 0 0 .05em $primary-color;
+}
+
 
 [type="checkbox"]:checked + label:after {
-  color: $primary-dark-color;
+  color: $primary-color;
   content: "\2714";
   left: .1em;
   position: absolute;
