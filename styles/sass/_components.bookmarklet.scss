@@ -144,6 +144,7 @@ $caution-color: #f7ca18;
     background-color: $warning-color;
     & i {
       color: lighten($warning-color, 15);
+      width: 100%
     }
   }
   &--caution {
@@ -151,6 +152,7 @@ $caution-color: #f7ca18;
     background-color: $caution-color;
     & i {
       color: darken($caution-color, 15);
+      width: 100%;
     }
   }
   &--is-dismissed {
@@ -158,7 +160,8 @@ $caution-color: #f7ca18;
   }
   & p {
     margin-top: 0.5em;
-    font-size: 1.1em
+    font-size: 1.1em;
+    width: 100%;
   }
 }
 

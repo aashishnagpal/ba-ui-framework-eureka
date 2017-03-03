@@ -119,7 +119,7 @@
           var warning = document.createElement('div');
           warning.classList.add('c-bookmarklet__alert--warning');
           // add in html and message
-          warning.innerHTML = '<i class="fa fa-exclamation-triangle fa-2x" aria-hidden="true"></i><p><strong>D\'oh!</strong> Your selection can\'t be a bookmarked.</p><small><em>(Keep your selection within a single HTML tag)</em></small>' + '<span class="c-alert__close-alert">' + '<i class="fa fa-times"></i>' + '</span>';
+          warning.innerHTML = '<i class="fa fa-exclamation-triangle fa-2x" aria-hidden="true"></i><p><strong>D\'oh!</strong> Your selection can\'t be a bookmarked.</p><p><small><em>(Keep your selection within a single HTML tag)</em></small></p>' + '<span class="c-alert__close-alert">' + '<i class="fa fa-times"></i>' + '</span>';
           // add event listener for dismissing of alert
           alertNode.addEventListener('click', _dismissAlert(warning, background), false);
           // append alert div and background to document
