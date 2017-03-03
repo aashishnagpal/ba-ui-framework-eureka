@@ -3,6 +3,7 @@
     /* Get all demo items from page */
     var demoItems = document.querySelectorAll('.c-tooltip-help');
     var demoItemsArray = [];
+    /* Setup indexes for tracking */
     var prevIndex = -1;
     var nextIndex = -1;
 
@@ -27,12 +28,11 @@
         }
     });
 
-    console.log(demoItemsArray);
 
     var i;
     var numDemos = demoItems.length;
-    /*var currentIndex = -1;*/
 
+    /* Get dimensions of screen  */
     var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
     var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
@@ -61,14 +61,10 @@
             block.addEventListener('click',function(){
                 message.classList.toggle('is-hidden');
             });
-
-            /* Update current index to track which message is shown */
-
-
         }());
     }
 
-    /* handle controls */
+    /* handle prev and next controls */
 
     var prevButtonList = document.querySelectorAll('.c-tooltip-help__controls-prev');
     var nextButtonList = document.querySelectorAll('.c-tooltip-help__controls-next');
@@ -93,6 +89,7 @@
         })();
     }
 
+    /*Function used to find and ancestor node with a particular class */
     function findAncestor (el, cls) {
         while ((el = el.parentElement) && !el.classList.contains(cls));
         return el;
@@ -113,7 +110,6 @@
     /* Show next */
     function showNext(node){
         nextIndex = demoItemsArray.indexOf(node);
-        console.log(nextIndex);
         if(nextIndex > -1 && nextIndex < demoItemsArray.length - 1){
             var message = node.querySelector('.c-tooltip-help__message');
             message.classList.remove('is-hidden');
@@ -122,6 +118,5 @@
 
         }
     }
-
 
 })();
