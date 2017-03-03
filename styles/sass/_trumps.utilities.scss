@@ -66,6 +66,10 @@
   background-color: $body-bg-color;
 }
 
+.u-bg-disabled{ //make container background the website body's color
+	background-color: $secondary-dark-color;
+}
+
 .pull-right{
   float:right;
 }
