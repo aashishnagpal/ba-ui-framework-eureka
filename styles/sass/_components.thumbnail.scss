@@ -1,3 +1,6 @@
+.c-thumbnails-row--desc {
+  align-items: flex-end;
+}
 .c-thumbnail {
   border: 0.5em solid $generic-gray-color;
   border-radius: 1em;
@@ -5,9 +8,10 @@
   margin: 1em .5em;
   padding: 1em;
   &__desc {
-    width: 100%;
+    display: table;
   }
-  &-detail {
-    width: 15.625em;
+  &__p {
+    display: table-caption;
+    caption-side: bottom;
   }
 }
