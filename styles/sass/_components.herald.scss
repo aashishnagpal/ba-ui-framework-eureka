@@ -1,7 +1,7 @@
 /* To calculate $messageHeight in em units, take message height / global font size
    To expand the herald component to message height, set the value of expandHerald to messageHeight or
    to activate scroll on the herald component, set the herald block to be shorter than the messageHeight */
-$messageHeight: 20.9375em;
+$messageHeight: 28.6875em;
 $expandHerald: 12.5em;
 
 h3 {
@@ -21,7 +21,6 @@ h3 {
   &__scroll {
     background-color: $generic-white-color;
     display: inline-block;
-    overflow: scroll;
     overflow-x: hidden;
     padding-top: 3em;
     width: 21em;
@@ -132,6 +131,7 @@ h3 {
   100% {
     opacity: 1;
     padding-top: $expandHerald;
+    overflow: scroll;
   }
 }
 
