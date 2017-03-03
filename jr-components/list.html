@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Eureka CSS UI Framework</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../styles/css/eureka.css">
+</head>
+<body>
+  <div class="list-component">
+    <!-- Different types of lists -->
+    <!-- Ordered -->
+    <div class="list-component--ol">
+      <h3>Ordered List</h3>
+      <!-- Basic ordered list -->
+      <div class="list-component__item">
+        <h4>Basic Ordered List</h4>
+        <ol class="c-list c-list--ol">
+          <li class="c-list__item c-list--ol__item">Course 1</li>
+          <li class="c-list__item c-list--ol__item">Course 2
+            <ol class="c-list c-list--ol c-list__sublist">
+              <li class="c-list__item c-list--ol__item">Chapter 1</li>
+              <li class="c-list__item c-list--ol__item">Chapter 2</li>
+              <li class="c-list__item c-list--ol__item">Chapter 3
+                <ol class="c-list c-list--ol c-list__sublist">
+                  <li class="c-list__item c-list--ol__item">Section 1</li>
+                  <li class="c-list__item c-list--ol__item">Section 2</li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+          <li class="c-list__item c-list--ol__item">Course 3</li>
+        </ol>
+      </div>
+
+      <!-- Basic ordered list with link -->
+      <div class="list-component__item">
+        <h4>Basic Ordered List with Link</h4>
+        <ol class="c-list c-list--ol">
+          <li class="c-list__item c-list--ol__item">
+            <a href="#?">Course 1</a>
+          </li>
+          <li class="c-list__item c-list--ol__item">
+            <a href="#?">Course 2</a>
+            <ol class="c-list c-list--ol c-list__sublist">
+              <li class="c-list__item c-list--ol__item">
+                <a href="#?">Chapter 1</a>
+              </li>
+              <li class="c-list__item c-list--ol__item">
+                <a href="#?">Chapter 2</a>
+              </li>
+              <li class="c-list__item c-list--ol__item">
+                <a href="#?">Chapter 3</a>
+                <ol class="c-list c-list--ol c-list__sublist">
+                  <li class="c-list__item c-list--ol__item">
+                    <a href="#?">Section 1</a>
+                  </li>
+                  <li class="c-list__item c-list--ol__item">
+                    <a href="#?">Section 2</a>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+          <li class="c-list__item c-list--ol__item">
+            <a href="#?">Course 3</a>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Unordered -->
+    <div class="list-component--ul">
+      <h3>Unordered List</h3>
+      <!-- Basic unordered list -->
+      <div class="list-component__item">
+        <h4>Basic Unordered List</h4>
+        <ul class="c-list c-list--ul">
+          <li class="c-list__item c-list--ul__item">Course 1</li>
+          <li class="c-list__item c-list--ul__item">Course 2
+            <ul class="c-list c-list--ul c-list__sublist">
+              <li class="c-list__item c-list--ul__item">
+                <a href="#?">Chapter 1 - link</a>
+              </li>
+              <li class="c-list__item c-list--ul__item">Chapter 2</li>
+              <li class="c-list__item c-list--ul__item">Chapter 3
+                <ul class="c-list c-list--ul c-list__sublist">
+                  <li class="c-list__item c-list--ul__item">Section 1</li>
+                  <li class="c-list__item c-list--ul__item">
+                    <a href="#?">Section 2 - link</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="c-list__item c-list--ul__item">
+            <a href="#?">Course 3</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- unordered list with bullets -->
+      <div class="list-component__item">
+        <h4>Bulleted Unordered List</h4>
+        <ul class="c-list c-list--ul-bt">
+          <li class="c-list__item c-list--ul__item">Course 1</li>
+          <li class="c-list__item c-list--ul__item">Course 2
+            <ul class="c-list c-list__sublist c-list--ul-bt__sublist">
+              <li class="c-list__item c-list--ul__item">
+                <a href="#?">Chapter 1 - link</a>
+              </li>
+              <li class="c-list__item c-list--ul__item">Chapter 2</li>
+              <li class="c-list__item c-list--ul__item">Chapter 3
+                <ul class="c-list c-list__sublist c-list--ul-bt__sublist">
+                  <li class="c-list__item c-list--ul__item">Section 1</li>
+                  <li class="c-list__item c-list--ul__item">
+                    <a href="#?">Section 2 - link</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="c-list__item c-list--ul__item">Course 3</li>
+        </ul>
+      </div>
+
+      <!-- unordered list with icon -->
+      <div class="list-component__item">
+        <h4>Unordered List - Icon</h4>
+        <ul class="c-list c-list--ul">
+          <li class="c-list__item c-list--ul__item">
+            <i class="fa fa-user c-list__icon" aria-hidden="true"></i>
+            John Doe
+          </li>
+          <li class="c-list__item c-list--ul__item">
+            <i class="fa fa-map-marker c-list__icon" aria-hidden="true"></i>
+            New York, NY
+          </li>
+          <li class="c-list__item c-list--ul__item">
+            <i class="fa fa-envelope c-list__icon" aria-hidden="true"></i>
+            <a href="#?">john.doe@example.com</a>
+          </li>
+          <li class="c-list__item c-list--ul__item">
+            <i class="fa fa-globe c-list__icon" aria-hidden="true"></i>
+            <a href="#?">johndoe.com</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- unordered list with image -->
+      <div class="list-component__item">
+        <h4>Unordered List - Image</h4>
+        <ul class="c-list c-list--ul">
+          <li class="c-list__item c-list__item--media">
+            <img src="../images/placeimg_100_100_people%20(1).jpg" class="c-list__img">
+            John
+          </li>
+          <li class="c-list__item c-list__item--media">
+            <img src="../images/placeimg_100_100_people.jpg" class="c-list__img">
+            Amy
+          </li>
+          <li class="c-list__item c-list__item--media">
+            <img src="../images/placeimg_100_100_people%20(1).jpg" class="c-list__img">
+            <a href="#?">Chris</a>
+          </li>
+          <li class="c-list__item c-list__item--media">
+            <img src="../images/placeimg_100_100_people.jpg" class="c-list__img">
+            Daniel
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="list-component--ul">
+      <h3>Horizontal List</h3>
+      <div class="list-component__item">
+        <h4>Horizontal List</h4>
+        <ul class="c-list c-list--ul c-list--hz">
+          <li class="c-list__item c-list__item--media c-list__item--hz">
+            <img src="../images/placeimg_100_100_people%20(1).jpg" class="c-list__img">
+            John
+          </li>
+          <li class="c-list__item c-list__item--media c-list__item--hz">
+            <img src="../images/placeimg_100_100_people.jpg" class="c-list__img">
+            Amy
+          </li>
+          <li class="c-list__item c-list__item--media c-list__item--hz">
+            <img src="../images/placeimg_100_100_people%20(1).jpg" class="c-list__img">
+            <a href="#?">Chris</a>
+          </li>
+          <li class="c-list__item c-list__item--media c-list__item--hz">
+            <img src="../images/placeimg_100_100_people.jpg" class="c-list__img">
+            Daniel
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src=""></script>
+</body>
+</html>
