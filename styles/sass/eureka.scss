@@ -4,7 +4,6 @@
 
 @import "settings.global";
 @import "settings.colors";
-//@import "settings.grid";
 @import "tools.mixins";
 @import "generic.normalize";
 @import "generic.reset";
@@ -13,7 +12,6 @@
 @import "elements.links";
 @import "elements.lists";
 @import "elements.headers";
-//@import "objects.wrappers";
 @import "objects.grid";
 @import "components.alert";
 @import "components.carousel";
@@ -47,6 +45,9 @@
 @import "components.herald";
 //@import "trumps.buttons";
 //@import "trumps.links";
+@import "components.gallery";
+@import "components.loader";
+
 @import "footer";
 @import "header";
 @import "body";
