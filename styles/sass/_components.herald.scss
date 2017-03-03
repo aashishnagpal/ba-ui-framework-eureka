@@ -1,3 +1,9 @@
+/* To calculate $messageHeight in em units, take message height / global font size
+   To expand the herald component to message height, set the value of expandHerald to messageHeight or
+   to activate scroll on the herald component, set the herald block to be shorter than the messageHeight */
+$messageHeight: 20.9375em;
+$expandHerald: 15em;
+
 h3 {
   margin-bottom: 2em;
 }
@@ -13,10 +19,9 @@ h3 {
     position: relative;
   }
   &__scroll {
-    // padding 200px x 320px width
     background-color: $generic-white-color;
     display: inline-block;
-    overflow-y: hidden;
+    overflow: scroll;
     padding-top: 3em;
     width: 21em;
   }
@@ -40,15 +45,15 @@ h3 {
     right: 0;
   }
   &__message {
-    padding: 0em 1em 1em;
-    transform: translateY(-13em); /* Modify with JS */
-    width: 10em; /* Modify here by dev */
+    padding: 1em;
+    transform: translateY(-$messageHeight);
+    width: 10em;
     z-index: -1;
   }
   &__scroll-img {
-    background-image: url("https://unsplash.it/430");
+    background-image: url("https://s-media-cache-ak0.pinimg.com/736x/97/83/30/9783304b6a8fa54b61b121d41473ae13.jpg");
     @include background-img;
-    transform: translateY(-13em) translateX(10em);
+    transform: translateY(-$expandHerald - 1) translateX(10em);
     width: 10em;
     top: 0;
   }
@@ -57,7 +62,7 @@ h3 {
     border-style: solid;
     border-width: 0 1em .5em 1em;
     right: 0;
-    transform: translateY(-25em);
+    transform: translateY(-$expandHerald*2);
     width: 2em;
     z-index: 2;
   }
@@ -75,13 +80,12 @@ h3 {
     position: absolute;
   }
   &__ribbon, &__scroll-img {
-    padding-top: 12.5em;
+    padding-top: $expandHerald;
   }
   &__indicator, &__furled-scroll, &__message {
     background-color: transparent;
   }
 }
-
 
 .herald__scroll.herald-announce {
   animation: expand 1.2s ease-in-out forwards;
@@ -109,14 +113,14 @@ h3 {
 
 @keyframes unfurl {
   0% {
-    height: 3em; /* Modify here by dev */
+    height: 3em;
     opacity: 1;
-    width: 3em; /* Modify here by dev */
+    width: 3em;
   }
   100% {
     height: .1em;
     opacity: 1;
-    width: 22em; /* Modify here by dev */
+    width: 22em;
   }
 }
 
@@ -127,7 +131,7 @@ h3 {
   }
   100% {
     opacity: 1;
-    padding-top: 13.5em;
+    padding-top: $expandHerald;
   }
 }
 
@@ -144,7 +148,7 @@ h3 {
 
 @keyframes dropMessage {
   0% {
-    transform: translateY(-13em); /* Modify with JS */
+    transform: translateY(-$messageHeight);
   }
   100% {
     transform: translateY(0em);
@@ -153,7 +157,7 @@ h3 {
 
 @keyframes dropImg {
   0% {
-    transform: translateY(-13em) translateX(10em); /* Modify with JS */
+    transform: translateY(-$expandHerald) translateX(10em);
   }
   100% {
     transform: translateY(0em) translateX(10em);
@@ -162,27 +166,9 @@ h3 {
 
 @keyframes dropRibbon {
   0% {
-    transform: translateY(-25em); /* Modify with JS */
-  }
-  70% {
-    transform: translateY(-12.5em);
-  }
-  80% {
-    transform: translateY(-14em);
-  }
-  90% {
-    transform: translateY(-12.5em);
-  }
-  92% {
-    transform: translateY(-13em);
+    transform: translateY(-$expandHerald*2);
   }
   100% {
-    transform: translateY(-12.5em);
+    transform: translateY(-$expandHerald - 1);
   }
 }
-
-
-
-// unfurls and then a div drops down from beneath the line
-// use js to calculate height for padding top on scroll
-// Determine the width of your message and scroll when it unfurls
