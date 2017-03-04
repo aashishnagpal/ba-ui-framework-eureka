@@ -2,6 +2,8 @@
  * Created by Aashish on 3/1/2017.
  */
 var loader = (function () {
+  'use strict';
+
   var show = function () {
     var loaderElement = document.getElementById('loader') || document.querySelector('.loader');
 
