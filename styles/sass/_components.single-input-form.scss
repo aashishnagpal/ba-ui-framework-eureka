@@ -9,32 +9,11 @@
   font-size: 1em;
   display: block;
   position: relative;
-  width: 25em;
-  height: 7em;
-  //border: 1px solid red;
-}
+  width: 30em;
+  height: 5em;
+  border: 1px solid red;
 
-.c-sif__input-area {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: nowrap;
-  //width: 20em;
-  height: 3em;
-  padding-left: 3.5em;
-  padding-right: 3.5em;
-  border: 2px solid $secondary-light-color;
-  border-radius: 1.5em;
-  z-index: 0;
-
-  //display: none;
-  visibility: hidden;
-  &:first-of-type {
-    visibility: visible;
-  }
+  //overflow: hidden;
 
   label,
   input,
@@ -44,13 +23,44 @@
   }
 }
 
+.c-sif__input-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  width: 18em;
+  height: 3em;
+  padding-left: 3.5em;
+  padding-right: 3.5em;
+  background-color: darken($generic-gray-color, 4%);
+  //border: 2px solid $secondary-light-color;
+  border-radius: 1.5em;
+  z-index: 0;
+  //animation-duration: 0.7s;
+  //animation-timing-function: ease-out;
+  //animation-fill-mode: forwards;
+
+  //display: none;
+  visibility: hidden;
+  &:first-of-type {
+    visibility: visible;
+  }
+
+
+}
+
 .c-sif__input {
   border: 0;
   line-height: 2.4em;
   font-size: 1.1em;
   margin-left: 0;
   background-color: transparent;
-  width: 12em;
+  width: 10em;
 }
 
 .c-sif__label,
@@ -65,18 +75,46 @@
   width: 3em;
   margin: 0;
   border-radius: 50%;
-  background-color: $primary-color;
+
   color: $generic-white-color;
 }
 
 .c-sif__label {
-  left: -1px;
-  animation: moveToRight 0.7s ease-out both;
+  left: 0;
+  //animation: moveToRight 0.7s ease-out both;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
   z-index: 5;
+
+  &:first-of-type {
+    background-color: $primary-color;
+  }
+
+  &:nth-of-type(2) {
+    background-color: darken($primary-color, 10%);
+  }
 }
 
 .c-sif__btn {
   right: -1px;
+  cursor: pointer;
+
+  &:first-of-type {
+    background-color: lighten($primary-color, 10%);
+
+    :hover {
+      //background-color: $primary-color;
+    }
+  }
+
+  &:nth-of-type(2) {
+    background-color: $primary-color;
+
+    :hover {
+      //background-color: darken($primary-color, 10%);
+    }
+  }
 }
 
 
@@ -88,13 +126,19 @@
 @keyframes moveToRight {
   from {
     right: 100%;
+    //opacity: 1;
     //transform: rotate(0deg);
   }
   to {
     left: auto;
     right: 0;
+    //opacity: 0;
     //transform: rotate(720deg);
   }
+}
+
+@keyframes fadeOutRight {
+
 }
 
 .c-sif-hidden {
