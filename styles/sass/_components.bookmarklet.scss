@@ -137,7 +137,7 @@ $caution-color: #f7ca18;
   text-align: center;
   cursor: pointer;
   transform: translate(-50%, 0);
-  animation: c-bookmarklet__alert--pop-in 0.4s forwards ease-in-out;
+  animation: c-bookmarklet__alert--pop-in 0.35s forwards ease-in-out;
   color: $generic-white-color;
   &--warning {
     @extend .c-bookmarklet__alert;
@@ -156,7 +156,7 @@ $caution-color: #f7ca18;
     }
   }
   &--is-dismissed {
-    animation: c-bookmarklet__alert--pop-out 0.4s forwards ease-in-out;
+    animation: c-bookmarklet__alert--pop-out 0.35s forwards cubic-bezier(0.7,-0.43, 0.34, 0.76);
   }
   & p {
     margin-top: 0.5em;
@@ -173,7 +173,7 @@ $caution-color: #f7ca18;
   top: 0;
   left: 0;
   cursor: pointer;
-  animation: c-bookmarket--fade-in-bg 0.4s forwards ease;
+  animation: c-bookmarket--fade-in-bg 0.35s forwards ease;
   &--caution {
     @extend .c-bookmarklet__alert-background;
     background-color: transparentize($generic-black-color, 0.25);
@@ -183,7 +183,7 @@ $caution-color: #f7ca18;
     background-color: transparentize($generic-black-color, 0.25);
   }
   &--is-dismissed {
-    animation: c-bookmarket--fade-out-bg 0.4s forwards ease;
+    animation: c-bookmarket--fade-out-bg 0.2s forwards ease;
   }
 }
 
@@ -200,7 +200,7 @@ $caution-color: #f7ca18;
 
 @keyframes c-bookmarklet__alert--pop-in {
   0% {
-    top: 30%;
+    top: 28%;
     opacity: 0;
   }
   100% {
@@ -214,8 +214,11 @@ $caution-color: #f7ca18;
     top: 25%;
     opacity: 1;
   }
+  80% {
+    opacity: 0;
+  }
   100% {
-    top: 20%;
+    top: 5%;
     opacity: 0;
   }
 }

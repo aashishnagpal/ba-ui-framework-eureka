@@ -41,4 +41,16 @@ $list-divider-color: lighten($secondary-dark-color, 20);
   &:hover {
     background-color: $generic-gray-color;
   }
+  &:active {
+    animation: list-click-pulse 0.2s ease 2;
+  }
+}
+
+@keyframes list-click-pulse {
+  0%, 100% {
+    background-color: lighten($generic-gray-color, 3);
+  }
+  50% {
+    background-color: $generic-gray-color;
+  }
 }
