@@ -4,3 +4,113 @@
 
 /* sub-elements styles
    ========================================================================== */
+
+.c-sif {
+  font-size: 1em;
+  display: block;
+  position: relative;
+  width: 25em;
+  height: 7em;
+  //border: 1px solid red;
+}
+
+.c-sif__input-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  //width: 20em;
+  height: 3em;
+  padding-left: 3.5em;
+  padding-right: 3.5em;
+  border: 2px solid $secondary-light-color;
+  border-radius: 1.5em;
+  z-index: 0;
+
+  //display: none;
+  visibility: hidden;
+  &:first-of-type {
+    visibility: visible;
+  }
+
+  label,
+  input,
+  button {
+    outline: none;
+    border: none;
+  }
+}
+
+.c-sif__input {
+  border: 0;
+  line-height: 2.4em;
+  font-size: 1.1em;
+  margin-left: 0;
+  background-color: transparent;
+  width: 12em;
+}
+
+.c-sif__label,
+.c-sif__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 3em;
+  width: 3em;
+  margin: 0;
+  border-radius: 50%;
+  //border: 2px solid $primary-color;
+  background-color: $primary-color;
+  color: $generic-white-color;
+}
+
+.c-sif__label {
+  left: -1px;
+  //transform: rotate(0deg);
+  animation: moveToRight 0.7s ease-out both;
+  z-index: 5;
+}
+
+.c-sif__btn {
+  right: -1px;
+}
+
+
+[class^='c-sif__icon'] {
+
+}
+
+
+//@keyframes mooveToRight {
+//  100% {
+//    ;
+//  }
+//}
+
+@keyframes moveToRight {
+  from {
+    right: 100%;
+    //transform: rotate(0deg);
+  }
+  to {
+    left: auto;
+    right: 0;
+    //transform: rotate(720deg);
+  }
+}
+
+
+
+
+  /* Display components styles
+     ========================================================================== */
+
+.sif-component {
+  margin-left: 1em;
+}
