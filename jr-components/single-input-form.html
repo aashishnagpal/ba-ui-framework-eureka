@@ -6,46 +6,77 @@
   <link rel="stylesheet" href="../styles/css/eureka.css">
 </head>
 <body>
-  <div class="sif-component">
+
+  <section class="website-components__component" id="single-input-form">
+
     <h3>Single-Input Form</h3>
+    <p>Only on input field will show each time. Once an input is filled out, click the arrow button. The current input fades out and the next input reveals</p>
 
-    <form class="c-sif">
-      <div class="c-sif__input-area">
-        <label class="c-sif__label" for="sif-input-firstnm">
-          <i class="fa fa-user fa-lg c-sif__icon-label" aria-hidden="true"></i>
-        </label>
-        <input class="c-sif__input" type="text" name="username"
-               placeholder="Full Name" id="sif-input-firstnm">
-        <button type="button" class="c-sif__btn">
-          <i class="fa fa-arrow-right fa-lg c-sif__icon-next" aria-hidden="true"></i>
-        </button>
+    <!-- component example grid container -->
+    <div class="o-grid">
+      <div class="o-grid__cell">
+        <!-- component examples here -->
+        <form class="c-sif">
+          <div class="c-sif__input-area">
+            <label class="c-sif__label" for="sif-input-firstnm">
+              <i class="fa fa-user fa-lg c-sif__icon-label" aria-hidden="true"></i>
+            </label>
+            <input class="c-sif__input" type="text" name="username"
+                   placeholder="Full Name" id="sif-input-firstnm">
+            <button type="button" class="c-sif__btn">
+              <i class="fa fa-arrow-right fa-lg c-sif__icon-next" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <div class="c-sif__input-area">
+            <label class="c-sif__label c-sif__icon-label" for="sif-input-email">
+              <i class="fa fa-envelope fa-lg c-sif__icon-label" aria-hidden="true"></i>
+            </label>
+            <input class="c-sif__input" type="email" name="email"
+                   placeholder="email" id="sif-input-email">
+            <button type="button" class="c-sif__btn">
+              <i class="fa fa-arrow-right c-sif__icon fa-lg c-sif__icon-next" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <div class="c-sif__input-area">
+            <label class="c-sif__label" for="sif-input-city">
+              <i class="fa fa-globe c-sif__icon-label" aria-hidden="true"></i>
+            </label>
+            <input class="c-sif__input" type="text" name="city"
+                   placeholder="City you live in" id="sif-input-city">
+            <button type="submit" class="c-sif__btn">
+              <i class="fa fa-arrow-right c-sif__icon-next" aria-hidden="true"></i>
+            </button>
+          </div>
+
+
+        </form>
       </div>
+    </div>
 
-      <div class="c-sif__input-area">
-        <label class="c-sif__label c-sif__icon-label" for="sif-input-email">
-          <i class="fa fa-envelope fa-lg c-sif__icon-label" aria-hidden="true"></i>
-        </label>
-        <input class="c-sif__input" type="email" name="email"
-               placeholder="email" id="sif-input-email">
-        <button type="button" class="c-sif__btn">
-          <i class="fa fa-arrow-right c-sif__icon fa-lg c-sif__icon-next" aria-hidden="true"></i>
-        </button>
+    <!-- code well markup -->
+    <div class="o-grid">
+      <div class="o-grid__cell">
+        <div class="c-collapse">
+          <div class="c-collapse__controls-container--justified-text">
+            <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+            <a class="c-collapse__toggle">toggle markup</a>
+          </div>
+          <div class="c-collapse__content-container c-collapse__content-container--dark">
+            <div class="c-collapse__content">
+              <pre class="u-pre--wrap"><code class="u-example-code">
+
+                <!-- put your component code (escaped HTML) here -->
+              </code></pre>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
+    <!-- end codewell markup -->
 
-      <div class="c-sif__input-area">
-        <label class="c-sif__label" for="sif-input-city">
-          <i class="fa fa-globe c-sif__icon-label" aria-hidden="true"></i>
-        </label>
-        <input class="c-sif__input" type="text" name="city"
-               placeholder="City you live in" id="sif-input-city">
-        <button type="submit" class="c-sif__btn">
-          <i class="fa fa-arrow-right c-sif__icon-next" aria-hidden="true"></i>
-        </button>
-      </div>
-
-
-    </form>
-  </div>
+  </section>
 
   <script src="../javascript/single-input-form.js"></script>
 </body>
