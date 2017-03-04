@@ -48,6 +48,7 @@ $search-second-size-multiplier: .7;
     font-size: ($search-size-multiplier * 1.3rem);
     //Better font consistency for browsers that don't support light tag
     font-weight: 300;
+    isolation: isolate;
     padding-right: 2.5%;
     text-align: right;
     @include placeholder {
@@ -86,10 +87,15 @@ $search-second-size-multiplier: .7;
     border: transparent;
     box-shadow: -0.3125rem 0 0.1875rem -0.25rem $generic-black-color;
     flex-basis: 18%;
+    isolation: isolate;
     margin-left: (-0.1875rem * $search-size-multiplier);
     cursor: pointer;
     &:hover {
         background-color: $secondary-dark-color;
+        isolation: isolate;
+        & .search-icon {
+            color: $primary-dark-color;
+        }
     }
     &:active {
         border: 0.125rem solid transparentize($generic-white-color, .3);
@@ -111,13 +117,16 @@ $search-second-size-multiplier: .7;
 //font awesome magnify glass icon
 .search-icon {
     font-size: ($search-size-multiplier * 1.35rem);
-    color: #A7D9E1;
+    color: $secondary-dark-color;
+    mix-blend-mode: screen;
     pointer-events: none;
 }
 
 //second font awesome magnify glass icon
 .search-icon-second {
-    color: transparentize($secondary-light-color, .63);
+    //color: transparentize($secondary-light-color, .63);
+    color: darken($secondary-dark-color, 18%);
+    mix-blend-mode: screen;
     font-size: ($search-second-size-multiplier * 2.5rem);
     pointer-events: none;
 }
