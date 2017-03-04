@@ -65,14 +65,12 @@
   width: 3em;
   margin: 0;
   border-radius: 50%;
-  //border: 2px solid $primary-color;
   background-color: $primary-color;
   color: $generic-white-color;
 }
 
 .c-sif__label {
   left: -1px;
-  //transform: rotate(0deg);
   animation: moveToRight 0.7s ease-out both;
   z-index: 5;
 }
@@ -87,12 +85,6 @@
 }
 
 
-//@keyframes mooveToRight {
-//  100% {
-//    ;
-//  }
-//}
-
 @keyframes moveToRight {
   from {
     right: 100%;
@@ -105,7 +97,11 @@
   }
 }
 
-
+.c-sif-hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0s 0.2s;
+}
 
 
   /* Display components styles
