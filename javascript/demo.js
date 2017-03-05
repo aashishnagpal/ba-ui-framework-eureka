@@ -48,12 +48,13 @@
         var totalLeft = rect.left + rect.width; //get current left position of the element
         var totalTop = rect.top + rect.height; // get current top position of the element
         if(totalLeft > w){  // change the position if element extends the width or height of the screen
-            helpMessage.style.left = rect.width * -1;
-        }else{
+            var negativeWidth = rect.width * -1
+            helpMessage.style.left = negativeWidth + 'px';
+        }/*else{
             if(totalTop > h){
-                helpMessage.style.top = rect.height * -1;
+                helpMessage.style.top = rect.height * -1 + 'px';
             }
-        }
+        }*/
 
         /* Make help message appear when clicking the help icon [closure] */
 
