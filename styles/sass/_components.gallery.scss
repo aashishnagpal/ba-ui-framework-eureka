@@ -8,7 +8,7 @@
                     (2, "http://res.cloudinary.com/azureowl/image/upload/v1488151623/placeholder2_gl44o6.png"),
                     (3, "https://unsplash.it/760"),
                     (4, "https://unsplash.it/853"),
-                    (5, "https://unsplash.it/570") {
+                    (5, "https://unsplash.it/520") {
   .c-gallery--clickable:nth-of-type(#{$nth}) {
     background-image: url(#{$img});
     @include background-img;
@@ -16,8 +16,13 @@
 }
 
 .c-gallery-viewer {
+  display: none;
   @include background-img;
-  height: 50em;
-  margin: 0 auto;
-  width: 50em;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  height: 100%;
+  position: fixed;
+  width: 100%;
 }
