@@ -4,6 +4,7 @@
     <title>Eureka CSS UI Framework</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles/css/eureka.css">
+    <link rel="stylesheet" href="prism/prism.css.css">
 </head>
 <body>
 <!-- append the loader div to DOM before loading the script -->
@@ -103,9 +104,9 @@
                                 <a class="c-collapse__toggle">toggle markup</a>
                             </div>
                             <div class="c-collapse__content-container c-collapse__content-container--dark">
-                                <div class="c-collapse__content">
+                                <div class="c-collapse__content--prism-code-style">
           <pre class="u-pre--wrap">
-            <code class="u-example-code">
+            <code class="language-markup line-numbers">
 &lt;button class=&quot;c-btn--primary c-btn&quot; type=&quot;button&quot; name=&quot;button&quot;&gt;Primary&lt;/button&gt;
 &lt;button class=&quot;c-btn--secondary c-btn&quot; type=&quot;button&quot; name=&quot;button&quot;&gt;Secondary&lt;/button&gt;
 
@@ -329,7 +330,7 @@
             <section class="website-components__component" id="cards">
                 <h3>Cards</h3>
                 <p>This section contains Cards</p>
-                <div class="o-grid u-grid--center">
+                <div class="o-grid u-grid--center o-medium-grid--full">
                     <div class="o-grid__cell">
                         <div class="c-card">
                             <div class="c-card__head">
@@ -2921,5 +2922,7 @@
 <script src="javascript/sticky-nav.js"></script>
 <script src="javascript/scrollspy-nav.js"></script>
 
+<!-- Prism for nice code markup-->
+<script src="prism/prism.js"></script>
 </body>
 </html>
