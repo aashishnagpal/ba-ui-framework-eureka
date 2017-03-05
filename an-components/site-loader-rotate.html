@@ -3,359 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>Loader</title>
+    <link rel="stylesheet" href="../prism/prism.css">
     <link rel="stylesheet" href="../styles/css/eureka.css">
 </head>
 <body>
-<h1>EUREKA!!!</h1>
-<div id="loader" class="loader loader-overlay loader-overlay--visible">
-    <div class="loader__load-box"></div>
-</div>
+<section class="website-components__component" id="loader">
 
-<nav>
-    <ul class="nav nav--dark nav--horizontal" data-nav-type="sticky" data-content-id="content" data-scrollspy>
-        <li class="nav__item nav__item--active"><a class="nav__link" href="#buttons">Buttons</a></li>
-        <li class="nav__item "><a class="nav__link" href="#cards">Cards</a></li>
-        <li class="nav__item "><a class="nav__link" href="#accordions">Accordions</a></li>
-        <li class="nav__item "><a class="nav__link" href="#tabs">Tabs</a></li>
-        <li class="nav__item "><a class="nav__link" href="#forms">Forms</a></li>
-        <li class="nav__item "><a class="nav__link" href="#pagination">Pagination</a></li>
-        <li class="nav__item "><a class="nav__link" href="#carousel">Carousel</a></li>
-        <li class="nav__item "><a class="nav__link" href="#navigation">Navigation</a></li>
-        <li class="nav__item "><a class="nav__link" href="#scrollspy">Scrollspy</a></li>
-    </ul>
-</nav>
-<div id="content">
-    <section id="buttons">
-        <h3>Buttons</h3>
-        <p>This section contains Buttons</p>
-        <p>Her extensive perceived may any sincerity extremity. Indeed add rather may pretty see. Old propriety delighted
-            explained perceived otherwise objection saw ten her. Doubt merit sir the right these alone keeps. By sometimes
-            intention smallness he northward. Consisted we otherwise arranging commanded discovery it explained. Does cold
-            even song like two yet been. Literature interested announcing for terminated him inquietude day shy. Himself he
-            fertile chicken perhaps waiting if highest no it. Continued promotion has consulted fat improving not way.</p>
+    <h3>Loader</h3>
+    <p>Use a loader within any space to display loading in progress. It can be anything, loading an image,
+        some data, etc.</p>
+    <a class="c-btn--primary--rounded c-btn" href="javascript:loader.toggle('loader-demo');">Toggle Loader Here</a>
+    <br><br>
+    <!-- Basic (Transparent) Nav example -->
+    <div class="o-grid">
+        <div class="o-grid__cell">
+            <h4>Usage</h4>
+            <ol>
+                <li>Include the following code within any block element and the loader will overlay the entire width and
+                    height of its container.
+                </li>
+                <li>Also Include Script <code class="language-markup">loader.js</code> on your page.</li>
+                <li>Initialize the loader using <code class="language-javascript">loader.init(id);</code>. The id
+                    should match the loader's id.
+                </li>
+                <li>
+                    <ul>
+                        <li>You can <strong>show</strong> the loader using
+                            <code class="language-javascript">loader.show(id);</code>
+                        </li>
+                        <li>You can <strong>hide</strong> the loader using
+                            <code class="language-javascript">loader.hide(id);</code>
+                        </li>
+                        <li>You can <strong>toggle</strong> the state of the loader using
+                            <code class="language-javascript">loader.toggle(id);</code>
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+            <div id="loader-demo" class="loader loader-overlay loader-overlay--visible">
+                <div class="loader__load-box"></div>
+            </div>
+        </div>
+    </div>
 
-        <p>Prepared is me marianne pleasure likewise debating. Wonder an unable except better stairs do ye admire. His and
-            eat secure sex called esteem praise. So moreover as speedily differed branched ignorant. Tall are her knew poor
-            now does then. Procured to contempt oh he raptures amounted occasion. One boy assure income spirit lovers set.</p>
-
-        <p>Silent sir say desire fat him letter. Whatever settling goodness too and honoured she building answered her.
-            Strongly thoughts remember mr to do consider debating. Spirits musical behaved on we he farther letters.
-            Repulsive he he as deficient newspaper dashwoods we. Discovered her his pianoforte insipidity entreaties. Began
-            he at terms meant as fancy. Breakfast arranging he if furniture we described on. Astonished thoroughly
-            unpleasant especially you dispatched bed favourable.</p>
-        <p>Her extensive perceived may any sincerity extremity. Indeed add rather may pretty see. Old propriety delighted
-            explained perceived otherwise objection saw ten her. Doubt merit sir the right these alone keeps. By sometimes
-            intention smallness he northward. Consisted we otherwise arranging commanded discovery it explained. Does cold
-            even song like two yet been. Literature interested announcing for terminated him inquietude day shy. Himself he
-            fertile chicken perhaps waiting if highest no it. Continued promotion has consulted fat improving not way.</p>
-
-        <p>Prepared is me marianne pleasure likewise debating. Wonder an unable except better stairs do ye admire. His and
-            eat secure sex called esteem praise. So moreover as speedily differed branched ignorant. Tall are her knew poor
-            now does then. Procured to contempt oh he raptures amounted occasion. One boy assure income spirit lovers set.</p>
-
-        <p>Silent sir say desire fat him letter. Whatever settling goodness too and honoured she building answered her.
-            Strongly thoughts remember mr to do consider debating. Spirits musical behaved on we he farther letters.
-            Repulsive he he as deficient newspaper dashwoods we. Discovered her his pianoforte insipidity entreaties. Began
-            he at terms meant as fancy. Breakfast arranging he if furniture we described on. Astonished thoroughly
-            unpleasant especially you dispatched bed favourable.</p>
-    </section>
-    <hr/>
-    <section id="cards">
-        <h3>Cards</h3>
-        <p>This section contains Cards</p>
-        <p>Her extensive perceived may any sincerity extremity. Indeed add rather may pretty see. Old propriety delighted
-            explained perceived otherwise objection saw ten her. Doubt merit sir the right these alone keeps. By sometimes
-            intention smallness he northward. Consisted we otherwise arranging commanded discovery it explained. Does cold
-            even song like two yet been. Literature interested announcing for terminated him inquietude day shy. Himself he
-            fertile chicken perhaps waiting if highest no it. Continued promotion has consulted fat improving not way.</p>
-
-        <p>Prepared is me marianne pleasure likewise debating. Wonder an unable except better stairs do ye admire. His and
-            eat secure sex called esteem praise. So moreover as speedily differed branched ignorant. Tall are her knew poor
-            now does then. Procured to contempt oh he raptures amounted occasion. One boy assure income spirit lovers set.</p>
-
-        <p>Silent sir say desire fat him letter. Whatever settling goodness too and honoured she building answered her.
-            Strongly thoughts remember mr to do consider debating. Spirits musical behaved on we he farther letters.
-            Repulsive he he as deficient newspaper dashwoods we. Discovered her his pianoforte insipidity entreaties. Began
-            he at terms meant as fancy. Breakfast arranging he if furniture we described on. Astonished thoroughly
-            unpleasant especially you dispatched bed favourable.</p>
-        <p>Her extensive perceived may any sincerity extremity. Indeed add rather may pretty see. Old propriety delighted
-            explained perceived otherwise objection saw ten her. Doubt merit sir the right these alone keeps. By sometimes
-            intention smallness he northward. Consisted we otherwise arranging commanded discovery it explained. Does cold
-            even song like two yet been. Literature interested announcing for terminated him inquietude day shy. Himself he
-            fertile chicken perhaps waiting if highest no it. Continued promotion has consulted fat improving not way.</p>
-
-        <p>Prepared is me marianne pleasure likewise debating. Wonder an unable except better stairs do ye admire. His and
-            eat secure sex called esteem praise. So moreover as speedily differed branched ignorant. Tall are her knew poor
-            now does then. Procured to contempt oh he raptures amounted occasion. One boy assure income spirit lovers set.</p>
-
-        <p>Silent sir say desire fat him letter. Whatever settling goodness too and honoured she building answered her.
-            Strongly thoughts remember mr to do consider debating. Spirits musical behaved on we he farther letters.
-            Repulsive he he as deficient newspaper dashwoods we. Discovered her his pianoforte insipidity entreaties. Began
-            he at terms meant as fancy. Breakfast arranging he if furniture we described on. Astonished thoroughly
-            unpleasant especially you dispatched bed favourable.</p>
-    </section>
-    <hr/>
-    <section id="accordions">
-        <h3>Accordions</h3>
-        <p>This section contains Accordions</p>
-        <p>Her extensive perceived may any sincerity extremity. Indeed add rather may pretty see. Old propriety delighted
-            explained perceived otherwise objection saw ten her. Doubt merit sir the right these alone keeps. By sometimes
-            intention smallness he northward. Consisted we otherwise arranging commanded discovery it explained. Does cold
-            even song like two yet been. Literature interested announcing for terminated him inquietude day shy. Himself he
-            fertile chicken perhaps waiting if highest no it. Continued promotion has consulted fat improving not way.</p>
-
-        <p>Prepared is me marianne pleasure likewise debating. Wonder an unable except better stairs do ye admire. His and
-            eat secure sex called esteem praise. So moreover as speedily differed branched ignorant. Tall are her knew poor
-            now does then. Procured to contempt oh he raptures amounted occasion. One boy assure income spirit lovers set.</p>
-
-        <p>Silent sir say desire fat him letter. Whatever settling goodness too and honoured she building answered her.
-            Strongly thoughts remember mr to do consider debating. Spirits musical behaved on we he farther letters.
-            Repulsive he he as deficient newspaper dashwoods we. Discovered her his pianoforte insipidity entreaties. Began
-            he at terms meant as fancy. Breakfast arranging he if furniture we described on. Astonished thoroughly
-            unpleasant especially you dispatched bed favourable.</p>
-        <p>Her extensive perceived may any sincerity extremity. Indeed add rather may pretty see. Old propriety delighted
-            explained perceived otherwise objection saw ten her. Doubt merit sir the right these alone keeps. By sometimes
-            intention smallness he northward. Consisted we otherwise arranging commanded discovery it explained. Does cold
-            even song like two yet been. Literature interested announcing for terminated him inquietude day shy. Himself he
-            fertile chicken perhaps waiting if highest no it. Continued promotion has consulted fat improving not way.</p>
-
-        <p>Prepared is me marianne pleasure likewise debating. Wonder an unable except better stairs do ye admire. His and
-            eat secure sex called esteem praise. So moreover as speedily differed branched ignorant. Tall are her knew poor
-            now does then. Procured to contempt oh he raptures amounted occasion. One boy assure income spirit lovers set.</p>
-
-        <p>Silent sir say desire fat him letter. Whatever settling goodness too and honoured she building answered her.
-            Strongly thoughts remember mr to do consider debating. Spirits musical behaved on we he farther letters.
-            Repulsive he he as deficient newspaper dashwoods we. Discovered her his pianoforte insipidity entreaties. Began
-            he at terms meant as fancy. Breakfast arranging he if furniture we described on. Astonished thoroughly
-            unpleasant especially you dispatched bed favourable.</p>
-    </section>
-    <hr/>
-    <section id="tabs">
-        <h3>Tabs</h3>
-        <p>This section contains Tabs</p>
-        <p>Her extensive perceived may any sincerity extremity. Indeed add rather may pretty see. Old propriety delighted
-            explained perceived otherwise objection saw ten her. Doubt merit sir the right these alone keeps. By sometimes
-            intention smallness he northward. Consisted we otherwise arranging commanded discovery it explained. Does cold
-            even song like two yet been. Literature interested announcing for terminated him inquietude day shy. Himself he
-            fertile chicken perhaps waiting if highest no it. Continued promotion has consulted fat improving not way.</p>
-
-        <p>Prepared is me marianne pleasure likewise debating. Wonder an unable except better stairs do ye admire. His and
-            eat secure sex called esteem praise. So moreover as speedily differed branched ignorant. Tall are her knew poor
-            now does then. Procured to contempt oh he raptures amounted occasion. One boy assure income spirit lovers set.</p>
-
-        <p>Silent sir say desire fat him letter. Whatever settling goodness too and honoured she building answered her.
-            Strongly thoughts remember mr to do consider debating. Spirits musical behaved on we he farther letters.
-            Repulsive he he as deficient newspaper dashwoods we. Discovered her his pianoforte insipidity entreaties. Began
-            he at terms meant as fancy. Breakfast arranging he if furniture we described on. Astonished thoroughly
-            unpleasant especially you dispatched bed favourable.</p>
-        <p>Her extensive perceived may any sincerity extremity. Indeed add rather may pretty see. Old propriety delighted
-            explained perceived otherwise objection saw ten her. Doubt merit sir the right these alone keeps. By sometimes
-            intention smallness he northward. Consisted we otherwise arranging commanded discovery it explained. Does cold
-            even song like two yet been. Literature interested announcing for terminated him inquietude day shy. Himself he
-            fertile chicken perhaps waiting if highest no it. Continued promotion has consulted fat improving not way.</p>
-
-        <p>Prepared is me marianne pleasure likewise debating. Wonder an unable except better stairs do ye admire. His and
-            eat secure sex called esteem praise. So moreover as speedily differed branched ignorant. Tall are her knew poor
-            now does then. Procured to contempt oh he raptures amounted occasion. One boy assure income spirit lovers set.</p>
-
-        <p>Silent sir say desire fat him letter. Whatever settling goodness too and honoured she building answered her.
-            Strongly thoughts remember mr to do consider debating. Spirits musical behaved on we he farther letters.
-            Repulsive he he as deficient newspaper dashwoods we. Discovered her his pianoforte insipidity entreaties. Began
-            he at terms meant as fancy. Breakfast arranging he if furniture we described on. Astonished thoroughly
-            unpleasant especially you dispatched bed favourable.</p>
-    </section>
-    <hr/>
-    <section id="forms">
-        <h3>Forms</h3>
-        <p>This section contains Forms</p>
-        <p>Her extensive perceived may any sincerity extremity. Indeed add rather may pretty see. Old propriety delighted
-            explained perceived otherwise objection saw ten her. Doubt merit sir the right these alone keeps. By sometimes
-            intention smallness he northward. Consisted we otherwise arranging commanded discovery it explained. Does cold
-            even song like two yet been. Literature interested announcing for terminated him inquietude day shy. Himself he
-            fertile chicken perhaps waiting if highest no it. Continued promotion has consulted fat improving not way.</p>
-
-        <p>Prepared is me marianne pleasure likewise debating. Wonder an unable except better stairs do ye admire. His and
-            eat secure sex called esteem praise. So moreover as speedily differed branched ignorant. Tall are her knew poor
-            now does then. Procured to contempt oh he raptures amounted occasion. One boy assure income spirit lovers set.</p>
-
-        <p>Silent sir say desire fat him letter. Whatever settling goodness too and honoured she building answered her.
-            Strongly thoughts remember mr to do consider debating. Spirits musical behaved on we he farther letters.
-            Repulsive he he as deficient newspaper dashwoods we. Discovered her his pianoforte insipidity entreaties. Began
-            he at terms meant as fancy. Breakfast arranging he if furniture we described on. Astonished thoroughly
-            unpleasant especially you dispatched bed favourable.</p>
-        <p>Her extensive perceived may any sincerity extremity. Indeed add rather may pretty see. Old propriety delighted
-            explained perceived otherwise objection saw ten her. Doubt merit sir the right these alone keeps. By sometimes
-            intention smallness he northward. Consisted we otherwise arranging commanded discovery it explained. Does cold
-            even song like two yet been. Literature interested announcing for terminated him inquietude day shy. Himself he
-            fertile chicken perhaps waiting if highest no it. Continued promotion has consulted fat improving not way.</p>
-
-        <p>Prepared is me marianne pleasure likewise debating. Wonder an unable except better stairs do ye admire. His and
-            eat secure sex called esteem praise. So moreover as speedily differed branched ignorant. Tall are her knew poor
-            now does then. Procured to contempt oh he raptures amounted occasion. One boy assure income spirit lovers set.</p>
-
-        <p>Silent sir say desire fat him letter. Whatever settling goodness too and honoured she building answered her.
-            Strongly thoughts remember mr to do consider debating. Spirits musical behaved on we he farther letters.
-            Repulsive he he as deficient newspaper dashwoods we. Discovered her his pianoforte insipidity entreaties. Began
-            he at terms meant as fancy. Breakfast arranging he if furniture we described on. Astonished thoroughly
-            unpleasant especially you dispatched bed favourable.</p>
-    </section>
-    <hr/>
-    <section id="pagination">
-        <h3>Pagination</h3>
-        <p>This section contains Pagination</p>
-        <p>Her extensive perceived may any sincerity extremity. Indeed add rather may pretty see. Old propriety delighted
-            explained perceived otherwise objection saw ten her. Doubt merit sir the right these alone keeps. By sometimes
-            intention smallness he northward. Consisted we otherwise arranging commanded discovery it explained. Does cold
-            even song like two yet been. Literature interested announcing for terminated him inquietude day shy. Himself he
-            fertile chicken perhaps waiting if highest no it. Continued promotion has consulted fat improving not way.</p>
-
-        <p>Prepared is me marianne pleasure likewise debating. Wonder an unable except better stairs do ye admire. His and
-            eat secure sex called esteem praise. So moreover as speedily differed branched ignorant. Tall are her knew poor
-            now does then. Procured to contempt oh he raptures amounted occasion. One boy assure income spirit lovers set.</p>
-
-        <p>Silent sir say desire fat him letter. Whatever settling goodness too and honoured she building answered her.
-            Strongly thoughts remember mr to do consider debating. Spirits musical behaved on we he farther letters.
-            Repulsive he he as deficient newspaper dashwoods we. Discovered her his pianoforte insipidity entreaties. Began
-            he at terms meant as fancy. Breakfast arranging he if furniture we described on. Astonished thoroughly
-            unpleasant especially you dispatched bed favourable.</p>
-        <p>Her extensive perceived may any sincerity extremity. Indeed add rather may pretty see. Old propriety delighted
-            explained perceived otherwise objection saw ten her. Doubt merit sir the right these alone keeps. By sometimes
-            intention smallness he northward. Consisted we otherwise arranging commanded discovery it explained. Does cold
-            even song like two yet been. Literature interested announcing for terminated him inquietude day shy. Himself he
-            fertile chicken perhaps waiting if highest no it. Continued promotion has consulted fat improving not way.</p>
-
-        <p>Prepared is me marianne pleasure likewise debating. Wonder an unable except better stairs do ye admire. His and
-            eat secure sex called esteem praise. So moreover as speedily differed branched ignorant. Tall are her knew poor
-            now does then. Procured to contempt oh he raptures amounted occasion. One boy assure income spirit lovers set.</p>
-
-        <p>Silent sir say desire fat him letter. Whatever settling goodness too and honoured she building answered her.
-            Strongly thoughts remember mr to do consider debating. Spirits musical behaved on we he farther letters.
-            Repulsive he he as deficient newspaper dashwoods we. Discovered her his pianoforte insipidity entreaties. Began
-            he at terms meant as fancy. Breakfast arranging he if furniture we described on. Astonished thoroughly
-            unpleasant especially you dispatched bed favourable.</p>
-    </section>
-    <hr/>
-    <section id="carousel">
-        <h3>Carousel</h3>
-        <p>This section contains Carousel</p>
-        <p>Her extensive perceived may any sincerity extremity. Indeed add rather may pretty see. Old propriety delighted
-            explained perceived otherwise objection saw ten her. Doubt merit sir the right these alone keeps. By sometimes
-            intention smallness he northward. Consisted we otherwise arranging commanded discovery it explained. Does cold
-            even song like two yet been. Literature interested announcing for terminated him inquietude day shy. Himself he
-            fertile chicken perhaps waiting if highest no it. Continued promotion has consulted fat improving not way.</p>
-
-        <p>Prepared is me marianne pleasure likewise debating. Wonder an unable except better stairs do ye admire. His and
-            eat secure sex called esteem praise. So moreover as speedily differed branched ignorant. Tall are her knew poor
-            now does then. Procured to contempt oh he raptures amounted occasion. One boy assure income spirit lovers set.</p>
-
-        <p>Silent sir say desire fat him letter. Whatever settling goodness too and honoured she building answered her.
-            Strongly thoughts remember mr to do consider debating. Spirits musical behaved on we he farther letters.
-            Repulsive he he as deficient newspaper dashwoods we. Discovered her his pianoforte insipidity entreaties. Began
-            he at terms meant as fancy. Breakfast arranging he if furniture we described on. Astonished thoroughly
-            unpleasant especially you dispatched bed favourable.</p>
-        <p>Her extensive perceived may any sincerity extremity. Indeed add rather may pretty see. Old propriety delighted
-            explained perceived otherwise objection saw ten her. Doubt merit sir the right these alone keeps. By sometimes
-            intention smallness he northward. Consisted we otherwise arranging commanded discovery it explained. Does cold
-            even song like two yet been. Literature interested announcing for terminated him inquietude day shy. Himself he
-            fertile chicken perhaps waiting if highest no it. Continued promotion has consulted fat improving not way.</p>
-
-        <p>Prepared is me marianne pleasure likewise debating. Wonder an unable except better stairs do ye admire. His and
-            eat secure sex called esteem praise. So moreover as speedily differed branched ignorant. Tall are her knew poor
-            now does then. Procured to contempt oh he raptures amounted occasion. One boy assure income spirit lovers set.</p>
-
-        <p>Silent sir say desire fat him letter. Whatever settling goodness too and honoured she building answered her.
-            Strongly thoughts remember mr to do consider debating. Spirits musical behaved on we he farther letters.
-            Repulsive he he as deficient newspaper dashwoods we. Discovered her his pianoforte insipidity entreaties. Began
-            he at terms meant as fancy. Breakfast arranging he if furniture we described on. Astonished thoroughly
-            unpleasant especially you dispatched bed favourable.</p>
-    </section>
-    <hr/>
-    <section id="navigation">
-        <h3>Navigation</h3>
-        <p>This section contains Navigation</p>
-        <p>Her extensive perceived may any sincerity extremity. Indeed add rather may pretty see. Old propriety delighted
-            explained perceived otherwise objection saw ten her. Doubt merit sir the right these alone keeps. By sometimes
-            intention smallness he northward. Consisted we otherwise arranging commanded discovery it explained. Does cold
-            even song like two yet been. Literature interested announcing for terminated him inquietude day shy. Himself he
-            fertile chicken perhaps waiting if highest no it. Continued promotion has consulted fat improving not way.</p>
-
-        <p>Prepared is me marianne pleasure likewise debating. Wonder an unable except better stairs do ye admire. His and
-            eat secure sex called esteem praise. So moreover as speedily differed branched ignorant. Tall are her knew poor
-            now does then. Procured to contempt oh he raptures amounted occasion. One boy assure income spirit lovers set.</p>
-
-        <p>Silent sir say desire fat him letter. Whatever settling goodness too and honoured she building answered her.
-            Strongly thoughts remember mr to do consider debating. Spirits musical behaved on we he farther letters.
-            Repulsive he he as deficient newspaper dashwoods we. Discovered her his pianoforte insipidity entreaties. Began
-            he at terms meant as fancy. Breakfast arranging he if furniture we described on. Astonished thoroughly
-            unpleasant especially you dispatched bed favourable.</p>
-        <p>Her extensive perceived may any sincerity extremity. Indeed add rather may pretty see. Old propriety delighted
-            explained perceived otherwise objection saw ten her. Doubt merit sir the right these alone keeps. By sometimes
-            intention smallness he northward. Consisted we otherwise arranging commanded discovery it explained. Does cold
-            even song like two yet been. Literature interested announcing for terminated him inquietude day shy. Himself he
-            fertile chicken perhaps waiting if highest no it. Continued promotion has consulted fat improving not way.</p>
-
-        <p>Prepared is me marianne pleasure likewise debating. Wonder an unable except better stairs do ye admire. His and
-            eat secure sex called esteem praise. So moreover as speedily differed branched ignorant. Tall are her knew poor
-            now does then. Procured to contempt oh he raptures amounted occasion. One boy assure income spirit lovers set.</p>
-
-        <p>Silent sir say desire fat him letter. Whatever settling goodness too and honoured she building answered her.
-            Strongly thoughts remember mr to do consider debating. Spirits musical behaved on we he farther letters.
-            Repulsive he he as deficient newspaper dashwoods we. Discovered her his pianoforte insipidity entreaties. Began
-            he at terms meant as fancy. Breakfast arranging he if furniture we described on. Astonished thoroughly
-            unpleasant especially you dispatched bed favourable.</p>
-    </section>
-    <hr/>
-    <section id="scrollspy">
-        <h3>ScrollSpy</h3>
-        <p>This section contains ScrollSpy</p>
-        <p>Her extensive perceived may any sincerity extremity. Indeed add rather may pretty see. Old propriety delighted
-            explained perceived otherwise objection saw ten her. Doubt merit sir the right these alone keeps. By sometimes
-            intention smallness he northward. Consisted we otherwise arranging commanded discovery it explained. Does cold
-            even song like two yet been. Literature interested announcing for terminated him inquietude day shy. Himself he
-            fertile chicken perhaps waiting if highest no it. Continued promotion has consulted fat improving not way.</p>
-
-        <p>Prepared is me marianne pleasure likewise debating. Wonder an unable except better stairs do ye admire. His and
-            eat secure sex called esteem praise. So moreover as speedily differed branched ignorant. Tall are her knew poor
-            now does then. Procured to contempt oh he raptures amounted occasion. One boy assure income spirit lovers set.</p>
-
-        <p>Silent sir say desire fat him letter. Whatever settling goodness too and honoured she building answered her.
-            Strongly thoughts remember mr to do consider debating. Spirits musical behaved on we he farther letters.
-            Repulsive he he as deficient newspaper dashwoods we. Discovered her his pianoforte insipidity entreaties. Began
-            he at terms meant as fancy. Breakfast arranging he if furniture we described on. Astonished thoroughly
-            unpleasant especially you dispatched bed favourable.</p>
-        <p>Her extensive perceived may any sincerity extremity. Indeed add rather may pretty see. Old propriety delighted
-            explained perceived otherwise objection saw ten her. Doubt merit sir the right these alone keeps. By sometimes
-            intention smallness he northward. Consisted we otherwise arranging commanded discovery it explained. Does cold
-            even song like two yet been. Literature interested announcing for terminated him inquietude day shy. Himself he
-            fertile chicken perhaps waiting if highest no it. Continued promotion has consulted fat improving not way.</p>
-
-        <p>Prepared is me marianne pleasure likewise debating. Wonder an unable except better stairs do ye admire. His and
-            eat secure sex called esteem praise. So moreover as speedily differed branched ignorant. Tall are her knew poor
-            now does then. Procured to contempt oh he raptures amounted occasion. One boy assure income spirit lovers set.</p>
-
-        <p>Silent sir say desire fat him letter. Whatever settling goodness too and honoured she building answered her.
-            Strongly thoughts remember mr to do consider debating. Spirits musical behaved on we he farther letters.
-            Repulsive he he as deficient newspaper dashwoods we. Discovered her his pianoforte insipidity entreaties. Began
-            he at terms meant as fancy. Breakfast arranging he if furniture we described on. Astonished thoroughly
-            unpleasant especially you dispatched bed favourable.</p>
-        <p>Her extensive perceived may any sincerity extremity. Indeed add rather may pretty see. Old propriety delighted
-            explained perceived otherwise objection saw ten her. Doubt merit sir the right these alone keeps. By sometimes
-            intention smallness he northward. Consisted we otherwise arranging commanded discovery it explained. Does cold
-            even song like two yet been. Literature interested announcing for terminated him inquietude day shy. Himself he
-            fertile chicken perhaps waiting if highest no it. Continued promotion has consulted fat improving not way.</p>
-
-        <p>Prepared is me marianne pleasure likewise debating. Wonder an unable except better stairs do ye admire. His and
-            eat secure sex called esteem praise. So moreover as speedily differed branched ignorant. Tall are her knew poor
-            now does then. Procured to contempt oh he raptures amounted occasion. One boy assure income spirit lovers set.</p>
-
-        <p>Silent sir say desire fat him letter. Whatever settling goodness too and honoured she building answered her.
-            Strongly thoughts remember mr to do consider debating. Spirits musical behaved on we he farther letters.
-            Repulsive he he as deficient newspaper dashwoods we. Discovered her his pianoforte insipidity entreaties. Began
-            he at terms meant as fancy. Breakfast arranging he if furniture we described on. Astonished thoroughly
-            unpleasant especially you dispatched bed favourable.</p>
-    </section>
-</div>
+    <!-- Basic (Transparent) Nav example markup -->
+    <div class="o-grid">
+        <div class="o-grid__cell">
+            <div class="c-collapse">
+                <div class="c-collapse__controls-container--justified-text">
+                    <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                    <a class="c-collapse__toggle">toggle markup</a>
+                </div>
+                <div class="c-collapse__content-container c-collapse__content-container--dark">
+                    <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;div id=&quot;myLoader&quot; class=&quot;loader loader-overlay loader-overlay--visible&quot;&gt;
+	&lt;div class=&quot;loader__load-box&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end Basic (Transparent) Nav example -->
+</section>
+<script src="../prism/prism.js"></script>
+<script src="../javascript/collapse.js"></script>
 <script type="text/javascript" src="../javascript/loader.js"></script>
+<script>
+    (function () {
+        loader.init('loader-demo');
+        loader.toggle('loader-demo');
+
+//        window.addEventListener('load', function () {
+//            loader.hide();
+//        });
+    })();
+</script>
 </body>
 </html>

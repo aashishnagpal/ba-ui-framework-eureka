@@ -3,100 +3,352 @@
 <head>
     <title>Navigation</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../prism/prism.css">
     <link rel="stylesheet" href="../styles/css/eureka.css">
 </head>
 <body>
-<h1>Eureka!</h1>
-<nav>
-    <h4>Horizontal <strong>Sticky</strong> Navigation - Dark</h4>
-    <ul class="nav nav--horizontal nav--dark" data-nav-type="sticky">
-        <li class="nav__item "><a class="nav__link" href="#">Buttons</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Cards</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Accordions</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Tabs</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Forms</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Pagination</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Carousel</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Navigation</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Scrollspy</a></li>
-    </ul>
-</nav>
 
-<nav>
-    <h4>Horizontal Navigation - Light</h4>
-    <ul class="nav nav--horizontal nav--light">
-        <li class="nav__item "><a class="nav__link" href="#">Buttons</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Cards</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Accordions</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Tabs</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Forms</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Pagination</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Carousel</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Navigation</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Scrollspy</a></li>
-    </ul>
-</nav>
+<section class="website-components__component" id="navs">
 
-<nav>
-    <h4>Horizontal Navigation - Transparent</h4>
-    <ul class="nav nav--horizontal nav--transparent">
-        <li class="nav__item "><a class="nav__link" href="#">Buttons</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Cards</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Accordions</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Tabs</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Forms</a></li>
-        <!--<li class="nav__item "><a class="nav__link" href="#">Pagination</a></li>-->
-        <!--<li class="nav__item "><a class="nav__link" href="#">Carousel</a></li>-->
-        <!--<li class="nav__item "><a class="nav__link" href="#">Navigation</a></li>-->
-        <!--<li class="nav__item "><a class="nav__link" href="#">Scrollspy</a></li>-->
-    </ul>
-</nav>
+    <h3>Navigation</h3>
+    <p>A navigation list can be used to provide links to major sections of the page.
+    </p>
 
-<nav>
-    <h4>Horizontal Navigation - Dark</h4>
-    <ul class="nav nav--horizontal nav--dark">
-        <li class="nav__item "><a class="nav__link" href="#">Buttons</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Cards</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Accordions</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Tabs</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Forms</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Pagination</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Carousel</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Navigation</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Scrollspy</a></li>
-    </ul>
-</nav>
+    <!-- Basic (Transparent) Nav example -->
+    <div class="o-grid">
+        <div class="o-grid__cell">
+            <h4>Basic Navigation List</h4>
+            <p>Horizontal and Transparent Background</p>
+            <ul class="nav">
+                <li class="nav__item nav__item--active"><a class="nav__link" href="#">Home</a></li>
+                <li class="nav__item "><a class="nav__link" href="#">About</a></li>
+                <li class="nav__item "><a class="nav__link" href="#">Projects</a></li>
+                <li class="nav__item "><a class="nav__link" href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
 
-<nav>
-    <h4>Vertical Navigation - Light</h4>
-    <ul class="nav nav--vertical nav--light"><!-- data-nav-type="sticky" -->
-        <li class="nav__item "><a class="nav__link" href="#">Buttons</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Cards</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Accordions</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Tabs</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Forms</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Pagination</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Carousel</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Navigation</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Scrollspy</a></li>
-    </ul>
-</nav>
+    <!-- Basic (Transparent) Nav example markup -->
+    <div class="o-grid">
+        <div class="o-grid__cell">
+            <div class="c-collapse">
+                <div class="c-collapse__controls-container--justified-text">
+                    <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                    <a class="c-collapse__toggle">toggle markup</a>
+                </div>
+                <div class="c-collapse__content-container c-collapse__content-container--dark">
+                    <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;ul class=&quot;nav&quot;&gt;
+    &lt;li class=&quot;nav__item nav__item--active&quot;&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;nav__item &quot;&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;nav__item &quot;&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#&quot;&gt;Projects&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;nav__item &quot;&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end Basic (Transparent) Nav example -->
 
-<nav>
-    <h4>Vertical Navigation - Dark</h4>
-    <ul class="nav nav--vertical nav--dark">
-        <li class="nav__item "><a class="nav__link" href="#">Buttons</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Cards</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Accordions</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Tabs</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Forms</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Pagination</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Carousel</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Navigation</a></li>
-        <li class="nav__item "><a class="nav__link" href="#">Scrollspy</a></li>
-    </ul>
-</nav>
 
+    <!-- Basic (Transparent) Vertical Nav example -->
+    <div class="o-grid">
+        <div class="o-grid__cell">
+            <h4>Basic Vertical Navigation List</h4>
+            <p>Add <code class="language-markup">nav--vertical-left</code> class to your list. Left Navigation
+                links are right aligned by default.</p>
+            <p>All vertical navigation lists span entire width available so make sure to have a container block
+                element.</p>
+            <ul class="nav nav--vertical-left">
+                <li class="nav__item nav__item--active"><a class="nav__link" href="#">Home</a></li>
+                <li class="nav__item "><a class="nav__link" href="#">About</a></li>
+                <li class="nav__item "><a class="nav__link" href="#">Projects</a></li>
+                <li class="nav__item "><a class="nav__link" href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Basic (Transparent) Vertical Nav example markup-->
+    <div class="o-grid">
+        <div class="o-grid__cell">
+            <div class="c-collapse">
+                <div class="c-collapse__controls-container--justified-text">
+                    <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                    <a class="c-collapse__toggle">toggle markup</a>
+                </div>
+                <div class="c-collapse__content-container c-collapse__content-container--dark">
+                    <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;ul class=&quot;nav nav--vertical-left&quot;&gt;
+    &lt;li class=&quot;nav__item &quot;&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;nav__item &quot;&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;nav__item &quot;&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#&quot;&gt;Projects&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;nav__item &quot;&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end Basic (Transparent) Vertical Nav example -->
+
+    <!-- Navigation Styles - Horizontal Light and Dark -->
+    <div class="o-grid">
+        <div class="o-grid__cell">
+            <h4>Navigation Styles</h4>
+            <p>For a <strong>dark</strong> version, add <code class="language-markup">nav--dark</code> class to your
+                list.</p>
+            <ul class="nav nav--dark">
+                <li class="nav__item nav__item--active"><a class="nav__link" href="#">Home</a></li>
+                <li class="nav__item "><a class="nav__link" href="#">About</a></li>
+                <li class="nav__item "><a class="nav__link" href="#">Projects</a></li>
+                <li class="nav__item "><a class="nav__link" href="#">Contact</a></li>
+            </ul>
+            <br>
+            <p>For a <strong>light</strong> version, add <code class="language-markup">nav--light</code> class to your
+                list.</p>
+            <ul class="nav nav--light">
+                <li class="nav__item nav__item--active"><a class="nav__link" href="#">Home</a></li>
+                <li class="nav__item "><a class="nav__link" href="#">About</a></li>
+                <li class="nav__item "><a class="nav__link" href="#">Projects</a></li>
+                <li class="nav__item "><a class="nav__link" href="#">Contact</a></li>
+            </ul>
+            <br>
+        </div>
+    </div>
+
+    <!-- Navigation Styles - Horizontal Light and Dark markup-->
+    <div class="o-grid">
+        <div class="o-grid__cell">
+            <div class="c-collapse">
+                <div class="c-collapse__controls-container--justified-text">
+                    <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                    <a class="c-collapse__toggle">toggle markup</a>
+                </div>
+                <div class="c-collapse__content-container c-collapse__content-container--dark">
+                    <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;ul class=&quot;nav nav--dark&quot;&gt; &lt;!-- dark horizontal navigation --&gt;
+	&lt;li class=&quot;nav__item nav__item--active&quot;&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+	&lt;li class=&quot;nav__item &quot;&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+	&lt;li class=&quot;nav__item &quot;&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#&quot;&gt;Projects&lt;/a&gt;&lt;/li&gt;
+	&lt;li class=&quot;nav__item &quot;&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul class=&quot;nav nav--light&quot;&gt; &lt;!-- light horizontal navigation --&gt;
+	&lt;li class=&quot;nav__item nav__item--active&quot;&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+	&lt;li class=&quot;nav__item &quot;&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+	&lt;li class=&quot;nav__item &quot;&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#&quot;&gt;Projects&lt;/a&gt;&lt;/li&gt;
+	&lt;li class=&quot;nav__item &quot;&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end Navigation Styles - Horizontal Light and Dark -->
+
+
+    <!-- Navigation Styles - Vertical Light and Dark -->
+    <div class="o-grid">
+        <div class="o-grid__cell">
+            <h4>Vertical Navigation Styles</h4>
+            <p>For a <strong>dark</strong> version, add <code class="language-markup">nav--dark</code> class to your
+                list along with <code class="language-markup">nav--vertical-left</code>, or
+                <code class="language-markup">nav--vertical-right</code>.</p>
+            <ul class="nav nav--vertical-right nav--dark">
+                <li class="nav__item nav__item--active"><a class="nav__link" href="#">Home</a></li>
+                <li class="nav__item "><a class="nav__link" href="#">About</a></li>
+                <li class="nav__item "><a class="nav__link" href="#">Projects</a></li>
+                <li class="nav__item "><a class="nav__link" href="#">Contact</a></li>
+            </ul>
+            <br><br>
+            <p>For a <strong>light</strong> version, add <code class="language-markup">nav--light</code> class to your
+                list along with <code class="language-markup">nav--vertical-left</code>, or
+                <code class="language-markup">nav--vertical-right</code>.</p>
+            <ul class="nav nav--vertical-left nav--light">
+                <li class="nav__item nav__item--active"><a class="nav__link" href="#">Home</a></li>
+                <li class="nav__item "><a class="nav__link" href="#">About</a></li>
+                <li class="nav__item "><a class="nav__link" href="#">Projects</a></li>
+                <li class="nav__item "><a class="nav__link" href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Navigation Styles - Vertical Light and Dark markup-->
+    <div class="o-grid">
+        <div class="o-grid__cell">
+            <div class="c-collapse">
+                <div class="c-collapse__controls-container--justified-text">
+                    <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                    <a class="c-collapse__toggle">toggle markup</a>
+                </div>
+                <div class="c-collapse__content-container c-collapse__content-container--dark">
+                    <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;ul class=&quot;nav nav--vertical-right nav--dark&quot;&gt; &lt;!-- dark vertical right navigation --&gt;
+	&lt;li class=&quot;nav__item nav__item--active&quot;&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+	&lt;li class=&quot;nav__item &quot;&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+	&lt;li class=&quot;nav__item &quot;&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#&quot;&gt;Projects&lt;/a&gt;&lt;/li&gt;
+	&lt;li class=&quot;nav__item &quot;&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;ul class=&quot;nav nav--vertical-left nav--light&quot;&gt; &lt;!-- light vertical left navigation --&gt;
+	&lt;li class=&quot;nav__item nav__item--active&quot;&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+	&lt;li class=&quot;nav__item &quot;&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+	&lt;li class=&quot;nav__item &quot;&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#&quot;&gt;Projects&lt;/a&gt;&lt;/li&gt;
+	&lt;li class=&quot;nav__item &quot;&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end Navigation Styles - Vertical Light and Dark -->
+
+    <div class="o-grid">
+        <div class="o-grid__cell">
+            <h4>Other Variations - Usage</h4>
+            <p>Apart from just aesthetic classes, if you would also like your navigation list to stick to
+                the top on page scroll, you can add <code class="language-markup">data-nav-type="sticky"</code> to
+                your nav list and include a script <code class="language-markup">sticky-nav.js</code> (mandatory). </p>
+            <p>You may optionally add more details like:</p>
+            <ol>
+                <li>the scroll content ID (if you have a main content) using
+                    <code class="language-markup">data-content-id="contentId"</code>,
+                </li>
+                <li>the header ID (if you have a site <code class="language-markup">&lt;header&gt;</code>) using
+                    <code class="language-markup">data-header-id="headerId"</code>, and
+                </li>
+                <li>the footer ID (if you have a site <code class="language-markup">&lt;footer&gt;</code>) using
+                    <code class="language-markup">data-footer-id="footerId"</code>
+                </li>
+            </ol>
+            <p>Have a look at the code below.</p>
+        </div>
+    </div>
+
+    <div class="o-grid">
+        <div class="o-grid__cell">
+            <div class="c-collapse">
+                <div class="c-collapse__controls-container--justified-text">
+                    <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                    <a class="c-collapse__toggle">toggle markup</a>
+                </div>
+                <div class="c-collapse__content-container c-collapse__content-container--dark c-collapse__content--is-visible"
+                     style="height: auto;">
+                    <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;!-- Sticky Navigation --&gt;
+&lt;ul class=&quot;nav nav--light&quot; data-nav-type="sticky" data-content-id="contentId" data-header-id="headerId" data-footer-id="footerId"&gt;
+	&lt;li class=&quot;nav__item nav__item--active&quot;&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+	&lt;li class=&quot;nav__item &quot;&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+	&lt;li class=&quot;nav__item &quot;&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#&quot;&gt;Projects&lt;/a&gt;&lt;/li&gt;
+	&lt;li class=&quot;nav__item &quot;&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="website-components__component" id="scrollspy">
+    <h3>Scrollspy</h3>
+    <p>You can make a navigation list a scrollspy navigation list which will highlight the section you are at.</p>
+    <p>Any navigation list, horizontal or vertical, can be made into a scrollspy.</p>
+    <p><strong>You can see a vertical scrollspy working here on the showcase website.</strong></p>
+
+    <h4>Usage</h4>
+    <p>In order to make a navigation list into a scrollspy, you need to mandatorily add the following attributes to
+        it.</p>
+    <ol>
+        <li>Add <code class="language-markup">data-scrollspy</code> to let the system know that the nav list will be
+            a scrollspy,
+        </li>
+        <li>Add <code class="language-markup">data-spy-on="main-content"</code> to let the system know the main content
+            ID
+        </li>
+        <li>Wrap your entire content area inside <code class="language-markup">&lt;div id="main-content"&gt;</code>
+            (note the same ID in step 2), and
+        </li>
+        <li>Add <code class="language-markup">data-nav-type="sticky"</code> to the nav list so that it sticks within
+            the viewport.
+        </li>
+        <li>Include Script <code class="language-markup">sticky-nav.js</code></li>
+        <li>Include Script <code class="language-markup">scrollspy-nav.js</code></li>
+    </ol>
+
+    <!-- Basic (Transparent) Nav example markup -->
+    <div class="o-grid">
+        <div class="o-grid__cell">
+            <div class="c-collapse">
+                <div class="c-collapse__controls-container--justified-text">
+                    <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                    <a class="c-collapse__toggle">toggle markup</a>
+                </div>
+                <div class="c-collapse__content-container c-collapse__content-container--dark c-collapse__content--is-visible"
+                     style="height: auto;">
+                    <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;ul class=&quot;nav&quot; data-scrollspy data-spy-on=&quot;main-content&quot; data-nav-type=&quot;sticky&quot; &gt;
+    &lt;li class=&quot;nav__item nav__item--active&quot;&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;nav__item &quot;&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;nav__item &quot;&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#&quot;&gt;Projects&lt;/a&gt;&lt;/li&gt;
+    &lt;li class=&quot;nav__item &quot;&gt;&lt;a class=&quot;nav__link&quot; href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end Basic (Transparent) Nav example -->
+</section>
+<section class="website-components__component" id="scrollspy-progress">
+    <h3>Scrollspy (Progress Style)</h3>
+    <p>Create a Progress type Scrollspy on top of your page. It will tell you how much of the page has been seen
+        through and how much is left.</p>
+    <p>This can be very useful especially for blogs where, there are long articles, as this will tell how much the
+        article has already been read.</p>
+    <p><strong>To see a working progress type scrollspy,
+        <a class="normal"
+           href="https://aashishnagpal.github.io/ba-ui-framework-eureka/an-components/scrollspy-progress.html">
+            click here</a>.</strong>
+    </p>
+    <h4>Usage</h4>
+    <p>In order to make create a progress type scrollspy, you need to mandatorily add the following attributes to
+        it.</p>
+    <ol>
+        <li>Include the following code given below within your HTML markup. You should ideally have it placed as the
+            first child of your <code class="language-markup">&lt;body&gt;</code> tag.
+        </li>
+        <li>Wrap your entire content area inside <code class="language-markup">&lt;div id="main-content"&gt;</code>
+            (note the ID, it should match the value of <code class="language-markup">data-spy-on</code> attribute), and
+        </li>
+        <li>Include Script <code class="language-markup">scrollspy-progress.js</code></li>
+    </ol>
+
+    <!-- Basic (Transparent) Nav example markup -->
+    <div class="o-grid">
+        <div class="o-grid__cell">
+            <div class="c-collapse">
+                <div class="c-collapse__controls-container--justified-text">
+                    <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                    <a class="c-collapse__toggle">toggle markup</a>
+                </div>
+                <div class="c-collapse__content-container c-collapse__content-container--dark c-collapse__content--is-visible"
+                     style="height: auto;">
+                    <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;div class=&quot;scrollspy c-progress c-progress--rounded&quot; data-spy-on=&quot;main&quot;&gt;
+    &lt;div class=&quot;c-progressbar__meter progress-animate&quot; data-animprogress=&quot;true&quot;
+        role=&quot;progressbar&quot; aria-valuenow=&quot;0&quot; aria-valuemin=&quot;0&quot; aria-valuemax=&quot;100&quot;&gt;
+        &lt;span class=&quot;c-progress__label&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end Basic (Transparent) Nav example -->
+</section>
+<script src="../prism/prism.js"></script>
+<script src="../javascript/collapse.js"></script>
 <script src="../javascript/sticky-nav.js"></script>
 </body>
 </html>
