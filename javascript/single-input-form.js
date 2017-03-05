@@ -3,6 +3,7 @@
   var nextBtnsArr = [].slice.call(nextBtns);
   var indicators = document.querySelectorAll('.c-sif__indicator');
   var inputWraps = document.querySelectorAll('.c-sif__input-wrap');
+  var labels = document.querySelectorAll('.c-sif__label');
   var inputWraps2 = document.querySelectorAll('.c-sif__input-wrap');
   var inputFields = document.querySelectorAll('.c-sif__input');
 
@@ -42,11 +43,14 @@
 
       console.log("clicked: " + index);
 
+      if (index === 0) return;
       indicators[index].style.animationName = 'fadeOutRight';
       nextBtns[index].style.animationName = 'fadeOut';
-      inputFields[index].style.animationName = 'fadeOut';
+      labels[index].style.animationName = 'fadeOut';
       inputWraps[index].style.animationName = 'fadeOut';
-      inputWraps[index + 1].style.animationName = 'fadeIn';
+      // inputWraps[index].classList.remove('c-sif-active');
+      // inputWraps[index + 1].style.animationName = 'fadeIn';
+      inputWraps[index - 1].classList.add('c-sif-active');
     });
   }
 

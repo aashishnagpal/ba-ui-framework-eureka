@@ -41,7 +41,7 @@
   //border: 2px solid $secondary-light-color;
   border-radius: 1.5em;
   //z-index: 0;
-
+  opacity: 0;
   visibility: hidden;
   //&:first-of-type {
   //  visibility: visible;
@@ -61,11 +61,6 @@
   background-color: transparent;
   width: 10em;
 
-  animation-duration: 0.1s;
-  animation-timing-function: ease-out;
-  animation-fill-mode: forwards;
-  animation-delay: 0.2s;
-
   &:focus + .c-sif__label {
     opacity: 0;
     visibility: hidden;
@@ -77,6 +72,11 @@
   left: 3.5em;
   color: $secondary-dark-color;
   transition: opacity 0.2s, visibility 0s 0.2s;
+
+  animation-duration: 0.1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  animation-delay: 0.2s;
 
   .c-sif__icon-label {
     margin-right: 0.3em;
@@ -120,6 +120,7 @@
 }
 
 .c-sif-active {
+  opacity: 1;
   visibility: visible;
 }
 
@@ -176,13 +177,13 @@
   30% {
     transform: rotate(0deg);
   }
-  50% {
+  80% {
     opacity: 1;
   }
   100% {
     left: auto;
     right: 0;
-    transform: rotate(720deg);
+    transform: rotate(360deg);
     opacity: 0;
   }
 }
