@@ -49,6 +49,9 @@
 
 .c-collapse__content {
   padding: 2em;
+  &--prism-code-style {
+    padding: 0;
+  }
 }
 
 .u-example-code {
