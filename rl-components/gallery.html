@@ -9,17 +9,58 @@
     <link rel="stylesheet" href="../styles/css/eureka.css">
   </head>
   <body>
+
+    <section class="website-components__component" id="<component name>">
+
     <h3>Gallery with Full-Screen Viewer</h3>
     <p>Modify the thumbnail's width and height in CSS. The viewer reveals the image as a full-page background.</p>
-    <div class="c-gallery-main">
-      <div class="c-thumbnails-row o-grid c-gallery">
-        <div class="c-thumbnail c-gallery--clickable"></div>
-        <div class="c-thumbnail c-gallery--clickable"></div>
-        <div class="c-thumbnail c-gallery--clickable"></div>
-        <div class="c-thumbnail c-gallery--clickable"></div>
-        <div class="c-thumbnail c-gallery--clickable"></div>
+
+    <!-- component example grid container -->
+    <div class="o-grid">
+      <div class="o-grid__cell">
+        <div class="c-gallery-main">
+          <div class="c-thumbnails-row o-grid c-gallery">
+            <div class="c-thumbnail c-gallery--clickable"></div>
+            <div class="c-thumbnail c-gallery--clickable"></div>
+            <div class="c-thumbnail c-gallery--clickable"></div>
+            <div class="c-thumbnail c-gallery--clickable"></div>
+            <div class="c-thumbnail c-gallery--clickable"></div>
+          </div>
+          <div class="c-gallery-viewer"></div>
+        </div>
       </div>
-      <div class="c-gallery-viewer"></div>
     </div>
+
+    <!-- code well markup -->
+    <div class="o-grid">
+      <div class="o-grid__cell">
+        <div class="c-collapse">
+          <div class="c-collapse__controls-container--justified-text">
+            <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+            <a class="c-collapse__toggle">toggle markup</a>
+          </div>
+          <div class="c-collapse__content-container c-collapse__content-container--dark">
+            <div class="c-collapse__content">
+            <pre class="u-pre--wrap"><code class="u-example-code">
+              <div class="c-gallery-main">
+                <div class="c-thumbnails-row o-grid c-gallery">
+                  <div class="c-thumbnail c-gallery--clickable"></div>
+                  <div class="c-thumbnail c-gallery--clickable"></div>
+                  <div class="c-thumbnail c-gallery--clickable"></div>
+                  <div class="c-thumbnail c-gallery--clickable"></div>
+                  <div class="c-thumbnail c-gallery--clickable"></div>
+                </div>
+                <div class="c-gallery-viewer"></div>
+              </div>
+            </code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    </section>
+
   </body>
 </html>
