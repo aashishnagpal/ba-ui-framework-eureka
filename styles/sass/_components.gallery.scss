@@ -8,7 +8,7 @@
                     (2, "http://res.cloudinary.com/azureowl/image/upload/v1488151623/placeholder2_gl44o6.png"),
                     (3, "https://unsplash.it/760"),
                     (4, "https://unsplash.it/853"),
-                    (5, "https://unsplash.it/570") {
+                    (5, "https://unsplash.it/520") {
   .c-gallery--clickable:nth-of-type(#{$nth}) {
     background-image: url(#{$img});
     @include background-img;

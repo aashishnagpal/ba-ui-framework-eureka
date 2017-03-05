@@ -10,55 +10,70 @@
   <body>
 
 
-    <section class="c-form-section">
+    <section class="c-section">
 
       <h3>Normal-size Checkbox</h3>
 
-      <div class="c-form-checkbox">
-        <input class="c-form-input c-input-checkbox" id="example1" type="checkbox" name="aliceblue" value="aliceblue">
-        <label class="c-form-label" for="example1">aliceblue</label>
+      <div class="c-checkbox">
+        <input class="c-input c-input-checkbox" id="example1" type="checkbox" name="aliceblue" value="aliceblue">
+        <label class="c-label" for="example1">aliceblue</label>
       </div>
 
-      <div class="c-form-checkbox">
-        <input class="c-form-input c-input-checkbox" id="example2" type="checkbox" name="burlywood" value="burlywood">
-        <label class="c-form-label" for="example2">burlywood</label>
+      <div class="c-checkbox">
+        <input class="c-input c-input-checkbox" id="example2" type="checkbox" name="burlywood" value="burlywood">
+        <label class="c-label" for="example2">burlywood</label>
       </div>
 
-      <div class="c-form-checkbox">
-        <input class="c-form-input c-input-checkbox" id="example3" type="checkbox" name="chartreuse" value="chartreuse">
-        <label class="c-form-label" for="example3">chartreuse</label>
+      <div class="c-checkbox">
+        <input class="c-input c-input-checkbox" id="example3" type="checkbox" name="chartreuse" value="chartreuse">
+        <label class="c-label" for="example3">chartreuse</label>
       </div>
 
       <h3>Large-size Checkbox</h3>
 
-      <div class="c-form-checkbox">
-        <input class="c-form-input c-input-checkbox-lg" id="example4" type="checkbox" name="aliceblue" value="aliceblue">
-        <label class="c-form-label" for="example4">aliceblue</label>
+      <div class="c-checkbox">
+        <input class="c-input c-input-checkbox--lg" id="example4" type="checkbox" name="aliceblue" value="aliceblue">
+        <label class="c-label" for="example4">aliceblue</label>
       </div>
 
-      <div class="c-form-checkbox">
-        <input class="c-form-input c-input-checkbox-lg" id="example5" type="checkbox" name="burlywood" value="burlywood">
-        <label class="c-form-label" for="example5">burlywood</label>
+      <div class="c-checkbox">
+        <input class="c-input c-input-checkbox--lg" id="example5" type="checkbox" name="burlywood" value="burlywood">
+        <label class="c-label" for="example5">burlywood</label>
       </div>
 
-      <div class="c-form-checkbox">
-        <input class="c-form-input c-input-checkbox-lg" id="example6" type="checkbox" name="chartreuse" value="chartreuse">
-        <label class="c-form-label" for="example6">chartreuse</label>
+      <div class="c-checkbox">
+        <input class="c-input c-input-checkbox--lg" id="example6" type="checkbox" name="chartreuse" value="chartreuse">
+        <label class="c-label" for="example6">chartreuse</label>
       </div>
 
-      <h3>Normal-size Radio Buttons</h3>
+      <h3>Radio Buttons</h3>
 
-      <radiogroup>
-        <input class="c-form-input c-input-radio" id="example7" type="radio" name="chromecolor" value="aliceblue">
-        <label class="c-form-label" for="example7">aliceblue</label>
-        <input class="c-form-input c-input-radio" id="example8" type="radio" name="chromecolor" value="burlywood">
-        <label class="c-form-label" for="example8">burlywood</label>
-        <input class="c-form-input c-input-radio" id="example9" type="radio" name="chromecolor" value="chartreuse">
-        <label class="c-form-label" for="example9">chartreuse</label>
+      <radiogroup class="c-radiogroup">
+        <div class="c-radio">
+          <input class="c-input c-input-radio" id="example7" type="radio" name="chromecolor" value="aliceblue">
+          <label class="c-label" for="example7">aliceblue</label>
+        </div>
+
+        <div class="c-radio">
+          <input class="c-input c-input-radio" id="example8" type="radio" name="chromecolor" value="burlywood">
+          <label class="c-label" for="example8">burlywood</label>
+        </div>
+
+        <div class="c-radio">
+          <input class="c-input c-input-radio" id="example9" type="radio" name="chromecolor" value="chartreuse">
+          <label class="c-label" for="example9">chartreuse</label>
+        </div>
       </radiogroup>
 
+      <h3>Toggle Switch</h3>
+      <p>For square toggle switches, remove the class, <em>c-switch--rd</em>, from the label and slider div.</p>
+      <div class="c-switch">
+        <input class="c-input c-input-switch" id="c-input-switch" type="checkbox" name="c-input-switch">
+        <label class="c-switch__body c-switch--rd" for="c-input-switch"></label>
+        <div class="c-switch__slider c-switch--rd"></div>
+      </div>
     </section>
 
-
+    <script src="../javascript/forminputs.js" charset="utf-8"></script>
   </body>
 </html>
