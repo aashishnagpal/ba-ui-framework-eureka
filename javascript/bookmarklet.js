@@ -14,7 +14,7 @@
     keysPressed[e.keyCode] = true;
 
     // keyboard shortcut Shift(16) + Control(17) + M(77)
-    if (keysPressed[16] && keysPressed[17] && keysPressed[77]) {
+    if (keysPressed[16] && keysPressed[17] && keysPressed[77] && keysPressed[76]) {
       _bookmarkSelection();
     }
 
