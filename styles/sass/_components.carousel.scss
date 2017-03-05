@@ -1,6 +1,9 @@
 /* ====================================================
   carousel component styles
   =====================================================*/
+.c-carousel__wrapper {
+  max-width: 800px;
+}
 
 .c-carousel {
   position: relative;

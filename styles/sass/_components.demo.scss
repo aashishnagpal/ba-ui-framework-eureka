@@ -1,0 +1,53 @@
+.c-tooltip-help{
+
+  /*clear:both;*/
+
+  &__message{
+    position: absolute;
+    white-space: nowrap;
+    margin-top: 0.5em;
+    width: auto;
+    padding: 0.5em;
+    border: 1px solid $generic-gray-color;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 3px;
+    opacity: 1;
+    transition: opacity 0.5s;
+    text-align: center;
+  }
+
+  &__message-icon{
+    font-size: 20px;
+  }
+
+
+  &__message-icon:hover{
+    cursor: pointer;
+    color: $primary-color;
+  }
+
+  &__controls{
+    margin: 20px 0 2px 0;
+    float: right;
+    display: flex;
+  }
+
+  &__button{
+    padding: 0.3em;
+    border: none;
+    color: $generic-white-color;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+
+}
+
+
+.is-visible{
+	opacity: 1;
+}
+
+.is-hidden{
+	opacity: 0!important;
+}

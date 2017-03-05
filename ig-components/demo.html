@@ -1,0 +1,99 @@
+<html>
+<head>
+  <title>Demo Component</title>
+  <link href="../styles/css/eureka.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+<body>
+<style>
+
+  .app-demo{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+  }
+
+
+  .block1{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .block2{
+
+    position: absolute;
+    top: 50%;
+    left: 70%;
+  }
+
+  .block3{
+
+    position: absolute;
+    top: 80%;
+    left: 20%;
+  }
+
+  .block4{
+
+    position: absolute;
+    top: 30%;
+    left: 90%;
+  }
+
+</style>
+
+    <div class="app-demo">
+      <div class="c-tooltip-help block1" help-order="help1">
+        <span class="c-tooltip-help__message is-hidden">
+          This is the first message
+          <ul class="c-tooltip-help__controls">
+            <li><button class="c-tooltip-help__controls-prev c-tooltip-help__button u-bg-primary" title="Previous Tip"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button></li>
+            <li><button class="c-tooltip-help__button u-bg-disabled" title="Close Tip"><i class="fa fa-times" aria-hidden="true"></i></button></li>
+            <li><button class="c-tooltip-help__controls-next c-tooltip-help__button u-bg-primary" title="Next Tip"><i class="fa fa-angle-double-right" aria-hidden="true"></i></button></li>
+          </ul>
+        </span>
+      </div>
+      <div class="c-tooltip-help block3" help-order="help3">
+        <span class="c-tooltip-help__message is-hidden">
+          This is the third message
+            <ul class="c-tooltip-help__controls">
+              <li><button class="c-tooltip-help__controls-prev c-tooltip-help__button u-bg-primary" title="Previous Tip"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button></li>
+            <li><button class="c-tooltip-help__button u-bg-disabled" title="Close Tip"><i class="fa fa-times" aria-hidden="true"></i></button></li>
+            <li><button class="c-tooltip-help__controls-next c-tooltip-help__button u-bg-primary" title="Next Tip"><i class="fa fa-angle-double-right" aria-hidden="true"></i></button></li>
+            </ul>
+        </span>
+      </div>
+      <div class="c-tooltip-help block2" help-order="help2">
+        <span class="c-tooltip-help__message is-hidden">
+          This is the second message
+          <ul class="c-tooltip-help__controls">
+            <li><button class="c-tooltip-help__controls-prev c-tooltip-help__button u-bg-primary" title="Previous Tip"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button></li>
+            <li><button class="c-tooltip-help__button u-bg-disabled" title="Close Tip"><i class="fa fa-times" aria-hidden="true"></i></button></li>
+            <li><button class="c-tooltip-help__controls-next c-tooltip-help__button u-bg-primary" title="Next Tip"><i class="fa fa-angle-double-right" aria-hidden="true"></i></button></li>
+          </ul>
+        </span>
+      </div>
+      <div class="c-tooltip-help block4" help-order="help4">
+        <span class="c-tooltip-help__message is-hidden">
+          This is the fourth message This is the fourth message
+          <ul class="c-tooltip-help__controls">
+            <li><button class="c-tooltip-help__controls-prev c-tooltip-help__button u-bg-primary" title="Previous Tip"><i class="fa fa-angle-double-left" aria-hidden="true"></i></button></li>
+            <li><button class="c-tooltip-help__button u-bg-disabled" title="Close Tip"><i class="fa fa-times" aria-hidden="true"></i></button></li>
+            <li><button class="c-tooltip-help__controls-next c-tooltip-help__button u-bg-primary" title="Next Tip"><i class="fa fa-angle-double-right" aria-hidden="true"></i></button></li>
+          </ul>
+        </span>
+      </div>
+
+    </div>
+
+
+<script src="../javascript/demo.js"></script>
+
+
+
+</script>
+
+</body>
+</html>

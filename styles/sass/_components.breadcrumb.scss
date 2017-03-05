@@ -1,5 +1,5 @@
 .c-breadcrumb {
-  // background-color: blue;
+  display: flex;
   height: 2em;
   &__li + &__li:before {
     color: $secondary-light-color;
