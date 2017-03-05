@@ -5,54 +5,11 @@
   <meta charset="UTF-8">
   <title>Pagination component</title>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../prism/prism.css">
   <link rel="stylesheet" href="../styles/css/eureka.css">
 </head>
 
 <body>
-  <div class="generic-wrapper" style="width: 30em">
-    <h2>Pagination</h2>
-    <!-- simple pagination style -->
-    <h3>Simple</h3>
-    <ol class="c-pagination">
-      <li class="c-pagination__nav--prev"><a href="#"><i class="fa fa-chevron-left"></i></a></li>
-      <li class="c-pagination__item"><a href="#">1</a></li>
-      <li class="c-pagination__item"><a href="#"><i class="fa fa-ellipsis-h"></i></a></li>
-      <li class="c-pagination__item"><a href="#">14</a></li>
-      <li class="c-pagination__item--current"><a href="#">15</a></li>
-      <li class="c-pagination__item"><a href="#">16</a></li>
-      <li class="c-pagination__item"><a href="#"><i class="fa fa-ellipsis-h"></i></a></li>
-      <li class="c-pagination__item"><a href="#">32</a></li>
-      <li class="c-pagination__nav--next"><a href="#"><i class="fa fa-chevron-right"></i></a></li>
-    </ol>
-    <!-- round pagination style -->
-    <h3>Round</h3>
-    <ol class="c-pagination--round">
-      <li class="c-pagination__nav--prev"><a href="#"><i class="fa fa-chevron-left"></i></a></li>
-      <li class="c-pagination__item"><a href="#">1</a></li>
-      <li class="c-pagination__item"><a href="#"><i class="fa fa-ellipsis-h"></i></a></li>
-      <li class="c-pagination__item"><a href="#">14</a></li>
-      <li class="c-pagination__item--current"><a href="#">15</a></li>
-      <li class="c-pagination__item"><a href="#">16</a></li>
-      <li class="c-pagination__item"><a href="#"><i class="fa fa-ellipsis-h"></i></a></li>
-      <li class="c-pagination__item"><a href="#">32</a></li>
-      <li class="c-pagination__nav--next"><a href="#"><i class="fa fa-chevron-right"></i></a></li>
-    </ol>
-    <!-- square pagination style -->
-    <h3>Square</h3>
-    <ol class="c-pagination--square">
-      <li class="c-pagination__nav--prev"><a href="#"><i class="fa fa-chevron-left"></i></a></li>
-      <li class="c-pagination__item"><a href="#">1</a></li>
-      <li class="c-pagination__item"><a href="#"><i class="fa fa-ellipsis-h"></i></a></li>
-      <li class="c-pagination__item"><a href="#">14</a></li>
-      <li class="c-pagination__item--current"><a href="#">15</a></li>
-      <li class="c-pagination__item"><a href="#">16</a></li>
-      <li class="c-pagination__item"><a href="#"><i class="fa fa-ellipsis-h"></i></a></li>
-      <li class="c-pagination__item"><a href="#">32</a></li>
-      <li class="c-pagination__nav--next"><a href="#"><i class="fa fa-chevron-right"></i></a></li>
-    </ol>
-  </div>
-
-
 <!-- ============================== -->
 <!-- start template -->
 <section class="website-components__component" id="<component name>">
@@ -65,7 +22,7 @@
     <div class="o-grid__cell u-1of2">
     <!-- simple pagination style -->
     <h3>Simple</h3>
-    <p>Use class "c-pagination"</p>
+    <p>Use <code class="language-markup">&lt;ol class="c-pagination"&gt;</code></p>
     <ol class="c-pagination">
       <li class="c-pagination__nav--prev"><a href="#"><i class="fa fa-chevron-left"></i></a></li>
       <li class="c-pagination__item"><a href="#">1</a></li>
@@ -81,7 +38,7 @@
     <div class="o-grid__cell u-1of2">
     <!-- round pagination style -->
     <h3>Round</h3>
-    <p>Use class "c-pagination--round"</p>
+    <p>Use <code class="language-markup">&lt;ol class="c-pagination--round"&gt;</code></p>
     <ol class="c-pagination--round">
       <li class="c-pagination__nav--prev"><a href="#"><i class="fa fa-chevron-left"></i></a></li>
       <li class="c-pagination__item"><a href="#">1</a></li>
@@ -97,7 +54,7 @@
     <div class="o-grid__cell u-1of2">
     <!-- square pagination style -->
     <h3>Square</h3>
-    <p>Use class "c-pagination--square"</p>
+    <p>Use <code class="language-markup">&lt;ol class="c-pagination--square"&gt;</code></p>
     <ol class="c-pagination--square">
       <li class="c-pagination__nav--prev"><a href="#"><i class="fa fa-chevron-left"></i></a></li>
       <li class="c-pagination__item"><a href="#">1</a></li>
@@ -121,8 +78,8 @@
           <a class="c-collapse__toggle">toggle markup</a>
         </div>
         <div class="c-collapse__content-container c-collapse__content-container--dark">
-          <div class="c-collapse__content">
-<pre class="u-pre--wrap"><code class="u-example-code">&lt;ol class=&quot;c-pagination&quot;&gt;
+          <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;ol class=&quot;c-pagination&quot;&gt;
   &lt;li class=&quot;c-pagination__nav--prev&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-chevron-left&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
   &lt;li class=&quot;c-pagination__item&quot;&gt;&lt;a href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
   &lt;li class=&quot;c-pagination__item&quot;&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-ellipsis-h&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
@@ -144,6 +101,7 @@
 </section>
 <!-- end template -->
 <script src="../javascript/collapse.js"></script>
+<script src="../prism/prism.js"></script>
 </body>
 
 </html>

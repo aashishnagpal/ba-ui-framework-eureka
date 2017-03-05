@@ -1,0 +1,59 @@
+/* ==========================================================================
+   Single-input Form component styles
+   ========================================================================== */
+
+/* sub-elements styles
+   ========================================================================== */
+
+.c-reveal {
+  position: relative;
+  width: 9.5em;
+  height: 9.5em;
+
+  border: 1px solid red;
+
+  &__visible {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    z-index: 5;
+    background-color: $generic-gray-color;
+
+
+
+    span {
+      width: 100%;
+      height: 100%;
+
+    }
+
+    &:hover {
+      //opacity: 0;
+      //visibility: hidden;
+      //transition: opacity 0.3s, visibility 0s 0.3s;
+      animation: basicReveal 0.3s forwards;
+    }
+  }
+
+  &__hidden {
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    .c-reveal__img-hidden {
+      width: 100%;
+    }
+  }
+}
+
+@keyframes basicReveal {
+  99% {
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
