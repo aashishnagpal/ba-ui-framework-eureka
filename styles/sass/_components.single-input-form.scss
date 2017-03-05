@@ -9,11 +9,7 @@
   font-size: 1em;
   display: block;
   position: relative;
-  width: 30em;
-  height: 5em;
-  //border: 1px solid red;
-
-  //overflow: hidden;
+  margin-bottom: 5em;
 
   label,
   input,
@@ -33,33 +29,42 @@
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
-  width: 18em;
+  width: 15em;
   height: 3em;
   padding-left: 3.5em;
   padding-right: 3.5em;
   background-color: darken($generic-gray-color, 4%);
-  //border: 2px solid $secondary-light-color;
   border-radius: 1.5em;
-  //z-index: 0;
   opacity: 0;
   visibility: hidden;
-  //&:first-of-type {
-  //  visibility: visible;
-  //}
 
   animation-duration: 0.1s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
-  animation-delay: 0.6s;
+  animation-delay: 0.7s;
+}
+
+.c-sif__input-wrap--last {
+  background-color: $primary-dark-color;
+  color: $generic-white-color;
+  text-transform: uppercase;
+  span {
+    font-size: 1.3em;
+  }
 }
 
 .c-sif__input {
   border: 0;
   line-height: 2.4em;
-  font-size: 1.1em;
+  font-size: 1em;
+  color: darken($secondary-dark-color, 15%);
   margin-left: 0;
   background-color: transparent;
-  width: 10em;
+  width: 7em;
+  animation-duration: 0.1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 0.2s;
 
   &:focus + .c-sif__label {
     opacity: 0;
@@ -72,11 +77,9 @@
   left: 3.5em;
   color: $secondary-dark-color;
   transition: opacity 0.2s, visibility 0s 0.2s;
-
   animation-duration: 0.1s;
   animation-timing-function: ease-in;
   animation-fill-mode: forwards;
-  animation-delay: 0.2s;
 
   .c-sif__icon-label {
     margin-right: 0.3em;
@@ -87,36 +90,38 @@
 .c-sif__btn {
   position: absolute;
   top: 0;
-  //top: 50%;
-  //transform: translateY(-50%);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   height: 3em;
   width: 3em;
-  margin: 0;
   border-radius: 50%;
-
-  color: $generic-white-color;
+  margin: 0;
 }
 
 .c-sif__indicator {
   left: 0;
-  animation-duration: 0.6s;
-  animation-timing-function: ease-out;
+  color: $generic-white-color;
+  animation-duration: 0.7s;
   animation-fill-mode: forwards;
   z-index: 5;
 }
 
 .c-sif__btn {
+  background-color: transparent;
+  color: $primary-color;
   right: 0;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: color 0.2s;
 
   animation-duration: 0.2s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
-  animation-delay: 0.4s;
+  animation-delay: 0.5s;
+
+  :hover {
+    color: $primary-dark-color;
+  }
 }
 
 .c-sif-active {
@@ -124,60 +129,27 @@
   visibility: visible;
 }
 
-// colors for different inputs
-.c-sif-color--0 {
-  .c-sif__indicator {
-    background-color: lighten($primary-color, 3%);
-  }
-
-  .c-sif__btn {
-    background-color: lighten($primary-color, 15%);
-    &:hover {
-      background-color: lighten($primary-color, 3%);
-    }
-  }
+// colors for different indicators
+.c-sif-color--0 .c-sif__indicator {
+  background-color: lighten($primary-color, 3%);
 }
 
-.c-sif-color--1 {
-  .c-sif__indicator {
-    background-color: darken($primary-color, 15%);
-  }
-
-  .c-sif__btn {
-    background-color: lighten($primary-color, 3%);
-
-    &:hover {
-      background-color: darken($primary-color, 15%);
-    }
-  }
+.c-sif-color--1 .c-sif__indicator {
+  background-color: darken($primary-color, 15%);
 }
 
-.c-sif-color--2 {
-  .c-sif__indicator {
-    background-color: $primary-dark-color;
-  }
-
-  .c-sif__btn {
-    background-color: darken($primary-color, 15%);
-
-    &:hover {
-      background-color: $primary-dark-color;
-    }
-  }
+.c-sif-color--2 .c-sif__indicator {
+  background-color: $primary-dark-color;
 }
 
-
-[class^='c-sif__icon'] {
-
-}
 @keyframes fadeOutRight {
   0% {
     right: 100%;
   }
-  30% {
+  20% {
     transform: rotate(0deg);
   }
-  80% {
+  50% {
     opacity: 1;
   }
   100% {
@@ -195,19 +167,14 @@
   100% {
     visibility: hidden;
   }
-  //100% {
-  //  opacity: 0;
-  //}
 }
+
 @keyframes fadeIn {
-  //0% {
-  //  visibility: visible;
-  //}
   100% {
     visibility: visible;
-    //opacity: 1;
   }
 }
+
 
 
 

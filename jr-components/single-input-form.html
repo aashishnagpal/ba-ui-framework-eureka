@@ -10,16 +10,20 @@
   <section class="website-components__component" id="single-input-form">
 
     <h3>Single-Input Form</h3>
-    <p>This single-input form shows one input field each time. Once an input is filled out, click the arrow button. The current input fades out and the next input reveals. With innovative animation, the input icon label with darker color rolls to the lighter-colored arrow button which inherits the darker color.</p>
+    <p>This single-input form shows one input field each time. Once an input is filled out, click the arrow button. The current input fades out, the next one reveals and the indicator changes. With innovative animation, the progress indicator rolls to the arrow button and fades out. </p>
 
     <!-- component example grid container -->
     <div class="o-grid">
       <div class="o-grid__cell">
         <!-- component examples here -->
         <form class="c-sif">
+          <div class="c-sif__input-wrap c-sif__input-wrap--last">
+            <span>Thank you</span>
+          </div>
+
           <div class="c-sif__input-wrap c-sif-color--2">
             <span class="c-sif__indicator">3/3</span>
-            <input class="c-sif__input" type="text" name="city" id="sif-input-city">
+            <input class="c-sif__input" type="text" name="city" id="sif-input-city" required formnovalidate>
             <label class="c-sif__label" for="sif-input-city">
               <i class="fa fa-globe c-sif__icon-label" aria-hidden="true"></i>
               City you live in
@@ -28,9 +32,10 @@
               <i class="fa fa-arrow-right fa-lg c-sif__icon-next" aria-hidden="true"></i>
             </button>
           </div>
+
           <div class="c-sif__input-wrap c-sif-color--1">
             <span class="c-sif__indicator">2/3</span>
-            <input class="c-sif__input" type="email" name="email" id="sif-input-email">
+            <input class="c-sif__input" type="email" name="email" id="sif-input-email" required formnovalidate>
             <label class="c-sif__label" for="sif-input-email">
               <i class="fa fa-envelope c-sif__icon-label" aria-hidden="true"></i>
               Email
@@ -39,12 +44,13 @@
               <i class="fa fa-arrow-right fa-lg c-sif__icon-next" aria-hidden="true"></i>
             </button>
           </div>
+
           <div class="c-sif__input-wrap c-sif-active c-sif-color--0">
             <span class="c-sif__indicator">1/3</span>
-            <input class="c-sif__input" type="text" name="username" id="sif-input-firstnm">
-            <label class="c-sif__label" for="sif-input-firstnm">
+            <input class="c-sif__input" type="text" name="username" id="sif-input-nm" required formnovalidate>
+            <label class="c-sif__label" for="sif-input-nm">
               <i class="fa fa-user c-sif__icon-label" aria-hidden="true"></i>
-              Full Name
+              User Name
             </label>
 
             <button type="button" class="c-sif__btn">
@@ -65,10 +71,23 @@
           </div>
           <div class="c-collapse__content-container c-collapse__content-container--dark">
             <div class="c-collapse__content">
-              <pre class="u-pre--wrap"><code class="u-example-code">
+<pre class="u-pre--wrap"><code class="u-example-code">
+  <!-- put your component code (escaped HTML) here -->
+  &lt;form class=&quot;c-sif&quot;&gt;
+    &lt;div class=&quot;c-sif__input-wrap c-sif-active&quot;&gt;
+      &lt;span class=&quot;c-sif__indicator&quot;&gt;1/3&lt;/span&gt;
+      &lt;input class=&quot;c-sif__input&quot; type=&quot;text&quot; name=&quot;username&quot; id=&quot;sif-input-nm&quot; required formnovalidate&gt;
+      &lt;label class=&quot;c-sif__label&quot; for=&quot;sif-input-nm&quot;&gt;
+        &lt;i class=&quot;fa fa-user c-sif__icon-label&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+        User Name
+      &lt;/label&gt;
 
-                <!-- put your component code (escaped HTML) here -->
-              </code></pre>
+      &lt;button type=&quot;button&quot; class=&quot;c-sif__btn&quot;&gt;
+        &lt;i class=&quot;fa fa-arrow-right fa-lg c-sif__icon-next&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+</code></pre>
             </div>
           </div>
         </div>
@@ -79,5 +98,6 @@
   </section>
 
   <script src="../javascript/single-input-form.js"></script>
+  <script src="../javascript/collapse.js"></script>
 </body>
 </html>
