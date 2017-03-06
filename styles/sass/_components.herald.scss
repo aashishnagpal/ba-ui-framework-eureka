@@ -1,35 +1,18 @@
-/* To calculate $messageHeight in em units, take message height / global font size
-   To expand the herald component to message height, set the value of expandHerald to messageHeight or
-   to activate scroll on the herald component, set the herald block to be shorter than the messageHeight */
-$messageHeight: 28.6875em;
-$expandHerald: 12.5em;
-
-h3 {
-  margin-bottom: 2em;
+.c-herald-section {
+  margin: 10.5em 0 0 3em;
 }
 
-.herald-section {
-  margin-left: 1em;
-}
-
-.herald {
-  padding-top: 1.5em;
+.c-herald {
+  display: inline-block;
+  padding-top: 2.5em;
   position: relative;
-  &__scroll, &__message {
+  &__scroll {
     position: relative;
   }
   &__scroll {
     background-color: $generic-white-color;
     display: inline-block;
-    overflow-x: hidden;
-    padding-top: 3em;
-    width: 21em;
-  }
-  &__indicator {
-    border: .1em solid $primary-dark-color;
-    height: 1em;
-    top: 1em;
-    width: 1em;
+    overflow: hidden;
   }
   &__furled-scroll {
     box-shadow: inset -0.1em 0.1em 0 0.05em $primary-dark-color;
@@ -37,7 +20,7 @@ h3 {
     top: 0;
     width: 3em;
   }
-  &__indicator, &__furled-scroll {
+  &__furled-scroll {
     border-radius: 50%;
     left: 0;
     margin: 0 auto;
@@ -45,69 +28,57 @@ h3 {
     right: 0;
   }
   &__message {
+    opacity: 0;
     padding: 1em;
-    transform: translateY(-$messageHeight);
-    width: 10em;
-    z-index: -1;
-  }
-  &__scroll-img {
-    background-image: url("https://s-media-cache-ak0.pinimg.com/736x/97/83/30/9783304b6a8fa54b61b121d41473ae13.jpg");
-    @include background-img;
-    padding-top: $expandHerald - 1;
-    transform: translateY(-$expandHerald - 1) translateX(10em);
-    width: 10em;
-    top: 0;
+    transition-duration: 1s;
   }
   &__ribbon {
     border-color: $primary-dark-color $primary-dark-color transparent $primary-dark-color;
-    border-style: solid;
     border-width: 0 1em .5em 1em;
-    padding-top: $expandHerald + 1;
-    right: 0;
-    transform: translateY(-$expandHerald*2);
+    right: -2em;
+    height: 1em;
+    top: 0;
+    transform: translateY(40px);
+    transition: 3s 1s;
     width: 2em;
-    z-index: 2;
   }
   &__chip {
     cursor: pointer;
     left: 0em;
-    margin-left: 0; // I had to add this to override Jing's margin-left
-    top: -.5em;
+    margin-left: 0;
+    top: .5em;
     z-index: 2;
   }
-  &__scroll-img, &__message {
+  &__scroll__img, &__message {
     border-top: medium solid $primary-dark-color;
   }
-  &__furled-scroll, &__indicator, &__scroll-img, &__chip, &__ribbon {
+  &__furled-scroll, &__scroll__img, &__chip, &__ribbon, &__message {
     position: absolute;
   }
-  &__indicator, &__furled-scroll, &__message {
+  &__furled-scroll, &__message {
     background-color: transparent;
+  }
+  &__anchors {
+    color: blue;
+    padding: 0;
   }
 }
 
-.herald__scroll.herald-announce {
-  animation: expand 1.2s ease-in-out forwards;
-}
-
-.herald__scroll.herald-announce > .herald__indicator {
-  animation: indicate 1.2s ease-in-out forwards;
-}
-
-.herald__scroll.herald-announce > .herald__furled-scroll {
+.c-herald__scroll.c-herald-announce > .c-herald__furled-scroll {
   animation: unfurl 1s .8s ease-in-out forwards;
 }
 
-.herald__scroll.herald-announce > .herald__furled-scroll > .herald__message {
-  animation: dropMessage 1s 2s ease-in-out forwards;
+.c-herald__scroll.c-herald-announce > .c-herald__message {
+  opacity: 1;
+  transform: translateY(0) !important;
+  transition-property: transform;
+  transition-duration: 1s;
+  transition-delay: 3s;
 }
 
-.herald__scroll.herald-announce > .herald__scroll-img {
-  animation: dropImg 1s 3s ease-in-out forwards;
-}
-
-.herald__scroll.herald-announce > .herald__scroll-img > .herald__ribbon {
-  animation: dropRibbon 1.5s 3.5s cubic-bezier(0, 0, .8, 1.0) forwards;
+.c-herald__ribbon.lengthen {
+  border-style: solid;
+  height: 14em;
 }
 
 @keyframes unfurl {
@@ -119,56 +90,6 @@ h3 {
   100% {
     height: .1em;
     opacity: 1;
-    width: 22em;
-  }
-}
-
-@keyframes expand {
-  0% {
-    opacity: 1;
-    padding-top: 3em;
-  }
-  100% {
-    opacity: 1;
-    padding-top: $expandHerald;
-    overflow: scroll;
-  }
-}
-
-@keyframes indicate {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(3.5);
-    opacity: 0;
-  }
-}
-
-@keyframes dropMessage {
-  0% {
-    transform: translateY(-$messageHeight);
-  }
-  100% {
-    transform: translateY(0em);
-  }
-}
-
-@keyframes dropImg {
-  0% {
-    transform: translateY(-$expandHerald) translateX(10em);
-  }
-  100% {
-    transform: translateY(0em) translateX(10em);
-  }
-}
-
-@keyframes dropRibbon {
-  0% {
-    transform: translateY(-$expandHerald*2);
-  }
-  100% {
-    transform: translateY(-$expandHerald - 1);
+    width: 432px;
   }
 }
