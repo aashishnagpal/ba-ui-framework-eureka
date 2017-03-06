@@ -15,7 +15,7 @@
 
   // initial boundary values
   var clientHeight = window.innerHeight;
-  var initialOffset = scrollspy.getBoundingClientRect().top;
+  var initialOffset = scrollspy.offsetTop;
   progressBar.style.width = '0%';
 
   var scrollspyProgress = function () {
@@ -36,13 +36,15 @@
 
     // Round to nearest hundred in case the calculated value go outside bounds
     // This can happen as the dom elements are moved in and out of the bounding box (the window)
-    if (percentageCompleted < 0 || percentageCompleted > 100)
-      percentageCompleted = Math.abs(Math.ceil(percentageCompleted / 100) * 100);
+    if (percentageCompleted < 0)
+      percentageCompleted = 0;
+    else if (percentageCompleted > 100)
+      percentageCompleted = 100;
 
     // Set the values
     progressBar.style.width = percentageCompleted + '%';
     progressBar.setAttribute('aria-valuenow', percentageCompleted);
-    label.innerHTML = percentageCompleted + '%';
+    label.innerHTML = percentageCompleted == 0 ? '' : percentageCompleted + '%';
   };
 
   window.addEventListener('load', function () {

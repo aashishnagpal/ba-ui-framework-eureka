@@ -7,12 +7,19 @@
   margin: 0;
   width: 100%;
 
-  &--horizontal {
+  @at-root %transparent {
+    background: transparent;
+    color: $menu-text-color;
+  }
+
+  &, &--horizontal {
+    @extend %transparent;
     display: flex;
   }
 
   &--vertical {
     &-left, &-right {
+      @extend %transparent;
       display: inline-flex;
       flex-direction: column;
       height: auto;
@@ -27,11 +34,6 @@
   &--light {
     background: $generic-gray-color;
     color: $generic-black-color;
-  }
-
-  &--transparent {
-    background: transparent;
-    color: $menu-text-color;
   }
 
   &--sticky {
@@ -88,5 +90,4 @@
       }
     }
   }
-
 }
