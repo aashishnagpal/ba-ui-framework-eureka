@@ -9,7 +9,7 @@
   top: 15%;
   left: 0;
   right: 0;
-  margin: 0 auto;;
+  margin: 0 auto;
 }
 
 // Overlay
@@ -44,7 +44,6 @@
   position: absolute;
   opacity: 0;
   pointer-events: none;
-  transform: scale(0) rotate(360deg);
   transition: all 0.4s;
   min-width: 18em;
   width: 50%;
@@ -104,6 +103,7 @@
 .c-modal--basic {
   @extend %c-modal-basic;
   @include position-top;
+  transform: scale(0) rotate(360deg);
 
   &__header {
     background-color: $primary-dark-color;
@@ -118,11 +118,11 @@
   left: 0;
   right: 0;
   margin: 0 auto;
-
-  //transform: ;
+  background-color: transparent;
+  transform: scale(0);
 
   .c-modal__header {
-    background-color: $primary-light-color;
+    background-color: transparent;
   }
 }
 
@@ -130,6 +130,7 @@
 .c-modal--fixed {
   @extend %c-modal-basic;
   @include position-top;
+  transform: scale(1.5);
 
   .c-modal__body {
     background-color: darken($generic-gray-color, 3%);
@@ -140,7 +141,12 @@
 
 .c-modal--dialog {
   @extend %c-modal-basic;
-  @include position-top;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transform: translateY(-100%);
+  transition-timing-function: cubic-bezier(0.600, -0.280, 0.735, 0.045);
 
   .c-modal__body {
     background-color: darken($generic-gray-color, 3%);
@@ -166,10 +172,34 @@
   opacity: 0.6;
 }
 
-.c-modal--active {
+@mixin transform-basic {
   opacity: 1;
   pointer-events: all;
+}
+
+// Spin
+.c-modal-transition--0 {
+  @include transform-basic;
   transform: scale(1) rotate(0deg);
+}
+
+// Fade in and scale up
+.c-modal-transition--1 {
+  @include transform-basic;
+  transform: scale(1);
+}
+
+// Fade in and scale down
+.c-modal-transition--2 {
+  @include transform-basic;
+  transform: scale(1);
+}
+
+// Fade in and stick at top
+.c-modal-transition--3 {
+  @include transform-basic;
+  transform: translateY(0%);
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275);
 }
 
 
@@ -182,10 +212,10 @@
 }
 
 
-.modal-triggers {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: center;
-}
+//.modal-triggers {
+//  display: flex;
+//  flex-wrap: wrap;
+//  justify-content: flex-start;
+//  align-items: center;
+//}
 
