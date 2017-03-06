@@ -1,6 +1,7 @@
 $close-icon-hover-color: #e74c3c;
-$warning-color: #e74c3c;
-$caution-color: #f7ca18;
+$bookmarklet-warning-color: #e74c3c;
+$bookmarklet-caution-color: #f7ca18;
+$bookmarklet-success-color: #2ecc71;
 .c-bookmarklet {
   display: flex;
   justify-content: flex-start;
@@ -141,22 +142,22 @@ $caution-color: #f7ca18;
   color: $generic-white-color;
   &--warning {
     @extend .c-bookmarklet__alert;
-    background-color: $warning-color;
+    background-color: $bookmarklet-warning-color;
     & i {
-      color: lighten($warning-color, 15);
+      color: lighten($bookmarklet-warning-color, 15);
       width: 100%
     }
   }
   &--caution {
     @extend .c-bookmarklet__alert;
-    background-color: $caution-color;
+    background-color: $bookmarklet-caution-color;
     & i {
-      color: darken($caution-color, 15);
+      color: darken($bookmarklet-caution-color, 15);
       width: 100%;
     }
   }
   &--is-dismissed {
-    animation: c-bookmarklet__alert--pop-out 0.35s forwards cubic-bezier(0.7,-0.43, 0.34, 0.76);
+    animation: c-bookmarklet__alert--pop-out 0.35s forwards cubic-bezier(0.7, -0.43, 0.34, 0.76);
   }
   & p {
     margin-top: 0.5em;
@@ -185,6 +186,63 @@ $caution-color: #f7ca18;
   &--is-dismissed {
     animation: c-bookmarket--fade-out-bg 0.2s forwards ease;
   }
+}
+
+.c-bookmarklet__pop-up {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row wrap;
+  background-color: $generic-gray-color;
+  border: solid 1px $secondary-dark-color;
+  border-radius: 0.2em;
+  text-align: center;
+  padding: 1em 0.5em;
+  width: 13em;
+  font-size: 0.9em;
+  position: absolute;
+  opacity: 1;
+  & p {
+    flex: 1 1 100%;
+    margin: 0 0 0.5em 0;
+  }
+  &-button--yes {
+    flex: 1 1 30%;
+    color: $bookmarklet-success-color;
+    cursor: pointer;
+    border: solid 1px $bookmarklet-success-color;
+    margin-right: 0.25em;
+    border-radius: 0.2em;
+    padding: 0.2em;
+    background-color: $generic-white-color;
+    &:hover {
+      background-color: lighten($bookmarklet-success-color, 43);
+    }
+  }
+  &-button--no {
+    flex: 1 1 30%;
+    color: $bookmarklet-warning-color;
+    cursor: pointer;
+    border: solid 1px $bookmarklet-warning-color;
+    margin-left: 0.25em;
+    border-radius: 0.2em;
+    padding: 0.2em;
+    background-color: $generic-white-color;
+    &:hover {
+      background-color: lighten($bookmarklet-warning-color, 28);
+    }
+  }
+}
+
+.c-bookmarklet__pop-up-pip {
+  width: 0.7em;
+  height: 0.7em;
+  background-color: $generic-gray-color;
+  transform: rotate(45deg);
+  position: absolute;
+  top: calc(-0.35em - 1px);
+  border-left: solid 1px $secondary-dark-color;
+  border-top: solid 1px $secondary-dark-color;
 }
 
 @keyframes c-bookmarklet--fade-out {
