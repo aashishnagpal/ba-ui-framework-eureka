@@ -8,10 +8,9 @@
 </head>
 <body>`
 <!-- append the loader div to DOM before loading the script -->
-<div id="loader" class="loader loader-overlay">
+<div id="loader-site" class="loader loader-overlay">
     <div class="loader__load-box"></div>
 </div>
-<script src="javascript/loader.js"></script> <!-- since this script has to work before everything else loads -->
 
 <header id="site-header" class="eureka-header">
     <div class="o-grid o-grid--gutters">
@@ -31,11 +30,11 @@
     <div class="o-grid">
         <div class="o-grid__cell">
             <div class="eureka-header__menu pull-right">
-                <ul class="nav nav--horizontal nav--transparent">
+                <ul class="nav">
                     <li class="nav__item "><a class="nav__link" href="#">About Bov Academy</a></li>
                     <li class="nav__item "><a class="nav__link" href="#">UI Framework Developers</a></li>
                     <li class="nav__item "><a class="nav__link" href="#">Blog</a></li>
-                    <li class="nav__item "><a class="nav__link" href="#">Style Guide</a></li>
+                    <li class="nav__item nav__item--active"><a class="nav__link" href="#">Style Guide</a></li>
                 </ul>
             </div>
         </div>
@@ -46,7 +45,7 @@
     <div class="o-grid demo-site-grid">
         <aside class="vertical-menu o-grid__cell u-1of4">
             <nav class="demo-site-grid__sticky-nav">
-                <ul class="nav nav--transparent nav--vertical-left" data-nav-type="sticky" data-content-id="showcase"
+                <ul class="nav nav--vertical-left" data-nav-type="sticky" data-content-id="showcase"
                     data-header-id="site-header" data-footer-id="site-footer" data-scrollspy>
                     <li class="nav__item nav__item--active"><a class="nav__link" href="#alert">Alerts</a></li>
                     <li class="nav__item"><a class="nav__link" href="#bookmarklet">Bookmarklet</a></li>
@@ -65,7 +64,7 @@
                     <li class="nav__item "><a class="nav__link" href="#navs">Navigation</a></li>
                     <li class="nav__item "><a class="nav__link" href="#scrollspy">Scrollspy</a></li>
                     <li class="nav__item "><a class="nav__link" href="#scrollspy-progress">Scrollspy Progress</a></li>
-                    <li class="nav__item "><a class="nav__link" href="#loader">Loader</a></li>
+                    <li class="nav__item "><a class="nav__link" href="#loader-section">Loader</a></li>
                 </ul>
             </nav>
         </aside>
@@ -2394,7 +2393,7 @@
             </div>
             <!-- end Basic (Transparent) Nav example -->
           </section>
-          <section class="website-components__component" id="loader">
+          <section class="website-components__component" id="loader-section">
 
             <h3>Loader</h3>
             <p>Use a loader within any space to display loading in progress. It can be anything, loading an image,
@@ -2568,8 +2567,19 @@
 <script src="javascript/sticky-nav.js"></script>
 <script src="javascript/scrollspy-nav.js"></script>
 <script src="javascript/bar-graph.js"></script>
-<script type="text/javascript" src="javascript/loader.js"></script>
+<script src="javascript/loader.js"></script>
+<script>
+    (function () {
+        loader.init('loader-site');
+        loader.show('loader-site');
+        window.addEventListener('load', function() {
+            loader.hide('loader-site');
+        });
 
+        loader.init('loader-demo');
+        loader.show('loader-demo');
+    })();
+</script>
 <!-- Prism for nice code markup-->
 <script src="prism/prism.js"></script>
 </body>
