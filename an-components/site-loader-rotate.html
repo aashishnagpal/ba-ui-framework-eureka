@@ -16,7 +16,7 @@
     <a class="c-btn--primary--rounded c-btn" href="javascript:loader.toggle('loader-demo');">Toggle Loader Here</a>
     <br><br>
     <!-- Basic (Transparent) Nav example -->
-    <div class="o-grid">
+    <div class="o-grid o-grid--gutters">
         <div class="o-grid__cell">
             <h4>Usage</h4>
             <ol>
@@ -27,7 +27,7 @@
                 <li>Initialize the loader using <code class="language-javascript">loader.init(id);</code>. The id
                     should match the loader's id.
                 </li>
-                <li>
+                <li>Use the following methods:
                     <ul>
                         <li>You can <strong>show</strong> the loader using
                             <code class="language-javascript">loader.show(id);</code>
@@ -41,14 +41,14 @@
                     </ul>
                 </li>
             </ol>
-            <div id="loader-demo" class="loader loader-overlay loader-overlay--visible">
+            <div id="loader-demo" class="loader loader-overlay">
                 <div class="loader__load-box"></div>
             </div>
         </div>
     </div>
 
     <!-- Basic (Transparent) Nav example markup -->
-    <div class="o-grid">
+    <div class="o-grid o-grid--gutters">
         <div class="o-grid__cell">
             <div class="c-collapse">
                 <div class="c-collapse__controls-container--justified-text">
@@ -57,7 +57,7 @@
                 </div>
                 <div class="c-collapse__content-container c-collapse__content-container--dark">
                     <div class="c-collapse__content--prism-code-style">
-<pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;div id=&quot;myLoader&quot; class=&quot;loader loader-overlay loader-overlay--visible&quot;&gt;
+<pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;div id=&quot;myLoader&quot; class=&quot;loader loader-overlay&quot;&gt;
 	&lt;div class=&quot;loader__load-box&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;</code></pre>
                     </div>
