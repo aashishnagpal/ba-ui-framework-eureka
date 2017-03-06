@@ -4,13 +4,17 @@
   <title>Eureka CSS UI Framework</title>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../styles/css/eureka.css">
+  <link rel="stylesheet" href="../prism/prism.css">
 </head>
 <body>
-  <div class="chip-component">
-    <!--Different types of chips -->
+  <section class="website-components__component" id="chips">
 
-    <!-- Basic -->
-    <div class="chip-component--basic">
+  <h3>Component Name</h3>
+  <p>Chips are small blocks that contain complex elements, such as text, images, and icons. They can represent contact information and various categories.</p>
+
+  <!-- component example grid container -->
+  <div class="o-grid">
+    <div class="o-grid__cell">
       <h4>Basic Chip</h4>
       <div class="c-chip--filled">
         Basic chip
@@ -20,11 +24,39 @@
         Basic chip
       </div>
     </div>
+  </div>
 
-    <!-- Avatar chips -->
-    <div class="chip-component--avatar">
+  <!-- code well markup -->
+  <div class="o-grid">
+    <div class="o-grid__cell">
+      <div class="c-collapse">
+        <div class="c-collapse__controls-container--justified-text">
+          <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+          <a class="c-collapse__toggle">toggle markup</a>
+        </div>
+        <div class="c-collapse__content-container c-collapse__content-container--dark">
+          <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;div class=&quot;c-chip--filled&quot;&gt;
+    Basic chip
+&lt;/div&gt;
+
+&lt;div class=&quot;c-chip--outlined&quot;&gt;
+    Basic chip
+&lt;/div&gt;
+</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end codewell markup -->
+
+  <!-- ============================================ -->
+
+  <!-- Avatar chips - initial -->
+  <div class="o-grid">
+    <div class="o-grid__cell">
       <h4>Avatar Chips - Initial</h4>
-      <!-- Avatar chip - initial -->
       <div class="c-chip--filled">
         <span class="c-chip__media--f">A</span>
         Avatar chip - initial
@@ -34,10 +66,40 @@
         Avatar chip - initial
       </div>
     </div>
+  </div>
 
-    <div class="chip-component--avatar">
+<!-- code well markup -->
+  <div class="o-grid">
+    <div class="o-grid__cell">
+      <div class="c-collapse">
+        <div class="c-collapse__controls-container--justified-text">
+          <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+          <a class="c-collapse__toggle">toggle markup</a>
+        </div>
+        <div class="c-collapse__content-container c-collapse__content-container--dark">
+          <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;div class=&quot;c-chip--filled&quot;&gt;
+  &lt;span class=&quot;c-chip__media--f&quot;&gt;A&lt;/span&gt;
+  Avatar chip - initial
+&lt;/div&gt;
+&lt;div class=&quot;c-chip--outlined&quot;&gt;
+  &lt;span class=&quot;c-chip__media--o&quot;&gt;A&lt;/span&gt;
+  Avatar chip - initial
+&lt;/div&gt;
+</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end codewell markup -->
+
+  <!-- ============================================ -->
+
+  <!-- Avatar chip - icon -->
+  <div class="o-grid">
+    <div class="o-grid__cell">
       <h4>Avatar Chips - Icon</h4>
-      <!-- Avatar chip - icon -->
       <div class="c-chip--filled">
         <span class="c-chip__media--f"><i class="fa fa-user-o c-chip__icon" aria-hidden="true"></i></span>
         Avatar chip - icon
@@ -47,8 +109,39 @@
         Avatar chip - icon
       </div>
     </div>
+  </div>
 
-    <div class="chip-component--avatar">
+  <!-- code well markup -->
+  <div class="o-grid">
+    <div class="o-grid__cell">
+      <div class="c-collapse">
+        <div class="c-collapse__controls-container--justified-text">
+          <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+          <a class="c-collapse__toggle">toggle markup</a>
+        </div>
+        <div class="c-collapse__content-container c-collapse__content-container--dark">
+          <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;div class=&quot;c-chip--filled&quot;&gt;
+  &lt;span class=&quot;c-chip__media--f&quot;&gt;&lt;i class=&quot;fa fa-user-o c-chip__icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+  Avatar chip - icon
+&lt;/div&gt;
+&lt;div class=&quot;c-chip--outlined&quot;&gt;
+  &lt;span class=&quot;c-chip__media--o&quot;&gt;&lt;i class=&quot;fa fa-user-o c-chip__icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+  Avatar chip - icon
+&lt;/div&gt;
+</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- end codewell markup -->
+
+  <!-- ============================================ -->
+
+
+  <div class="o-grid">
+    <div class="o-grid__cell">
       <h4>Avatar Chips - Image</h4>
       <!-- Avatar chip - image -->
       <div class="c-chip--filled">
@@ -63,11 +156,42 @@
         Avatar chip - image
       </div>
     </div>
+  </div>
 
-    <!-- Deletable chips -->
-    <div class="chip-component--deletable">
+<!-- code well markup -->
+  <div class="o-grid">
+    <div class="o-grid__cell">
+      <div class="c-collapse">
+        <div class="c-collapse__controls-container--justified-text">
+          <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+          <a class="c-collapse__toggle">toggle markup</a>
+        </div>
+        <div class="c-collapse__content-container c-collapse__content-container--dark">
+          <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;div class=&quot;c-chip--filled&quot;&gt;
+  &lt;span class=&quot;c-chip__media--f&quot;&gt;&lt;img src=&quot;&quot; alt=&quot;contact people&quot; class=&quot;c-chip__img&quot;&gt;&lt;/span&gt;
+  Avatar chip - image
+&lt;/div&gt;
+
+&lt;div class=&quot;c-chip--outlined&quot;&gt;
+  &lt;span class=&quot;c-chip__media--f c-chip__media--f--img&quot;&gt;&lt;img src=&quot;&quot; alt=&quot;contact people&quot; class=&quot;c-chip__img&quot;&gt;&lt;/span&gt;
+  Avatar chip - image
+&lt;/div&gt;
+</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- end codewell markup -->
+
+  <!-- ============================================ -->
+
+  <!-- Deletable chips -->
+  <div class="o-grid">
+    <div class="o-grid__cell">
       <h4>Deletable Chips</h4>
-      <div>
+      <div class="chip-component--deletable">
         <!-- Deletable chip - basic -->
         <div class="c-chip--filled c-chip--deletable">
           Basic chip
@@ -117,10 +241,74 @@
         </div>
       </div>
     </div>
-
   </div>
+
+<!-- code well markup -->
+  <div class="o-grid">
+    <div class="o-grid__cell">
+      <div class="c-collapse">
+        <div class="c-collapse__controls-container--justified-text">
+          <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+          <a class="c-collapse__toggle">toggle markup</a>
+        </div>
+        <div class="c-collapse__content-container c-collapse__content-container--dark">
+          <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;div class=&quot;c-chip--filled c-chip--deletable&quot;&gt;
+  Basic chip
+  &lt;span class=&quot;c-chip__delete&quot;&gt;&lt;i class=&quot;fa fa-times&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;c-chip--outlined c-chip--deletable&quot;&gt;
+  Basic chip
+  &lt;span class=&quot;c-chip__delete&quot;&gt;&lt;i class=&quot;fa fa-times&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;c-chip--filled c-chip--deletable&quot;&gt;
+  &lt;span class=&quot;c-chip__media--f&quot;&gt;D&lt;/span&gt; Avatar chip - initial
+  &lt;span class=&quot;c-chip__delete&quot;&gt;&lt;i class=&quot;fa fa-times&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;c-chip--outlined c-chip--deletable&quot;&gt;
+  &lt;span class=&quot;c-chip__media--o&quot;&gt;D&lt;/span&gt; Avatar chip - initial
+  &lt;span class=&quot;c-chip__delete&quot;&gt;&lt;i class=&quot;fa fa-times&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;c-chip--filled c-chip--deletable&quot;&gt;
+  &lt;span class=&quot;c-chip__media--f&quot;&gt;&lt;i class=&quot;fa fa-user-o c-chip__icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+  Avatar chip - icon
+  &lt;span class=&quot;c-chip__delete&quot;&gt;&lt;i class=&quot;fa fa-times&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;c-chip--outlined c-chip--deletable&quot;&gt;
+  &lt;span class=&quot;c-chip__media--o&quot;&gt;&lt;i class=&quot;fa fa-user-o c-chip__icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+  Avatar chip - icon
+  &lt;span class=&quot;c-chip__delete&quot;&gt;&lt;i class=&quot;fa fa-times&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;c-chip--filled c-chip--deletable&quot;&gt;
+  &lt;span class=&quot;c-chip__media--f&quot;&gt;&lt;img src=&quot;&quot; alt=&quot;contact people&quot; class=&quot;c-chip__img&quot;&gt;&lt;/span&gt;
+  Avatar chip - image
+  &lt;span class=&quot;c-chip__delete&quot;&gt;&lt;i class=&quot;fa fa-times&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;c-chip--outlined c-chip--deletable&quot;&gt;
+  &lt;span class=&quot;c-chip__media--f c-chip__media--f--img&quot;&gt;&lt;img src=&quot;&quot; alt=&quot;contact people&quot; class=&quot;c-chip__img&quot;&gt;&lt;/span&gt;
+  Avatar chip - image
+  &lt;span class=&quot;c-chip__delete&quot;&gt;&lt;i class=&quot;fa fa-times&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end codewell markup -->
+
+  </section>
 
 
   <script src="../javascript/chips.js"></script>
+  <script src="../javascript/collapse.js"></script>
+  <script src="../prism/prism.js"></script>
 </body>
 </html>
