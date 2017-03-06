@@ -71,17 +71,11 @@
    ========================================================================== */
 
 //To override default link style
-.badge-component--* {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-
 .badge-component__item {
   display: inline-flex;
   flex-flow: column;
   align-items: center;
-  margin-left: 3em;
+  margin-right: 3em;
 
   a {
     border-radius: 3px;
