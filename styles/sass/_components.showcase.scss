@@ -1,0 +1,64 @@
+//Primary container.  Contains 2 flexbox divs inside
+.eureka-showcase-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    height: 600px;
+    width: 100vw;
+}
+
+//secondary container for preview images
+.eureka-showcase-preview {
+    display: inline-flex;
+    flex-flow: row wrap;
+    width: 600px;
+    height: 100%;
+    justify-content: space-between;
+    margin: 0;
+   padding: 5px 10px 5px 10px;
+    border: 15px solid transparent;
+    border-image: url(../img/modernMirror.png) round;
+    border-image-slice: 195 195;
+    border-image-width: 2.6%;
+}
+
+//change size of images inside preview div
+.eureka-showcase-preview-img {
+    object-fit: contain;
+    -o-object-fit: contain;
+    max-height: 33%;
+    max-width: 33%;
+    height: auto;
+    width: auto;
+}
+
+//Secondary container for the showcase
+.eureka-showcase {
+    display: none;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: calc(90% - 600px);
+    height: 100%;
+}
+
+//svg "pointer" trasnparentcy
+.eureka-showcase-pointer {
+    align-self: center;
+    max-width: 30%;
+    width: auto;
+    height: 100%;
+    mixed-blend-mode: screen;
+}
+
+//Keep "showcase" image within container while maintaing aspect ratio
+.eureka-showcase-img{
+    max-height: 100%;
+    max-width: 60%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+//Filters
+.showcase-filter-movieposter {
+}
