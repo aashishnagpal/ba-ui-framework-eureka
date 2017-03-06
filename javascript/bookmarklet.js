@@ -23,8 +23,8 @@
 
     // keyboard shortcut Shift(16) + Control(17) + M(77)
     if (keysPressed[16] && keysPressed[17] && keysPressed[77] && keysPressed[76]) {
-      selectedText = window.getSelection().getRangeAt(0);
-      _bookmarkSelection(selectedText);
+      var selectedRange = window.getSelection().getRangeAt(0);
+      _bookmarkSelection(selectedRange);
     }
 
   }
@@ -74,11 +74,11 @@
   }
 
   function _bookmarkFromButton(selectedRange) {
-    console.log('bookmark from button selectedRange: ', selectedRange);
+    // console.log('bookmark from button selectedRange: ', selectedRange);
     var rangeStart = selectedRange.startOffset;
     var rangeEnd = selectedRange.endOffset;
     var rangeToBookmark = selectedRange.cloneRange();
-    console.log('rangeToBookmark: ', rangeToBookmark, 'selectedRange: ', selectedRange);
+    // console.log('rangeToBookmark: ', rangeToBookmark, 'selectedRange: ', selectedRange);
     popUpYesBtn.addEventListener('click', _pressedYes(rangeToBookmark), false);
     popUpNoBtn.addEventListener('click', function() {
       console.log('nope');
@@ -108,6 +108,7 @@
     var listNode;
     var closeIcon;
     var googleSearchBtn;
+
 
     alertNode = bookmarkListComponent.parentNode;
 
@@ -224,6 +225,7 @@
     }
     // create remove list item listeners
     _buildClearBookmarkListItemListeners();
+
 
   } // end of _bookmarkSelection
 
