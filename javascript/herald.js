@@ -20,14 +20,14 @@ window.addEventListener("load", function () {
       this.message.style.webkitTransform = "translateY(-" + this.messageHeight + "px)";
       this.message.style.height = this.messageHeight + "px";
       this.message.style.width = this.messageWidth;
-      this.component.style.width = this.messageWidth;
-      this.scroll.style.height = this.messageHeight + "px";
-      this.scroll.style.width = this.messageWidth;
     },
     bindEvent: function () {
       this.chip.addEventListener("click",this.announce.bind(this));
     },
     announce: function () {
+      this.component.style.width = this.messageWidth;
+      this.scroll.style.height = this.messageHeight + "px";
+      this.scroll.style.width = this.messageWidth;
       this.component.classList.toggle("c-herald-announce");
       this.ribbon.classList.toggle("lengthen");
       this.scroll.classList.toggle("c-herald-announce");
