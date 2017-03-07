@@ -6,7 +6,6 @@
       this.bindEvents();
     },
     cacheDOM: function () {
-      this.highlighted = window.getSelection();
       this.ol = document.getElementsByClassName("c-wtf__list")[0];
       this.component = document.getElementsByClassName("c-wtf")[0];
       this.clear = document.getElementsByClassName("c-wtf__clear-all")[0];
@@ -19,7 +18,9 @@
       this.clear.addEventListener("click",this.clearIt.bind(this));
     },
     lookUp: function () {
-      if (this.highlighted.type === "Range") {
+       this.highlighted = window.getSelection();
+       var str = this.highlighted.toString();
+      if (str !== "") {
         term = this.highlighted.getRangeAt(0);
         window.open('https://www.merriam-webster.com/dictionary/' + term, 'lookitup');
         this.createList();
