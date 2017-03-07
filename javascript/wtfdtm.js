@@ -1,5 +1,4 @@
 (function () {
-
   var dictionaryLinker = {
     init: function () {
       this.cacheDOM();
@@ -44,6 +43,5 @@
       this.ol.innerHTML = "";
     }
   };
-
-  dictionaryLinker.init();
+  window.dictionaryLinker = dictionaryLinker;
 })();
