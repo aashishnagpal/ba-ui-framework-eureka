@@ -2,6 +2,7 @@ $close-icon-hover-color: #e74c3c;
 $bookmarklet-warning-color: #e74c3c;
 $bookmarklet-caution-color: #f7ca18;
 $bookmarklet-success-color: #2ecc71;
+
 .c-bookmarklet {
   display: flex;
   justify-content: flex-start;
@@ -201,7 +202,13 @@ $bookmarklet-success-color: #2ecc71;
   width: 13em;
   font-size: 0.9em;
   position: absolute;
-  opacity: 1;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  &--is-visible {
+    pointer-events: auto;
+    opacity: 1;
+  }
   & p {
     flex: 1 1 100%;
     margin: 0 0 0.5em 0;

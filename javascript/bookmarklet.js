@@ -1,10 +1,4 @@
 (function() {
-  window.addEventListener('keydown', _keysDown, false);
-  window.addEventListener('keyup', _keysUp, false);
-
-  // document.addEventListener('selectionchange', _checkForSelection, false);
-  document.addEventListener('mouseup', _checkForSelection, false);
-
 
   var bookmarkListComponent = document.querySelector('.c-bookmarklet');
   var bookmarkList = bookmarkListComponent.querySelector('.c-bookmaklet__bookmark-list');
@@ -16,8 +10,10 @@
   var popUpNoBtn = selectionPopUp.querySelector('.c-bookmarklet__pop-up-button--no');
   var keysPressed = [];
   var bookmarkId = 0;
-  // var range;
-  // var selection = window.getSelection();
+
+  window.addEventListener('keydown', _keysDown, false);
+  window.addEventListener('keyup', _keysUp, false);
+  document.addEventListener('mouseup', _checkForSelection, false);
 
   function _keysDown(e) {
     keysPressed[e.keyCode] = true;
@@ -36,16 +32,14 @@
 
   function _checkForSelection() {
     if (event.target !== popUpYesBtn) {
-
-      console.log('_checkForSelection mouseup event target: ', event.target);
       var selection = window.getSelection();
       var selectedRange = selection.getRangeAt(0);
 
       if (selectedRange.startOffset !== selectedRange.endOffset && selectedRange.startContainer === selectedRange.endContainer) {
         _setPopUp(selectedRange);
       }
-
     }
+
   }
 
   function _setPopUp(selectedRange) {
@@ -54,8 +48,6 @@
       selectionPopUpPip.style.right = "";
       selectionPopUp.style.left = "";
       selectionPopUp.style.right = "";
-
-
 
       range = selectedRange;
       var rangeDims = range.getClientRects();
@@ -75,48 +67,28 @@
         selectionPopUpPip.style.left = pipPosition + 'px';
       }
 
-      // console.log('selectedRange in _setPopUp', selectedRange);
-      // _bookmarkFromButton(selectedRange);
-      // var rangeToBookmark = selectedRange.cloneRange();
+      selectionPopUp.classList.add('c-bookmarklet__pop-up--is-visible');
 
       popUpYesBtn.addEventListener('mousedown', _pressedYes(range), false);
       popUpNoBtn.addEventListener('click', function() {
-        console.log('nope');
+        selectionPopUp.classList.remove('c-bookmarklet__pop-up--is-visible');
+        range.collapse();
       }, false);
     }
   }
 
-  function _bookmarkFromButton(selectedRange) {
-    // console.log('bookmark from button selectedRange: ', selectedRange);
-    // var rangeStart = selectedRange.startOffset;
-    // var rangeEnd = selectedRange.endOffset;
-    // var rangeToBookmark = selectedRange.cloneRange();
-    // console.log('rangeToBookmark: ', rangeToBookmark, 'selectedRange: ', selectedRange);
-    // popUpYesBtn.addEventListener('click', _pressedYes(rangeToBookmark), false);
-    // popUpNoBtn.addEventListener('click', function() {
-    //   console.log('nope');
-    // }, false);
-
-
-  }
-
-  function _pressedYes(r) {
+  function _pressedYes(range) {
     return function(e) {
-      console.log('pressed Yes: ', r);
-      _bookmarkSelection(r, true);
+      selectionPopUp.classList.remove('c-bookmarklet__pop-up--is-visible');
+      _bookmarkSelection(range, true);
     };
   }
 
-
   function _bookmarkSelection(selectedRange, fromButton) {
-    // console.log('Shortcut initiated!');
-    // var selection;
-    console.log('selection inside _bookmarkSelection function: ', selectedRange);
+
     var calledFromButton = fromButton || false;
-    console.log('calledFromButton: ', calledFromButton);
     var alertNode;
     var selectionString;
-    // var selectedText;
     var highlightNode;
     var highlightNodeQueryString;
     var bookmarkAnchorLink;
@@ -125,10 +97,7 @@
     var googleSearchBtn;
     var alertBackground;
 
-
     alertNode = bookmarkListComponent.parentNode;
-
-    // selection = selectionObj || window.getSelection();
 
     // create span node for text hightlighting
     highlightNode = document.createElement('span');
@@ -198,6 +167,10 @@
         // show the bookmarklet component
         bookmarkListComponent.classList.add('c-bookmarklet--is-visible');
 
+        if (!calledFromButton) {
+          selectionPopUp.classList.remove('c-bookmarklet__pop-up--is-visible');
+        }
+
         selectedRange.collapse();
 
       } else {
@@ -237,13 +210,10 @@
         }
       }
 
-      // convert selection to string
-      // selectionString = selection.toString();
-
     }
+
     // create remove list item listeners
     _buildClearBookmarkListItemListeners();
-
 
   } // end of _bookmarkSelection
 
@@ -316,7 +286,7 @@
       alertMessageNode.addEventListener('animationend', function() {
         alertMessageNode.remove();
         bg.remove();
-      })
+      });
     };
   }
 
