@@ -201,7 +201,7 @@ $bookmarklet-success-color: #2ecc71;
   padding: 1em 0.5em;
   width: 13em;
   font-size: 0.9em;
-  position: absolute;
+  position: fixed;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.25s ease;
