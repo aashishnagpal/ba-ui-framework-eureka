@@ -5,9 +5,11 @@
     <meta charset="UTF-8">
     <title>Login-Form</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="../prism/prism.css">
     <link type="text/css" rel="stylesheet" href="../styles/css/eureka.css">
 </head>
 
+<!--original body code
 <body>
     <div class="login-container">
         <h2 class="login-header">Login</h2>
@@ -26,6 +28,76 @@
 
         </form>
     </div>
+</body>-->
+
+<body>
+    <section class="website-components__component" id="login-form">
+
+        <h3>Login Form</h3>
+        <p>Eureka Login Form.</p>
+        <br>
+        <p>Note for the checkbox only Blink/Webkit support certain properties needed to stylize. However, checkbox will fallback "gracefully" and other browsers will display the default, unstylized version.</p>
+        <br>
+        <!-- component example grid container -->
+        <div class="o-grid o-grid--gutters o-medium-grid--full">
+            <div class="o-grid__cell">
+                <!-- component examples here -->
+                
+                <div class="login-container">
+                    <h2 class="login-header">Login</h2>
+                    <form class="login-form">
+                        <span class="login-span-input"><label>Email</label><input class="login-email-password" type="email" required></span>
+
+                        <span class="login-span-input"><label>Password</label><input class="login-email-password" type="password"></span>
+
+                        <span class="login-keep-login-span"><label for="checkbox">Keep me logged in<input type="checkbox" class="eureka-checkbox login-keep-checkbox" id="checkbox"></label></span>
+
+                        <a class="login-forgot-password" href="#">Forget Password?</a>
+                        <span class="login-form-buttons-span">
+                            <button type="button" class="c-btn login-form-register-button"><a class="login-register-link" href="#">Register</a></button>
+                            <button type="submit" class="c-btn login-form-login-button">Login</button>
+                        </span>
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- code well markup -->
+        <div class="o-grid o-grid--gutters o-medium-grid--full">
+            <div class="o-grid__cell">
+                <div class="c-collapse">
+                    <div class="c-collapse__controls-container--justified-text">
+                        <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                        <a class="c-collapse__toggle">toggle markup</a>
+                    </div>
+                    <div class="c-collapse__content-container c-collapse__content-container--dark">
+                        <div class="c-collapse__content--prism-code-style">
+                            <pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;div class=&quot;login-container&quot;&gt;
+           &lt;h2 class=&quot;login-header&quot;&gt;Login&lt;/h2&gt;
+           &lt;form class=&quot;login-form&quot;&gt;
+                        &lt;span class=&quot;login-span-input&quot;&gt;&lt;label&gt;Email&lt;/label&gt;&lt;input class=&quot;login-email-password&quot; type=&quot;email&quot; required&gt;&lt;/span&gt;
+                        &lt;span class=&quot;login-span-input&quot;&gt;&lt;label&gt;Password&lt;/label&gt;&lt;input class=&quot;login-email-password&quot; type=&quot;password&quot;&gt;&lt;/span&gt;
+                        &lt;span class=&quot;login-keep-login-span&quot;&gt;&lt;label for=&quot;checkbox&quot;&gt;Keep me logged in&lt;input type=&quot;checkbox&quot; class=&quot;eureka-checkbox login-keep-checkbox&quot; id=&quot;checkbox&quot;&gt;&lt;/label&gt;&lt;/span&gt;
+                        &lt;a class=&quot;login-forgot-password&quot; href=&quot;#&quot;&gt;Forget Password?&lt;/a&gt;
+                        &lt;span class=&quot;login-form-buttons-span&quot;&gt;
+                                  &lt;button type=&quot;button&quot; class=&quot;c-btn login-form-register-button&quot;&gt;&lt;a class=&quot;login-register-link&quot; href=&quot;#&quot;&gt;Register&lt;/a&gt;&lt;/button&gt;
+                                  &lt;button type=&quot;submit&quot; class=&quot;c-btn login-form-login-button&quot;&gt;Login&lt;/button&gt;
+                        &lt;/span&gt;
+                    &lt;/form&gt;
+&lt;/div&gt;
+                            </code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- end codewell markup -->
+
+    </section>
+    <script type="text/javascript" src="../prism/prism.js"></script>
+    <script type="text/javascript" src="../javascript/collapse.js"></script>
 </body>
 
 </html>
