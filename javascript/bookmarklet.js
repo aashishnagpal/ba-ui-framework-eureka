@@ -8,12 +8,18 @@
   var selectionPopUpPip = selectionPopUp.querySelector('.c-bookmarklet__pop-up-pip');
   var popUpYesBtn = selectionPopUp.querySelector('.c-bookmarklet__pop-up-button--yes');
   var popUpNoBtn = selectionPopUp.querySelector('.c-bookmarklet__pop-up-button--no');
+  var limitBookmarklet = document.querySelector('[data-limit-bookmarklet]');
   var keysPressed = [];
   var bookmarkId = 0;
 
   window.addEventListener('keydown', _keysDown, false);
   window.addEventListener('keyup', _keysUp, false);
-  document.addEventListener('mouseup', _checkForSelection, false);
+
+  if (limitBookmarklet !== null) {
+    limitBookmarklet.addEventListener('mouseup', _checkForSelection, false);
+  } else {
+    document.addEventListener('mouseup', _checkForSelection, false);
+  }
 
   function _keysDown(e) {
     keysPressed[e.keyCode] = true;
