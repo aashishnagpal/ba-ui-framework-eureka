@@ -47,7 +47,7 @@
     left: .1em;
   }
   &-radio:checked + label:before {
-    box-shadow: inset 0px 0px 0px 5px $primary-color
+    box-shadow: inset 0px 0px 0px 5px $primary-color;
   }
   &-checkbox + label, &-checkbox--lg + label, &-radio + label {
     cursor: pointer;
