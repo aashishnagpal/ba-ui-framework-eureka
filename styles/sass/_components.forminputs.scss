@@ -46,13 +46,8 @@
     content: "\2714";
     left: .1em;
   }
-  &-radio:checked + label:after {
-    background-color: $primary-color;
-    content: "";
-    height: .5em;
-    left: .3em;
-    top: .35em;
-    width: .5em;
+  &-radio:checked + label:before {
+    box-shadow: inset 0px 0px 0px 5px $primary-color
   }
   &-checkbox + label, &-checkbox--lg + label, &-radio + label {
     cursor: pointer;
