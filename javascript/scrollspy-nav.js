@@ -4,6 +4,9 @@
 (function () {
   'use strict';
 
+  var body = document.documentElement || document.body;
+  body.scrollTop = 0;
+
   // Fetch navigation list and the anchor tags within it to form the scrollspy checkpoints
   var nav = document.querySelector('.nav[data-scrollspy]');
   var links = nav.querySelectorAll('a[href]:not([href="#"]');
@@ -14,8 +17,12 @@
     var domTarget = document.getElementById(element.hash.slice(1));
     targets.push({
       navItem: element.parentNode, // this is used to mark the active nav item
-      top: domTarget.getBoundingClientRect().top, // this will become the start bound condition for active nav item
-      bottom: domTarget.getBoundingClientRect().bottom // this will become the end bound condition for active nav item
+      top: window.pageYOffset + domTarget.getBoundingClientRect().top, // this will become the start bound condition for
+      // active nav item
+      bottom: window.pageYOffset + domTarget.getBoundingClientRect().bottom // this will become the end bound condition for active nav item
+    });
+    element.parentNode.addEventListener('click', function() {
+      this.classList.add('nav__item--active');
     });
   });
 
@@ -34,9 +41,9 @@
 
       if (scrollPosition >= checkTarget.top && scrollPosition <= checkTarget.bottom) { // activate item
         checkTarget.navItem.classList.add('nav__item--active');
-        if (i > 0) {
-          targets[i - 1].navItem.classList.remove('nav__item--active');
-        }
+        // if (i > 0) {
+        //   targets[i - 1].navItem.classList.remove('nav__item--active');
+        // }
       } else {
         checkTarget.navItem.classList.remove('nav__item--active'); //deactivate item
       }

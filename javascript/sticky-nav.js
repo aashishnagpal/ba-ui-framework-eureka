@@ -15,12 +15,12 @@
     // Fetch header element using header id
     // get bottom of header to set starting boundary or fallback to Nav element's top
     var siteHeader = document.getElementById(nav.getAttribute('data-header-id')); // Header Element
-    var initialPosition = siteHeader ? siteHeader.getBoundingClientRect().bottom : nav.getBoundingClientRect().top;
+    var initialPosition = siteHeader ? siteHeader.offsetTop + siteHeader.offsetHeight : scrollContent.offsetTop;
 
     // Fetch footer element using footer id
     // get top of footer to set ending boundary or fallback to scrollContent's bottom
     var siteFooter = document.getElementById(nav.getAttribute('data-footer-id'));
-    var finalPosition = siteFooter ? siteFooter.getBoundingClientRect().top : scrollContent.getBoundingClientRect().bottom;
+    var finalPosition = siteFooter ? siteFooter.offsetTop : scrollContent.offsetTop + scrollContent.offsetHeight;
 
     var stickyNav = function () {
       // read current scroll position
