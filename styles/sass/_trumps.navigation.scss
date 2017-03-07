@@ -45,5 +45,9 @@
 .u-demo-site-nav--vertical-left {
   & .nav__item {
     flex: 1 0 auto;
+
+    & .nav__link {
+      padding: 0.5em 1em;
+    }
   }
 }
