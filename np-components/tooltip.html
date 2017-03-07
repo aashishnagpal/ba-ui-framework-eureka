@@ -5,14 +5,61 @@
     <meta charset="UTF-8">
     <title>Tooltip</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="../prism/prism.css">
     <link type="text/css" rel="stylesheet" href="../styles/css/eureka.css">
 </head>
 
+<!--Original body code
 <body>
     <div class="tooltip-this-element">Hover over me
         <span class="tooltip-text">Tooltip text</span>
 
     </div>
+</body>-->
+
+<body>
+    <section class="website-components__component" id="tooltip">
+
+        <h3>Tooltip</h3>
+        <p>Eureka Styled Tooltip</p>
+        <br>
+
+        <!-- component example grid container -->
+        <div class="o-grid o-grid--gutters o-medium-grid--full">
+            <div class="o-grid__cell">
+                <!-- component examples here -->
+                <br>
+                <br>
+                <br>
+                <div class="tooltip-this-element">Hover over me
+                    <span class="tooltip-text">Tooltip text</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- code well markup -->
+        <div class="o-grid o-grid--gutters o-medium-grid--full">
+            <div class="o-grid__cell">
+                <div class="c-collapse">
+                    <div class="c-collapse__controls-container--justified-text">
+                        <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                        <a class="c-collapse__toggle">toggle markup</a>
+                    </div>
+                    <div class="c-collapse__content-container c-collapse__content-container--dark">
+                        <div class="c-collapse__content--prism-code-style">
+                            <pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;div class=&quot;tooltip-this-element&quot;&gt;Hover over me
+         &lt;span class=&quot;tooltip-text&quot;&gt;Tooltip text&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- end codewell markup -->
+    </section>
+    <script type="text/javascript" src="../prism/prism.js"></script>
+    <script type="text/javascript" src="../javascript/collapse.js"></script>
 </body>
 
 </html>
