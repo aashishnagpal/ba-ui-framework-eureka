@@ -41,7 +41,7 @@
   background-color: $primary-light-color;
   font-size: 1em;
   border-radius: 3px;
-  position: absolute;
+  position: fixed;
   opacity: 0;
   pointer-events: none;
   transition: all 0.4s;
