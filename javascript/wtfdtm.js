@@ -7,11 +7,12 @@
     cacheDOM: function () {
       this.ol = document.getElementsByClassName("c-wtf__list")[0];
       this.component = document.getElementsByClassName("c-wtf")[0];
+      this.text = document.getElementsByClassName("wtf-text-container")[0];
       this.clear = document.getElementsByClassName("c-wtf__clear-all")[0];
       this.currentHeight = window.getComputedStyle(this.component).height;
     },
     bindEvents: function () {
-      document.body.addEventListener("mouseup",this.lookUp.bind(this));
+      this.text.addEventListener("mouseup",this.lookUp.bind(this));
       this.component.addEventListener("mouseover",this.show.bind(this));
       this.component.addEventListener("mouseleave",this.hide.bind(this));
       this.clear.addEventListener("click",this.clearIt.bind(this));
