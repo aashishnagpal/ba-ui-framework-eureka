@@ -1,10 +1,14 @@
-.nav--horizontal {
+.nav, .nav--horizontal {
   & .nav__item::after {
     display: none;
   }
 }
 
 .nav--vertical-left, .nav--vertical-right {
+  & .nav__item::after {
+    display: block;
+  }
+
   & .nav__item::before {
     display: none;
   }
@@ -29,5 +33,11 @@
       text-align: left;
       flex: 1;
     }
+  }
+}
+
+.nav--vertical-right {
+  .nav__item::after {
+    left: -0.15em;
   }
 }

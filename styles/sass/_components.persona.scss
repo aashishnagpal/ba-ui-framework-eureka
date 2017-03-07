@@ -16,6 +16,7 @@
     border: 0.2em solid transparent;
     transform: scale(0.9) translate(0, 0);
     transition: all 0.5s linear;
+    cursor: pointer;
 
     &__image {
       width: 5em;

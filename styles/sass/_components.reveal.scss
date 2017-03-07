@@ -112,17 +112,13 @@
 
 // Open-door
 .c-reveal--open {
-  -webkit-perspective: 1000px;
-  -moz-perspective: 1000px;
-  perspective: 1000px;
   overflow: visible;
 
   .c-reveal__visible {
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    transform-style: preserve-3d;
     position: relative;
     background-color: transparent;
+    perspective: 1000px;
+    overflow: visible;
   }
 
   .c-reveal__hidden {
@@ -140,6 +136,7 @@
   top: 0;
   transition: transform 0.3s;
   background-color: $generic-gray-color;
+  transform-style: preserve-3d;
 }
 
 .c-reveal__door-left {
@@ -166,11 +163,11 @@
 
 
 
-#reveal .o-grid__cell .c-reveal {
+#reveal .c-reveal {
   display: inline-block;
   margin-right: 2em;
 }
 
-#reveal .o-grid__cell .c-reveal--open {
+#reveal .c-reveal--open {
   margin-left: 5em;
 }

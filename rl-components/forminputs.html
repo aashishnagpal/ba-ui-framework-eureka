@@ -5,16 +5,17 @@
     <meta name="author" content="Rochell Langam">
     <title>Form Inputs Component</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../prism/prism.css">
     <link rel="stylesheet" href="../styles/css/eureka.css">
   </head>
   <body>
 
-    <section class="website-components__component" id="<component name>">
+    <section class="website-components__component" id="form-inputs">
 
     <h3>Normal-Size Checkbox Inputs</h3>
-    <p>The following checkbox controls may be used within a form.</p>
+    <p>Add <code>c-input</code> and <code>c-input-checkbox</code> classes to the input. You must also use the <code>c-label</code> class for the required labels.</p>
 
-    <div class="o-grid">
+    <div class="o-grid o-grid--gutters">
       <div class="o-grid__cell">
         <div class="c-checkbox">
           <input class="c-input c-input-checkbox" id="example1" type="checkbox" name="aliceblue" value="aliceblue">
@@ -34,7 +35,7 @@
     </div>
 
     <!-- code well markup -->
-    <div class="o-grid">
+    <div class="o-grid o-grid--gutters">
       <div class="o-grid__cell">
         <div class="c-collapse">
           <div class="c-collapse__controls-container--justified-text">
@@ -42,23 +43,23 @@
             <a class="c-collapse__toggle">toggle markup</a>
           </div>
           <div class="c-collapse__content-container c-collapse__content-container--dark">
-            <div class="c-collapse__content">
-              <pre class="u-pre--wrap"><code class="u-example-code">
+            <div class="c-collapse__content--prism-code-style">
+            <pre class="u-pre--wrap"><code class="language-markup line-numbers">
 
-                <div class="c-checkbox">
-                  <input class="c-input c-input-checkbox" id="example1" type="checkbox" name="aliceblue" value="aliceblue">
-                  <label class="c-label" for="example1">aliceblue</label>
-                </div>
+&lt;div class=&quot;c-checkbox&quot;&gt;
+  &lt;input class=&quot;c-input c-input-checkbox&quot; id=&quot;example1&quot; type=&quot;checkbox&quot; name=&quot;aliceblue&quot; value=&quot;aliceblue&quot;&gt;
+  &lt;label class=&quot;c-label&quot; for=&quot;example1&quot;&gt;aliceblue&lt;/label&gt;
+&lt;/div&gt;
 
-                <div class="c-checkbox">
-                  <input class="c-input c-input-checkbox" id="example2" type="checkbox" name="burlywood" value="burlywood">
-                  <label class="c-label" for="example2">burlywood</label>
-                </div>
+&lt;div class=&quot;c-checkbox&quot;&gt;
+  &lt;input class=&quot;c-input c-input-checkbox&quot; id=&quot;example2&quot; type=&quot;checkbox&quot; name=&quot;burlywood&quot; value=&quot;burlywood&quot;&gt;
+  &lt;label class=&quot;c-label&quot; for=&quot;example2&quot;&gt;burlywood&lt;/label&gt;
+&lt;/div&gt;
 
-                <div class="c-checkbox">
-                  <input class="c-input c-input-checkbox" id="example3" type="checkbox" name="chartreuse" value="chartreuse">
-                  <label class="c-label" for="example3">chartreuse</label>
-                </div>
+&lt;div class=&quot;c-checkbox&quot;&gt;
+  &lt;input class=&quot;c-input c-input-checkbox&quot; id=&quot;example3&quot; type=&quot;checkbox&quot; name=&quot;chartreuse&quot; value=&quot;chartreuse&quot;&gt;
+  &lt;label class=&quot;c-label&quot; for=&quot;example3&quot;&gt;chartreuse&lt;/label&gt;
+&lt;/div&gt;
 
               </code></pre>
             </div>
@@ -69,7 +70,7 @@
 
 
     <h3>Large-Size Checkbox Inputs</h3>
-    <p>The following checkbox controls may be used within a form.</p>
+    <p>Add <code>c-input</code> and <code>c-input-checkbox--lg</code> classes to the input. You must also use the <code>c-label</code> class for the required labels.</p>
 
     <div class="o-grid">
       <div class="o-grid__cell">
@@ -99,23 +100,23 @@
             <a class="c-collapse__toggle">toggle markup</a>
           </div>
           <div class="c-collapse__content-container c-collapse__content-container--dark">
-            <div class="c-collapse__content">
-              <pre class="u-pre--wrap"><code class="u-example-code">
+            <div class="c-collapse__content--prism-code-style">
+            <pre class="u-pre--wrap"><code class="language-markup line-numbers">
 
-                <div class="c-checkbox">
-                  <input class="c-input c-input-checkbox--lg" id="example4" type="checkbox" name="aliceblue" value="aliceblue">
-                  <label class="c-label" for="example4">aliceblue</label>
-                </div>
+&lt;div class=&quot;c-checkbox&quot;&gt;
+  &lt;input class=&quot;c-input c-input-checkbox--lg&quot; id=&quot;example4&quot; type=&quot;checkbox&quot; name=&quot;aliceblue&quot; value=&quot;aliceblue&quot;&gt;
+  &lt;label class=&quot;c-label&quot; for=&quot;example4&quot;&gt;aliceblue&lt;/label&gt;
+&lt;/div&gt;
 
-                <div class="c-checkbox">
-                  <input class="c-input c-input-checkbox--lg" id="example5" type="checkbox" name="burlywood" value="burlywood">
-                  <label class="c-label" for="example5">burlywood</label>
-                </div>
+&lt;div class=&quot;c-checkbox&quot;&gt;
+  &lt;input class=&quot;c-input c-input-checkbox--lg&quot; id=&quot;example5&quot; type=&quot;checkbox&quot; name=&quot;burlywood&quot; value=&quot;burlywood&quot;&gt;
+  &lt;label class=&quot;c-label&quot; for=&quot;example5&quot;&gt;burlywood&lt;/label&gt;
+&lt;/div&gt;
 
-                <div class="c-checkbox">
-                  <input class="c-input c-input-checkbox--lg" id="example6" type="checkbox" name="chartreuse" value="chartreuse">
-                  <label class="c-label" for="example6">chartreuse</label>
-                </div>
+&lt;div class=&quot;c-checkbox&quot;&gt;
+  &lt;input class=&quot;c-input c-input-checkbox--lg&quot; id=&quot;example6&quot; type=&quot;checkbox&quot; name=&quot;chartreuse&quot; value=&quot;chartreuse&quot;&gt;
+  &lt;label class=&quot;c-label&quot; for=&quot;example6&quot;&gt;chartreuse&lt;/label&gt;
+&lt;/div&gt;
 
               </code></pre>
             </div>
@@ -125,7 +126,8 @@
     </div>
 
     <h3>Radio Button Inputs</h3>
-    <p>The following radio button controls may be used within a form.</p>
+    <p>Nest the radio buttons within the <code>&lt;radiogroup></code> tag. Only one radio button can be selected at a time.</p>
+    <p>Apply the <code>c-radiogroup</code> class to the <code>&lt;radiogroup></code> tag. All radio buttons require the <code>c-input</code> class and their respective label.</p>
 
     <!-- component example grid container -->
     <div class="o-grid">
@@ -158,25 +160,25 @@
             <a class="c-collapse__toggle">toggle markup</a>
           </div>
           <div class="c-collapse__content-container c-collapse__content-container--dark">
-            <div class="c-collapse__content">
-              <pre class="u-pre--wrap"><code class="u-example-code">
+            <div class="c-collapse__content--prism-code-style">
+            <pre class="u-pre--wrap"><code class="language-markup line-numbers">
 
-                <radiogroup class="c-radiogroup">
-                  <div class="c-radio">
-                    <input class="c-input c-input-radio" id="example7" type="radio" name="chromecolor" value="aliceblue">
-                    <label class="c-label" for="example7">aliceblue</label>
-                  </div>
+&lt;radiogroup class=&quot;c-radiogroup&quot;&gt;
+  &lt;div class=&quot;c-radio&quot;&gt;
+    &lt;input class=&quot;c-input c-input-radio&quot; id=&quot;example7&quot; type=&quot;radio&quot; name=&quot;chromecolor&quot; value=&quot;aliceblue&quot;&gt;
+    &lt;label class=&quot;c-label&quot; for=&quot;example7&quot;&gt;aliceblue&lt;/label&gt;
+  &lt;/div&gt;
 
-                  <div class="c-radio">
-                    <input class="c-input c-input-radio" id="example8" type="radio" name="chromecolor" value="burlywood">
-                    <label class="c-label" for="example8">burlywood</label>
-                  </div>
+  &lt;div class=&quot;c-radio&quot;&gt;
+    &lt;input class=&quot;c-input c-input-radio&quot; id=&quot;example8&quot; type=&quot;radio&quot; name=&quot;chromecolor&quot; value=&quot;burlywood&quot;&gt;
+    &lt;label class=&quot;c-label&quot; for=&quot;example8&quot;&gt;burlywood&lt;/label&gt;
+  &lt;/div&gt;
 
-                  <div class="c-radio">
-                    <input class="c-input c-input-radio" id="example9" type="radio" name="chromecolor" value="chartreuse">
-                    <label class="c-label" for="example9">chartreuse</label>
-                  </div>
-                </radiogroup>
+  &lt;div class=&quot;c-radio&quot;&gt;
+    &lt;input class=&quot;c-input c-input-radio&quot; id=&quot;example9&quot; type=&quot;radio&quot; name=&quot;chromecolor&quot; value=&quot;chartreuse&quot;&gt;
+    &lt;label class=&quot;c-label&quot; for=&quot;example9&quot;&gt;chartreuse&lt;/label&gt;
+  &lt;/div&gt;
+&lt;/radiogroup&gt;
 
               </code></pre>
             </div>
@@ -186,7 +188,7 @@
     </div>
 
     <h3>Toggle Switch Using Checkbox Input</h3>
-    <p>For square toggle switches, remove the class, <em>c-switch--rd</em>, from the label and slider div.</p>
+    <p>For square toggle switches, remove the class <code>c-switch--rd</code> from both the label and slider div.</p>
 
     <!-- component example grid container -->
     <div class="o-grid">
@@ -208,14 +210,14 @@
             <a class="c-collapse__toggle">toggle markup</a>
           </div>
           <div class="c-collapse__content-container c-collapse__content-container--dark">
-            <div class="c-collapse__content">
-              <pre class="u-pre--wrap"><code class="u-example-code">
+            <div class="c-collapse__content--prism-code-style">
+            <pre class="u-pre--wrap"><code class="language-markup line-numbers">
 
-                <div class="c-switch">
-                  <input class="c-input c-input-switch" id="c-input-switch" type="checkbox" name="c-input-switch">
-                  <label class="c-switch__body c-switch--rd" for="c-input-switch"></label>
-                  <div class="c-switch__slider c-switch--rd"></div>
-                </div>
+&lt;div class=&quot;c-switch&quot;&gt;
+  &lt;input class=&quot;c-input c-input-switch&quot; id=&quot;c-input-switch&quot; type=&quot;checkbox&quot; name=&quot;c-input-switch&quot;&gt;
+  &lt;label class=&quot;c-switch__body c-switch--rd&quot; for=&quot;c-input-switch&quot;&gt;&lt;/label&gt;
+  &lt;div class=&quot;c-switch__slider c-switch--rd&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
 
               </code></pre>
             </div>
@@ -225,6 +227,8 @@
     </div>
 
     </section>
+    <script src="../javascript/collapse.js" charset="utf-8"></script>
     <script src="../javascript/forminputs.js" charset="utf-8"></script>
+    <script src="../prism/prism.js"></script>
   </body>
 </html>
