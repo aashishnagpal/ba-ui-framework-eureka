@@ -90,8 +90,10 @@
   &__slider {
     background-color: $generic-white-color;
     height: 1.8em;
+    left: 0;
     margin-left: .1em;
     position: absolute;
+    top: .1em;
     transition: 1s cubic-bezier(.5,0,0,1);
     width: 1.8em;
   }

@@ -5,73 +5,171 @@
     <meta name="author" content="Rochell Langam">
     <title>Button Component</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../prism/prism.css">
     <link rel="stylesheet" href="../styles/css/eureka.css">
   </head>
   <body>
 
-    <h3>Button</h3>
+    <section class="website-components__component" id="button">
 
-    <div class="c-btn-home">
-      <button class="c-btn--primary c-btn" type="button" name="button">Primary</button>
-      <button class="c-btn--secondary c-btn" type="button" name="button">Secondary</button>
-      <a class="c-btn--primary c-btn" href="#">Link Button</a>
+    <h3>Basic Buttons</h3>
+    <p>To use the button components, include the <code>c-btn</code> class in addition to the differentiating primary and secondary styling, which are applied with either classes: <code>c-btn--primary</code> or <code>c-btn--secondary</code>.</p>
 
-      <!-- 3 Examples -->
-      <!-- Normal example -->
-      <button class="c-btn--primary c-btn" type="button" name="button">
-        <span class="c-btn__btn-icon">
-          <i class="fa fa-paper-plane" aria-hidden="true"></i>
-        </span>
-        Send
-      </button>
-      <!-- Example with c-btn--wide -->
-      <button class="c-btn--primary c-btn--wide c-btn" type="button" name="button">
-        <span class="c-btn__btn-icon">
-          <i class="fa fa-user-plus" aria-hidden="true"></i>
-        </span>
-        Add User
-      </button>
+    <!-- component example grid container -->
+    <div class="o-grid o-grid--gutters">
+      <div class="o-grid__cell">
+          <button class="c-btn--primary c-btn" type="button" name="button">Primary</button>
+          <button class="c-btn--secondary c-btn" type="button" name="button">Secondary</button>
+          <a class="c-btn--primary c-btn" href="#">Link Button</a>
 
-      <!-- Example with disabled attribute -->
-      <button class="c-btn--primary c-btn--wide c-btn" type="button" name="button" disabled="true">
-        <span class="c-btn__btn-icon">
-          <i class="fa fa-cog" aria-hidden="true"></i>
-        </span>
-        Disabled
-      </button>
+          <button class="c-btn--primary c-btn" type="button" name="button">
+            <span class="c-btn__btn-icon">
+              <i class="fa fa-paper-plane" aria-hidden="true"></i>
+            </span>
+            Send
+          </button>
+
+          <button class="c-btn--primary c-btn" type="button" name="button">
+            <span class="c-btn__btn-icon">
+              <i class="fa fa-user-plus" aria-hidden="true"></i>
+            </span>
+            Add User
+          </button>
+
+          <button class="c-btn--primary c-btn" type="button" name="button" disabled>
+            <span class="c-btn__btn-icon">
+              <i class="fa fa-cog" aria-hidden="true"></i>
+            </span>
+            Disabled
+          </button>
+      </div>
     </div>
 
-    <div class="c-btn-home">
-      <button class="c-btn--primary--rounded c-btn" type="button" name="button">Primary</button>
-      <button class="c-btn--secondary--rounded c-btn" type="button" name="button">Secondary</button>
-      <a class="c-btn--primary--rounded c-btn" href="#">Link Button</a>
+    <!-- code well markup -->
+    <div class="o-grid o-grid--gutters">
+      <div class="o-grid__cell">
+        <div class="c-collapse">
+          <div class="c-collapse__controls-container--justified-text">
+            <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+            <a class="c-collapse__toggle">toggle markup</a>
+          </div>
+          <div class="c-collapse__content-container c-collapse__content-container--dark">
+            <div class="c-collapse__content--prism-code-style">
+            <pre class="u-pre--wrap"><code class="language-markup line-numbers">
+&lt;!-- Primary buttons --&gt;
+&lt;button class=&quot;c-btn--primary c-btn&quot; type=&quot;button&quot; name=&quot;button&quot;&gt;Primary&lt;/button&gt;
 
-      <!-- 3 Examples -->
-      <!-- Normal example -->
-      <button class="c-btn--primary--rounded c-btn" type="button" name="button">
-        <span class="c-btn__btn-icon">
-          <i class="fa fa-paper-plane" aria-hidden="true"></i>
-        </span>
-        Send
-      </button>
-      <!-- Example with c-btn--wide -->
-      <button class="c-btn--primary--rounded c-btn--wide c-btn" type="button" name="button">
-        <span class="c-btn__btn-icon">
-          <i class="fa fa-user-plus" aria-hidden="true"></i>
-        </span>
-        Add User
-      </button>
+&lt;!-- Secondary buttons --&gt;
+&lt;button class=&quot;c-btn--secondary c-btn&quot; type=&quot;button&quot; name=&quot;button&quot;&gt;Secondary&lt;/button&gt;
 
-      <!-- Example with disabled attribute -->
-      <button class="c-btn--primary--rounded c-btn--wide c-btn" type="button" name="button" disabled="true">
-        <span class="c-btn__btn-icon">
-          <i class="fa fa-cog" aria-hidden="true"></i>
-        </span>
-        Disabled
-      </button>
+&lt;!-- Anchor tag styled as a primary button --&gt;
+&lt;a class=&quot;c-btn--primary c-btn&quot; href=&quot;#&quot;&gt;Link Button&lt;/a&gt;
+
+&lt;!-- Button with fontawesome.io icon --&gt;
+&lt;button class=&quot;c-btn--primary c-btn&quot; type=&quot;button&quot; name=&quot;button&quot;&gt;
+  &lt;span class=&quot;c-btn__btn-icon&quot;&gt;
+    &lt;i class=&quot;fa fa-paper-plane&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+  &lt;/span&gt;
+  Send
+&lt;/button&gt;
+
+&lt;!-- Disabled button using the disabled attribute. --&gt;
+&lt;button class=&quot;c-btn--primary c-btn&quot; type=&quot;button&quot; name=&quot;button&quot; disabled&gt;
+  &lt;span class=&quot;c-btn__btn-icon&quot;&gt;
+    &lt;i class=&quot;fa fa-cog&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+  &lt;/span&gt;
+  Disabled
+&lt;/button&gt;
+            </code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="c-btn-home">
+
+    <h3>Rounded Buttons</h3>
+    <p>To achieve the rounded effect, append <code>--rounded</code> to the primary or secondary class names.</p>
+
+    <!-- component example grid container -->
+    <div class="o-grid o-grid--gutters">
+      <div class="o-grid__cell">
+        <button class="c-btn--primary--rounded c-btn" type="button" name="button">Primary</button>
+        <button class="c-btn--secondary--rounded c-btn" type="button" name="button">Secondary</button>
+        <a class="c-btn--primary--rounded c-btn" href="#">Link Button</a>
+
+        <button class="c-btn--primary--rounded c-btn" type="button" name="button">
+          <span class="c-btn__btn-icon">
+            <i class="fa fa-paper-plane" aria-hidden="true"></i>
+          </span>
+          Send
+        </button>
+
+        <button class="c-btn--primary--rounded c-btn" type="button" name="button">
+          <span class="c-btn__btn-icon">
+            <i class="fa fa-user-plus" aria-hidden="true"></i>
+          </span>
+          Add User
+        </button>
+
+        <button class="c-btn--primary--rounded c-btn" type="button" name="button" disabled>
+          <span class="c-btn__btn-icon">
+            <i class="fa fa-cog" aria-hidden="true"></i>
+          </span>
+          Disabled
+        </button>
+      </div>
+    </div>
+
+    <!-- code well markup -->
+    <div class="o-grid o-grid--gutters">
+      <div class="o-grid__cell">
+        <div class="c-collapse">
+          <div class="c-collapse__controls-container--justified-text">
+            <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+            <a class="c-collapse__toggle">toggle markup</a>
+          </div>
+          <div class="c-collapse__content-container c-collapse__content-container--dark">
+            <div class="c-collapse__content--prism-code-style">
+            <pre class="u-pre--wrap"><code class="language-markup line-numbers">
+&lt;!-- Primary buttons --&gt;
+&lt;button class=&quot;c-btn--primary--rounded c-btn&quot; type=&quot;button&quot; name=&quot;button&quot;&gt;Primary&lt;/button&gt;
+
+&lt;!-- Secondary buttons --&gt;
+&lt;button class=&quot;c-btn--secondary--rounded c-btn&quot; type=&quot;button&quot; name=&quot;button&quot;&gt;Secondary&lt;/button&gt;
+
+&lt;!-- Anchor tag styled as a primary button --&gt;
+&lt;a class=&quot;c-btn--primary--rounded c-btn&quot; href=&quot;#&quot;&gt;Link Button&lt;/a&gt;
+
+&lt;!-- Button with fontawesome.io icon --&gt;
+&lt;button class=&quot;c-btn--primary--rounded c-btn&quot; type=&quot;button&quot; name=&quot;button&quot;&gt;
+  &lt;span class=&quot;c-btn__btn-icon&quot;&gt;
+    &lt;i class=&quot;fa fa-paper-plane&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+  &lt;/span&gt;
+  Send
+&lt;/button&gt;
+
+&lt;!-- Disabled button using the disabled attribute. --&gt;
+&lt;button class=&quot;c-btn--primary--rounded c-btn&quot; type=&quot;button&quot; name=&quot;button&quot; disabled&gt;
+  &lt;span class=&quot;c-btn__btn-icon&quot;&gt;
+    &lt;i class=&quot;fa fa-cog&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+  &lt;/span&gt;
+  Disabled
+&lt;/button&gt;
+            </code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <h3>Button Groups</h3>
+    <p>Group buttons together by utilizing the <code>c-btn-i</code> class. For alternative colors on specific buttons, include <code>c-btn-i--diff</code>.</p>
+
+    <!-- component example grid container -->
+    <div class="o-grid o-grid--gutters">
+      <div class="o-grid__cell">
         <ul class="c-btn-gp">
           <li><button class="c-btn c-btn-i" type="button" name="button">Button 1</button></li>
           <li><button class="c-btn c-btn-i c-btn-i--diff" type="button" name="button">Button 2</button></li>
@@ -92,10 +190,49 @@
           <li><button class="c-btn c-btn-i" type="button" name="button">Button 3</button></li>
           <li><button class="c-btn c-btn-i c-btn-i--diff c-btn-i--rd-r" type="button" name="button">Button 4</button></li>
         </ul>
+      </div>
     </div>
 
+    <!-- code well markup -->
+    <div class="o-grid o-grid--gutters">
+      <div class="o-grid__cell">
+        <div class="c-collapse">
+          <div class="c-collapse__controls-container--justified-text">
+            <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+            <a class="c-collapse__toggle">toggle markup</a>
+          </div>
+          <div class="c-collapse__content-container c-collapse__content-container--dark">
+            <div class="c-collapse__content--prism-code-style">
+            <pre class="u-pre--wrap"><code class="language-markup line-numbers">
+&lt;ul class=&quot;c-btn-gp&quot;&gt;
+  &lt;li&gt;&lt;button class=&quot;c-btn c-btn-i&quot; type=&quot;button&quot; name=&quot;button&quot;&gt;Button 1&lt;/button&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;button class=&quot;c-btn c-btn-i c-btn-i--diff&quot; type=&quot;button&quot; name=&quot;button&quot;&gt;Button 2&lt;/button&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;button class=&quot;c-btn c-btn-i&quot; type=&quot;button&quot; name=&quot;button&quot;&gt;Button 3&lt;/button&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;button class=&quot;c-btn c-btn-i c-btn-i--diff&quot; type=&quot;button&quot; name=&quot;button&quot;&gt;Button 4&lt;/button&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
+&lt;ul class=&quot;c-btn-gp&quot;&gt;
+  &lt;li&gt;&lt;a class=&quot;c-btn c-btn-i&quot; href=&quot;#&quot;&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a class=&quot;c-btn c-btn-i c-btn-i--diff&quot; href=&quot;#&quot;&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a class=&quot;c-btn c-btn-i&quot; href=&quot;#&quot;&gt;Link 3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a class=&quot;c-btn c-btn-i c-btn-i--diff&quot; href=&quot;#&quot;&gt;Link 4&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
+&lt;ul class=&quot;c-btn-gp&quot;&gt;
+  &lt;li&gt;&lt;button class=&quot;c-btn c-btn-i c-btn-i--rd-l&quot; type=&quot;button&quot; name=&quot;button&quot;&gt;Button 1&lt;/button&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;button class=&quot;c-btn c-btn-i c-btn-i--diff&quot; type=&quot;button&quot; name=&quot;button&quot;&gt;Button 2&lt;/button&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;button class=&quot;c-btn c-btn-i&quot; type=&quot;button&quot; name=&quot;button&quot;&gt;Button 3&lt;/button&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;button class=&quot;c-btn c-btn-i c-btn-i--diff c-btn-i--rd-r&quot; type=&quot;button&quot; name=&quot;button&quot;&gt;Button 4&lt;/button&gt;&lt;/li&gt;
+&lt;/ul&gt;
+            </code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    </section>
+    <script src="../javascript/collapse.js" charset="utf-8"></script>
+    <script src="../prism/prism.js"></script>
   </body>
 </html>

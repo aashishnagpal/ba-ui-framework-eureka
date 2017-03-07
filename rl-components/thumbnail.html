@@ -4,90 +4,202 @@
   <meta charset="utf-8">
   <meta name="author" content="Rochell Langam">
   <title>Thumbnail Component</title>
-  <script src="../javascript/breadcrumb.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="../prism/prism.css">
   <link rel="stylesheet" href="../styles/css/eureka.css">
 </head>
   <body>
+
+    <section class="website-components__component" id="thumbnail">
+
     <h3>Basic thumbnails</h3>
-    <div class="c-thumbnails-row o-grid">
-      <div class="c-thumbnail">
-        <img class="c-thumbnail__img" src="http://images.cdn2.stockunlimited.net/clipart/silhouette-of-owl_1447052.jpg" alt="">
+    <p></p>
+
+    <!-- component example grid container -->
+    <div class="o-grid o-grid--gutters">
+      <div class="o-grid__cell">
+        <div class="c-thumbnails-row o-grid">
+          <div class="c-thumbnail">
+            <img class="c-thumbnail__img" src="http://images.cdn2.stockunlimited.net/clipart/silhouette-of-owl_1447052.jpg" alt="">
+          </div>
+          <div class="c-thumbnail">
+            <img class="c-thumbnail__img" src="http://images.cdn2.stockunlimited.net/clipart/silhouette-of-owl_1447052.jpg" alt="">
+          </div>
+          <div class="c-thumbnail">
+            <img class="c-thumbnail__img" src="http://images.cdn2.stockunlimited.net/clipart/silhouette-of-owl_1447052.jpg" alt="">
+          </div>
+          <div class="c-thumbnail">
+            <img class="c-thumbnail__img" src="http://images.cdn2.stockunlimited.net/clipart/silhouette-of-owl_1447052.jpg" alt="">
+          </div>
+          <div class="c-thumbnail">
+            <img class="c-thumbnail__img" src="http://images.cdn2.stockunlimited.net/clipart/silhouette-of-owl_1447052.jpg" alt="">
+          </div>
+        </div>
       </div>
-      <div class="c-thumbnail">
-        <img class="c-thumbnail__img" src="http://images.cdn2.stockunlimited.net/clipart/silhouette-of-owl_1447052.jpg" alt="">
-      </div>
-      <div class="c-thumbnail">
-        <img class="c-thumbnail__img" src="http://images.cdn2.stockunlimited.net/clipart/silhouette-of-owl_1447052.jpg" alt="">
-      </div>
-      <div class="c-thumbnail">
-        <img class="c-thumbnail__img" src="http://images.cdn2.stockunlimited.net/clipart/silhouette-of-owl_1447052.jpg" alt="">
-      </div>
-      <div class="c-thumbnail">
-        <img class="c-thumbnail__img" src="http://images.cdn2.stockunlimited.net/clipart/silhouette-of-owl_1447052.jpg" alt="">
+    </div>
+
+    <!-- code well markup -->
+    <div class="o-grid o-grid--gutters">
+      <div class="o-grid__cell">
+        <div class="c-collapse">
+          <div class="c-collapse__controls-container--justified-text">
+            <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+            <a class="c-collapse__toggle">toggle markup</a>
+          </div>
+          <div class="c-collapse__content-container c-collapse__content-container--dark">
+            <div class="c-collapse__content--prism-code-style">
+            <pre class="u-pre--wrap"><code class="language-markup line-numbers">
+&lt;div class=&quot;c-thumbnails-row o-grid&quot;&gt;
+  &lt;div class=&quot;c-thumbnail&quot;&gt;
+    &lt;img class=&quot;c-thumbnail__img&quot; src=&quot;someImgURL&quot; alt=&quot;&quot;&gt;
+  &lt;/div&gt;
+  ....
+&lt;/div&gt;
+            </code></pre>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
     <h3>The Trio</h3>
     <p>The Trio is ideal for grouping two images that are each half the height of the main image.</p>
-    <div class="c-thumbnails-row o-grid">
-      <div class="c-thumbnail">
-        <img class="c-thumbnail__img" src="http://authenticmonogram.com/wp-content/uploads/2016/05/S985171-500x500.jpg" alt="">
-      </div>
-      <div class="c-thumbnail-duo">
-        <div class="c-thumbnail">
-          <img class="c-thumbnail__img" src="https://online-shirt-designer.ch/img/Designs/Designklein-16707167.png" alt="">
+
+    <!-- component example grid container -->
+    <div class="o-grid o-grid--gutters">
+      <div class="o-grid__cell">
+        <div class="c-thumbnails-row o-grid">
+          <div class="c-thumbnail">
+            <img class="c-thumbnail__img" src="http://authenticmonogram.com/wp-content/uploads/2016/05/S985171-500x500.jpg" alt="">
+          </div>
+          <div class="c-thumbnail-duo">
+            <div class="c-thumbnail">
+              <img class="c-thumbnail__img" src="https://online-shirt-designer.ch/img/Designs/Designklein-16707167.png" alt="">
+            </div>
+            <div class="c-thumbnail">
+              <img class="c-thumbnail__img" src="https://online-shirt-designer.ch/img/Designs/Designklein-16707167.png" alt="">
+            </div>
+          </div>
         </div>
-        <div class="c-thumbnail">
-          <img class="c-thumbnail__img" src="https://online-shirt-designer.ch/img/Designs/Designklein-16707167.png" alt="">
+      </div>
+    </div>
+
+    <!-- code well markup -->
+    <div class="o-grid o-grid--gutters">
+      <div class="o-grid__cell">
+        <div class="c-collapse">
+          <div class="c-collapse__controls-container--justified-text">
+            <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+            <a class="c-collapse__toggle">toggle markup</a>
+          </div>
+          <div class="c-collapse__content-container c-collapse__content-container--dark">
+            <div class="c-collapse__content--prism-code-style">
+            <pre class="u-pre--wrap"><code class="language-markup line-numbers">
+&lt;div class=&quot;c-thumbnails-row o-grid&quot;&gt;
+  &lt;div class=&quot;c-thumbnail&quot;&gt;
+    &lt;img class=&quot;c-thumbnail__img&quot; src=&quot;someImgURL&quot; alt=&quot;&quot;&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;c-thumbnail-duo&quot;&gt;
+    &lt;div class=&quot;c-thumbnail&quot;&gt;
+      &lt;img class=&quot;c-thumbnail__img&quot; src=&quot;someImgURL&quot; alt=&quot;&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-thumbnail&quot;&gt;
+      &lt;img class=&quot;c-thumbnail__img&quot; src=&quot;someImgURL&quot; alt=&quot;&quot;&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+            </code></pre>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
     <h3>Thumbnail with Description</h3>
     <p>Modify the align-items property or modify specific items with align-self to suit your needs.</p>
-    <div class="c-thumbnails-row--desc o-grid">
-      <div class="c-thumbnail c-thumbnail-detail">
-        <div class="c-thumbnail__desc">
-          <img class="c-thumbnail__img" src="https://img.clipartfest.com/f64bae705abb25168c49c202263f8ed8_2014-clipartpanda-com-about-elephant-clipart-silhouette_700-494.jpeg" alt="">
-          <p class="c-thumbnail__p">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.
-          </p>
-        </div>
-      </div>
-      <div class="c-thumbnail c-thumbnail-detail">
-        <div class="c-thumbnail__desc">
-          <img class="c-thumbnail__img" src="http://images.cdn2.stockunlimited.net/clipart/silhouette-of-owl_1447052.jpg" alt="">
-          <p class="c-thumbnail__p">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.
-          </p>
-        </div>
-      </div>
-      <div class="c-thumbnail c-thumbnail-detail">
-        <div class="c-thumbnail__desc">
-          <img class="c-thumbnail__img" src="http://images.cdn2.stockunlimited.net/clipart/silhouette-of-owl_1447052.jpg" alt="">
-          <p class="c-thumbnail__p">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.
-          </p>
-        </div>
-      </div>
-      <div class="c-thumbnail c-thumbnail-detail">
-        <div class="c-thumbnail__desc">
-          <img class="c-thumbnail__img" src="http://images.cdn2.stockunlimited.net/clipart/silhouette-of-owl_1447052.jpg" alt="">
-          <p class="c-thumbnail__p">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.
-          </p>
-        </div>
-      </div>
-      <div class="c-thumbnail c-thumbnail-detail">
-        <div class="c-thumbnail__desc">
-          <img class="c-thumbnail__img" src="http://images.cdn2.stockunlimited.net/clipart/silhouette-of-owl_1447052.jpg" alt="">
-          <p class="c-thumbnail__p">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.
-          </p>
+
+    <!-- component example grid container -->
+    <div class="o-grid o-grid--gutters">
+      <div class="o-grid__cell">
+        <div class="c-thumbnails-row--desc o-grid">
+          <div class="c-thumbnail c-thumbnail-detail">
+            <div class="c-thumbnail__desc">
+              <img class="c-thumbnail__img" src="https://img.clipartfest.com/f64bae705abb25168c49c202263f8ed8_2014-clipartpanda-com-about-elephant-clipart-silhouette_700-494.jpeg" alt="">
+              <p class="c-thumbnail__p">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.
+              </p>
+            </div>
+          </div>
+          <div class="c-thumbnail c-thumbnail-detail">
+            <div class="c-thumbnail__desc">
+              <img class="c-thumbnail__img" src="http://images.cdn2.stockunlimited.net/clipart/silhouette-of-owl_1447052.jpg" alt="">
+              <p class="c-thumbnail__p">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.
+              </p>
+            </div>
+          </div>
+          <div class="c-thumbnail c-thumbnail-detail">
+            <div class="c-thumbnail__desc">
+              <img class="c-thumbnail__img" src="http://images.cdn2.stockunlimited.net/clipart/silhouette-of-owl_1447052.jpg" alt="">
+              <p class="c-thumbnail__p">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.
+              </p>
+            </div>
+          </div>
+          <div class="c-thumbnail c-thumbnail-detail">
+            <div class="c-thumbnail__desc">
+              <img class="c-thumbnail__img" src="http://images.cdn2.stockunlimited.net/clipart/silhouette-of-owl_1447052.jpg" alt="">
+              <p class="c-thumbnail__p">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.
+              </p>
+            </div>
+          </div>
+          <div class="c-thumbnail c-thumbnail-detail">
+            <div class="c-thumbnail__desc">
+              <img class="c-thumbnail__img" src="http://images.cdn2.stockunlimited.net/clipart/silhouette-of-owl_1447052.jpg" alt="">
+              <p class="c-thumbnail__p">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
+    <!-- code well markup -->
+    <div class="o-grid o-grid--gutters">
+      <div class="o-grid__cell">
+        <div class="c-collapse">
+          <div class="c-collapse__controls-container--justified-text">
+            <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+            <a class="c-collapse__toggle">toggle markup</a>
+          </div>
+          <div class="c-collapse__content-container c-collapse__content-container--dark">
+            <div class="c-collapse__content--prism-code-style">
+            <pre class="u-pre--wrap"><code class="language-markup line-numbers">
+&lt;div class=&quot;c-thumbnails-row--desc o-grid&quot;&gt;
+  &lt;div class=&quot;c-thumbnail c-thumbnail-detail&quot;&gt;
+    &lt;div class=&quot;c-thumbnail__desc&quot;&gt;
+      &lt;img class=&quot;c-thumbnail__img&quot; src=&quot;https://img.clipartfest.com/f64bae705abb25168c49c202263f8ed8_2014-clipartpanda-com-about-elephant-clipart-silhouette_700-494.jpeg&quot; alt=&quot;&quot;&gt;
+      &lt;p class=&quot;c-thumbnail__p&quot;&gt;
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa.
+      &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;c-thumbnail c-thumbnail-detail&quot;&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;
+            </code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+
+
+    <script src="../javascript/collapse.js" charset="utf-8"></script>
+    <script src="../prism/prism.js"></script>
   </body>
 </html>
