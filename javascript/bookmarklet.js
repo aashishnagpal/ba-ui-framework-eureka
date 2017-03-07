@@ -2,7 +2,8 @@
   window.addEventListener('keydown', _keysDown, false);
   window.addEventListener('keyup', _keysUp, false);
 
-  document.addEventListener('selectionchange', _checkForSelection, false);
+  // document.addEventListener('selectionchange', _checkForSelection, false);
+  document.addEventListener('mouseup', _checkForSelection, false);
 
 
   var bookmarkListComponent = document.querySelector('.c-bookmarklet');
@@ -34,11 +35,17 @@
   }
 
   function _checkForSelection() {
-    document.addEventListener('mouseup', function() {
+    if (event.target !== popUpYesBtn) {
+
+      console.log('_checkForSelection mouseup event target: ', event.target);
       var selection = window.getSelection();
       var selectedRange = selection.getRangeAt(0);
-      _setPopUp(selectedRange);
-    }, false);
+
+      if (selectedRange.startOffset !== selectedRange.endOffset && selectedRange.startContainer === selectedRange.endContainer) {
+        _setPopUp(selectedRange);
+      }
+
+    }
   }
 
   function _setPopUp(selectedRange) {
@@ -69,20 +76,26 @@
       }
 
       // console.log('selectedRange in _setPopUp', selectedRange);
-      _bookmarkFromButton(selectedRange);
+      // _bookmarkFromButton(selectedRange);
+      // var rangeToBookmark = selectedRange.cloneRange();
+
+      popUpYesBtn.addEventListener('mousedown', _pressedYes(range), false);
+      popUpNoBtn.addEventListener('click', function() {
+        console.log('nope');
+      }, false);
     }
   }
 
   function _bookmarkFromButton(selectedRange) {
     // console.log('bookmark from button selectedRange: ', selectedRange);
-    var rangeStart = selectedRange.startOffset;
-    var rangeEnd = selectedRange.endOffset;
-    var rangeToBookmark = selectedRange.cloneRange();
+    // var rangeStart = selectedRange.startOffset;
+    // var rangeEnd = selectedRange.endOffset;
+    // var rangeToBookmark = selectedRange.cloneRange();
     // console.log('rangeToBookmark: ', rangeToBookmark, 'selectedRange: ', selectedRange);
-    popUpYesBtn.addEventListener('click', _pressedYes(rangeToBookmark), false);
-    popUpNoBtn.addEventListener('click', function() {
-      console.log('nope');
-    }, false);
+    // popUpYesBtn.addEventListener('click', _pressedYes(rangeToBookmark), false);
+    // popUpNoBtn.addEventListener('click', function() {
+    //   console.log('nope');
+    // }, false);
 
 
   }
@@ -90,15 +103,17 @@
   function _pressedYes(r) {
     return function(e) {
       console.log('pressed Yes: ', r);
-      _bookmarkSelection(r);
-    }
+      _bookmarkSelection(r, true);
+    };
   }
 
 
-  function _bookmarkSelection(selectedRange) {
+  function _bookmarkSelection(selectedRange, fromButton) {
     // console.log('Shortcut initiated!');
     // var selection;
     console.log('selection inside _bookmarkSelection function: ', selectedRange);
+    var calledFromButton = fromButton || false;
+    console.log('calledFromButton: ', calledFromButton);
     var alertNode;
     var selectionString;
     // var selectedText;
@@ -108,6 +123,7 @@
     var listNode;
     var closeIcon;
     var googleSearchBtn;
+    var alertBackground;
 
 
     alertNode = bookmarkListComponent.parentNode;
@@ -182,39 +198,41 @@
         // show the bookmarklet component
         bookmarkListComponent.classList.add('c-bookmarklet--is-visible');
 
+        selectedRange.collapse();
+
       } else {
-        if (selectedRange.startContainer !== selectedRange.endContainer) {
+        if (!calledFromButton && selectedRange.startContainer !== selectedRange.endContainer) {
 
           console.log("Don't cross the streams!! (nodes have been split)");
           // create background div and add class
-          var background = document.createElement('div');
-          background.classList.add('c-bookmarklet__alert-background--warning');
+          alertBackground = document.createElement('div');
+          alertBackground.classList.add('c-bookmarklet__alert-background--warning');
           // create warning div and add class
           var warning = document.createElement('div');
           warning.classList.add('c-bookmarklet__alert--warning');
           // add in html and message
           warning.innerHTML = '<i class="fa fa-exclamation-triangle fa-2x" aria-hidden="true"></i><p><strong>D\'oh!</strong> Your selection can\'t be a bookmarked.</p><p><small><em>(Keep your selection within a single HTML tag)</em></small></p>' + '<span class="c-alert__close-alert">' + '<i class="fa fa-times"></i>' + '</span>';
           // add event listener for dismissing of alert
-          alertNode.addEventListener('click', _dismissAlert(warning, background), false);
+          alertNode.addEventListener('click', _dismissAlert(warning, alertBackground), false);
           // append alert div and background to document
           alertNode.appendChild(warning);
-          alertNode.appendChild(background);
+          alertNode.appendChild(alertBackground);
         }
-        if (selectedRange.startOffset === selectedRange.endOffset) {
+        if (!calledFromButton && selectedRange.startOffset === selectedRange.endOffset) {
           console.log("Nothing selected!");
           // create background div and add class
-          var background = document.createElement('div');
-          background.classList.add('c-bookmarklet__alert-background--caution');
+          alertBackground = document.createElement('div');
+          alertBackground.classList.add('c-bookmarklet__alert-background--caution');
           // create alert div and add class
           var caution = document.createElement('div');
           caution.classList.add('c-bookmarklet__alert--caution');
           // add in html and message
           caution.innerHTML = '<i class="fa fa-meh-o fa-3x" aria-hidden="true"></i><p><strong>Oops!</strong> You didn\'t select anything to bookmark. Nothing to see here...</p>' + '<span class="c-alert__close-alert">' + '<i class="fa fa-times"></i>' + '</span>';
           // add event listener for dismissing of alert
-          alertNode.addEventListener('click', _dismissAlert(caution, background), false);
+          alertNode.addEventListener('click', _dismissAlert(caution, alertBackground), false);
           // append alert div and background to document
           alertNode.appendChild(caution);
-          alertNode.appendChild(background);
+          alertNode.appendChild(alertBackground);
 
         }
       }
@@ -303,3 +321,4 @@
   }
 
 })();
+
