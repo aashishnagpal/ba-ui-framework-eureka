@@ -124,7 +124,7 @@
 
   &__title {
     border-bottom: 2px solid $secondary-color;
-    padding: 0.2em 1.5em;
+    padding: 1em 1.5em;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -136,11 +136,11 @@
 }
 
 .demo-badge__list {
-  padding: 0;
+  padding: 1em 0;
   flex-flow: column;
 
   li {
-    margin: 0.5em 2em;
+    margin: 0.8em 2em;
 
     .close {
       float: right;
