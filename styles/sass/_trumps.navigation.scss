@@ -38,6 +38,12 @@
 
 .nav--vertical-right {
   .nav__item::after {
-    left: -0.15em;
+    left: -0.1em;
+  }
+}
+
+.u-demo-site-nav--vertical-left {
+  & .nav__item {
+    flex: 1 0 auto;
   }
 }
