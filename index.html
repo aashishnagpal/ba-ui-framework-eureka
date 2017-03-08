@@ -8,7 +8,7 @@
 </head>
 <body>
 <!-- append the loader div to DOM before loading the script -->
-<div id="loader-site" class="loader loader-overlay">
+<div id="loader-site" class="loader loader-overlay loader-overlay--full-page">
   <div class="loader__load-box"></div>
 </div>
 
@@ -3694,8 +3694,8 @@ Send
       <section class="website-components__component" id="loader-section">
 
         <h3>Loader</h3>
-        <p>Use a loader within any space to display loading in progress. It can be anything, loading an image,
-           some data, etc.</p>
+        <p>Use a loader within any space to display loading in progress. It can be to show loading anything, an
+            image, some data, etc.</p>
         <a class="c-btn--primary--rounded c-btn" href="javascript:loader.toggle('loader-demo');">Toggle Loader
                                                                                                  Here</a>
         <br><br>
@@ -3704,14 +3704,16 @@ Send
           <div class="o-grid__cell">
             <h4>Usage</h4>
             <ol>
-              <li>Include the following code within any block element and the loader will overlay the
-                  entire width and
-                  height of its container.
+              <li><p>Include the following code within any block element and the loader will overlay the
+                  entire width and height of its container.</p>
+                  <p><strong>Note:</strong> Add <code class="language-css">loader-overlay--full-page</code> class to
+                      make it
+                  span the entire width of the page and also be available at any scroll length. For example, a
+                      site-wide loader.</p>
               </li>
               <li>Also Include Script <code class="language-markup">loader.js</code> on your page.</li>
               <li>Initialize the loader using <code class="language-javascript">loader.init(id);</code>.
-                  The id
-                  should match the loader's id.
+                  The id should match the loader's id.
               </li>
               <li>Use the following methods:
                 <ul>
@@ -3743,10 +3745,15 @@ Send
               </div>
               <div class="c-collapse__content-container c-collapse__content-container--dark">
                 <div class="c-collapse__content--prism-code-style">
-<pre class="u-pre--wrap"><code class="language-markup">&lt;div id=&quot;myLoader&quot; class=&quot;loader loader-overlay&quot;&gt;
+<pre class="u-pre--wrap"><code class="language-markup">&lt;!-- Container level loader --&gt;
+&lt;div id=&quot;myLoader&quot; class=&quot;loader loader-overlay&quot;&gt;
   &lt;div class=&quot;loader__load-box&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
-</code></pre>
+
+&lt;!-- Site wide loader --&gt;
+&lt;div id=&quot;myLoader&quot; class=&quot;loader loader-overlay loader-overlay--full-page&quot;&gt;
+  &lt;div class=&quot;loader__load-box&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
                 </div>
               </div>
             </div>
