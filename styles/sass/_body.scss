@@ -20,6 +20,7 @@
   background-color: $generic-gray-color;
   padding: 2em;
   width: 82%;
+  margin-left: -2px; /* if we want the current anchor indicator to split the sections */
 
   &__component{
     border-radius: 5px;
