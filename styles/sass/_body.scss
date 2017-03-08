@@ -24,4 +24,21 @@
 
 }
 
+.u-nav--vertical-left--demo-site {
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  .nav__item {
+    flex: 1 0 auto;
+
+    &::after {
+      right: 0;
+    }
+  }
+
+  .nav__link {
+    padding: 0.75em 1em;
+  }
+}
+
 
