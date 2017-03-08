@@ -22,7 +22,7 @@
       @extend %transparent;
       flex-direction: column;
       max-height: 100vh;
-      overflow: auto;
+      height: auto;
     }
   }
 
@@ -44,7 +44,6 @@
   }
 
   &__item {
-    padding: 0.1em;
     position: relative;
     text-align: center;
     display: flex;
