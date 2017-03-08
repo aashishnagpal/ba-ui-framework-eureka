@@ -33,7 +33,7 @@
       // check for bookmarklet limiter attribute
       if (limitBookmarklet !== null) {
         // if selected range is a decendant of the limited element
-        if (_isAncestorNode(limitBookmarklet, rangeContainer)) {
+        if (limitBookmarklet.contains(rangeContainer)) {
           _bookmarkSelection(selectedRange);
         }
       } else if (limitBookmarklet === null) {
@@ -46,16 +46,16 @@
     keysPressed[e.keyCode] = false;
   }
 
-  function _isAncestorNode(parent, child) {
-    var nodeToCheck = child.parentNode;
-    while (nodeToCheck !== null) {
-      if (nodeToCheck == parent) {
-        return true;
-      }
-      nodeToCheck = nodeToCheck.parentNode;
-    }
-    return false;
-  }
+  // function _isAncestorNode(parent, child) {
+  //   var nodeToCheck = child.parentNode;
+  //   while (nodeToCheck !== null) {
+  //     if (nodeToCheck == parent) {
+  //       return true;
+  //     }
+  //     nodeToCheck = nodeToCheck.parentNode;
+  //   }
+  //   return false;
+  // }
 
   function _checkForSelection() {
     if (event.target !== popUpYesBtn) {
