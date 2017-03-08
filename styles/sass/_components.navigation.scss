@@ -15,14 +15,11 @@
   &, &--horizontal {
     @extend %transparent;
     display: flex;
-    max-width: 100vw;
-    width: auto;
   }
 
   &--vertical {
     &-left, &-right {
       @extend %transparent;
-      display: inline-flex;
       flex-direction: column;
       max-height: 100vh;
       overflow: auto;
