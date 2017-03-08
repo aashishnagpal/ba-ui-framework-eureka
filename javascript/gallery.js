@@ -1,4 +1,4 @@
-window.onload = function () {
+(function () {
   var gallery = {
     init: function () {
       this.cacheDOM();
@@ -27,4 +27,4 @@ window.onload = function () {
   };
 
   gallery.init();
-};
+})();

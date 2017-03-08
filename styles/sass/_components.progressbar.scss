@@ -47,7 +47,7 @@
       background-color: $primary-light-color;
       width: 40%;
     }
-    &[ aria-valuenow="10"] {
+    &[aria-valuenow="10"] {
       background-color: $primary-dark-color;
       width: 10%;
     }
@@ -64,7 +64,6 @@
 @keyframes progressbar {
   0% {
     background-position: 60em 0;
-    // transform: scale(0);
   }
   100% {
     background-position: 0 0;
