@@ -33,7 +33,7 @@
       // check for bookmarklet limiter attribute
       if (limitBookmarklet !== null) {
         // if selected range is a decendant of the limited element
-        if (_isAncestorNode(limitBookmarklet, rangeContainer)) {
+        if (limitBookmarklet.contains(rangeContainer)) {
           _bookmarkSelection(selectedRange);
         }
       } else if (limitBookmarklet === null) {
@@ -44,17 +44,6 @@
 
   function _keysUp(e) {
     keysPressed[e.keyCode] = false;
-  }
-
-  function _isAncestorNode(parent, child) {
-    var nodeToCheck = child.parentNode;
-    while (nodeToCheck !== null) {
-      if (nodeToCheck == parent) {
-        return true;
-      }
-      nodeToCheck = nodeToCheck.parentNode;
-    }
-    return false;
   }
 
   function _checkForSelection() {
@@ -203,7 +192,6 @@
       } else {
         if (!calledFromButton && selectedRange.startContainer !== selectedRange.endContainer) {
 
-          console.log("Don't cross the streams!! (nodes have been split)");
           // create background div and add class
           alertBackground = document.createElement('div');
           alertBackground.classList.add('c-bookmarklet__alert-background--warning');
@@ -219,7 +207,7 @@
           alertNode.appendChild(alertBackground);
         }
         if (!calledFromButton && selectedRange.startOffset === selectedRange.endOffset) {
-          console.log("Nothing selected!");
+
           // create background div and add class
           alertBackground = document.createElement('div');
           alertBackground.classList.add('c-bookmarklet__alert-background--caution');
