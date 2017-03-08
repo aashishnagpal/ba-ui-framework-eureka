@@ -23,17 +23,38 @@
 
   function _keysDown(e) {
     keysPressed[e.keyCode] = true;
-
     // keyboard shortcut Shift(16) + Control(17) + M(77)
     if (keysPressed[16] && keysPressed[17] && keysPressed[77] && keysPressed[76]) {
-      var selectedRange = window.getSelection().getRangeAt(0);
-      _bookmarkSelection(selectedRange);
-    }
+      var selectedRange;
+      var rangeContainer;
 
+      selectedRange = window.getSelection().getRangeAt(0);
+      rangeContainer = selectedRange.startContainer;
+      // check for bookmarklet limiter attribute
+      if (limitBookmarklet !== null) {
+        // if selected range is a decendant of the limited element
+        if (_isAncestorNode(limitBookmarklet, rangeContainer)) {
+          _bookmarkSelection(selectedRange);
+        }
+      } else if (limitBookmarklet === null) {
+        _bookmarkSelection(selectedRange);
+      }
+    }
   }
 
   function _keysUp(e) {
     keysPressed[e.keyCode] = false;
+  }
+
+  function _isAncestorNode(parent, child) {
+    var nodeToCheck = child.parentNode;
+    while (nodeToCheck !== null) {
+      if (nodeToCheck == parent) {
+        return true;
+      }
+      nodeToCheck = nodeToCheck.parentNode;
+    }
+    return false;
   }
 
   function _checkForSelection() {
