@@ -3,7 +3,8 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
-    width: 100vw;
+    width: 100%;
+    max-width: 100vw;
     height: 90vh;
 }
 
@@ -15,7 +16,7 @@
     height: inherit;
     justify-content: space-between;
     border: 15px solid transparent;
-    border-image: url(../../np-components/img/modernMirror.png) round;
+    border-image: url(../../images/showcase/modernMirror.png) round;
     border-image-slice: 195 195;
     border-image-width: 2.6%;
     align-items: center;
