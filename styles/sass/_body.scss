@@ -2,7 +2,7 @@
   background-color: $body-bg-color;
 }
 
-.vertical-menu{
+.vertical-menu {
   position: relative;
 }
 
@@ -13,6 +13,7 @@
 .website-components{
   background-color: $generic-gray-color;
   padding: 2em;
+  width: 82%;
 
   &__component{
     border-radius: 5px;
