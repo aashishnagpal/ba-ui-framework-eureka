@@ -46,4 +46,9 @@
   padding: 1em 1em 0 0;
   text-align: right;
   color: $nav-title-text-color;
+  @media screen and (max-width: 1110px) {
+    & h4 {
+    font-size: 1em;
+    }
+  }
 }
