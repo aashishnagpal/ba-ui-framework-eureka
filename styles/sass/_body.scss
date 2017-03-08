@@ -10,6 +10,12 @@
   width: 100%;
 }
 
+.demo-site-grid__sticky-nav--stuck {
+  width: 18%;
+  position: fixed;
+  top: 0;
+}
+
 .website-components{
   background-color: $generic-gray-color;
   padding: 2em;
@@ -22,6 +28,23 @@
     margin-bottom: 1em;
   }
 
+}
+
+.u-nav--vertical-left--demo-site {
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  .nav__item {
+    flex: 1 0 auto;
+
+    &::after {
+      right: 0;
+    }
+  }
+
+  .nav__link {
+    padding: 0.75em 1em;
+  }
 }
 
 

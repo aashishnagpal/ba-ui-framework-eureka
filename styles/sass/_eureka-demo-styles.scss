@@ -1,13 +1,25 @@
 .demo-site-grid {
   padding-right: 4vw;
 }
+
 .vertical-menu {
   display: flex;
   justify-content: flex-end;
   width: 18%;
 }
+
 .nav--sticky {
-  width: 18vw;
+  width: 18%;
+  position: fixed;
+  top: 0;
+  left: auto;
+}
+
+.nav-sticky--bottom {
+  width: 18%;
+  position: fixed;
+  left: auto;
+  top: auto;
 }
 
 a.normal {

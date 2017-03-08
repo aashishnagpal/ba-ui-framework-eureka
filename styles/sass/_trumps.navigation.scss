@@ -1,53 +1,43 @@
 .nav, .nav--horizontal {
-  & .nav__item::after {
+  .nav__item::after {
     display: none;
   }
 }
 
 .nav--vertical-left, .nav--vertical-right {
-  & .nav__item::after {
+  .nav__item::after {
     display: block;
   }
 
-  & .nav__item::before {
+  .nav__item::before {
     display: none;
   }
 }
 
 .nav--vertical-left {
-  & .nav__item {
+  .nav__item {
     justify-content: flex-end;
+  }
 
-    & .nav__link {
-      text-align: right;
-      flex: 1;
-    }
+  .nav__link {
+    text-align: right;
+    flex: 1;
   }
 }
 
 .nav--vertical-right {
-  & .nav__item {
+  .nav__item {
     justify-content: flex-start;
+  }
 
-    & .nav__link {
-      text-align: left;
-      flex: 1;
-    }
+  .nav__link {
+    text-align: left;
+    flex: 1;
   }
 }
 
 .nav--vertical-right {
   .nav__item::after {
     left: -0.1em;
-  }
-}
-
-.u-demo-site-nav--vertical-left {
-  & .nav__item {
-    flex: 1 0 auto;
-
-    & .nav__link {
-      padding: 0.5em 1em;
-    }
   }
 }

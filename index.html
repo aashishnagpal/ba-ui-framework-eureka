@@ -8,7 +8,7 @@
 </head>
 <body>
 <!-- append the loader div to DOM before loading the script -->
-<div id="loader-site" class="loader loader-overlay">
+<div id="loader-site" class="loader loader-overlay loader-overlay--full-page">
   <div class="loader__load-box"></div>
 </div>
 
@@ -44,12 +44,10 @@
 <main class="main-content">
   <div class="o-grid demo-site-grid">
     <aside class="vertical-menu o-grid__cell u-1of4">
-      <nav class="demo-site-grid__sticky-nav">
-        <ul class="nav nav--vertical-left u-demo-site-nav--vertical-left" data-nav-type="sticky"
-            data-content-id="showcase"
+      <nav class="demo-site-grid__sticky-nav" data-nav-type="sticky" data-content-id="site-content"
             data-header-id="site-header" data-footer-id="site-footer" data-scrollspy>
-          <li class="nav__item nav__item--active"><a class="nav__link" href="#alert">Alerts</a></li>
-          <li class="nav__item "><a class="nav__link" href="#badge">Badges</a></li>
+        <ul class="nav nav--vertical-left u-nav--vertical-left--demo-site" >
+          <li class="nav__item nav__item--active"><a class="nav__link" href="#badge">Badges</a></li>
           <li class="nav__item "><a class="nav__link" href="#breadcrumb">Breadcrumb</a></li>
           <li class="nav__item "><a class="nav__link" href="#button">Button</a></li>
           <li class="nav__item "><a class="nav__link" href="#cards">Cards</a></li>
@@ -59,6 +57,7 @@
           <li class="nav__item "><a class="nav__link" href="#list">Lists</a></li>
           <li class="nav__item "><a class="nav__link" href="#pagination">Pagination</a></li>
           <li class="nav__item "><a class="nav__link" href="#select-box">Select box</a></li>
+          <li class="nav__item "><a class="nav__link" href="#alert">Alerts</a></li>
           <li class="nav__item "><a class="nav__link" href="#tables">Tables</a></li>
           <li class="nav__item "><a class="nav__link" href="#typography">Typography</a></li>
           <li class="nav__item "><a class="nav__link" href="#accordion">Accordion</a></li>
@@ -86,147 +85,13 @@
           <!--<li class="nav__item "><a class="nav__link" href="#showcase">Showcase</a></li>-->
           <li class="nav__item "><a class="nav__link" href="#demo">Tooltip Help</a></li>
           <li class="nav__item "><a class="nav__link" href="#wtf">WTF Does That Mean?</a></li>
-
-          <!--<li class="nav__item "><a class="nav__link" href="#modal">Modal</a></li>-->
+          <li class="nav__item "><a class="nav__link" href="#modal">Modal</a></li>
 
 
         </ul>
       </nav>
     </aside>
-    <div id="showcase" class="website-components o-grid__cell">
-      <section class="website-components__component" id="alert">
-        <h3>Alert</h3>
-        <p>Alerts offer a way to send a quick message to the user. Alerts can contain any HTML, are dismissable,
-           and come in a few different preconfigured colors</p>
-        <!-- component example grid container -->
-        <div class="o-grid">
-          <div class="o-grid__cell">
-            <!-- component examples here -->
-            <!-- default -->
-            <h4>Basic alert - default</h4>
-            <div class="c-alert">
-              <p>This is a basic alert. You can get rid of it by clicking on the close icon.</p>
-              <span class="c-alert__close-alert">
-            <i class="fa fa-times"></i>
-          </span>
-            </div>
-            <!-- primary -->
-            <h4>Basic alert - primary</h4>
-            <div class="c-alert--primary">
-              <p>This is a primary alert. You can get rid of it by clicking on the close icon.</p>
-              <span class="c-alert__close-alert">
-            <i class="fa fa-times"></i>
-          </span>
-            </div>
-            <!-- success -->
-            <h4>Basic alert - success</h4>
-            <div class="c-alert--success">
-              <p>This is a success alert. You can get rid of it by clicking on the close icon.</p>
-              <span class="c-alert__close-alert">
-            <i class="fa fa-times"></i>
-          </span>
-            </div>
-            <!-- caution -->
-            <h4>Basic alert - caution</h4>
-            <div class="c-alert--caution">
-              <p>This is a caution alert. You can get rid of it by clicking on the close icon.</p>
-              <span class="c-alert__close-alert">
-            <i class="fa fa-times"></i>
-          </span>
-            </div>
-            <!-- warning -->
-            <h4>Basic alert - warning</h4>
-            <div class="c-alert--warning">
-              <p>This is a warning alert. You can get rid of it by clicking on the close icon.</p>
-              <span class="c-alert__close-alert">
-            <i class="fa fa-times"></i>
-          </span>
-            </div>
-            <!-- alert with button -->
-            <h4>Alert w/ button - primary</h4>
-            <p>Alerts can also be set to be dismissed by clicking on any element within the alert. Just add
-               a <code class="language-markup">data-close-alert="true"</code> attribute to the element.</p>
-            <div class="c-alert--primary">
-              <h4>You can have a header!</h4>
-              <p>This is a warning alert. You can get rid of it by clicking on the close icon.</p>
-              <p>Or you could dismiss it with this button:</p>
-              <button class="c-btn--primary c-btn c-btn--primary--rounded" type="button" name="button"
-                      data-close-alert="true">Get it outta here!
-              </button>
-              <span class="c-alert__close-alert">
-        <i class="fa fa-times"></i>
-      </span>
-            </div>
-          </div>
-        </div>
-        <!-- code well markup -->
-        <div class="o-grid">
-          <div class="o-grid__cell">
-            <div class="c-collapse">
-              <div class="c-collapse__controls-container--justified-text">
-                <i class="fa fa-code fa-lg" aria-hidden="true"></i>
-                <a class="c-collapse__toggle">toggle markup</a>
-              </div>
-              <div class="c-collapse__content-container c-collapse__content-container--dark">
-                <div class="c-collapse__content--prism-code-style">
-<pre class="u-pre--wrap"><code class="language-markup">&lt;!-- default --&gt;
-&lt;div class=&quot;c-alert&quot;&gt;
-  &lt;p&gt;This is a basic alert. You can get rid of it by clicking on the close icon.&lt;/p&gt;
-  &lt;span class=&quot;c-alert__close-alert&quot;&gt;
-    &lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;
-  &lt;/span&gt;
-&lt;/div&gt;
-
-&lt;!-- primary --&gt;
-&lt;div class=&quot;c-alert--primary&quot;&gt;
-  &lt;p&gt;This is a primary alert. You can get rid of it by clicking on the close icon.&lt;/p&gt;
-  &lt;span class=&quot;c-alert__close-alert&quot;&gt;
-    &lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;
-  &lt;/span&gt;
-&lt;/div&gt;
-
-&lt;!-- success --&gt;
-&lt;div class=&quot;c-alert--success&quot;&gt;
-  &lt;p&gt;This is a success alert. You can get rid of it by clicking on the close icon.&lt;/p&gt;
-  &lt;span class=&quot;c-alert__close-alert&quot;&gt;
-    &lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;
-  &lt;/span&gt;
-&lt;/div&gt;
-
-&lt;!-- caution --&gt;
-&lt;div class=&quot;c-alert--caution&quot;&gt;
-  &lt;p&gt;This is a caution alert. You can get rid of it by clicking on the close icon.&lt;/p&gt;
-  &lt;span class=&quot;c-alert__close-alert&quot;&gt;
-    &lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;
-  &lt;/span&gt;
-&lt;/div&gt;
-
-&lt;!-- warning --&gt;
-&lt;div class=&quot;c-alert--warning&quot;&gt;
-  &lt;p&gt;This is a warning alert. You can get rid of it by clicking on the close icon.&lt;/p&gt;
-  &lt;span class=&quot;c-alert__close-alert&quot;&gt;
-    &lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;
-  &lt;/span&gt;
-&lt;/div&gt;
-
-&lt;!-- alert with button --&gt;
-&lt;div class=&quot;c-alert--primary&quot;&gt;
-  &lt;h4&gt;You can have a header!&lt;/h4&gt;
-  &lt;p&gt;This is a warning alert. You can get rid of it by clicking on the close icon.&lt;/p&gt;
-  &lt;p&gt;Or you could dismiss it with this button:&lt;/p&gt;
-  &lt;button class=&quot;c-btn--primary c-btn c-btn--primary--rounded&quot; type=&quot;button&quot; name=&quot;button&quot; data-close-alert=&quot;true&quot;&gt;Get it outta here!&lt;/button&gt;
-  &lt;span class=&quot;c-alert__close-alert&quot;&gt;
-    &lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;
-  &lt;/span&gt;
-&lt;/div&gt;
-</code></pre>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- end codewell markup -->
-      </section>
+    <div id="site-content" class="website-components o-grid__cell">
       <section class="website-components__component" id="badge">
 
         <h3>Badges</h3>
@@ -2087,6 +1952,139 @@ Send
         <!-- end codewell markup -->
 
       </section>
+      <section class="website-components__component" id="alert">
+        <h3>Alert</h3>
+        <p>Alerts offer a way to send a quick message to the user. Alerts can contain any HTML, are dismissable,
+          and come in a few different preconfigured colors</p>
+        <!-- component example grid container -->
+        <div class="o-grid">
+          <div class="o-grid__cell">
+            <!-- component examples here -->
+            <!-- default -->
+            <h4>Basic alert - default</h4>
+            <div class="c-alert">
+              <p>This is a basic alert. You can get rid of it by clicking on the close icon.</p>
+              <span class="c-alert__close-alert">
+            <i class="fa fa-times"></i>
+          </span>
+            </div>
+            <!-- primary -->
+            <h4>Basic alert - primary</h4>
+            <div class="c-alert--primary">
+              <p>This is a primary alert. You can get rid of it by clicking on the close icon.</p>
+              <span class="c-alert__close-alert">
+            <i class="fa fa-times"></i>
+          </span>
+            </div>
+            <!-- success -->
+            <h4>Basic alert - success</h4>
+            <div class="c-alert--success">
+              <p>This is a success alert. You can get rid of it by clicking on the close icon.</p>
+              <span class="c-alert__close-alert">
+            <i class="fa fa-times"></i>
+          </span>
+            </div>
+            <!-- caution -->
+            <h4>Basic alert - caution</h4>
+            <div class="c-alert--caution">
+              <p>This is a caution alert. You can get rid of it by clicking on the close icon.</p>
+              <span class="c-alert__close-alert">
+            <i class="fa fa-times"></i>
+          </span>
+            </div>
+            <!-- warning -->
+            <h4>Basic alert - warning</h4>
+            <div class="c-alert--warning">
+              <p>This is a warning alert. You can get rid of it by clicking on the close icon.</p>
+              <span class="c-alert__close-alert">
+            <i class="fa fa-times"></i>
+          </span>
+            </div>
+            <!-- alert with button -->
+            <h4>Alert w/ button - primary</h4>
+            <p>Alerts can also be set to be dismissed by clicking on any element within the alert. Just add
+              a <code class="language-markup">data-close-alert="true"</code> attribute to the element.</p>
+            <div class="c-alert--primary">
+              <h4>You can have a header!</h4>
+              <p>This is a warning alert. You can get rid of it by clicking on the close icon.</p>
+              <p>Or you could dismiss it with this button:</p>
+              <button class="c-btn--primary c-btn c-btn--primary--rounded" type="button" name="button"
+                      data-close-alert="true">Get it outta here!
+              </button>
+              <span class="c-alert__close-alert">
+        <i class="fa fa-times"></i>
+      </span>
+            </div>
+          </div>
+        </div>
+        <!-- code well markup -->
+        <div class="o-grid">
+          <div class="o-grid__cell">
+            <div class="c-collapse">
+              <div class="c-collapse__controls-container--justified-text">
+                <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                <a class="c-collapse__toggle">toggle markup</a>
+              </div>
+              <div class="c-collapse__content-container c-collapse__content-container--dark">
+                <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup">&lt;!-- default --&gt;
+&lt;div class=&quot;c-alert&quot;&gt;
+  &lt;p&gt;This is a basic alert. You can get rid of it by clicking on the close icon.&lt;/p&gt;
+  &lt;span class=&quot;c-alert__close-alert&quot;&gt;
+    &lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- primary --&gt;
+&lt;div class=&quot;c-alert--primary&quot;&gt;
+  &lt;p&gt;This is a primary alert. You can get rid of it by clicking on the close icon.&lt;/p&gt;
+  &lt;span class=&quot;c-alert__close-alert&quot;&gt;
+    &lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- success --&gt;
+&lt;div class=&quot;c-alert--success&quot;&gt;
+  &lt;p&gt;This is a success alert. You can get rid of it by clicking on the close icon.&lt;/p&gt;
+  &lt;span class=&quot;c-alert__close-alert&quot;&gt;
+    &lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- caution --&gt;
+&lt;div class=&quot;c-alert--caution&quot;&gt;
+  &lt;p&gt;This is a caution alert. You can get rid of it by clicking on the close icon.&lt;/p&gt;
+  &lt;span class=&quot;c-alert__close-alert&quot;&gt;
+    &lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- warning --&gt;
+&lt;div class=&quot;c-alert--warning&quot;&gt;
+  &lt;p&gt;This is a warning alert. You can get rid of it by clicking on the close icon.&lt;/p&gt;
+  &lt;span class=&quot;c-alert__close-alert&quot;&gt;
+    &lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- alert with button --&gt;
+&lt;div class=&quot;c-alert--primary&quot;&gt;
+  &lt;h4&gt;You can have a header!&lt;/h4&gt;
+  &lt;p&gt;This is a warning alert. You can get rid of it by clicking on the close icon.&lt;/p&gt;
+  &lt;p&gt;Or you could dismiss it with this button:&lt;/p&gt;
+  &lt;button class=&quot;c-btn--primary c-btn c-btn--primary--rounded&quot; type=&quot;button&quot; name=&quot;button&quot; data-close-alert=&quot;true&quot;&gt;Get it outta here!&lt;/button&gt;
+  &lt;span class=&quot;c-alert__close-alert&quot;&gt;
+    &lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end codewell markup -->
+      </section>
       <section class="website-components__component" id="tables">
 
         <h3>Tables</h3>
@@ -3695,8 +3693,8 @@ Send
       <section class="website-components__component" id="loader-section">
 
         <h3>Loader</h3>
-        <p>Use a loader within any space to display loading in progress. It can be anything, loading an image,
-           some data, etc.</p>
+        <p>Use a loader within any space to display loading in progress. It can be to show loading anything, an
+            image, some data, etc.</p>
         <a class="c-btn--primary--rounded c-btn" href="javascript:loader.toggle('loader-demo');">Toggle Loader
                                                                                                  Here</a>
         <br><br>
@@ -3705,14 +3703,16 @@ Send
           <div class="o-grid__cell">
             <h4>Usage</h4>
             <ol>
-              <li>Include the following code within any block element and the loader will overlay the
-                  entire width and
-                  height of its container.
+              <li><p>Include the following code within any block element and the loader will overlay the
+                  entire width and height of its container.</p>
+                  <p><strong>Note:</strong> Add <code class="language-css">loader-overlay--full-page</code> class to
+                      make it
+                  span the entire width of the page and also be available at any scroll length. For example, a
+                      site-wide loader.</p>
               </li>
               <li>Also Include Script <code class="language-markup">loader.js</code> on your page.</li>
               <li>Initialize the loader using <code class="language-javascript">loader.init(id);</code>.
-                  The id
-                  should match the loader's id.
+                  The id should match the loader's id.
               </li>
               <li>Use the following methods:
                 <ul>
@@ -3744,10 +3744,15 @@ Send
               </div>
               <div class="c-collapse__content-container c-collapse__content-container--dark">
                 <div class="c-collapse__content--prism-code-style">
-<pre class="u-pre--wrap"><code class="language-markup">&lt;div id=&quot;myLoader&quot; class=&quot;loader loader-overlay&quot;&gt;
+<pre class="u-pre--wrap"><code class="language-markup">&lt;!-- Container level loader --&gt;
+&lt;div id=&quot;myLoader&quot; class=&quot;loader loader-overlay&quot;&gt;
   &lt;div class=&quot;loader__load-box&quot;&gt;&lt;/div&gt;
 &lt;/div&gt;
-</code></pre>
+
+&lt;!-- Site wide loader --&gt;
+&lt;div id=&quot;myLoader&quot; class=&quot;loader loader-overlay loader-overlay--full-page&quot;&gt;
+  &lt;div class=&quot;loader__load-box&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
                 </div>
               </div>
             </div>
@@ -6329,11 +6334,13 @@ $search-second-size-multiplier: .7;
 <script src="javascript/modals.js"></script>
 <script src="javascript/gallery.js"></script>
 <script src="javascript/progressbarbtn.js"></script>
-<script src="javascript/scrollspy-nav.js"></script>
+<!-- <script src="javascript/scrollspy-nav.js"></script> -->
+<script src="javascript/demo-scrollspy-nav.js"></script>
 <!-- <script src="javascript/scrollspy-progress.js"></script> -->
 <!--<script type="text/javascript" src="javascript/showcase.js"></script>-->
 <script src="javascript/single-input-form.js"></script>
-<script src="javascript/sticky-nav.js"></script>
+<!-- <script src="javascript/sticky-nav.js"></script> -->
+<script src="javascript/demo-sticky-nav.js"></script>
 <script src="javascript/tabs.js"></script>
 <script>
   (function () {

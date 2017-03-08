@@ -26,6 +26,10 @@
     transition: opacity 0.3s;
     z-index: $infinity - 1;
 
+    &--full-page {
+      position: fixed;
+    }
+
     &--hidden {
       display: none;
       opacity: 0;
