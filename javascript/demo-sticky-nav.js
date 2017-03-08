@@ -39,10 +39,10 @@
   };
 
   var stickyNav = function(boundaries) {
-    console.log('nav: ', boundaries.nav);
+
     // read current scroll position
     var scrollPosition = window.pageYOffset;
-    console.log(scrollPosition, boundaries.end);
+
     // test scroll position against starting and ending boundaries and add or remove sticky nature
     if (scrollPosition < boundaries.start) {
       if (boundaries.nav.classList.contains('nav--sticky')) {
