@@ -93,7 +93,7 @@
       box-shadow: inset 0 0 0 .1em $primary-light-color;
       outline: 0;
     }
-    &[disabled="true"] {
+    &[disabled] {
       background-color: $secondary-dark-color;
       border: $secondary-dark-color;
       color: $generic-white-color;

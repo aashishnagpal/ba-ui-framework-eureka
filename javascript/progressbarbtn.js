@@ -1,5 +1,4 @@
-window.onload = function () {
-
+(function () {
 var progressToggler = {
   init: function () {
     this.cacheDOM();
@@ -13,6 +12,7 @@ var progressToggler = {
     this.pBtn.addEventListener("click", this.toggleIt.bind(this));
   },
   toggleIt: function () {
+
     this.pBar.classList.toggle("progress-animate");
     if (this.pBar.dataset.animprogress === "false") {
       this.pBar.dataset.animprogress = "true";
@@ -22,4 +22,4 @@ var progressToggler = {
   }
 };
 progressToggler.init();
-};
+})();
