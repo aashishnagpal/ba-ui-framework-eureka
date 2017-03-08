@@ -7,7 +7,7 @@ window.addEventListener("load", function () {
     },
     cacheDOM: function () {
       this.component = document.getElementsByClassName("c-herald")[0];
-      this.chip = document.getElementsByClassName("c-chip__media--o")[0];
+      this.chip = document.getElementsByClassName("c-herald-c-chip__media--o")[0];
       this.ribbon = document.getElementsByClassName("c-herald__ribbon")[0];
       this.message = document.getElementsByClassName("c-herald__message")[0];
       this.scroll = document.getElementsByClassName("c-herald__scroll")[0];
