@@ -6,7 +6,7 @@
   flex-wrap: wrap;
 
   @at-root .persona {
-    color: $generic-black-color;
+    color: $secondary-dark-color;;
     margin: 0;
     text-align: center;
     flex: 0 0 13em;
@@ -68,6 +68,7 @@
     }
 
     &:hover {
+      color: $generic-black-color;
       background: $generic-white-color;
       border-color: $primary-dark-color;
       transform: scale(1) translate(0, -40%);
