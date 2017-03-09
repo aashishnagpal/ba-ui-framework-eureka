@@ -46,8 +46,8 @@
     keysPressed[e.keyCode] = false;
   }
 
-  function _checkForSelection() {
-    if (event.target !== popUpYesBtn) {
+  function _checkForSelection(e) {
+    if (e.target !== popUpYesBtn) {
       var selection = window.getSelection();
       var selectedRange = selection.getRangeAt(0);
 
