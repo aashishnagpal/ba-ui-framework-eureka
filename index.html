@@ -58,10 +58,10 @@
           <li class="nav__item "><a class="nav__link" href="#list">Lists</a></li>
           <li class="nav__item "><a class="nav__link" href="#pagination">Pagination</a></li>
           <li class="nav__item "><a class="nav__link" href="#select-box">Select box</a></li>
-          <li class="nav__item "><a class="nav__link" href="#alert">Alerts</a></li>
           <li class="nav__item "><a class="nav__link" href="#tables">Tables</a></li>
           <li class="nav__item "><a class="nav__link" href="#typography">Typography</a></li>
           <li class="nav__item "><a class="nav__link" href="#accordion">Accordion</a></li>
+          <li class="nav__item "><a class="nav__link" href="#alert">Alerts</a></li>
           <li class="nav__item "><a class="nav__link" href="#bar-graphs">Bar Graphs</a></li>
           <li class="nav__item "><a class="nav__link" href="#collapse">Collapse</a></li>
           <li class="nav__item "><a class="nav__link" href="#carousel">Carousel</a></li>
@@ -70,6 +70,7 @@
           <li class="nav__item "><a class="nav__link" href="#gallery">Gallery</a></li>
           <li class="nav__item "><a class="nav__link" href="#loader-section">Loader</a></li>
           <li class="nav__item "><a class="nav__link" href="#login-form">Login Form</a></li>
+          <li class="nav__item "><a class="nav__link" href="#modal">Modal</a></li>
           <li class="nav__item "><a class="nav__link" href="#navs">Navigation</a></li>
           <li class="nav__item "><a class="nav__link" href="#progressbar">Progress Bar</a></li>
           <li class="nav__item "><a class="nav__link" href="#reveal">Reveal</a></li>
@@ -87,8 +88,6 @@
           <!--<li class="nav__item "><a class="nav__link" href="#showcase">Showcase</a></li>-->
           <li class="nav__item "><a class="nav__link" href="#demo">Tooltip Help</a></li>
           <li class="nav__item "><a class="nav__link" href="#wtf">WTF Does That Mean?</a></li>
-          <li class="nav__item "><a class="nav__link" href="#modal">Modal</a></li>
-
 
         </ul>
       </nav>
@@ -1954,139 +1953,7 @@ Send
         <!-- end codewell markup -->
 
       </section>
-      <section class="website-components__component" id="alert">
-        <h3>Alert</h3>
-        <p>Alerts offer a way to send a quick message to the user. Alerts can contain any HTML, are dismissable,
-          and come in a few different preconfigured colors</p>
-        <!-- component example grid container -->
-        <div class="o-grid">
-          <div class="o-grid__cell">
-            <!-- component examples here -->
-            <!-- default -->
-            <h4>Basic alert - default</h4>
-            <div class="c-alert">
-              <p>This is a basic alert. You can get rid of it by clicking on the close icon.</p>
-              <span class="c-alert__close-alert">
-            <i class="fa fa-times"></i>
-          </span>
-            </div>
-            <!-- primary -->
-            <h4>Basic alert - primary</h4>
-            <div class="c-alert--primary">
-              <p>This is a primary alert. You can get rid of it by clicking on the close icon.</p>
-              <span class="c-alert__close-alert">
-            <i class="fa fa-times"></i>
-          </span>
-            </div>
-            <!-- success -->
-            <h4>Basic alert - success</h4>
-            <div class="c-alert--success">
-              <p>This is a success alert. You can get rid of it by clicking on the close icon.</p>
-              <span class="c-alert__close-alert">
-            <i class="fa fa-times"></i>
-          </span>
-            </div>
-            <!-- caution -->
-            <h4>Basic alert - caution</h4>
-            <div class="c-alert--caution">
-              <p>This is a caution alert. You can get rid of it by clicking on the close icon.</p>
-              <span class="c-alert__close-alert">
-            <i class="fa fa-times"></i>
-          </span>
-            </div>
-            <!-- warning -->
-            <h4>Basic alert - warning</h4>
-            <div class="c-alert--warning">
-              <p>This is a warning alert. You can get rid of it by clicking on the close icon.</p>
-              <span class="c-alert__close-alert">
-            <i class="fa fa-times"></i>
-          </span>
-            </div>
-            <!-- alert with button -->
-            <h4>Alert w/ button - primary</h4>
-            <p>Alerts can also be set to be dismissed by clicking on any element within the alert. Just add
-              a <code class="language-markup">data-close-alert="true"</code> attribute to the element.</p>
-            <div class="c-alert--primary">
-              <h4>You can have a header!</h4>
-              <p>This is a warning alert. You can get rid of it by clicking on the close icon.</p>
-              <p>Or you could dismiss it with this button:</p>
-              <button class="c-btn--primary c-btn c-btn--primary--rounded" type="button" name="button"
-                      data-close-alert="true">Get it outta here!
-              </button>
-              <span class="c-alert__close-alert">
-        <i class="fa fa-times"></i>
-      </span>
-            </div>
-          </div>
-        </div>
-        <!-- code well markup -->
-        <div class="o-grid">
-          <div class="o-grid__cell">
-            <div class="c-collapse">
-              <div class="c-collapse__controls-container--justified-text">
-                <i class="fa fa-code fa-lg" aria-hidden="true"></i>
-                <a class="c-collapse__toggle">toggle markup</a>
-              </div>
-              <div class="c-collapse__content-container c-collapse__content-container--dark">
-                <div class="c-collapse__content--prism-code-style">
-<pre class="u-pre--wrap"><code class="language-markup">&lt;!-- default --&gt;
-&lt;div class=&quot;c-alert&quot;&gt;
-  &lt;p&gt;This is a basic alert. You can get rid of it by clicking on the close icon.&lt;/p&gt;
-  &lt;span class=&quot;c-alert__close-alert&quot;&gt;
-    &lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;
-  &lt;/span&gt;
-&lt;/div&gt;
 
-&lt;!-- primary --&gt;
-&lt;div class=&quot;c-alert--primary&quot;&gt;
-  &lt;p&gt;This is a primary alert. You can get rid of it by clicking on the close icon.&lt;/p&gt;
-  &lt;span class=&quot;c-alert__close-alert&quot;&gt;
-    &lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;
-  &lt;/span&gt;
-&lt;/div&gt;
-
-&lt;!-- success --&gt;
-&lt;div class=&quot;c-alert--success&quot;&gt;
-  &lt;p&gt;This is a success alert. You can get rid of it by clicking on the close icon.&lt;/p&gt;
-  &lt;span class=&quot;c-alert__close-alert&quot;&gt;
-    &lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;
-  &lt;/span&gt;
-&lt;/div&gt;
-
-&lt;!-- caution --&gt;
-&lt;div class=&quot;c-alert--caution&quot;&gt;
-  &lt;p&gt;This is a caution alert. You can get rid of it by clicking on the close icon.&lt;/p&gt;
-  &lt;span class=&quot;c-alert__close-alert&quot;&gt;
-    &lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;
-  &lt;/span&gt;
-&lt;/div&gt;
-
-&lt;!-- warning --&gt;
-&lt;div class=&quot;c-alert--warning&quot;&gt;
-  &lt;p&gt;This is a warning alert. You can get rid of it by clicking on the close icon.&lt;/p&gt;
-  &lt;span class=&quot;c-alert__close-alert&quot;&gt;
-    &lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;
-  &lt;/span&gt;
-&lt;/div&gt;
-
-&lt;!-- alert with button --&gt;
-&lt;div class=&quot;c-alert--primary&quot;&gt;
-  &lt;h4&gt;You can have a header!&lt;/h4&gt;
-  &lt;p&gt;This is a warning alert. You can get rid of it by clicking on the close icon.&lt;/p&gt;
-  &lt;p&gt;Or you could dismiss it with this button:&lt;/p&gt;
-  &lt;button class=&quot;c-btn--primary c-btn c-btn--primary--rounded&quot; type=&quot;button&quot; name=&quot;button&quot; data-close-alert=&quot;true&quot;&gt;Get it outta here!&lt;/button&gt;
-  &lt;span class=&quot;c-alert__close-alert&quot;&gt;
-    &lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;
-  &lt;/span&gt;
-&lt;/div&gt;
-</code></pre>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- end codewell markup -->
-      </section>
       <section class="website-components__component" id="tables">
 
         <h3>Tables</h3>
@@ -2520,6 +2387,7 @@ Send
         <!-- end codewell markup -->
 
       </section>
+
       <section class="website-components__component" id="accordion">
 
         <h3>Accordion</h3>
@@ -2821,6 +2689,141 @@ Send
         <!-- end codewell markup -->
 
       </section>
+
+      <section class="website-components__component" id="alert">
+        <h3>Alert</h3>
+        <p>Alerts offer a way to send a quick message to the user. Alerts can contain any HTML, are dismissable,
+          and come in a few different preconfigured colors</p>
+        <!-- component example grid container -->
+        <div class="o-grid">
+          <div class="o-grid__cell">
+            <!-- component examples here -->
+            <!-- default -->
+            <h4>Basic alert - default</h4>
+            <div class="c-alert">
+              <p>This is a basic alert. You can get rid of it by clicking on the close icon.</p>
+              <span class="c-alert__close-alert">
+            <i class="fa fa-times"></i>
+          </span>
+            </div>
+            <!-- primary -->
+            <h4>Basic alert - primary</h4>
+            <div class="c-alert--primary">
+              <p>This is a primary alert. You can get rid of it by clicking on the close icon.</p>
+              <span class="c-alert__close-alert">
+            <i class="fa fa-times"></i>
+          </span>
+            </div>
+            <!-- success -->
+            <h4>Basic alert - success</h4>
+            <div class="c-alert--success">
+              <p>This is a success alert. You can get rid of it by clicking on the close icon.</p>
+              <span class="c-alert__close-alert">
+            <i class="fa fa-times"></i>
+          </span>
+            </div>
+            <!-- caution -->
+            <h4>Basic alert - caution</h4>
+            <div class="c-alert--caution">
+              <p>This is a caution alert. You can get rid of it by clicking on the close icon.</p>
+              <span class="c-alert__close-alert">
+            <i class="fa fa-times"></i>
+          </span>
+            </div>
+            <!-- warning -->
+            <h4>Basic alert - warning</h4>
+            <div class="c-alert--warning">
+              <p>This is a warning alert. You can get rid of it by clicking on the close icon.</p>
+              <span class="c-alert__close-alert">
+            <i class="fa fa-times"></i>
+          </span>
+            </div>
+            <!-- alert with button -->
+            <h4>Alert w/ button - primary</h4>
+            <p>Alerts can also be set to be dismissed by clicking on any element within the alert. Just add
+              a <code class="language-markup">data-close-alert="true"</code> attribute to the element.</p>
+            <div class="c-alert--primary">
+              <h4>You can have a header!</h4>
+              <p>This is a warning alert. You can get rid of it by clicking on the close icon.</p>
+              <p>Or you could dismiss it with this button:</p>
+              <button class="c-btn--primary c-btn c-btn--primary--rounded" type="button" name="button"
+                      data-close-alert="true">Get it outta here!
+              </button>
+              <span class="c-alert__close-alert">
+        <i class="fa fa-times"></i>
+      </span>
+            </div>
+          </div>
+        </div>
+        <!-- code well markup -->
+        <div class="o-grid">
+          <div class="o-grid__cell">
+            <div class="c-collapse">
+              <div class="c-collapse__controls-container--justified-text">
+                <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                <a class="c-collapse__toggle">toggle markup</a>
+              </div>
+              <div class="c-collapse__content-container c-collapse__content-container--dark">
+                <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup">&lt;!-- default --&gt;
+&lt;div class=&quot;c-alert&quot;&gt;
+  &lt;p&gt;This is a basic alert. You can get rid of it by clicking on the close icon.&lt;/p&gt;
+  &lt;span class=&quot;c-alert__close-alert&quot;&gt;
+    &lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- primary --&gt;
+&lt;div class=&quot;c-alert--primary&quot;&gt;
+  &lt;p&gt;This is a primary alert. You can get rid of it by clicking on the close icon.&lt;/p&gt;
+  &lt;span class=&quot;c-alert__close-alert&quot;&gt;
+    &lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- success --&gt;
+&lt;div class=&quot;c-alert--success&quot;&gt;
+  &lt;p&gt;This is a success alert. You can get rid of it by clicking on the close icon.&lt;/p&gt;
+  &lt;span class=&quot;c-alert__close-alert&quot;&gt;
+    &lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- caution --&gt;
+&lt;div class=&quot;c-alert--caution&quot;&gt;
+  &lt;p&gt;This is a caution alert. You can get rid of it by clicking on the close icon.&lt;/p&gt;
+  &lt;span class=&quot;c-alert__close-alert&quot;&gt;
+    &lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- warning --&gt;
+&lt;div class=&quot;c-alert--warning&quot;&gt;
+  &lt;p&gt;This is a warning alert. You can get rid of it by clicking on the close icon.&lt;/p&gt;
+  &lt;span class=&quot;c-alert__close-alert&quot;&gt;
+    &lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- alert with button --&gt;
+&lt;div class=&quot;c-alert--primary&quot;&gt;
+  &lt;h4&gt;You can have a header!&lt;/h4&gt;
+  &lt;p&gt;This is a warning alert. You can get rid of it by clicking on the close icon.&lt;/p&gt;
+  &lt;p&gt;Or you could dismiss it with this button:&lt;/p&gt;
+  &lt;button class=&quot;c-btn--primary c-btn c-btn--primary--rounded&quot; type=&quot;button&quot; name=&quot;button&quot; data-close-alert=&quot;true&quot;&gt;Get it outta here!&lt;/button&gt;
+  &lt;span class=&quot;c-alert__close-alert&quot;&gt;
+    &lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end codewell markup -->
+      </section>
+
       <section class="website-components__component" id="bar-graphs">
 
         <h3>Bar Graphs</h3>
@@ -3827,6 +3830,207 @@ Send
         <!-- end codewell markup -->
 
       </section>
+
+      <section class="website-components__component" id="modal">
+
+        <h3>Modals</h3>
+        <p>Modal components display content blocks, such as confirmation, dialog boxes, and search results. When a modal is triggered, interactions with the main page are temporarily blocked.</p>
+
+        <!-- component example grid container -->
+        <div class="o-grid o-grid--gutters o-medium-grid--full">
+          <div class="o-grid__cell">
+            <h4>Basic modal</h4>
+            <!-- Modal trigger -->
+            <a href="#modal1" class="c-btn--primary c-btn c-modal-trigger">Basic Modal</a>
+          </div>
+        </div>
+
+        <!-- code well markup -->
+        <div class="o-grid o-grid--gutters o-medium-grid--full">
+          <div class="o-grid__cell">
+            <div class="c-collapse">
+              <div class="c-collapse__controls-container--justified-text">
+                <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                <a class="c-collapse__toggle">toggle markup</a>
+              </div>
+              <div class="c-collapse__content-container c-collapse__content-container--dark">
+                <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup">&lt;div id=&quot;modal1&quot; class=&quot;c-modal c-modal--basic&quot;&gt;
+  &lt;div class=&quot;c-modal__content&quot;&gt;
+    &lt;h3 class=&quot;c-modal__header&quot;&gt;Basic Modal&lt;/h3&gt;
+    &lt;p class=&quot;c-modal__body&quot;&gt;Modal content&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;c-modal__footer&quot;&gt;
+    &lt;a href=&quot;#!&quot; class=&quot;c-modal__close&quot;&gt;close&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end codewell markup -->
+
+        <!-- ============================================ -->
+
+        <div class="o-grid o-grid--gutters o-medium-grid--full">
+          <div class="o-grid__cell">
+            <h4>Full-screen modal</h4>
+            <a href="#modal2" class="c-btn--primary c-btn c-modal-trigger c-modal-trigger--f">Full-screen Modal</a>
+          </div>
+        </div>
+
+        <!-- code well markup -->
+        <div class="o-grid o-grid--gutters o-medium-grid--full">
+          <div class="o-grid__cell">
+            <div class="c-collapse">
+              <div class="c-collapse__controls-container--justified-text">
+                <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                <a class="c-collapse__toggle">toggle markup</a>
+              </div>
+              <div class="c-collapse__content-container c-collapse__content-container--dark">
+                <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup">&lt;div id=&quot;modal2&quot; class=&quot;c-modal c-modal--full&quot;&gt;
+  &lt;div class=&quot;c-modal__content&quot;&gt;
+    &lt;h3 class=&quot;c-modal__header&quot;&gt;Full-screen Modal&lt;/h3&gt;
+    &lt;p class=&quot;c-modal__body&quot;&gt;Modal content&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;c-modal__footer&quot;&gt;
+    &lt;a href=&quot;#!&quot; class=&quot;c-modal__close&quot;&gt;close&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end codewell markup -->
+
+        <!-- ============================================ -->
+
+        <div class="o-grid o-grid--gutters o-medium-grid--full">
+          <div class="o-grid__cell">
+            <h4>Modal with fixed header and footer</h4>
+            <a href="#modal3" class="c-btn--primary c-btn c-modal-trigger">Fixed Header and Footer Modal</a>
+          </div>
+        </div>
+
+        <!-- code well markup -->
+        <div class="o-grid o-grid--gutters o-medium-grid--full">
+          <div class="o-grid__cell">
+            <div class="c-collapse">
+              <div class="c-collapse__controls-container--justified-text">
+                <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                <a class="c-collapse__toggle">toggle markup</a>
+              </div>
+              <div class="c-collapse__content-container c-collapse__content-container--dark">
+                <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup">&lt;div id=&quot;modal3&quot; class=&quot;c-modal c-modal--fixed&quot;&gt;
+  &lt;div class=&quot;c-modal__content&quot;&gt;
+    &lt;h3 class=&quot;c-modal__header&quot;&gt;Fixed Modal&lt;/h3&gt;
+    &lt;p class=&quot;c-modal__body&quot;&gt;Modal content/p&gt;
+    &lt;div class=&quot;c-modal__footer&quot;&gt;
+      &lt;a href=&quot;#!&quot; class=&quot;c-modal__close&quot;&gt;close&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end codewell markup -->
+
+        <!-- ============================================ -->
+
+        <div class="o-grid o-grid--gutters o-medium-grid--full">
+          <div class="o-grid__cell">
+            <h4>Dialog modal</h4>
+            <a href="#modal4" class="c-btn--primary c-btn c-modal-trigger">Dialog Modal</a>
+          </div>
+        </div>
+
+        <!-- code well markup -->
+        <div class="o-grid o-grid--gutters o-medium-grid--full">
+          <div class="o-grid__cell">
+            <div class="c-collapse">
+              <div class="c-collapse__controls-container--justified-text">
+                <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                <a class="c-collapse__toggle">toggle markup</a>
+              </div>
+              <div class="c-collapse__content-container c-collapse__content-container--dark">
+                <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup">&lt;div id=&quot;modal4&quot; class=&quot;c-modal c-modal--dialog&quot;&gt;
+  &lt;div class=&quot;c-modal__content&quot;&gt;
+    &lt;p class=&quot;c-modal__body&quot;&gt;Modal content&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;c-modal__footer&quot;&gt;
+    &lt;a href=&quot;#!&quot; class=&quot;c-modal__cancel c-modal__close&quot;&gt;cancel&lt;/a&gt;
+    &lt;a href=&quot;#!&quot; class=&quot;c-modal__ok c-modal__close&quot;&gt;okay&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end codewell markup -->
+
+
+        <!-- ============================================ -->
+
+        <!--Modal overlay-->
+        <div class="c-modal-overlay"></div>
+
+        <!-- modal - basic -->
+        <div id="modal1" class="c-modal c-modal--basic">
+          <div class="c-modal__content">
+            <h3 class="c-modal__header">Basic Modal</h3>
+            <p class="c-modal__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend dolor diam, nec viverra ipsum semper nec. Curabitur accumsan neque eget leo auctor egestas. Proin posuere sem ut mauris commodo, ac maximus urna commodo. Quisque eget risus eget urna efficitur elementum dignissim at tellus. Ut feugiat bibendum porta.</p>
+          </div>
+          <div class="c-modal__footer">
+            <a href="#!" class="c-modal__close">close</a>
+          </div>
+        </div>
+
+        <!-- modal - full screen -->
+        <div id="modal2" class="c-modal c-modal--full">
+          <div class="c-modal__content">
+            <h3 class="c-modal__header">Full-screen Modal</h3>
+            <p class="c-modal__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend dolor diam, nec viverra ipsum semper nec. Curabitur accumsan neque eget leo auctor egestas. Proin posuere sem ut mauris commodo, ac maximus urna commodo. Quisque eget risus eget urna efficitur elementum dignissim at tellus. Ut feugiat bibendum porta.</p>
+          </div>
+          <div class="c-modal__footer">
+            <a href="#!" class="c-modal__close">close</a>
+          </div>
+        </div>
+
+        <!-- modal - fixed header and footer -->
+        <div id="modal3" class="c-modal c-modal--fixed">
+          <div class="c-modal__content">
+            <h3 class="c-modal__header">Fixed Modal</h3>
+            <p class="c-modal__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend dolor diam, nec viverra ipsum semper nec. Curabitur accumsan neque eget leo auctor egestas. Proin posuere sem ut mauris commodo, ac maximus urna commodo. Quisque eget risus eget urna efficitur elementum dignissim at tellus. Ut feugiat bibendum porta. Curabitur tristique quam eu est porttitor, id tincidunt arcu molestie. Morbi volutpat est orci, eget iaculis est rhoncus id. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend dolor diam, nec viverra ipsum semper nec. Curabitur accumsan neque eget leo auctor egestas. Proin posuere sem ut mauris commodo, ac maximus urna commodo. Quisque eget risus eget urna efficitur elementum dignissim at tellus. Ut feugiat bibendum porta. Curabitur tristique quam eu est porttitor, id tincidunt arcu molestie. Morbi volutpat est orci, eget iaculis est rhoncus id.</p>
+            <div class="c-modal__footer">
+              <a href="#!" class="c-modal__close">close</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- modal - dialog -->
+        <div id="modal4" class="c-modal c-modal--dialog">
+          <div class="c-modal__content">
+            <p class="c-modal__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend dolor diam, nec viverra ipsum semper nec. Curabitur accumsan neque eget leo auctor egestas. Proin posuere sem ut mauris commodo, ac maximus urna commodo. Quisque eget risus eget urna efficitur elementum dignissim at tellus. Ut feugiat bibendum porta.</p>
+          </div>
+          <div class="c-modal__footer">
+            <a href="#!" class="c-modal__cancel c-modal__close">cancel</a>
+            <a href="#!" class="c-modal__ok c-modal__close">okay</a>
+          </div>
+        </div>
+      </section>
+      
       <section class="website-components__component" id="navs">
 
         <h3>Navigation</h3>
@@ -6019,206 +6223,6 @@ $search-second-size-multiplier: .7;
           </div>
         </div>
       </section>
-      <section class="website-components__component" id="modal">
-
-        <h3>Modals</h3>
-        <p>Modal components display content blocks, such as confirmation, dialog boxes, and search results. When a modal is triggered, interactions with the main page are temporarily blocked.</p>
-
-        <!-- component example grid container -->
-        <div class="o-grid o-grid--gutters o-medium-grid--full">
-          <div class="o-grid__cell">
-            <h4>Basic modal</h4>
-            <!-- Modal trigger -->
-            <a href="#modal1" class="c-btn--primary c-btn c-modal-trigger">Basic Modal</a>
-          </div>
-        </div>
-
-        <!-- code well markup -->
-        <div class="o-grid o-grid--gutters o-medium-grid--full">
-          <div class="o-grid__cell">
-            <div class="c-collapse">
-              <div class="c-collapse__controls-container--justified-text">
-                <i class="fa fa-code fa-lg" aria-hidden="true"></i>
-                <a class="c-collapse__toggle">toggle markup</a>
-              </div>
-              <div class="c-collapse__content-container c-collapse__content-container--dark">
-                <div class="c-collapse__content--prism-code-style">
-<pre class="u-pre--wrap"><code class="language-markup">&lt;div id=&quot;modal1&quot; class=&quot;c-modal c-modal--basic&quot;&gt;
-  &lt;div class=&quot;c-modal__content&quot;&gt;
-    &lt;h3 class=&quot;c-modal__header&quot;&gt;Basic Modal&lt;/h3&gt;
-    &lt;p class=&quot;c-modal__body&quot;&gt;Modal content&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;c-modal__footer&quot;&gt;
-    &lt;a href=&quot;#!&quot; class=&quot;c-modal__close&quot;&gt;close&lt;/a&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- end codewell markup -->
-
-        <!-- ============================================ -->
-
-        <div class="o-grid o-grid--gutters o-medium-grid--full">
-          <div class="o-grid__cell">
-            <h4>Full-screen modal</h4>
-            <a href="#modal2" class="c-btn--primary c-btn c-modal-trigger c-modal-trigger--f">Full-screen Modal</a>
-          </div>
-        </div>
-
-        <!-- code well markup -->
-        <div class="o-grid o-grid--gutters o-medium-grid--full">
-          <div class="o-grid__cell">
-            <div class="c-collapse">
-              <div class="c-collapse__controls-container--justified-text">
-                <i class="fa fa-code fa-lg" aria-hidden="true"></i>
-                <a class="c-collapse__toggle">toggle markup</a>
-              </div>
-              <div class="c-collapse__content-container c-collapse__content-container--dark">
-                <div class="c-collapse__content--prism-code-style">
-<pre class="u-pre--wrap"><code class="language-markup">&lt;div id=&quot;modal2&quot; class=&quot;c-modal c-modal--full&quot;&gt;
-  &lt;div class=&quot;c-modal__content&quot;&gt;
-    &lt;h3 class=&quot;c-modal__header&quot;&gt;Full-screen Modal&lt;/h3&gt;
-    &lt;p class=&quot;c-modal__body&quot;&gt;Modal content&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;c-modal__footer&quot;&gt;
-    &lt;a href=&quot;#!&quot; class=&quot;c-modal__close&quot;&gt;close&lt;/a&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- end codewell markup -->
-
-        <!-- ============================================ -->
-
-        <div class="o-grid o-grid--gutters o-medium-grid--full">
-          <div class="o-grid__cell">
-            <h4>Modal with fixed header and footer</h4>
-            <a href="#modal3" class="c-btn--primary c-btn c-modal-trigger">Fixed Header and Footer Modal</a>
-          </div>
-        </div>
-
-        <!-- code well markup -->
-        <div class="o-grid o-grid--gutters o-medium-grid--full">
-          <div class="o-grid__cell">
-            <div class="c-collapse">
-              <div class="c-collapse__controls-container--justified-text">
-                <i class="fa fa-code fa-lg" aria-hidden="true"></i>
-                <a class="c-collapse__toggle">toggle markup</a>
-              </div>
-              <div class="c-collapse__content-container c-collapse__content-container--dark">
-                <div class="c-collapse__content--prism-code-style">
-<pre class="u-pre--wrap"><code class="language-markup">&lt;div id=&quot;modal3&quot; class=&quot;c-modal c-modal--fixed&quot;&gt;
-  &lt;div class=&quot;c-modal__content&quot;&gt;
-    &lt;h3 class=&quot;c-modal__header&quot;&gt;Fixed Modal&lt;/h3&gt;
-    &lt;p class=&quot;c-modal__body&quot;&gt;Modal content/p&gt;
-    &lt;div class=&quot;c-modal__footer&quot;&gt;
-      &lt;a href=&quot;#!&quot; class=&quot;c-modal__close&quot;&gt;close&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- end codewell markup -->
-
-        <!-- ============================================ -->
-
-        <div class="o-grid o-grid--gutters o-medium-grid--full">
-          <div class="o-grid__cell">
-            <h4>Dialog modal</h4>
-            <a href="#modal4" class="c-btn--primary c-btn c-modal-trigger">Dialog Modal</a>
-          </div>
-        </div>
-
-        <!-- code well markup -->
-        <div class="o-grid o-grid--gutters o-medium-grid--full">
-          <div class="o-grid__cell">
-            <div class="c-collapse">
-              <div class="c-collapse__controls-container--justified-text">
-                <i class="fa fa-code fa-lg" aria-hidden="true"></i>
-                <a class="c-collapse__toggle">toggle markup</a>
-              </div>
-              <div class="c-collapse__content-container c-collapse__content-container--dark">
-                <div class="c-collapse__content--prism-code-style">
-<pre class="u-pre--wrap"><code class="language-markup">&lt;div id=&quot;modal4&quot; class=&quot;c-modal c-modal--dialog&quot;&gt;
-  &lt;div class=&quot;c-modal__content&quot;&gt;
-    &lt;p class=&quot;c-modal__body&quot;&gt;Modal content&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;c-modal__footer&quot;&gt;
-    &lt;a href=&quot;#!&quot; class=&quot;c-modal__cancel c-modal__close&quot;&gt;cancel&lt;/a&gt;
-    &lt;a href=&quot;#!&quot; class=&quot;c-modal__ok c-modal__close&quot;&gt;okay&lt;/a&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- end codewell markup -->
-
-
-        <!-- ============================================ -->
-
-        <!--Modal overlay-->
-        <div class="c-modal-overlay"></div>
-
-        <!-- modal - basic -->
-        <div id="modal1" class="c-modal c-modal--basic">
-          <div class="c-modal__content">
-            <h3 class="c-modal__header">Basic Modal</h3>
-            <p class="c-modal__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend dolor diam, nec viverra ipsum semper nec. Curabitur accumsan neque eget leo auctor egestas. Proin posuere sem ut mauris commodo, ac maximus urna commodo. Quisque eget risus eget urna efficitur elementum dignissim at tellus. Ut feugiat bibendum porta.</p>
-          </div>
-          <div class="c-modal__footer">
-            <a href="#!" class="c-modal__close">close</a>
-          </div>
-        </div>
-
-        <!-- modal - full screen -->
-        <div id="modal2" class="c-modal c-modal--full">
-          <div class="c-modal__content">
-            <h3 class="c-modal__header">Full-screen Modal</h3>
-            <p class="c-modal__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend dolor diam, nec viverra ipsum semper nec. Curabitur accumsan neque eget leo auctor egestas. Proin posuere sem ut mauris commodo, ac maximus urna commodo. Quisque eget risus eget urna efficitur elementum dignissim at tellus. Ut feugiat bibendum porta.</p>
-          </div>
-          <div class="c-modal__footer">
-            <a href="#!" class="c-modal__close">close</a>
-          </div>
-        </div>
-
-        <!-- modal - fixed header and footer -->
-        <div id="modal3" class="c-modal c-modal--fixed">
-          <div class="c-modal__content">
-            <h3 class="c-modal__header">Fixed Modal</h3>
-            <p class="c-modal__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend dolor diam, nec viverra ipsum semper nec. Curabitur accumsan neque eget leo auctor egestas. Proin posuere sem ut mauris commodo, ac maximus urna commodo. Quisque eget risus eget urna efficitur elementum dignissim at tellus. Ut feugiat bibendum porta. Curabitur tristique quam eu est porttitor, id tincidunt arcu molestie. Morbi volutpat est orci, eget iaculis est rhoncus id. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend dolor diam, nec viverra ipsum semper nec. Curabitur accumsan neque eget leo auctor egestas. Proin posuere sem ut mauris commodo, ac maximus urna commodo. Quisque eget risus eget urna efficitur elementum dignissim at tellus. Ut feugiat bibendum porta. Curabitur tristique quam eu est porttitor, id tincidunt arcu molestie. Morbi volutpat est orci, eget iaculis est rhoncus id.</p>
-            <div class="c-modal__footer">
-              <a href="#!" class="c-modal__close">close</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- modal - dialog -->
-        <div id="modal4" class="c-modal c-modal--dialog">
-          <div class="c-modal__content">
-            <p class="c-modal__body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In eleifend dolor diam, nec viverra ipsum semper nec. Curabitur accumsan neque eget leo auctor egestas. Proin posuere sem ut mauris commodo, ac maximus urna commodo. Quisque eget risus eget urna efficitur elementum dignissim at tellus. Ut feugiat bibendum porta.</p>
-          </div>
-          <div class="c-modal__footer">
-            <a href="#!" class="c-modal__cancel c-modal__close">cancel</a>
-            <a href="#!" class="c-modal__ok c-modal__close">okay</a>
-          </div>
-        </div>
-      </section>
-
 
     </div>
   </div>
