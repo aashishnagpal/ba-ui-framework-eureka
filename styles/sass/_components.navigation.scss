@@ -38,9 +38,9 @@
 
   &--sticky {
     position: fixed;
-    top: 0;
-    left: 0;
+    left: auto;
     z-index: 9999;
+    top: 0;
   }
 
   &__item {

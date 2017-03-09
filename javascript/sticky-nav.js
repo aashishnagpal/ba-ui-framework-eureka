@@ -13,7 +13,7 @@
 
     // fetch the navigation element (can be any element, list or not)
     // must have data-nav-type="sticky"
-    var nav = document.querySelector('.nav[data-nav-type="sticky"]');
+    var nav = document.querySelector('[data-nav-type="sticky"]');
     if (nav !== null) {
       // Fetch header element using header id
       // get bottom of header to set starting boundary or fallback to Nav element's top
@@ -41,12 +41,18 @@
   var stickyNav = function (boundaries) {
     // read current scroll position
     var scrollPosition = window.pageYOffset;
-    console.log(scrollPosition, boundaries.end);
+
     // test scroll position against starting and ending boundaries and add or remove sticky nature
-    if (scrollPosition < boundaries.start || scrollPosition > boundaries.end) {
+    if (scrollPosition < boundaries.start) {
       boundaries.nav.classList.remove('nav--sticky');
+    } else if (scrollPosition > boundaries.end) {
+      // this expects that the `nav--sticky` is already added by the `else` tag below
+      boundaries.nav.style.top = 'auto';
+      boundaries.nav.style.bottom = scrollPosition - boundaries.end + 'px';
     } else {
       boundaries.nav.classList.add('nav--sticky');
+      boundaries.nav.style.top = 0;
+      boundaries.nav.style.bottom = 'auto';
     }
   };
 
