@@ -4,62 +4,134 @@
     <meta charset="UTF-8">
     <title>Persona</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../prism/prism.css">
     <link rel="stylesheet" href="../styles/css/eureka.css">
-    <style>
-        body {
-            background: #d7d7d7;
-            text-align: center;
-            width: 100%;
-            padding-top: 200px;
-            display: flex;
-            justify-content: flex-start;
-        }
-
-    </style>
 </head>
 <body>
+<section class="website-components__component" id="persona">
 
-    <div class="persona">
-        <img class="persona__image" src="../images/guy-1.jpg">
-        <p class="persona__name">Virgil Hammond</p>
-        <p class="persona__designation">Front End Developer</p>
-        <button type="button" class="c-btn c-btn--primary persona__button">
-            <span class="c-btn__btn-icon persona__button__icon">
-                <i class="fa fa-globe" aria-hidden="true"></i>
-            </span>Portfolio
-        </button>
-    </div>
-    <div class="persona">
-        <img class="persona__image" src="../images/girl-1.png">
-        <p class="persona__name">Sonya Mcmakin</p>
-        <p class="persona__designation">Full Stack Developer</p>
-        <button type="button" class="c-btn c-btn--primary persona__button">
-            <span class="c-btn__btn-icon persona__button__icon">
-                <i class="fa fa-globe" aria-hidden="true"></i>
-            </span>Portfolio
-        </button>
-    </div>
-    <div class="persona">
-        <img class="persona__image" src="../images/girl-2.png">
-        <p class="persona__name">Pamela Rundell</p>
-        <p class="persona__designation">Front End Developer</p>
-        <button type="button" class="c-btn c-btn--primary persona__button">
-            <span class="c-btn__btn-icon persona__button__icon">
-                <i class="fa fa-globe" aria-hidden="true"></i>
-            </span>Portfolio
-        </button>
-    </div>
-    <div class="persona">
-        <img class="persona__image" src="../images/guy-2.jpg">
-        <p class="persona__name">Cesar Ayoub</p>
-        <p class="persona__designation">Full Stack Developer</p>
-        <button type="button" class="c-btn c-btn--primary persona__button">
-            <span class="c-btn__btn-icon persona__button__icon">
-                <i class="fa fa-globe" aria-hidden="true"></i>
-            </span>Portfolio
-        </button>
+    <h3>Persona</h3>
+    <p>Create a <strong>persona</strong> around your team member/page author cards.</p>
+    <p>You can add as many <code class="language-css">persona-container</code>(s) and as many
+        <code class="language-css">persona</code>(s) within them.</p>
+    <p>Try hovering over them!</p>
+
+    <!-- component example grid container -->
+    <div class="o-grid o-grid--gutters">
+        <div class="o-grid__cell">
+            <div class="persona-container">
+                <div class="persona">
+                    <img class="persona__image" src="../images/guy-1.jpg">
+                    <p class="persona__name">Virgil Hammond</p>
+                    <p class="persona__title">Front End Developer</p>
+                    <div class="persona__links">
+                        <button type="button" class="c-btn c-btn--primary persona__link">
+                            <span class="c-btn__btn-icon persona__icon">
+                                <i class="fa fa-globe" aria-hidden="true"></i>
+                            </span> Portfolio
+                        </button>
+                    </div>
+                </div>
+                <div class="persona">
+                    <img class="persona__image" src="../images/girl-1.png">
+                    <p class="persona__name">Sonya Mcmakin</p>
+                    <p class="persona__title">Full Stack Developer</p>
+                    <ul class="persona__links">
+                        <li class="persona__link">
+                            <a class="persona__icon" href="#"><i class="fa fa-globe" aria-hidden="true"></i></a>
+                        </li>
+                        <li class="persona__link">
+                            <a class="persona__icon" href="#"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+                        </li>
+                        <li class="persona__link">
+                            <a class="persona__icon" href="#"><i class="fa fa-linkedin-square"
+                                                                 aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="persona">
+                    <img class="persona__image" src="../images/girl-2.png">
+                    <p class="persona__name">Pamela Rundell</p>
+                    <p class="persona__title">Front End Developer</p>
+                    <div class="persona__links">
+                        <button type="button" class="c-btn c-btn--primary persona__link">
+                            <span class="c-btn__btn-icon persona__icon">
+                                <i class="fa fa-globe" aria-hidden="true"></i>
+                            </span> Portfolio
+                        </button>
+                    </div>
+                </div>
+                <div class="persona">
+                    <img class="persona__image" src="../images/guy-2.jpg">
+                    <p class="persona__name">Cesar Ayoub</p>
+                    <p class="persona__title">Full Stack Developer</p>
+                    <ul class="persona__links">
+                        <li class="persona__link">
+                            <a class="persona__icon" href="#"><i class="fa fa-globe" aria-hidden="true"></i></a>
+                        </li>
+                        <li class="persona__link">
+                            <a class="persona__icon" href="#"><i class="fa fa-github-square" aria-hidden="true"></i></a>
+                        </li>
+                        <li class="persona__link">
+                            <a class="persona__icon" href="#"><i class="fa fa-linkedin-square"
+                                                                 aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
 
-<script type="text/javascript" src=""></script>
+    <!-- code well markup -->
+    <div class="o-grid o-grid--gutters">
+        <div class="o-grid__cell">
+            <div class="c-collapse">
+                <div class="c-collapse__controls-container--justified-text">
+                    <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                    <a class="c-collapse__toggle">toggle markup</a>
+                </div>
+                <div class="c-collapse__content-container c-collapse__content-container--dark">
+                    <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;div class=&quot;persona-container&quot;&gt;
+	&lt;div class=&quot;persona&quot;&gt;
+		&lt;img class=&quot;persona__image&quot; src=&quot;../images/guy-1.jpg&quot;&gt;
+		&lt;p class=&quot;persona__name&quot;&gt;Virgil Hammond&lt;/p&gt;
+		&lt;p class=&quot;persona__title&quot;&gt;Front End Developer&lt;/p&gt;
+		&lt;div class=&quot;persona__links&quot;&gt; &lt;!-- Contains a single button --&gt;
+			&lt;button type=&quot;button&quot; class=&quot;c-btn c-btn--primary persona__link&quot;&gt;
+				&lt;span class=&quot;c-btn__btn-icon persona__icon&quot;&gt;
+					&lt;i class=&quot;fa fa-globe&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+				&lt;/span&gt; Portfolio
+			&lt;/button&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;persona&quot;&gt;
+		&lt;img class=&quot;persona__image&quot; src=&quot;../images/girl-1.png&quot;&gt;
+		&lt;p class=&quot;persona__name&quot;&gt;Sonya Mcmakin&lt;/p&gt;
+		&lt;p class=&quot;persona__title&quot;&gt;Full Stack Developer&lt;/p&gt;
+		&lt;ul class=&quot;persona__links&quot;&gt; &lt;!-- Contains multiple icon links --&gt;
+			&lt;li class=&quot;persona__link&quot;&gt;
+				&lt;a class=&quot;persona__icon&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-globe&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/li&gt;
+			&lt;li class=&quot;persona__link&quot;&gt;
+				&lt;a class=&quot;persona__icon&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-github-square&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/li&gt;
+			&lt;li class=&quot;persona__link&quot;&gt;
+				&lt;a class=&quot;persona__icon&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;fa fa-linkedin-square&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end codewell markup -->
+
+</section>
+
+<script src="../prism/prism.js"></script>
+<script src="../javascript/collapse.js"></script>
 </body>
 </html>

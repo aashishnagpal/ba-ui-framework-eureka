@@ -19,7 +19,7 @@
 	/**
 	 * Grid cells
 	 *
-	 * No explicit width by default. Automatically fills width from using flex.
+	 * No explicit width by default. Automatically fills width using flex.
 	 *
 	 */
 
@@ -38,7 +38,7 @@
 	 * aligned properly.
 	 */
 .o-grid--gutters {
-	margin: -1em 0 0 -1em;
+	margin: -1em 0 1em -1em;
 }
 
 /**

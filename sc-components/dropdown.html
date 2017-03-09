@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Dropdown component</title>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../prism/prism.css">
+  <link rel="stylesheet" href="../styles/css/eureka.css">
+</head>
+<body>
+<!-- ======================= -->
+<!-- start template -->
+<section class="website-components__component" id="dropdown">
+
+  <h3>Dropdown</h3>
+  <p>Dropdowns can be added to any anchor tag.  The drop down list will take the width of the anchor it is associated with.</p>
+
+  <!-- component example grid container -->
+  <div class="o-grid">
+    <div class="o-grid__cell">
+    <!-- component examples here -->
+    <h3>Dropdown - default</h3>
+    <a class="c-btn c-btn--primary c-dropdown__link" data-drop-controls="list-1">Dropdown</a>
+  <ul class="c-dropdown__list" data-drop-id="list-1">
+    <li class="c-dropdown__list-item">Item One</li>
+    <li class="c-dropdown__list-item">Item Two</li>
+    <li class="c-dropdown__list-item">Item Three</li>
+    <li class="c-dropdown__list-item">Item Four</li>
+  </ul>
+  <h3>Dropdown - centered list text</h3>
+  <p>Use class "c-dropdown__list--centered-list" on the dropdown list tag</p>
+  <a class="c-btn c-btn--primary c-dropdown__link" data-drop-controls="list-2">Dropdown centered</a>
+  <ul class="c-dropdown__list--centered-list" data-drop-id="list-2">
+    <li class="c-dropdown__list-item">Item One</li>
+    <li class="c-dropdown__list-item">Item Two</li>
+    <li class="c-dropdown__list-item">Item Three</li>
+    <li class="c-dropdown__list-item">Item Four</li>
+  </ul>
+    </div>
+  </div>
+
+  <!-- code well markup -->
+  <div class="o-grid">
+    <div class="o-grid__cell">
+      <div class="c-collapse">
+        <div class="c-collapse__controls-container--justified-text">
+          <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+          <a class="c-collapse__toggle">toggle markup</a>
+        </div>
+        <div class="c-collapse__content-container c-collapse__content-container--dark">
+          <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;!-- dropdown anchor --&gt;
+&lt;a class=&quot;c-dropdown__link&quot; data-drop-controls=&quot;list-1&quot;&gt;Dropdown&lt;/a&gt;
+&lt;!-- dropdown list --&gt;
+&lt;ul class=&quot;c-dropdown__list&quot; data-drop-id=&quot;list-1&quot;&gt;
+  &lt;li class=&quot;c-dropdown__list-item&quot;&gt;Item One&lt;/li&gt;
+  &lt;li class=&quot;c-dropdown__list-item&quot;&gt;Item Two&lt;/li&gt;
+  &lt;li class=&quot;c-dropdown__list-item&quot;&gt;Item Three&lt;/li&gt;
+  &lt;li class=&quot;c-dropdown__list-item&quot;&gt;Item Four&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end codewell markup -->
+
+</section>
+<!-- end template -->
+
+<script src="../javascript/dropdown.js"></script>
+<script src="../javascript/collapse.js"></script>
+<script src="../prism/prism.js"></script>
+</body>
+
+</html>

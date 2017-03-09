@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Eureka CSS UI Framework</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../styles/css/eureka.css">
+  <link rel="stylesheet" href="../prism/prism.css">
+</head>
+<body>
+
+  <section class="website-components__component" id="reveal">
+
+    <h3>Reveal</h3>
+    <p>A reveal component hides a previous visible content and shows the content below when activated.</p>
+
+    <!-- component example grid container -->
+
+    <!-- Basic Reveal -->
+    <div class="o-grid o-grid--gutters o-medium-grid--full">
+      <div class="o-grid__cell">
+        <!-- component examples here -->
+
+        <h4>Fade out</h4>
+        <div class="c-reveal c-reveal--fade">
+          <div class="c-reveal__visible">
+            <span class="c-reveal__msg">Hover on me</span>
+          </div>
+          <div  class="c-reveal__hidden">
+            <img class="c-reveal__img-hidden" src="../images/c-reveal.jpg">
+          </div>
+        </div>
+
+        <div class="c-reveal c-reveal--fade">
+          <div class="c-reveal__visible">
+            <img src="../images/c-reveal-2.jpeg" class="c-reveal__img-visible" >
+          </div>
+          <div  class="c-reveal__hidden">
+            <img class="c-reveal__img-hidden" src="../images/c-reveal.jpg">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- code well markup -->
+    <div class="o-grid o-grid--gutters o-medium-grid--full">
+      <div class="o-grid__cell">
+        <div class="c-collapse">
+          <div class="c-collapse__controls-container--justified-text">
+            <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+            <a class="c-collapse__toggle">toggle markup</a>
+          </div>
+          <div class="c-collapse__content-container c-collapse__content-container--dark">
+            <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;div class=&quot;c-reveal c-reveal--fade&quot;&gt;
+    &lt;div class=&quot;c-reveal__visible&quot;&gt;
+        &lt;span class=&quot;c-reveal__msg&quot;&gt;Hover on me&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-reveal__hidden&quot;&gt;
+        &lt;img class=&quot;c-reveal__img-hidden&quot; src=&quot;&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;c-reveal c-reveal--fade&quot;&gt;
+    &lt;div class=&quot;c-reveal__visible&quot;&gt;
+        &lt;img src=&quot;&quot; class=&quot;c-reveal__img-visible&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-reveal__hidden&quot;&gt;
+        &lt;img class=&quot;c-reveal__img-hidden&quot; src=&quot;&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end codewell markup -->
+
+    <!-- ============================================ -->
+
+    <!-- Slide Reveal -->
+    <div class="o-grid o-grid--gutters o-medium-grid--full">
+      <div class="o-grid__cell">
+        <!-- component examples here -->
+
+        <h4>Slide away</h4>
+        <div class="c-reveal c-reveal--slide left">
+          <div class="c-reveal__visible">
+            <span class="c-reveal__msg">Hover on me</span>
+          </div>
+          <div  class="c-reveal__hidden">
+            <img class="c-reveal__img-hidden" src="../images/c-reveal.jpg">
+          </div>
+        </div>
+
+        <div class="c-reveal c-reveal--slide right">
+          <div class="c-reveal__visible">
+            <span class="c-reveal__msg">Hover on me</span>
+          </div>
+          <div  class="c-reveal__hidden">
+            <img class="c-reveal__img-hidden" src="../images/c-reveal.jpg">
+          </div>
+        </div>
+
+        <div class="c-reveal c-reveal--slide top">
+          <div class="c-reveal__visible">
+            <span class="c-reveal__msg">Hover on me</span>
+          </div>
+          <div  class="c-reveal__hidden">
+            <img class="c-reveal__img-hidden" src="../images/c-reveal.jpg">
+          </div>
+        </div>
+
+        <div class="c-reveal c-reveal--slide bottom">
+          <div class="c-reveal__visible">
+            <span class="c-reveal__msg">Hover on me</span>
+          </div>
+          <div  class="c-reveal__hidden">
+            <img class="c-reveal__img-hidden" src="../images/c-reveal.jpg">
+          </div>
+        </div>
+
+        <div class="c-reveal c-reveal--slide bottom outside">
+          <div class="c-reveal__visible">
+            <span class="c-reveal__msg">Hover on me</span>
+          </div>
+          <div  class="c-reveal__hidden">
+            <img class="c-reveal__img-hidden" src="../images/c-reveal.jpg">
+          </div>
+        </div>
+
+        <div class="c-reveal c-reveal--slide right outside">
+          <div class="c-reveal__visible">
+            <span class="c-reveal__msg">Hover on me</span>
+          </div>
+          <div  class="c-reveal__hidden">
+            <img class="c-reveal__img-hidden" src="../images/c-reveal.jpg">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- code well markup -->
+    <div class="o-grid o-grid--gutters o-medium-grid--full">
+      <div class="o-grid__cell">
+        <div class="c-collapse">
+          <div class="c-collapse__controls-container--justified-text">
+            <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+            <a class="c-collapse__toggle">toggle markup</a>
+          </div>
+          <div class="c-collapse__content-container c-collapse__content-container--dark">
+            <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;div class=&quot;c-reveal c-reveal--slide left&quot;&gt;
+    &lt;div class=&quot;c-reveal__visible&quot;&gt;
+        &lt;span class=&quot;c-reveal__msg&quot;&gt;Hover on me&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-reveal__hidden&quot;&gt;
+        &lt;img class=&quot;c-reveal__img-hidden&quot; src=&quot;&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;c-reveal c-reveal--slide right&quot;&gt;
+    &lt;div class=&quot;c-reveal__visible&quot;&gt;
+        &lt;span class=&quot;c-reveal__msg&quot;&gt;Hover on me&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-reveal__hidden&quot;&gt;
+        &lt;img class=&quot;c-reveal__img-hidden&quot; src=&quot;&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;c-reveal c-reveal--slide top&quot;&gt;
+    &lt;div class=&quot;c-reveal__visible&quot;&gt;
+        &lt;span class=&quot;c-reveal__msg&quot;&gt;Hover on me&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-reveal__hidden&quot;&gt;
+        &lt;img class=&quot;c-reveal__img-hidden&quot; src=&quot;&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;c-reveal c-reveal--slide bottom&quot;&gt;
+    &lt;div class=&quot;c-reveal__visible&quot;&gt;
+        &lt;span class=&quot;c-reveal__msg&quot;&gt;Hover on me&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-reveal__hidden&quot;&gt;
+        &lt;img class=&quot;c-reveal__img-hidden&quot; src=&quot;&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;c-reveal c-reveal--slide bottom outside&quot;&gt;
+    &lt;div class=&quot;c-reveal__visible&quot;&gt;
+        &lt;span class=&quot;c-reveal__msg&quot;&gt;Hover on me&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-reveal__hidden&quot;&gt;
+        &lt;img class=&quot;c-reveal__img-hidden&quot; src=&quot;&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;c-reveal c-reveal--slide right outside&quot;&gt;
+    &lt;div class=&quot;c-reveal__visible&quot;&gt;
+        &lt;span class=&quot;c-reveal__msg&quot;&gt;Hover on me&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-reveal__hidden&quot;&gt;
+        &lt;img class=&quot;c-reveal__img-hidden&quot; src=&quot;&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end codewell markup -->
+
+    <!-- ============================================ -->
+
+    <!-- Rotate Reveal -->
+    <div class="o-grid o-grid--gutters o-medium-grid--full">
+      <div class="o-grid__cell">
+        <!-- component examples here -->
+
+        <h4>Rotate reveal</h4>
+        <div class="c-reveal c-reveal--rotate left-bottom">
+          <div class="c-reveal__visible">
+            <span class="c-reveal__msg">Hover on me</span>
+          </div>
+          <div  class="c-reveal__hidden">
+            <img class="c-reveal__img-hidden" src="../images/c-reveal.jpg">
+          </div>
+        </div>
+
+        <div class="c-reveal c-reveal--rotate right outside">
+          <div class="c-reveal__visible">
+            <span class="c-reveal__msg">Hover on me</span>
+          </div>
+          <div  class="c-reveal__hidden">
+            <img class="c-reveal__img-hidden" src="../images/c-reveal.jpg">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- code well markup -->
+    <div class="o-grid o-grid--gutters o-medium-grid--full">
+      <div class="o-grid__cell">
+        <div class="c-collapse">
+          <div class="c-collapse__controls-container--justified-text">
+            <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+            <a class="c-collapse__toggle">toggle markup</a>
+          </div>
+          <div class="c-collapse__content-container c-collapse__content-container--dark">
+            <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;div class=&quot;c-reveal c-reveal--rotate left-bottom&quot;&gt;
+    &lt;div class=&quot;c-reveal__visible&quot;&gt;
+        &lt;span class=&quot;c-reveal__msg&quot;&gt;Hover on me&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-reveal__hidden&quot;&gt;
+        &lt;img class=&quot;c-reveal__img-hidden&quot; src=&quot;&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;c-reveal c-reveal--rotate right outside&quot;&gt;
+    &lt;div class=&quot;c-reveal__visible&quot;&gt;
+        &lt;span class=&quot;c-reveal__msg&quot;&gt;Hover on me&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-reveal__hidden&quot;&gt;
+        &lt;img class=&quot;c-reveal__img-hidden&quot; src=&quot;&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end codewell markup -->
+
+    <!-- Open-door Reveal -->
+    <div class="o-grid o-grid--gutters o-medium-grid--full">
+      <div class="o-grid__cell">
+        <!-- component examples here -->
+
+        <h4>Open-door reveal</h4>
+        <div class="c-reveal c-reveal--open">
+          <div class="c-reveal__visible">
+            <span class="c-reveal__door-left"></span>
+            <span class="c-reveal__door-right"></span>
+          </div>
+          <div  class="c-reveal__hidden">
+            <img class="c-reveal__img-hidden" src="../images/c-reveal.jpg">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- code well markup -->
+    <div class="o-grid o-grid--gutters o-medium-grid--full">
+      <div class="o-grid__cell">
+        <div class="c-collapse">
+          <div class="c-collapse__controls-container--justified-text">
+            <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+            <a class="c-collapse__toggle">toggle markup</a>
+          </div>
+          <div class="c-collapse__content-container c-collapse__content-container--dark">
+            <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;div class=&quot;c-reveal c-reveal--open&quot;&gt;
+    &lt;div class=&quot;c-reveal__visible&quot;&gt;
+        &lt;span class=&quot;c-reveal__door-left&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;c-reveal__door-right&quot;&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-reveal__hidden&quot;&gt;
+        &lt;img class=&quot;c-reveal__img-hidden&quot; src=&quot;&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end codewell markup -->
+  </section>
+
+
+  <script src="../javascript/collapse.js"></script>
+  <script src="../prism/prism.js"></script>
+</body>
+</html>

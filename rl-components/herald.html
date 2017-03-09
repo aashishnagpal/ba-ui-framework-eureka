@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Rochell Langam">
+    <title>Herald Component</title>
+    <script src="../javascript/herald.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../prism/prism.css">
+    <link rel="stylesheet" href="../styles/css/eureka.css">
+  </head>
+  <body>
+
+    <section class="website-components__component" id="herald">
+
+    <h3>Herald Component</h3>
+    <p>The "Herald pole" unfurls and drops a banner at the side of a 400x200 image. This component is ideal for a small listing, although any message size will fit inside the Herald component. The Herald will adjust its height to your message length.</p>
+
+    <!-- component example grid container -->
+    <div class="o-grid o-grid--gutters">
+      <div class="o-grid__cell">
+        <div class="c-herald">
+          <div class="c-herald__chip c-chip--outlined">
+            <span class="c-chip__media--o c-herald-c-chip__media--o">3</span>
+            Announcements
+          </div>
+          <div class="c-herald__scroll">
+            <div class="c-herald__message">
+              <img class="c-herald__img" src="https://www.genimg.com/400x200" alt="">
+              <p>Drumpf Obama: FBI chief Comey 'rejects' phone tap allegation. <a class="c-herald__anchors" href="#">[Visit BBC.com]</a></p>
+              <p>The Queen is in search of a brawny grape-feeder. <a class="c-herald__anchors" href="#">[Apply Here]</a></p>
+              <p>What a strange world we live in. <a class="c-herald__anchors" href="#">[Find out why]</a></p>
+            </div>
+            <div class="c-herald__furled-scroll"></div>
+          </div>
+          <div class="c-herald__ribbon"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- code well markup -->
+    <div class="o-grid o-grid--gutters">
+      <div class="o-grid__cell">
+        <div class="c-collapse">
+          <div class="c-collapse__controls-container--justified-text">
+            <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+            <a class="c-collapse__toggle">toggle markup</a>
+          </div>
+          <div class="c-collapse__content-container c-collapse__content-container--dark">
+            <div class="c-collapse__content--prism-code-style">
+            <pre class="u-pre--wrap"><code class="language-markup line-numbers">
+&lt;div class=&quot;c-herald&quot;&gt;
+  &lt;div class=&quot;c-herald__chip c-chip--outlined&quot;&gt;
+    &lt;span class=&quot;c-chip__media--o&quot;&gt;3&lt;/span&gt;
+    Announcements
+  &lt;/div&gt;
+  &lt;div class=&quot;c-herald__scroll&quot;&gt;
+    &lt;div class=&quot;c-herald__message&quot;&gt;
+      &lt;img class=&quot;c-herald__img&quot; src=&quot;https://www.genimg.com/400x200&quot; alt=&quot;&quot;&gt;
+      &lt;p&gt;Drumpf Obama: FBI chief Comey &apos;rejects&apos; phone tap allegation. &lt;a class=&quot;c-herald__anchors&quot; href=&quot;#&quot;&gt;[Visit BBC.com]&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;The Queen is in search of a brawny grape-feeder. &lt;a class=&quot;c-herald__anchors&quot; href=&quot;#&quot;&gt;[Apply Here]&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;What a strange world we live in. &lt;a class=&quot;c-herald__anchors&quot; href=&quot;#&quot;&gt;[Find out why]&lt;/a&gt;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;c-herald__furled-scroll&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;c-herald__ribbon&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+            </code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+    <script src="../javascript/collapse.js" charset="utf-8"></script>
+    <script src="../prism/prism.js"></script>
+  </body>
+</html>

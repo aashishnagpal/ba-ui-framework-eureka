@@ -3,18 +3,193 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Search Bar</title>
+    <title>Search Bars</title>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../styles/css/eureka.css">
-    
+    <link type="text/css" rel="stylesheet" href="../prism/prism.css">
+    <link type="text/css" rel="stylesheet" href="../styles/css/eureka.css">
 </head>
 
+<!--Original Body Code
 <body>
+    <h3>Seach Bar</h3>
     <form class="search-form">
-            <i class="fa fa-search search-icon"></i>
-            <input class="search-input" type="text" placeholder="Search" required>
-            <input class="search-button" type="button">
+        <input class="search-input" type="text" placeholder="Search" required>
+        <button class="search-button" type="submit"><i class="fa fa-search search-icon"></i></button>
     </form>
+    <br>
+    <h3> Search Bar 2</h3>
+    <form class="search-form-second">
+        <input class="search-input-second" type="text" placeholder="Search" required>
+        <button class="search-button-second" type="submit"><i class="fa fa-search search-icon-second"></i></button>
+    </form>
+</body>-->
+
+<body>
+    <section class="website-components__component" id="search-bars">
+
+        <h3>Search Bars</h3>
+        <p>Eureka provides two search bar options for easy integration into your Eureka design site.</p>
+        <br>
+        <p>The color of the search magnify glass icon is accomplished adding a mixed-blend-mode to near-black icon.</p>
+        <p>If you change your color scheme, the icon color will change to match.</p>
+        <p>Supported in most modern browsers, but unsupported browsers will fall back to a pure black icon.</p>
+        <h4>Searchbar 1</h4>
+
+        <!-- component example grid container -->
+        <div class="o-grid o-grid--gutters o-medium-grid--full">
+            <div class="o-grid__cell">
+                <!-- component examples here -->
+                <form class="search-form">
+                    <input class="search-input" type="text" placeholder="Search" required>
+                    <button class="search-button" type="submit"><i class="fa fa-search search-icon"></i></button>
+                </form>
+            </div>
+        </div>
+
+        <!-- code well markup -->
+        <div class="o-grid o-grid--gutters o-medium-grid--full">
+            <div class="o-grid__cell">
+                <div class="c-collapse">
+                    <div class="c-collapse__controls-container--justified-text">
+                        <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                        <a class="c-collapse__toggle">toggle markup</a>
+                    </div>
+                    <div class="c-collapse__content-container c-collapse__content-container--dark">
+                        <div class="c-collapse__content--prism-code-style">
+                            <pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;form class=&quot;search-form&quot;&gt;
+          &lt;input class=&quot;search-input&quot; type=&quot;text&quot; placeholder=&quot;Search&quot; required&gt;
+          &lt;button class=&quot;search-button&quot; type=&quot;submit&quot;&gt;&lt;i class=&quot;fa fa-search search-icon&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+&lt;/form&gt;
+                            </code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- end codewell markup -->
+
+
+        <!-- component example grid container -->
+        <h4>Search Bar 2</h4>
+        <div class="o-grid o-grid--gutters o-medium-grid--full">
+            <div class="o-grid__cell">
+                <!-- component examples here -->
+                <form class="search-form-second">
+                    <input class="search-input-second" type="text" placeholder="Search" required>
+                    <button class="search-button-second" type="submit"><i class="fa fa-search search-icon-second"></i></button>
+                </form>
+            </div>
+        </div>
+
+        <!-- code well markup -->
+        <div class="o-grid o-grid--gutters o-medium-grid--full">
+            <div class="o-grid__cell">
+                <div class="c-collapse">
+                    <div class="c-collapse__controls-container--justified-text">
+                        <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                        <a class="c-collapse__toggle">toggle markup</a>
+                    </div>
+                    <div class="c-collapse__content-container c-collapse__content-container--dark">
+                        <div class="c-collapse__content--prism-code-style">
+                            <pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;form class=&quot;search-form-second&quot;&gt;
+              &lt;input class=&quot;search-input-second&quot; type=&quot;text&quot; placeholder=&quot;Search&quot; required&gt;
+              &lt;button class=&quot;search-button-second&quot; type=&quot;submit&quot;&gt;&lt;i class=&quot;fa fa-search search-icon-second&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+ &lt;/form&gt;
+</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end codewell markup -->
+        
+        <h4>Features and considerations</h4>
+        <h5>Linked codebase</h5>
+        <p>If you plan to change the style of the Search Bars, the second bar is intentionally linked to the first in the SCSS codebase.</p>
+        <p>This is to create some parity in the styles.  Please keep this in mind if you plan to make any adjustments.</p>
+        
+        <!-- code well markup -->
+        <div class="o-grid o-grid--gutters o-medium-grid--full">
+            <div class="o-grid__cell">
+                <div class="c-collapse">
+                    <div class="c-collapse__controls-container--justified-text">
+                        <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                        <a class="c-collapse__toggle">toggle markup</a>
+                    </div>
+                    <div class="c-collapse__content-container c-collapse__content-container--dark">
+                        <div class="c-collapse__content--prism-code-style">
+                            <pre class="u-pre--wrap"><code class="language-markup line-numbers">.search-button {
+    background-color: $primary-dark-color;
+    border-radius: 0.375rem;
+    border: transparent;
+    box-shadow: -0.3125rem 0 0.1875rem -0.25rem $generic-black-color;
+    flex-basis: 18%;
+    isolation: isolate;
+    margin-left: (-0.1875rem * $search-size-multiplier);
+    cursor: pointer;
+    &amp;:hover {
+        background-color: $secondary-dark-color;
+        isolation: isolate;
+        &amp; .search-icon {
+            color: $primary-dark-color;
+        }
+    }
+    &amp;:active {
+        border: 0.125rem solid transparentize($generic-white-color, .3);
+    }
+}
+
+//second user clickable button
+.search-button-second {
+    @extend .search-button;
+    background-color: lighten($body-bg-color, 12.5%);
+    border-radius: 0;
+    flex-basis: 16%;
+    margin-left: (-0.1875rem * $search-second-size-multiplier);
+    &amp;:hover {
+        background-color: $body-bg-color;
+    }
+}
+</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end codewell markup -->
+        <h5>Simple Size Change</h5>
+        <p>All size calculations on the search bar are done is SCSS by using an appropriate algorithm with a single, universal variable.</p>
+        <p>This allows simple manipulation of the search barf size while maintaining aspect ratio.</p>
+        <p>If you're using SCSS and would like to change the size of either search bar, you can do this by changing:</p>
+        
+        <!-- code well markup -->
+        <div class="o-grid o-grid--gutters o-medium-grid--full">
+            <div class="o-grid__cell">
+                <div class="c-collapse">
+                    <div class="c-collapse__controls-container--justified-text">
+                        <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                        <a class="c-collapse__toggle">toggle markup</a>
+                    </div>
+                    <div class="c-collapse__content-container c-collapse__content-container--dark">
+                        <div class="c-collapse__content--prism-code-style">
+                            <pre class="u-pre--wrap"><code class="language-markup line-numbers">//default for search bar 1: 1.5
+$search-size-multiplier: 1.5;
+
+//default for search bar 2: .7;
+$search-second-size-multiplier: .7;
+                            </code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- end codewell markup -->
+    
+    </section>
+    <script type="text/javascript" src="../prism/prism.js"></script>
+    <script type="text/javascript" src="../javascript/collapse.js"></script>
 </body>
 
 </html>

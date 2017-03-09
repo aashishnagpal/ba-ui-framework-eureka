@@ -5,65 +5,146 @@
   <meta charset="UTF-8">
   <title>Alert components</title>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../prism/prism.css">
   <link rel="stylesheet" href="../styles/css/eureka.css">
 </head>
 
 <body>
-  <div class="generic-wrapper" style="padding: 2em">
-    <h2>Alert component</h2>
-    <!-- default -->
-    <h4>basic alert - default</h4>
-    <div class="c-alert">
-      <p>This is a basic alert. You can get rid of it by clicking on the close icon.</p>
-      <span class="c-alert__close-alert">
-				<i class="fa fa-times"></i>
-			</span>
-    </div>
-    <!-- primary -->
-    <h4>basic alert - default</h4>
-    <div class="c-alert--primary">
-      <p>This is a primary alert. You can get rid of it by clicking on the close icon.</p>
-      <span class="c-alert__close-alert">
-				<i class="fa fa-times"></i>
-			</span>
-    </div>
-    <!-- success -->
-		<h4>basic alert - sucess</h4>
-    <div class="c-alert--success">
-      <p>This is a success alert. You can get rid of it by clicking on the close icon.</p>
-      <span class="c-alert__close-alert">
-				<i class="fa fa-times"></i>
-			</span>
-    </div>
-    <!-- caution -->
-		<h4>basic alert - caution</h4>
-    <div class="c-alert--caution">
-      <p>This is a caution alert. You can get rid of it by clicking on the close icon.</p>
-      <span class="c-alert__close-alert">
-				<i class="fa fa-times"></i>
-			</span>
-    </div>
-    <!-- warning -->
-		<h4>basic alert - warning</h4>
-    <div class="c-alert--warning">
-      <p>This is a warning alert. You can get rid of it by clicking on the close icon.</p>
-      <span class="c-alert__close-alert">
-				<i class="fa fa-times"></i>
-			</span>
-    </div>
-    <!-- warning -->
-    <h4>Alert w/ button - primary</h4>
-    <div class="c-alert--primary">
-      <h4>You can have a header!</h4>
-      <p>This is a warning alert. You can get rid of it by clicking on the close icon.</p>
-      <p>Or you could dismiss it with this button:</p>
-      <button class="c-btn--primary c-btn c-btn--primary--rounded" type="button" name="button" data-close-alert="true">Get it outta here!</button>
-      <span class="c-alert__close-alert">
+  <h2>Alert component</h2>
+  <!-- template start -->
+  <section class="website-components__component" id="alert">
+    <h3>Alert</h3>
+    <p>Alerts offer a way to send a quick message to the user. Alerts can contain any HTML, are dismissable, and come in a few different preconfigured colors</p>
+    <!-- component example grid container -->
+    <div class="o-grid">
+      <div class="o-grid__cell">
+        <!-- component examples here -->
+        <!-- default -->
+        <h4>Basic alert - default</h4>
+        <div class="c-alert">
+          <p>This is a basic alert. You can get rid of it by clicking on the close icon.</p>
+          <span class="c-alert__close-alert">
+            <i class="fa fa-times"></i>
+          </span>
+        </div>
+        <!-- primary -->
+        <h4>Basic alert - primary</h4>
+        <div class="c-alert--primary">
+          <p>This is a primary alert. You can get rid of it by clicking on the close icon.</p>
+          <span class="c-alert__close-alert">
+            <i class="fa fa-times"></i>
+          </span>
+        </div>
+        <!-- success -->
+        <h4>Basic alert - success</h4>
+        <div class="c-alert--success">
+          <p>This is a success alert. You can get rid of it by clicking on the close icon.</p>
+          <span class="c-alert__close-alert">
+            <i class="fa fa-times"></i>
+          </span>
+        </div>
+        <!-- caution -->
+        <h4>Basic alert - caution</h4>
+        <div class="c-alert--caution">
+          <p>This is a caution alert. You can get rid of it by clicking on the close icon.</p>
+          <span class="c-alert__close-alert">
+            <i class="fa fa-times"></i>
+          </span>
+        </div>
+        <!-- warning -->
+        <h4>Basic alert - warning</h4>
+        <div class="c-alert--warning">
+          <p>This is a warning alert. You can get rid of it by clicking on the close icon.</p>
+          <span class="c-alert__close-alert">
+            <i class="fa fa-times"></i>
+          </span>
+        </div>
+        <!-- alert with button -->
+        <h4>Alert w/ button - primary</h4>
+        <p>Alerts can also be set to be dismissed by clicking on any element within the alert. Just add a <code class="language-markup">data-close-alert="true"</code> attribute to the element.</p>
+        <div class="c-alert--primary">
+          <h4>You can have a header!</h4>
+          <p>This is a warning alert. You can get rid of it by clicking on the close icon.</p>
+          <p>Or you could dismiss it with this button:</p>
+          <button class="c-btn--primary c-btn c-btn--primary--rounded" type="button" name="button" data-close-alert="true">Get it outta here!</button>
+          <span class="c-alert__close-alert">
         <i class="fa fa-times"></i>
       </span>
+        </div>
+      </div>
     </div>
-  </div>
+    <!-- code well markup -->
+    <div class="o-grid">
+      <div class="o-grid__cell">
+        <div class="c-collapse">
+          <div class="c-collapse__controls-container--justified-text">
+            <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+            <a class="c-collapse__toggle">toggle markup</a>
+          </div>
+          <div class="c-collapse__content-container c-collapse__content-container--dark">
+            <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;!-- default --&gt;
+&lt;div class=&quot;c-alert&quot;&gt;
+  &lt;p&gt;This is a basic alert. You can get rid of it by clicking on the close icon.&lt;/p&gt;
+  &lt;span class=&quot;c-alert__close-alert&quot;&gt;
+    &lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- primary --&gt;
+&lt;div class=&quot;c-alert--primary&quot;&gt;
+  &lt;p&gt;This is a primary alert. You can get rid of it by clicking on the close icon.&lt;/p&gt;
+  &lt;span class=&quot;c-alert__close-alert&quot;&gt;
+    &lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- success --&gt;
+&lt;div class=&quot;c-alert--success&quot;&gt;
+  &lt;p&gt;This is a success alert. You can get rid of it by clicking on the close icon.&lt;/p&gt;
+  &lt;span class=&quot;c-alert__close-alert&quot;&gt;
+    &lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- caution --&gt;
+&lt;div class=&quot;c-alert--caution&quot;&gt;
+  &lt;p&gt;This is a caution alert. You can get rid of it by clicking on the close icon.&lt;/p&gt;
+  &lt;span class=&quot;c-alert__close-alert&quot;&gt;
+    &lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- warning --&gt;
+&lt;div class=&quot;c-alert--warning&quot;&gt;
+  &lt;p&gt;This is a warning alert. You can get rid of it by clicking on the close icon.&lt;/p&gt;
+  &lt;span class=&quot;c-alert__close-alert&quot;&gt;
+    &lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+
+&lt;!-- alert with button --&gt;
+&lt;div class=&quot;c-alert--primary&quot;&gt;
+  &lt;h4&gt;You can have a header!&lt;/h4&gt;
+  &lt;p&gt;This is a warning alert. You can get rid of it by clicking on the close icon.&lt;/p&gt;
+  &lt;p&gt;Or you could dismiss it with this button:&lt;/p&gt;
+  &lt;button class=&quot;c-btn--primary c-btn c-btn--primary--rounded&quot; type=&quot;button&quot; name=&quot;button&quot; data-close-alert=&quot;true&quot;&gt;Get it outta here!&lt;/button&gt;
+  &lt;span class=&quot;c-alert__close-alert&quot;&gt;
+    &lt;i class=&quot;fa fa-times&quot;&gt;&lt;/i&gt;
+  &lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end codewell markup -->
+  </section>
+  <!-- template end -->
   <script src="../javascript/alert.js"></script>
+  <script src="../javascript/collapse.js"></script>
+  <script src="../prism/prism.js"></script>
 </body>
 
 </html>

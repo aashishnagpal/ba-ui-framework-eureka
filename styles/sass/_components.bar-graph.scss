@@ -1,0 +1,64 @@
+.bar-graph-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 3em;
+
+  @at-root .bar-graph {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2.5em 1em;
+    flex: 0 1 25em;
+    height: auto;
+    border-bottom: 1px solid $generic-black-color;
+
+    &__heading {
+      margin: 1em 0;
+      font-size: 1.5em;
+      font-weight: normal;
+      text-align: center;
+      flex: 1 1 100%;
+    }
+
+    &__legend {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      flex: 0 1 20%;
+
+
+      &-value {
+        padding: 0.5em 0 1.5em 0.1em;
+      }
+    }
+
+    &__bars {
+      display: flex;
+      align-content: flex-end;
+      align-items: flex-end;
+      flex-basis: 79%;
+      margin-left: 1%;
+    }
+
+    &__bar {
+      width: 2em;
+      height: 0;
+      background-color: $primary-color;
+      border-radius: 5px 5px 0 0;
+      margin: 0 0.7em;
+      transition: height 2s ease-in-out;
+      box-shadow: 1px 0 1px $secondary-color;
+      position: relative;
+
+      &-title {
+        position: absolute;
+        bottom: -2.5em;
+        margin: 0 0 0 0.5em;
+        transform: rotate(45deg);
+        white-space: nowrap;
+      }
+    }
+  }
+}
+

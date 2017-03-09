@@ -1,0 +1,181 @@
+/* ==========================================================================
+   Single-input Form component styles
+   ========================================================================== */
+
+/* sub-elements styles
+   ========================================================================== */
+
+.c-sif {
+  font-size: 1em;
+  display: block;
+  position: relative;
+  margin-bottom: 5em;
+
+  label,
+  input,
+  button {
+    outline: none;
+    border: none;
+  }
+}
+
+.c-sif__input-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  width: 15em;
+  height: 3em;
+  padding-left: 3.5em;
+  padding-right: 3em;
+  background-color: darken($generic-gray-color, 4%);
+  border-radius: 1.5em;
+  opacity: 0;
+  visibility: hidden;
+
+  animation-duration: 0.1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 0.7s;
+}
+
+.c-sif__input-wrap--last {
+  background-color: $primary-dark-color;
+  color: $generic-white-color;
+  text-transform: uppercase;
+  .c-sif__submission-msg {
+    font-size: 1.3em;
+  }
+}
+
+.c-sif__input {
+  border: 0;
+  line-height: 2.4em;
+  font-size: 1em;
+  color: darken($secondary-dark-color, 15%);
+  margin-left: 0;
+  background-color: transparent;
+  width: 7.5em;
+  animation-duration: 0.1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 0.2s;
+
+  &:focus + .c-sif__label {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.c-sif__label {
+  position: absolute;
+  left: 4em;
+  color: $secondary-dark-color;
+  transition: opacity 0.2s, visibility 0s 0.2s;
+  animation-duration: 0.1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+
+  .c-sif__icon-label {
+    margin-right: 0.3em;
+  }
+}
+
+.c-sif__indicator,
+.c-sif__btn {
+  position: absolute;
+  top: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 3em;
+  width: 3em;
+  border-radius: 50%;
+  margin: 0;
+}
+
+.c-sif__indicator {
+  left: 0;
+  color: $generic-white-color;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+  z-index: 5;
+}
+
+.c-sif__btn {
+  background-color: transparent;
+  color: $primary-color;
+  right: 0;
+  cursor: pointer;
+  transition: color 0.2s;
+
+  animation-duration: 0.2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+
+  &:hover {
+    color: $primary-dark-color;
+  }
+}
+
+.c-sif-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+// colors for different indicators
+.c-sif-color--0 .c-sif__indicator {
+  background-color: lighten($primary-color, 3%);
+}
+
+.c-sif-color--1 .c-sif__indicator {
+  background-color: darken($primary-color, 15%);
+}
+
+.c-sif-color--2 .c-sif__indicator {
+  background-color: $primary-dark-color;
+}
+
+@keyframes fadeOutRight {
+  0% {
+    right: 100%;
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    left: auto;
+    right: 0;
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  99% {
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes fadeIn {
+  100% {
+    visibility: visible;
+  }
+}
+
+
+
+
+

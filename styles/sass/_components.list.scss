@@ -1,0 +1,112 @@
+/* ==========================================================================
+   List component styles
+   ========================================================================== */
+
+/* Basic list styles
+   ========================================================================== */
+
+/**
+ * General list styles
+ */
+
+.c-list {
+  padding: 0;
+  list-style-position: outside;
+  font-size: 1em;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.c-list__item {
+  padding: 0;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+  color: $generic-black-color;
+
+  > a {
+    padding: 0;
+    transition: color 0.2s;
+    color: $primary-dark-color;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  &--media {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.c-list__sublist {
+  display: list-item;
+  margin-left: 1.25em;
+}
+
+
+/**
+ * Ordered List
+ */
+
+.c-list--ol {
+  list-style-type: none;
+  counter-reset: section;
+}
+
+.c-list--ol__item:before {
+  content: counters(section,".")" ";
+  counter-increment: section;
+  padding-right: 0.5em;
+}
+
+/**
+ * Unordered List
+ */
+
+%c-list--ul-default {
+  display: block;
+}
+
+.c-list--ul {
+  @extend %c-list--ul-default;
+  list-style-type: none;
+}
+
+.c-list--ul-bt {
+  @extend %c-list--ul-default;
+  margin-left: 1.25em;
+
+  > .c-list--ul__item {
+    list-style-type: disc;
+  }
+
+  &__sublist {
+    list-style-type: disc;
+  }
+}
+
+.c-list__icon {
+  font-size: 0.9em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  text-align: center;
+  width: 1.25em;
+}
+
+.c-list__img {
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  margin-right: 0.8em;
+}
+
+.c-list--hz {
+  display: flex;
+  flex-wrap: wrap;
+
+  > .c-list__item--hz {
+    margin-right: 2.5em;
+  }
+}
+

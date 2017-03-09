@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="Rochell Langam">
+    <title>WTFDTM? Component</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../prism/prism.css">
+    <link rel="stylesheet" href="../styles/css/eureka.css">
+  </head>
+  <body>
+
+    <section class="website-components__component" id="wtf">
+
+    <h3>The WTFDTM? Component</h3>
+    <p>Do you know words? Do you have the best words? If you have the best words and your magnanimous personality compels you to teach your inferiors better words, then <span class="wtfspan">WTF Does That Mean?</span> is for you. Don't lose your users to the sesquipedalian expressions and flourishes of your common and daily vernacular. Share your phenomenal vocabulary that you extracted from the pages of the Merriam-Webster dictionary!</p>
+    <p>To use, simply double-click on any word within text wrapped inside <code>wtf-text-container</code> and a tab will open up to the Merriam-Webster website. Add the markup contained in the codewell anywhere on your page and link to the <code class="language-markup">wtfdtm.js</code> file. To view your previously searched big words, hover on the book icon at the bottom of your page!</p>
+
+    <h4>Sample Text (Double-click on any one word)</h4>
+    <button id="wtf-try" class="c-btn--primary c-btn" type="button" name="button">Try it!</button>
+    <div class="wtf-text-container">
+      <p class="wtf-text">Beyond a bare, weather-worn wall, about a hundred paces from the spot where the two friends sat looking and listening as they drank their wine, was the village of the Catalans. Long ago this mysterious colony quitted Spain, and settled on the tongue of land on which it is to this day. Whence it came no one knew, and it spoke an unknown tongue. One of its chiefs, who understood Provencal, begged the commune of Marseilles to give them this bare and barren promontory, where, like the sailors of old, they had run their boats ashore. The request was granted; and three months afterwards, around the twelve or fifteen small vessels which had brought these gypsies of the sea, a small village sprang up. This village, constructed in a singular and picturesque manner, half Moorish, half Spanish, still remains, and is inhabited by descendants of the first comers, who speak the language of their fathers. For three or four centuries they have remained upon this small promontory, on which they had settled like a flight of seabirds, without mixing with the Marseillaise population, intermarrying, and preserving their original customs and the costume of their mother-country as they have preserved its language.</p>
+      <p class="wtf-text">Our readers will follow us along the only street of this little village, and enter with us one of the houses, which is sunburned to the beautiful dead-leaf color peculiar to the buildings of the country, and within coated with whitewash, like a Spanish posada. A young and beautiful girl, with hair as black as jet, her eyes as velvety as the gazelle's, was leaning with her back against the wainscot, rubbing in her slender delicately moulded fingers a bunch of heath blossoms, the flowers of which she was picking off and strewing on the floor; her arms, bare to the elbow, brown, and modelled after those of the Arlesian Venus, moved with a kind of restless impatience, and she tapped the earth with her arched and supple foot, so as to display the pure and full shape of her well-turned leg, in its red cotton, gray and blue clocked, stocking.</p>
+    </div>
+
+    <!-- component example grid container -->
+    <div class="o-grid o-grid--gutters">
+      <div class="o-grid__cell">
+        <div class="c-wtf">
+          <div class="teaser">
+            <i class="fa fa-book" aria-hidden="true"></i>
+          </div>
+          <h1 class="c-wtf-h1">WTF Does That Mean?</h1>
+          <h4>Today's Big Words</h4>
+          <ol class="c-wtf__list">
+          </ol>
+          <a class="c-btn c-btn--secondary c-wtf__clear-all">clear all</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- code well markup -->
+    <div class="o-grid o-grid--gutters">
+      <div class="o-grid__cell">
+        <div class="c-collapse">
+          <div class="c-collapse__controls-container--justified-text">
+            <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+            <a class="c-collapse__toggle">toggle markup</a>
+          </div>
+          <div class="c-collapse__content-container c-collapse__content-container--dark">
+            <div class="c-collapse__content--prism-code-style">
+            <pre class="u-pre--wrap"><code class="language-markup line-numbers">
+&lt;!-- To limit WTFDTM? to within a specific text block, add the following class to the container --&gt;
+&lt;div class=&quot;wtf-text-container&quot;&gt;
+  &lt;p class=&quot;wtf-text&quot;&gt;Text here&lt;/p&gt;
+  &lt;p class=&quot;wtf-text&quot;&gt;Text here&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;c-wtf&quot;&gt;
+  &lt;div class=&quot;teaser&quot;&gt;
+    &lt;i class=&quot;fa fa-book&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+  &lt;/div&gt;
+  &lt;h1 class=&quot;c-wtf-h1&quot;&gt;WTF Does That Mean?&lt;/h1&gt;
+  &lt;h4&gt;Today&apos;s Big Words&lt;/h4&gt;
+  &lt;ol class=&quot;c-wtf__list&quot;&gt;
+  &lt;/ol&gt;
+  &lt;a class=&quot;c-btn c-btn--secondary c-wtf__clear-all&quot;&gt;clear all&lt;/a&gt;
+&lt;/div&gt;
+            </code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+    <script src="../javascript/collapse.js" charset="utf-8"></script>
+    <script src="../prism/prism.js"></script>
+    <script src="../javascript/wtfdtm.js"></script>
+  </body>
+</html>

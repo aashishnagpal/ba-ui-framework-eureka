@@ -5,72 +5,107 @@
   <meta charset="UTF-8">
   <title>Collapse component</title>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../prism/prism.css">
   <link rel="stylesheet" href="../styles/css/eureka.css">
 </head>
 
 <body>
-  <div class="generic-wrapper" style="padding: 1em">
-    <h3>Collapse component 1 - 
-    basic</h3>
-    <div class="c-collapse">
-      <a class="c-collapse__toggle">toggle content</a>
-      <div class="c-collapse__content-container">
-        <div class="c-collapse__content">
-          <h3>I am the content.</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore voluptatem ducimus nostrum alias, quasi optio, deleniti laboriosam autem, ullam impedit rerum odit debitis doloribus quo cupiditate consequuntur quibusdam! Sapiente, maxime!</p>
+  <!-- ========================== -->
+  <!-- start template -->
+  <section class="website-components__component" id="collapse">
+    <h3>Collapse</h3>
+    <p>A collapse can be used to show and hide content by clicking on a toggle anchor. Collapses are especially useful for code examples and supplementary information.</p>
+    <!-- component example grid container -->
+    <div class="o-grid">
+      <div class="o-grid__cell">
+        <h4>Basic collapse</h4>
+        <p>A basic collapse component with minimal styling.</p>
+        <div class="c-collapse">
+          <a class="c-collapse__toggle">toggle content</a>
+          <div class="c-collapse__content-container">
+            <div class="c-collapse__content">
+              <h3>I am the content.</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore voluptatem ducimus nostrum alias, quasi optio, deleniti laboriosam autem, ullam impedit rerum odit debitis doloribus quo cupiditate consequuntur quibusdam! Sapiente, maxime!</p>
+            </div>
+          </div>
         </div>
+        <h4>Code well styles</h4>
+        <p>Collapse come with both light and dark basic styling for displaying markup.</p>
+        <p>For the light version add <code class="language-markup">&lt;div class="c-collapse__content-container c-collapse__content-container--light"&gt;</code> to the content container div.</p>
+        <p>For the dark version add <code class="language-markup">&lt;div class="c-collapse__content-container c-collapse__content-container--dark"&gt;</code> to the content container div.</p>
+        <h4>Fixed height option</h4>
+        <p>By default collapse components will expand to the full height of their content. To set a fixed height and enable scrolling, just add a <code class="language-markup">data-fixed-height</code> attribute with the fixed height value to the outer component div.</p>
+        <p>For example for a fixed height of 500px: <code class="language-markup">&lt;div class=&quot;c-collapse&quot; data-fixed-height=&quot;500&quot;&gt;...&lt;/div&gt;</code></p>
       </div>
     </div>
-<!-- component 2 -->
-    <h3>Collapse component 2 - code-well (light)</h3>
-    <div class="c-collapse" data-fixed-height="300">
-      <div class="c-collapse__controls-container--justified-text">
-        <i class="fa fa-code fa-lg" aria-hidden="true"></i>
-        <a class="c-collapse__toggle">toggle markup</a>
-      </div>
-      <div class="c-collapse__content-container c-collapse__content-container--light">
-        <div class="c-collapse__content">
-          <pre class="u-pre--wrap">
-            <code class="u-example-code">
+    <!-- code well markup -->
+    <div class="o-grid">
+      <div class="o-grid__cell">
+        <div class="c-collapse" data-fixed-height="300">
+          <div class="c-collapse__controls-container--justified-text">
+            <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+            <a class="c-collapse__toggle">toggle markup</a>
+          </div>
+          <div class="c-collapse__content-container c-collapse__content-container--dark">
+            <div class="c-collapse__content--prism-code-style">
+              <pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;!--collapse component - basic --&gt;
+
 &lt;div class=&quot;c-collapse&quot;&gt;
-  &lt;a class=&quot;c-collapse__toggle&quot;&gt;Show content&lt;/a&gt;
+  &lt;a class=&quot;c-collapse__toggle&quot;&gt;toggle content&lt;/a&gt;
   &lt;div class=&quot;c-collapse__content-container&quot;&gt;
-   &lt;div class=&quot;c-collapse__content&quot;&gt;
-    &lt;h3&gt;I am the content.&lt;/h3&gt;
-    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore voluptatem ducimus nostrum alias, quasi optio, deleniti laboriosam autem, ullam impedit rerum odit debitis doloribus quo cupiditate consequuntur quibusdam! Sapiente, maxime!&lt;/p&gt;
-   &lt;/div&gt;
+    &lt;div class=&quot;c-collapse__content&quot;&gt;
+      &lt;h3&gt;I am the content.&lt;/h3&gt;
+      &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit...&lt;/p&gt;
+    &lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;</code>
-          </pre>
-        </div>
-      </div>
-    </div>
-<!-- component 3 -->
-    <h3>Collapse component 2 - code-well (dark)</h3>
-    <div class="c-collapse">
-      <div class="c-collapse__controls-container--justified-text">
-        <i class="fa fa-code fa-lg" aria-hidden="true"></i>
-        <a class="c-collapse__toggle">toggle markup</a>
-      </div>
-      <div class="c-collapse__content-container c-collapse__content-container--dark">
-        <div class="c-collapse__content">
-          <pre class="u-pre--wrap">
-            <code class="u-example-code">
+&lt;/div&gt;
+
+&lt;!-- collapse component - code-well (light) --&gt;
+
+&lt;div class=&quot;c-collapse&quot; data-fixed-height=&quot;300&quot;&gt;
+  &lt;div class=&quot;c-collapse__controls-container--justified-text&quot;&gt;
+    &lt;i class=&quot;fa fa-code fa-lg&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+    &lt;a class=&quot;c-collapse__toggle&quot;&gt;toggle markup&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;c-collapse__content-container c-collapse__content-container--light&quot;&gt;
+    &lt;div class=&quot;c-collapse__content&quot;&gt;
+      &lt;pre class=&quot;u-pre--wrap&quot;&gt;
+        &lt;code class=&quot;u-example-code&quot;&gt;
+        &lt;!-- escaped code here --&gt;
+        &lt;/code&gt;
+      &lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- collapse component - code-well (dark) --&gt;
+
 &lt;div class=&quot;c-collapse&quot;&gt;
-  &lt;a class=&quot;c-collapse__toggle&quot;&gt;Show content&lt;/a&gt;
-  &lt;div class=&quot;c-collapse__content-container&quot;&gt;
-   &lt;div class=&quot;c-collapse__content&quot;&gt;
-    &lt;h3&gt;I am the content.&lt;/h3&gt;
-    &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore voluptatem ducimus nostrum alias, quasi optio, deleniti laboriosam autem, ullam impedit rerum odit debitis doloribus quo cupiditate consequuntur quibusdam! Sapiente, maxime!&lt;/p&gt;
-   &lt;/div&gt;
+  &lt;div class=&quot;c-collapse__controls-container--justified-text&quot;&gt;
+    &lt;i class=&quot;fa fa-code fa-lg&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+    &lt;a class=&quot;c-collapse__toggle&quot;&gt;toggle markup&lt;/a&gt;
   &lt;/div&gt;
-&lt;/div&gt;</code>
-          </pre>
+  &lt;div class=&quot;c-collapse__content-container c-collapse__content-container--dark&quot;&gt;
+    &lt;div class=&quot;c-collapse__content&quot;&gt;
+      &lt;pre class=&quot;u-pre--wrap&quot;&gt;
+        &lt;code class=&quot;u-example-code&quot;&gt;
+        &lt;!-- escaped code here --&gt;
+        &lt;/code&gt;
+      &lt;/pre&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+    <!-- end codewell markup -->
+  </section>
+  <!-- end template -->
   <script src="../javascript/collapse.js"></script>
+  <script src="../prism/prism.js"></script>
 </body>
 
 </html>

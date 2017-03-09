@@ -15,23 +15,21 @@
 .c-progress {
   background-color: $secondary-light-color;
   box-shadow: inset 0 1px 2px rgba(0,0,0,.3);
-  height: 2em;
+  height: 1.2em;
   overflow: hidden;
   &__label {
-    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: $generic-white-color;
-    left: 0;
-    line-height: 2em;
-    position: absolute;
-    right: 0;
-    top: 0;
-    text-align: center;
+    font-size: 0.8em;
+    height: 100%;
   }
   &--rounded {
-    border-radius: .5em;
+    border-radius: .6em;
   }
   &bar__meter, &bar__meter--stack {
-    height: 2em;
+    height: 1.2em;
   }
   &bar__meter {
     background-color: $primary-color;
@@ -49,7 +47,7 @@
       background-color: $primary-light-color;
       width: 40%;
     }
-    &[ aria-valuenow="10"] {
+    &[aria-valuenow="10"] {
       background-color: $primary-dark-color;
       width: 10%;
     }
@@ -66,7 +64,6 @@
 @keyframes progressbar {
   0% {
     background-position: 60em 0;
-    // transform: scale(0);
   }
   100% {
     background-position: 0 0;

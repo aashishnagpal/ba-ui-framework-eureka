@@ -1,0 +1,95 @@
+.c-section {
+  padding: 2em;
+}
+
+.c-checkbox {
+  margin-bottom: .2em;
+}
+
+.c-radiogroup {
+  display: flex;
+}
+
+.c-radio {
+  margin-right: 1em;
+}
+
+.c-input {
+  left: -99.99em;
+  position: absolute;
+  &-checkbox + label:before, &-checkbox--lg + label:before, &-radio + label:before {
+    border: .0625em solid $secondary-color;
+    content: "";
+    display: inline-block;
+    height: 1em;
+    left: 0;
+    padding: .5em;
+    width: 1em;
+  }
+  &-checkbox + label:before, &-checkbox--lg + label:before, &-radio + label:before, &-checkbox:checked + label:after, &-checkbox--lg:checked + label:after, &-radio:checked + label:after {
+    position: absolute;
+  }
+  &-checkbox + label:before, &-checkbox--lg + label:before {
+    border-radius: .1em;
+  }
+  &-radio + label:before, &-radio:checked + label:after {
+    border-radius: 50%;
+  }
+  &-checkbox:focus + label:before, &-checkbox--lg:focus + label:before {
+    box-shadow: 0 0 0 .05em $primary-color;
+  }
+  &-radio:focus + label:before {
+    box-shadow: 0 0 0 .1em $primary-color;
+  }
+  &-checkbox:checked + label:after, &-checkbox--lg:checked + label:after {
+    color: $primary-color;
+    content: "\2714";
+    left: .1em;
+  }
+  &-radio:checked + label:before {
+    box-shadow: inset 0px 0px 0px 5px $primary-color;
+  }
+  &-checkbox + label, &-checkbox--lg + label, &-radio + label {
+    cursor: pointer;
+    position: relative;
+  }
+  &-checkbox + label, &-checkbox--lg + label, &-radio + label {
+    padding-left: 1.5em;
+  }
+  &-checkbox--lg + label {
+    font-size: 2em;
+  }
+  &-switch:checked ~ .c-switch__slider {
+    transform: translateX(2em);
+  }
+  &-switch:checked + .c-switch__body {
+    background-color: $primary-color;
+  }
+}
+
+.c-switch {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  height: 2em;
+  position: relative;
+  width: 4em;
+  &__body {
+    background-color: $secondary-color;
+    padding: 1.1em;
+    width: 100%;
+  }
+  &--rd {
+    border-radius: 1em;
+  }
+  &__slider {
+    background-color: $generic-white-color;
+    height: 1.8em;
+    left: 0;
+    margin-left: .1em;
+    position: absolute;
+    top: .1em;
+    transition: 1s cubic-bezier(.5,0,0,1);
+    width: 1.8em;
+  }
+}

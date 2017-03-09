@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Bookmarklet component</title>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../prism/prism.css">
+  <link rel="stylesheet" href="../styles/css/eureka.css">
+</head>
+
+<body>
+  <!-- ====================== -->
+  <!-- start template -->
+  <section class="website-components__component" id="bookmarklet" data-limit-bookmarklet>
+    <h3>Bookmarklet</h3>
+    <h4>Using Bookmarklet</h4>
+    <p>To use bookmarklet, highlight some text. If the text is able to be bookmarked a small dialogue will pop up, giving you the option to bookmark or not. Users can also use the keyboard shortcut <code class="language-markup">Shift+Control+M+L</code>.  Currently you can only bookmark text that is inside of a single HTML tag.  In other words you may not select text that belongs to two different paragraphs or splits any other node like a span or header.  The component will warn you if you split nodes or try and activate the bookmark without selecting any text.</p>
+    <p>Once a bookmark has been created it will show up in the small widget on the right-hand side of the screen.  Each bookmark can be clicked on to quickly navigate the page to that place in the text.  In addition there is a convenient "Google this bookmark" button for each list item which will initiate a Google search with the query pre-filled by the bookmark text. You may clear individual bookmarks by clicking on the close icon, or clear all current bookmarks by clicking the "Clear all" button at the bottom of the bookmark list.</p>
+    <h4>Including Bookmarklet</h4>
+    <p>To include Bookmarklet on a page simply add the markup contained in the codewell below somewhere in the body tag of your page and include <code class="language-markup">bookmarklet.js</code> before the closing body tag. If you don't like the default yellow, a custom highlight color can be specified by adding a valid color name or hex color value to the <code class="language-markup">data-highlight-color</code> attribute. For example: <code class="language-markup">&lt;div class=&quot;c-bookmarklet&quot; data-highlight-color=&quot;#ff00ff&quot;&gt;</code></p>
+
+    <!-- component example grid container -->
+    <div class="o-grid">
+      <div class="o-grid__cell">
+        <!-- bookmarklet list here -->
+        <div class="c-bookmarklet" data-highlight-color="">
+          <i class="fa fa-bookmark fa-lg c-bookmarklet__teaser" aria-hidden="true"></i>
+          <h1>Bookmarks</h1>
+          <ol class="c-bookmaklet__bookmark-list">
+          </ol>
+          <a class="c-btn c-btn--secondary c-bookmarklet__clear-all">clear all</a>
+        </div>
+        <!-- button pop-up -->
+        <div class="c-bookmarklet__pop-up">
+          <p>Bookmark this selection?</p>
+          <span class="c-bookmarklet__pop-up-button--yes"><i class="fa fa-check fa-lg" aria-hidden="true"></i> Yes!</span>
+          <span class="c-bookmarklet__pop-up-button--no"><i class="fa fa-times fa-lg" aria-hidden="true"></i> No.</span>
+          <span class="c-bookmarklet__pop-up-pip"></span>
+        </div>
+      </div>
+    </div>
+    <!-- code well markup -->
+    <div class="o-grid">
+      <div class="o-grid__cell">
+        <div class="c-collapse">
+          <div class="c-collapse__controls-container--justified-text">
+            <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+            <a class="c-collapse__toggle">toggle markup</a>
+          </div>
+          <div class="c-collapse__content-container c-collapse__content-container--dark">
+            <div class="c-collapse__content--prism-code-style">
+              <pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;!-- bookmarklet list here --&gt;
+&lt;div class=&quot;c-bookmarklet&quot; data-highlight-color=&quot;&quot;&gt;
+  &lt;i class=&quot;fa fa-bookmark fa-lg c-bookmarklet__teaser&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+  &lt;h1&gt;Bookmarks&lt;/h1&gt;
+  &lt;ol class=&quot;c-bookmaklet__bookmark-list&quot;&gt;
+  &lt;/ol&gt;
+  &lt;a class=&quot;c-btn c-btn--secondary c-bookmarklet__clear-all&quot;&gt;clear all&lt;/a&gt;
+&lt;/div&gt;
+&lt;!-- button pop-up --&gt;
+&lt;div class=&quot;c-bookmarklet__pop-up&quot;&gt;
+  &lt;p&gt;Bookmark this selection?&lt;/p&gt;
+  &lt;span class=&quot;c-bookmarklet__pop-up-button--yes&quot;&gt;&lt;i class=&quot;fa fa-check fa-lg&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Yes!&lt;/span&gt;
+  &lt;span class=&quot;c-bookmarklet__pop-up-button--no&quot;&gt;&lt;i class=&quot;fa fa-times fa-lg&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; No.&lt;/span&gt;
+  &lt;span class=&quot;c-bookmarklet__pop-up-pip&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end codewell markup -->
+  </section>
+  <!-- end template -->
+  <script src="../javascript/bookmarklet.js"></script>
+  <script src="../javascript/collapse.js"></script>
+  <script src="../prism/prism.js"></script>
+</body>
+
+</html>

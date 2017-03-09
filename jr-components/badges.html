@@ -4,94 +4,194 @@
   <title>Eureka CSS UI Framework</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="../styles/css/eureka.css">
+  <link rel="stylesheet" href="../prism/prism.css">
 </head>
 <body>
-  <div class="badge-component">
-    <!-- Different types of badges -->
-    <!-- Basic -->
-    <div class="badge-component--basic">
-      <h4>Basic</h4>
-      <div class="badge-component__item">
-        <a href="#?">Inbox <span class="c-badge c-badge--primary">5</span></a>
-        <span class="badge-component__category">Primary</span>
-      </div>
-      <div class="badge-component__item">
-        <a href="#?">Inbox <span class="c-badge c-badge--secondary">5</span></a>
-        <span class="badge-component__category">Secondary</span>
-      </div>
-      <div class="badge-component__item">
-        <a href="#?">Updates <span class="c-badge c-badge--primary">new</span></a>
-        <span class="badge-component__category">Primary</span>
-      </div>
-      <div class="badge-component__item">
-        <a href="#?">Updates <span class="c-badge c-badge--secondary">new</span></a>
-        <span class="badge-component__category">Secondary</span>
+  <section class="website-components__component" id="badge">
+
+    <h3>Component Name</h3>
+    <p>A badge component describes status of other UI elements. It is commonly used to highlight new or unread items.</p>
+
+    <!-- component example grid container -->
+
+    <!-- Basic badges -->
+    <div class="o-grid o-grid--gutters o-medium-grid--full">
+      <div class="o-grid__cell">
+        <!-- component examples here -->
+        <h4>Basic</h4>
+        <div class="badge-component__item">
+          <a href="#?">Inbox <span class="c-badge c-badge--primary">5</span></a>
+          <span class="badge-component__category">Primary</span>
+        </div>
+        <div class="badge-component__item">
+          <a href="#?">Inbox <span class="c-badge c-badge--secondary">5</span></a>
+          <span class="badge-component__category">Secondary</span>
+        </div>
+        <div class="badge-component__item">
+          <a href="#?">Updates <span class="c-badge c-badge--primary">new</span></a>
+          <span class="badge-component__category">Primary</span>
+        </div>
+        <div class="badge-component__item">
+          <a href="#?">Updates <span class="c-badge c-badge--secondary">new</span></a>
+          <span class="badge-component__category">Secondary</span>
+        </div>
       </div>
     </div>
+
+    <!-- code well markup -->
+    <div class="o-grid o-grid--gutters o-medium-grid--full">
+      <div class="o-grid__cell">
+        <div class="c-collapse">
+          <div class="c-collapse__controls-container--justified-text">
+            <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+            <a class="c-collapse__toggle">toggle markup</a>
+          </div>
+          <div class="c-collapse__content-container c-collapse__content-container--dark">
+            <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;span class=&quot;c-badge c-badge--primary&quot;&gt;5&lt;/span&gt;
+
+&lt;span class=&quot;c-badge c-badge--secondary&quot;&gt;5&lt;/span&gt;
+
+&lt;span class=&quot;c-badge c-badge--primary&quot;&gt;new&lt;/span&gt;
+
+&lt;span class=&quot;c-badge c-badge--secondary&quot;&gt;new&lt;/span&gt;
+</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end codewell markup -->
+
+    <!-- ============================================ -->
 
     <!-- Round badge contains only numbers -->
-    <div class="badge-component--round ">
-      <h4>Round</h4>
-      <div class="badge-component__item">
-        <a href="#?">Inbox <span class="c-badge c-badge--round c-badge--round--primary">1</span></a>
-        <span class="badge-component__category">Primary</span>
-      </div>
-      <div class="badge-component__item">
-        <a href="#?">Inbox <span class="c-badge c-badge--round c-badge--round--secondary">72</span></a>
-        <span class="badge-component__category">Secondary</span>
+    <div class="o-grid o-grid--gutters o-medium-grid--full">
+      <div class="o-grid__cell">
+        <h4>Round</h4>
+        <div class="badge-component__item">
+          <a href="#?">Inbox <span class="c-badge c-badge--round c-badge--round--primary">1</span></a>
+          <span class="badge-component__category">Primary</span>
+        </div>
+        <div class="badge-component__item">
+          <a href="#?">Inbox <span class="c-badge c-badge--round c-badge--round--secondary">72</span></a>
+          <span class="badge-component__category">Secondary</span>
+        </div>
       </div>
     </div>
+
+    <!-- code well markup -->
+    <div class="o-grid o-grid--gutters o-medium-grid--full">
+      <div class="o-grid__cell">
+        <div class="c-collapse">
+          <div class="c-collapse__controls-container--justified-text">
+            <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+            <a class="c-collapse__toggle">toggle markup</a>
+          </div>
+          <div class="c-collapse__content-container c-collapse__content-container--dark">
+            <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;span class=&quot;c-badge c-badge--round c-badge--round--primary&quot;&gt;1&lt;/span&gt;
+
+&lt;span class=&quot;c-badge c-badge--round c-badge--round--secondary&quot;&gt;72&lt;/span&gt;
+</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end codewell markup -->
+
+    <!-- ============================================ -->
 
     <!-- Square badges -->
-    <div class="badge-component--text">
-      <h4>Square</h4>
-      <div class="badge-component__item">
-        <a href="#?">Inbox <span class="c-badge c-badge--square c-badge--square--primary">4 new</span></a>
-        <span class="badge-component__category">Primary</span>
-      </div>
-      <div class="badge-component__item">
-        <a href="#?">Inbox <span class="c-badge c-badge--square c-badge--square--secondary">4 new</span></a>
-        <span class="badge-component__category">Secondary</span>
-      </div>
-      <div class="badge-component__item">
-        <span class="c-badge c-badge--square c-badge--square--primary">free</span>
-      </div>
-      <div class="badge-component__item">
-        <span class="c-badge c-badge--square c-badge--square--primary">info</span>
-      </div>
-      <div class="badge-component__item">
-        <span class="c-badge c-badge--square c-badge--square--secondary">default</span>
+    <div class="o-grid o-grid--gutters o-medium-grid--full">
+      <div class="o-grid__cell">
+        <h4>Square</h4>
+        <div class="badge-component__item">
+          <a href="#?">Inbox <span class="c-badge c-badge--square c-badge--square--primary">4 new</span></a>
+          <span class="badge-component__category">Primary</span>
+        </div>
+        <div class="badge-component__item">
+          <a href="#?">Inbox <span class="c-badge c-badge--square c-badge--square--secondary">4 new</span></a>
+          <span class="badge-component__category">Secondary</span>
+        </div>
+        <div class="badge-component__item">
+          <span class="c-badge c-badge--square c-badge--square--primary">free</span>
+        </div>
+        <div class="badge-component__item">
+          <span class="c-badge c-badge--square c-badge--square--primary">info</span>
+        </div>
+        <div class="badge-component__item">
+          <span class="c-badge c-badge--square c-badge--square--secondary">default</span>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Demo -->
-  <h4>Demo</h4>
-  <div class="demo-badge">
-    <div class="demo-badge__title">
-      <p>TO DO</p>
-      <span class="c-badge c-badge--round c-badge--round--primary c-badge-demo"></span>
+    <!-- code well markup -->
+    <div class="o-grid o-grid--gutters o-medium-grid--full">
+      <div class="o-grid__cell">
+        <div class="c-collapse">
+          <div class="c-collapse__controls-container--justified-text">
+            <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+            <a class="c-collapse__toggle">toggle markup</a>
+          </div>
+          <div class="c-collapse__content-container c-collapse__content-container--dark">
+            <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;span class=&quot;c-badge c-badge--square c-badge--square--primary&quot;&gt;4 new&lt;/span&gt;
+
+&lt;span class=&quot;c-badge c-badge--square c-badge--square--secondary&quot;&gt;4 new&lt;/span&gt;
+
+&lt;span class=&quot;c-badge c-badge--square c-badge--square--primary&quot;&gt;free&lt;/span&gt;
+
+&lt;span class=&quot;c-badge c-badge--square c-badge--square--primary&quot;&gt;info&lt;/span&gt;
+
+&lt;span class=&quot;c-badge c-badge--square c-badge--square--secondary&quot;&gt;default&lt;/span&gt;
+</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end codewell markup -->
+
+    <!-- ============================================ -->
+
+    <!-- Demo -->
+    <div class="o-grid o-grid--gutters o-medium-grid--full">
+      <div class="o-grid__cell">
+        <h4>Demo</h4>
+        <div class="demo-badge">
+          <div class="demo-badge__title">
+            <p>TO DO</p>
+            <span class="c-badge c-badge--round c-badge--round--primary c-badge-demo"></span>
+          </div>
+
+          <ul class="demo-badge__list">
+            <li>
+              <i class="fa fa-times close" aria-hidden="true"></i>
+              <input type="checkbox" name="task1" id="task1">
+              <label for="task1">Task 1</label>
+            </li>
+            <li>
+              <i class="fa fa-times close" aria-hidden="true"></i>
+              <input type="checkbox" name="task1" id="task2">
+              <label for="task2">Task 2</label>
+            </li>
+            <li>
+              <i class="fa fa-times close" aria-hidden="true"></i>
+              <input type="checkbox" name="task1" id="task3">
+              <label for="task3">Task 3</label>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
 
-    <ul class="demo-badge__list">
-      <li>
-        <i class="fa fa-times close" aria-hidden="true"></i>
-        <input type="checkbox" name="task1" id="task1">
-        <label for="task1">Task 1</label>
-      </li>
-      <li>
-        <i class="fa fa-times close" aria-hidden="true"></i>
-        <input type="checkbox" name="task1" id="task2">
-        <label for="task2">Task 2</label>
-      </li>
-      <li>
-        <i class="fa fa-times close" aria-hidden="true"></i>
-        <input type="checkbox" name="task1" id="task3">
-        <label for="task3">Task 3</label>
-      </li>
-    </ul>
-  </div>
+  </section>
 
-  <script src="../javascript/badges.js"></script>
+
+  <script src="../javascript/badges-demo.js"></script>
+  <script src="../javascript/collapse.js"></script>
+  <script src="../prism/prism.js"></script>
 </body>
 </html>
