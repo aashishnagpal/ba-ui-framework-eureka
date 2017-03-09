@@ -1,0 +1,56 @@
+$list-divider-color: lighten($secondary-dark-color, 20);
+.c-dropdown__link {
+  color: $primary-color;
+  margin: 0;
+  text-align: center;
+  &.c-btn {
+    margin: 0;
+    transition: all 0.25s ease;
+    &:focus {
+      border: 1px solid $primary-color;
+    }
+  }
+}
+
+.c-dropdown__list {
+  margin: 0;
+  padding: 0;
+  height: 0;
+  transition: height 0.25s ease-in-out;
+  overflow: hidden;
+  &--centered-list {
+    @extend .c-dropdown__list;
+    text-align: center;
+  }
+}
+
+.c-dropdown__list-item {
+  padding: 0.75em 0.5em;
+  cursor: pointer;
+  border-top: solid 1px $list-divider-color;
+  border-right: solid 1px $list-divider-color;
+  border-left: solid 1px $list-divider-color;
+  transition: all 0.25s ease;
+  &:first-of-type {
+    border-radius: 0.2em 0.2em 0 0;
+  }
+  &:last-of-type {
+    border-bottom: solid 1px $list-divider-color;
+    border-radius: 0 0 0.2em 0.2em;
+  }
+  &:hover {
+    background-color: $generic-gray-color;
+  }
+  &:active {
+    animation: list-click-pulse 0.2s ease 2;
+  }
+}
+
+@keyframes list-click-pulse {
+  0%, 100% {
+    background-color: lighten($generic-gray-color, 3);
+  }
+  50% {
+    background-color: $generic-gray-color;
+  }
+}

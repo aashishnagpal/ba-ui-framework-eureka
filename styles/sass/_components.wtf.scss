@@ -1,0 +1,56 @@
+.c-wtf {
+  background-color: $generic-gray-color;
+  border-radius: 0 0 0 0.2em;
+  bottom: 0;
+  color: $generic-black-color;
+  padding: 0.75em 1em;
+  position: fixed;
+  transform: translateY(11.625em);
+  transition: all 0.75s cubic-bezier(0,.4,.6,1);
+  width: 20em;
+  z-index: 10;
+  &__list {
+    list-style: none;
+    margin-bottom: 1em;
+    & li  {
+      color: $primary-dark-color;
+    }
+  }
+  & ol {
+    background-color: $generic-white-color;
+    padding: 1em;
+  }
+  &, & ol, & .teaser {
+    border: .1em solid darken($generic-gray-color, 20%);
+  }
+  & .c-btn {
+    margin: 0;
+  }
+  & h1 {
+    font-size: 1.25em;
+  }
+  & h4 {
+    font-size: 1em;
+  }
+  & .teaser {
+    align-items: center;
+    background-color: #f3f3f3;
+    border-bottom: 0;
+    border-radius: .2em;
+    display: flex;
+    height: 2em;
+    justify-content: center;
+    left: 9px;
+    position: absolute;
+    top: -2em;
+    width: 2em;
+  }
+  & .fa-book:before {
+    content: "\f02d";
+  }
+}
+
+.wtfspan {
+  color: $primary-dark-color;
+  font-weight: bolder;
+}

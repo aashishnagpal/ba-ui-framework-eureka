@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Eureka CSS UI Framework</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../styles/css/eureka.css">
+  <link rel="stylesheet" href="../prism/prism.css">
+</head>
+<body>
+  <section class="website-components__component" id="list">
+
+    <h3>List</h3>
+    <p>Lists are used to group related content, including text, images and more complex components. They consist of multiple items displayed vertically or horizontally.</p>
+
+    <!-- component example grid container -->
+    <div class="o-grid o-grid--gutters o-medium-grid--full">
+      <div class="o-grid__cell">
+        <h4>Basic Ordered List</h4>
+        <ol class="c-list c-list--ol">
+          <li class="c-list__item c-list--ol__item">Course 1</li>
+          <li class="c-list__item c-list--ol__item">Course 2
+            <ol class="c-list c-list--ol c-list__sublist">
+              <li class="c-list__item c-list--ol__item">Chapter 1</li>
+              <li class="c-list__item c-list--ol__item">Chapter 2</li>
+              <li class="c-list__item c-list--ol__item">Chapter 3
+                <ol class="c-list c-list--ol c-list__sublist">
+                  <li class="c-list__item c-list--ol__item">Section 1</li>
+                  <li class="c-list__item c-list--ol__item">Section 2</li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+          <li class="c-list__item c-list--ol__item">Course 3</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- code well markup -->
+    <div class="o-grid o-grid--gutters o-medium-grid--full">
+      <div class="o-grid__cell">
+        <div class="c-collapse">
+          <div class="c-collapse__controls-container--justified-text">
+            <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+            <a class="c-collapse__toggle">toggle markup</a>
+          </div>
+          <div class="c-collapse__content-container c-collapse__content-container--dark">
+            <div class="c-collapse__content--prism-code-style">
+  <pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;ol class=&quot;c-list c-list--ol&quot;&gt;
+      &lt;li class=&quot;c-list__item c-list--ol__item&quot;&gt;Course 1&lt;/li&gt;
+      &lt;li class=&quot;c-list__item c-list--ol__item&quot;&gt;Course 2
+          &lt;ol class=&quot;c-list c-list--ol c-list__sublist&quot;&gt;
+              &lt;li class=&quot;c-list__item c-list--ol__item&quot;&gt;Chapter 1&lt;/li&gt;
+              &lt;li class=&quot;c-list__item c-list--ol__item&quot;&gt;Chapter 2&lt;/li&gt;
+              &lt;li class=&quot;c-list__item c-list--ol__item&quot;&gt;Chapter 3
+                  &lt;ol class=&quot;c-list c-list--ol c-list__sublist&quot;&gt;
+                      &lt;li class=&quot;c-list__item c-list--ol__item&quot;&gt;Section 1&lt;/li&gt;
+                      &lt;li class=&quot;c-list__item c-list--ol__item&quot;&gt;Section 2&lt;/li&gt;
+                  &lt;/ol&gt;
+              &lt;/li&gt;
+          &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;c-list__item c-list--ol__item&quot;&gt;Course 3&lt;/li&gt;
+  &lt;/ol&gt;
+  </code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end codewell markup -->
+
+    <!-- ============================================ -->
+
+    <div class="o-grid o-grid--gutters o-medium-grid--full">
+      <div class="o-grid__cell">
+        <h4>Basic Ordered List with Link</h4>
+        <ol class="c-list c-list--ol">
+          <li class="c-list__item c-list--ol__item">
+            <a href="#?">Course 1</a>
+          </li>
+          <li class="c-list__item c-list--ol__item">
+            <a href="#?">Course 2</a>
+            <ol class="c-list c-list--ol c-list__sublist">
+              <li class="c-list__item c-list--ol__item">
+                <a href="#?">Chapter 1</a>
+              </li>
+              <li class="c-list__item c-list--ol__item">
+                <a href="#?">Chapter 2</a>
+              </li>
+              <li class="c-list__item c-list--ol__item">
+                <a href="#?">Chapter 3</a>
+                <ol class="c-list c-list--ol c-list__sublist">
+                  <li class="c-list__item c-list--ol__item">
+                    <a href="#?">Section 1</a>
+                  </li>
+                  <li class="c-list__item c-list--ol__item">
+                    <a href="#?">Section 2</a>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+          <li class="c-list__item c-list--ol__item">
+            <a href="#?">Course 3</a>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+  <!-- code well markup -->
+    <div class="o-grid o-grid--gutters o-medium-grid--full">
+      <div class="o-grid__cell">
+        <div class="c-collapse">
+          <div class="c-collapse__controls-container--justified-text">
+            <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+            <a class="c-collapse__toggle">toggle markup</a>
+          </div>
+          <div class="c-collapse__content-container c-collapse__content-container--dark">
+            <div class="c-collapse__content--prism-code-style">
+  <pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;ol class=&quot;c-list c-list--ol&quot;&gt;
+      &lt;li class=&quot;c-list__item c-list--ol__item&quot;&gt;
+          &lt;a href=&quot;#&quot;&gt;Course 1&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;c-list__item c-list--ol__item&quot;&gt;
+          &lt;a href=&quot;#&quot;&gt;Course 2&lt;/a&gt;
+          &lt;ol class=&quot;c-list c-list--ol c-list__sublist&quot;&gt;
+              &lt;li class=&quot;c-list__item c-list--ol__item&quot;&gt;
+                  &lt;a href=&quot;#&quot;&gt;Chapter 1&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;c-list__item c-list--ol__item&quot;&gt;
+                  &lt;a href=&quot;#&quot;&gt;Chapter 2&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;c-list__item c-list--ol__item&quot;&gt;
+                  &lt;a href=&quot;#&quot;&gt;Chapter 3&lt;/a&gt;
+                  &lt;ol class=&quot;c-list c-list--ol c-list__sublist&quot;&gt;
+                      &lt;li class=&quot;c-list__item c-list--ol__item&quot;&gt;
+                          &lt;a href=&quot;#&quot;&gt;Section 1&lt;/a&gt;
+                      &lt;/li&gt;
+                      &lt;li class=&quot;c-list__item c-list--ol__item&quot;&gt;
+                          &lt;a href=&quot;#&quot;&gt;Section 2&lt;/a&gt;
+                      &lt;/li&gt;
+                  &lt;/ol&gt;
+              &lt;/li&gt;
+          &lt;/ol&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;c-list__item c-list--ol__item&quot;&gt;
+          &lt;a href=&quot;#&quot;&gt;Course 3&lt;/a&gt;
+      &lt;/li&gt;
+  &lt;/ol&gt;
+  </code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end codewell markup -->
+
+    <!-- ============================================ -->
+
+    <div class="o-grid o-grid--gutters o-medium-grid--full">
+      <div class="o-grid__cell">
+        <h4>Basic Unordered List</h4>
+        <ul class="c-list c-list--ul">
+          <li class="c-list__item c-list--ul__item">Course 1</li>
+          <li class="c-list__item c-list--ul__item">Course 2
+            <ul class="c-list c-list--ul c-list__sublist">
+              <li class="c-list__item c-list--ul__item">
+                <a href="#?">Chapter 1 - link</a>
+              </li>
+              <li class="c-list__item c-list--ul__item">Chapter 2</li>
+              <li class="c-list__item c-list--ul__item">Chapter 3
+                <ul class="c-list c-list--ul c-list__sublist">
+                  <li class="c-list__item c-list--ul__item">Section 1</li>
+                  <li class="c-list__item c-list--ul__item">
+                    <a href="#?">Section 2 - link</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="c-list__item c-list--ul__item">
+            <a href="#?">Course 3</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  <!-- code well markup -->
+    <div class="o-grid o-grid--gutters o-medium-grid--full">
+      <div class="o-grid__cell">
+        <div class="c-collapse">
+          <div class="c-collapse__controls-container--justified-text">
+            <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+            <a class="c-collapse__toggle">toggle markup</a>
+          </div>
+          <div class="c-collapse__content-container c-collapse__content-container--dark">
+            <div class="c-collapse__content--prism-code-style">
+  <pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;ul class=&quot;c-list c-list--ul&quot;&gt;
+      &lt;li class=&quot;c-list__item c-list--ul__item&quot;&gt;Course 1&lt;/li&gt;
+      &lt;li class=&quot;c-list__item c-list--ul__item&quot;&gt;Course 2
+          &lt;ul class=&quot;c-list c-list--ul c-list__sublist&quot;&gt;
+              &lt;li class=&quot;c-list__item c-list--ul__item&quot;&gt;
+                  &lt;a href=&quot;#&quot;&gt;Chapter 1 - link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;c-list__item c-list--ul__item&quot;&gt;Chapter 2&lt;/li&gt;
+              &lt;li class=&quot;c-list__item c-list--ul__item&quot;&gt;Chapter 3
+                  &lt;ul class=&quot;c-list c-list--ul c-list__sublist&quot;&gt;
+                      &lt;li class=&quot;c-list__item c-list--ul__item&quot;&gt;Section 1&lt;/li&gt;
+                      &lt;li class=&quot;c-list__item c-list--ul__item&quot;&gt;
+                          &lt;a href=&quot;#&quot;&gt;Section 2 - link&lt;/a&gt;
+                      &lt;/li&gt;
+                  &lt;/ul&gt;
+              &lt;/li&gt;
+          &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;c-list__item c-list--ul__item&quot;&gt;
+          &lt;a href=&quot;#&quot;&gt;Course 3&lt;/a&gt;
+      &lt;/li&gt;
+  &lt;/ul&gt;
+  </code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- end codewell markup -->
+
+
+    <!-- ============================================ -->
+
+    <div class="o-grid o-grid--gutters o-medium-grid--full">
+      <div class="o-grid__cell">
+        <h4>Bulleted Unordered List</h4>
+        <ul class="c-list c-list--ul-bt">
+          <li class="c-list__item c-list--ul__item">Course 1</li>
+          <li class="c-list__item c-list--ul__item">Course 2
+            <ul class="c-list c-list__sublist c-list--ul-bt__sublist">
+              <li class="c-list__item c-list--ul__item">
+                <a href="#?">Chapter 1 - link</a>
+              </li>
+              <li class="c-list__item c-list--ul__item">Chapter 2</li>
+              <li class="c-list__item c-list--ul__item">Chapter 3
+                <ul class="c-list c-list__sublist c-list--ul-bt__sublist">
+                  <li class="c-list__item c-list--ul__item">Section 1</li>
+                  <li class="c-list__item c-list--ul__item">
+                    <a href="#?">Section 2 - link</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="c-list__item c-list--ul__item">Course 3</li>
+        </ul>
+      </div>
+    </div>
+
+  <!-- code well markup -->
+    <div class="o-grid o-grid--gutters o-medium-grid--full">
+      <div class="o-grid__cell">
+        <div class="c-collapse">
+          <div class="c-collapse__controls-container--justified-text">
+            <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+            <a class="c-collapse__toggle">toggle markup</a>
+          </div>
+          <div class="c-collapse__content-container c-collapse__content-container--dark">
+            <div class="c-collapse__content--prism-code-style">
+  <pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;ul class=&quot;c-list c-list--ul-bt&quot;&gt;
+      &lt;li class=&quot;c-list__item c-list--ul__item&quot;&gt;Course 1&lt;/li&gt;
+      &lt;li class=&quot;c-list__item c-list--ul__item&quot;&gt;Course 2
+          &lt;ul class=&quot;c-list c-list__sublist c-list--ul-bt__sublist&quot;&gt;
+              &lt;li class=&quot;c-list__item c-list--ul__item&quot;&gt;
+                  &lt;a href=&quot;#&quot;&gt;Chapter 1 - link&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li class=&quot;c-list__item c-list--ul__item&quot;&gt;Chapter 2&lt;/li&gt;
+              &lt;li class=&quot;c-list__item c-list--ul__item&quot;&gt;Chapter 3
+                  &lt;ul class=&quot;c-list c-list__sublist c-list--ul-bt__sublist&quot;&gt;
+                      &lt;li class=&quot;c-list__item c-list--ul__item&quot;&gt;Section 1&lt;/li&gt;
+                      &lt;li class=&quot;c-list__item c-list--ul__item&quot;&gt;
+                          &lt;a href=&quot;#&quot;&gt;Section 2 - link&lt;/a&gt;
+                      &lt;/li&gt;
+                  &lt;/ul&gt;
+              &lt;/li&gt;
+          &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;c-list__item c-list--ul__item&quot;&gt;Course 3&lt;/li&gt;
+  &lt;/ul&gt;
+  </code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- end codewell markup -->
+
+
+    <!-- ============================================ -->
+
+    <div class="o-grid o-grid--gutters o-medium-grid--full">
+      <div class="o-grid__cell">
+        <h4>Unordered List - Icon</h4>
+        <ul class="c-list c-list--ul">
+          <li class="c-list__item c-list--ul__item">
+            <i class="fa fa-user c-list__icon" aria-hidden="true"></i>
+            John Doe
+          </li>
+          <li class="c-list__item c-list--ul__item">
+            <i class="fa fa-map-marker c-list__icon" aria-hidden="true"></i>
+            New York, NY
+          </li>
+          <li class="c-list__item c-list--ul__item">
+            <i class="fa fa-envelope c-list__icon" aria-hidden="true"></i>
+            <a href="#?">john.doe@example.com</a>
+          </li>
+          <li class="c-list__item c-list--ul__item">
+            <i class="fa fa-globe c-list__icon" aria-hidden="true"></i>
+            <a href="#?">johndoe.com</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  <!-- code well markup -->
+    <div class="o-grid o-grid--gutters o-medium-grid--full">
+      <div class="o-grid__cell">
+        <div class="c-collapse">
+          <div class="c-collapse__controls-container--justified-text">
+            <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+            <a class="c-collapse__toggle">toggle markup</a>
+          </div>
+          <div class="c-collapse__content-container c-collapse__content-container--dark">
+            <div class="c-collapse__content--prism-code-style">
+  <pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;ul class=&quot;c-list c-list--ul&quot;&gt;
+      &lt;li class=&quot;c-list__item c-list--ul__item&quot;&gt;
+          &lt;i class=&quot;fa fa-user c-list__icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; John Doe
+      &lt;/li&gt;
+      &lt;li class=&quot;c-list__item c-list--ul__item&quot;&gt;
+          &lt;i class=&quot;fa fa-map-marker c-list__icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; New York, NY
+      &lt;/li&gt;
+      &lt;li class=&quot;c-list__item c-list--ul__item&quot;&gt;
+          &lt;i class=&quot;fa fa-envelope c-list__icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+          &lt;a href=&quot;#&quot;&gt;john.doe@example.com&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;c-list__item c-list--ul__item&quot;&gt;
+          &lt;i class=&quot;fa fa-globe c-list__icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+          &lt;a href=&quot;#&quot;&gt;johndoe.com&lt;/a&gt;
+      &lt;/li&gt;
+  &lt;/ul&gt;
+  </code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- end codewell markup -->
+
+
+    <!-- ============================================ -->
+
+    <div class="o-grid">
+      <div class="o-grid__cell">
+        <h4>Unordered List - Image</h4>
+        <ul class="c-list c-list--ul">
+          <li class="c-list__item c-list__item--media">
+            <img src="../images/placeimg_100_100_people%20(1).jpg" class="c-list__img">
+            John
+          </li>
+          <li class="c-list__item c-list__item--media">
+            <img src="../images/placeimg_100_100_people.jpg" class="c-list__img">
+            Amy
+          </li>
+          <li class="c-list__item c-list__item--media">
+            <img src="../images/placeimg_100_100_people%20(1).jpg" class="c-list__img">
+            <a href="#?">Chris</a>
+          </li>
+          <li class="c-list__item c-list__item--media">
+            <img src="../images/placeimg_100_100_people.jpg" class="c-list__img">
+            Daniel
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  <!-- code well markup -->
+    <div class="o-grid">
+      <div class="o-grid__cell">
+        <div class="c-collapse">
+          <div class="c-collapse__controls-container--justified-text">
+            <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+            <a class="c-collapse__toggle">toggle markup</a>
+          </div>
+          <div class="c-collapse__content-container c-collapse__content-container--dark">
+            <div class="c-collapse__content--prism-code-style">
+  <pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;ul class=&quot;c-list c-list--ul&quot;&gt;
+      &lt;li class=&quot;c-list__item c-list__item--media&quot;&gt;
+          &lt;img src=&quot;&quot; class=&quot;c-list__img&quot;&gt; John
+      &lt;/li&gt;
+      &lt;li class=&quot;c-list__item c-list__item--media&quot;&gt;
+          &lt;img src=&quot;&quot; class=&quot;c-list__img&quot;&gt; Amy
+      &lt;/li&gt;
+      &lt;li class=&quot;c-list__item c-list__item--media&quot;&gt;
+          &lt;img src=&quot;&quot; class=&quot;c-list__img&quot;&gt;
+          &lt;a href=&quot;#&quot;&gt;Chris&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;c-list__item c-list__item--media&quot;&gt;
+          &lt;img src=&quot;&quot; class=&quot;c-list__img&quot;&gt; Daniel
+      &lt;/li&gt;
+  &lt;/ul&gt;
+  </code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- end codewell markup -->
+
+
+    <!-- ============================================ -->
+
+    <div class="o-grid o-grid--gutters o-medium-grid--full">
+      <div class="o-grid__cell">
+        <h4>Horizontal List</h4>
+        <ul class="c-list c-list--ul c-list--hz">
+          <li class="c-list__item c-list__item--media c-list__item--hz">
+            <img src="../images/placeimg_100_100_people%20(1).jpg" class="c-list__img">
+            John
+          </li>
+          <li class="c-list__item c-list__item--media c-list__item--hz">
+            <img src="../images/placeimg_100_100_people.jpg" class="c-list__img">
+            Amy
+          </li>
+          <li class="c-list__item c-list__item--media c-list__item--hz">
+            <img src="../images/placeimg_100_100_people%20(1).jpg" class="c-list__img">
+            <a href="#?">Chris</a>
+          </li>
+          <li class="c-list__item c-list__item--media c-list__item--hz">
+            <img src="../images/placeimg_100_100_people.jpg" class="c-list__img">
+            Daniel
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  <!-- code well markup -->
+    <div class="o-grid o-grid--gutters o-medium-grid--full">
+      <div class="o-grid__cell">
+        <div class="c-collapse">
+          <div class="c-collapse__controls-container--justified-text">
+            <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+            <a class="c-collapse__toggle">toggle markup</a>
+          </div>
+          <div class="c-collapse__content-container c-collapse__content-container--dark">
+            <div class="c-collapse__content--prism-code-style">
+  <pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;ul class=&quot;c-list c-list--ul c-list--hz&quot;&gt;
+      &lt;li class=&quot;c-list__item c-list__item--media c-list__item--hz&quot;&gt;
+          &lt;img src=&quot;&quot; class=&quot;c-list__img&quot;&gt; John
+      &lt;/li&gt;
+      &lt;li class=&quot;c-list__item c-list__item--media c-list__item--hz&quot;&gt;
+          &lt;img src=&quot;&quot; class=&quot;c-list__img&quot;&gt; Amy
+      &lt;/li&gt;
+      &lt;li class=&quot;c-list__item c-list__item--media c-list__item--hz&quot;&gt;
+          &lt;img src=&quot; class=&quot;c-list__img&quot;&gt;
+          &lt;a href=&quot;#&quot;&gt;Chris&lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&quot;c-list__item c-list__item--media c-list__item--hz&quot;&gt;
+          &lt;img src=&quot;&quot; class=&quot;c-list__img&quot;&gt; Daniel
+      &lt;/li&gt;
+  &lt;/ul&gt;
+  </code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end codewell markup -->
+  </section>
+
+
+  <script src="../javascript/collapse.js"></script>
+  <script src="../prism/prism.js"></script>
+</body>
+</html>

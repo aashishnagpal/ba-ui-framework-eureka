@@ -1,58 +1,87 @@
-.persona {
-  color: $secondary-dark-color;
-  margin: 0;
-  text-align: center;
-  width: 15em;
-  padding: 2.5em;
-  border-radius: 0.5em;
-  background: transparent;
-  border: 0.3em solid transparent;
-  transform: scale(0.9) translate(0, 0);
-  transition: all 0.5s linear;
+.persona-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  flex-wrap: wrap;
 
+  @at-root .persona {
+    color: $secondary-dark-color;;
+    margin: 0;
+    text-align: center;
+    flex: 0 0 13em;
+    padding: 2em 1em;
+    border-radius: 0.4em;
+    background: transparent;
+    border: 0.2em solid transparent;
+    transform: scale(0.9) translate(0, 0);
+    transition: all 0.5s linear;
+    cursor: pointer;
 
-  &__image {
-    width: 5em;
-    height: 5em;
-    border-radius: 50%;
-    transform: scale(1.1);
-    transition: transform 0.5s linear;
-  }
+    &__image {
+      width: 5em;
+      height: 5em;
+      margin-top: 1em;
+      border-radius: 50%;
+      transform: scale(1.1);
+      transition: transform 0.5s linear;
+    }
 
-  &__name {
-    margin-top: 1.5em;
-    margin-bottom: 0;
-    font-size: 1.5em;
-  }
+    &__name {
+      margin-top: 2em;
+      margin-bottom: 0;
+      font-size: 1.3em;
+    }
 
-  &__designation {
-    color: $secondary-color;
-    opacity: 0;
-    transition: opacity 0.5s linear;
-  }
+    &__title {
+      color: $secondary-dark-color;
+      margin-top: 0.2em;
+      opacity: 0;
+      transition: opacity 0.5s linear;
+    }
 
-  &__button {
-    font-size: 1em;
-    opacity: 0;
-    transition: opacity 0.5s linear;
-    &__icon {
+    &__links {
+      color: $primary-color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+    }
+
+    &__link {
       font-size: 1em;
+      opacity: 0;
+      transition: opacity 0.5s linear;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    &__icon {
+      font-size: 1.2em;
       margin: 0;
+      padding: 1px;
+      
+      &:hover {
+        color: $primary-dark-color;
+      }
     }
+
+    &:hover {
+      color: $generic-black-color;
+      background: $generic-white-color;
+      border-color: $primary-dark-color;
+      transform: scale(1) translate(0, -40%);
+
+      & .persona__image {
+        transform: scale(1.5);
+      }
+
+      & .persona__title, & .persona__link {
+        opacity: 1;
+      }
+    }
+
   }
-
-  &:hover {
-    background: $generic-white-color;
-    box-shadow: 1px 1px 2px $generic-black-color;
-    border-color: $primary-dark-color;
-    transform: scale(1) translate(0, -40%);
-    & .persona__image {
-      transform: scale(1.5);
-    }
-
-    & .persona__designation, & .persona__button {
-      opacity: 1;
-    }
-  }
-
 }
+

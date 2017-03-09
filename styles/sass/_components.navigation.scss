@@ -5,15 +5,25 @@
 .nav {
   padding: 0;
   margin: 0;
+  width: 100%;
 
-  &--horizontal {
+  @at-root %transparent {
+    background: transparent;
+    color: $menu-text-color;
+  }
+
+  &, &--horizontal {
+    @extend %transparent;
     display: flex;
   }
 
   &--vertical {
-    display: inline-flex;
-    flex-direction: column;
-    height: auto;
+    &-left, &-right {
+      @extend %transparent;
+      flex-direction: column;
+      max-height: 100vh;
+      height: auto;
+    }
   }
 
   &--dark {
@@ -26,33 +36,25 @@
     color: $generic-black-color;
   }
 
-  &--transparent {
-    background: transparent;
-    color: $menu-text-color;
-  }
-
   &--sticky {
     position: fixed;
-    top: 0;
-    left: 0;
+    left: auto;
     z-index: 9999;
+    top: 0;
   }
 
   &__item {
-    padding: 0.1em;
     position: relative;
     text-align: center;
     display: flex;
     align-items: center;
-    justify-content: center;
 
     &:hover {
       color: $primary-light-color;
-      border-color: transparent;
     }
 
     &::before, &::after {
-      background: $primary-light-color;
+      background: $primary-color;
       content: '';
       position: absolute;
       transition: transform 0.3s linear;
@@ -60,37 +62,31 @@
 
     &::before {
       left: 0;
-      bottom: 1px;
+      bottom: -0.1em;
       height: 0.3em;
       width: 100%;
       transform: scaleX(0);
     }
 
     &::after {
-      right: 1px;
+      right: -0.1em;
       top: 0;
       height: 100%;
       width: 0.3em;
       transform: scaleY(0);
     }
 
-    &:hover::before {
-      transform: scaleX(1);
-
-    }
-
-    &:hover::after {
-      transform: scaleY(1);
-    }
-
     &--active {
       color: $primary-color;
 
+      &:hover {
+        color: $primary-color;
+      }
+
       &::before, &::after {
-        background: $primary-color;
+        //background: $primary-color;
         transform: scale(1, 1);
       }
     }
   }
-
 }

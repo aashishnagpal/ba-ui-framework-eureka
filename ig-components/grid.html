@@ -1,0 +1,217 @@
+<html>
+<head>
+  <title>Grid Component</title>
+  <link href="../styles/css/eureka.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="../prism/prism.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+<body>
+
+<section class="website-components__component" id="grid">
+
+  <h3>Flexbox Grid</h3>
+  <p>Grids allow for the effective layout of content ona web page. We use the properties of flexbox to achieve the layouts</p>
+  <br>
+  <h4>Flexible amount of columns</h4>
+  <p>Any number of cells will automatically take their required space in the grid. Add the class "o-grid-gutters" to make space between and below the grid row.</p>
+  <br>
+  <!-- component example grid container -->
+  <div class="o-grid o-grid--gutters">
+    <div class="o-grid__cell">
+      <div style="padding:20px; background-color: #ddd;"></div>
+    </div>
+    <div class="o-grid__cell">
+      <div style="padding:20px; background-color: #ddd;"></div>
+    </div>
+  </div>
+  <div class="o-grid o-grid--gutters">
+    <div class="o-grid__cell">
+      <div style="padding:20px; background-color: #ddd;"></div>
+    </div>
+    <div class="o-grid__cell">
+      <div style="padding:20px; background-color: #ddd;"></div>
+    </div>
+    <div class="o-grid__cell">
+      <div style="padding:20px; background-color: #ddd;"></div>
+    </div>
+    <div class="o-grid__cell">
+      <div style="padding:20px; background-color: #ddd;"></div>
+    </div>
+    <div class="o-grid__cell">
+      <div style="padding:20px; background-color: #ddd;"></div>
+    </div>
+    <div class="o-grid__cell">
+      <div style="padding:20px; background-color: #ddd;"></div>
+    </div>
+    <div class="o-grid__cell">
+      <div style="padding:20px; background-color: #ddd;"></div>
+    </div>
+  </div>
+  <div class="o-grid o-grid--gutters">
+    <div class="o-grid__cell">
+      <div style="padding:20px; background-color: #ddd;"></div>
+    </div>
+    <div class="o-grid__cell">
+      <div style="padding:20px; background-color: #ddd;"></div>
+    </div>
+    <div class="o-grid__cell">
+      <div style="padding:20px; background-color: #ddd;"></div>
+    </div>
+  </div>
+
+  <!-- code well markup -->
+  <div class="o-grid o-grid--gutters o-medium-grid--full">
+    <div class="o-grid__cell">
+      <div class="c-collapse">
+        <div class="c-collapse__controls-container--justified-text">
+          <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+          <a class="c-collapse__toggle">toggle markup</a>
+        </div>
+        <div class="c-collapse__content-container c-collapse__content-container--dark">
+          <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup line-numbers">
+  &lt;div class=&quot;o-grid o-grid--gutters&quot;&gt;
+    &lt;div class=&quot;o-grid__cell&quot;&gt;
+        &lt;div style=&quot;padding:20px; background-color: #ddd;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;o-grid__cell&quot;&gt;
+        &lt;div style=&quot;padding:20px; background-color: #ddd;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;o-grid o-grid--gutters&quot;&gt;
+    &lt;div class=&quot;o-grid__cell&quot;&gt;
+        &lt;div style=&quot;padding:20px; background-color: #ddd;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;o-grid__cell&quot;&gt;
+        &lt;div style=&quot;padding:20px; background-color: #ddd;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;o-grid__cell&quot;&gt;
+        &lt;div style=&quot;padding:20px; background-color: #ddd;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;o-grid__cell&quot;&gt;
+        &lt;div style=&quot;padding:20px; background-color: #ddd;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;o-grid__cell&quot;&gt;
+        &lt;div style=&quot;padding:20px; background-color: #ddd;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;o-grid__cell&quot;&gt;
+        &lt;div style=&quot;padding:20px; background-color: #ddd;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;o-grid__cell&quot;&gt;
+        &lt;div style=&quot;padding:20px; background-color: #ddd;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;o-grid o-grid--gutters&quot;&gt;
+    &lt;div class=&quot;o-grid__cell&quot;&gt;
+        &lt;div style=&quot;padding:20px; background-color: #ddd;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;o-grid__cell&quot;&gt;
+        &lt;div style=&quot;padding:20px; background-color: #ddd;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;o-grid__cell&quot;&gt;
+        &lt;div style=&quot;padding:20px; background-color: #ddd;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end codewell markup -->
+  <h4>Responsive Grid</h4>
+  <p>At different breakpoints we can change the width of the rows. We add the class "o-medium-grid--full" to make the columns full width on medium screens and smaller. Resize screen below to see this in action.</p>
+  <br>
+  <div class="o-grid o-grid--gutters o-medium-grid--full">
+    <div class="o-grid__cell">
+      <div style="padding:20px; background-color: #ddd;"></div>
+    </div>
+    <div class="o-grid__cell">
+      <div style="padding:20px; background-color: #ddd;"></div>
+    </div>
+  </div>
+
+  <!-- code well markup -->
+  <div class="o-grid o-grid--gutters o-medium-grid--full">
+    <div class="o-grid__cell">
+      <div class="c-collapse">
+        <div class="c-collapse__controls-container--justified-text">
+          <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+          <a class="c-collapse__toggle">toggle markup</a>
+        </div>
+        <div class="c-collapse__content-container c-collapse__content-container--dark">
+          <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup line-numbers">
+  &lt;div class=&quot;o-grid o-grid--gutters o-medium-grid--full&quot;&gt;
+    &lt;div class=&quot;o-grid__cell&quot;&gt;
+        &lt;div style=&quot;padding:20px; background-color: #ddd;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;o-grid__cell&quot;&gt;
+        &lt;div style=&quot;padding:20px; background-color: #ddd;&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end codewell markup -->
+
+</section>
+<!--<div class="c-card">
+  <div class="c-card__head">
+    <img class="c-card__img" src="https://unsplash.it/350/150?image=1047">
+    <span class="c-card__category">Travel</span>
+  </div>
+  <div class="c-card__body">
+    <p class="c-card__date">April 3, 2017</p>
+    <h3 class="c-card__title">Europe on $50 a Day</h3>
+    <div class="c-separator u-separator&#45;&#45;primary"></div>
+    <div class="c-card__text">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis, repudiandae velit! Ad aperiam, blanditiis delectus repudiandae velit?
+    </div>
+    <button class="c-btn&#45;&#45;primary c-btn pull-right" type="button" name="button">Read More</button>
+  </div>
+</div>
+<br>
+<div class="c-card">
+  <div class="c-card__head">
+    <img class="c-card__img" src="https://unsplash.it/350/150?image=907">
+    <img class="c-card__profile-pic" src="../images/girl-2.png">
+  </div>
+  <div class="c-card__body">
+    <h3 class="c-card__profile-name u-text-center">Jenny Jones</h3>
+    <div class="c-card__text u-text-center">
+      Senior Backend Developer
+    </div>
+    <div class="c-separator u-separator&#45;&#45;primary"></div>
+    <div class="c-card__social-profiles u-text-center">
+      <a class="c-card__social-icon" href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+      <a class="c-card__social-icon" href="#"><i class="fa fa-github-alt" aria-hidden="true"></i></a>
+      <a class="c-card__social-icon" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</div>
+<br>
+<div class="c-card">
+  <div class="c-card__head u-bg-primary">
+    <span class="c-card__head-icon">
+      <i class="fa fa-pencil" aria-hidden="true"></i>
+    </span>
+  </div>
+  <div class="c-card__body">
+    <h3 class="c-card__title">Take Our Survey</h3>
+    <div class="c-card__text">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. repudiandae velit?
+    </div>
+    <button class="c-btn--secondary c-btn pull-left" type="button" name="button">Nope!</button>
+    <button class="c-btn--primary c-btn pull-right" type="button" name="button">Okay</button>
+  </div>
+</div>-->
+
+
+<script src="../javascript/collapse.js"></script>
+<script src="../prism/prism.js"></script>
+</body>
+</html>

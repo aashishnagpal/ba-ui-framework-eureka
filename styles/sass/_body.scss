@@ -2,13 +2,25 @@
   background-color: $body-bg-color;
 }
 
-.vertical-menu{
+.vertical-menu {
   position: relative;
+}
+
+.demo-site-grid__sticky-nav {
+  width: 100%;
+}
+
+.demo-site-grid__sticky-nav--stuck {
+  width: 18%;
+  position: fixed;
+  top: 0;
 }
 
 .website-components{
   background-color: $generic-gray-color;
   padding: 2em;
+  width: 82%;
+  margin-left: -2px; /* if we want the current anchor indicator to split the sections */
 
   &__component{
     border-radius: 5px;
@@ -17,6 +29,23 @@
     margin-bottom: 1em;
   }
 
+}
+
+.u-nav--vertical-left--demo-site {
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  .nav__item {
+    flex: 1 0 auto;
+
+    &::after {
+      right: 0;
+    }
+  }
+
+  .nav__link {
+    padding: 0.75em 1em;
+  }
 }
 
 

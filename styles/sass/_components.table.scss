@@ -1,0 +1,51 @@
+.c-table{
+  width: 100%;
+  text-align: left;
+/*  border-collapse: collapse;
+  border-spacing: 0;*/
+  &__head{
+    border-bottom: 2px solid $secondary-color;
+  }
+  &__head-column{
+    padding: 0.8em 0.2em;
+  }
+  &__column{
+    padding: 0.8em 0.2em;
+  }
+
+}
+
+
+/* Utilities */
+
+/* Bordered Table*/
+
+.c-table--bordered{
+  border: 1px solid $secondary-color;
+  .c-table__column{
+    border-bottom: 1px solid $secondary-color;
+  }
+
+}
+
+/* Striped Table */
+
+.c-table--striped{
+  .c-table__body{
+    .c-table__row:nth-child(odd){
+      background-color: $table-highlight-color;
+    }
+  }
+}
+
+/* Highlight table */
+
+.c-table--highlight{
+  .c-table__body{
+    .c-table__row{
+      &:hover{
+        background-color: $table-highlight-color;
+      }
+    }
+  }
+}

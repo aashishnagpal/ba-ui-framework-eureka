@@ -4,23 +4,63 @@
     <meta charset="utf-8">
     <meta name="author" content="Rochell Langam">
     <title>Gallery Component</title>
-    <script src="../javascript/gallery.js">
-
-    </script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../prism/prism.css">
     <link rel="stylesheet" href="../styles/css/eureka.css">
   </head>
   <body>
-    <h3>Add background image and specify width and height</h3>
-    <div class="c-gallery-main">
-      <div class="c-thumbnails-row o-grid c-gallery">
-        <div class="c-thumbnail c-gallery--clickable"></div>
-        <div class="c-thumbnail c-gallery--clickable"></div>
-        <div class="c-thumbnail c-gallery--clickable"></div>
-        <div class="c-thumbnail c-gallery--clickable"></div>
-        <div class="c-thumbnail c-gallery--clickable"></div>
+
+    <section class="website-components__component" id="gallery">
+
+    <h3>Gallery with Full-Screen Viewer</h3>
+    <p>Modify the thumbnail's width and height in CSS. The viewer reveals the image as a full-page background.</p>
+
+    <!-- component example grid container -->
+    <div class="o-grid o-grid--gutters">
+      <div class="o-grid__cell">
+        <div class="c-gallery-main">
+          <div class="c-thumbnails-row o-grid c-gallery">
+            <div class="c-thumbnail c-gallery--clickable"></div>
+            <div class="c-thumbnail c-gallery--clickable"></div>
+            <div class="c-thumbnail c-gallery--clickable"></div>
+            <div class="c-thumbnail c-gallery--clickable"></div>
+            <div class="c-thumbnail c-gallery--clickable"></div>
+          </div>
+          <div class="c-gallery-viewer"></div>
+        </div>
       </div>
-      <div class="c-gallery-viewer"></div>
     </div>
+
+    <!-- code well markup -->
+    <div class="o-grid o-grid--gutters">
+      <div class="o-grid__cell">
+        <div class="c-collapse">
+          <div class="c-collapse__controls-container--justified-text">
+            <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+            <a class="c-collapse__toggle">toggle markup</a>
+          </div>
+          <div class="c-collapse__content-container c-collapse__content-container--dark">
+            <div class="c-collapse__content--prism-code-style">
+            <pre class="u-pre--wrap"><code class="language-markup line-numbers">
+&lt;div class=&quot;c-gallery-main&quot;&gt;
+  &lt;div class=&quot;c-thumbnails-row o-grid c-gallery&quot;&gt;
+    &lt;div class=&quot;c-thumbnail c-gallery--clickable&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;c-thumbnail c-gallery--clickable&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;c-thumbnail c-gallery--clickable&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;c-thumbnail c-gallery--clickable&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;c-thumbnail c-gallery--clickable&quot;&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;c-gallery-viewer&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+            </code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+    <script src="../javascript/gallery.js"></script>
+    <script src="../javascript/collapse.js" charset="utf-8"></script>
+    <script src="../prism/prism.js"></script>
   </body>
 </html>

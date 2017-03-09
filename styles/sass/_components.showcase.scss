@@ -1,0 +1,76 @@
+//Primary container.  Contains 2 flexbox divs inside
+.eureka-showcase-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 100vw;
+    height: 90vh;
+}
+
+//secondary container for preview images
+.eureka-showcase-preview {
+    display: flex;
+    flex-flow: row wrap;
+    width: 30%;
+    height: inherit;
+    justify-content: space-between;
+    border: 15px solid transparent;
+    border-image: url(../../images/showcase/modernMirror.png) round;
+    border-image-slice: 195 195;
+    border-image-width: 2.6%;
+    align-items: center;
+    padding: 15px;
+    background-color: $primary-dark-color;
+}
+
+.eureka-showcase-preview-img-div {
+    flex: 1 1 33%;
+    padding: 1%;
+    
+}
+
+//change size of images inside preview div
+.eureka-showcase-preview-img {
+    box-shadow: 3px -1px 10px 1px #000;
+    width: 100%;
+}
+
+//Secondary container for the showcase
+.eureka-showcase {
+    display: none;
+    flex-direction: row nowrap;
+    justify-content: flex-start;
+    width: 70%;
+    height: inherit;
+    align-items: center;
+}
+
+.eureka-showcase-img-div {
+    max-height: inherit;
+    max-width: 70%;
+    flex: 1 1 70%;
+}
+
+.eureka-showcase-pointer-div {
+    width: 30%;
+    max-height: inherit;
+    flex: 1 1 30%;
+}
+
+//svg "pointer" trasnparentcy
+.eureka-showcase-pointer {
+    width: 100%;
+    height: auto;
+}
+
+//Keep "showcase" image within container while maintaing aspect ratio
+.eureka-showcase-img {
+    max-height: 90vh;
+    max-width: 100%;
+}
+
+//Filters
+.showcase-filter-movieposter {
+    border: 5px solid red;
+}

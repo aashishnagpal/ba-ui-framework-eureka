@@ -2,14 +2,288 @@
 <head>
   <title>Card Component</title>
   <link href="../styles/css/eureka.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="../prism/prism.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 </head>
 <body>
-<div class="test">
+
+<section class="website-components__component" id="accordion">
+
+  <h3>Accordion</h3>
+  <p>Dynamic accordion functionality to cycle through different areas of content</p>
+  <br>
+  <h4>Accordion (Dark Version)</h4>
+  <p>Accordion with dark headings.</p>
+  <br>
+  <!-- component example grid container -->
+  <div class="o-grid o-grid--gutters o-medium-grid--full">
+    <div class="o-grid__cell">
+      <!-- component examples here -->
+      <ul class="accordion">
+        <li class="accordion__item">
+          <input type="radio" class="accordion__state" name="accordion-state" id="accordion-one">
+          <label class="accordion__title accordion__title--dark" for="accordion-one">
+            Section One
+            <i class="fa fa-angle-down accordion__icon pull-right" aria-hidden="true"></i>
+          </label>
+          <div class="accordion__content">This is the content for accordion one This is the content
+            for accordion one This is the content for accordion one This is the content for accordion
+            two This is the content for accordion one This is the content for accordion one</div>
+        </li>
+        <li class="accordion__item">
+          <input type="radio" class="accordion__state" name="accordion-state" id="accordion-two">
+          <label class="accordion__title accordion__title--dark" for="accordion-two">
+            Section Two
+            <i class="fa fa-angle-down accordion__icon pull-right" aria-hidden="true"></i>
+          </label>
+          <div class="accordion__content">This is the content for accordion two This is the content
+            for accordion one This is the content for accordion one This is the content for accordion
+            two This is the content for accordion one This is the content for accordion one</div>
+        </li>
+        <li class="accordion__item">
+          <input type="radio" class="accordion__state" name="accordion-state" id="accordion-three">
+          <label class="accordion__title accordion__title--dark" for="accordion-three">
+            Section Three
+            <i class="fa fa-angle-down accordion__icon pull-right" aria-hidden="true"></i>
+          </label>
+          <div class="accordion__content">This is the content for accordion two This is the content
+            for accordion one This is the content for accordion one This is the content for accordion
+            two This is the content for accordion one This is the content for accordion one</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- code well markup -->
+  <div class="o-grid o-grid--gutters o-medium-grid--full">
+    <div class="o-grid__cell">
+      <div class="c-collapse">
+        <div class="c-collapse__controls-container--justified-text">
+          <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+          <a class="c-collapse__toggle">toggle markup</a>
+        </div>
+        <div class="c-collapse__content-container c-collapse__content-container--dark">
+          <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup line-numbers">
+  &lt;ul class=&quot;accordion&quot;&gt;
+    &lt;li class=&quot;accordion__item&quot;&gt;
+        &lt;input type=&quot;radio&quot; class=&quot;accordion__state&quot; name=&quot;accordion-state&quot; id=&quot;accordion-one&quot;&gt;
+        &lt;label class=&quot;accordion__title accordion__title--dark&quot; for=&quot;accordion-one&quot;&gt;
+            Section One
+            &lt;i class=&quot;fa fa-angle-down accordion__icon pull-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+        &lt;/label&gt;
+        &lt;div class=&quot;accordion__content&quot;&gt;This is the content for accordion one This is the content for accordion one
+  This is the content for accordion one This is the content for accordion two This is the content for
+  accordion one This is the content for accordion one&lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;accordion__item&quot;&gt;
+        &lt;input type=&quot;radio&quot; class=&quot;accordion__state&quot; name=&quot;accordion-state&quot; id=&quot;accordion-two&quot;&gt;
+        &lt;label class=&quot;accordion__title accordion__title--dark&quot; for=&quot;accordion-two&quot;&gt;
+            Section Two
+            &lt;i class=&quot;fa fa-angle-down accordion__icon pull-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+        &lt;/label&gt;
+        &lt;div class=&quot;accordion__content&quot;&gt;This is the content for accordion two This is the
+  content for accordion one This is the content for accordion one This is the content for accordion two
+  This is the content for accordion one This is the content for accordion one&lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;accordion__item&quot;&gt;
+        &lt;input type=&quot;radio&quot; class=&quot;accordion__state&quot; name=&quot;accordion-state&quot; id=&quot;accordion-three&quot;&gt;
+        &lt;label class=&quot;accordion__title accordion__title--dark&quot; for=&quot;accordion-three&quot;&gt;
+            Section Three
+            &lt;i class=&quot;fa fa-angle-down accordion__icon pull-right&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+        &lt;/label&gt;
+        &lt;div class=&quot;accordion__content&quot;&gt;This is the content for accordion two This is
+  the content for accordion one This is the content for accordion one This is the content for
+  accordion two This is the content for accordion one This is the content for accordion one&lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end codewell markup -->
+  <h4>Accordion (Light Version)</h4>
+  <p>Accordion with light headings.</p>
+  <br>
+  <ul class="accordion">
+    <li class="accordion__item">
+      <input type="radio" class="accordion__state" name="accordion-state-one" id="accordion-four">
+      <label class="accordion__title accordion__title--light" for="accordion-four">
+        Section One
+        <i class="fa fa-angle-down accordion__icon" aria-hidden="true"></i>
+      </label>
+      <div class="accordion__content">This is the content for accordion one This is the content for accordion one This is the content for accordion one This is the content for accordion two This is the content for accordion one This is the content for accordion one</div>
+    </li>
+    <li class="accordion__item">
+      <input type="radio" class="accordion__state" name="accordion-state-one" id="accordion-five">
+      <label class="accordion__title accordion__title--light" for="accordion-five">
+        Section Two
+        <i class="fa fa-angle-down accordion__icon" aria-hidden="true"></i>
+      </label>
+      <div class="accordion__content">This is the content for accordion two This is the content for accordion one This is the content for accordion one This is the content for accordion two This is the content for accordion one This is the content for accordion one</div>
+    </li>
+    <li class="accordion__item">
+      <input type="radio" class="accordion__state" name="accordion-state-one" id="accordion-six">
+      <label class="accordion__title accordion__title--light" for="accordion-six">
+        Section Three
+        <i class="fa fa-angle-down accordion__icon" aria-hidden="true"></i>
+      </label>
+      <div class="accordion__content">This is the content for accordion two This is the content for accordion one This is the content for accordion one This is the content for accordion two This is the content for accordion one This is the content for accordion one</div>
+    </li>
+  </ul>
+
+  <!-- code well markup -->
+  <div class="o-grid o-grid--gutters o-medium-grid--full">
+    <div class="o-grid__cell">
+      <div class="c-collapse">
+        <div class="c-collapse__controls-container--justified-text">
+          <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+          <a class="c-collapse__toggle">toggle markup</a>
+        </div>
+        <div class="c-collapse__content-container c-collapse__content-container--dark">
+          <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup line-numbers">
+  &lt;ul class=&quot;accordion&quot;&gt;
+    &lt;li class=&quot;accordion__item&quot;&gt;
+        &lt;input type=&quot;radio&quot; class=&quot;accordion__state&quot; name=&quot;accordion-state-one&quot; id=&quot;accordion-four&quot;&gt;
+        &lt;label class=&quot;accordion__title accordion__title--light&quot; for=&quot;accordion-four&quot;&gt;
+            Section One
+            &lt;i class=&quot;fa fa-angle-down accordion__icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+        &lt;/label&gt;
+        &lt;div class=&quot;accordion__content&quot;&gt;This is the content for accordion one This is the
+  content for accordion one This is the content for accordion one This is the content for accordion two
+  This is the content for accordion one This is the content for accordion one&lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;accordion__item&quot;&gt;
+        &lt;input type=&quot;radio&quot; class=&quot;accordion__state&quot; name=&quot;accordion-state-one&quot; id=&quot;accordion-five&quot;&gt;
+        &lt;label class=&quot;accordion__title accordion__title--light&quot; for=&quot;accordion-five&quot;&gt;
+            Section Two
+            &lt;i class=&quot;fa fa-angle-down accordion__icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+        &lt;/label&gt;
+        &lt;div class=&quot;accordion__content&quot;&gt;This is the content for accordion two This is
+  the content for accordion one This is the content for accordion one This is the content for accordion
+  two This is the content for accordion one This is the content for accordion one&lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;accordion__item&quot;&gt;
+        &lt;input type=&quot;radio&quot; class=&quot;accordion__state&quot; name=&quot;accordion-state-one&quot; id=&quot;accordion-six&quot;&gt;
+        &lt;label class=&quot;accordion__title accordion__title--light&quot; for=&quot;accordion-six&quot;&gt;
+            Section Three
+            &lt;i class=&quot;fa fa-angle-down accordion__icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+        &lt;/label&gt;
+        &lt;div class=&quot;accordion__content&quot;&gt;This is the content for accordion two This is
+  the content for accordion one This is the content for accordion one This is the content for accordion
+  two This is the content for accordion one This is the content for accordion one&lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end codewell markup -->
+
+  <h4>Accordion (Mixed Version)</h4>
+  <p>Accordion with light headings and dark content areas. This version also includes an icon to the right side of the heading.</p>
+  <br>
+  <ul class="accordion">
+    <li class="accordion__item">
+      <input type="radio" class="accordion__state" name="accordion-state-two" id="accordion-seven">
+      <label class="accordion__title accordion__title--light" for="accordion-seven">
+        Section One
+        <span class="icon-circle">
+            <i class="fa fa-angle-down accordion__icon" aria-hidden="true"></i>
+          </span>
+      </label>
+      <div class="accordion__content accordion__content--dark">This is the content for accordion one This is the content for accordion one This is the content for accordion one This is the content for accordion two This is the content for accordion one This is the content for accordion one</div>
+    </li>
+    <li class="accordion__item">
+      <input type="radio" class="accordion__state" name="accordion-state-two" id="accordion-eight">
+      <label class="accordion__title accordion__title--light" for="accordion-eight">
+        Section Two
+        <span class="icon-circle">
+            <i class="fa fa-angle-down accordion__icon" aria-hidden="true"></i>
+          </span>
+      </label>
+      <div class="accordion__content accordion__content--dark">This is the content for accordion two This is the content for accordion one This is the content for accordion one This is the content for accordion two This is the content for accordion one This is the content for accordion one</div>
+    </li>
+    <li class="accordion__item">
+      <input type="radio" class="accordion__state" name="accordion-state-two" id="accordion-nine">
+      <label class="accordion__title accordion__title--light" for="accordion-nine">
+        Section Three
+        <span class="icon-circle">
+            <i class="fa fa-angle-down accordion__icon" aria-hidden="true"></i>
+          </span>
+      </label>
+      <div class="accordion__content accordion__content--dark">This is the content for accordion two This is the content for accordion one This is the content for accordion one This is the content for accordion two This is the content for accordion one This is the content for accordion one</div>
+    </li>
+  </ul>
+
+  <!-- code well markup -->
+  <div class="o-grid o-grid--gutters o-medium-grid--full">
+    <div class="o-grid__cell">
+      <div class="c-collapse">
+        <div class="c-collapse__controls-container--justified-text">
+          <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+          <a class="c-collapse__toggle">toggle markup</a>
+        </div>
+        <div class="c-collapse__content-container c-collapse__content-container--dark">
+          <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup line-numbers">
+  &lt;ul class=&quot;accordion&quot;&gt;
+    &lt;li class=&quot;accordion__item&quot;&gt;
+        &lt;input type=&quot;radio&quot; class=&quot;accordion__state&quot; name=&quot;accordion-state-two&quot; id=&quot;accordion-seven&quot;&gt;
+        &lt;label class=&quot;accordion__title accordion__title--light&quot; for=&quot;accordion-seven&quot;&gt;
+            Section One
+            &lt;span class=&quot;icon-circle&quot;&gt;
+            &lt;i class=&quot;fa fa-angle-down accordion__icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+          &lt;/span&gt;
+        &lt;/label&gt;
+        &lt;div class=&quot;accordion__content accordion__content--dark&quot;&gt;This is the content for accordion one
+  This is the content for accordion one This is the content for accordion one This is the content for accordion
+  two This is the content for accordion one This is the content for accordion one&lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;accordion__item&quot;&gt;
+        &lt;input type=&quot;radio&quot; class=&quot;accordion__state&quot; name=&quot;accordion-state-two&quot; id=&quot;accordion-eight&quot;&gt;
+        &lt;label class=&quot;accordion__title accordion__title--light&quot; for=&quot;accordion-eight&quot;&gt;
+            Section Two
+            &lt;span class=&quot;icon-circle&quot;&gt;
+            &lt;i class=&quot;fa fa-angle-down accordion__icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+          &lt;/span&gt;
+        &lt;/label&gt;
+        &lt;div class=&quot;accordion__content accordion__content--dark&quot;&gt;This is the content for accordion two
+  This is the content for accordion one This is the content for accordion one This is the content for accordion
+  two This is the content for accordion one This is the content for accordion one&lt;/div&gt;
+    &lt;/li&gt;
+    &lt;li class=&quot;accordion__item&quot;&gt;
+        &lt;input type=&quot;radio&quot; class=&quot;accordion__state&quot; name=&quot;accordion-state-two&quot; id=&quot;accordion-nine&quot;&gt;
+        &lt;label class=&quot;accordion__title accordion__title--light&quot; for=&quot;accordion-nine&quot;&gt;
+            Section Three
+            &lt;span class=&quot;icon-circle&quot;&gt;
+            &lt;i class=&quot;fa fa-angle-down accordion__icon&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+          &lt;/span&gt;
+        &lt;/label&gt;
+        &lt;div class=&quot;accordion__content accordion__content--dark&quot;&gt;This is the content for accordion two
+  This is the content for accordion one This is the content for accordion one This is the content for
+  accordion two This is the content for accordion one This is the content for accordion one&lt;/div&gt;
+    &lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end codewell markup -->
+
+</section>
+<!--<div class="test">
   <ul class="accordion">
     <li class="accordion__item">
       <input type="radio" class="accordion__state" name="accordion-state" id="accordion-one">
-      <label class="accordion__title accordion__title--dark" for="accordion-one">
+      <label class="accordion__title accordion__title&#45;&#45;dark" for="accordion-one">
         Section One
         <i class="fa fa-angle-down accordion__icon pull-right" aria-hidden="true"></i>
       </label>
@@ -17,7 +291,7 @@
     </li>
     <li class="accordion__item">
       <input type="radio" class="accordion__state" name="accordion-state" id="accordion-two">
-      <label class="accordion__title accordion__title--dark" for="accordion-two">
+      <label class="accordion__title accordion__title&#45;&#45;dark" for="accordion-two">
         Section Two
         <i class="fa fa-angle-down accordion__icon pull-right" aria-hidden="true"></i>
       </label>
@@ -25,7 +299,7 @@
     </li>
     <li class="accordion__item">
       <input type="radio" class="accordion__state" name="accordion-state" id="accordion-three">
-      <label class="accordion__title accordion__title--dark" for="accordion-three">
+      <label class="accordion__title accordion__title&#45;&#45;dark" for="accordion-three">
         Section Three
         <i class="fa fa-angle-down accordion__icon pull-right" aria-hidden="true"></i>
       </label>
@@ -92,6 +366,8 @@
       <div class="accordion__content accordion__content--dark">This is the content for accordion two This is the content for accordion one This is the content for accordion one This is the content for accordion two This is the content for accordion one This is the content for accordion one</div>
     </li>
   </ul>
-</div>
+</div>-->
+<script src="../javascript/collapse.js"></script>
+<script src="../prism/prism.js"></script>
 </body>
 </html>

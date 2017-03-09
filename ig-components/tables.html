@@ -1,0 +1,526 @@
+<html>
+<head>
+  <title>Table Component</title>
+  <link href="../styles/css/eureka.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="../prism/prism.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+<body>
+
+<section class="website-components__component" id="tables">
+
+  <h3>Tables</h3>
+  <p>Tables offer a way to present a lot of information to the end user at one time. Table requires the HTML5 standard of thead as well as tbody.</p>
+  <br>
+  <h4>Regular Table</h4>
+  <p>Add a class of "c-table" to your tables. Tables don't have borders by default.</p>
+  <br>
+  <!-- component example grid container -->
+  <div class="o-grid o-grid--gutters o-medium-grid--full">
+    <div class="o-grid__cell">
+      <!-- component examples here -->
+      <table class="c-table">
+        <thead class="c-table__head">
+        <tr class="c-table__row">
+          <th class="c-table__head-column">Column 1</th>
+          <th class="c-table__head-column">Column 2</th>
+          <th class="c-table__head-column">Column 3</th>
+          <th class="c-table__head-column">Column 4</th>
+        </tr>
+        </thead>
+        <tbody class="c-table__body">
+        <tr class="c-table__row">
+          <td class="c-table__column">One</td>
+          <td class="c-table__column">Two</td>
+          <td class="c-table__column">Three</td>
+          <td class="c-table__column">Four</td>
+        </tr>
+        <tr class="c-table__row">
+          <td class="c-table__column">One</td>
+          <td class="c-table__column">Two</td>
+          <td class="c-table__column">Three</td>
+          <td class="c-table__column">Four</td>
+        </tr>
+        <tr class="c-table__row">
+          <td class="c-table__column">One</td>
+          <td class="c-table__column">Two</td>
+          <td class="c-table__column">Three</td>
+          <td class="c-table__column">Four</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- code well markup -->
+  <div class="o-grid o-grid--gutters o-medium-grid--full">
+    <div class="o-grid__cell">
+      <div class="c-collapse">
+        <div class="c-collapse__controls-container--justified-text">
+          <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+          <a class="c-collapse__toggle">toggle markup</a>
+        </div>
+        <div class="c-collapse__content-container c-collapse__content-container--dark">
+          <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup line-numbers">
+  &lt;table class=&quot;c-table&quot;&gt;
+    &lt;thead class=&quot;c-table__head&quot;&gt;
+        &lt;tr class=&quot;c-table__row&quot;&gt;
+            &lt;th class=&quot;c-table__head-column&quot;&gt;Column 1&lt;/th&gt;
+            &lt;th class=&quot;c-table__head-column&quot;&gt;Column 2&lt;/th&gt;
+            &lt;th class=&quot;c-table__head-column&quot;&gt;Column 3&lt;/th&gt;
+            &lt;th class=&quot;c-table__head-column&quot;&gt;Column 4&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody class=&quot;c-table__body&quot;&gt;
+        &lt;tr class=&quot;c-table__row&quot;&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;One&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Two&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Three&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Four&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class=&quot;c-table__row&quot;&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;One&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Two&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Three&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Four&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class=&quot;c-table__row&quot;&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;One&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Two&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Three&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Four&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end codewell markup -->
+  <h4>Bordered Table</h4>
+  <p>Add class "c-table--bordered" to add borders to the table.</p>
+  <br>
+  <table class="c-table c-table--bordered">
+    <thead class="c-table__head">
+    <tr class="c-table__row">
+      <th class="c-table__head-column">Column 1</th>
+      <th class="c-table__head-column">Column 2</th>
+      <th class="c-table__head-column">Column 3</th>
+      <th class="c-table__head-column">Column 4</th>
+    </tr>
+    </thead>
+    <tbody class="c-table__body">
+    <tr class="c-table__row">
+      <td class="c-table__column">One</td>
+      <td class="c-table__column">Two</td>
+      <td class="c-table__column">Three</td>
+      <td class="c-table__column">Four</td>
+    </tr>
+    <tr class="c-table__row">
+      <td class="c-table__column">One</td>
+      <td class="c-table__column">Two</td>
+      <td class="c-table__column">Three</td>
+      <td class="c-table__column">Four</td>
+    </tr>
+    <tr class="c-table__row">
+      <td class="c-table__column">One</td>
+      <td class="c-table__column">Two</td>
+      <td class="c-table__column">Three</td>
+      <td class="c-table__column">Four</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <!-- code well markup -->
+  <div class="o-grid o-grid--gutters o-medium-grid--full">
+    <div class="o-grid__cell">
+      <div class="c-collapse">
+        <div class="c-collapse__controls-container--justified-text">
+          <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+          <a class="c-collapse__toggle">toggle markup</a>
+        </div>
+        <div class="c-collapse__content-container c-collapse__content-container--dark">
+          <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup line-numbers">
+  &lt;table class=&quot;c-table c-table--bordered&quot;&gt;
+    &lt;thead class=&quot;c-table__head&quot;&gt;
+        &lt;tr class=&quot;c-table__row&quot;&gt;
+            &lt;th class=&quot;c-table__head-column&quot;&gt;Column 1&lt;/th&gt;
+            &lt;th class=&quot;c-table__head-column&quot;&gt;Column 2&lt;/th&gt;
+            &lt;th class=&quot;c-table__head-column&quot;&gt;Column 3&lt;/th&gt;
+            &lt;th class=&quot;c-table__head-column&quot;&gt;Column 4&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody class=&quot;c-table__body&quot;&gt;
+        &lt;tr class=&quot;c-table__row&quot;&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;One&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Two&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Three&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Four&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class=&quot;c-table__row&quot;&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;One&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Two&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Three&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Four&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class=&quot;c-table__row&quot;&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;One&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Two&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Three&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Four&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end codewell markup -->
+
+  <h4>Striped Table</h4>
+  <p>Add class "c-table--striped" to add stripes to every odd row of the table.</p>
+  <br>
+  <table class="c-table c-table--bordered c-table--striped">
+    <thead class="c-table__head">
+    <tr class="c-table__row">
+      <th class="c-table__head-column">Column 1</th>
+      <th class="c-table__head-column">Column 2</th>
+      <th class="c-table__head-column">Column 3</th>
+      <th class="c-table__head-column">Column 4</th>
+    </tr>
+    </thead>
+    <tbody class="c-table__body">
+    <tr class="c-table__row">
+      <td class="c-table__column">One</td>
+      <td class="c-table__column">Two</td>
+      <td class="c-table__column">Three</td>
+      <td class="c-table__column">Four</td>
+    </tr>
+    <tr class="c-table__row">
+      <td class="c-table__column">One</td>
+      <td class="c-table__column">Two</td>
+      <td class="c-table__column">Three</td>
+      <td class="c-table__column">Four</td>
+    </tr>
+    <tr class="c-table__row">
+      <td class="c-table__column">One</td>
+      <td class="c-table__column">Two</td>
+      <td class="c-table__column">Three</td>
+      <td class="c-table__column">Four</td>
+    </tr>
+    <tr class="c-table__row">
+      <td class="c-table__column">One</td>
+      <td class="c-table__column">Two</td>
+      <td class="c-table__column">Three</td>
+      <td class="c-table__column">Four</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <!-- code well markup -->
+  <div class="o-grid o-grid--gutters o-medium-grid--full">
+    <div class="o-grid__cell">
+      <div class="c-collapse">
+        <div class="c-collapse__controls-container--justified-text">
+          <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+          <a class="c-collapse__toggle">toggle markup</a>
+        </div>
+        <div class="c-collapse__content-container c-collapse__content-container--dark">
+          <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup line-numbers">
+  &lt;table class=&quot;c-table c-table--bordered c-table--striped&quot;&gt;
+    &lt;thead class=&quot;c-table__head&quot;&gt;
+        &lt;tr class=&quot;c-table__row&quot;&gt;
+            &lt;th class=&quot;c-table__head-column&quot;&gt;Column 1&lt;/th&gt;
+            &lt;th class=&quot;c-table__head-column&quot;&gt;Column 2&lt;/th&gt;
+            &lt;th class=&quot;c-table__head-column&quot;&gt;Column 3&lt;/th&gt;
+            &lt;th class=&quot;c-table__head-column&quot;&gt;Column 4&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody class=&quot;c-table__body&quot;&gt;
+        &lt;tr class=&quot;c-table__row&quot;&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;One&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Two&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Three&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Four&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class=&quot;c-table__row&quot;&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;One&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Two&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Three&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Four&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class=&quot;c-table__row&quot;&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;One&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Two&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Three&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Four&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class=&quot;c-table__row&quot;&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;One&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Two&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Three&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Four&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end codewell markup -->
+
+  <h4>Highlighted Table</h4>
+  <p>Add class "c-table--highlight" to add a highlight hover effect of the table rows.</p>
+  <br>
+  <table class="c-table c-table--bordered c-table--highlight">
+    <thead class="c-table__head">
+    <tr class="c-table__row">
+      <th class="c-table__head-column">Column 1</th>
+      <th class="c-table__head-column">Column 2</th>
+      <th class="c-table__head-column">Column 3</th>
+      <th class="c-table__head-column">Column 4</th>
+    </tr>
+    </thead>
+    <tbody class="c-table__body">
+    <tr class="c-table__row">
+      <td class="c-table__column">One</td>
+      <td class="c-table__column">Two</td>
+      <td class="c-table__column">Three</td>
+      <td class="c-table__column">Four</td>
+    </tr>
+    <tr class="c-table__row">
+      <td class="c-table__column">One</td>
+      <td class="c-table__column">Two</td>
+      <td class="c-table__column">Three</td>
+      <td class="c-table__column">Four</td>
+    </tr>
+    <tr class="c-table__row">
+      <td class="c-table__column">One</td>
+      <td class="c-table__column">Two</td>
+      <td class="c-table__column">Three</td>
+      <td class="c-table__column">Four</td>
+    </tr>
+    <tr class="c-table__row">
+      <td class="c-table__column">One</td>
+      <td class="c-table__column">Two</td>
+      <td class="c-table__column">Three</td>
+      <td class="c-table__column">Four</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <!-- code well markup -->
+  <div class="o-grid o-grid--gutters o-medium-grid--full">
+    <div class="o-grid__cell">
+      <div class="c-collapse">
+        <div class="c-collapse__controls-container--justified-text">
+          <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+          <a class="c-collapse__toggle">toggle markup</a>
+        </div>
+        <div class="c-collapse__content-container c-collapse__content-container--dark">
+          <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup line-numbers">
+  &lt;table class=&quot;c-table c-table--bordered c-table--highlight&quot;&gt;
+    &lt;thead class=&quot;c-table__head&quot;&gt;
+        &lt;tr class=&quot;c-table__row&quot;&gt;
+            &lt;th class=&quot;c-table__head-column&quot;&gt;Column 1&lt;/th&gt;
+            &lt;th class=&quot;c-table__head-column&quot;&gt;Column 2&lt;/th&gt;
+            &lt;th class=&quot;c-table__head-column&quot;&gt;Column 3&lt;/th&gt;
+            &lt;th class=&quot;c-table__head-column&quot;&gt;Column 4&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody class=&quot;c-table__body&quot;&gt;
+        &lt;tr class=&quot;c-table__row&quot;&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;One&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Two&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Three&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Four&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class=&quot;c-table__row&quot;&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;One&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Two&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Three&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Four&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class=&quot;c-table__row&quot;&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;One&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Two&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Three&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Four&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr class=&quot;c-table__row&quot;&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;One&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Two&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Three&lt;/td&gt;
+            &lt;td class=&quot;c-table__column&quot;&gt;Four&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end codewell markup -->
+
+</section>
+
+<!--<div style="width: 1000px; margin-left: 100px;">
+  <h1>Table</h1>
+<table class="c-table">
+  <thead class="c-table__head">
+    <tr class="c-table__row">
+      <th class="c-table__head-column">Column 1</th>
+      <th class="c-table__head-column">Column 2</th>
+      <th class="c-table__head-column">Column 3</th>
+      <th class="c-table__head-column">Column 4</th>
+    </tr>
+  </thead>
+  <tbody class="c-table__body">
+    <tr class="c-table__row">
+      <td class="c-table__column">One</td>
+      <td class="c-table__column">Two</td>
+      <td class="c-table__column">Three</td>
+      <td class="c-table__column">Four</td>
+    </tr>
+    <tr class="c-table__row">
+      <td class="c-table__column">One</td>
+      <td class="c-table__column">Two</td>
+      <td class="c-table__column">Three</td>
+      <td class="c-table__column">Four</td>
+    </tr>
+    <tr class="c-table__row">
+      <td class="c-table__column">One</td>
+      <td class="c-table__column">Two</td>
+      <td class="c-table__column">Three</td>
+      <td class="c-table__column">Four</td>
+    </tr>
+  </tbody>
+</table>
+
+  <br>
+  <h4>Table Bordered</h4>
+  <table class="c-table c-table--bordered">
+    <thead class="c-table__head">
+    <tr class="c-table__row">
+      <th class="c-table__head-column">Column 1</th>
+      <th class="c-table__head-column">Column 2</th>
+      <th class="c-table__head-column">Column 3</th>
+      <th class="c-table__head-column">Column 4</th>
+    </tr>
+    </thead>
+    <tbody class="c-table__body">
+    <tr class="c-table__row">
+      <td class="c-table__column">One</td>
+      <td class="c-table__column">Two</td>
+      <td class="c-table__column">Three</td>
+      <td class="c-table__column">Four</td>
+    </tr>
+    <tr class="c-table__row">
+      <td class="c-table__column">One</td>
+      <td class="c-table__column">Two</td>
+      <td class="c-table__column">Three</td>
+      <td class="c-table__column">Four</td>
+    </tr>
+    <tr class="c-table__row">
+      <td class="c-table__column">One</td>
+      <td class="c-table__column">Two</td>
+      <td class="c-table__column">Three</td>
+      <td class="c-table__column">Four</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <br>
+  <h4>Table Striped</h4>
+  <table class="c-table c-table--bordered c-table--striped">
+    <thead class="c-table__head">
+    <tr class="c-table__row">
+      <th class="c-table__head-column">Column 1</th>
+      <th class="c-table__head-column">Column 2</th>
+      <th class="c-table__head-column">Column 3</th>
+      <th class="c-table__head-column">Column 4</th>
+    </tr>
+    </thead>
+    <tbody class="c-table__body">
+    <tr class="c-table__row">
+      <td class="c-table__column">One</td>
+      <td class="c-table__column">Two</td>
+      <td class="c-table__column">Three</td>
+      <td class="c-table__column">Four</td>
+    </tr>
+    <tr class="c-table__row">
+      <td class="c-table__column">One</td>
+      <td class="c-table__column">Two</td>
+      <td class="c-table__column">Three</td>
+      <td class="c-table__column">Four</td>
+    </tr>
+    <tr class="c-table__row">
+      <td class="c-table__column">One</td>
+      <td class="c-table__column">Two</td>
+      <td class="c-table__column">Three</td>
+      <td class="c-table__column">Four</td>
+    </tr>
+    <tr class="c-table__row">
+      <td class="c-table__column">One</td>
+      <td class="c-table__column">Two</td>
+      <td class="c-table__column">Three</td>
+      <td class="c-table__column">Four</td>
+    </tr>
+    </tbody>
+  </table>
+
+  <br>
+  <h4>Table Highlight</h4>
+  <table class="c-table c-table&#45;&#45;bordered c-table&#45;&#45;highlight">
+    <thead class="c-table__head">
+    <tr class="c-table__row">
+      <th class="c-table__head-column">Column 1</th>
+      <th class="c-table__head-column">Column 2</th>
+      <th class="c-table__head-column">Column 3</th>
+      <th class="c-table__head-column">Column 4</th>
+    </tr>
+    </thead>
+    <tbody class="c-table__body">
+    <tr class="c-table__row">
+      <td class="c-table__column">One</td>
+      <td class="c-table__column">Two</td>
+      <td class="c-table__column">Three</td>
+      <td class="c-table__column">Four</td>
+    </tr>
+    <tr class="c-table__row">
+      <td class="c-table__column">One</td>
+      <td class="c-table__column">Two</td>
+      <td class="c-table__column">Three</td>
+      <td class="c-table__column">Four</td>
+    </tr>
+    <tr class="c-table__row">
+      <td class="c-table__column">One</td>
+      <td class="c-table__column">Two</td>
+      <td class="c-table__column">Three</td>
+      <td class="c-table__column">Four</td>
+    </tr>
+    <tr class="c-table__row">
+      <td class="c-table__column">One</td>
+      <td class="c-table__column">Two</td>
+      <td class="c-table__column">Three</td>
+      <td class="c-table__column">Four</td>
+    </tr>
+    </tbody>
+  </table>
+</div>-->
+
+<script src="../javascript/collapse.js"></script>
+<script src="../prism/prism.js"></script>
+</body>
+</html>

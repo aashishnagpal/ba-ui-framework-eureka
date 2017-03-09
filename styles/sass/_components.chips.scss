@@ -96,21 +96,12 @@
 /* Display components styles
    ========================================================================== */
 
-[class^='chip-component--'] {
-  margin: 2em;
-
-  h4 {
-    margin-bottom: 0.8em;
-  }
-
-  .c-chip--filled,
-  .c-chip--outlined {
+#chips .c-chip--filled,
+#chips .c-chip--outlined {
     margin: 0.5em 0.8em 0 0;
-  }
 }
 
-.chip-component--deletable > div {
-  min-height: 6.25em;
+.chip-component--deletable {
   display: flex;
   justify-content: flex-start;
   align-items: center;

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loader</title>
+    <link rel="stylesheet" href="../prism/prism.css">
+    <link rel="stylesheet" href="../styles/css/eureka.css">
+</head>
+<body>
+<section class="website-components__component" id="loader">
+
+    <h3>Loader</h3>
+    <p>Use a loader within any space to display loading in progress. It can be anything, loading an image,
+        some data, etc.</p>
+    <a class="c-btn--primary--rounded c-btn" href="javascript:loader.toggle('loader-demo');">Toggle Loader Here</a>
+    <br><br>
+    <!-- Basic (Transparent) Nav example -->
+    <div class="o-grid o-grid--gutters">
+        <div class="o-grid__cell">
+            <h4>Usage</h4>
+            <ol>
+                <li>Include the following code within any block element and the loader will overlay the entire width and
+                    height of its container.
+                </li>
+                <li>Also Include Script <code class="language-markup">loader.js</code> on your page.</li>
+                <li>Initialize the loader using <code class="language-javascript">loader.init(id);</code>. The id
+                    should match the loader's id.
+                </li>
+                <li>Use the following methods:
+                    <ul>
+                        <li>You can <strong>show</strong> the loader using
+                            <code class="language-javascript">loader.show(id);</code>
+                        </li>
+                        <li>You can <strong>hide</strong> the loader using
+                            <code class="language-javascript">loader.hide(id);</code>
+                        </li>
+                        <li>You can <strong>toggle</strong> the state of the loader using
+                            <code class="language-javascript">loader.toggle(id);</code>
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+            <div id="loader-demo" class="loader loader-overlay">
+                <div class="loader__load-box"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Basic (Transparent) Nav example markup -->
+    <div class="o-grid o-grid--gutters">
+        <div class="o-grid__cell">
+            <div class="c-collapse">
+                <div class="c-collapse__controls-container--justified-text">
+                    <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+                    <a class="c-collapse__toggle">toggle markup</a>
+                </div>
+                <div class="c-collapse__content-container c-collapse__content-container--dark">
+                    <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;div id=&quot;myLoader&quot; class=&quot;loader loader-overlay&quot;&gt;
+	&lt;div class=&quot;loader__load-box&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end Basic (Transparent) Nav example -->
+</section>
+<script src="../prism/prism.js"></script>
+<script src="../javascript/collapse.js"></script>
+<script type="text/javascript" src="../javascript/loader.js"></script>
+<script>
+    (function () {
+        loader.init('loader-demo');
+        loader.toggle('loader-demo');
+
+//        window.addEventListener('load', function () {
+//            loader.hide();
+//        });
+    })();
+</script>
+</body>
+</html>
