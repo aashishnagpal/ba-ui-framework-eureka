@@ -5919,7 +5919,7 @@ $search-second-size-multiplier: .7;
       <section class="website-components__component" id="single-input-form">
 
         <h3>(Innovative) Single-Input Form</h3>
-        <p>This single-input form shows one input field each time. Once an input is filled out, click the arrow button. The current input fades out, the next one reveals and the indicator changes. With innovative animation, the progress indicator rolls to the arrow button and fades out. The submission message the on the last page is customizable.</p>
+        <p>This single-input form shows one input field each time. Once an input is filled out correctly, click the right arrow button. The current input fades out, the next one reveals and the indicator changes. The progress indicator rolls over to the right and fades out. To go back to the previous input field, click the gray left arrow. The submission message the on the last page is customizable.</p>
 
         <br>
 
@@ -5939,7 +5939,10 @@ $search-second-size-multiplier: .7;
                   <i class="fa fa-globe c-sif__icon-label" aria-hidden="true"></i>
                   City you live in
                 </label>
-                <button type="submit" class="c-sif__btn">
+                <button type="button" class="c-sif__btn--prev">
+                  <i class="fa fa-arrow-left c-sif__icon-prev" aria-hidden="true"></i>
+                </button>
+                <button type="submit" class="c-sif__btn--next">
                   <i class="fa fa-paper-plane c-sif__icon-next" aria-hidden="true"></i>
                 </button>
               </div>
@@ -5951,7 +5954,10 @@ $search-second-size-multiplier: .7;
                   <i class="fa fa-envelope c-sif__icon-label" aria-hidden="true"></i>
                   Email
                 </label>
-                <button type="button" class="c-sif__btn">
+                <button type="button" class="c-sif__btn--prev">
+                  <i class="fa fa-arrow-left c-sif__icon-prev" aria-hidden="true"></i>
+                </button>
+                <button type="button" class="c-sif__btn--next">
                   <i class="fa fa-arrow-right fa-lg c-sif__icon-next" aria-hidden="true"></i>
                 </button>
               </div>
@@ -5964,7 +5970,7 @@ $search-second-size-multiplier: .7;
                   User Name
                 </label>
 
-                <button type="button" class="c-sif__btn">
+                <button type="button" class="c-sif__btn--next">
                   <i class="fa fa-arrow-right fa-lg c-sif__icon-next" aria-hidden="true"></i>
                 </button>
               </div>
@@ -5993,7 +5999,10 @@ $search-second-size-multiplier: .7;
     &lt;label class=&quot;c-sif__label&quot; for=&quot;sif-input-city&quot;&gt;
       &lt;i class=&quot;fa fa-globe c-sif__icon-label&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; City you live in
     &lt;/label&gt;
-    &lt;button type=&quot;submit&quot; class=&quot;c-sif__btn&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;c-sif__btn--prev&quot;&gt;
+      &lt;i class=&quot;fa fa-arrow-left c-sif__icon-prev&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+    &lt;/button&gt;
+    &lt;button type=&quot;submit&quot; class=&quot;c-sif__btn--next&quot;&gt;
       &lt;i class=&quot;fa fa-paper-plane c-sif__icon-next&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
     &lt;/button&gt;
   &lt;/div&gt;
@@ -6004,7 +6013,10 @@ $search-second-size-multiplier: .7;
     &lt;label class=&quot;c-sif__label&quot; for=&quot;sif-input-email&quot;&gt;
       &lt;i class=&quot;fa fa-envelope c-sif__icon-label&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; Email
     &lt;/label&gt;
-    &lt;button type=&quot;button&quot; class=&quot;c-sif__btn&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;c-sif__btn--prev&quot;&gt;
+      &lt;i class=&quot;fa fa-arrow-left c-sif__icon-prev&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
+    &lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;c-sif__btn--next&quot;&gt;
       &lt;i class=&quot;fa fa-arrow-right fa-lg c-sif__icon-next&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
     &lt;/button&gt;
   &lt;/div&gt;
@@ -6015,7 +6027,8 @@ $search-second-size-multiplier: .7;
     &lt;label class=&quot;c-sif__label&quot; for=&quot;sif-input-nm&quot;&gt;
       &lt;i class=&quot;fa fa-user c-sif__icon-label&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt; User Name
     &lt;/label&gt;
-    &lt;button type=&quot;button&quot; class=&quot;c-sif__btn&quot;&gt;
+
+    &lt;button type=&quot;button&quot; class=&quot;c-sif__btn--next&quot;&gt;
       &lt;i class=&quot;fa fa-arrow-right fa-lg c-sif__icon-next&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;
     &lt;/button&gt;
   &lt;/div&gt;
