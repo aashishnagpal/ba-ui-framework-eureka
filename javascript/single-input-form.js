@@ -1,12 +1,15 @@
 (function() {
-  var nextBtns = document.querySelectorAll('.c-sif__btn');
+  var nextBtns = document.querySelectorAll('.c-sif__btn--next');
   var nextBtnsArr = [].slice.call(nextBtns);
+  var prevBtns = document.querySelectorAll('.c-sif__btn--prev');
+  var prevBtnsArr = [].slice.call(prevBtns);
   var indicators = document.querySelectorAll('.c-sif__indicator');
   var inputWraps = document.querySelectorAll('.c-sif__input-wrap');
   var labels = document.querySelectorAll('.c-sif__label');
   var inputFields = document.querySelectorAll('.c-sif__input');
   var inputFieldsArr = [].slice.call(inputFields);
   var validator = {};
+  var i;
 
   validator.isTrimmed = function(input) {
     var arr;
@@ -14,7 +17,7 @@
     if (typeof input !== 'string') return false;
 
     arr = input.split(' ');
-    for (var i = 0; i < arr.length; i++) {
+    for (i = 0; i < arr.length; i++) {
       if (arr[i] === '') return false;
     }
     return true;
@@ -58,8 +61,8 @@
     if (domain.indexOf("-") === 0 ||
         domain.lastIndexOf('-') === domain.length - 1) return false;
     if (domainSplit.length < 2) return false;
-    for (var j = 0; j < domainSplit.length; j++) {
-      if (domainSplit[j] === '') return false;
+    for (i = 0; i < domainSplit.length; i++) {
+      if (domainSplit[i] === '') return false;
       if (domainSplit[domainSplit.length - 1].length < 2) return false;
     }
     return true;
@@ -85,7 +88,7 @@
     });
   }
 
-  function inputFadeOut(btn) {
+  function goNext(btn) {
     var index = nextBtnsArr.indexOf(btn);
 
     btn.addEventListener('click', function(e) {
@@ -93,29 +96,48 @@
 
       if (!validator.isNotEmpty(inputFields[index].value)) {
         nextBtns[index].style.color = 'red';
-        return;
-      }
-
-      if (index == 1 && !validator.isEmail(inputFields[index].value)) {
+      } else if (index == 1 && !validator.isEmail(inputFields[index].value)) {
         nextBtns[index].style.color = 'red';
-        return;
+      } else {
+        this.style.color = '#51D0EF';
+        indicators[index].style.animationName = 'fadeOutRight';
+        nextBtns[index].style.animationName = 'fadeOut';
+        labels[index].style.animationName = 'fadeOut';
+        inputFields[index].style.animationName = 'fadeOut';
+        inputWraps[index + 1].style.animationName = 'fadeOut';
+        inputWraps[index].classList.add('c-sif-active');
       }
-
-      indicators[index].style.animationName = 'fadeOutRight';
-      nextBtns[index].style.animationName = 'fadeOut';
-      labels[index].style.animationName = 'fadeOut';
-      inputFields[index].style.animationName = 'fadeOut';
-      inputWraps[index + 1].style.animationName = 'fadeOut';
-      inputWraps[index].classList.add('c-sif-active');
     });
   }
 
-  function addHandlerToBtns() {
-    for (var i = 0; i < nextBtns.length; i++) {
-      inputFadeOut(nextBtns[i]);
+  function addListenerToBtns() {
+    for (i = 0; i < nextBtns.length; i++) {
+      goNext(nextBtns[i]);
       showPlaceholderOrNot(inputFields[i]);
+    }
+
+    for (i = 0; i <prevBtns.length; i++) {
+      goBack(prevBtns[i]);
     }
   }
 
-  addHandlerToBtns();
+  function goBack(btn) {
+    var index = prevBtnsArr.indexOf(btn);
+
+    btn.addEventListener('click', function() {
+      inputWraps[index + 1].classList.remove('c-sif-active');
+      inputWraps[index + 2].classList.add('c-sif-active');
+      inputWraps[index + 2].style.animationName = 'fadeIn';
+      indicators[index + 1].style.animationName = 'fadeInLeft';
+      nextBtns[index + 1].style.animationName = 'fadeIn';
+      labels[index + 1].style.animationName = 'fadeIn';
+      inputFields[index + 1].style.animationName = 'fadeIn';
+
+      if (index < prevBtns.length - 1) {
+        prevBtns[index + 1].style.animationName = 'fadeIn';
+      }
+    });
+  }
+
+  addListenerToBtns();
 })();
