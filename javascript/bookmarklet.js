@@ -11,6 +11,7 @@
   var limitBookmarklet = document.querySelector('[data-limit-bookmarklet]');
   var keysPressed = [];
   var bookmarkId = 0;
+  var alertActive = false;
 
   window.addEventListener('keydown', _keysDown, false);
   window.addEventListener('keyup', _keysUp, false);
@@ -23,8 +24,8 @@
 
   function _keysDown(e) {
     keysPressed[e.keyCode] = true;
-    // keyboard shortcut Shift(16) + Control(17) + M(77)
-    if (keysPressed[16] && keysPressed[17] && keysPressed[77] && keysPressed[76]) {
+    // keyboard shortcut Shift(16) + Control(17) + L(76) + M(77) 
+    if (keysPressed[16] && keysPressed[17] && keysPressed[76] && keysPressed[77]) {
       var selectedRange;
       var rangeContainer;
 
@@ -190,8 +191,9 @@
         selectedRange.collapse();
 
       } else {
-        if (!calledFromButton && selectedRange.startContainer !== selectedRange.endContainer) {
+        if (!calledFromButton && selectedRange.startContainer !== selectedRange.endContainer && !alertActive) {
 
+          alertActive = true;
           // create background div and add class
           alertBackground = document.createElement('div');
           alertBackground.classList.add('c-bookmarklet__alert-background--warning');
@@ -206,8 +208,9 @@
           alertNode.appendChild(warning);
           alertNode.appendChild(alertBackground);
         }
-        if (!calledFromButton && selectedRange.startOffset === selectedRange.endOffset) {
+        if (!calledFromButton && selectedRange.startOffset === selectedRange.endOffset && !alertActive) {
 
+          alertActive = true;
           // create background div and add class
           alertBackground = document.createElement('div');
           alertBackground.classList.add('c-bookmarklet__alert-background--caution');
@@ -297,6 +300,8 @@
     return function(e) {
       alertMessageNode.classList.add('c-bookmarklet__alert--is-dismissed');
       bg.classList.add('c-bookmarklet__alert-background--is-dismissed');
+
+      alertActive = false;
 
       alertMessageNode.addEventListener('animationend', function() {
         alertMessageNode.remove();
