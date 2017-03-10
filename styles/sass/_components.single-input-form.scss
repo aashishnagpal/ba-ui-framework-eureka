@@ -29,12 +29,13 @@
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
-  width: 15em;
+  width: 18em;
   height: 3em;
   padding-left: 3.5em;
-  padding-right: 3em;
+  padding-right: 3.5em;
   background-color: darken($generic-gray-color, 4%);
   border-radius: 1.5em;
+  overflow: hidden;
   opacity: 0;
   visibility: hidden;
 
@@ -60,7 +61,7 @@
   color: darken($secondary-dark-color, 15%);
   margin-left: 0;
   background-color: transparent;
-  width: 7.5em;
+  width: 10em;
   animation-duration: 0.1s;
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
@@ -87,30 +88,30 @@
 }
 
 .c-sif__indicator,
-.c-sif__btn {
+[class^='c-sif__btn--']{
   position: absolute;
   top: 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 3em;
-  width: 3em;
-  border-radius: 50%;
-  margin: 0;
+
 }
 
 .c-sif__indicator {
   left: 0;
+  margin: 0;
+  border-radius: 50%;
+  height: 3em;
+  width: 3em;
   color: $generic-white-color;
   animation-duration: 0.7s;
   animation-fill-mode: forwards;
   z-index: 5;
 }
 
-.c-sif__btn {
+%c-sif__btn {
+  bottom: 0;
   background-color: transparent;
-  color: $primary-color;
-  right: 0;
   cursor: pointer;
   transition: color 0.2s;
 
@@ -118,9 +119,24 @@
   animation-timing-function: ease-out;
   animation-fill-mode: forwards;
   animation-delay: 0.5s;
+}
+
+button.c-sif__btn--next {
+  @extend %c-sif__btn;
+  right: 0.5em;
+  color: $primary-color;
+  &:hover {
+    color: $primary-dark-color !important;
+  }
+}
+
+.c-sif__btn--prev {
+  @extend %c-sif__btn;
+  right: 2.2em;
+  color: $secondary-color;
 
   &:hover {
-    color: $primary-dark-color;
+    color: $secondary-dark-color;
   }
 }
 
@@ -160,6 +176,22 @@
   }
 }
 
+@keyframes fadeInLeft {
+  0% {
+    left: 100%;
+    opacity: 0;
+  }
+  20% {
+    transform: rotate(360deg);
+  }
+  100% {
+    right: auto;
+    left: 0;
+    transform: rotate(00deg);
+    opacity: 1;
+  }
+}
+
 @keyframes fadeOut {
   99% {
     opacity: 0;
@@ -171,7 +203,7 @@
 
 @keyframes fadeIn {
   100% {
-    visibility: visible;
+    opacity: 1;
   }
 }
 
