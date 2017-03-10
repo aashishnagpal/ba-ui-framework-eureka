@@ -99,7 +99,7 @@
       } else if (index == 1 && !validator.isEmail(inputFields[index].value)) {
         nextBtns[index].style.color = 'red';
       } else {
-        this.style.color = 'initial';
+        this.style.color = '#51D0EF';
         indicators[index].style.animationName = 'fadeOutRight';
         nextBtns[index].style.animationName = 'fadeOut';
         labels[index].style.animationName = 'fadeOut';
