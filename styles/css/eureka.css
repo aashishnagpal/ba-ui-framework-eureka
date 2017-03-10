@@ -2824,9 +2824,9 @@ h6 {
 /* line 39, ../sass/_components.navigation.scss */
 .nav--sticky {
   position: fixed;
-  left: auto;
-  z-index: 9999;
+  left: 0;
   top: 0;
+  z-index: 9999;
 }
 /* line 46, ../sass/_components.navigation.scss */
 .nav__item {
@@ -5699,9 +5699,12 @@ h6 {
 /* line 1, ../sass/_eureka-demo-styles.scss */
 .demo-site-grid {
   padding-right: 4vw;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
 }
 
-/* line 5, ../sass/_eureka-demo-styles.scss */
+/* line 6, ../sass/_eureka-demo-styles.scss */
 .vertical-menu {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5712,14 +5715,18 @@ h6 {
       -ms-flex-pack: end;
           justify-content: flex-end;
   width: 18%;
+  -webkit-flex-basis: calc(18% + 0.7vw);
+      -ms-flex-preferred-size: calc(18% + 0.7vw);
+          flex-basis: calc(18% + 0.7vw);
 }
 
-/* line 11, ../sass/_eureka-demo-styles.scss */
+/* line 13, ../sass/_eureka-demo-styles.scss */
 .nav--sticky {
   width: 18%;
+  left: 0;
 }
 
-/* line 15, ../sass/_eureka-demo-styles.scss */
+/* line 18, ../sass/_eureka-demo-styles.scss */
 a.normal {
   text-decoration: underline;
   color: inherit;
