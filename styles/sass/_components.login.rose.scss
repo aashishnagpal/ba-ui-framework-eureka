@@ -1,0 +1,9 @@
+.login-container {
+    box-shadow: 5px 5px 5px 1px transparentize($generic-black-color, 0.22);
+}
+
+.login-form-login-button {
+    &:hover {
+        background-color: #FBEEF4;
+    }
+}

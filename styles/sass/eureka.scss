@@ -4,6 +4,7 @@
 
 @import "settings.global";
 @import "settings.colors";
+@import "settings.colors.rose";
 @import "tools.mixins";
 @import "generic.normalize";
 // @import "generic.reset";
@@ -40,6 +41,7 @@
 @import "components.login";
 @import "components.thumbnail";
 @import "components.login";
+@import "components.login.rose";
 @import "components.persona";
 @import "components.gallery";
 @import "components.list";
