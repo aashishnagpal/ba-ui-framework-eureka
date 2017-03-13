@@ -1,0 +1,24 @@
+/********Eureka Rose Overdies for prism.css*****
+
+/* http://prismjs.com/download.html?themes=prism-okaidia&languages=markup+css+clike+javascript&plugins=line-numbers */
+/**
+ * okaidia theme for JavaScript, CSS and HTML
+ * Loosely based on Monokai textmate theme by http://www.monokai.nl/
+ * @author ocodia
+ */
+
+/* Inline code */
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #EB6797;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function {
+	/*color: #e6db74;*/
+    color: #EE98B4;
+}
