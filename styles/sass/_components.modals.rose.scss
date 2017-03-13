@@ -1,0 +1,90 @@
+//Overrides for the Eureka Rose Theme
+
+/* ==========================================================================
+   Modal component styles
+   ========================================================================== */
+
+/* Modal styles
+   ========================================================================== */
+
+// Overlay
+//No overrides
+
+// Modal basic styles
+%c-modal-basic {
+    background-color: darken(#FBEEF4, 6%);
+    border-radius: 6px;
+}
+
+.c-modal {
+  @extend %c-modal-basic;
+
+  &__header {
+    background-color: darken($secondary-light-color, 4%);
+  }
+
+  &__body {
+    //changed
+    color: lighten($generic-black-color, 9%);
+  }
+
+  &__close {
+    background-color: lighten($primary-dark-color, 12%);
+
+    &:hover {
+        //changed
+      background-color: lighten($primary-dark-color, 2%);
+    }
+  }
+
+}
+
+// Basic specific styles
+//no overrides
+
+// Full-screen specific styles
+// no overrides
+
+// Fixed specific styles
+//no overrides
+
+
+.c-modal--dialog {
+  @extend %c-modal-basic;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transform: translateY(-100%);
+  transition-timing-function: cubic-bezier(0.600, -0.280, 0.735, 0.045);
+
+  .c-modal__body {
+    background-color: darken($generic-gray-color, 3%);
+    border-radius: 3px 3px 0 0;
+  }
+
+  .c-modal__footer {
+    justify-content: flex-end;
+
+    .c-modal__close:last-of-type {
+      margin-left: 1.5em;
+      background-color: $primary-dark-color;
+
+      &:hover {
+        background-color: darken($primary-dark-color, 10%);
+      }
+    }
+  }
+}
+
+
+//UNMODIFIED CODE BELOW THIS LINE
+//No changes from Vanilla Eureka
+//Seems to cause issues if I remove it
+
+// Fade in and stick at top
+.c-modal-transition--3 {
+  @include transform-basic;
+  transform: translateY(0%);
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
