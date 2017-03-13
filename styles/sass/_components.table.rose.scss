@@ -1,0 +1,23 @@
+//Overrides for Eureka Rose Theme
+
+/* Striped Table */
+
+.c-table--striped{
+  .c-table__body{
+    .c-table__row:nth-child(odd){
+      background-color: transparentize($secondary-light-color, 0.8);
+    }
+  }
+}
+
+/* Highlight table */
+
+.c-table--highlight{
+  .c-table__body{
+    .c-table__row{
+      &:hover{
+          background-color: transparentize(#FBEEF4, 0.75);
+      }
+    }
+  }
+}
