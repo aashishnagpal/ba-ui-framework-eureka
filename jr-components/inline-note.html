@@ -11,7 +11,12 @@
   <section class="website-components__component" id="inline-note">
 
     <h3>Inline Note Taking</h3>
-    <p>intro</p>
+    <p>To create a new note, select some text and use keyboard shortcut <code class="language-markup">Shift+Control+I</code>. Type some notes into the note area.</p>
+    <p>To close a note, click the selected text or the window other than the note area. To reopen a note, click the selected text.</p>
+    <p>To delete a note, open the  note, then click the "remove" button or use keyboard shortcut <code class="language-markup">Shift+Control+D</code>. Click "Clear All Notes" to remove all.</p>
+    <p>To print all notes, click "Print Note" button.</p>
+    <p>NOTE: for now you can only add note to text that is inside of a single HTML tag.</p>
+
 
     <br>
 
@@ -20,19 +25,40 @@
       <div class="o-grid__cell">
         <!-- component examples here -->
         <div class="c-inline-note">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam varius magna mi. Mauris a tempor metus. Sed vel nisl justo. Integer ac orci tincidunt, ornare massa eu, suscipit mauris. Vestibulum ac eleifend massa. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras at egestas est, congue scelerisque libero. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras venenatis lacinia est. Sed commodo, purus volutpat euismod consequat, ante sem euismod turpis, sit amet ultricies nulla sapien sed massa.
-            <br>
-            <br>
-             Vivamus scelerisque, arcu sollicitudin lacinia volutpat, diam urna sollicitudin mi, non imperdiet tellus dui quis urna. Nam ultricies enim id purus suscipit laoreet. Vivamus vel efficitur ex. Curabitur et maximus est. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas ultrices efficitur massa eget suscipit. Nunc lacinia dolor ut semper malesuada. Aliquam tellus ante, aliquam et dolor et, mollis imperdiet erat. Sed turpis nisi, lacinia nec bibendum et, porta non massa. In imperdiet molestie massa at posuere. Pellentesque ac turpis massa. Curabitur malesuada felis et lectus blandit, sit amet finibus nunc gravida. Nunc volutpat venenatis faucibus. Donec non cursus elit. Aenean bibendum ut sem eget bibendum.
-            <br>
-            <br>
-             Nam est massa, facilisis nec nisi in, vehicula sollicitudin nisl. Ut vitae felis in tellus pharetra ultricies at quis ante. Mauris at eros erat. Nullam aliquam libero quis sapien vehicula interdum. Nunc non dictum ex. Pellentesque arcu nunc, iaculis sed consectetur nec, suscipit eu nunc. Donec ut felis quis ante molestie maximus. Nam suscipit pretium massa hendrerit euismod. Suspendisse viverra elementum orci.
-            <br>
-            <br>
-             Sed ac lacus ullamcorper, porttitor purus ut, placerat ipsum. Ut hendrerit tortor sit amet lectus dictum, in luctus est posuere. Pellentesque semper magna eget nibh feugiat lobortis. Vivamus tincidunt placerat orci, non sodales est pharetra id. Suspendisse fringilla odio id feugiat semper. Nunc vulputate ligula augue. Cras mattis, est at euismod varius, tortor tellus rutrum est, sit amet congue dolor mauris eu sem. Aliquam mi quam, condimentum eu odio non, placerat efficitur diam. Quisque laoreet sollicitudin velit, vitae interdum magna. Curabitur luctus auctor mauris nec suscipit.</p>
+          <div class="c-inline-note__content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam varius magna mi. Mauris a tempor metus. Sed vel nisl justo. Integer ac orci tincidunt, ornare massa eu, suscipit mauris. Vestibulum ac eleifend massa. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras at egestas est, congue scelerisque libero. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras venenatis lacinia est. Sed commodo, purus volutpat euismod consequat, ante sem euismod turpis, sit amet ultricies nulla sapien sed massa.</p>
+            <p>Vivamus scelerisque, arcu sollicitudin lacinia volutpat, diam urna sollicitudin mi, non imperdiet tellus dui quis urna. Nam ultricies enim id purus suscipit laoreet. Vivamus vel efficitur ex. Curabitur et maximus est. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas ultrices efficitur massa eget suscipit. Nunc lacinia dolor ut semper malesuada. Aliquam tellus ante, aliquam et dolor et, mollis imperdiet erat. Sed turpis nisi, lacinia nec bibendum et, porta non massa. In imperdiet molestie massa at posuere. Pellentesque ac turpis massa. Curabitur malesuada felis et lectus blandit, sit amet finibus nunc gravida. Nunc volutpat venenatis faucibus. Donec non cursus elit. Aenean bibendum ut sem eget bibendum.</p>
+            <p>Nam est massa, facilisis nec nisi in, vehicula sollicitudin nisl. Ut vitae felis in tellus pharetra ultricies at quis ante. Mauris at eros erat. Nullam aliquam libero quis sapien vehicula interdum. Nunc non dictum ex. Pellentesque arcu nunc, iaculis sed consectetur nec, suscipit eu nunc. Donec ut felis quis ante molestie maximus. Nam suscipit pretium massa hendrerit euismod. Suspendisse viverra elementum orci.</p>
+            <p>Sed ac lacus ullamcorper, porttitor purus ut, placerat ipsum. Ut hendrerit tortor sit amet lectus dictum, in luctus est posuere. Pellentesque semper magna eget nibh feugiat lobortis. Vivamus tincidunt placerat orci, non sodales est pharetra id. Suspendisse fringilla odio id feugiat semper. Nunc vulputate ligula augue. Cras mattis, est at euismod varius, tortor tellus rutrum est, sit amet congue dolor mauris eu sem. Aliquam mi quam, condimentum eu odio non, placerat efficitur diam. Quisque laoreet sollicitudin velit, vitae interdum magna. Curabitur luctus auctor mauris nec suscipit.</p>
+          </div>
+
+          <button class="c-btn--primary c-btn c-inline-note__print-btn" type="button" name="button">Print Note</button>
+          <button class="c-btn--primary c-btn c-inline-note__clear-btn" type="button" name="button">Clear All Notes</button>
+
+          <div class="c-inline-note__all-notes">
+            <ol class="c-list c-list--ol c-inline-note__list">
+              <!--<li class="c-list&#45;&#45;ol__item">-->
+                <!--<p></p>-->
+              <!--</li>-->
+            </ol>
+          </div>
+
+          <!-- Invalid alert message -->
+          <div class="c-inline-note__alert">
+            <i class="fa fa-exclamation-triangle fa-2x" aria-hidden="true"></i>
+            <p>Cannot add note to selected section.</p>
+            <p><small><em>(Keep your selection within a single HTML tag)</em></small></p>
+            <span class="c-alert__close-alert"><i class="fa fa-times"></i></span>
+          </div>
+
+          <div class="c-inline-note__alert-bg"></div>
         </div>
       </div>
     </div>
+
+
+
+
 
     <!-- code well markup -->
     <div class="o-grid o-grid--gutters o-medium-grid--full">
