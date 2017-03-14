@@ -1,0 +1,11 @@
+//Eureka Rose Override filesa for buttons
+
+/* Button
+   ==========================================================================
+*/
+
+.c-btn {
+    &[disabled] {
+      background-color: transparentize($secondary-dark-color, 0.75);
+    }
+}
