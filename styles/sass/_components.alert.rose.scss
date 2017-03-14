@@ -1,0 +1,24 @@
+//Eureka Rose Overrides for //componenets.alerts.scss
+
+/*=================================================
+	alert component styles
+	================================================*/
+$alert-success: #B4EE98;
+$alert-caution: #EDEE98;
+$alert-warning: #FF707E;
+
+
+.c-alert {
+	&--success {
+		@extend .c-alert;
+		background-color: $alert-success;
+	}
+	&--caution {
+		@extend .c-alert;
+		background-color: $alert-caution;
+	}
+	&--warning {
+		@extend .c-alert;
+		background-color: $alert-warning;
+	}
+}
