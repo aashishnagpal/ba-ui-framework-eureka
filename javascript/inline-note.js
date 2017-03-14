@@ -120,7 +120,6 @@
 
   // remove one note
   function removeNote() {
-    console.log('remove ' + activeIndex);
     if (activeIndex === undefined) return;
 
     remove(activeIndex);
