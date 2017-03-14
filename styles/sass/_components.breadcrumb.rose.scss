@@ -1,0 +1,15 @@
+//Eureka Rose Overrides for breadcrumbs
+.c-breadcrumb {
+    &__a--rbn {
+        &:hover {
+            //changed
+            background-color: transparentize($primary-color, 0.3);
+        }
+    }
+    &__li--rbn:not(:first-child)>a:hover::before {
+        border-color: transparentize($primary-color, 0.3) transparentize($primary-color, 0.3) transparentize($primary-color, 0.3) transparent;
+    }
+    &__li--rbn:not(:last-child)>a:hover::after {
+        border-left: 1em solid transparentize($primary-color, 0.3);
+    }
+}
