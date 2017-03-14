@@ -1,0 +1,7 @@
+//Eureka Rose Overrides for componenet Dropdown
+
+.c-dropdown__list-item {
+  &:hover {
+      background-color: transparentize(#FBEEF4, 0.75);
+  }
+}
