@@ -34,24 +34,6 @@
 
           <button class="c-btn--primary c-btn c-inline-note__print-btn" type="button" name="button">Print Note</button>
           <button class="c-btn--primary c-btn c-inline-note__clear-btn" type="button" name="button">Clear All Notes</button>
-
-          <div class="c-inline-note__all-notes">
-            <ol class="c-list c-list--ol c-inline-note__list">
-              <!--<li class="c-list&#45;&#45;ol__item">-->
-                <!--<p></p>-->
-              <!--</li>-->
-            </ol>
-          </div>
-
-          <!-- Invalid alert message -->
-          <div class="c-inline-note__alert">
-            <i class="fa fa-exclamation-triangle fa-2x" aria-hidden="true"></i>
-            <p>Cannot add note to selected section.</p>
-            <p><small><em>(Keep your selection within a single HTML tag)</em></small></p>
-            <span class="c-alert__close-alert"><i class="fa fa-times"></i></span>
-          </div>
-
-          <div class="c-inline-note__alert-bg"></div>
         </div>
       </div>
     </div>
@@ -70,8 +52,33 @@
           </div>
           <div class="c-collapse__content-container c-collapse__content-container--dark">
             <div class="c-collapse__content--prism-code-style">
-  <pre class="u-pre--wrap"><code class="language-markup">
-  </code></pre>
+<pre class="u-pre--wrap"><code class="language-markup">&lt;!--Example code of a note--&gt;
+&lt;span class=&quot;c-inline-note__highlight&quot; id=&quot;hl0&quot;&gt;
+  selected text
+  &lt;span class=&quot;c-inline-note__note-wrap&quot; id=&quot;nWrap0&quot;&gt;
+    &lt;textarea id=&quot;note0&quot;&gt;&lt;/textarea&gt;
+    &lt;span class=&quot;c-inline-note__remove-btn&quot;&gt;remove&lt;/span&gt;
+  &lt;/span&gt;
+&lt;/span&gt;
+
+&lt;!--Print note button--&gt;
+&lt;button class=&quot;c-btn--primary c-btn c-inline-note__print-btn&quot; type=&quot;button&quot; name=&quot;button&quot;&gt;Print Note&lt;/button&gt;
+
+
+&lt;!--Clear all notes button--&gt;
+&lt;button class=&quot;c-btn--primary c-btn c-inline-note__clear-btn&quot; type=&quot;button&quot; name=&quot;button&quot;&gt;Clear All Notes&lt;/button&gt;
+
+&lt;!--All notes are printed out in an order list--&gt;
+&lt;div class=&quot;c-inline-note__all-notes&quot;&gt;
+  &lt;ol class=&quot;c-list c-list--ol c-inline-note__list&quot;&gt;
+    &lt;!--Notes--&gt;
+    &lt;li class=&quot;c-list__item c-list--ol__item&quot;&gt;
+      &lt;span class=&quot;c-inline-note__list-selected-txt&quot;&gt;Selected Text&lt;/span&gt;
+      : Note content
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</code></pre>
             </div>
           </div>
         </div>

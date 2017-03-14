@@ -6,7 +6,6 @@
    ========================================================================== */
 
 .c-inline-note__highlight {
-  //text-decoration: underline solid blue;
   border-bottom: 2px solid $primary-light-color;
   cursor: pointer;
   position: relative;
@@ -20,8 +19,6 @@
   position: absolute;
   top: -8em;
   left: -50%;
-  //width: 12em;
-  //height: 7em;
   border: 1px solid $secondary-color;
   border-radius: 3px;
   padding: 0.3em;
@@ -53,124 +50,7 @@
   }
 }
 
-.c-inline-note__print-btn:disabled {
-  cursor: not-allowed;
-}
 
 .c-inline-note__list-selected-txt {
   color: $primary-dark-color;
-}
-
-.c-inline-note__alert {
-  visibility: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 1.5em 1em 0.5em 1em;
-  border-radius: 0.2em;
-  position: fixed;
-  top: 25%;
-  left: 50%;
-  z-index: 50;
-  text-align: center;
-  cursor: pointer;
-  transform: translate(-50%, 0);
-  color: $generic-white-color;
-  background-color: $bookmarklet-warning-color;
-
-  &--in {
-    animation: alert-pop-in 0.35s forwards ease-in-out;
-  }
-
-  &--out {
-    animation: alert-pop-out 0.35s forwards cubic-bezier(0.7, -0.43, 0.34, 0.76);
-  }
-
-  & p {
-    margin-top: 0.5em;
-    font-size: 1.1em;
-    width: 100%;
-  }
-  & i {
-    color: lighten($bookmarklet-warning-color, 15);
-    width: 100%
-  }
-}
-
-.c-inline-note__alert-bg {
-  visibility: hidden;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-  position: fixed;
-  top: 0;
-  left: 0;
-  cursor: pointer;
-  background-color: transparentize($generic-black-color, 0.25);
-
-  &--in {
-    animation: bg-fade-in 0.35s forwards ease-in-out;
-  }
-
-  &--out {
-    animation: bg-fade-out 0.2s forwards ease;
-  }
-}
-
-@keyframes alert-pop-in {
-  0% {
-    visibility: visible;
-  }
-  1% {
-    top: 28%;
-    opacity: 0;
-  }
-  100% {
-    top: 25%;
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
-@keyframes bg-fade-in {
-  0% {
-    visibility: visible;
-  }
-  1% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    visibility: visible;
-  }
-}
-
-@keyframes alert-pop-out {
-  0% {
-    top: 25%;
-    opacity: 1;
-  }
-  80% {
-    opacity: 0;
-  }
-  90% {
-    top: 5%;
-    opacity: 0;
-  }
-  100% {
-    visibility: hidden;
-  }
-}
-
-@keyframes bd-fade-out {
-  0% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 0
-  }
-  100% {
-    visibility: hidden;
-  }
 }
