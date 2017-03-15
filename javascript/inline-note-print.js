@@ -7,7 +7,6 @@
       noteList.removeChild(noteList.lastChild);
     }
     for (var prop in notes){
-      // console.log(notes[prop].selectedText + ": " + notes[prop].note);
       var listItem = document.createElement('li');
       var listSelectedTxt = document.createElement('span');
       listItem.classList.add('c-list__item', 'c-list--ol__item');
