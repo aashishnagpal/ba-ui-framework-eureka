@@ -1,0 +1,54 @@
+/* ==========================================================================
+   Inline note component styles
+   ========================================================================== */
+
+
+.c-inline-note__highlight {
+  border-bottom: 2px solid $primary-light-color;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+}
+
+.c-inline-note__note-wrap {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  position: absolute;
+  border: 1px solid $secondary-color;
+  border-radius: 3px;
+  width: 11em;
+  height: 7.5em;
+  padding: 0.3em;
+  font-size: 0.9em;
+  background-color: $generic-gray-color;
+  z-index: 1000;
+
+  > textarea {
+    width: 10em;
+    height: 5em;
+    resize: none;
+    padding: 0.3em 0.5em;
+    border: 1px solid $secondary-color;
+    color: lighten($generic-black-color, 40%);
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .c-inline-note__remove-btn {
+    color: $primary-dark-color;
+    margin-top: 0.3em;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $primary-dark-color;
+    }
+  }
+}
+
+
+.c-inline-note__list-selected-txt {
+  color: $primary-dark-color;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Eureka CSS UI Framework</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../styles/css/eureka.css">
+  <link rel="stylesheet" href="../prism/prism.css">
+</head>
+<body>
+
+  <section class="website-components__component" id="inline-note">
+
+    <h3>Inline Note Taking</h3>
+    <p>This component is created to add inline note while reading. All notes can be opened in a separate page for printing or saving.</p>
+    <p>Wrap all contents that you want to add note to in the <code class="language-markup">c-inline-note</code> class. To create a new note, select some text and use keyboard shortcut <code class="language-markup">Shift+Control+0</code>. The selected text will be underlined in blue and a note area will pop out. To close a note, click the selected text or the window other than the note area. To reopen a note, click the selected text. To delete one single note, open the note first, then click the "remove" button. Click "Clear All Notes" button to remove all. Click "Print Note" button to open all notes on a separate page.</p>
+    <p>NOTE: for now you can only add note to text that is inside of a single HTML tag. If selected text is in different tags, a warning will pop out.</p>
+
+    <br>
+
+    <!-- component example grid container -->
+    <div class="o-grid o-grid--gutters o-medium-grid--full">
+      <div class="o-grid__cell">
+        <!-- component examples here -->
+        <div class="c-inline-note-wrap">
+          <h4>Sample Text</h4>
+          <div class="c-inline-note">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam varius magna mi. Mauris a tempor metus. Sed vel nisl justo. Integer ac orci tincidunt, ornare massa eu, suscipit mauris. Vestibulum ac eleifend massa. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras at egestas est, congue scelerisque libero. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras venenatis lacinia est. Sed commodo, purus volutpat euismod consequat, ante sem euismod turpis, sit amet ultricies nulla sapien sed massa.</p>
+            <p>Vivamus scelerisque, arcu sollicitudin lacinia volutpat, diam urna sollicitudin mi, non imperdiet tellus dui quis urna. Nam ultricies enim id purus suscipit laoreet. Vivamus vel efficitur ex. Curabitur et maximus est. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas ultrices efficitur massa eget suscipit. Nunc lacinia dolor ut semper malesuada. Aliquam tellus ante, aliquam et dolor et, mollis imperdiet erat. Sed turpis nisi, lacinia nec bibendum et, porta non massa. In imperdiet molestie massa at posuere. Pellentesque ac turpis massa. Curabitur malesuada felis et lectus blandit, sit amet finibus nunc gravida. Nunc volutpat venenatis faucibus. Donec non cursus elit. Aenean bibendum ut sem eget bibendum.</p>
+            <p>Nam est massa, facilisis nec nisi in, vehicula sollicitudin nisl. Ut vitae felis in tellus pharetra ultricies at quis ante. Mauris at eros erat. Nullam aliquam libero quis sapien vehicula interdum. Nunc non dictum ex. Pellentesque arcu nunc, iaculis sed consectetur nec, suscipit eu nunc. Donec ut felis quis ante molestie maximus. Nam suscipit pretium massa hendrerit euismod. Suspendisse viverra elementum orci.</p>
+            <p>Sed ac lacus ullamcorper, porttitor purus ut, placerat ipsum. Ut hendrerit tortor sit amet lectus dictum, in luctus est posuere. Pellentesque semper magna eget nibh feugiat lobortis. Vivamus tincidunt placerat orci, non sodales est pharetra id. Suspendisse fringilla odio id feugiat semper. Nunc vulputate ligula augue. Cras mattis, est at euismod varius, tortor tellus rutrum est, sit amet congue dolor mauris eu sem. Aliquam mi quam, condimentum eu odio non, placerat efficitur diam. Quisque laoreet sollicitudin velit, vitae interdum magna. Curabitur luctus auctor mauris nec suscipit.</p>
+          </div>
+
+          <button class="c-btn--primary c-btn c-inline-note__print-btn" type="button" name="button">Print Note</button>
+          <button class="c-btn--primary c-btn c-inline-note__clear-btn" type="button" name="button">Clear All Notes</button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- code well markup -->
+    <div class="o-grid o-grid--gutters o-medium-grid--full">
+      <div class="o-grid__cell">
+        <div class="c-collapse">
+          <div class="c-collapse__controls-container--justified-text">
+            <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+            <a class="c-collapse__toggle">toggle markup</a>
+          </div>
+          <div class="c-collapse__content-container c-collapse__content-container--dark">
+            <div class="c-collapse__content--prism-code-style">
+<pre class="u-pre--wrap"><code class="language-markup">&lt;!--Example code of a note--&gt;
+&lt;span class=&quot;c-inline-note__highlight&quot; id=&quot;hl0&quot;&gt;
+  selected text
+  &lt;span class=&quot;c-inline-note__note-wrap&quot; id=&quot;nWrap0&quot;&gt;
+    &lt;textarea id=&quot;note0&quot;&gt;&lt;/textarea&gt;
+    &lt;span class=&quot;c-inline-note__remove-btn&quot;&gt;remove&lt;/span&gt;
+  &lt;/span&gt;
+&lt;/span&gt;
+
+&lt;!--Print note button--&gt;
+&lt;button class=&quot;c-btn--primary c-btn c-inline-note__print-btn&quot; type=&quot;button&quot; name=&quot;button&quot;&gt;Print Note&lt;/button&gt;
+
+
+&lt;!--Clear all notes button--&gt;
+&lt;button class=&quot;c-btn--primary c-btn c-inline-note__clear-btn&quot; type=&quot;button&quot; name=&quot;button&quot;&gt;Clear All Notes&lt;/button&gt;
+
+&lt;!--All notes are printed out in an order list--&gt;
+&lt;div class=&quot;c-inline-note__all-notes&quot;&gt;
+  &lt;ol class=&quot;c-list c-list--ol c-inline-note__list&quot;&gt;
+    &lt;!--Notes--&gt;
+    &lt;li class=&quot;c-list__item c-list--ol__item&quot;&gt;
+      &lt;span class=&quot;c-inline-note__list-selected-txt&quot;&gt;Selected Text&lt;/span&gt;
+      : Note content
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end codewell markup -->
+
+  </section>
+
+
+  <script src="../javascript/inline-note.js"></script>
+  <script src="../javascript/collapse.js"></script>
+  <script src="../prism/prism.js"></script>
+</body>
+</html>
