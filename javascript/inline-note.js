@@ -13,7 +13,6 @@
     if (window.getSelection().rangeCount > 0) {
       var selectedRange = window.getSelection().getRangeAt(0);
       var selectedStartContainer = selectedRange.startContainer;
-
       if (inlineNote.contains(selectedStartContainer)) {
         if (selectedRange.startContainer === selectedRange.endContainer &&
             selectedRange.startOffset !== selectedRange.endOffset) {
@@ -49,11 +48,9 @@
 
           // add openNote function to highlighted span
           highlight.addEventListener('click', function(e) {
-            var highlightId = this.getAttribute('id');
-            if (highlightId.slice(2) === "" + activeIndex) return;
             // prevent click event propagates to body and closes the note area
             e.stopPropagation();
-            openNote(highlightId);
+            openNote(this);
           });
 
           // add removeNote function to rmBtn
@@ -66,6 +63,9 @@
           noteWrap.addEventListener('click', function(e) {
             e.stopPropagation();
           });
+
+          // place the note
+          placeNote(selectedRange, activeIndex);
         } else {
           // * Originally from bookmarklet.js *
           var alertNumber = document.querySelectorAll('.c-bookmarklet__alert--warning').length;
@@ -94,11 +94,47 @@
       }
     }
   }
+
+  function placeNote(ele, i) {
+    if (i === undefined) return;
+
+    // get position of selectedRange and dimension of noteWrap
+    var bodyWidth = document.body.clientWidth;
+    var selectedTop = ele.getClientRects()[0].top;
+    var selectedLeft = ele.getClientRects()[0].left;
+    var selectedHeight = ele.getClientRects()[0].height;
+    var activeNWrap = document.getElementById('nWrap' + i);
+
+    // set noteWrap position based on selectedRange's position
+    // Goes to top or bottom
+    if (selectedTop < 170) { // 170 = height of noteWrap + margin to selected\
+      activeNWrap.style.top = (selectedHeight + 12) + 'px';
+    } else {
+      console.log('else');
+      activeNWrap.style.top = -120 + 'px';
+      // 120 = height of noteWrap + margin to selected
+    }
+
+    // Aligns left or right
+    if ((selectedLeft + 190) >= bodyWidth) { //align right
+      activeNWrap.style.right = 0;
+      activeNWrap.style.left = 'auto';
+    } else { //align left
+      activeNWrap.style.left = 0;
+    }
+  }
   
-  function openNote(highlightId) {
+  function openNote(highlighted) {
     closeNote(); // close opened note
+    var highlightId = highlighted.getAttribute('id');
     var i = highlightId.slice(2);
-    document.getElementById('nWrap' + i).style.display = 'flex';
+    if (i === '' + activeIndex) return;
+
+    var activeNWrap = document.getElementById('nWrap' + i);
+    activeNWrap.style.display = 'flex';
+
+    placeNote(highlighted, i);
+
     activeIndex = i;
   }
   
@@ -152,6 +188,11 @@
       bg.remove();
     });
   }
+
+  window.addEventListener('resize', function() {
+    var highlighted = document.getElementById('hl' + activeIndex);
+    placeNote(highlighted, activeIndex);
+  });
 
   document.body.addEventListener('click', closeNote);
 

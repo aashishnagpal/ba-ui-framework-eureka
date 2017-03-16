@@ -15,26 +15,26 @@
   flex-flow: column;
   align-items: center;
   position: absolute;
-  top: -8em;
-  left: -50%;
   border: 1px solid $secondary-color;
   border-radius: 3px;
+  width: 11em;
+  height: 7.5em;
   padding: 0.3em;
   font-size: 0.9em;
   background-color: $generic-gray-color;
+  z-index: 1000;
 
   > textarea {
     width: 10em;
     height: 5em;
     resize: none;
     padding: 0.3em 0.5em;
-    border-color: $secondary-color;
+    border: 1px solid $secondary-color;
     color: lighten($generic-black-color, 40%);
 
     &:focus {
       outline: none;
     }
-
   }
 
   .c-inline-note__remove-btn {
