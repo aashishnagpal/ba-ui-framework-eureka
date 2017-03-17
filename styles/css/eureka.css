@@ -3665,139 +3665,6 @@ h6 {
   border: 2px solid rgba(48, 53, 59, 0.3);
 }
 
-/* line 1, ../sass/_components.login.scss */
-.login-container {
-  background: -webkit-linear-gradient(#bdbdbd, #bdbdbd 21%, #42aec8 21%, #42aec8 77%, #bdbdbd 77%, #bdbdbd);
-  background: linear-gradient(#bdbdbd, #bdbdbd 21%, #42aec8 21%, #42aec8 77%, #bdbdbd 77%, #bdbdbd);
-  background-color: #a4a4a4;
-  border-radius: 10px;
-  box-shadow: 5px 5px 5px 1px #212121;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 387px;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  width: 400px;
-}
-
-/* line 14, ../sass/_components.login.scss */
-.login-form {
-  font-family: "Roboto", "Helvetica", sans-serif;
-  font-size: 1.3rem;
-  height: 79%;
-  position: relative;
-}
-
-/* line 21, ../sass/_components.login.scss */
-.login-header {
-  color: #f3f3f3;
-  font: "Roboto Light", "Helvetica Light", "Roboto", "Helvetica", sans-serif;
-  font-weight: 300;
-  height: 21%;
-  padding-left: 10%;
-  padding-top: 3%;
-}
-
-/* line 30, ../sass/_components.login.scss */
-.login-span-input {
-  width: 100%;
-  display: block;
-  height: 10%;
-  color: #212121;
-  font-size: 0.85rem;
-  font-weight: 400;
-  margin-top: 3.5%;
-  margin-bottom: 3%;
-}
-/* line 39, ../sass/_components.login.scss */
-.login-span-input label {
-  display: inline-block;
-  width: 39%;
-  margin-left: 8%;
-}
-
-/* line 46, ../sass/_components.login.scss */
-.login-email-password {
-  -webkit-align-self: flex-end;
-      -ms-flex-item-align: end;
-          align-self: flex-end;
-  display: inline-block;
-  width: 50%;
-  max-width: 100%;
-  height: 95%;
-  border-radius: 0.25rem;
-}
-
-/* line 55, ../sass/_components.login.scss */
-.login-keep-login-span {
-  display: block;
-  font: "Roboto Light", "Helvetica Light", "Roboto", "Helvetica", sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-  padding-left: 45%;
-}
-
-/* line 63, ../sass/_components.login.scss */
-.login-keep-checkbox {
-  margin-left: 3%;
-  background-color: rgba(215, 215, 215, 0.9);
-}
-
-/* line 68, ../sass/_components.login.scss */
-.login-forgot-password {
-  position: absolute;
-  bottom: 29%;
-  right: 0;
-}
-
-/* line 74, ../sass/_components.login.scss */
-.login-form-buttons-span {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  position: absolute;
-  bottom: 4.5%;
-  -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  padding-right: 12%;
-}
-
-/* line 83, ../sass/_components.login.scss */
-.login-form-register-button, .login-form-login-button {
-  background-color: #a4a4a4;
-  display: inline-block;
-  font-size: 70%;
-  max-width: 50%;
-}
-
-/* line 90, ../sass/_components.login.scss */
-.login-form-login-button {
-  background-color: #42aec8;
-  margin-left: 3%;
-  max-width: 50%;
-}
-
-/* line 97, ../sass/_components.login.scss */
-.login-register-link {
-  margin: 0;
-  line-height: inherit;
-  padding: 0;
-  padding-bottom: 2%;
-}
-
 /* line 1, ../sass/_components.thumbnail.scss */
 .c-thumbnails-row--desc {
   -webkit-box-align: end;
@@ -5637,6 +5504,70 @@ button.c-sif__btn--next:hover {
 /* line 74, ../sass/_components.showcase.scss */
 .showcase-filter-movieposter {
   border: 5px solid red;
+}
+
+/* ==========================================================================
+   Inline note component styles
+   ========================================================================== */
+/* line 6, ../sass/_components.inline-note.scss */
+.c-inline-note__highlight {
+  border-bottom: 2px solid #a1deec;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+}
+
+/* line 13, ../sass/_components.inline-note.scss */
+.c-inline-note__note-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  border: 1px solid #bdbdbd;
+  border-radius: 3px;
+  width: 11em;
+  height: 7.5em;
+  padding: 0.3em;
+  font-size: 0.9em;
+  background-color: #f3f3f3;
+  z-index: 1000;
+}
+/* line 27, ../sass/_components.inline-note.scss */
+.c-inline-note__note-wrap > textarea {
+  width: 10em;
+  height: 5em;
+  resize: none;
+  padding: 0.3em 0.5em;
+  border: 1px solid #bdbdbd;
+  color: #878787;
+}
+/* line 35, ../sass/_components.inline-note.scss */
+.c-inline-note__note-wrap > textarea:focus {
+  outline: none;
+}
+/* line 40, ../sass/_components.inline-note.scss */
+.c-inline-note__note-wrap .c-inline-note__remove-btn {
+  color: #42aec8;
+  margin-top: 0.3em;
+  -webkit-transition: color 0.2s;
+          transition: color 0.2s;
+}
+/* line 45, ../sass/_components.inline-note.scss */
+.c-inline-note__note-wrap .c-inline-note__remove-btn:hover {
+  color: #42aec8;
+}
+
+/* line 52, ../sass/_components.inline-note.scss */
+.c-inline-note__list-selected-txt {
+  color: #42aec8;
 }
 
 /* line 1, ../sass/_footer.scss */
