@@ -12,6 +12,8 @@ window.addEventListener("load", function () {
       this.furlBorder = document.getElementById("c-herald__furled-border");
       this.rbn = document.getElementById("c-herald__ribbon");
       this.messageHeight = this.content.offsetHeight;
+      this.pLength = document.querySelectorAll(".c-herald__message p").length;
+      this.trigger.children[0].innerHTML = this.pLength;
       this.triggerValue = this.trigger.innerHTML;
     },
     bindEvent: function () {
@@ -20,12 +22,15 @@ window.addEventListener("load", function () {
     announce: function () {
       this.component.classList.toggle("announce");
       this.rbn.classList.toggle("lengthen");
-      this.trigger.innerHTML = "X";
+
       if (!this.component.classList.contains("announce")) {
         this.trigger.innerHTML = this.triggerValue;
-      } else if (document.querySelector(".announce") !== null) {
-        document.querySelector(".announce").style.height = this.messageHeight + "px";
+        this.component.style.height = 0;
+      } else {
+        this.trigger.innerHTML = "X";
+        this.component.style.height = this.messageHeight + "px";
       }
+
     },
     loadStyles: function () {
       this.component.classList.remove('no-js');

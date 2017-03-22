@@ -5,7 +5,7 @@
     height: 0;
     overflow: hidden;
     position: relative;
-    transition: border-top 1s 1.5s;
+    transition: border-top 1s 1.5s, height 1s;
     width: 29em;
   &__furled-border {
     border-radius: 50%;
@@ -39,6 +39,10 @@
   }
   &__message {
     width: 25em;
+    & a {
+      color: $primary-color;
+      padding: 0;
+    }
   }
   &__trigger {
     float: left;
@@ -50,32 +54,28 @@
 }
 
 .c-herald.announce {
-  border-top: .5em solid $primary-dark-color
+  border-top: .5em solid $primary-dark-color;
+  & > .c-herald__furled-border {
+    animation: unfurl 1s .8s cubic-bezier(1, 0.66, 0.56, 0.93) forwards;
+  }
+  & > .c-herald__content {
+    transform: translateY(0) !important;
+    transition: 1s 1.5s;
+  }
 }
 
-.c-herald.announce > .c-herald__furled-border {
-  animation: unfurl 1s .8s cubic-bezier(1, 0.66, 0.56, 0.93) forwards;
-}
-
-.c-herald.announce > .c-herald__content {
-  transform: translateY(0) !important;
-  transition: 1s 1.5s;
-}
 
 .c-herald.no-js {
-  animation: accessible 1s linear forwards;
+  animation: accessible 2.5s linear forwards;
+  & > .c-herald__furled-border {
+    box-shadow: none;
+    opacity: 1;
+  }
+  & > .c-herald__ribbon {
+    border-style: solid;
+    transform: translateY(0);
+  }
 }
-
-.c-herald.no-js > .c-herald__furled-border {
-  box-shadow: none;
-  opacity: 1;
-}
-
-.c-herald.no-js > .c-herald__ribbon {
-  border-style: solid;
-  transform: translateY(0);
-}
-
 
 @keyframes accessible {
   0% {
