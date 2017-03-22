@@ -1,9 +1,8 @@
 .login-container {
-    background: linear-gradient($secondary-color, $secondary-color 21%, $primary-dark-color 21%, $primary-dark-color 77%, $secondary-color 77%, $secondary-color);
+    background: linear-gradient($secondary-light-color, $secondary-light-color 21%, $primary-color 21%, $primary-color 77%, $secondary-light-color 77%, $secondary-color);
     //fallback is no gradient support
-    background-color: $secondary-dark-color;
+    background-color: $secondary-color;
     border-radius: 10px;
-    box-shadow: 5px 5px 5px 1px $generic-black-color;
     display: flex;
     flex-direction: column;
     height: 387px;
@@ -19,7 +18,7 @@
 }
 
 .login-header {
-    color: $generic-gray-color;
+    color: $generic-black-color;
     font: $roboto-light-font-family;
     font-weight: 300;
     height: 21%;
@@ -69,6 +68,10 @@
     position: absolute;
     bottom: 29%;
     right: 0;
+    &:hover {
+        text-decoration: underline;
+        text-decoration-color: $generic-black-color;
+    }
 }
 
 .login-form-buttons-span {
@@ -81,7 +84,7 @@
 }
 
 .login-form-register-button {
-    background-color: $secondary-dark-color;
+    background-color: $secondary-color;
     display: inline-block;
     font-size: 70%;
     max-width: 50%;
@@ -89,7 +92,7 @@
 
 .login-form-login-button {
     @extend .login-form-register-button;
-    background-color: $primary-dark-color;
+    background-color: $primary-color;
     margin-left: 3%;
     max-width: 50%;
 }
