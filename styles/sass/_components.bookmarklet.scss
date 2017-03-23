@@ -68,7 +68,7 @@ $bookmarklet-success-color: #2ecc71;
 }
 
 .c-bookmarklet__bookmark-list-item {
-  padding: 0.5em 2em 0.5em 1em;
+  padding: 0.5em 0.75em 0.5em 1em;
   margin-bottom: 0.5em;
   overflow: hidden;
   white-space: nowrap;
@@ -82,6 +82,10 @@ $bookmarklet-success-color: #2ecc71;
     padding: 0;
     color: $primary-color;
     flex: 1 1 100%;
+    transition: all 0.2s ease;
+    &:hover {
+      color: darken($primary-color, 15);
+    }
   }
 }
 
@@ -102,18 +106,17 @@ $bookmarklet-success-color: #2ecc71;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid 1px darken($generic-gray-color, 3);
-  color: $secondary-dark-color;
+  border: solid 1px $generic-white-color;
+  color: darken($generic-gray-color, 8);
   border-radius: 0.2em;
   padding: 0.4em 0;
-  margin: 1em 34% 0.3em 0;
+  margin: 1em 0 0.3em 34%;
   font-size: 0.75em;
   cursor: pointer;
   transition: all 0.25s ease;
   &:hover {
-    color: $generic-white-color;
-    background-color: $primary-color;
-    border: solid 1px $primary-color;
+    color: darken($generic-gray-color, 15);
+    border: solid 1px $generic-gray-color;
   }
   & i {
     margin-left: 0.5em;
