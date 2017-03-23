@@ -5,11 +5,11 @@
     height: 0;
     overflow: hidden;
     position: relative;
-    transition: border-top 1s 1.5s, height 1s;
+    transition: border-top 1s 1s, height 1s;
     width: 29em;
   &__furled-border {
     border-radius: 50%;
-    box-shadow: inset -0.1em 0.1em 0 0 $primary-dark-color;
+    box-shadow: inset -0.1em 0.1em 0 0 #6C85D9;
     height: .1em;
     opacity: 0;
     position: absolute;
@@ -18,7 +18,7 @@
     z-index: 10;
   }
   &__ribbon {
-    border-color: $primary-dark-color $primary-dark-color transparent $primary-dark-color;
+    border-color: #6C85D9 #6C85D9 transparent #6C85D9;
     border-width: 0 1em .5em 1em;
     border-style: solid;
     height: 14em;
@@ -32,15 +32,24 @@
       transition: transform 1s 1s;
     }
   }
+  &__img {
+    background: url("../../images/bovacad.png");
+    height: 50%;
+    @include background-img;
+    width: 100%;
+  }
   &__content {
     background-color: #f8f8f8;
     display: inline-block;
     padding: 1em;
   }
   &__message {
+    height: 25em;
+    overflow: auto;
+    padding-bottom: 1em;
     width: 25em;
     & a {
-      color: $primary-color;
+      color: #6C85D9;
       padding: 0;
     }
   }
@@ -50,13 +59,18 @@
     &.clickable {
       cursor: pointer;
     }
+    & .c-chip__media--o {
+      border: 2px solid #6C85D9;
+      color: #6C85D9;
+    }
   }
 }
 
 .c-herald.announce {
-  border-top: .5em solid $primary-dark-color;
+  border-top: .5em solid #6C85D9;
+  height: 25em;
   & > .c-herald__furled-border {
-    animation: unfurl 1s .8s cubic-bezier(1, 0.66, 0.56, 0.93) forwards;
+    animation: unfurl 1s cubic-bezier(1, 0.66, 0.56, 0.93) forwards;
   }
   & > .c-herald__content {
     transform: translateY(0) !important;
@@ -66,7 +80,9 @@
 
 
 .c-herald.no-js {
-  animation: accessible 2.5s linear forwards;
+  // Requires accessible animation to prevent the content from showing on load before the script is finished loading, should a user have JS enabled.
+  animation: accessible 1.5s linear forwards;
+  border-top: .5em solid #6C85D9;
   & > .c-herald__furled-border {
     box-shadow: none;
     opacity: 1;
@@ -79,11 +95,9 @@
 
 @keyframes accessible {
   0% {
-    border-top: 0 solid $primary-dark-color;
     height: 0;
   }
   100% {
-    border-top: .5em solid $primary-dark-color;
     height: auto;
   }
 }
@@ -101,5 +115,26 @@
   }
   100% {
     opacity: 0;
+  }
+}
+
+@media (max-width: 464px) {
+  .c-herald {
+    width: 100%;
+    &__content, &__message {
+      width: 100%;
+    }
+    &__img {
+      background-size: contain;
+    }
+    &.no-js > .c-herald__ribbon {
+      transform: translateY(-14em);
+    }
+  }
+}
+
+@media (min-width: 2000px) {
+  .c-herald {
+    font-size: 1.5em;
   }
 }

@@ -9,7 +9,6 @@ window.addEventListener("load", function () {
       this.component = document.getElementById("c-herald");
       this.content = document.getElementById("c-herald__content");
       this.trigger = document.getElementById("c-herald__trigger");
-      this.furlBorder = document.getElementById("c-herald__furled-border");
       this.rbn = document.getElementById("c-herald__ribbon");
       this.messageHeight = this.content.offsetHeight;
       this.pLength = document.querySelectorAll(".c-herald__message p").length;
@@ -25,12 +24,9 @@ window.addEventListener("load", function () {
 
       if (!this.component.classList.contains("announce")) {
         this.trigger.innerHTML = this.triggerValue;
-        this.component.style.height = 0;
       } else {
         this.trigger.innerHTML = "X";
-        this.component.style.height = this.messageHeight + "px";
       }
-
     },
     loadStyles: function () {
       this.component.classList.remove('no-js');
