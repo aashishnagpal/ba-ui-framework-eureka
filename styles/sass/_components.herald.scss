@@ -34,7 +34,7 @@
   }
   &__img {
     background: url("../../images/bovacad.png");
-    height: 12.5em;
+    height: 50%;
     @include background-img;
     width: 100%;
   }
@@ -124,5 +124,17 @@
     &__content, &__message {
       width: 100%;
     }
+    &__img {
+      background-size: contain;
+    }
+    &.no-js > .c-herald__ribbon {
+      transform: translateY(-14em);
+    }
+  }
+}
+
+@media (min-width: 2000px) {
+  .c-herald {
+    font-size: 1.5em;
   }
 }

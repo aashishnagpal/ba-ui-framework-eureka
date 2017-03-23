@@ -5446,21 +5446,19 @@ $search-second-size-multiplier: .7;
       <section class="website-components__component" id="herald">
 
       <h3>Herald Component</h3>
-      <p>Inspired by the heralds of yore who conveyed a monarch's proclamation, the main attraction of The Herald is the unfurling border and the dropped message with a banner. The component features a 400x200 image (or any 2:1 sized image if scaling up is desired) and a place for textual content. Ideally, The Herald is useful for small listings, although any message size will fit inside The Herald component because the height is determined and set dynamically.</p>
+      <p>Inspired by the heralds of yore who conveyed a monarch's proclamation, the main attraction of The Herald is the unfurling border and the dropped message with a banner. The component features an image with a width and height of 2:1 and a place for textual content. Ideally, The Herald is useful for small listings, although any message size will fit inside The Herald component because the message length is evaluated dynamically.</p>
 
-      <p>To use: <br> <br> I. Copy the markup below, then place announcements inside the <code>c-herald__message</code> tag. Each unique announcement must be placed within <code>&lt;p></code> tags. Next, add the number of announcements inside <code>c-chip__media--o</code>. Inputting the number of announcements is recommended in case users have disabled JavaScript. Note: The number of announcements in <code>c-chip__media--o </code> are based on the number of <code>&lt;p></code> tags. This number is updated dynamically in the event the number of announcements was not inputted.</p>
+      <p>To use: <br> <br>Copy the markup below, then place announcements inside the <code>c-herald__message</code> tag beneath the image. Each unique announcement must be placed within <code>&lt;p></code> tags. Next, add the number of announcements inside <code>c-chip__media--o</code>. Inputting the number of announcements is recommended in case users have disabled JavaScript. Note: The number of announcements in <code>c-chip__media--o </code> are based on the number of <code>&lt;p></code> tags. This number is updated dynamically in the event the number of announcements was not inputted.</p>
 
-      <p>II. The ideal size image is 400x200 pixels for the normal-size component. For a larger Herald, scale up the component by setting a larger font-size on <code>c-herald</code>, then use a 2:1 sized image that is proportionate to the larger component. For example, if a font-size of 2em is added as a property to <code>c-herald</code>, the image should be doubled to 800x400 pixels.</p>
+      <p> Include an image with the ideal size of 2:1 or a size that is near that ratio. The component’s width is fluid and should scale up and down.</p>
 
-      <p>Accessibility: In the event a user disables JavaScript, The Herald and all content inside it will be shown. There will be no animation and dynamic counting of a message's <code>&lt;p></code> tag, however. This is due to the nature of how the component resizes based on the message element's offsetHeight value.</p>
-
-      <p>Incompatibilities: <code>border-top</code> of the content div does not display in Safari.</p>
+      <p>Accessibility: In the event a user disables JavaScript, The Herald and all content inside it will still be shown to users. There will be no animation and dynamic counting of a message's <code>&lt;p></code> tag. This is due to the nature of how the component resizes based on a unique message's offsetHeight value.</p>
 
       <!-- component example grid container -->
       <div class="o-grid o-grid--gutters">
         <div class="o-grid__cell">
           <div class="c-herald__trigger c-chip--outlined" id="c-herald__trigger">
-            <span class="c-chip__media--o c-herald-c-chip__media--o">3</span>
+            <span class="c-chip__media--o c-herald-c-chip__media--o">5</span>
             Announcements
           </div>
           <div class="c-herald no-js" id="c-herald">
@@ -5468,10 +5466,12 @@ $search-second-size-multiplier: .7;
             <div class="c-herald__ribbon" id="c-herald__ribbon"></div>
             <div class="c-herald__content" id="c-herald__content">
               <div class="c-herald__message">
-                <img class="c-herald__img" src="https://www.genimg.com/400x200" alt="">
+                <div class="c-herald__img"></div>
                 <p>Drumpf Obama: FBI chief Comey 'rejects' phone tap allegation. <a class="c-herald__anchors" href="#">[Visit BBC.com]</a></p>
                 <p>The Queen is in search of a brawny grape-feeder. <a class="c-herald__anchors" href="#">[Apply Here]</a></p>
                 <p>What a strange world we live in. <a class="c-herald__anchors" href="#">[Find out why]</a></p>
+                <p>The Owl and the Pussy-cat went to sea, In a beautiful pea-green boat <a class="c-herald__anchors" href="https://www.poetryfoundation.org/poems-and-poets/poems/detail/43188">[Where did they go?]</a></p>
+                <p>Will eating melas zomos make you a badass Spartan? <a class="c-herald__anchors" href="https://en.wikipedia.org/wiki/Black_soup">[Find out why]</a></p>
               </div>
             </div>
           </div>
@@ -5489,22 +5489,22 @@ $search-second-size-multiplier: .7;
             <div class="c-collapse__content-container c-collapse__content-container--dark">
               <div class="c-collapse__content--prism-code-style">
               <pre class="u-pre--wrap"><code class="language-markup line-numbers">
-  &lt;div class=&quot;c-herald__trigger c-chip--outlined&quot; id=&quot;c-herald__trigger&quot;&gt;
-    &lt;span class=&quot;c-chip__media--o c-herald-c-chip__media--o&quot;&gt;3&lt;/span&gt;
-    Announcements
-  &lt;/div&gt;
-  &lt;div class=&quot;c-herald no-js&quot; id=&quot;c-herald&quot;&gt;
-    &lt;div class=&quot;c-herald__furled-border&quot; id=&quot;c-herald__furled-border&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;c-herald__ribbon&quot; id=&quot;c-herald__ribbon&quot;&gt;&lt;/div&gt;
-    &lt;div class=&quot;c-herald__content&quot; id=&quot;c-herald__content&quot;&gt;
-      &lt;div class=&quot;c-herald__message&quot;&gt;
-        &lt;img class=&quot;c-herald__img&quot; src=&quot;https://www.genimg.com/400x200&quot; alt=&quot;&quot;&gt;
-        &lt;p&gt;Drumpf Obama: FBI chief Comey &apos;rejects&apos; phone tap allegation. &lt;a class=&quot;c-herald__anchors&quot; href=&quot;#&quot;&gt;[Visit BBC.com]&lt;/a&gt;&lt;/p&gt;
-        &lt;p&gt;The Queen is in search of a brawny grape-feeder. &lt;a class=&quot;c-herald__anchors&quot; href=&quot;#&quot;&gt;[Apply Here]&lt;/a&gt;&lt;/p&gt;
-        &lt;p&gt;What a strange world we live in. &lt;a class=&quot;c-herald__anchors&quot; href=&quot;#&quot;&gt;[Find out why]&lt;/a&gt;&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
+                &lt;div class=&quot;c-herald__trigger c-chip--outlined&quot; id=&quot;c-herald__trigger&quot;&gt;
+                  &lt;span class=&quot;c-chip__media--o c-herald-c-chip__media--o&quot;&gt;5&lt;/span&gt;
+                  Announcements
+                &lt;/div&gt;
+                &lt;div class=&quot;c-herald no-js&quot; id=&quot;c-herald&quot;&gt;
+                  &lt;div class=&quot;c-herald__furled-border&quot; id=&quot;c-herald__furled-border&quot;&gt;&lt;/div&gt;
+                  &lt;div class=&quot;c-herald__ribbon&quot; id=&quot;c-herald__ribbon&quot;&gt;&lt;/div&gt;
+                  &lt;div class=&quot;c-herald__content&quot; id=&quot;c-herald__content&quot;&gt;
+                    &lt;div class=&quot;c-herald__message&quot;&gt;
+                      &lt;div class=&quot;c-herald__img&quot;&gt;&lt;/div&gt;
+                      &lt;p&gt;Text&lt;a class=&quot;c-herald__anchors&quot; href=&quot;#&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+                      &lt;p&gt;Text&lt;a class=&quot;c-herald__anchors&quot; href=&quot;#&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+                      ...
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
               </code></pre>
               </div>
             </div>
