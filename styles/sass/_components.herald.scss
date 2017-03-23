@@ -32,6 +32,12 @@
       transition: transform 1s 1s;
     }
   }
+  &__img {
+    background: url("../../images/bovacad.png");
+    height: 12.5em;
+    @include background-img;
+    width: 100%;
+  }
   &__content {
     background-color: #f8f8f8;
     display: inline-block;
@@ -109,5 +115,14 @@
   }
   100% {
     opacity: 0;
+  }
+}
+
+@media (max-width: 464px) {
+  .c-herald {
+    width: 100%;
+    &__content, &__message {
+      width: 100%;
+    }
   }
 }
