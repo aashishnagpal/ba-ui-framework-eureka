@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tooltips</title>
+  <link rel="stylesheet" href="../prism/prism.css">
+  <link rel="stylesheet" href="../styles/css/eureka.css">
+  <style>
+    .tooltips {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .tooltip-container {
+      background: #f3f3f3;
+      padding: 1em;
+      margin: 0.5em;
+    }
+  </style>
+</head>
+<body>
+
+<section class="website-components__component" id="navs">
+
+  <h3>Tabs</h3>
+  <p>Use Tabs to make it easy to switch between different views.
+  </p>
+
+  <!-- Basic Horizontal Tabs example -->
+  <div class="o-grid o-grid--gutters">
+    <div class="o-grid__cell">
+      <div class="tooltips">
+        <div class="tooltip-container">
+          Left
+          <div class="tooltip" flow="left">Slide from left!</div>
+        </div>
+        <div class="tooltip-container">
+          Above
+          <div class="tooltip" flow="up">Slide from above!</div>
+        </div>
+        <div class="tooltip-container">
+          Below
+          <div class="tooltip" flow="down">Slide from below!</div>
+        </div>
+        <div class="tooltip-container">
+          Right
+          <div class="tooltip" flow="right">Slide from right!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Basic Horizontal Tabs example markup -->
+  <div class="o-grid o-grid--gutters">
+    <div class="o-grid__cell">
+      <div class="c-collapse">
+        <div class="c-collapse__controls-container--justified-text">
+          <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+          <a class="c-collapse__toggle">toggle markup</a>
+        </div>
+        <div class="c-collapse__content-container c-collapse__content-container--dark">
+          <div class="c-collapse__content--prism-code-style">
+            <pre class="u-pre--wrap"><code class="language-markup line-numbers"></code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end Basic Horizontal Tabs example -->
+
+
+</section>
+
+<script src="../prism/prism.js"></script>
+<script src="../javascript/collapse.js"></script>
+<script src="../javascript/tabs.js"></script>
+</body>
+</html>
