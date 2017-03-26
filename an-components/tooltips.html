@@ -6,15 +6,15 @@
   <link rel="stylesheet" href="../styles/css/eureka.css">
   <style>
     .tooltips {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      font-size: 1.5em;
+      text-align: center;
+      margin: 0 auto;
     }
 
     .tooltip-container {
-      background: #f3f3f3;
-      padding: 1em;
-      margin: 0.5em;
+      color: #42aec8;
+      margin-left: 0.1em;
+      margin-right: 0;
     }
   </style>
 </head>
@@ -22,30 +22,39 @@
 
 <section class="website-components__component" id="navs">
 
-  <h3>Tabs</h3>
-  <p>Use Tabs to make it easy to switch between different views.
+  <h3>Tooltips</h3>
+  <p>Use tooltips to display auxiliary/complementary information as a hover over.
   </p>
 
   <!-- Basic Horizontal Tabs example -->
   <div class="o-grid o-grid--gutters">
     <div class="o-grid__cell">
       <div class="tooltips">
-        <div class="tooltip-container">
-          Left
-          <div class="tooltip" flow="left">Slide from left!</div>
-        </div>
-        <div class="tooltip-container">
-          Above
-          <div class="tooltip" flow="up">Slide from above!</div>
-        </div>
-        <div class="tooltip-container">
-          Below
-          <div class="tooltip" flow="down">Slide from below!</div>
-        </div>
-        <div class="tooltip-container">
-          Right
-          <div class="tooltip" flow="right">Slide from right!</div>
-        </div>
+        Hi there! How are you? I have some tooltips for you here.
+        <br>
+        Tooltips can slide in from
+        <span class="tooltip-container">
+          left <!-- You can have any text or HTML content here -->
+          <span class="tooltip" flow="left">Slide from left!</span>
+        </span>, from
+
+        <!-- Tooltip from Above -->
+        <span class="tooltip-container">
+          above <!-- You can have any text or HTML content here -->
+          <span class="tooltip" flow="up">Slide from above!</span>
+        </span>, from
+
+        <!-- Tooltip from Below -->
+        <span class="tooltip-container">
+          below <!-- You can have any text or HTML content here -->
+          <span class="tooltip" flow="down">Slide from below!</span>
+        </span>, or from
+
+        <!-- Tooltip from Right -->
+        <span class="tooltip-container">
+          right <!-- You can have any text or HTML content here -->
+          <span class="tooltip" flow="right">Slide from right!</span>
+        </span>.
       </div>
     </div>
   </div>
@@ -60,7 +69,29 @@
         </div>
         <div class="c-collapse__content-container c-collapse__content-container--dark">
           <div class="c-collapse__content--prism-code-style">
-            <pre class="u-pre--wrap"><code class="language-markup line-numbers"></code></pre>
+            <pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;!-- Tooltip from Left --&gt;
+&lt;div class=&quot;tooltip-container&quot;&gt;
+  Left &lt;!-- You can have any text or HTML content here --&gt;
+  &lt;div class=&quot;tooltip&quot; flow=&quot;left&quot;&gt;Slide from left!&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Tooltip from Above --&gt;
+&lt;div class=&quot;tooltip-container&quot;&gt;
+  Above &lt;!-- You can have any text or HTML content here --&gt;
+  &lt;div class=&quot;tooltip&quot; flow=&quot;up&quot;&gt;Slide from above!&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Tooltip from Below --&gt;
+&lt;div class=&quot;tooltip-container&quot;&gt;
+  Below &lt;!-- You can have any text or HTML content here --&gt;
+  &lt;div class=&quot;tooltip&quot; flow=&quot;down&quot;&gt;Slide from below!&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Tooltip from Right --&gt;
+&lt;div class=&quot;tooltip-container&quot;&gt;
+  Right &lt;!-- You can have any text or HTML content here --&gt;
+  &lt;div class=&quot;tooltip&quot; flow=&quot;right&quot;&gt;Slide from right!&lt;/div&gt;
+&lt;/div&gt;</code></pre>
           </div>
         </div>
       </div>
