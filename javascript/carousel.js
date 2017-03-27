@@ -76,13 +76,13 @@
         slideArray[targetedSlide].classList.add('c-carousel__slide--is-selected');
         if (isSlider) {
           if (targetedSlide > currentSlide || currentSlide === slideArray.length - 1) {
-            slideArray[targetedSlide].classList.add('--slide-next');
-            slideArray[currentSlide].classList.add('--slide-out-left');
-            slideArray[currentSlide].classList.remove('--slide-out-*');
+            slideArray[targetedSlide].classList.add('slide--slide-next');
+            slideArray[currentSlide].classList.add('slide--slide-out-left');
+            slideArray[currentSlide].classList.remove('slide--slide-out-*');
           } else if (targetedSlide < currentSlide) {
-            slideArray[targetedSlide].classList.add('--slide-prev');
-            slideArray[currentSlide].classList.add('--slide-out-right');
-            slideArray[currentSlide].classList.remove('--slide-out-*');
+            slideArray[targetedSlide].classList.add('slide--slide-prev');
+            slideArray[currentSlide].classList.add('slide--slide-out-right');
+            slideArray[currentSlide].classList.remove('slide--slide-out-*');
           }
         }
 
@@ -120,8 +120,8 @@
         if (navDirection === 'next') {
           slideArray[nextIndex].classList.add('c-carousel__slide--is-selected');
           if (isSlider) {
-            slideArray[nextIndex].classList.add('--slide-next');
-            slideArray[currentSlide].classList.add('--slide-out-left');
+            slideArray[nextIndex].classList.add('slide--slide-next');
+            slideArray[currentSlide].classList.add('slide--slide-out-left');
           }
           if (isBulletNav) {
             bulletNavArray[nextIndex].classList.add('c-carousel__bullet-nav-item--is-active');
@@ -132,8 +132,8 @@
         } else {
           slideArray[prevIndex].classList.add('c-carousel__slide--is-selected');
           if (isSlider) {
-            slideArray[prevIndex].classList.add('--slide-prev');
-            slideArray[currentSlide].classList.add('--slide-out-right');
+            slideArray[prevIndex].classList.add('slide--slide-prev');
+            slideArray[currentSlide].classList.add('slide--slide-out-right');
           }
           if (isBulletNav) {
             bulletNavArray[prevIndex].classList.add('c-carousel__bullet-nav-item--is-active');
