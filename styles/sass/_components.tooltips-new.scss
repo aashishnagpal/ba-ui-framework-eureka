@@ -1,0 +1,120 @@
+$flow-properties: (
+    up: (
+        '&':(
+            bottom:calc(100% + 0.35em)
+        ),
+        '&::after': (
+            bottom: -0.8em,
+            border-bottom-width: 0,
+            border-top-color: $primary-color
+        ),
+        '&, &::after': (
+            left: calc(50%),
+            transform: translate(-50%, -.5em)
+        )
+    ),
+    down: (
+        '&':(
+            top: calc(100% + 0.35em)
+        ),
+        '&::after': (
+            top: -0.8em,
+            border-top-width: 0,
+            border-bottom-color: $primary-color
+        ),
+        '&, &::after': (
+            left: 50%,
+            transform: translate(-50%, .5em)
+        )
+    ),
+    left: (
+        '&':(
+            right: calc(100% + 0.35em),
+        ),
+        '&::after': (
+            right: -0.8em,
+            border-right-width: 0,
+            border-left-color: $primary-color,
+        ),
+        '&, &::after': (
+            top: 50%,
+            transform: translate(-.5em, -50%)
+        )
+    ),
+    right: (
+        '&':(
+            left: calc(100% + 0.35em),
+        ),
+        '&::after': (
+            left: -0.8em,
+            border-left-width: 0,
+            border-right-color: $primary-color,
+        ),
+        '&, &::after': (
+            top: 50%,
+            transform: translate(.5em, -50%)
+        )
+    )
+);
+
+.tooltip-container {
+  position: relative;
+
+  @each $flow in map-keys($flow-properties) {
+    &:hover > .tooltip[flow^="#{$flow}"] {
+      opacity: .9;
+      @if $flow == up or $flow == down {
+        transform: translate(-50%, 0);
+      } @else if $flow == left or $flow == right {
+        transform: translate(0, -50%);
+      }
+    }
+  }
+}
+
+.tooltip {
+  display: block;
+  position: absolute;
+  opacity: 0;
+  font-size: 0.9em;
+  min-width: 30ch;
+  max-width: 120ch;
+  z-index: $infinity - 1000;
+  text-align: center;
+  padding: 0.5em 1em;
+  border-radius: 0.2em;
+  box-shadow: 0 1em 2em -.5em rgba(0, 0, 0, 0.35);
+  background: $primary-color;
+  color: $generic-white-color;
+  transition: all 0.5s ease-in-out;
+  pointer-events: none;
+
+  img {
+    max-width: 100%;
+  }
+
+  &::after {
+    content: '';
+    z-index: $infinity - 999;
+    border: 0.4em solid transparent;
+    width: 0;
+    height: 0;
+    position: absolute;
+  }
+
+  @each $flow, $propertyType in $flow-properties {
+    @each $property, $declaration in $propertyType {
+      &[flow^="#{$flow}"] {
+        #{$property} {
+          @each $rule, $value in $declaration {
+            #{$rule}: $value;
+          }
+        }
+      }
+    }
+  }
+
+  &:not([flow]) {
+    @extend .tooltip[flow^="up"]
+  }
+}
