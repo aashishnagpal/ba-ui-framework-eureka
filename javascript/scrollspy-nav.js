@@ -7,7 +7,7 @@
   var fetchScrollToTargets = function () {
     // Fetch navigation list and the anchor tags within it to form the scrollspy checkpoints
     var nav = document.querySelector('[data-scrollspy]');
-    var links = nav.querySelectorAll('a[href]:not([href="#"]');
+    var links = nav.querySelectorAll('a[href]:not([href="#"])');
     var targets = [], testTargets = {};
 
     // Create the target checkpoints array.
