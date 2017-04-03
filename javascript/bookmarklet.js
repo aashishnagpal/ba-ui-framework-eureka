@@ -24,7 +24,7 @@
 
   function _keysDown(e) {
     keysPressed[e.keyCode] = true;
-    // keyboard shortcut Shift(16) + Control(17) + L(76) + M(77) 
+    // keyboard shortcut Shift(16) + Control(17) + L(76) + M(77)
     if (keysPressed[16] && keysPressed[17] && keysPressed[76] && keysPressed[77]) {
       var selectedRange;
       var rangeContainer;
@@ -72,16 +72,15 @@
       var popUpTop = rangeDims[0].top + rangeDims[0].height + 10;
       var popUpLeft = rangeDims[0].left;
       var popUpRight = rangeDims[0].width;
-      var pipPosition = rangeDims[0].width / 3;
+      var pipPosition = rangeDims[0].width / 3.25;
       selectionPopUp.style.top = popUpTop + 'px';
 
       if (pageWidth - 200 < popUpLeft) {
-        // popUpRight = popUpRight - 175;
         selectionPopUp.style.right = popUpRight + 'px';
-        selectionPopUpPip.style.right = pipPosition + 'px';
+        selectionPopUpPip.style.left = 35 + '%';
       } else {
         selectionPopUp.style.left = popUpLeft + 'px';
-        selectionPopUpPip.style.left = pipPosition + 'px';
+        selectionPopUpPip.style.left = pipPosition < 169 ? pipPosition + 'px' : 50 + '%';
       }
 
       selectionPopUp.classList.add('c-bookmarklet__pop-up--is-visible');
