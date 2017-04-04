@@ -1,0 +1,4093 @@
+/**
+ * Import various partials. ordering is important here.
+ */
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700|Source+Sans+Pro");
+/**
+ * Framework wide variables for color
+ */
+/* Table colors */
+/**
+ * Mixins
+ */
+/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Correct the line height in all browsers.
+ * 3. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+/* line 13, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  line-height: 1.15;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 3 */
+  -webkit-text-size-adjust: 100%;
+  /* 3 */ }
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+/* line 27, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+body {
+  margin: 0; }
+
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 35, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+/* line 49, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+/* line 62, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block; }
+
+/**
+ * Add the correct margin in IE 8.
+ */
+/* line 72, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+/* line 81, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 92, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+/* line 105, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */ }
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+/* line 115, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+a:active,
+a:hover {
+  outline-width: 0; }
+
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+/* line 125, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+/* line 135, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+b,
+strong {
+  font-weight: inherit; }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+/* line 144, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 154, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+/* line 165, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+dfn {
+  font-style: italic; }
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+/* line 173, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+/* line 182, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+/* line 191, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 199, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+sub {
+  bottom: -0.25em; }
+
+/* line 203, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 214, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+audio,
+video {
+  display: inline-block; }
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+/* line 223, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+/* line 232, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+img {
+  border-style: none; }
+
+/**
+ * Hide the overflow in IE.
+ */
+/* line 240, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+/* line 252, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+/* line 268, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+/* line 278, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+/* line 289, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */ }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+/* line 300, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+/* line 312, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+/* line 323, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+/* line 336, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+/* line 350, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+/* line 359, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+/* line 368, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+/* line 378, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+/* line 388, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+/* line 397, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+/* line 407, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+/* line 420, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+details,
+menu {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+/* line 429, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+summary {
+  display: list-item; }
+
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+/* line 440, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+canvas {
+  display: inline-block; }
+
+/**
+ * Add the correct display in IE.
+ */
+/* line 448, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+template {
+  display: none; }
+
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+/* line 459, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.normalize.scss */
+[hidden] {
+  display: none; }
+
+/**
+ * Generic box-sizing style
+ */
+/* line 5, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.box-sizing.scss */
+html, body {
+  box-sizing: border-box; }
+
+/* line 9, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.box-sizing.scss */
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/* line 1, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_generic.global.scss */
+body {
+  font-size: 16px;
+  font-family: "Source Sans Pro", "Helvetica", sans-serif;
+  line-height: 1.4; }
+
+/* line 1, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_elements.links.scss */
+a {
+  color: inherit;
+  font-size: 1em;
+  padding: 1em;
+  text-decoration: none; }
+
+/* line 1, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_elements.blockquotes.scss */
+blockquote {
+  border-left: 5px solid #51d0ef;
+  padding: 0.8em 1.3em;
+  margin-bottom: 1em;
+  background-color: #f4f4f4; }
+
+/* line 1, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_elements.lists.scss */
+ul {
+  list-style: none;
+  margin: 0; }
+
+/* line 3, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_elements.headers.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", "Helvetica", sans-serif;
+  font-weight: 400;
+  line-height: 110%;
+  margin: 0.5em 0; }
+
+/* line 15, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_elements.headers.scss */
+h1 {
+  font-size: 3.157em;
+  line-height: 110%; }
+
+/* line 20, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_elements.headers.scss */
+h2 {
+  font-size: 2.369em; }
+
+/* line 24, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_elements.headers.scss */
+h3 {
+  font-size: 1.777em; }
+
+/* line 28, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_elements.headers.scss */
+h4 {
+  font-size: 1.333em; }
+
+/* line 31, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_elements.headers.scss */
+h5 {
+  font-size: 1em; }
+
+/* line 35, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_elements.headers.scss */
+h6 {
+  font-size: 0.75em; }
+
+/* ==========================================================================
+   Responsive grid using Flexbox
+   ========================================================================== */
+/**
+ * Grid container
+ *
+ * Must only contain `.o-grid-cell` children.
+ *
+ */
+/* line 13, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_objects.grid.scss */
+.o-grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  /**
+	 * Grid cells
+	 *
+	 * No explicit width by default. Automatically fills width using flex.
+	 *
+	 */ }
+  /* line 26, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_objects.grid.scss */
+  .o-grid__cell {
+    flex: 1; }
+
+/* GRID MODIFIERS */
+/**
+	 * Grid gutters
+	 *
+	 * We add a negative margin on the top and left sides of the grid row. This ensures that the first grid cell is
+	 * aligned properly.
+	 */
+/* line 40, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_objects.grid.scss */
+.o-grid--gutters {
+  margin: -1em 0 1em -1em; }
+
+/**
+	 * Cell gutters
+	 *
+	 * We add padding to the top and left of the cells to create the gutters.
+	 *
+	 */
+/* line 51, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_objects.grid.scss */
+.o-grid--gutters > .o-grid__cell {
+  padding: 1em 0 0 1em; }
+
+/* line 55, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_objects.grid.scss */
+.u-1of4 {
+  width: 25%;
+  flex: none; }
+
+/* line 60, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_objects.grid.scss */
+.u-1of3 {
+  width: 33.33333%;
+  flex: none; }
+
+/* line 65, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_objects.grid.scss */
+.u-1of2 {
+  width: 50%;
+  flex: none; }
+
+/**
+	 * RESPONSIVE GRID
+	 *
+	 * Using media queries, we style the grid for smaller screens
+	 *
+	 */
+/* Medium Screens */
+@media (max-width: 48em) {
+  /* line 79, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_objects.grid.scss */
+  .o-medium-grid--full > .o-grid__cell {
+    /* Make grid items full at medium screen width */
+    flex: 0 0 100%; } }
+
+/*=================================================
+	alert component styles
+	================================================*/
+/* line 11, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.alert.scss */
+.c-alert, .c-alert--primary, .c-alert--success, .c-alert--caution, .c-alert--warning {
+  width: 100%;
+  background-color: #bdbdbd;
+  padding: 0.5em 1em;
+  position: relative;
+  border-radius: 3px; }
+  /* line 17, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.alert.scss */
+  .c-alert__close-alert {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1.75em;
+    height: 1.75em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.25s ease;
+    cursor: pointer;
+    color: #30353b; }
+    /* line 29, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.alert.scss */
+    .c-alert__close-alert:hover {
+      color: black; }
+  /* line 33, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.alert.scss */
+  .c-alert--primary {
+    background-color: #a1deec; }
+  /* line 37, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.alert.scss */
+  .c-alert--success {
+    background-color: #2ecc71; }
+  /* line 41, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.alert.scss */
+  .c-alert--caution {
+    background-color: #f1c40f; }
+  /* line 45, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.alert.scss */
+  .c-alert--warning {
+    background-color: #e74c3c; }
+
+/* line 51, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.alert.scss */
+.c-alert--remove {
+  animation: c-alert--fade-out 0.5s cubic-bezier(0.54, -0.21, 0.37, 0.92); }
+
+@keyframes c-alert--fade-out {
+  0% {
+    transform: translateX(0);
+    opacity: 1; }
+  100% {
+    transform: translateX(100%);
+    opacity: 0; } }
+
+/* ====================================================
+  carousel component styles
+  =====================================================*/
+/* line 4, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.carousel.scss */
+.c-carousel__wrapper {
+  max-width: 800px; }
+
+/* line 8, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.carousel.scss */
+.c-carousel {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  overflow: hidden; }
+
+/* line 19, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.carousel.scss */
+.c-carousel__bullet-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  bottom: 4%;
+  z-index: 50;
+  width: 100%; }
+  /* line 30, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.carousel.scss */
+  .c-carousel__bullet-nav-item {
+    display: inline;
+    margin: 0 0.5em;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: all 0.5s ease; }
+    /* line 41, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.carousel.scss */
+    .c-carousel__bullet-nav-item:hover {
+      opacity: 0.8; }
+    /* line 44, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.carousel.scss */
+    .c-carousel__bullet-nav-item--is-active {
+      opacity: 1; }
+      /* line 47, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.carousel.scss */
+      .c-carousel__bullet-nav-item--is-active:hover {
+        opacity: 1; }
+
+/* line 54, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.carousel.scss */
+.c-carousel__slides-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+/* line 63, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.carousel.scss */
+.c-carousel__image {
+  width: 100%;
+  height: auto;
+  margin: 0; }
+
+/* line 69, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.carousel.scss */
+.c-carousel__slide {
+  position: absolute;
+  top: 0;
+  left: 0; }
+  /* line 73, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.carousel.scss */
+  .c-carousel--slider-type .c-carousel__slide {
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(0);
+    z-index: -10; }
+  /* line 78, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.carousel.scss */
+  .c-carousel--fader-type .c-carousel__slide {
+    transition: all 0.5s ease;
+    opacity: 0; }
+  /* line 82, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.carousel.scss */
+  .c-carousel--fader-type .c-carousel__slide--is-selected {
+    position: static;
+    z-index: 10;
+    opacity: 1; }
+  /* line 88, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.carousel.scss */
+  .c-carousel--slider-type .c-carousel__slide--is-selected {
+    position: static;
+    z-index: 10;
+    opacity: 1;
+    transform: translateY(0); }
+    /* line 94, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.carousel.scss */
+    .c-carousel--slider-type .c-carousel__slide--is-selected.--slide-next {
+      animation: c-carousel--slideFromRight 1s ease; }
+    /* line 97, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.carousel.scss */
+    .c-carousel--slider-type .c-carousel__slide--is-selected.--slide-prev {
+      animation: c-carousel--slideFromLeft 1s ease; }
+  /* line 101, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.carousel.scss */
+  .c-carousel__slide.--slide-out-left {
+    animation: c-carousel--slideToLeft 1s ease; }
+  /* line 104, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.carousel.scss */
+  .c-carousel__slide.--slide-out-right {
+    animation: c-carousel--slideToRight 1s ease; }
+
+/* line 109, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.carousel.scss */
+.c-carousel__slide--multi-image-container {
+  width: 100%;
+  display: flex;
+  align-items: center; }
+
+/* line 118, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.carousel.scss */
+.c-carousel__arrow-nav {
+  position: absolute;
+  z-index: 10;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  opacity: 0.5;
+  padding: 0;
+  transition: all 0.25s ease; }
+  /* line 127, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.carousel.scss */
+  .c-carousel__arrow-nav:hover {
+    opacity: 1; }
+  /* line 130, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.carousel.scss */
+  .c-carousel__arrow-nav--right {
+    right: 0;
+    margin-right: 1em; }
+  /* line 135, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.carousel.scss */
+  .c-carousel__arrow-nav--left {
+    margin-left: 1em; }
+
+/* line 140, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.carousel.scss */
+.c-carousel__thumb-nav {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  flex-flow: row nowrap;
+  width: 100%;
+  padding: 0; }
+
+/* line 149, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.carousel.scss */
+.c-carousel__thumb-nav-item {
+  padding: 0 0.5em;
+  cursor: pointer;
+  transition: transform 0.35s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  /* line 156, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.carousel.scss */
+  .c-carousel__thumb-nav-item:hover {
+    transform: translateY(-10%); }
+  /* line 159, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.carousel.scss */
+  .c-carousel__thumb-nav-item--is-active {
+    transform: translateY(-10%); }
+
+/* line 164, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.carousel.scss */
+.c-carousel__thumb-image {
+  width: 100%;
+  height: auto; }
+
+@keyframes c-carousel--slideFromRight {
+  0% {
+    transform: translateX(100%); }
+  100% {
+    transform: translateX(0); } }
+
+@keyframes c-carousel--slideFromLeft {
+  0% {
+    transform: translateX(-100%); }
+  100% {
+    transform: translateX(0); } }
+
+@keyframes c-carousel--slideToLeft {
+  0% {
+    transform: translateX(0);
+    z-index: 5; }
+  99% {
+    z-index: 5; }
+  100% {
+    z-index: -10;
+    transform: translateX(-100%); } }
+
+@keyframes c-carousel--slideToRight {
+  0% {
+    transform: translateX(0);
+    z-index: 5; }
+  99% {
+    z-index: 5;
+    opacity: 1; }
+  100% {
+    z-index: -10;
+    opacity: 0;
+    transform: translateX(100%); } }
+
+/*=========================================
+  collapse component styles
+  ========================================*/
+/* line 5, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.collapse.scss */
+.c-collapse {
+  width: 100%; }
+
+/* line 9, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.collapse.scss */
+.c-collapse__toggle {
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  color: #212121;
+  font-weight: bold;
+  font-size: 1.15em;
+  transition: all 0.2s ease; }
+  /* line 17, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.collapse.scss */
+  .c-collapse__toggle:hover {
+    color: #51d0ef; }
+
+/* line 22, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.collapse.scss */
+.c-collapse__content-container {
+  overflow: hidden;
+  transition: height 0.5s ease-in-out;
+  height: 0;
+  border-radius: 0 0 3px 3px;
+  overflow: auto;
+  margin-bottom: 2em; }
+  /* line 29, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.collapse.scss */
+  .c-collapse__content-container--dark {
+    background-color: #30353b;
+    color: #fff; }
+  /* line 33, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.collapse.scss */
+  .c-collapse__content-container--light {
+    background-color: #f3f3f3;
+    color: #30353b; }
+
+/* line 39, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.collapse.scss */
+.c-collapse__controls-container, .c-collapse__controls-container--justified-text {
+  border-bottom: solid 1px #a4a4a4;
+  padding: 1em; }
+  /* line 42, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.collapse.scss */
+  .c-collapse__controls-container--justified-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+
+/* line 50, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.collapse.scss */
+.c-collapse__content {
+  padding: 2em; }
+  /* line 52, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.collapse.scss */
+  .c-collapse__content--prism-code-style {
+    padding: 0;
+    font-size: 0.9em; }
+
+/* line 58, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.collapse.scss */
+.u-example-code {
+  line-height: 2; }
+
+/* line 62, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.collapse.scss */
+.u-pre--wrap {
+  margin: 0;
+  padding: 0;
+  white-space: pre-wrap; }
+
+/*===========================================
+	pagination component styles
+	==========================================*/
+/* line 5, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.pagination.scss */
+.c-pagination, .c-pagination--round, .c-pagination--square {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  margin: 1em;
+  color: #a4a4a4; }
+
+/* line 22, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.pagination.scss */
+.c-pagination--square .c-pagination__item, .c-pagination--square .c-pagination__item--current, .c-pagination--round .c-pagination__item, .c-pagination--round .c-pagination__item--current, .c-pagination--round .c-pagination__nav, .c-pagination--round .c-pagination__nav--prev, .c-pagination--round .c-pagination__nav--next {
+  width: 2.2em;
+  height: 2.2em;
+  border: solid 1px #51d0ef;
+  border-radius: 50%;
+  color: #51d0ef; }
+  /* line 28, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.pagination.scss */
+  .c-pagination--square .c-pagination__item:hover, .c-pagination--square .c-pagination__item--current:hover, .c-pagination--round .c-pagination__item:hover, .c-pagination--round .c-pagination__item--current:hover, .c-pagination--round .c-pagination__nav:hover, .c-pagination--round .c-pagination__nav--prev:hover, .c-pagination--round .c-pagination__nav--next:hover {
+    background-color: #51d0ef;
+    color: #fff; }
+
+/* line 34, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.pagination.scss */
+.c-pagination--square .c-pagination__item, .c-pagination--square .c-pagination__item--current {
+  border-radius: 0; }
+
+/* line 39, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.pagination.scss */
+.c-pagination__item, .c-pagination__item--current {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.25s ease; }
+  /* line 45, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.pagination.scss */
+  .c-pagination__item:hover, .c-pagination__item--current:hover {
+    color: #42aec8; }
+  /* line 48, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.pagination.scss */
+  .c-pagination__item i, .c-pagination__item--current i {
+    font-size: 0.8em; }
+  /* line 51, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.pagination.scss */
+  .c-pagination__item a, .c-pagination__item--current a {
+    border: none; }
+
+/* line 62, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.pagination.scss */
+.c-pagination__item--current {
+  color: #51d0ef; }
+  /* line 65, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.pagination.scss */
+  .c-pagination--round .c-pagination__item--current {
+    background-color: #51d0ef;
+    color: #fff; }
+  /* line 69, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.pagination.scss */
+  .c-pagination--square .c-pagination__item--current {
+    background-color: #51d0ef;
+    color: #fff; }
+
+/* line 75, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.pagination.scss */
+.c-pagination__nav, .c-pagination__nav--prev, .c-pagination__nav--next {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #51d0ef;
+  cursor: pointer;
+  transition: all 0.25s ease; }
+  /* line 82, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.pagination.scss */
+  .c-pagination__nav:hover, .c-pagination__nav--prev:hover, .c-pagination__nav--next:hover {
+    color: #42aec8; }
+  /* line 85, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.pagination.scss */
+  .c-pagination__nav a, .c-pagination__nav--prev a, .c-pagination__nav--next a {
+    border: none; }
+  /* line 90, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.pagination.scss */
+  .c-pagination__nav--prev i {
+    margin-left: -0.2em; }
+  /* line 96, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.pagination.scss */
+  .c-pagination__nav--next i {
+    margin-left: 0.2em; }
+
+/* ==========================================================================
+   Badge component styles
+   ========================================================================== */
+/* Basic badge styles
+   ========================================================================== */
+/* line 12, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.badges.scss */
+.c-badge {
+  font-size: 0.9em;
+  text-align: center; }
+
+/* line 17, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.badges.scss */
+.c-badge--primary {
+  transition: color 0.2s;
+  color: #42aec8; }
+
+/* line 22, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.badges.scss */
+.c-badge--secondary {
+  transition: color 0.2s;
+  color: #a4a4a4; }
+
+/* line 27, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.badges.scss */
+.c-badge--round {
+  transition: background-color 0.2s;
+  padding: 0.26em 0.6em;
+  border-radius: 1em;
+  color: #fff; }
+  /* line 33, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.badges.scss */
+  .c-badge--round--primary {
+    background-color: #42aec8; }
+  /* line 37, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.badges.scss */
+  .c-badge--round--secondary {
+    background-color: #a4a4a4; }
+
+/* line 42, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.badges.scss */
+.c-badge--square {
+  transition: background-color 0.2s;
+  line-height: 1.5em;
+  vertical-align: middle;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  border-radius: 5%;
+  color: #fff; }
+  /* line 51, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.badges.scss */
+  .c-badge--square--primary {
+    background-color: #42aec8; }
+  /* line 58, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.badges.scss */
+  .c-badge--square--secondary {
+    background-color: #a4a4a4; }
+
+/* line 64, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.badges.scss */
+.c-badge:empty {
+  display: none; }
+
+/* Display components styles
+   ========================================================================== */
+/* line 74, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.badges.scss */
+.badge-component__item {
+  display: inline-flex;
+  flex-flow: column;
+  align-items: center;
+  margin-right: 3em; }
+  /* line 80, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.badges.scss */
+  .badge-component__item a {
+    border-radius: 3px;
+    border: 1px solid #a4a4a4;
+    color: #212121;
+    width: 12em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    /* line 90, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.badges.scss */
+    .badge-component__item a:hover .c-badge--primary {
+      color: #51d0ef; }
+    /* line 93, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.badges.scss */
+    .badge-component__item a:hover .c-badge--secondary {
+      color: #bdbdbd; }
+    /* line 96, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.badges.scss */
+    .badge-component__item a:hover .c-badge--round--primary,
+    .badge-component__item a:hover .c-badge--square--primary {
+      background-color: #51d0ef; }
+    /* line 100, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.badges.scss */
+    .badge-component__item a:hover .c-badge--round--secondary,
+    .badge-component__item a:hover .c-badge--square--secondary {
+      background-color: #bdbdbd; }
+
+/* line 108, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.badges.scss */
+.badge-component__category {
+  display: block;
+  text-align: center;
+  font-size: 0.8em;
+  color: #a4a4a4;
+  margin-top: 0.625em;
+  margin-bottom: 1em; }
+
+/* Demo styles
+   ========================================================================== */
+/* line 121, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.badges.scss */
+.demo-badge {
+  width: 20em;
+  border: 1px solid #d7d7d7; }
+  /* line 125, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.badges.scss */
+  .demo-badge__title {
+    border-bottom: 2px solid #bdbdbd;
+    padding: 1em 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    /* line 132, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.badges.scss */
+    .demo-badge__title p {
+      font-size: 1.2em; }
+
+/* line 138, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.badges.scss */
+.demo-badge__list {
+  padding: 1em 0;
+  flex-flow: column; }
+  /* line 142, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.badges.scss */
+  .demo-badge__list li {
+    margin: 0.8em 2em; }
+    /* line 145, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.badges.scss */
+    .demo-badge__list li .close {
+      float: right;
+      color: #a4a4a4;
+      cursor: pointer; }
+    /* line 150, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.badges.scss */
+    .demo-badge__list li label {
+      transition: color 0.2s;
+      margin-left: 0.5em; }
+    /* line 154, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.badges.scss */
+    .demo-badge__list li input:checked + label {
+      color: #a4a4a4;
+      text-decoration: line-through; }
+
+/* ==========================================================================
+   Chip component styles
+   ========================================================================== */
+/* Basic chip styles
+   ========================================================================== */
+/* line 9, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.chips.scss */
+.c-chip--filled, .c-chip--outlined {
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 2em;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 1em;
+  font-size: 0.9em;
+  color: #585858; }
+
+/* line 22, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.chips.scss */
+.c-chip__media--f, .c-chip__media--o {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  height: 2em;
+  width: 2em;
+  border-radius: 50%;
+  padding: 0;
+  font-size: 1em;
+  overflow: hidden;
+  margin: 0 0.5em 0 -1em; }
+
+/* line 36, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.chips.scss */
+.c-chip__icon {
+  font-size: 0.9em;
+  font-weight: bold; }
+
+/* line 41, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.chips.scss */
+.c-chip__img {
+  height: 100%;
+  width: 100%; }
+
+/* line 46, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.chips.scss */
+.c-chip__delete {
+  float: right;
+  margin-left: 0.5em;
+  color: #717171;
+  cursor: pointer;
+  transition: color 0.2s; }
+  /* line 53, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.chips.scss */
+  .c-chip__delete:hover {
+    color: #4b4b4b; }
+
+/* line 59, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.chips.scss */
+.c-chip--filled {
+  background-color: #e4e4e4; }
+
+/* line 64, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.chips.scss */
+.c-chip__media--f {
+  background-color: #42aec8;
+  color: #fff; }
+  /* line 69, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.chips.scss */
+  .c-chip__media--f--img {
+    margin-left: -1.1em; }
+
+/* line 78, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.chips.scss */
+.c-chip--outlined {
+  border: 2px solid #e4e4e4; }
+
+/* line 84, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.chips.scss */
+.c-chip__media--o {
+  border: 2px solid #42aec8;
+  color: #42aec8;
+  margin-left: -1.1em; }
+  /* line 90, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.chips.scss */
+  .c-chip__media--o > .c-chip__icon {
+    color: inherit; }
+
+/* Display components styles
+   ========================================================================== */
+/* line 99, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.chips.scss */
+#chips .c-chip--filled,
+#chips .c-chip--outlined {
+  margin: 0.5em 0.8em 0 0; }
+
+/* line 104, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.chips.scss */
+.chip-component--deletable {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap; }
+
+/* line 2, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.dropdown.scss */
+.c-dropdown__link {
+  color: #51d0ef;
+  margin: 0;
+  text-align: center; }
+  /* line 6, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.dropdown.scss */
+  .c-dropdown__link.c-btn, .c-dropdown__link.eureka-select {
+    margin: 0;
+    transition: all 0.25s ease; }
+    /* line 9, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.dropdown.scss */
+    .c-dropdown__link.c-btn:focus, .c-dropdown__link.eureka-select:focus {
+      border: 1px solid #51d0ef; }
+
+/* line 15, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.dropdown.scss */
+.c-dropdown__list, .c-dropdown__list--centered-list {
+  margin: 0;
+  padding: 0;
+  height: 0;
+  transition: height 0.25s ease-in-out;
+  overflow: hidden; }
+  /* line 21, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.dropdown.scss */
+  .c-dropdown__list--centered-list {
+    text-align: center; }
+
+/* line 27, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.dropdown.scss */
+.c-dropdown__list-item {
+  padding: 0.75em 0.5em;
+  cursor: pointer;
+  border-top: solid 1px #d7d7d7;
+  border-right: solid 1px #d7d7d7;
+  border-left: solid 1px #d7d7d7;
+  transition: all 0.25s ease; }
+  /* line 34, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.dropdown.scss */
+  .c-dropdown__list-item:first-of-type {
+    border-radius: 0.2em 0.2em 0 0; }
+  /* line 37, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.dropdown.scss */
+  .c-dropdown__list-item:last-of-type {
+    border-bottom: solid 1px #d7d7d7;
+    border-radius: 0 0 0.2em 0.2em; }
+  /* line 41, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.dropdown.scss */
+  .c-dropdown__list-item:hover {
+    background-color: #f3f3f3; }
+  /* line 44, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.dropdown.scss */
+  .c-dropdown__list-item:active {
+    animation: list-click-pulse 0.2s ease 2; }
+
+@keyframes list-click-pulse {
+  0%, 100% {
+    background-color: #fbfbfb; }
+  50% {
+    background-color: #f3f3f3; } }
+
+/* ==========================================================================
+   Modal component styles
+   ========================================================================== */
+/* Modal styles
+   ========================================================================== */
+/* line 16, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.modals.scss */
+.c-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0s, opacity 0.3s; }
+
+/* line 28, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.modals.scss */
+.c-modal-overlay--gray {
+  background-color: #f3f3f3;
+  opacity: 0.6; }
+
+/* line 33, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.modals.scss */
+.c-modal-overlay--full {
+  background-color: #a1deec;
+  opacity: 1; }
+
+/* line 39, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.modals.scss */
+.c-modal, .c-modal--basic, .c-modal--full, .c-modal--fixed, .c-modal--dialog {
+  z-index: 10000;
+  background-color: #a1deec;
+  font-size: 1em;
+  border-radius: 3px;
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s;
+  min-width: 18em;
+  width: 50%;
+  max-width: 25em;
+  min-height: 20em; }
+
+/* line 57, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.modals.scss */
+.c-modal__content {
+  width: 100%; }
+
+/* line 61, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.modals.scss */
+.c-modal__header {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
+  text-align: center;
+  background-color: #42aec8;
+  color: #fff;
+  border-radius: 3px 3px 0 0; }
+
+/* line 72, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.modals.scss */
+.c-modal__body {
+  margin: 0;
+  padding: 2em 3em;
+  color: #545454;
+  line-height: 1.5em; }
+
+/* line 79, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.modals.scss */
+.c-modal__footer {
+  width: 100%;
+  padding: 1em 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+/* line 87, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.modals.scss */
+.c-modal__close {
+  font-size: 1.1em;
+  border: none;
+  border-radius: 3px;
+  padding: 0.5em 1em;
+  background-color: #6abfd3;
+  color: #f3f3f3;
+  cursor: pointer;
+  transition: background-color 0.2s; }
+  /* line 97, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.modals.scss */
+  .c-modal__close:hover {
+    background-color: #42aec8; }
+
+/* line 105, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.modals.scss */
+.c-modal--basic {
+  top: 15%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transform: scale(0) rotate(360deg); }
+  /* line 110, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.modals.scss */
+  .c-modal--basic__header {
+    background-color: #42aec8; }
+
+/* line 116, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.modals.scss */
+.c-modal--full {
+  font-size: 1.2em;
+  top: 20%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background-color: transparent;
+  transform: scale(0); }
+  /* line 126, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.modals.scss */
+  .c-modal--full .c-modal__header {
+    background-color: transparent; }
+
+/* line 132, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.modals.scss */
+.c-modal--fixed {
+  top: 15%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transform: scale(1.5); }
+  /* line 137, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.modals.scss */
+  .c-modal--fixed .c-modal__body {
+    background-color: #ebebeb;
+    height: 18em;
+    overflow-y: auto; }
+
+/* line 144, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.modals.scss */
+.c-modal--dialog {
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transform: translateY(-100%);
+  transition-timing-function: cubic-bezier(0.6, -0.28, 0.735, 0.045); }
+  /* line 153, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.modals.scss */
+  .c-modal--dialog .c-modal__body {
+    background-color: #ebebeb;
+    border-radius: 3px 3px 0 0; }
+  /* line 158, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.modals.scss */
+  .c-modal--dialog .c-modal__footer {
+    justify-content: flex-end; }
+    /* line 161, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.modals.scss */
+    .c-modal--dialog .c-modal__footer .c-modal__close:last-of-type {
+      margin-left: 1.5em;
+      background-color: #42aec8; }
+      /* line 165, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.modals.scss */
+      .c-modal--dialog .c-modal__footer .c-modal__close:last-of-type:hover {
+        background-color: #3090a7; }
+
+/* line 172, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.modals.scss */
+.modal-component input:checked + [class^='c-modal-overlay'] {
+  visibility: visible;
+  opacity: 0.6; }
+
+/* line 183, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.modals.scss */
+.c-modal-transition--0 {
+  opacity: 1;
+  pointer-events: all;
+  transform: scale(1) rotate(0deg); }
+
+/* line 189, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.modals.scss */
+.c-modal-transition--1 {
+  opacity: 1;
+  pointer-events: all;
+  transform: scale(1); }
+
+/* line 195, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.modals.scss */
+.c-modal-transition--2 {
+  opacity: 1;
+  pointer-events: all;
+  transform: scale(1); }
+
+/* line 201, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.modals.scss */
+.c-modal-transition--3 {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0%);
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+
+/* Modal buttons that trigger modals
+   ========================================================================== */
+/* line 212, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.modals.scss */
+.modal-component input {
+  display: none; }
+
+/* Button
+   ==========================================================================
+*/
+/* line 4, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.buttons.scss */
+.c-btn-home {
+  margin-top: 2em; }
+
+/* line 8, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.buttons.scss */
+.c-btn, .eureka-select {
+  background: transparent;
+  border: 0.1em;
+  border-radius: 0.2em;
+  border-style: solid;
+  cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+  line-height: 2.4em;
+  margin: 0 0.5em;
+  padding: 0.1em 1.2em;
+  position: relative; }
+  /* line 20, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.buttons.scss */
+  .c-btn-i {
+    background-color: #51d0ef;
+    border-color: #51d0ef;
+    color: #fff;
+    border-radius: 0;
+    margin: 0; }
+    /* line 26, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.buttons.scss */
+    .c-btn-i:hover {
+      background-color: #42aec8;
+      border-color: #42aec8; }
+    /* line 30, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.buttons.scss */
+    .c-btn-i:active {
+      background-color: #36a1ba;
+      border-color: #42aec8; }
+    /* line 34, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.buttons.scss */
+    .c-btn-i--diff {
+      background-color: #bdbdbd;
+      border-color: #bdbdbd; }
+      /* line 37, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.buttons.scss */
+      .c-btn-i--diff:hover {
+        background-color: #a4a4a4;
+        border-color: #a4a4a4; }
+      /* line 41, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.buttons.scss */
+      .c-btn-i--diff:active {
+        background-color: #979797;
+        border-color: #a4a4a4; }
+    /* line 46, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.buttons.scss */
+    .c-btn-i--rd-l {
+      border-top-left-radius: 2em;
+      border-bottom-left-radius: 2em; }
+    /* line 50, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.buttons.scss */
+    .c-btn-i--rd-r {
+      border-top-right-radius: 2em;
+      border-bottom-right-radius: 2em; }
+  /* line 55, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.buttons.scss */
+  .c-btn-gp {
+    display: flex;
+    padding-left: 0;
+    margin: 1em 0.5em; }
+  /* line 60, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.buttons.scss */
+  .c-btn--primary, .c-btn--primary--rounded {
+    border-color: #51d0ef;
+    color: #51d0ef; }
+    /* line 63, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.buttons.scss */
+    .c-btn--primary:hover, .c-btn--primary--rounded:hover {
+      background-color: #51d0ef; }
+    /* line 66, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.buttons.scss */
+    .c-btn--primary:active, .c-btn--primary--rounded:active {
+      background-color: #42aec8; }
+  /* line 70, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.buttons.scss */
+  .c-btn--secondary, .c-btn--secondary--rounded {
+    border-color: #bdbdbd;
+    color: #bdbdbd; }
+    /* line 73, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.buttons.scss */
+    .c-btn--secondary:hover, .c-btn--secondary--rounded:hover {
+      background-color: #bdbdbd; }
+    /* line 76, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.buttons.scss */
+    .c-btn--secondary:active, .c-btn--secondary--rounded:active {
+      background-color: #a4a4a4; }
+  /* line 80, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.buttons.scss */
+  .c-btn--primary, .c-btn--secondary, .c-btn--primary--rounded, .c-btn--secondary--rounded {
+    background-color: #fff; }
+    /* line 82, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.buttons.scss */
+    .c-btn--primary:hover, .c-btn--primary:active, .c-btn--secondary:hover, .c-btn--secondary:active, .c-btn--primary--rounded:hover, .c-btn--primary--rounded:active, .c-btn--secondary--rounded:hover, .c-btn--secondary--rounded:active {
+      color: #fff; }
+  /* line 86, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.buttons.scss */
+  .c-btn--primary--rounded, .c-btn--secondary--rounded {
+    border-radius: 2em; }
+  /* line 89, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.buttons.scss */
+  .c-btn__btn-icon {
+    font-size: 13px; }
+  /* line 92, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.buttons.scss */
+  .c-btn:focus, .eureka-select:focus {
+    box-shadow: inset 0 0 0 0.1em #a1deec;
+    outline: 0; }
+  /* line 96, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.buttons.scss */
+  .c-btn[disabled], [disabled].eureka-select {
+    background-color: #a4a4a4;
+    border: #a4a4a4;
+    color: #fff; }
+
+/* line 6, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bookmarklet.scss */
+.c-bookmarklet {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0.75em 1em;
+  background-color: #f3f3f3;
+  color: #212121;
+  border: solid 1px #a4a4a4;
+  border-radius: 0 0 0 0.2em;
+  position: fixed;
+  top: 10em;
+  right: 0;
+  width: 20em;
+  transition: all 0.75s ease;
+  transform: translateX(calc(100% + 3em)); }
+  /* line 22, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bookmarklet.scss */
+  .c-bookmarklet h1 {
+    font-size: 1.25em;
+    margin-bottom: 0.5em; }
+    /* line 25, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bookmarklet.scss */
+    .c-bookmarklet h1 i {
+      margin-right: 0.25em; }
+  /* line 29, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bookmarklet.scss */
+  .c-bookmarklet--is-visible {
+    transform: translateX(calc(87% + 2.75em)); }
+    /* line 31, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bookmarklet.scss */
+    .c-bookmarklet--is-visible:hover {
+      transform: translateX(5%); }
+  /* line 35, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bookmarklet.scss */
+  .c-bookmarklet .c-bookmarklet__clear-all {
+    margin: 0;
+    width: 17em;
+    text-align: center;
+    border-color: #ebebeb; }
+    /* line 40, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bookmarklet.scss */
+    .c-bookmarklet .c-bookmarklet__clear-all:hover {
+      background-color: #e74c3c;
+      border: solid 1px #e74c3c; }
+
+/* line 47, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bookmarklet.scss */
+.c-bookmarklet__teaser {
+  background-color: #f3f3f3;
+  padding: 0.75em;
+  position: absolute;
+  top: -1px;
+  left: -2.25em;
+  border-top: solid 1px #a4a4a4;
+  border-left: solid 1px #a4a4a4;
+  border-bottom: solid 1px #a4a4a4;
+  border-radius: 0.2em 0 0 0.2em;
+  color: #51d0ef; }
+
+/* line 60, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bookmarklet.scss */
+.c-bookmarklet__highlight-text {
+  background-color: yellow; }
+
+/* line 64, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bookmarklet.scss */
+.c-bookmaklet__bookmark-list {
+  margin: 0;
+  padding: 0;
+  list-style-position: inside; }
+
+/* line 70, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bookmarklet.scss */
+.c-bookmarklet__bookmark-list-item {
+  padding: 0.5em 2em 0.5em 1em;
+  margin-bottom: 0.5em;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  border: solid 1px #ebebeb;
+  background-color: #fff;
+  position: relative;
+  border-radius: 0.2em;
+  width: 17em; }
+  /* line 81, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bookmarklet.scss */
+  .c-bookmarklet__bookmark-list-item a:first-of-type {
+    padding: 0;
+    color: #51d0ef;
+    flex: 1 1 100%; }
+
+/* line 88, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bookmarklet.scss */
+.c-bookmarklet__close-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.1em 0.2em 0 0;
+  color: #a4a4a4;
+  transition: all 0.25s ease;
+  cursor: pointer; }
+  /* line 96, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bookmarklet.scss */
+  .c-bookmarklet__close-icon:hover {
+    color: #e74c3c; }
+
+/* line 101, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bookmarklet.scss */
+.c-bookmarklet__google-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px #ebebeb;
+  color: #a4a4a4;
+  border-radius: 0.2em;
+  padding: 0.4em 0;
+  margin: 1em 34% 0.3em 0;
+  font-size: 0.75em;
+  cursor: pointer;
+  transition: all 0.25s ease; }
+  /* line 113, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bookmarklet.scss */
+  .c-bookmarklet__google-button:hover {
+    color: #fff;
+    background-color: #51d0ef;
+    border: solid 1px #51d0ef; }
+  /* line 118, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bookmarklet.scss */
+  .c-bookmarklet__google-button i {
+    margin-left: 0.5em;
+    margin-top: 0.2em; }
+
+/* line 124, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bookmarklet.scss */
+.c-bookmarklet--remove {
+  animation: c-bookmarklet--fade-out 0.5s cubic-bezier(0.54, -0.21, 0.37, 0.92); }
+
+/* line 128, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bookmarklet.scss */
+.c-bookmarklet__alert, .c-bookmarklet__alert--warning, .c-bookmarklet__alert--caution {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1.5em 1em 0.5em 1em;
+  border-radius: 0.2em;
+  position: fixed;
+  top: 25%;
+  left: 50%;
+  z-index: 50;
+  text-align: center;
+  cursor: pointer;
+  transform: translate(-50%, 0);
+  animation: c-bookmarklet__alert--pop-in 0.35s forwards ease-in-out;
+  color: #fff; }
+  /* line 144, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bookmarklet.scss */
+  .c-bookmarklet__alert--warning {
+    background-color: #e74c3c; }
+    /* line 147, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bookmarklet.scss */
+    .c-bookmarklet__alert--warning i {
+      color: #ef8b80;
+      width: 100%; }
+  /* line 152, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bookmarklet.scss */
+  .c-bookmarklet__alert--caution {
+    background-color: #f7ca18; }
+    /* line 155, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bookmarklet.scss */
+    .c-bookmarklet__alert--caution i {
+      color: #bc9707;
+      width: 100%; }
+  /* line 160, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bookmarklet.scss */
+  .c-bookmarklet__alert--is-dismissed {
+    animation: c-bookmarklet__alert--pop-out 0.35s forwards cubic-bezier(0.7, -0.43, 0.34, 0.76); }
+  /* line 163, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bookmarklet.scss */
+  .c-bookmarklet__alert p, .c-bookmarklet__alert--warning p, .c-bookmarklet__alert--caution p {
+    margin-top: 0.5em;
+    font-size: 1.1em;
+    width: 100%; }
+
+/* line 170, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bookmarklet.scss */
+.c-bookmarklet__alert-background, .c-bookmarklet__alert-background--caution, .c-bookmarklet__alert-background--warning {
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  animation: c-bookmarket--fade-in-bg 0.35s forwards ease; }
+  /* line 179, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bookmarklet.scss */
+  .c-bookmarklet__alert-background--caution {
+    background-color: rgba(33, 33, 33, 0.75); }
+  /* line 183, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bookmarklet.scss */
+  .c-bookmarklet__alert-background--warning {
+    background-color: rgba(33, 33, 33, 0.75); }
+  /* line 187, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bookmarklet.scss */
+  .c-bookmarklet__alert-background--is-dismissed {
+    animation: c-bookmarket--fade-out-bg 0.2s forwards ease; }
+
+/* line 192, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bookmarklet.scss */
+.c-bookmarklet__pop-up {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: row wrap;
+  background-color: #f3f3f3;
+  border: solid 1px #a4a4a4;
+  border-radius: 0.2em;
+  text-align: center;
+  padding: 1em 0.5em;
+  width: 13em;
+  font-size: 0.9em;
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease; }
+  /* line 208, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bookmarklet.scss */
+  .c-bookmarklet__pop-up--is-visible {
+    pointer-events: auto;
+    opacity: 1; }
+  /* line 212, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bookmarklet.scss */
+  .c-bookmarklet__pop-up p {
+    flex: 1 1 100%;
+    margin: 0 0 0.5em 0; }
+  /* line 216, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bookmarklet.scss */
+  .c-bookmarklet__pop-up-button--yes {
+    flex: 1 1 30%;
+    color: #2ecc71;
+    cursor: pointer;
+    border: solid 1px #2ecc71;
+    margin-right: 0.25em;
+    border-radius: 0.2em;
+    padding: 0.2em;
+    background-color: #fff; }
+    /* line 225, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bookmarklet.scss */
+    .c-bookmarklet__pop-up-button--yes:hover {
+      background-color: #def8e9; }
+  /* line 229, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bookmarklet.scss */
+  .c-bookmarklet__pop-up-button--no {
+    flex: 1 1 30%;
+    color: #e74c3c;
+    cursor: pointer;
+    border: solid 1px #e74c3c;
+    margin-left: 0.25em;
+    border-radius: 0.2em;
+    padding: 0.2em;
+    background-color: #fff; }
+    /* line 238, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bookmarklet.scss */
+    .c-bookmarklet__pop-up-button--no:hover {
+      background-color: #f7c1bb; }
+
+/* line 244, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bookmarklet.scss */
+.c-bookmarklet__pop-up-pip {
+  width: 0.7em;
+  height: 0.7em;
+  background-color: #f3f3f3;
+  transform: rotate(45deg);
+  position: absolute;
+  top: calc(-0.35em - 1px);
+  border-left: solid 1px #a4a4a4;
+  border-top: solid 1px #a4a4a4; }
+
+@keyframes c-bookmarklet--fade-out {
+  0% {
+    transform: translateX(0);
+    opacity: 1; }
+  100% {
+    transform: translateX(100%);
+    opacity: 0; } }
+
+@keyframes c-bookmarklet__alert--pop-in {
+  0% {
+    top: 28%;
+    opacity: 0; }
+  100% {
+    top: 25%;
+    opacity: 1; } }
+
+@keyframes c-bookmarklet__alert--pop-out {
+  0% {
+    top: 25%;
+    opacity: 1; }
+  80% {
+    opacity: 0; }
+  100% {
+    top: 5%;
+    opacity: 0; } }
+
+@keyframes c-bookmarket--fade-in-bg {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes c-bookmarket--fade-out-bg {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+/* line 1, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.progressbar.scss */
+.progressbar-ex {
+  padding: 2em; }
+
+/* line 5, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.progressbar.scss */
+.c-progress-toggle, .progressbar-ex > div {
+  margin-top: 2em; }
+
+/* line 9, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.progressbar.scss */
+.c-progress-toggler {
+  background-color: #a4a4a4;
+  border-color: #a4a4a4;
+  color: #fff; }
+
+/* line 15, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.progressbar.scss */
+.c-progress {
+  background-color: #d7d7d7;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
+  height: 1.2em;
+  overflow: hidden; }
+  /* line 20, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.progressbar.scss */
+  .c-progress__label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 0.8em;
+    height: 100%; }
+  /* line 28, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.progressbar.scss */
+  .c-progress--rounded {
+    border-radius: .6em; }
+  /* line 31, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.progressbar.scss */
+  .c-progressbar__meter, .c-progressbar__meter--stack {
+    height: 1.2em; }
+  /* line 34, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.progressbar.scss */
+  .c-progressbar__meter {
+    background-color: #51d0ef;
+    position: relative;
+    width: 50%; }
+  /* line 39, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.progressbar.scss */
+  .c-progressbar__meter--stack {
+    float: left;
+    position: relative; }
+    /* line 42, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.progressbar.scss */
+    .c-progressbar__meter--stack[aria-valuenow="30"] {
+      background-color: #51d0ef;
+      width: 30%; }
+    /* line 46, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.progressbar.scss */
+    .c-progressbar__meter--stack[aria-valuenow="40"] {
+      background-color: #a1deec;
+      width: 40%; }
+    /* line 50, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.progressbar.scss */
+    .c-progressbar__meter--stack[aria-valuenow="10"] {
+      background-color: #42aec8;
+      width: 10%; }
+  /* line 55, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.progressbar.scss */
+  .c-progressbar__meter {
+    background-image: linear-gradient(45deg, #51d0ef 0%, #a1deec 50%, transparent 100%); }
+
+/* line 60, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.progressbar.scss */
+.progress-animate {
+  animation: progressbar 2s linear infinite; }
+
+@keyframes progressbar {
+  0% {
+    background-position: 60em 0; }
+  100% {
+    background-position: 0 0; } }
+
+/* line 1, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.breadcrumb.scss */
+.c-breadcrumb {
+  display: flex;
+  height: 2em; }
+  /* line 4, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.breadcrumb.scss */
+  .c-breadcrumb__li + .c-breadcrumb__li:before {
+    color: #d7d7d7;
+    content: "/\00a0"; }
+  /* line 8, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.breadcrumb.scss */
+  .c-breadcrumb__li--rbn {
+    color: #fff;
+    margin: 0 .6em;
+    position: relative; }
+  /* line 13, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.breadcrumb.scss */
+  .c-breadcrumb__a--rbn {
+    background-color: #51d0ef;
+    border: 0;
+    display: block;
+    height: 1em;
+    line-height: 0em; }
+    /* line 19, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.breadcrumb.scss */
+    .c-breadcrumb__a--rbn:hover {
+      background-color: #a1deec; }
+  /* line 23, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.breadcrumb.scss */
+  .c-breadcrumb__li--rbn:first-child a {
+    border-top-left-radius: 0.2em;
+    border-bottom-left-radius: 0.2em; }
+  /* line 27, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.breadcrumb.scss */
+  .c-breadcrumb__li--rbn:last-child a {
+    border-top-right-radius: 0.2em;
+    border-bottom-right-radius: 0.2em; }
+  /* line 31, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.breadcrumb.scss */
+  .c-breadcrumb__li--rbn:not(:first-child) a:before {
+    content: "";
+    border-style: solid;
+    border-color: #51d0ef #51d0ef #51d0ef transparent;
+    border-width: 1em 0 1em 1em;
+    left: -1em;
+    position: absolute;
+    top: 0; }
+  /* line 40, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.breadcrumb.scss */
+  .c-breadcrumb__li--rbn:not(:first-child) > a:hover::before {
+    border-color: #a1deec #a1deec #a1deec transparent; }
+  /* line 43, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.breadcrumb.scss */
+  .c-breadcrumb__li--rbn:not(:last-child) a:after {
+    content: "";
+    border-top: 1em solid transparent;
+    border-bottom: 1em solid transparent;
+    border-left: 1em solid #51d0ef;
+    position: absolute;
+    right: -1em;
+    top: 0; }
+  /* line 52, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.breadcrumb.scss */
+  .c-breadcrumb__li--rbn:not(:last-child) > a:hover::after {
+    border-left: 1em solid #a1deec; }
+  /* line 55, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.breadcrumb.scss */
+  .c-breadcrumb__a:hover {
+    border-bottom: 0; }
+  /* line 58, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.breadcrumb.scss */
+  .c-breadcrumb--var-col {
+    background-color: #0e2930; }
+  /* line 61, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.breadcrumb.scss */
+  .c-breadcrumb__li--rbn a[class~="c-breadcrumb--var-col"]:before {
+    border-color: #0e2930 #0e2930 #0e2930 transparent; }
+  /* line 64, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.breadcrumb.scss */
+  .c-breadcrumb__li--rbn a[class~="c-breadcrumb--var-col"]:after {
+    border-left: 1em solid #0e2930; }
+  /* line 67, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.breadcrumb.scss */
+  .c-breadcrumb--act-col, .c-breadcrumb__a--rbn:active, .c-breadcrumb--var-col:active {
+    background-color: #3090a7; }
+  /* line 70, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.breadcrumb.scss */
+  .c-breadcrumb__li--rbn a[class~="c-breadcrumb--act-col"]:before, .c-breadcrumb__li--rbn:not(:first-child) > a:active::before, .c-breadcrumb__li--rbn a[class~="c-breadcrumb--var-col"]:active::before {
+    border-color: #3090a7 #3090a7 #3090a7 transparent; }
+  /* line 73, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.breadcrumb.scss */
+  .c-breadcrumb__li--rbn a[class~="c-breadcrumb--act-col"]:after, .c-breadcrumb__li--rbn:not(:last-child) > a:active::after, .c-breadcrumb__li--rbn a[class~="c-breadcrumb--var-col"]:active::after {
+    border-left: 1em solid #3090a7; }
+
+/**
+ * Navigation Styles
+ */
+/* line 5, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.navigation.scss */
+.nav {
+  padding: 0;
+  margin: 0;
+  width: 100%; }
+  /* line 10, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.navigation.scss */
+  .nav, .nav--horizontal, .nav--vertical-left, .nav--vertical-right {
+    background: transparent;
+    color: #71869c; }
+  /* line 15, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.navigation.scss */
+  .nav, .nav--horizontal {
+    display: flex; }
+  /* line 21, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.navigation.scss */
+  .nav--vertical-left, .nav--vertical-right {
+    flex-direction: column;
+    max-height: 100vh;
+    height: auto; }
+  /* line 29, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.navigation.scss */
+  .nav--dark {
+    background: #212121;
+    color: #fff; }
+  /* line 34, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.navigation.scss */
+  .nav--light {
+    background: #f3f3f3;
+    color: #212121; }
+  /* line 39, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.navigation.scss */
+  .nav--sticky {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999; }
+  /* line 46, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.navigation.scss */
+  .nav__item {
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center; }
+    /* line 52, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.navigation.scss */
+    .nav__item:hover {
+      color: #a1deec; }
+    /* line 56, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.navigation.scss */
+    .nav__item::before, .nav__item::after {
+      background: #51d0ef;
+      content: '';
+      position: absolute;
+      transition: transform 0.3s linear; }
+    /* line 63, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.navigation.scss */
+    .nav__item::before {
+      left: 0;
+      bottom: -0.1em;
+      height: 0.3em;
+      width: 100%;
+      transform: scaleX(0); }
+    /* line 71, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.navigation.scss */
+    .nav__item::after {
+      right: -0.1em;
+      top: 0;
+      height: 100%;
+      width: 0.3em;
+      transform: scaleY(0); }
+    /* line 79, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.navigation.scss */
+    .nav__item--active {
+      color: #51d0ef; }
+      /* line 82, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.navigation.scss */
+      .nav__item--active:hover {
+        color: #51d0ef; }
+      /* line 86, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.navigation.scss */
+      .nav__item--active::before, .nav__item--active::after {
+        transform: scale(1, 1); }
+
+/* line 1, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.scrollspy.scss */
+.scrollspy {
+  position: relative;
+  width: 100%; }
+  /* line 5, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.scrollspy.scss */
+  .scrollspy--sticky {
+    position: fixed;
+    top: 0;
+    left: 0; }
+
+/* line 1, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.cards.scss */
+.c-card {
+  border: 0.1em solid #212121;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  max-width: 20em; }
+  /* line 9, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.cards.scss */
+  .c-card__head {
+    position: relative; }
+  /* line 13, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.cards.scss */
+  .c-card__head-icon {
+    color: #fff;
+    font-size: 3em;
+    float: right;
+    padding: 0.3em; }
+  /* line 21, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.cards.scss */
+  .c-card__category {
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2em;
+    left: 0.5em;
+    position: absolute;
+    text-transform: uppercase;
+    top: 0.5em; }
+  /* line 31, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.cards.scss */
+  .c-card__img {
+    width: 100%; }
+  /* line 35, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.cards.scss */
+  .c-card__profile-pic {
+    bottom: 0;
+    border-radius: 50%;
+    height: 7em;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    right: 0;
+    transform: translateY(50%);
+    width: 7em; }
+  /* line 48, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.cards.scss */
+  .c-card__date {
+    margin-top: 0; }
+  /* line 52, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.cards.scss */
+  .c-card__profile-name {
+    margin-top: 2em;
+    color: #51d0ef; }
+  /* line 57, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.cards.scss */
+  .c-card__social-icon {
+    color: #a4a4a4;
+    font-size: 1.2em; }
+    /* line 60, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.cards.scss */
+    .c-card__social-icon:hover {
+      border: none; }
+  /* line 65, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.cards.scss */
+  .c-card__body {
+    padding: 0.7em 1.5em 1.5em 1.5em; }
+  /* line 69, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.cards.scss */
+  .c-card__text {
+    margin-bottom: 1em; }
+
+/*Styles for website NO USED IN ACTUAL CODE FOR COMPONENT*/
+/* line 2, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.demo.scss */
+.c-demo {
+  position: relative;
+  width: 100%;
+  height: 500px; }
+
+/* line 9, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.demo.scss */
+.block1 {
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+/* line 16, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.demo.scss */
+.block2 {
+  position: absolute;
+  top: 50%;
+  left: 70%; }
+
+/* line 23, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.demo.scss */
+.block3 {
+  position: absolute;
+  top: 80%;
+  left: 20%; }
+
+/* line 30, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.demo.scss */
+.block4 {
+  position: absolute;
+  top: 30%;
+  left: 90%; }
+
+/*  END WEBSITE EXAMPLE STYLES*/
+/* line 39, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.demo.scss */
+.c-tooltip-help {
+  /*clear:both;*/ }
+  /* line 43, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.demo.scss */
+  .c-tooltip-help__message {
+    position: absolute;
+    white-space: nowrap;
+    margin-top: 0.5em;
+    width: auto;
+    padding: 0.5em;
+    border: 1px solid #f3f3f3;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 3px;
+    opacity: 1;
+    transition: opacity 0.5s;
+    text-align: center; }
+  /* line 57, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.demo.scss */
+  .c-tooltip-help__message-icon {
+    font-size: 20px; }
+  /* line 62, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.demo.scss */
+  .c-tooltip-help__message-icon:hover {
+    cursor: pointer;
+    color: #51d0ef; }
+  /* line 67, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.demo.scss */
+  .c-tooltip-help__controls {
+    margin: 20px 0 2px 0;
+    float: right;
+    display: flex; }
+  /* line 73, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.demo.scss */
+  .c-tooltip-help__button {
+    padding: 0.3em;
+    border: none;
+    color: #fff; }
+    /* line 77, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.demo.scss */
+    .c-tooltip-help__button:hover {
+      cursor: pointer; }
+
+/* line 85, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.demo.scss */
+.is-visible {
+  opacity: 1; }
+
+/* line 89, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.demo.scss */
+.is-hidden {
+  opacity: 0 !important; }
+
+/* line 1, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.separator.scss */
+.c-separator {
+  border-bottom: 0.2em solid;
+  margin: 1em 0; }
+
+/* line 1, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.accordion.scss */
+.test {
+  max-width: 500px; }
+
+/* line 4, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.accordion.scss */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0; }
+  /* line 9, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.accordion.scss */
+  .accordion__item {
+    display: flex;
+    flex-direction: column; }
+  /* line 13, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.accordion.scss */
+  .accordion__state {
+    display: none; }
+    /* line 15, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.accordion.scss */
+    .accordion__state:checked ~ .accordion__content {
+      opacity: 1;
+      max-height: 99em;
+      padding: 0.5em;
+      transform: scaleY(1);
+      border-top: 0.2em solid #51d0ef; }
+    /* line 22, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.accordion.scss */
+    .accordion__state:checked ~ .accordion__title--dark {
+      margin-bottom: 0;
+      color: #fff; }
+    /* line 26, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.accordion.scss */
+    .accordion__state:checked ~ .accordion__title--light {
+      margin-bottom: 0;
+      color: #30353b; }
+    /* line 30, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.accordion.scss */
+    .accordion__state:checked ~ .accordion__title > .accordion__icon,
+    .accordion__state:checked ~ .accordion__title > span > .accordion__icon {
+      transform: rotate(180deg); }
+  /* line 35, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.accordion.scss */
+  .accordion__title {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75em;
+    text-transform: uppercase; }
+    /* line 40, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.accordion.scss */
+    .accordion__title--dark {
+      background-color: #30353b;
+      color: #f3f3f3; }
+    /* line 44, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.accordion.scss */
+    .accordion__title--dark ~ .accordion__content {
+      border: 1px solid #30353b; }
+    /* line 47, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.accordion.scss */
+    .accordion__title--light {
+      color: #30353b; }
+    /* line 50, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.accordion.scss */
+    .accordion__title:hover {
+      cursor: pointer; }
+  /* line 54, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.accordion.scss */
+  .accordion__icon {
+    text-align: center;
+    transition: 0.5s ease-in-out;
+    line-height: 1em; }
+  /* line 60, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.accordion.scss */
+  .accordion__content {
+    max-height: 0;
+    overflow: hidden;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s ease, opacity 0.25s ease;
+    opacity: 0; }
+    /* line 67, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.accordion.scss */
+    .accordion__content--dark {
+      background-color: #30353b;
+      color: #f3f3f3; }
+
+/* line 73, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.accordion.scss */
+.icon-circle {
+  border-radius: 50%;
+  border: solid 1px #51d0ef;
+  width: 1.5em;
+  height: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  /* line 81, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.accordion.scss */
+  .icon-circle i {
+    color: #51d0ef; }
+
+/* line 1, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.stepper.scss */
+.stepper {
+  display: flex;
+  flex-direction: column; }
+  /* line 4, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.stepper.scss */
+  .stepper__step {
+    padding-bottom: 1em; }
+    /* line 9, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.stepper.scss */
+    .stepper__step--active .stepper__number {
+      background-color: #51d0ef; }
+    /* line 12, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.stepper.scss */
+    .stepper__step--complete {
+      background-color: green; }
+  /* line 16, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.stepper.scss */
+  .stepper__number {
+    display: inline-block;
+    height: 2em;
+    width: 2em;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #f3f3f3;
+    text-align: center;
+    line-height: 2em;
+    vertical-align: middle; }
+  /* line 27, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.stepper.scss */
+  .stepper__title {
+    font-weight: bold;
+    margin-left: 1em; }
+  /* line 31, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.stepper.scss */
+  .stepper__content {
+    margin-left: 1em;
+    margin-top: 1em;
+    padding-left: 2em;
+    border-left: 1px solid #f3f3f3; }
+
+/* line 39, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.stepper.scss */
+.test-content {
+  width: 400px;
+  height: 200px;
+  background-color: gray; }
+
+/* line 20, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.search.scss */
+.search-form, .search-form-second {
+  border-radius: 0.3125rem;
+  border: 0.65625rem solid #fff;
+  display: flex;
+  height: 4.03125rem;
+  justify-content: flex-start;
+  width: 35.16rem; }
+
+/* line 30, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.search.scss */
+.search-form-second {
+  border-bottom-right-radius: 0.5125rem;
+  border-top-right-radius: 0.5125rem;
+  border: 0.07rem solid rgba(215, 215, 215, 0.2);
+  height: 2.8rem;
+  width: 21rem; }
+
+/* line 45, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.search.scss */
+.search-input, .search-input-second {
+  background: rgba(81, 208, 239, 0.69);
+  border: none;
+  color: #fff;
+  flex-basis: 85%;
+  font-family: "Roboto Light", "Helvetica Light", "Roboto", "Helvetica", sans-serif;
+  font-size: 1.95rem;
+  font-weight: 300;
+  isolation: isolate;
+  padding-right: 2.5%;
+  text-align: right; }
+  /* line 15, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_tools.mixins.scss */
+  .search-input::-webkit-input-placeholder, .search-input-second::-webkit-input-placeholder {
+    color: #fff;
+    opacity: 1; }
+  /* line 19, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_tools.mixins.scss */
+  .search-input:-moz-placeholder, .search-input-second:-moz-placeholder {
+    /* Firefox 18- */
+    color: #fff;
+    opacity: 1; }
+  /* line 23, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_tools.mixins.scss */
+  .search-input::-moz-placeholder, .search-input-second::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #fff;
+    opacity: 1; }
+  /* line 27, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_tools.mixins.scss */
+  .search-input:-ms-input-placeholder, .search-input-second:-ms-input-placeholder {
+    color: #fff;
+    opacity: 1; }
+  /* line 61, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.search.scss */
+  .search-input:focus, .search-input-second:focus {
+    transition: background-color .5s ease-in;
+    background-color: #bdbdbd; }
+
+/* line 68, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.search.scss */
+.search-input-second {
+  background: #30353b;
+  border-top-right-radius: 0.2rem;
+  border-bottom-right-radius: 0.2rem;
+  flex-basis: 85%;
+  font-size: 1.19rem;
+  text-align: right; }
+  /* line 15, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_tools.mixins.scss */
+  .search-input-second::-webkit-input-placeholder {
+    color: rgba(215, 215, 215, 0.35);
+    opacity: 1; }
+  /* line 19, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_tools.mixins.scss */
+  .search-input-second:-moz-placeholder {
+    /* Firefox 18- */
+    color: rgba(215, 215, 215, 0.35);
+    opacity: 1; }
+  /* line 23, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_tools.mixins.scss */
+  .search-input-second::-moz-placeholder {
+    /* Firefox 19+ */
+    color: rgba(215, 215, 215, 0.35);
+    opacity: 1; }
+  /* line 27, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_tools.mixins.scss */
+  .search-input-second:-ms-input-placeholder {
+    color: rgba(215, 215, 215, 0.35);
+    opacity: 1; }
+
+/* line 87, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.search.scss */
+.search-button, .search-button-second {
+  background-color: #42aec8;
+  border-radius: 0.375rem;
+  border: transparent;
+  box-shadow: -0.3125rem 0 0.1875rem -0.25rem #212121;
+  flex-basis: 18%;
+  isolation: isolate;
+  margin-left: -0.28125rem;
+  cursor: pointer; }
+  /* line 96, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.search.scss */
+  .search-button:hover, .search-button-second:hover {
+    background-color: #a4a4a4;
+    isolation: isolate; }
+    /* line 99, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.search.scss */
+    .search-button:hover .search-icon, .search-button-second:hover .search-icon {
+      color: #42aec8; }
+  /* line 103, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.search.scss */
+  .search-button:active, .search-button-second:active {
+    border: 0.125rem solid rgba(255, 255, 255, 0.7); }
+
+/* line 109, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.search.scss */
+.search-button-second {
+  background-color: #4d555e;
+  border-radius: 0;
+  flex-basis: 16%;
+  margin-left: -0.13125rem; }
+  /* line 115, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.search.scss */
+  .search-button-second:hover {
+    background-color: #30353b; }
+
+/* line 121, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.search.scss */
+.search-icon {
+  font-size: 2.025rem;
+  color: #a4a4a4;
+  mix-blend-mode: screen;
+  pointer-events: none; }
+
+/* line 129, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.search.scss */
+.search-icon-second {
+  color: #767676;
+  mix-blend-mode: screen;
+  font-size: 1.75rem;
+  pointer-events: none; }
+
+/* Tooltip container */
+/* line 3, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.tooltip.scss */
+.tooltip-this-element {
+  position: relative;
+  display: inline-block;
+  border-bottom: 0.0625rem dotted black; }
+
+/* Tooltip text */
+/* line 15, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.tooltip.scss */
+.tooltip-text {
+  /*background properties*/
+  /*fallback color for browsers w/o gradients*/
+  background-color: #a1deec;
+  background: linear-gradient(rgba(161, 222, 236, 0.26) 10%, #fff 10%, #fff 72%, #d7d7d7 72%, #d7d7d7 82%, #a1deec 82%, #a1deec 100%);
+  border: 0.1875rem solid #e6e6e6;
+  border-radius: 3px;
+  color: #212121;
+  font-family: "Roboto Light", "Helvetica Light", "Roboto", "Helvetica", sans-serif;
+  font-weight: 300;
+  /*padding-bottom: 0.9375rem;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;*/
+  padding: 0.9375rem;
+  padding-top: .5rem;
+  text-align: center;
+  visibility: hidden;
+  width: auto;
+  /* Position the tooltip text */
+  bottom: 125%;
+  left: 30%;
+  position: absolute;
+  z-index: 1;
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 1s;
+  /*Tooltip Arrow*/ }
+  /* line 49, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.tooltip.scss */
+  .tooltip-text::after {
+    border: 0.375rem solid;
+    border-color: #a1deec transparent transparent transparent;
+    content: "";
+    left: 25%;
+    position: absolute;
+    top: 100%; }
+
+/* Show the tooltip text when you mouse over the tooltip container */
+/* line 64, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.tooltip.scss */
+.tooltip-this-element:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1; }
+
+/* line 1, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.tabs.scss */
+.tabs {
+  padding: 0.2em 0.5em;
+  width: 100%;
+  display: flex;
+  border-bottom: 0.3em solid #51d0ef; }
+  /* line 7, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.tabs.scss */
+  .tabs__tab-container {
+    display: flex;
+    padding: 0; }
+  /* line 12, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.tabs.scss */
+  .tabs--horizontal {
+    flex-direction: column; }
+  /* line 17, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.tabs.scss */
+  .tabs--vertical .tabs__tab-container {
+    flex-direction: column;
+    flex: 0 0 auto; }
+  /* line 23, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.tabs.scss */
+  .tabs__tab {
+    cursor: pointer;
+    color: #bdbdbd;
+    border-bottom: 0.3em solid;
+    padding: 1em 4em 0.5em 0.1em;
+    margin-right: 0.3em;
+    position: relative; }
+    /* line 31, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.tabs.scss */
+    .tabs__tab:hover {
+      color: #a4a4a4;
+      border-color: #bdbdbd; }
+    /* line 36, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.tabs.scss */
+    .tabs__tab::before {
+      background: #a4a4a4;
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -0.25em;
+      height: 0.25em;
+      width: 100%;
+      transform: scaleX(0);
+      transition: transform 0.5s linear; }
+    /* line 48, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.tabs.scss */
+    .tabs__tab:hover::before {
+      transform: scaleX(1); }
+    /* line 52, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.tabs.scss */
+    .tabs__tab--active {
+      color: #51d0ef; }
+      /* line 55, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.tabs.scss */
+      .tabs__tab--active:hover {
+        color: #51d0ef; }
+      /* line 59, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.tabs.scss */
+      .tabs__tab--active::before {
+        background: #51d0ef;
+        transform: scaleX(1); }
+  /* line 66, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.tabs.scss */
+  .tabs__pane-container {
+    padding: 1.5em;
+    margin-top: 0.5em; }
+  /* line 71, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.tabs.scss */
+  .tabs__pane {
+    display: none; }
+    /* line 74, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.tabs.scss */
+    .tabs__pane--active {
+      display: block; }
+
+/* line 4, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.inputs.scss */
+.eureka-checkbox {
+  -webkit-appearance: none;
+  background-color: rgba(164, 164, 164, 0.35);
+  box-shadow: 1px 2px 3px 0px rgba(33, 33, 33, 0.8);
+  border: 2px solid rgba(48, 53, 59, 0.45);
+  padding: 10px;
+  border-radius: 3px;
+  display: inline-block;
+  position: relative; }
+  /* line 14, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.inputs.scss */
+  .eureka-checkbox:active, .eureka-checkbox :checked:active {
+    box-shadow: inset 1px 2px 3px 0px #212121; }
+  /* line 18, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.inputs.scss */
+  .eureka-checkbox:checked {
+    background-color: #51d0ef;
+    box-shadow: inset 1px 2px 3px 0px #212121;
+    border: 2px solid #30353b;
+    color: #a4a4a4; }
+  /* line 25, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.inputs.scss */
+  .eureka-checkbox:checked:after {
+    content: '\2714';
+    font-size: 19px;
+    position: absolute;
+    top: 0px;
+    left: 3px;
+    color: #4b4b4b; }
+
+/*.eureka-radio {
+	-webkit-appearance: none;
+	background-color: $primary-color;
+	border: 2px solid transparentize($body-bg-color, .55);
+	padding: 9px;
+	border-radius: 50px;
+	display: inline-block;
+	position: relative;
+}
+
+.eureka-radio:checked:after {
+	content: ' ';
+	width: 12px;
+	height: 12px;
+	border-radius: 50px;
+	position: absolute;
+	top: 3px;
+	background: $primary-dark-color;
+	text-shadow: 0px;
+	left: 3px;
+	font-size: 32px;
+}
+
+.eureka-radio:checked {
+	background-color: $secondary-light-color;
+	color: #99a1a7;
+	border: 2px solid transparentize($body-bg-color, .7);
+}*/
+/* line 1, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.thumbnail.scss */
+.c-thumbnails-row--desc {
+  align-items: flex-end; }
+
+/* line 4, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.thumbnail.scss */
+.c-thumbnail {
+  border: 0.5em solid #f3f3f3;
+  border-radius: 1em;
+  box-shadow: inset 0px 1px 0px 7px #a7a7a7;
+  margin: 1em .5em;
+  padding: 1em; }
+  /* line 10, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.thumbnail.scss */
+  .c-thumbnail__desc {
+    display: table; }
+  /* line 13, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.thumbnail.scss */
+  .c-thumbnail__p {
+    display: table-caption;
+    caption-side: bottom; }
+
+/* line 1, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.login.scss */
+.login-container {
+  background: linear-gradient(#d7d7d7, #d7d7d7 21%, #51d0ef 21%, #51d0ef 77%, #d7d7d7 77%, #bdbdbd);
+  background-color: #bdbdbd;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 387px;
+  justify-content: flex-start;
+  width: 400px; }
+
+/* line 13, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.login.scss */
+.login-form {
+  font-family: "Roboto", "Helvetica", sans-serif;
+  font-size: 1.3rem;
+  height: 79%;
+  position: relative; }
+
+/* line 20, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.login.scss */
+.login-header {
+  color: #212121;
+  font: "Roboto Light", "Helvetica Light", "Roboto", "Helvetica", sans-serif;
+  font-weight: 300;
+  height: 21%;
+  padding-left: 10%;
+  padding-top: 3%; }
+
+/* line 29, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.login.scss */
+.login-span-input {
+  width: 100%;
+  display: block;
+  height: 10%;
+  color: #212121;
+  font-size: 0.85rem;
+  font-weight: 400;
+  margin-top: 3.5%;
+  margin-bottom: 3%; }
+  /* line 38, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.login.scss */
+  .login-span-input label {
+    display: inline-block;
+    width: 39%;
+    margin-left: 8%; }
+
+/* line 45, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.login.scss */
+.login-email-password {
+  align-self: flex-end;
+  display: inline-block;
+  width: 50%;
+  max-width: 100%;
+  height: 95%;
+  border-radius: 0.25rem; }
+
+/* line 54, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.login.scss */
+.login-keep-login-span {
+  display: block;
+  font: "Roboto Light", "Helvetica Light", "Roboto", "Helvetica", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  padding-left: 45%; }
+
+/* line 62, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.login.scss */
+.login-keep-checkbox {
+  margin-left: 3%;
+  background-color: rgba(215, 215, 215, 0.9); }
+
+/* line 67, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.login.scss */
+.login-forgot-password {
+  position: absolute;
+  bottom: 29%;
+  right: 0; }
+  /* line 71, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.login.scss */
+  .login-forgot-password:hover {
+    text-decoration: underline;
+    text-decoration-color: #212121; }
+
+/* line 77, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.login.scss */
+.login-form-buttons-span {
+  display: flex;
+  width: 100%;
+  position: absolute;
+  bottom: 4.5%;
+  justify-content: flex-end;
+  padding-right: 12%; }
+
+/* line 86, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.login.scss */
+.login-form-register-button, .login-form-login-button {
+  background-color: #bdbdbd;
+  display: inline-block;
+  font-size: 70%;
+  max-width: 50%; }
+
+/* line 93, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.login.scss */
+.login-form-login-button {
+  background-color: #51d0ef;
+  margin-left: 3%;
+  max-width: 50%; }
+
+/* line 100, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.login.scss */
+.login-register-link {
+  margin: 0;
+  line-height: inherit;
+  padding: 0;
+  padding-bottom: 2%; }
+
+/* line 1, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.persona.scss */
+.persona-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  flex-wrap: wrap; }
+  /* line 8, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.persona.scss */
+  .persona {
+    color: #a4a4a4;
+    margin: 0;
+    text-align: center;
+    flex: 0 0 13em;
+    padding: 2em 1em;
+    border-radius: 0.4em;
+    background: transparent;
+    border: 0.2em solid transparent;
+    transform: scale(0.9) translate(0, 0);
+    transition: all 0.5s linear;
+    cursor: pointer; }
+    /* line 21, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.persona.scss */
+    .persona__image {
+      width: 5em;
+      height: 5em;
+      margin-top: 1em;
+      border-radius: 50%;
+      transform: scale(1.1);
+      transition: transform 0.5s linear; }
+    /* line 30, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.persona.scss */
+    .persona__name {
+      margin-top: 2em;
+      margin-bottom: 0;
+      font-size: 1.3em; }
+    /* line 36, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.persona.scss */
+    .persona__title {
+      color: #a4a4a4;
+      margin-top: 0.2em;
+      opacity: 0;
+      transition: opacity 0.5s linear; }
+    /* line 43, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.persona.scss */
+    .persona__links {
+      color: #51d0ef;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0; }
+    /* line 51, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.persona.scss */
+    .persona__link {
+      font-size: 1em;
+      opacity: 0;
+      transition: opacity 0.5s linear;
+      flex: 1;
+      display: flex;
+      justify-content: center; }
+    /* line 60, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.persona.scss */
+    .persona__icon {
+      font-size: 1.2em;
+      margin: 0;
+      padding: 1px; }
+      /* line 65, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.persona.scss */
+      .persona__icon:hover {
+        color: #42aec8; }
+    /* line 70, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.persona.scss */
+    .persona:hover {
+      color: #212121;
+      background: #fff;
+      border-color: #42aec8;
+      transform: scale(1) translate(0, -40%); }
+      /* line 76, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.persona.scss */
+      .persona:hover .persona__image {
+        transform: scale(1.5); }
+      /* line 80, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.persona.scss */
+      .persona:hover .persona__title, .persona:hover .persona__link {
+        opacity: 1; }
+
+/* line 1, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.gallery.scss */
+.c-gallery--clickable {
+  height: 15.625em;
+  width: 15.625em;
+  cursor: pointer; }
+
+/* line 12, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.gallery.scss */
+.c-gallery--clickable:nth-of-type(1) {
+  background-image: url(http://res.cloudinary.com/azureowl/image/upload/v1488151619/placeholder1_mzeqic.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; }
+
+/* line 12, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.gallery.scss */
+.c-gallery--clickable:nth-of-type(2) {
+  background-image: url(http://res.cloudinary.com/azureowl/image/upload/v1488151623/placeholder2_gl44o6.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; }
+
+/* line 12, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.gallery.scss */
+.c-gallery--clickable:nth-of-type(3) {
+  background-image: url(https://unsplash.it/760);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; }
+
+/* line 12, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.gallery.scss */
+.c-gallery--clickable:nth-of-type(4) {
+  background-image: url(https://unsplash.it/853);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; }
+
+/* line 12, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.gallery.scss */
+.c-gallery--clickable:nth-of-type(5) {
+  background-image: url(https://unsplash.it/520);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; }
+
+/* line 18, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.gallery.scss */
+.c-gallery-viewer {
+  display: none;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: 9999; }
+
+/* ==========================================================================
+   List component styles
+   ========================================================================== */
+/* Basic list styles
+   ========================================================================== */
+/**
+ * General list styles
+ */
+/* line 12, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.list.scss */
+.c-list {
+  padding: 0;
+  list-style-position: outside;
+  font-size: 1em;
+  margin-top: 5px;
+  margin-bottom: 5px; }
+
+/* line 20, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.list.scss */
+.c-list__item {
+  padding: 0;
+  margin-bottom: 0.5em;
+  margin-top: 0.5em;
+  color: #212121; }
+  /* line 26, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.list.scss */
+  .c-list__item > a {
+    padding: 0;
+    transition: color 0.2s;
+    color: #42aec8; }
+    /* line 31, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.list.scss */
+    .c-list__item > a:hover {
+      color: #51d0ef; }
+  /* line 36, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.list.scss */
+  .c-list__item--media {
+    display: flex;
+    align-items: center; }
+
+/* line 42, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.list.scss */
+.c-list__sublist {
+  display: list-item;
+  margin-left: 1.25em; }
+
+/**
+ * Ordered List
+ */
+/* line 52, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.list.scss */
+.c-list--ol {
+  list-style-type: none;
+  counter-reset: section; }
+
+/* line 57, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.list.scss */
+.c-list--ol__item:before {
+  content: counters(section, ".") " ";
+  counter-increment: section;
+  padding-right: 0.5em; }
+
+/**
+ * Unordered List
+ */
+/* line 67, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.list.scss */
+.c-list--ul, .c-list--ul-bt {
+  display: block; }
+
+/* line 71, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.list.scss */
+.c-list--ul {
+  list-style-type: none; }
+
+/* line 76, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.list.scss */
+.c-list--ul-bt {
+  margin-left: 1.25em; }
+  /* line 80, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.list.scss */
+  .c-list--ul-bt > .c-list--ul__item {
+    list-style-type: disc; }
+  /* line 84, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.list.scss */
+  .c-list--ul-bt__sublist {
+    list-style-type: disc; }
+
+/* line 89, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.list.scss */
+.c-list__icon {
+  font-size: 0.9em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  text-align: center;
+  width: 1.25em; }
+
+/* line 97, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.list.scss */
+.c-list__img {
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  margin-right: 0.8em; }
+
+/* line 104, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.list.scss */
+.c-list--hz {
+  display: flex;
+  flex-wrap: wrap; }
+  /* line 108, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.list.scss */
+  .c-list--hz > .c-list__item--hz {
+    margin-right: 2.5em; }
+
+/* line 1, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.table.scss */
+.c-table {
+  width: 100%;
+  text-align: left;
+  /*  border-collapse: collapse;
+  border-spacing: 0;*/ }
+  /* line 6, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.table.scss */
+  .c-table__head {
+    border-bottom: 2px solid #bdbdbd; }
+  /* line 9, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.table.scss */
+  .c-table__head-column {
+    padding: 0.8em 0.2em; }
+  /* line 12, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.table.scss */
+  .c-table__column {
+    padding: 0.8em 0.2em; }
+
+/* Utilities */
+/* Bordered Table*/
+/* line 23, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.table.scss */
+.c-table--bordered {
+  border: 1px solid #bdbdbd; }
+  /* line 25, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.table.scss */
+  .c-table--bordered .c-table__column {
+    border-bottom: 1px solid #bdbdbd; }
+
+/* Striped Table */
+/* line 35, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.table.scss */
+.c-table--striped .c-table__body .c-table__row:nth-child(odd) {
+  background-color: #f4f4f4; }
+
+/* Highlight table */
+/* line 46, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.table.scss */
+.c-table--highlight .c-table__body .c-table__row:hover {
+  background-color: #f4f4f4; }
+
+/* line 1, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.select.scss */
+.eureka-select {
+  background-color: #51d0ef;
+  border: 2px solid #30353b;
+  color: #fff;
+  font-family: "Roboto Light", "Helvetica Light", "Roboto", "Helvetica", sans-serif;
+  font-size: 1.2rem;
+  padding-bottom: 0.2%;
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 0.2%; }
+  /* line 12, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.select.scss */
+  .eureka-select option {
+    background-color: rgba(189, 189, 189, 0.9);
+    border: 3px solid #30353b;
+    text-align: center; }
+  /* line 17, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.select.scss */
+  .eureka-select:focus {
+    border: 2px solid #30353b; }
+
+/* line 1, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.herald.scss */
+.c-herald-section {
+  margin: 10.5em 0 0 3em; }
+
+/* line 5, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.herald.scss */
+.c-herald {
+  display: inline-block;
+  padding-top: 2.5em;
+  position: relative; }
+  /* line 9, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.herald.scss */
+  .c-herald__scroll {
+    position: relative; }
+  /* line 12, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.herald.scss */
+  .c-herald__scroll {
+    background-color: #fff;
+    display: inline-block;
+    overflow: hidden; }
+  /* line 17, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.herald.scss */
+  .c-herald__furled-scroll {
+    box-shadow: inset -0.1em 0.1em 0 0.05em #42aec8;
+    height: 3em;
+    top: 0;
+    width: 3em; }
+  /* line 23, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.herald.scss */
+  .c-herald__furled-scroll {
+    border-radius: 50%;
+    left: 0;
+    margin: 0 auto;
+    opacity: 0;
+    right: 0; }
+  /* line 30, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.herald.scss */
+  .c-herald__message {
+    opacity: 0;
+    padding: 1em;
+    transition-duration: 1s; }
+  /* line 35, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.herald.scss */
+  .c-herald__ribbon {
+    border-color: #42aec8 #42aec8 transparent #42aec8;
+    border-width: 0 1em .5em 1em;
+    right: -2em;
+    height: 1em;
+    top: 0;
+    transform: translateY(40px);
+    transition: 3s 1s;
+    width: 2em; }
+  /* line 45, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.herald.scss */
+  .c-herald__chip {
+    cursor: pointer;
+    left: 0em;
+    margin-left: 0;
+    top: .5em;
+    z-index: 2; }
+  /* line 52, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.herald.scss */
+  .c-herald__scroll__img, .c-herald__message {
+    border-top: medium solid #42aec8; }
+  /* line 55, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.herald.scss */
+  .c-herald__furled-scroll, .c-herald__scroll__img, .c-herald__chip, .c-herald__ribbon, .c-herald__message {
+    position: absolute; }
+  /* line 58, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.herald.scss */
+  .c-herald__furled-scroll, .c-herald__message {
+    background-color: transparent; }
+  /* line 61, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.herald.scss */
+  .c-herald__anchors {
+    color: blue;
+    padding: 0; }
+
+/* line 67, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.herald.scss */
+.c-herald__scroll.c-herald-announce > .c-herald__furled-scroll {
+  animation: unfurl 1s .8s ease-in-out forwards; }
+
+/* line 71, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.herald.scss */
+.c-herald__scroll.c-herald-announce > .c-herald__message {
+  opacity: 1;
+  transform: translateY(0) !important;
+  transition-property: transform;
+  transition-duration: 1s;
+  transition-delay: 3s; }
+
+/* line 79, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.herald.scss */
+.c-herald__ribbon.lengthen {
+  border-style: solid;
+  height: 14em; }
+
+@keyframes unfurl {
+  0% {
+    height: 3em;
+    opacity: 1;
+    width: 3em; }
+  100% {
+    height: .1em;
+    opacity: 1;
+    width: 432px; } }
+
+/* line 1, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.forminputs.scss */
+.c-section {
+  padding: 2em; }
+
+/* line 5, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.forminputs.scss */
+.c-checkbox {
+  margin-bottom: .2em; }
+
+/* line 9, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.forminputs.scss */
+.c-radiogroup {
+  display: flex; }
+
+/* line 13, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.forminputs.scss */
+.c-radio {
+  margin-right: 1em; }
+
+/* line 17, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.forminputs.scss */
+.c-input {
+  left: -99.99em;
+  position: absolute; }
+  /* line 20, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.forminputs.scss */
+  .c-input-checkbox + label:before, .c-input-checkbox--lg + label:before, .c-input-radio + label:before {
+    border: 0.0625em solid #bdbdbd;
+    content: "";
+    display: inline-block;
+    height: 1em;
+    left: 0;
+    padding: .5em;
+    width: 1em; }
+  /* line 29, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.forminputs.scss */
+  .c-input-checkbox + label:before, .c-input-checkbox--lg + label:before, .c-input-radio + label:before, .c-input-checkbox:checked + label:after, .c-input-checkbox--lg:checked + label:after, .c-input-radio:checked + label:after {
+    position: absolute; }
+  /* line 32, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.forminputs.scss */
+  .c-input-checkbox + label:before, .c-input-checkbox--lg + label:before {
+    border-radius: .1em; }
+  /* line 35, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.forminputs.scss */
+  .c-input-radio + label:before, .c-input-radio:checked + label:after {
+    border-radius: 50%; }
+  /* line 38, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.forminputs.scss */
+  .c-input-checkbox:focus + label:before, .c-input-checkbox--lg:focus + label:before {
+    box-shadow: 0 0 0 0.05em #51d0ef; }
+  /* line 41, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.forminputs.scss */
+  .c-input-radio:focus + label:before {
+    box-shadow: 0 0 0 0.1em #51d0ef; }
+  /* line 44, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.forminputs.scss */
+  .c-input-checkbox:checked + label:after, .c-input-checkbox--lg:checked + label:after {
+    color: #51d0ef;
+    content: "\2714";
+    left: .1em; }
+  /* line 49, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.forminputs.scss */
+  .c-input-radio:checked + label:before {
+    box-shadow: inset 0px 0px 0px 5px #51d0ef; }
+  /* line 52, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.forminputs.scss */
+  .c-input-checkbox + label, .c-input-checkbox--lg + label, .c-input-radio + label {
+    cursor: pointer;
+    position: relative; }
+  /* line 56, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.forminputs.scss */
+  .c-input-checkbox + label, .c-input-checkbox--lg + label, .c-input-radio + label {
+    padding-left: 1.5em; }
+  /* line 59, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.forminputs.scss */
+  .c-input-checkbox--lg + label {
+    font-size: 2em; }
+  /* line 62, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.forminputs.scss */
+  .c-input-switch:checked ~ .c-switch__slider {
+    transform: translateX(2em); }
+  /* line 65, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.forminputs.scss */
+  .c-input-switch:checked + .c-switch__body {
+    background-color: #51d0ef; }
+
+/* line 70, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.forminputs.scss */
+.c-switch {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  height: 2em;
+  position: relative;
+  width: 4em; }
+  /* line 77, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.forminputs.scss */
+  .c-switch__body {
+    background-color: #bdbdbd;
+    padding: 1.1em;
+    width: 100%; }
+  /* line 82, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.forminputs.scss */
+  .c-switch--rd {
+    border-radius: 1em; }
+  /* line 85, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.forminputs.scss */
+  .c-switch__slider {
+    background-color: #fff;
+    height: 1.8em;
+    left: 0;
+    margin-left: .1em;
+    position: absolute;
+    top: .1em;
+    transition: 1s cubic-bezier(0.5, 0, 0, 1);
+    width: 1.8em; }
+
+/* line 1, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.wtf.scss */
+.c-wtf {
+  background-color: #f3f3f3;
+  border-radius: 0 0 0 0.2em;
+  bottom: 0;
+  color: #212121;
+  padding: 0.75em 1em;
+  position: fixed;
+  transform: translateY(11.625em);
+  transition: all 0.75s cubic-bezier(0, 0.4, 0.6, 1);
+  width: 20em;
+  z-index: 10; }
+  /* line 12, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.wtf.scss */
+  .c-wtf__list {
+    list-style: none;
+    margin-bottom: 1em; }
+    /* line 15, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.wtf.scss */
+    .c-wtf__list li {
+      color: #42aec8; }
+  /* line 19, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.wtf.scss */
+  .c-wtf ol {
+    background-color: #fff;
+    padding: 1em; }
+  /* line 23, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.wtf.scss */
+  .c-wtf, .c-wtf ol, .c-wtf .teaser {
+    border: 0.1em solid silver; }
+  /* line 26, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.wtf.scss */
+  .c-wtf .c-btn, .c-wtf .eureka-select {
+    margin: 0; }
+  /* line 29, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.wtf.scss */
+  .c-wtf h1 {
+    font-size: 1.25em; }
+  /* line 32, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.wtf.scss */
+  .c-wtf h4 {
+    font-size: 1em; }
+  /* line 35, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.wtf.scss */
+  .c-wtf .teaser {
+    align-items: center;
+    background-color: #f3f3f3;
+    border-bottom: 0;
+    border-radius: .2em;
+    display: flex;
+    height: 2em;
+    justify-content: center;
+    left: 9px;
+    position: absolute;
+    top: -2em;
+    width: 2em; }
+  /* line 48, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.wtf.scss */
+  .c-wtf .fa-book:before {
+    content: "\f02d"; }
+
+/* line 53, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.wtf.scss */
+.wtfspan {
+  color: #42aec8;
+  font-weight: bolder; }
+
+/* line 1, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.gallery.scss */
+.c-gallery--clickable {
+  height: 15.625em;
+  width: 15.625em;
+  cursor: pointer; }
+
+/* line 12, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.gallery.scss */
+.c-gallery--clickable:nth-of-type(1) {
+  background-image: url(http://res.cloudinary.com/azureowl/image/upload/v1488151619/placeholder1_mzeqic.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; }
+
+/* line 12, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.gallery.scss */
+.c-gallery--clickable:nth-of-type(2) {
+  background-image: url(http://res.cloudinary.com/azureowl/image/upload/v1488151623/placeholder2_gl44o6.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; }
+
+/* line 12, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.gallery.scss */
+.c-gallery--clickable:nth-of-type(3) {
+  background-image: url(https://unsplash.it/760);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; }
+
+/* line 12, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.gallery.scss */
+.c-gallery--clickable:nth-of-type(4) {
+  background-image: url(https://unsplash.it/853);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; }
+
+/* line 12, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.gallery.scss */
+.c-gallery--clickable:nth-of-type(5) {
+  background-image: url(https://unsplash.it/520);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; }
+
+/* line 18, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.gallery.scss */
+.c-gallery-viewer {
+  display: none;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+  z-index: 9999; }
+
+/* line 2, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.loader.scss */
+.loader-parent--scroll-show {
+  position: relative;
+  overflow: auto; }
+
+/* line 7, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.loader.scss */
+.loader-parent--scroll-hide {
+  position: relative;
+  overflow: hidden; }
+
+/* line 12, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.loader.scss */
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  /* line 17, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.loader.scss */
+  .loader-overlay {
+    height: 100%;
+    max-height: 100vh;
+    width: 100%;
+    max-width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #bdbdbd;
+    transition: opacity 0.3s;
+    z-index: 9998; }
+    /* line 29, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.loader.scss */
+    .loader-overlay--full-page {
+      position: fixed; }
+    /* line 33, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.loader.scss */
+    .loader-overlay--hidden {
+      display: none;
+      opacity: 0; }
+    /* line 38, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.loader.scss */
+    .loader-overlay--visible {
+      display: flex;
+      opacity: 0.5; }
+  /* line 44, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.loader.scss */
+  .loader__load-box {
+    width: 5em;
+    height: 5em;
+    padding: 0;
+    border-radius: 100%;
+    position: relative;
+    z-index: 9999; }
+    /* line 52, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.loader.scss */
+    .loader__load-box::before, .loader__load-box::after {
+      top: 0;
+      left: 0;
+      border-radius: 100%;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%; }
+    /* line 63, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.loader.scss */
+    .loader__load-box::before {
+      border: 0.4em solid #212121;
+      border-top-color: #42aec8;
+      animation: rotate 0.8s linear 0s normal infinite forwards running; }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg); }
+  25% {
+    transform: rotate(90deg); }
+  50% {
+    transform: rotate(180deg); }
+  75% {
+    transform: rotate(270deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+/* ==========================================================================
+   Single-input Form component styles
+   ========================================================================== */
+/* sub-elements styles
+   ========================================================================== */
+/* line 8, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.single-input-form.scss */
+.c-sif {
+  font-size: 1em;
+  display: block;
+  position: relative;
+  margin-bottom: 5em; }
+  /* line 14, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.single-input-form.scss */
+  .c-sif label,
+  .c-sif input,
+  .c-sif button {
+    outline: none;
+    border: none; }
+
+/* line 22, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.single-input-form.scss */
+.c-sif__input-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  width: 18em;
+  height: 3em;
+  padding-left: 3.5em;
+  padding-right: 3.5em;
+  background-color: #e9e9e9;
+  border-radius: 1.5em;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  animation-duration: 0.1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 0.7s; }
+
+/* line 48, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.single-input-form.scss */
+.c-sif__input-wrap--last {
+  background-color: #42aec8;
+  color: #fff;
+  text-transform: uppercase; }
+  /* line 52, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.single-input-form.scss */
+  .c-sif__input-wrap--last .c-sif__submission-msg {
+    font-size: 1.3em; }
+
+/* line 57, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.single-input-form.scss */
+.c-sif__input {
+  border: 0;
+  line-height: 2.4em;
+  font-size: 1em;
+  color: #7e7e7e;
+  margin-left: 0;
+  background-color: transparent;
+  width: 10em;
+  animation-duration: 0.1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 0.2s; }
+  /* line 70, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.single-input-form.scss */
+  .c-sif__input:focus + .c-sif__label {
+    opacity: 0;
+    visibility: hidden; }
+
+/* line 76, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.single-input-form.scss */
+.c-sif__label {
+  position: absolute;
+  left: 4em;
+  color: #a4a4a4;
+  transition: opacity 0.2s, visibility 0s 0.2s;
+  animation-duration: 0.1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards; }
+  /* line 85, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.single-input-form.scss */
+  .c-sif__label .c-sif__icon-label {
+    margin-right: 0.3em; }
+
+/* line 90, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.single-input-form.scss */
+.c-sif__indicator,
+[class^='c-sif__btn--'] {
+  position: absolute;
+  top: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; }
+
+/* line 100, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.single-input-form.scss */
+.c-sif__indicator {
+  left: 0;
+  margin: 0;
+  border-radius: 50%;
+  height: 3em;
+  width: 3em;
+  color: #fff;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+  z-index: 5; }
+
+/* line 112, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.single-input-form.scss */
+button.c-sif__btn--next, .c-sif__btn--prev {
+  bottom: 0;
+  background-color: transparent;
+  cursor: pointer;
+  transition: color 0.2s;
+  animation-duration: 0.2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s; }
+
+/* line 124, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.single-input-form.scss */
+button.c-sif__btn--next {
+  right: 0.5em;
+  color: #51d0ef; }
+  /* line 128, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.single-input-form.scss */
+  button.c-sif__btn--next:hover {
+    color: #42aec8 !important; }
+
+/* line 133, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.single-input-form.scss */
+.c-sif__btn--prev {
+  right: 2.2em;
+  color: #bdbdbd; }
+  /* line 138, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.single-input-form.scss */
+  .c-sif__btn--prev:hover {
+    color: #a4a4a4; }
+
+/* line 143, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.single-input-form.scss */
+.c-sif-active {
+  opacity: 1;
+  visibility: visible; }
+
+/* line 149, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.single-input-form.scss */
+.c-sif-color--0 .c-sif__indicator {
+  background-color: #5fd4f0; }
+
+/* line 153, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.single-input-form.scss */
+.c-sif-color--1 .c-sif__indicator {
+  background-color: #15b7df; }
+
+/* line 157, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.single-input-form.scss */
+.c-sif-color--2 .c-sif__indicator {
+  background-color: #42aec8; }
+
+@keyframes fadeOutRight {
+  0% {
+    right: 100%; }
+  20% {
+    transform: rotate(0deg); }
+  50% {
+    opacity: 1; }
+  100% {
+    left: auto;
+    right: 0;
+    transform: rotate(360deg);
+    opacity: 0; } }
+
+@keyframes fadeInLeft {
+  0% {
+    left: 100%;
+    opacity: 0; }
+  20% {
+    transform: rotate(360deg); }
+  100% {
+    right: auto;
+    left: 0;
+    transform: rotate(0deg);
+    opacity: 1; } }
+
+@keyframes fadeOut {
+  99% {
+    opacity: 0; }
+  100% {
+    visibility: hidden; } }
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1; } }
+
+/* line 1, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bar-graph.scss */
+.bar-graph-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 3em; }
+  /* line 8, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bar-graph.scss */
+  .bar-graph {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2.5em 1em;
+    flex: 0 1 25em;
+    height: auto;
+    border-bottom: 1px solid #212121; }
+    /* line 16, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bar-graph.scss */
+    .bar-graph__heading {
+      margin: 1em 0;
+      font-size: 1.5em;
+      font-weight: normal;
+      text-align: center;
+      flex: 1 1 100%; }
+    /* line 24, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bar-graph.scss */
+    .bar-graph__legend {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      flex: 0 1 20%; }
+      /* line 31, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bar-graph.scss */
+      .bar-graph__legend-value {
+        padding: 0.5em 0 1.5em 0.1em; }
+    /* line 36, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bar-graph.scss */
+    .bar-graph__bars {
+      display: flex;
+      align-content: flex-end;
+      align-items: flex-end;
+      flex-basis: 79%;
+      margin-left: 1%; }
+    /* line 44, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bar-graph.scss */
+    .bar-graph__bar {
+      width: 2em;
+      height: 0;
+      background-color: #51d0ef;
+      border-radius: 5px 5px 0 0;
+      margin: 0 0.7em;
+      transition: height 2s ease-in-out;
+      box-shadow: 1px 0 1px #bdbdbd;
+      position: relative; }
+      /* line 54, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.bar-graph.scss */
+      .bar-graph__bar-title {
+        position: absolute;
+        bottom: -2.5em;
+        margin: 0 0 0 0.5em;
+        transform: rotate(45deg);
+        white-space: nowrap; }
+
+/* ==========================================================================
+   Single-input Form component styles
+   ========================================================================== */
+/* sub-elements styles
+   ========================================================================== */
+/* line 8, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.reveal.scss */
+.c-reveal {
+  position: relative;
+  width: 10em;
+  height: 10em;
+  overflow: hidden; }
+  /* line 14, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.reveal.scss */
+  .c-reveal__visible {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    background-color: #f3f3f3;
+    padding: 0;
+    overflow: hidden; }
+    /* line 25, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.reveal.scss */
+    .c-reveal__visible .c-reveal__msg {
+      color: #212121;
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+    /* line 35, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.reveal.scss */
+    .c-reveal__visible .c-reveal__img-visible {
+      width: 100%; }
+  /* line 40, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.reveal.scss */
+  .c-reveal__hidden {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; }
+    /* line 46, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.reveal.scss */
+    .c-reveal__hidden .c-reveal__img-hidden {
+      width: 100%; }
+  /* line 51, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.reveal.scss */
+  .c-reveal.outside {
+    overflow: visible; }
+
+/* line 57, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.reveal.scss */
+.c-reveal--fade > .c-reveal__visible {
+  transition: opacity 0.4s;
+  transform-origin: top; }
+
+/* line 62, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.reveal.scss */
+.c-reveal--fade:hover > .c-reveal__visible {
+  opacity: 0; }
+
+/* line 67, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.reveal.scss */
+.c-reveal--slide > .c-reveal__visible {
+  transition: transform 0.4s; }
+
+/* line 71, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.reveal.scss */
+.c-reveal--slide:hover > .c-reveal__visible {
+  transition: transform 0.4s; }
+
+/* line 75, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.reveal.scss */
+.c-reveal--slide.left:hover > .c-reveal__visible {
+  transform: translateX(-100%); }
+
+/* line 79, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.reveal.scss */
+.c-reveal--slide.right:hover > .c-reveal__visible {
+  transform: translateX(100%); }
+
+/* line 83, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.reveal.scss */
+.c-reveal--slide.top:hover > .c-reveal__visible {
+  transform: translateY(-100%); }
+
+/* line 87, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.reveal.scss */
+.c-reveal--slide.bottom:hover > .c-reveal__visible {
+  transform: translateY(100%); }
+
+/* line 93, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.reveal.scss */
+.c-reveal--rotate > .c-reveal__visible {
+  transition: transform 0.6s; }
+
+/* line 97, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.reveal.scss */
+.c-reveal--rotate.left-bottom > .c-reveal__visible {
+  transform-origin: left bottom; }
+
+/* line 101, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.reveal.scss */
+.c-reveal--rotate.left-bottom:hover > .c-reveal__visible {
+  transform: rotateZ(-180deg); }
+
+/* line 105, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.reveal.scss */
+.c-reveal--rotate.right > .c-reveal__visible {
+  transform-origin: right; }
+
+/* line 109, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.reveal.scss */
+.c-reveal--rotate.right:hover > .c-reveal__visible {
+  transform: rotateZ(180deg); }
+
+/* line 114, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.reveal.scss */
+.c-reveal--open {
+  overflow: visible; }
+  /* line 117, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.reveal.scss */
+  .c-reveal--open .c-reveal__visible {
+    position: relative;
+    background-color: transparent;
+    perspective: 1000px;
+    overflow: visible; }
+  /* line 124, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.reveal.scss */
+  .c-reveal--open .c-reveal__hidden {
+    position: absolute;
+    top: 0;
+    left: 0; }
+
+/* line 132, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.reveal.scss */
+[class^='c-reveal__door-'] {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transition: transform 0.3s;
+  background-color: #f3f3f3;
+  transform-style: preserve-3d; }
+
+/* line 142, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.reveal.scss */
+.c-reveal__door-left {
+  border-right: 1px solid #d7d7d7;
+  left: 0;
+  transform-origin: left; }
+
+/* line 148, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.reveal.scss */
+.c-reveal__door-right {
+  border-left: 1px solid #d7d7d7;
+  right: 0;
+  transform-origin: right; }
+
+/* line 155, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.reveal.scss */
+.c-reveal--open:hover .c-reveal__door-left {
+  transform: rotateY(-130deg); }
+
+/* line 158, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.reveal.scss */
+.c-reveal--open:hover .c-reveal__door-right {
+  transform: rotateY(130deg); }
+
+/* line 166, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.reveal.scss */
+#reveal .c-reveal {
+  display: inline-block;
+  margin-right: 2em; }
+
+/* line 171, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.reveal.scss */
+#reveal .c-reveal--open {
+  margin-left: 5em; }
+
+/* ==========================================================================
+   Inline note component styles
+   ========================================================================== */
+/* line 6, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.inline-note.scss */
+.c-inline-note__highlight {
+  border-bottom: 2px solid #a1deec;
+  cursor: pointer;
+  position: relative;
+  text-align: center; }
+
+/* line 13, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.inline-note.scss */
+.c-inline-note__note-wrap {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  position: absolute;
+  border: 1px solid #bdbdbd;
+  border-radius: 3px;
+  width: 11em;
+  height: 7.5em;
+  padding: 0.3em;
+  font-size: 0.9em;
+  background-color: #f3f3f3;
+  z-index: 1000; }
+  /* line 27, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.inline-note.scss */
+  .c-inline-note__note-wrap > textarea {
+    width: 10em;
+    height: 5em;
+    resize: none;
+    padding: 0.3em 0.5em;
+    border: 1px solid #bdbdbd;
+    color: #878787; }
+    /* line 35, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.inline-note.scss */
+    .c-inline-note__note-wrap > textarea:focus {
+      outline: none; }
+  /* line 40, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.inline-note.scss */
+  .c-inline-note__note-wrap .c-inline-note__remove-btn {
+    color: #42aec8;
+    margin-top: 0.3em;
+    transition: color 0.2s; }
+    /* line 45, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.inline-note.scss */
+    .c-inline-note__note-wrap .c-inline-note__remove-btn:hover {
+      color: #42aec8; }
+
+/* line 52, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_components.inline-note.scss */
+.c-inline-note__list-selected-txt {
+  color: #42aec8; }
+
+/* line 1, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_footer.scss */
+.eureka-footer {
+  background-color: #30353b;
+  padding: 2em; }
+  /* line 4, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_footer.scss */
+  .eureka-footer__text {
+    text-align: center;
+    color: #f3f3f3;
+    font-weight: bold; }
+
+/* line 1, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_header.scss */
+.eureka-header {
+  background-color: #22262a;
+  padding: 4vw 4vw 0 4vw;
+  color: #71869c; }
+  /* line 6, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_header.scss */
+  .eureka-header__logo {
+    display: flex;
+    align-items: center; }
+  /* line 12, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_header.scss */
+  .eureka-header__logo-image {
+    max-height: 4em;
+    max-width: 4em; }
+  /* line 17, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_header.scss */
+  .eureka-header__logo-text {
+    padding-left: 0.6em; }
+    /* line 20, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_header.scss */
+    .eureka-header__logo-text--top {
+      font-size: 2em;
+      margin: 0; }
+    /* line 24, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_header.scss */
+    .eureka-header__logo-text--bottom {
+      margin: 0; }
+
+/* line 1, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_body.scss */
+.main-content {
+  background-color: #30353b; }
+
+/* line 5, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_body.scss */
+.vertical-menu {
+  position: relative; }
+
+/* line 9, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_body.scss */
+.demo-site-grid__sticky-nav {
+  width: 100%; }
+
+/* line 13, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_body.scss */
+.demo-site-grid__sticky-nav--stuck {
+  width: 18%;
+  position: fixed;
+  top: 0; }
+
+/* line 19, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_body.scss */
+.website-components {
+  background-color: #f3f3f3;
+  padding: 2em;
+  width: 82%;
+  margin-left: -2px;
+  /* if we want the current anchor indicator to split the sections */ }
+  /* line 25, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_body.scss */
+  .website-components__component {
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 2em;
+    margin-bottom: 1em; }
+
+/* line 34, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_body.scss */
+.u-nav--vertical-left--demo-site {
+  overflow-y: auto;
+  overflow-x: hidden; }
+  /* line 38, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_body.scss */
+  .u-nav--vertical-left--demo-site .nav__item {
+    flex: 1 0 auto; }
+    /* line 41, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_body.scss */
+    .u-nav--vertical-left--demo-site .nav__item::after {
+      right: 0; }
+  /* line 46, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_body.scss */
+  .u-nav--vertical-left--demo-site .nav__link {
+    padding: 0.75em 1em; }
+
+/* line 1, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_eureka-demo-styles.scss */
+.demo-site-grid {
+  padding-right: 4vw;
+  flex-wrap: nowrap; }
+
+/* line 6, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_eureka-demo-styles.scss */
+.vertical-menu {
+  display: flex;
+  justify-content: flex-end;
+  width: 18%;
+  flex-basis: calc(18% + 0.7vw); }
+
+/* line 13, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_eureka-demo-styles.scss */
+.nav--sticky {
+  width: 18%;
+  left: 0; }
+
+/* line 18, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_eureka-demo-styles.scss */
+a.normal {
+  text-decoration: underline;
+  color: inherit;
+  padding: 0; }
+
+/* ==========================================================================
+   Utility classes for grid
+   ========================================================================== */
+/**
+	 * Align cells in grid
+	 *
+	 * Using the various align properties of Flexbox, we position all the cells within the grid.
+	 *
+	 */
+/* line 12, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_trumps.utilities.scss */
+.u-grid--top {
+  align-items: flex-start; }
+
+/* line 15, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_trumps.utilities.scss */
+.u-grid--bottom {
+  align-items: flex-end; }
+
+/* line 18, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_trumps.utilities.scss */
+.u-grid--center {
+  align-items: center; }
+
+/**
+	 * Align cells in grid
+	 *
+	 * Using the various align-self properties of Flexbox, we position individual cells within the grid.
+	 *
+	 */
+/* line 29, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_trumps.utilities.scss */
+.u-grid__cell--top {
+  align-self: flex-start; }
+
+/* line 32, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_trumps.utilities.scss */
+.u-grid__cell--bottom {
+  align-self: flex-end; }
+
+/* line 35, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_trumps.utilities.scss */
+.u-grid__cell--center {
+  align-self: center; }
+
+/* ==========================================================================
+   Utility classes for separator component
+   ========================================================================== */
+/**
+	 * Adjust colors for the separators
+	 *
+	 * Using the color variables defined
+	 *
+	 */
+/* line 50, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_trumps.utilities.scss */
+.u-separator--primary {
+  border-color: #51d0ef; }
+
+/* General utility styles */
+/* line 56, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_trumps.utilities.scss */
+.u-text-center {
+  text-align: center !important; }
+
+/* line 61, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_trumps.utilities.scss */
+.u-bg-primary {
+  background-color: #51d0ef; }
+
+/* line 65, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_trumps.utilities.scss */
+.u-bg-body {
+  background-color: #30353b; }
+
+/* line 69, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_trumps.utilities.scss */
+.u-bg-disabled {
+  background-color: #a4a4a4; }
+
+/* line 73, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_trumps.utilities.scss */
+.pull-right {
+  float: right; }
+
+/* line 77, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_trumps.utilities.scss */
+.color-primary {
+  color: #51d0ef; }
+
+/* line 2, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_trumps.navigation.scss */
+.nav .nav__item::after, .nav--horizontal .nav__item::after {
+  display: none; }
+
+/* line 8, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_trumps.navigation.scss */
+.nav--vertical-left .nav__item::after, .nav--vertical-right .nav__item::after {
+  display: block; }
+
+/* line 12, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_trumps.navigation.scss */
+.nav--vertical-left .nav__item::before, .nav--vertical-right .nav__item::before {
+  display: none; }
+
+/* line 18, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_trumps.navigation.scss */
+.nav--vertical-left .nav__item {
+  justify-content: flex-end; }
+
+/* line 22, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_trumps.navigation.scss */
+.nav--vertical-left .nav__link {
+  text-align: right;
+  flex: 1; }
+
+/* line 29, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_trumps.navigation.scss */
+.nav--vertical-right .nav__item {
+  justify-content: flex-start; }
+
+/* line 33, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_trumps.navigation.scss */
+.nav--vertical-right .nav__link {
+  text-align: left;
+  flex: 1; }
+
+/* line 40, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_trumps.navigation.scss */
+.nav--vertical-right .nav__item::after {
+  left: -0.1em; }
+
+/* line 45, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_trumps.navigation.scss */
+.nav__menu-header {
+  padding: 1em 1em 0 0;
+  text-align: right;
+  color: #e8e8e8; }
+  @media screen and (max-width: 1110px) {
+    /* line 50, /home/angel/Desktop/ba-ui-framework-eureka/styles/sass/_trumps.navigation.scss */
+    .nav__menu-header h4 {
+      font-size: 1em; } }
+
+/*# sourceMappingURL=eureka.css.map */
