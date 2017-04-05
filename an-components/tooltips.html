@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Tooltips</title>
+  <link rel="stylesheet" href="../prism/prism.css">
+  <link rel="stylesheet" href="../styles/css/eureka.css">
+  <style>
+    .tooltips {
+      font-size: 1.5em;
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    .tooltip-container {
+      color: #42aec8;
+      margin-left: 0.1em;
+      margin-right: 0;
+    }
+  </style>
+</head>
+<body>
+
+<section class="website-components__component" id="navs">
+
+  <h3>Tooltips</h3>
+  <p>Use tooltips to display auxiliary/complementary information as a hover over.
+  </p>
+
+  <!-- Basic Horizontal Tabs example -->
+  <div class="o-grid o-grid--gutters">
+    <div class="o-grid__cell">
+      <div class="tooltips">
+        Hi there! How are you? I have some tooltips for you here.
+        <br>
+        Tooltips can slide in from
+        <span class="tooltip-container">
+          left <!-- You can have any text or HTML content here -->
+          <span class="tooltip" flow="left">Slide from left!</span>
+        </span>, from
+
+        <!-- Tooltip from Above -->
+        <span class="tooltip-container">
+          above <!-- You can have any text or HTML content here -->
+          <span class="tooltip" flow="up">Slide from above!</span>
+        </span>, from
+
+        <!-- Tooltip from Below -->
+        <span class="tooltip-container">
+          below <!-- You can have any text or HTML content here -->
+          <span class="tooltip" flow="down">Slide from below!</span>
+        </span>, or from
+
+        <!-- Tooltip from Right -->
+        <span class="tooltip-container">
+          right <!-- You can have any text or HTML content here -->
+          <span class="tooltip" flow="right">Slide from right!</span>
+        </span>.
+      </div>
+    </div>
+  </div>
+
+  <!-- Basic Horizontal Tabs example markup -->
+  <div class="o-grid o-grid--gutters">
+    <div class="o-grid__cell">
+      <div class="c-collapse">
+        <div class="c-collapse__controls-container--justified-text">
+          <i class="fa fa-code fa-lg" aria-hidden="true"></i>
+          <a class="c-collapse__toggle">toggle markup</a>
+        </div>
+        <div class="c-collapse__content-container c-collapse__content-container--dark">
+          <div class="c-collapse__content--prism-code-style">
+            <pre class="u-pre--wrap"><code class="language-markup line-numbers">&lt;!-- Tooltip from Left --&gt;
+&lt;div class=&quot;tooltip-container&quot;&gt;
+  Left &lt;!-- You can have any text or HTML content here --&gt;
+  &lt;div class=&quot;tooltip&quot; flow=&quot;left&quot;&gt;Slide from left!&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Tooltip from Above --&gt;
+&lt;div class=&quot;tooltip-container&quot;&gt;
+  Above &lt;!-- You can have any text or HTML content here --&gt;
+  &lt;div class=&quot;tooltip&quot; flow=&quot;up&quot;&gt;Slide from above!&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Tooltip from Below --&gt;
+&lt;div class=&quot;tooltip-container&quot;&gt;
+  Below &lt;!-- You can have any text or HTML content here --&gt;
+  &lt;div class=&quot;tooltip&quot; flow=&quot;down&quot;&gt;Slide from below!&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Tooltip from Right --&gt;
+&lt;div class=&quot;tooltip-container&quot;&gt;
+  Right &lt;!-- You can have any text or HTML content here --&gt;
+  &lt;div class=&quot;tooltip&quot; flow=&quot;right&quot;&gt;Slide from right!&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end Basic Horizontal Tabs example -->
+
+
+</section>
+
+<script src="../prism/prism.js"></script>
+<script src="../javascript/collapse.js"></script>
+<script src="../javascript/tabs.js"></script>
+</body>
+</html>

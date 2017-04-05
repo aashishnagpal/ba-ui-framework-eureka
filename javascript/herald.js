@@ -2,40 +2,37 @@ window.addEventListener("load", function () {
   var herald = {
     init: function () {
       this.cacheDOM();
-      this.setUp();
       this.bindEvent();
+      this.loadStyles();
     },
     cacheDOM: function () {
-      this.component = document.getElementsByClassName("c-herald")[0];
-      this.chip = document.getElementsByClassName("c-herald-c-chip__media--o")[0];
-      this.ribbon = document.getElementsByClassName("c-herald__ribbon")[0];
-      this.message = document.getElementsByClassName("c-herald__message")[0];
-      this.scroll = document.getElementsByClassName("c-herald__scroll")[0];
-      this.chipValue = this.chip.innerHTML;
-    },
-    setUp: function () {
-      this.componentHeight = this.chip.offsetHeight + this.scroll.offsetHeight;
-      this.messageHeight = this.message.offsetHeight + this.componentHeight;
-      this.messageWidth = window.getComputedStyle(this.message).width;
-      this.message.style.webkitTransform = "translateY(-" + this.messageHeight + "px)";
-      this.message.style.height = this.messageHeight + "px";
-      this.message.style.width = this.messageWidth;
+      this.component = document.getElementById("c-herald");
+      this.content = document.getElementById("c-herald__content");
+      this.trigger = document.getElementById("c-herald__trigger");
+      this.rbn = document.getElementById("c-herald__ribbon");
+      this.messageHeight = this.content.offsetHeight;
+      this.pLength = document.querySelectorAll(".c-herald__message p").length;
+      this.trigger.children[0].innerHTML = this.pLength;
+      this.triggerValue = this.trigger.innerHTML;
     },
     bindEvent: function () {
-      this.chip.addEventListener("click",this.announce.bind(this));
+      this.trigger.addEventListener("click",this.announce.bind(this));
     },
     announce: function () {
-      this.component.style.width = this.messageWidth;
-      this.scroll.style.height = this.messageHeight + "px";
-      this.scroll.style.width = this.messageWidth;
-      this.component.classList.toggle("c-herald-announce");
-      this.ribbon.classList.toggle("lengthen");
-      this.scroll.classList.toggle("c-herald-announce");
-      this.chip.innerHTML = "X";
-      if (!this.scroll.classList.contains("c-herald-announce")) {
-        this.chip.innerHTML = this.chipValue;
+      this.component.classList.toggle("announce");
+      this.rbn.classList.toggle("lengthen");
+
+      if (!this.component.classList.contains("announce")) {
+        this.trigger.innerHTML = this.triggerValue;
+      } else {
+        this.trigger.innerHTML = "X";
       }
     },
+    loadStyles: function () {
+      this.component.classList.remove('no-js');
+      this.trigger.classList.add("clickable");
+      this.content.style.webkitTransform = "translateY(-" + this.messageHeight + "px)";
+    }
   };
   herald.init();
 });
